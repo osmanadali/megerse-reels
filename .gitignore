@@ -3,3 +3,4 @@ node_modules/
 out/
 assets/fluentui-emoji/
 public/*.woff2
+hf/renders/
