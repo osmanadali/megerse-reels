@@ -71,3 +71,20 @@ Senaryoda uygulanacak düzeltmeler:
 - Weathers: sağ kolunu dirsekten aşağısını, sol elinin parmaklarını ve burnunu kaybetti. Eşi Peach kurtarmayı devlet/diplomasi kanallarıyla başlattı.
 - Hayes: 1923 Belmont Park, ilk resmî yarışı; oran kaynağa göre değişiyor (oran verme). "Bir daha yarışmadı" deme. Jokey Kulübü zaferi resmî saydı.
 - Hürkuş (kullanma): Vecihi K-VI 1930 değil 1924'te yapıldı / 28 Ocak 1925'te uçtu; denetleyecek teknik heyet olmadığı için uçuş izni çıkmadı; diploma yurt dışı iddiası yanlış.
+
+---
+
+# Tur 3: az işlenmiş, Türk izleyiciye yakın konular
+
+(Elenen: Necdet Kent. Marsilya'da trene binme hikayesi tarihçilerce uydurma sayılıyor (Baer, Üngör); doğruluk kapısını geçemez.)
+
+21. **Ertuğrul → Tahran 1985**: 1890'da Ertuğrul Fırkateyni Japonya dönüşü Kushimoto açıklarında battı; köylüler 69 denizciyi kurtardı. 17 Mart 1985'te Saddam İran üzerindeki her uçağı 48 saat sonra vuracağını ilan etti; Tahran'daki ~215 Japon'u kimse almıyordu. Meğerse: Onları THY'nin iki uçağı çıkardı; Türk büyükelçinin açıklaması "Ertuğrul'un borcunu ödüyoruz" oldu.
+22. **Leonardo'nun Haliç köprüsü**: 1502'de Leonardo da Vinci II. Bayezid'e mektup yazıp Haliç'e ~240 m'lik tek kemerli köprü önerdi; sultan reddetti. Meğerse: Çizim ve mektup 1952'de İstanbul arşivlerinde bulundu; köprü 500 yıl sonra (2001) Norveç'te, Ås'ta küçültülmüş ahşap kopya olarak yapıldı.
+23. **Mekanik Türk (1770)**: Kempelen'in kaftanlı, sarıklı "Türk" satranç makinesi Avrupa'yı gezdi, Napolyon'u ve Benjamin Franklin'i yendi (anlatılana göre). Meğerse: Dolabın içinde saklanan bir satranç ustası oynuyordu; makine 1854'te yandı. (Amazon "Mechanical Turk" adını buradan aldı.)
+24. **Abdülhamid denizaltısı**: 1886'da Osmanlı, Nordenfelt'ten buharlı denizaltı aldı; Haliç'te parçalar halinde birleştirildi. Meğerse: Dünyada su altındayken torpido atan ilk denizaltı oldu (1888), ama hiç savaşa girmedi; Haliç'te paslanıp 1910'da hurdaya çıktı.
+25. **Koca Yusuf**: "Korkunç Türk", 1898'de Amerika'da güreşlerde yenilmedi, kazancını altın olarak aldı. Dönüşte La Bourgogne gemisi battı (4 Temmuz 1898, ~560 ölü). Meğerse: New York basınına göre belindeki altın kemer onu dibe çekti. (Kemer ayrıntısı tartışmalı: "anlatılana göre".)
+26. **Selahattin Ülkümen**: 1944 Rodos, Türk başkonsolos Gestapo'nun Auschwitz'e göndereceği Yahudileri "Türk vatandaşı" diyerek geri aldı (~42-50 kişi, birçoğu aslında vatandaş değildi). Meğerse: Kısa süre sonra konsolosluk bombalandı, hamile eşi ağır yaralandı ve doğumdan sonra öldü; 1989'da Yad Vashem "Uluslar Arası Dürüst İnsan" unvanı verdi.
+27. **Süleyman Dilbirliği ve Ayla**: Kore Savaşı 1950, Türk astsubay donmak üzere olan Koreli bir kız çocuğu bulup birliğe aldı, adını Ayla koydu. Dönüşte götüremedi. Meğerse: 60 yıl sonra (2010) Kore'de bir televizyon programıyla buluştular. (Film 2017'de çekildi; özgünlük düşük olabilir.)
+28. **III. Gustav'ın kahve deneyi**: 18. yy İsveç kralı kahveyi zararlı sayıp yasakladı; idam mahkûmu ikiz kardeşlere ceza yerine biri her gün kahve, öteki çay içsin dedi. Meğerse: Deneyi izleyen doktorlar önce öldü, kral suikasta kurban gitti, kahve içen ikiz hepsinden uzun yaşadı. (Anekdot; kaynak zayıf.)
+29. **Einstein'ın Türkiye'ye mektubu**: 17 Eylül 1933, Einstein Başbakan İnönü'ye yazıp 40 Alman profesör ve doktorun Türkiye'de bir yıl maaşsız çalışmasına izin istedi. Meğerse: Bakanlık notu "yasalara aykırı" diye ilk başta reddetti; ama Türkiye yine de 1933'ten itibaren yüzlerce sürgün akademisyeni üniversitelere aldı.
+30. **Ahmet Ertegün**: Türk büyükelçinin oğlu, 1947'de Atlantic Records'u kurdu; Ray Charles, Aretha Franklin, Led Zeppelin, Rolling Stones'la çalıştı. Meğerse: 2006'da Rolling Stones konserinde kulis arkasında düşüp yaralandı ve birkaç hafta sonra öldü.
