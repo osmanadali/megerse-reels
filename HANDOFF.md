@@ -23,8 +23,8 @@ Yeni sohbette ilk mesaj: "HANDOFF.md'yi oku ve kaldığın yerden devam et."
    - GEÇTİ: **Ann Hodges** (77.5).
    - Sınırda: **Tsutomu Yamaguchi** (76.5 ama özgünlük 58 < 60; taze açıyla geçer).
    - Tur 2 GEÇTİ: **Harrison Okene** (80.7), **Mauro Prosperi** (78.3), **Beck Weathers** (78.2), **Frank Hayes** (76.2). Düzeltmeler dosyada.
-2. ⏳ **İlk reel: Okene.** Senaryo v2 (görsel yerleşimi + dalgıç kapanışı, Osman onayladı): `reels/okene/senaryo.md`. Görseller: `reels/okene/gorseller.md`. Ses: ElevenLabs "Fatih Yıldırım" (voice_id `7VqWGAWwo2HMrylfKrcm`, eleven_v4), flow `qW2pK44UhjUG0UIXX9YF`, 4 varyasyon üretildi (845 kredi/adet). Sırada: varyasyon seçimi → kelime zamanları → avatar.
-3. ⏳ Avatar: Osman 5 fotoğraf gönderdi ama sohbete yapıştırıldığı için diske dosya olarak gelmedi; dosya eki (@) olarak tekrar istenmeli. En iyi kaynak: önden, sakallı, bahçe fotoğrafı (kollar kavuşuk).
+2. ⏳ **İlk reel: Okene.** Senaryo v2 (görsel yerleşimi + dalgıç kapanışı, Osman onayladı): `reels/okene/senaryo.md`. Görseller: `reels/okene/gorseller.md`. Ses: ElevenLabs "Fatih Yıldırım" (voice_id `7VqWGAWwo2HMrylfKrcm`, eleven_v4), flow `qW2pK44UhjUG0UIXX9YF`, 4 varyasyon indirildi: `hf/assets/okene/ses/ses-1..4.mp3` (67,6/69,3/67,6/69,8 sn; 845 kredi/adet). Osman'ın seçimi bekleniyor → kelime zamanları.
+3. ⏳ Avatar: fotoğraflar `hf/assets/avatar/osman-1..5.jpg` (git dışı). Ana kaynak **osman-4.jpg** (düz duvar, tam önden). SadTalker (ücretsiz) `/home/user/tools/SadTalker`'a kuruluyor (Python 3.10 + CPU torch; betik `/home/user/tools/install-sadtalker.sh`, repo dışı). CPU hızı test edilecek; yavaşsa Colab.
 4. ⏳ Sonraki adımlar: senaryo → ElevenLabs ses → kelime zamanları (faster-whisper) → HyperFrames kompozisyonu (avatar + görseller + altyazı) → render → puanlama skill'i.
 
 ## Açık konular / riskler
