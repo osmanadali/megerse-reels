@@ -1,0 +1,7 @@
+moviepy==2.2.1
+faster-whisper==1.2.1
+edge-tts==7.3.1
+trafilatura==2.3.1
+ddgs==9.16.0
+wikipedia-api==0.16.0
+vtracer==0.6.15
