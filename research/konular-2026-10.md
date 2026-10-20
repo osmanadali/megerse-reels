@@ -88,3 +88,31 @@ Senaryoda uygulanacak düzeltmeler:
 28. **III. Gustav'ın kahve deneyi**: 18. yy İsveç kralı kahveyi zararlı sayıp yasakladı; idam mahkûmu ikiz kardeşlere ceza yerine biri her gün kahve, öteki çay içsin dedi. Meğerse: Deneyi izleyen doktorlar önce öldü, kral suikasta kurban gitti, kahve içen ikiz hepsinden uzun yaşadı. (Anekdot; kaynak zayıf.)
 29. **Einstein'ın Türkiye'ye mektubu**: 17 Eylül 1933, Einstein Başbakan İnönü'ye yazıp 40 Alman profesör ve doktorun Türkiye'de bir yıl maaşsız çalışmasına izin istedi. Meğerse: Bakanlık notu "yasalara aykırı" diye ilk başta reddetti; ama Türkiye yine de 1933'ten itibaren yüzlerce sürgün akademisyeni üniversitelere aldı.
 30. **Ahmet Ertegün**: Türk büyükelçinin oğlu, 1947'de Atlantic Records'u kurdu; Ray Charles, Aretha Franklin, Led Zeppelin, Rolling Stones'la çalıştı. Meğerse: 2006'da Rolling Stones konserinde kulis arkasında düşüp yaralandı ve birkaç hafta sonra öldü.
+
+## Tur 3 hakem sonuçları (bağımsız hakem, 20.10.2026)
+
+| # | Konu | İzl. | Viral | Özg. | Doğr. | Toplam | Sonuç |
+|---|---|---|---|---|---|---|---|
+| 26 | Selahattin Ülkümen | 78 | 84 | 68 | 72 | 75.9 | GEÇTİ (şartlı: olay sırası düzeltilmeli) |
+| 21 | Ertuğrul → Tahran 1985 | 85 | 88 | 40 | 85 | 75.1 | KALDI (özg.: "Ertuğrul 1890" filmi) |
+| 22 | Leonardo'nun Haliç köprüsü | 78 | 80 | 58 | 82 | 74.8 | KALDI (sınırda) |
+| 29 | Einstein'ın mektubu | 72 | 80 | 62 | 80 | 73.8 | KALDI (sınırda) |
+| 27 | Dilbirliği ve Ayla | 80 | 88 | 35 | 85 | 72.8 | KALDI (özg.: 2017 filmi) |
+| 23 | Mekanik Türk | 85 | 78 | 50 | 75 | 72.3 | KALDI (özg.) |
+| 24 | Abdülhamid denizaltısı | 72 | 72 | 65 | 80 | 72.2 | KALDI (kanca orta) |
+| 25 | Koca Yusuf | 82 | 80 | 55 | 60 | 69.8 | KALDI (özg., altın kemer efsane) |
+| 30 | Ahmet Ertegün | 65 | 62 | 60 | 88 | 68.4 | KALDI (kırılma zayıf) |
+| 28 | III. Gustav kahve deneyi | 85 | 82 | 55 | 30 | 63.9 | KALDI (efsane) |
+
+Hassas içerik yok (intihar/kendine zarar yok). Ülkümen: Holokost ve eşin ölümü, saygılı ton.
+
+Senaryoda uygulanacak düzeltmeler:
+- Ülkümen: konsolosluk bombalanması kurtarmadan ÖNCE, 18 Şubat 1944 (iki çalışan, Hasan ve Hüseyin öldü; eşi Mihrinisa ağır yaralandı). Bombalayan "anılarına göre" Alman uçakları (Müttefik saldırısı diyen anlatımlar da var). Toplama emri 19 Temmuz 1944. Koruduğu ~50 kişiden yalnızca 13'ü gerçekten Türk vatandaşıydı; 42 kişi 10 Ocak 1945'te Rodos'tan çıkarıldı. Mihrinisa oğulları Mehmet'i doğurduktan (21 Temmuz 1945, Ankara) kısa süre sonra öldü. Yad Vashem unvanı "Aralık 1989". Önerilen kırılma: "Meğerse koruduğu yaklaşık 50 kişiden yalnızca 13'ü gerçekten Türk vatandaşıydı; ve bunu, aylar önce konsolosluğu bombalanmış, eşi ağır yaralı bir adam yaptı."
+- Ertuğrul (kullanılırsa): 16 Eylül 1890, 587 ölü, 69 sağ; 215 Japon; emri Özal verdi. "Borcunu ödüyoruz" sözünü belli bir kişiye atfetme; uçak sayısı ve pilot adı kaynaklarda çelişiyor.
+- Leonardo: mektup "1502-1503", 1952'de Topkapı arşivinde bulundu; Norveç köprüsü 2001, Ås (E18), ~109 m lamine ahşap; tasarım ~240 m.
+- Einstein: 17 Eylül 1933, İnönü'ye, OSE adına, 40 hekim; Reşit Galip notu "yasalara aykırı". Akademisyen alımı mektuptan önce başlamıştı, "mektup sayesinde" deme.
+- Abdülhamid: donanmaya giriş 24 Mart 1888; hurda yılı tartışmalı (yıl verme); "kayıtlara göre ilk".
+- Koca Yusuf: 4 Temmuz 1898, ~549 ölü; "yenilmedi" deme (Roeber maçında diskalifiye); altın kemer "anlatılana göre".
+- Mekanik Türk: 5 Temmuz 1854 Philadelphia yangını; Franklin maçı Paris'te; Napolyon "anlatılana göre".
+
+Kaynaklar (seçme): en.wikipedia.org/wiki/Selahattin_Ülkümen, collections.ushmm.org/search/catalog/pa1133512, holocaustrescue.org, tr.emb-japan.go.jp/Japonya2010/eng/frigate.html, nippon.com/en/in-depth/d01079, dezeen.com (Da Vinci Bridge), historynewsnetwork.org/article/31946, en.wikipedia.org/wiki/Ottoman_submarine_Abdül_Hamid, historyofwrestling.com, everything-everywhere.com/the-mechanical-turk.
