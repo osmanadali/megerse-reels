@@ -34,6 +34,19 @@ Yeni sohbette ilk mesaj: "HANDOFF.md'yi oku ve kaldığın yerden devam et."
 - **v2 (Osman: "çizimler çok kötü, gelişmiş çizim + HyperFrames + motion blur")**: `scripts/artlib2.py` (dokulu/ışıklı/DOF) ile Hodges vektör sahneleri baştan; registry `motion-blur` + `grain-overlay` eklendi (`hf/compositions/components/`). Eski build `reels/hodges/build_v1.py`. Render `hf/renders/hodges-v2.mp4`.
 - **Kural (Osman):** Üretilmiş çizimleri yeniden üretme, `artlib`'den kullan; beğenilmezse orada geliştir. Grafikler gerçekçi ama çizim.
 
+## Yeni oturumda kurulum (sırayla)
+1. Dal: `git fetch origin claude/storytelling-reels && git checkout claude/storytelling-reels`
+2. `./setup.sh` (npm + .venv + Fluent Emoji + font).
+3. `mkdir -p hf/assets/fonts && cp node_modules/@fontsource/montserrat/files/montserrat-latin{,-ext}-{600,800}-normal.woff2 hf/assets/fonts/`
+4. `cd hf && npx -y hyperframes@0.8.181 skills update` (motion-blur ve grain-overlay `hf/compositions/components/` içinde, git'te).
+5. **Git dışındaki dosyalar (Osman tekrar yükler):**
+   - Okene: `hf/assets/okene/` → dalgic-kamera.m4v, hava-cebi-kamera.jpg, okene-portre.jpg, jascon-romorkor.webp, gorsel-4.avif, basinc-odasi-dalgiclar.jpg, voice.mp3 (kesilmiş ses-4)
+   - Hodges: `hf/assets/hodges/` → ek-1.jpg, ek-2.jpg, ann-yatak.jpg, cati-polis.jpg, mckinney-aile.jpg, muze.jpg, voice.mp3
+   - Avatar kaynak fotoğrafları `hf/assets/avatar/` (çizim avatar `hf/avatar/osman.svg` git'te; fotoğraflar yalnızca yeniden çizim gerekirse)
+   - Sesler ElevenLabs'ta da duruyor (flow'lar yukarıda); yeniden üretmeye gerek yok, Osman indirip yükleyebilir.
+6. Kelime zamanları (`reels/*/words.json`) ve ağız zarfları (`hf/avatar/mouth-*.json`) git'te; ses aynıysa yeniden çıkarmaya gerek yok.
+7. Render: `python3 reels/<id>/build.py && cd hf && npx -y hyperframes@0.8.181 render -o renders/<id>.mp4`
+
 ## Açık konular / riskler
 - **Konuşan avatar ücretsiz + GPU'suz:** Fotoğraftan dudak senkronlu gerçekçi avatar için açık kaynak seçenekler (LivePortrait, SadTalker, Wav2Lip) GPU ister; bu konteynerde CPU'da çok yavaş olabilir. Alternatifler: kısa bir test ile CPU süresini ölç; ya da Osman kendi facecam'ini çeker; ya da Google Colab (ücretsiz GPU) üzerinde avatar üret, burada birleştir. Fotoğraflar gelince test edilecek.
 - Puanlama skill'i (claude.ai'de senkronlu) hâlâ "tamamen vektör, fotoğraf yok" diyor. Yerine geçecek kural yukarıdaki görsel kuralı; skill claude.ai'den güncellenene kadar hakeme bu kuralı ayrıca ver. Gerçek görsel = eksi değil; vektörde "gerçekçilik" puanlanır.
