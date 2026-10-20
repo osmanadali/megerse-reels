@@ -70,4 +70,4 @@ Senaryoda uygulanacak düzeltmeler:
 - Prosperi: yarış Fas'ta; 9 gün sonra Cezayir'de, ~300 km sapma. Yarasa kanı/bilek ayrıntıları "anlattığına göre". İtalyan polis memuru, eski modern pentatlon sporcusu.
 - Weathers: sağ kolunu dirsekten aşağısını, sol elinin parmaklarını ve burnunu kaybetti. Eşi Peach kurtarmayı devlet/diplomasi kanallarıyla başlattı.
 - Hayes: 1923 Belmont Park, ilk resmî yarışı; oran kaynağa göre değişiyor (oran verme). "Bir daha yarışmadı" deme. Jokey Kulübü zaferi resmî saydı.
-- Hürkuş (kullanma): K-VI değil Vecihi K-II 1924'te yapıldı / 28 Ocak 1925'te uçtu; denetleyecek teknik heyet olmadığı için uçuş izni çıkmadı; diploma yurt dışı iddiası yanlış.
+- Hürkuş (kullanma): Vecihi K-VI 1930 değil 1924'te yapıldı / 28 Ocak 1925'te uçtu; denetleyecek teknik heyet olmadığı için uçuş izni çıkmadı; diploma yurt dışı iddiası yanlış.
