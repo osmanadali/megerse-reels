@@ -2115,11 +2115,11 @@
   },
   "renders": {
     "latest": {
-      "id": "e17ac3d3-1b80-417a-b479-d9539c2fbed9",
-      "completedAt": 1792514307472,
-      "output": "/home/user/megerse-reels/hf/renders/hodges-v1.mp4",
+      "id": "21915f1f-9fe8-44c8-b15c-189e5b65acec",
+      "completedAt": 1792516244600,
+      "output": "/home/user/megerse-reels/hf/renders/hodges-v2.mp4",
       "status": "completed",
-      "revision": "700e11a4-6d49-403b-9933-6ac20c4b488a"
+      "revision": null
     },
     "retainedRevisions": [
       "700e11a4-6d49-403b-9933-6ac20c4b488a",
