@@ -22,7 +22,7 @@ Yeni sohbette ilk mesaj: "HANDOFF.md'yi oku ve kaldığın yerden devam et."
 1. ✅ 10 konu adayı + bağımsız hakem puanı: `research/konular-2026-10.md`
    - GEÇTİ: **Ann Hodges** (77.5).
    - Sınırda: **Tsutomu Yamaguchi** (76.5 ama özgünlük 58 < 60; taze açıyla geçer).
-   - Tur 2 (11-20, daha az işlenmiş konular) hakemde; sonuçlar aynı dosyaya.
+   - Tur 2 GEÇTİ: **Harrison Okene** (80.7), **Mauro Prosperi** (78.3), **Beck Weathers** (78.2), **Frank Hayes** (76.2). Düzeltmeler dosyada.
 2. ⏳ Osman: geçen konular için görsel araştırması yapacak ve kullanım talimatı verecek.
 3. ⏳ Osman: avatar için fotoğraflarını gönderecek.
 4. ⏳ Sonraki adımlar: senaryo → ElevenLabs ses → kelime zamanları (faster-whisper) → HyperFrames kompozisyonu (avatar + görseller + altyazı) → render → puanlama skill'i.

@@ -50,5 +50,24 @@ Notlar:
 19. **Radyum Kızları**: 1917-1920'ler, ABD saat fabrikalarında genç kadınlar radyumlu boyayı fırçaları dudaklarıyla sivriltip kadranlara sürdü; "zararsız" denildi. Meğerse: Yöneticiler korunarak çalışıyordu. Davaları işçi güvenliği yasalarını değiştirdi; kemiklerinin hâlâ radyoaktif olduğu belirtiliyor.
 20. **Beck Weathers**: 1996 Everest felaketinde iki kez "öldü" diye karda bırakıldı. Meğerse: Ertesi gün tek başına yürüyerek kampa girdi; eşi rekor irtifada helikopter kurtarması organize etti. Ellerini ve burnunu kaybetti ama yaşadı.
 
-## Tur 2 hakem sonuçları
-(aşağıya eklenecek)
+## Tur 2 hakem sonuçları (bağımsız hakem, 20.10.2026)
+
+| # | Konu | İzl. | Viral | Özg. | Doğr. | Toplam | Sonuç |
+|---|---|---|---|---|---|---|---|
+| 11 | Harrison Okene | 90 | 85 | 62 | 85 | 80.7 | GEÇTİ |
+| 13 | Mauro Prosperi | 85 | 80 | 70 | 78 | 78.3 | GEÇTİ |
+| 20 | Beck Weathers | 82 | 78 | 68 | 85 | 78.2 | GEÇTİ |
+| 18 | Frank Hayes | 82 | 80 | 72 | 70 | 76.2 | GEÇTİ |
+| 15 | Larry Walters | 90 | 88 | 55 | 85 | 79.9 | KALDI (özg.) |
+| 12 | Leonid Rogozov | 88 | 80 | 55 | 92 | 78.8 | KALDI (özg.) |
+| 17 | Michel Lotito | 85 | 82 | 57 | 75 | 75.8 | KALDI (özg.) |
+| 19 | Radyum Kızları | 78 | 82 | 50 | 88 | 74.9 | KALDI |
+| 14 | Poon Lim | 72 | 70 | 68 | 85 | 73.6 | KALDI |
+| 16 | Vecihi Hürkuş | 60 | 65 | 60 | 30 | 54.3 | KALDI (hikâye yanlış) |
+
+Senaryoda uygulanacak düzeltmeler:
+- Okene: dalgıç eli ceset sanarken el onu yakaladı ("geri tuttu" değil). "Yaklaşık 60 saat"; 12 kişiden 11'i öldü.
+- Prosperi: yarış Fas'ta; 9 gün sonra Cezayir'de, ~300 km sapma. Yarasa kanı/bilek ayrıntıları "anlattığına göre". İtalyan polis memuru, eski modern pentatlon sporcusu.
+- Weathers: sağ kolunu dirsekten aşağısını, sol elinin parmaklarını ve burnunu kaybetti. Eşi Peach kurtarmayı devlet/diplomasi kanallarıyla başlattı.
+- Hayes: 1923 Belmont Park, ilk resmî yarışı; oran kaynağa göre değişiyor (oran verme). "Bir daha yarışmadı" deme. Jokey Kulübü zaferi resmî saydı.
+- Hürkuş (kullanma): K-VI değil Vecihi K-II 1924'te yapıldı / 28 Ocak 1925'te uçtu; denetleyecek teknik heyet olmadığı için uçuş izni çıkmadı; diploma yurt dışı iddiası yanlış.
