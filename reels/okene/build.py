@@ -12,8 +12,8 @@ words = json.loads((ROOT / "reels/okene/words.json").read_text(encoding="utf-8")
 mouth = json.loads((HF / "avatar/mouth-okene.json").read_text())
 svg = (HF / "avatar/osman.svg").read_text(encoding="utf-8").replace("<svg ", '<svg id="av" data-m="0" data-b="0" ', 1)
 
-VOICE_END = 70.0
-TOTAL = 74.0
+VOICE_END = 69.6
+TOTAL = 73.6
 FADE = 0.45
 
 # Sahneler: (id, başlangıç, bitiş). Ardışık sahneler FADE kadar örtüşür.
@@ -25,10 +25,11 @@ S = {
     "photo": (24.6, 34.9),
     "clock": (34.9, 39.5),
     "light": (39.5, 45.2),
-    "hand": (45.2, 51.5),
-    "face": (51.5, 54.6),
-    "portrait": (54.6, 62.5),
-    "diver": (62.5, VOICE_END),
+    "hand": (45.2, 51.22),
+    "face": (51.22, 54.32),
+    "portrait": (54.32, 62.22),
+    "diver": (62.22, 65.5),
+    "team": (65.5, VOICE_END),
     "sources": (VOICE_END, TOTAL),
 }
 
@@ -341,11 +342,29 @@ html, body {{ width: 1080px; height: 1920px; overflow: hidden; background: #0B12
         <div class="chip">BUGÜN: TİCARİ DALGIÇ</div></div>
     </div>
 
+
+    <!-- 11b kurtarmadan sonra: en soldaki kurtaran dalgıç Nico van Heerden -->
+    <div class="scene clip" id="s-team" data-start="{win('team')[0]}" data-duration="{win('team')[1]}" data-track-index="1" style="background:#0B1220">
+      <div class="fill" id="team-in">
+        <div class="fill" style="background:url(assets/okene/basinc-odasi-dalgiclar.jpg) center/cover; filter: blur(28px) brightness(.45); transform: scale(1.2)"></div>
+        <div id="team-kb" style="position:absolute; left:0; top:180px; width:960px; height:720px">
+          <img src="assets/okene/basinc-odasi-dalgiclar.jpg" alt="" style="width:100%; height:100%; display:block">
+          <svg viewBox="0 0 960 720" style="position:absolute; inset:0; width:100%; height:100%">
+            <circle id="ring" cx="150" cy="215" r="135" fill="none" stroke="#F5B82E" stroke-width="10" stroke-dasharray="849" stroke-dashoffset="849"/>
+          </svg>
+        </div>
+        <div id="team-label" style="position:absolute; left:36px; top:44px; right:36px; padding:18px 24px; border-radius:18px; background:#F5B82E; color:#0B1220">
+          <div style="font-weight:800; font-size:44px; line-height:1.1">NICO VAN HEERDEN</div>
+          <div style="font-weight:600; font-size:30px; margin-top:6px">Okene'yi dipte bulan dalgıç · en solda</div>
+        </div>
+        <div class="chip" style="bottom:40px">KURTARMADAN SONRA · 2013</div>
+      </div>
+    </div>
     <!-- 12 kaynakça -->
     <div class="scene clip" id="s-sources" data-start="{win('sources')[0]}" data-duration="{win('sources')[1]}" data-track-index="1" style="background:#0B1220">
       <div class="fill" id="sources-in" style="padding:90px 70px">
         <div style="font-weight:800; font-size:56px; color:#F5B82E; margin-bottom:40px">KAYNAKLAR</div>
-        <div class="src">ABC News (Haziran ve Aralık 2013)<br>ITV News (2 Aralık 2013)<br>Netwerk24 (8 Temmuz 2015)<br>Soundings Online<br><br>Görüntü: DCN Diving / The Telegraph</div>
+        <div class="src">ABC News (Haziran ve Aralık 2013)<br>ITV News (2 Aralık 2013)<br>Netwerk24 (8 Temmuz 2015)<br>Explorersweb (2021)<br>Soundings Online<br><br>Görüntü: DCN Diving / The Telegraph</div>
       </div>
     </div>
   </div>
@@ -402,6 +421,9 @@ tl.fromTo("#meg",{{scale:2.2,opacity:0}},{{scale:1,opacity:1,duration:.35,ease:"
 tl.to("#meg",{{opacity:0,duration:.4}},{S['face'][0]+1.9});
 tl.fromTo("#portrait-kb",{{scale:1.02}},{{scale:1.18,duration:{win('portrait')[1]},ease:"none"}},{S['portrait'][0]});
 tl.fromTo("#survivor",{{y:40,opacity:0}},{{y:0,opacity:1,duration:.5,ease:"back.out(1.6)"}},{S['portrait'][0]+1.6});
+tl.fromTo("#team-kb",{{scale:1,transformOrigin:"16% 30%"}},{{scale:1.35,duration:{win('team')[1]},ease:"power1.inOut"}},{S['team'][0]});
+tl.to("#ring",{{attr:{{"stroke-dashoffset":0}},duration:.7,ease:"power2.out"}},{S['team'][0]+.5});
+tl.fromTo("#team-label",{{y:-30,opacity:0}},{{y:0,opacity:1,duration:.45,ease:"back.out(1.7)"}},{S['team'][0]+.8});
 tl.fromTo("#diver-kb",{{scale:1.2,y:40}},{{scale:1.02,y:0,duration:{win('diver')[1]},ease:"power1.out"}},{S['diver'][0]});
 
 // başlık ve avatar girişi

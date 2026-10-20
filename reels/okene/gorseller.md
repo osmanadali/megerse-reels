@@ -16,3 +16,5 @@ Filigran: Telegraph kaynağı silinmez/gizlenmez; kaynakçada "Görüntü: DCN D
 - Explorersweb "Great Survival Stories: Harrison Okene, the Accidental Aquanaut": "Diplomayı ona, onu dipte bulan dalgıç verdi" cümlesi (doğrulama kaynağı).
 - News24 (12.6.2013) "SA divers save man from horror fate": Güney Afrikalı dalgıç ekibi.
 Kullanım planı: 11. sahnede ("Diplomayı ona veren kişi, onu dipte bulan dalgıçtı") dalgıç Okene fotoğrafından sonra van Heerden + Okene fotoğrafına geçiş.
+
+| basinc-odasi-dalgiclar.jpg | 400×300, Osman verdi: Okene + 3 dalgıç, kurtarmadan sonra; **en soldaki Nico van Heerden** (Osman'ın bilgisi) | 11b sahnesi, çember + etiket |
