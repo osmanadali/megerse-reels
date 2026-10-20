@@ -16,12 +16,13 @@ W, H = 960, 1080
 
 
 class Cam:
-    def __init__(self, horizon=430, vpx=480, f=800, eye=160, sun=(-1.0, 0.35), alt=38, haze="#CFDAE0", zfar=9000):
+    def __init__(self, horizon=430, vpx=480, f=800, eye=160, sun=(-1.0, 0.35), alt=38, haze="#CFDAE0", zfar=9000, focus=None):
         self.horizon, self.vpx, self.f, self.eye = horizon, vpx, f, eye
         n = math.hypot(*sun)
         self.sun = (sun[0] / n, sun[1] / n)            # ışığın GELDİĞİ yön (x, z); x<0: soldan
         self.alt, self.haze, self.zfar = alt, haze, zfar
         self.lit_left = self.sun[0] <= 0
+        self.focus = focus                              # odak uzaklığı: bunun çok önündekiler bulanık (alan derinliği)
 
     def k(self, z):
         return self.f / z
@@ -93,6 +94,17 @@ class Scene:
             self.polys.append((z + 1e5, cast, 'fill="#1A1410" opacity=".38" filter="url(#shblur)"'))
             self.polys.append((z + 1e5, contact, 'fill="#000" opacity=".45" filter="url(#shblur)"'))
 
+    def add_figure(self, x, z, look_at=None, h=175, cheat=.6, **kw):
+        """Karakter: look_at=(x, z) verilirse o noktaya döner (konuştuğu kişi, baktığı nesne).
+        Yan yana duran iki kişi birbirine ~üç-çeyrek döner (cheat: sinemadaki gibi kameraya hafif açılır)."""
+        if look_at:
+            dx, dz = look_at[0] - x, look_at[1] - z
+            ang = math.atan2(abs(dx), -dz)              # 0: kameraya doğru, π/2: yana, π: kameradan uzağa
+            kw.setdefault("turn", ang / (math.pi / 2) * cheat if ang <= math.pi / 2 else cheat + (ang / (math.pi / 2) - 1) * (.85 - cheat))
+            kw.setdefault("flip", dx < 0)
+        kw.setdefault("lit_left", self.cam.lit_left)
+        self.add(x, z, figure(**kw), FIG_H, h, w=h * .3)
+
     def row(self, x, z0, dz, n, art, art_h, h, w=None, jitter=0):
         """Eşit dünya aralığı → mekânsal sıkışma kendiliğinden."""
         for i in range(n):
@@ -133,7 +145,8 @@ class Scene:
         for i, it in enumerate(self._isorted):
             sx, sy = c.pt(it["x"], it["z"], it["y"])
             k = c.k(it["z"]) * it["s"]
-            filt = f"atm{c.band(it['z'])}" if it["focus"] else "dofNear"
+            near_blur = c.focus and it["z"] < c.focus * .55
+            filt = f"atm{c.band(it['z'])}" if it["focus"] and not near_blur else "dofNear"
             parts.append(f'<g filter="url(#{filt})"><g id="{sid}-i{i}" transform="translate({sx:.1f} {sy:.1f}) scale({k:.4f})">{it["art"]}</g></g>')
         return f'<svg class="fill" id="{sid}" viewBox="0 0 {W} {H}" style="overflow:visible">{"".join(parts)}</svg>'
 

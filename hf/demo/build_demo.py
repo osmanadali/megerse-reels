@@ -13,8 +13,8 @@ sc.row(520, 900, 900, 9, lambda i: pole(i), 900, 900, w=30)            # direkle
 sc.row(-620, 1100, 1000, 7, lambda i: tree_simple(i), 700, 650, w=120, jitter=20)
 sc.add(1500, 5200, house2(0, -230, 1.0, "dh"), 500, 900, w=900)          # uzak ev (pus)
 # iki kişi birbirine üç-çeyrek dönük konuşuyor
-sc.add(-30, 760, figure(.55, flip=False, pose="talk", coat="#3B4A62", hat="#2A2420", mouth=1), FIG_H, 178)
-sc.add(150, 800, figure(.55, flip=True, pose="stand", coat="#7A3B30", female=True, hair="#5A3420", skin="#D9A07A"), FIG_H, 165)
+sc.add_figure(-30, 760, look_at=(150, 800), h=178, pose="talk", coat="#3B4A62", hat="#2A2420", mouth=1)
+sc.add_figure(150, 800, look_at=(-30, 760), h=165, pose="stand", coat="#7A3B30", female=True, hair="#5A3420", skin="#D9A07A")
 sc.add(380, 2300, figure(.25, flip=True, pose="walk", coat="#4A5A3A"), FIG_H, 175)
 sc.add(-170, 330, tree_simple(3), 700, 650, w=120, focus=False, shadow=False)          # ön plan: bulanık, örter
 layers = sc.svg()

@@ -1,7 +1,7 @@
 {
   "version": 1,
   "historyId": "0e987ff4-b9b0-4d04-ba27-c8d3529849a2",
-  "currentRevision": "87ebd50a-2ad1-4e62-afc8-e820adaa48bc",
+  "currentRevision": "c4ba8f05-46ce-4a1c-8d13-0174e7301eef",
   "pendingChanges": false,
   "files": {
     "AGENTS.md": {
@@ -61,12 +61,12 @@
       "content": "/root/.cache/hyperframes/history/0e987ff4-b9b0-4d04-ba27-c8d3529849a2/blobs/91/91874c27fe7c675d88b3b68032a6fd256ba878bf72bf196a743c6e59c11b1bb1"
     },
     "demo/build_demo.py": {
-      "hash": "e22aae83b279e0ae8b8642871e10e1e5b5455499611c65d1af3eb8779a20904e",
-      "content": "/root/.cache/hyperframes/history/0e987ff4-b9b0-4d04-ba27-c8d3529849a2/blobs/e2/e22aae83b279e0ae8b8642871e10e1e5b5455499611c65d1af3eb8779a20904e"
+      "hash": "93bb02dcbf95b1a560b3ba9a63d08fe2af3664d234cf1eba471be8b31963121e",
+      "content": "/root/.cache/hyperframes/history/0e987ff4-b9b0-4d04-ba27-c8d3529849a2/blobs/93/93bb02dcbf95b1a560b3ba9a63d08fe2af3664d234cf1eba471be8b31963121e"
     },
     "demo/derinlik.html": {
-      "hash": "717fe62b9f9dc80f6878603920da36fe80d1fd08c0321d204e59e8235112885f",
-      "content": "/root/.cache/hyperframes/history/0e987ff4-b9b0-4d04-ba27-c8d3529849a2/blobs/71/717fe62b9f9dc80f6878603920da36fe80d1fd08c0321d204e59e8235112885f"
+      "hash": "e4e898bb10f36be838b87304106014e44f9257ba2c0bb71285b9d1531d20038e",
+      "content": "/root/.cache/hyperframes/history/0e987ff4-b9b0-4d04-ba27-c8d3529849a2/blobs/e4/e4e898bb10f36be838b87304106014e44f9257ba2c0bb71285b9d1531d20038e"
     },
     "hyperframes.json": {
       "hash": "5d8d5949e1c12c145fd050e0034f3b35b80a8e0319c1649302bee34fe63e2b02",
@@ -89,8 +89,16 @@
       "content": "/root/.cache/hyperframes/history/0e987ff4-b9b0-4d04-ba27-c8d3529849a2/blobs/14/14b3a4c1a314a967fbdfd6d44c33be790de665c9e133bf500451a9ca5424566e"
     },
     "art/DERINLIK.md": {
-      "hash": "85fdb31f869c934b284c770facdcd345638ecc57f8545ef4981d0d697c623b74",
-      "content": "/root/.cache/hyperframes/history/0e987ff4-b9b0-4d04-ba27-c8d3529849a2/blobs/85/85fdb31f869c934b284c770facdcd345638ecc57f8545ef4981d0d697c623b74"
+      "hash": "3d429fcf1fe704bfcabbe36854f142766894751ac9481c088f611ed7cddd0554",
+      "content": "/root/.cache/hyperframes/history/0e987ff4-b9b0-4d04-ba27-c8d3529849a2/blobs/3d/3d429fcf1fe704bfcabbe36854f142766894751ac9481c088f611ed7cddd0554"
+    },
+    "demo/build_ots.py": {
+      "hash": "456df58ae7374b3f810f71c44897bf95be01ef05937634c307d48634a1c2f601",
+      "content": "/root/.cache/hyperframes/history/0e987ff4-b9b0-4d04-ba27-c8d3529849a2/blobs/45/456df58ae7374b3f810f71c44897bf95be01ef05937634c307d48634a1c2f601"
+    },
+    "demo/ots.html": {
+      "hash": "43620b718f70e25bbc0b114d65cf6f48658ab647fc41c7001c94f6df6e50ceff",
+      "content": "/root/.cache/hyperframes/history/0e987ff4-b9b0-4d04-ba27-c8d3529849a2/blobs/43/43620b718f70e25bbc0b114d65cf6f48658ab647fc41c7001c94f6df6e50ceff"
     }
   },
   "revisions": {
@@ -135,6 +143,101 @@
           "after": "/root/.cache/hyperframes/history/0e987ff4-b9b0-4d04-ba27-c8d3529849a2/blobs/71/717fe62b9f9dc80f6878603920da36fe80d1fd08c0321d204e59e8235112885f"
         }
       }
+    },
+    "050808d5-c567-4b8f-b9f3-d6f7f127a839": {
+      "actor": {
+        "kind": "outside",
+        "name": "Outside"
+      },
+      "label": "Changed outside the app",
+      "startedAt": 1792532767554,
+      "endedAt": 1792532767572,
+      "files": {
+        "demo/build_ots.py": {
+          "before": null,
+          "after": "/root/.cache/hyperframes/history/0e987ff4-b9b0-4d04-ba27-c8d3529849a2/blobs/56/56e4301c7d41c6ae2e1b2155f12af8643b7dbb0be1c7e0039ad1f312e6139373"
+        },
+        "demo/ots.html": {
+          "before": null,
+          "after": "/root/.cache/hyperframes/history/0e987ff4-b9b0-4d04-ba27-c8d3529849a2/blobs/aa/aaf74f74c1b192310ff8eee03e67ee27230f29caf2c07588418e2f94afc05df5"
+        }
+      }
+    },
+    "a3e2f58c-f08a-416b-b748-de91f144c196": {
+      "actor": {
+        "kind": "outside",
+        "name": "Outside"
+      },
+      "label": "Changed outside the app",
+      "startedAt": 1792532984970,
+      "endedAt": 1792532984985,
+      "files": {
+        "demo/build_ots.py": {
+          "before": "/root/.cache/hyperframes/history/0e987ff4-b9b0-4d04-ba27-c8d3529849a2/blobs/56/56e4301c7d41c6ae2e1b2155f12af8643b7dbb0be1c7e0039ad1f312e6139373",
+          "after": "/root/.cache/hyperframes/history/0e987ff4-b9b0-4d04-ba27-c8d3529849a2/blobs/a2/a243839b6728c825ebd816dad01bf624e40438db75b6c4bb4075271fb3845cb2"
+        },
+        "demo/ots.html": {
+          "before": "/root/.cache/hyperframes/history/0e987ff4-b9b0-4d04-ba27-c8d3529849a2/blobs/aa/aaf74f74c1b192310ff8eee03e67ee27230f29caf2c07588418e2f94afc05df5",
+          "after": "/root/.cache/hyperframes/history/0e987ff4-b9b0-4d04-ba27-c8d3529849a2/blobs/de/de48d0061daa3665809308f191971028f96f4c3085d86e32549a1417afbc5613"
+        }
+      }
+    },
+    "55999074-cf61-444c-afd7-1216aced86c2": {
+      "actor": {
+        "kind": "outside",
+        "name": "Outside"
+      },
+      "label": "Changed outside the app",
+      "startedAt": 1792533052511,
+      "endedAt": 1792533052525,
+      "files": {
+        "demo/build_ots.py": {
+          "before": "/root/.cache/hyperframes/history/0e987ff4-b9b0-4d04-ba27-c8d3529849a2/blobs/a2/a243839b6728c825ebd816dad01bf624e40438db75b6c4bb4075271fb3845cb2",
+          "after": "/root/.cache/hyperframes/history/0e987ff4-b9b0-4d04-ba27-c8d3529849a2/blobs/45/456df58ae7374b3f810f71c44897bf95be01ef05937634c307d48634a1c2f601"
+        },
+        "demo/ots.html": {
+          "before": "/root/.cache/hyperframes/history/0e987ff4-b9b0-4d04-ba27-c8d3529849a2/blobs/de/de48d0061daa3665809308f191971028f96f4c3085d86e32549a1417afbc5613",
+          "after": "/root/.cache/hyperframes/history/0e987ff4-b9b0-4d04-ba27-c8d3529849a2/blobs/43/43620b718f70e25bbc0b114d65cf6f48658ab647fc41c7001c94f6df6e50ceff"
+        }
+      }
+    },
+    "d2a5763e-b136-43b7-928e-2a474b7793e8": {
+      "actor": {
+        "kind": "outside",
+        "name": "Outside"
+      },
+      "label": "Changed outside the app",
+      "startedAt": 1792533141038,
+      "endedAt": 1792533141060,
+      "files": {
+        "art/DERINLIK.md": {
+          "before": "/root/.cache/hyperframes/history/0e987ff4-b9b0-4d04-ba27-c8d3529849a2/blobs/85/85fdb31f869c934b284c770facdcd345638ecc57f8545ef4981d0d697c623b74",
+          "after": "/root/.cache/hyperframes/history/0e987ff4-b9b0-4d04-ba27-c8d3529849a2/blobs/3d/3d429fcf1fe704bfcabbe36854f142766894751ac9481c088f611ed7cddd0554"
+        },
+        "demo/build_demo.py": {
+          "before": "/root/.cache/hyperframes/history/0e987ff4-b9b0-4d04-ba27-c8d3529849a2/blobs/e2/e22aae83b279e0ae8b8642871e10e1e5b5455499611c65d1af3eb8779a20904e",
+          "after": "/root/.cache/hyperframes/history/0e987ff4-b9b0-4d04-ba27-c8d3529849a2/blobs/93/93bb02dcbf95b1a560b3ba9a63d08fe2af3664d234cf1eba471be8b31963121e"
+        },
+        "demo/derinlik.html": {
+          "before": "/root/.cache/hyperframes/history/0e987ff4-b9b0-4d04-ba27-c8d3529849a2/blobs/71/717fe62b9f9dc80f6878603920da36fe80d1fd08c0321d204e59e8235112885f",
+          "after": "/root/.cache/hyperframes/history/0e987ff4-b9b0-4d04-ba27-c8d3529849a2/blobs/60/601db18afb573f0033838a05a711d2b5fb0ac52c382f00e971bafdd7259add41"
+        }
+      }
+    },
+    "c4ba8f05-46ce-4a1c-8d13-0174e7301eef": {
+      "actor": {
+        "kind": "outside",
+        "name": "Outside"
+      },
+      "label": "Changed outside the app",
+      "startedAt": 1792533172728,
+      "endedAt": 1792533172730,
+      "files": {
+        "demo/derinlik.html": {
+          "before": "/root/.cache/hyperframes/history/0e987ff4-b9b0-4d04-ba27-c8d3529849a2/blobs/60/601db18afb573f0033838a05a711d2b5fb0ac52c382f00e971bafdd7259add41",
+          "after": "/root/.cache/hyperframes/history/0e987ff4-b9b0-4d04-ba27-c8d3529849a2/blobs/e4/e4e898bb10f36be838b87304106014e44f9257ba2c0bb71285b9d1531d20038e"
+        }
+      }
     }
   },
   "checks": {
@@ -149,15 +252,15 @@
   },
   "renders": {
     "latest": {
-      "id": "58bc6ae0-e84e-4808-993e-040a40269a0a",
-      "completedAt": 1792531950925,
+      "id": "2672c89e-e1ec-4485-9119-dba67966c6b4",
+      "completedAt": 1792533193956,
       "output": "/home/user/megerse-reels/hf/renders/derinlik-demo.mp4",
       "status": "completed",
-      "revision": "87ebd50a-2ad1-4e62-afc8-e820adaa48bc"
+      "revision": "c4ba8f05-46ce-4a1c-8d13-0174e7301eef"
     },
     "retainedRevisions": [
-      "87ebd50a-2ad1-4e62-afc8-e820adaa48bc",
-      "b7de1d76-e2cf-4b62-b253-3e37d43a0aaf"
+      "c4ba8f05-46ce-4a1c-8d13-0174e7301eef",
+      "d2a5763e-b136-43b7-928e-2a474b7793e8"
     ]
   },
   "pendingArtifactCleanup": []

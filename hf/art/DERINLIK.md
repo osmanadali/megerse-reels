@@ -50,3 +50,40 @@ Bu dosya kural, `scripts/depth.py` uygulamasıdır. Yeni sahnelerde **önce bu l
 
 Kaynaklar: Osman'ın 5 başlıklı notu (realismtoday.com, pelintogrul.com), çok düzlemli kamera (en.wikipedia.org/wiki/Multiplane_camera), Adobe Animate Layer Depth, 180° kuralı (artlist.io/blog/180-degree-rule).
 Demo: `python3 hf/demo/build_demo.py && (cd hf && npx -y hyperframes@0.8.181 render -c demo/derinlik.html -o renders/derinlik-demo.mp4)`.
+
+---
+
+# v3.1: sahne hissi, ayrıntı, ışık (Osman, 20.10.2026)
+
+Osman'ın verdiği terimler yapay zekâ görsel istemleri. Biz çizimi kodla yapıyoruz, o yüzden her terimin **vektör karşılığı** aşağıda; kod `scripts/portrait.py` (yakın plan) ve `scripts/depth.py` (geniş plan).
+
+## 8. Karakter etkileşimi
+| Terim | Bizde |
+|---|---|
+| facing each other / turning towards the interlocutor | `Scene.add_figure(x, z, look_at=(x2, z2))`: dönüş açısı ve yönü hedeften hesaplanır. Konuşmasa da sahnedeki karakter bir şeye bakar (kişi, nesne, olay); boşluğa ya da izleyiciye bakmaz. |
+| gazing at / eye contact / subtle glance | `bust(gaze=(gx, gy))`: iris hedefe kayar. Yoğun temas: iris tam hedefte, kapak açık. Hafif bakış: gx küçük, kapak hafif kısık (`expr.lid=.85`). |
+| candid mid-conversation | Poz donmuş değil: baş hafif sallanır, nefes (gövde ölçeği ±%0.6), göz kırpma, ağız konuşan kişide açılıp kapanır, dinleyende mikro ifade değişir. |
+| over-the-shoulder shot | `back_shoulder()` ön planda, bulanık (`dofFG`), kadrajın 1/4–1/3'ünü örter; karşıdaki `bust()` üç-çeyrek ona dönük, odakta. Ön plan kameradan daha hızlı kayar (parallax). 180° kuralı: A hep solda, B hep sağda. |
+
+## 9. Anatomik ayrıntı (yakın plan)
+| Terim | Bizde |
+|---|---|
+| micro-expressions | `expr`: `brow` (kaldır), `knit` (çat), `smile`, `open`, `lid`. Değişimler 0,2-0,4 sn, küçük genlik. |
+| skin pores, texture | `#skin` filtresi (ince fraktal gürültü yalnızca tende), yanak kızarıklığı (`#blush`). |
+| wrinkles around eyes | dış köşede kaz ayağı, alt kapak çizgisi, nazolabial kıvrım; `age` 0–1 ile koyulaşır. |
+| iris texture, tear duct | limbus halkalı iris + ışınsal lifler, ışık yönünde parıltı + ikinci küçük yansıma, iç köşede pembe göz pınarı, üst kapağın göze düşen gölgesi, kapak kıvrımı, kirpikler. |
+| articulated fingers, hand action | `hand_cup()`: ayrı parmaklar, boğum çizgileri, tırnaklar, alt yüzeyde gölge, kavrayan poz. Yeni eller aynı yapıyla: el ne yapıyorsa (kavrar, gösterir, dayanır) poz ona göre. |
+| fabric texture, folds, stitching | `#tweed` dokusu; gerilme noktalarından (dirsek, koltuk altı, bel) çıkan kıvrımlar; dikiş = kesik çizgi (yaka, omuz). |
+| metallic luster / brushed metal | `#metalB` (parlak radyal: düğme, inci, yüzük), `#brushed` (fırçalanmış: kravat iğnesi, saat kasası). |
+
+## 10. Işık, mekân, nesne
+| Terim | Bizde |
+|---|---|
+| volumetric lighting | `light_shafts()`: pencereden giren, açılarak sönen huzmeler (screen karışım) + uçuşan toz. |
+| subsurface scattering | Işığa bakan kulak kenarında ve burun kanadında sıcak kırmızı geçirgenlik. |
+| chiaroscuro / cinematic dramatic lighting | `chiaroscuro(cx, cy)`: anahtar ışığın dışı karanlığa düşer; tek, yönlü ışık (`pl`/`pr` örtüsü). |
+| ambient occlusion | Birleşim yerlerinde yumuşak koyu gölge: yaka-boyun, çene altı, burun altı, alt dudak altı, fincan-masa, masa kenarı. |
+| cast shadows | `shadow_polys()` (geniş plan, perspektifli); yakın planda yönlü yumuşak gölge. |
+| depth of field | `Cam(focus=…)`, `dofFG` / `dofBG`: konu net, ön plan ve arka plan bulanık; önemli anda odak kaydırılır. |
+
+Demo: `python3 hf/demo/build_ots.py && (cd hf && npx -y hyperframes@0.8.181 render -c demo/ots.html -o renders/ots-demo.mp4)`.
