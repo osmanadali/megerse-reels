@@ -226,69 +226,239 @@ hook = f"""<div class="fill" id="hookkb"><img src="{REAL['hookphoto']}" alt="" s
 police = f"""<div class="fill" id="policekb"><img src="{REAL['police']}" alt="" style="object-position:60% 30%"></div><div class="vign"></div>
 <div id="afstamp" style="position:absolute; left:110px; top:780px; width:740px; padding:18px; border:8px solid #5BC0EB; border-radius:16px; color:#5BC0EB; text-align:center; font-weight:800; font-size:46px; transform:rotate(-6deg); background:rgba(11,18,32,.85)">ABD HAVA KUVVETLERİ</div>
 <div class="chip top">POLİS ŞEFİ VE ANN HODGES</div>"""
+# ================= v2 sahneleri (artlib2: dokulu, ışıklı, alan derinliği; motion blur) =================
+from artlib2 import DEFS2, car50s, cloud, farmer2, fireball2, gavel, house2, obj_svg, person2, rock2, svg, tree_autumn  # noqa: E402
+
+MB = "data-hf-motion-blur"
+
+
+def mover(idn, inner, w, h, extra=""):
+    """motion blur'lü hareketli nesne: panel koordinatında x/y ile konumlanır (sol-üst 0,0)."""
+    return f'<div id="{idn}" {MB} style="position:absolute; left:0; top:0; width:{w}px; height:{h}px; {extra}">{obj_svg(inner, w, h)}</div>'
+
+
+town = svg(f'''<rect width="960" height="1080" fill="url(#sky2)"/>
+<g id="tclouds">{cloud(200, 170, 1.1)}{cloud(760, 110, .9, .85)}{cloud(560, 260, .6, .7)}</g>
+<g filter="url(#dof)">{tree_autumn(60, 640, 1.2, 1)}{tree_autumn(300, 620, .9, 5)}{tree_autumn(900, 640, 1.3, 3)}</g>
+<rect y="600" width="960" height="80" fill="url(#hazeG)"/>
+<rect y="640" width="960" height="440" fill="url(#grass2)" filter="url(#grainy)"/>
+<path d="M380 1080 L450 760 L510 760 L600 1080 Z" fill="#B8AE98" opacity=".8" filter="url(#grainy)"/>
+<g id="thouse">{house2(470, 520, .78, "th2")}</g>
+{tree_autumn(790, 790, 1.15, 2)}
+<g transform="translate(250 840)"><rect x="-6" y="-80" width="12" height="80" fill="#5A4030"/><rect x="-34" y="-112" width="68" height="40" rx="18" fill="#4A6A8A" stroke="#22303F" stroke-width="3"/><rect x="26" y="-108" width="6" height="24" fill="#C8402F"/></g>
+<g id="tfence" filter="url(#dof2)">{''.join(f'<path d="M{x} 1080 V930 L{x+14} 912 L{x+28} 930 V1080 Z" fill="#F4F0E6" stroke="#B8AE98" stroke-width="3"/>' for x in range(-20, 980, 52))}<rect x="-20" y="960" width="1000" height="14" fill="#E9E2D0"/><rect x="-20" y="1030" width="1000" height="14" fill="#E9E2D0"/></g>''') + """
+<div id="datecard" style="position:absolute; left:40px; top:40px; padding:22px 28px; border-radius:22px; background:rgba(11,18,32,.88); border:3px solid #F4F1EA">
+  <div style="font-weight:800; font-size:64px; color:#F5B82E; letter-spacing:.02em">30.11.1954</div>
+  <div style="font-weight:600; font-size:32px; color:#C9D6E4; margin-top:6px">SYLACAUGA, ALABAMA</div>
+</div>"""
+
+couch = '''<g filter="url(#shadow)">
+<rect x="-280" y="-160" width="560" height="140" rx="46" fill="#3F7A78"/><rect x="-280" y="-160" width="560" height="140" rx="46" fill="url(#clapboard)" opacity=".3"/>
+<path d="M-280 -100 C-200 -120 200 -120 280 -100" stroke="#2C5A58" stroke-width="4" fill="none"/>
+''' + "".join(f'<circle cx="{x}" cy="-110" r="5" fill="#2A5452"/>' for x in range(-200, 220, 100)) + '''
+<rect x="-300" y="-46" width="600" height="116" rx="34" fill="#3B7372"/><path d="M-300 -10 H300" stroke="#2C5A58" stroke-width="3"/>
+<rect x="-330" y="-130" width="76" height="200" rx="34" fill="#346866"/><rect x="254" y="-130" width="76" height="200" rx="34" fill="#346866"/>
+<rect x="-330" y="-130" width="30" height="200" rx="14" fill="#000" opacity=".15"/>
+<path d="M-250 70 L-262 116 M250 70 L262 116" stroke="#2A1A10" stroke-width="12" stroke-linecap="round"/></g>
+<g id="ann2">
+<ellipse cx="-190" cy="-72" rx="70" ry="36" fill="#F4EEE0" stroke="#B9AE95" stroke-width="3"/><path d="M-250 -80 Q-190 -96 -130 -80" stroke="#D9CFBC" stroke-width="3" fill="none"/>
+<path d="M-160 -112 C-140 -104 -128 -86 -132 -70 L-170 -60 Z" fill="#E2A982"/>
+<ellipse cx="-176" cy="-98" rx="34" ry="30" fill="#E8B48E"/><path d="M-196 -92 q10 6 20 0" stroke="#5A3020" stroke-width="3" fill="none" stroke-linecap="round"/><path d="M-180 -84 q6 4 12 0" stroke="#B5655A" stroke-width="3" fill="none"/>
+<path d="M-214 -100 C-214 -136 -170 -146 -146 -124 C-138 -112 -142 -100 -150 -96 C-160 -120 -190 -122 -214 -100 Z" fill="#4A2E1E"/>''' + "".join(f'<circle cx="{-206+i*12}" cy="{-118-(i%2)*8}" r="9" fill="#5A3826"/>' for i in range(6)) + '''
+<path d="M-150 -84 C-60 -120 120 -112 236 -78 C252 -60 244 -30 222 -20 C80 -10 -60 -12 -150 -30 Z" fill="url(#quilt)" stroke="#8C7A5E" stroke-width="3"/>
+<path d="M-150 -84 C-60 -120 120 -112 236 -78 C252 -60 244 -30 222 -20 C80 -10 -60 -12 -150 -30 Z" fill="#000" opacity=".08"/>
+<path d="M-60 -104 C20 -116 120 -110 220 -80" stroke="#fff" stroke-width="4" opacity=".35" fill="none"/>
+<path d="M-140 -60 C-120 -70 -100 -66 -84 -58" stroke="#E2A982" stroke-width="16" stroke-linecap="round" fill="none"/></g>
+<circle id="hipmark2" cx="60" cy="-92" r="0" fill="#5A2E6E" opacity=".55" filter="url(#dof2)"/>'''
+
+radio_svg = '''<g filter="url(#shadow)"><rect x="-120" y="-170" width="240" height="280" rx="18" fill="#7A4424" stroke="#3A1E0E" stroke-width="5" filter="url(#woodgrain)"/>
+<rect x="-96" y="-142" width="192" height="86" rx="12" fill="#2A1A10"/><rect x="-86" y="-132" width="172" height="66" rx="8" fill="#E9C978"/><rect x="-86" y="-132" width="172" height="66" rx="8" fill="#FFE3A0" opacity=".5" filter="url(#glow)"/>
+''' + "".join(f'<path d="M{x} -120 V-78" stroke="#7A5A1E" stroke-width="2"/>' for x in range(-70, 80, 14)) + '''<path d="M10 -128 V-70" stroke="#B23A2E" stroke-width="4"/>
+<rect x="-96" y="-40" width="192" height="120" rx="10" fill="#C9B48A"/>''' + "".join(f'<path d="M-90 {y} H90" stroke="#9C845A" stroke-width="3"/>' for y in range(-32, 80, 10)) + '''
+<circle cx="-50" cy="94" r="10" fill="url(#brass)"/><circle cx="50" cy="94" r="10" fill="url(#brass)"/>
+<g id="radiocrack2" opacity="0"><path d="M-70 -130 L-30 -90 L-50 -60 L-10 -30 L-20 10 M-30 -90 L20 -110 M-50 -60 L-90 -40" stroke="#120A04" stroke-width="5" fill="none"/></g></g>'''
+
+clock = '''<g filter="url(#shadow)"><circle r="70" fill="url(#brass)"/><circle r="58" fill="#F7F2E6"/>''' + "".join(f'<rect x="-3" y="-52" width="6" height="12" fill="#3A2A1E" transform="rotate({a})"/>' for a in range(0, 360, 30)) + '''
+<rect id="hourhand2" x="-5" y="-32" width="10" height="36" rx="4" fill="#1F1A16"/><rect id="minhand2" x="-3" y="-48" width="6" height="52" rx="3" fill="#1F1A16"/><circle r="6" fill="#B23A2E"/></g>'''
+
+room = svg(f'''<g id="roomcam2">
+<rect width="960" height="170" fill="#EDE6D6" filter="url(#grainy)"/><rect y="160" width="960" height="18" fill="#D9CFBC"/><rect y="176" width="960" height="6" fill="#B9AE95"/>
+<rect y="182" width="960" height="660" fill="url(#wallpaper)"/>
+<rect y="182" width="960" height="660" fill="url(#wallShade)" opacity=".25"/>
+<rect y="830" width="960" height="250" fill="#7A4A2A" filter="url(#woodgrain)"/>{''.join(f'<path d="M0 {y} H960" stroke="#4A2A14" stroke-width="3" opacity=".5"/>' for y in range(870, 1080, 42))}
+<rect y="826" width="960" height="14" fill="#E9E2D0"/>
+<path d="M150 1080 L250 900 L800 900 L900 1080 Z" fill="url(#rug)" opacity=".9" filter="url(#grainy)"/>
+<g transform="translate(150 420)"><rect x="-100" y="-130" width="200" height="230" fill="#BFD8EC"/><rect x="-100" y="-130" width="200" height="230" fill="url(#glass2)" opacity=".5"/>
+<g id="winball2" transform="translate(70 -110) scale(.18)">{fireball2(1)}</g>
+<path d="M-100 -130 H100 V100 H-100 Z" fill="none" stroke="#F4F0E6" stroke-width="16"/><path d="M0 -130 V100 M-100 -15 H100" stroke="#F4F0E6" stroke-width="9"/>
+<path d="M-124 -150 C-96 -40 -120 40 -96 120 L-140 120 Z" fill="#C9675C"/><path d="M-124 -150 C-110 -40 -130 40 -112 120" stroke="#9A4A40" stroke-width="5" fill="none"/>
+<path d="M124 -150 C96 -40 120 40 96 120 L140 120 Z" fill="#C9675C"/><path d="M124 -150 C110 -40 130 40 112 120" stroke="#9A4A40" stroke-width="5" fill="none"/>
+<rect x="-150" y="-160" width="300" height="16" rx="6" fill="#7A4424"/></g>
+<polygon points="60,300 250,300 640,1080 120,1080" fill="#FFF3D0" opacity=".16" filter="url(#dof)"/>
+<g transform="translate(470 300)"><rect x="-80" y="-60" width="160" height="120" fill="#7A4424" filter="url(#woodgrain)"/><rect x="-66" y="-46" width="132" height="92" fill="#8FA88A"/><path d="M-66 30 L-20 -10 L20 20 L66 -20 V46 H-66 Z" fill="#5A7A4A"/></g>
+<g transform="translate(760 300)">{clock}</g>
+<g transform="translate(770 730)">{radio_svg}</g>
+<g transform="translate(420 780)">{couch}</g>
+<g id="hole2" opacity="0"><path d="M450 120 L490 92 L540 130 L590 100 L580 160 L520 176 L462 168 Z" fill="#14181F"/><path d="M440 140 L400 190 M600 120 L650 160 M520 176 L530 230 M470 168 L430 210" stroke="#B9AE95" stroke-width="5" stroke-linecap="round"/><polygon points="470,170 590,170 680,830 380,830" fill="#FFF3D0" opacity=".22" filter="url(#dof)"/></g>
+<g id="traj2" opacity="0"><path d="M520 170 L740 600 L560 650 L470 690" fill="none" stroke="#FF8A1F" stroke-width="6" stroke-dasharray="16 12"/></g>
+<g id="dust2" opacity="0" filter="url(#dof)"><ellipse cx="520" cy="200" rx="160" ry="80" fill="#E9E2D0"/><ellipse cx="460" cy="260" rx="110" ry="60" fill="#D9CFBC"/></g>
+<g id="burst2" opacity="0"><circle cx="520" cy="160" r="120" fill="url(#fire2)" filter="url(#glow)"/></g>
+<g id="burst3" opacity="0"><circle cx="470" cy="690" r="90" fill="#FFF6D8" filter="url(#glow)"/></g>
+</g>
+<g filter="url(#dof)" transform="translate(40 640)"><rect x="-8" y="0" width="16" height="440" fill="#2A1A10"/><path d="M-70 0 L70 0 L44 -110 L-44 -110 Z" fill="#E9D3A0"/><path d="M-70 0 L70 0 L44 -110 L-44 -110 Z" fill="#FFE9B0" opacity=".5" filter="url(#glow)"/></g>''') + \
+    mover("rock2", rock2(.9), 160, 160, "opacity:0") + """
+<div id="kg2" style="position:absolute; right:36px; top:36px; padding:14px 22px; border-radius:16px; background:#0B1220; border:4px solid #FF8A1F; color:#FF8A1F; font-weight:800; font-size:44px; opacity:0">≈ 4 KG</div>
+<div class="chip">SAAT 12:45</div>"""
+
+panic = svg(f'''<rect width="960" height="1080" fill="url(#sky2)"/>
+<path d="M980 -40 L420 420 L440 440 L1000 0 Z" fill="url(#smoke)" opacity=".7" filter="url(#dof)"/>
+<g filter="url(#dof)">{house2(140, 560, .45, "pa")}{house2(820, 560, .45, "pb")}{tree_autumn(480, 600, .8, 6)}</g>
+<rect y="600" width="960" height="60" fill="url(#hazeG)"/>
+<rect y="640" width="960" height="440" fill="url(#grass2)" filter="url(#grainy)"/><path d="M0 760 H960 V860 H0 Z" fill="#8A8478" filter="url(#grainy)"/><path d="M0 808 H960" stroke="#E9E2D0" stroke-width="6" stroke-dasharray="40 30"/>
+<g transform="translate(720 800)">{car50s(.75, "#2F6E8A")}</g>
+<g id="crowd2">{''.join('<g>' + person2(70 + i * 102, 1000 + (i % 3) * 24, .95 + (i % 3) * .1, ["#2E3B4E", "#5A3A2A", "#3A4A3A", "#6A5A4A", "#22303F"][i % 5], i % 2 == 0, ["#C98B63", "#E8B48E", "#8A5A3E"][i % 3]) + '</g>' for i in range(9))}</g>''') + """
+<div class="qb" id="q1" style="left:50px; top:110px">UÇAK MI DÜŞTÜ?</div>
+<div class="qb" id="q2" style="right:50px; top:250px; background:#E8524A; color:#fff">SOVYET SALDIRISI MI?</div>"""
+
+door = svg(f'''<rect width="960" height="1080" fill="url(#wallLit)"/><rect width="960" height="1080" fill="url(#clapboard)"/>
+<rect y="930" width="960" height="150" fill="#9C8F78" filter="url(#grainy)"/>
+<g transform="translate(150 260)"><rect x="-30" y="-10" width="60" height="16" fill="#3A2A1E"/><path d="M-26 6 H26 L18 70 H-18 Z" fill="#FFE9B0"/><circle cx="0" cy="40" r="80" fill="#FFE9B0" opacity=".35" filter="url(#glow)"/></g>
+<g id="doorg2" transform="translate(500 560)"><rect x="-230" y="-460" width="460" height="830" fill="#E9E2D0" stroke="#B9AE95" stroke-width="6"/>
+<rect x="-200" y="-430" width="400" height="800" fill="url(#door2G)" filter="url(#woodgrain)"/>
+<rect x="-150" y="-380" width="300" height="230" rx="8" fill="#C9D6DE"/><rect x="-150" y="-380" width="300" height="230" rx="8" fill="url(#glass2)" opacity=".6"/>
+<g id="lady" opacity="0" filter="url(#dof)"><ellipse cx="20" cy="-290" rx="46" ry="54" fill="#3A2A2A"/><path d="M-70 -150 C-60 -220 100 -220 110 -150 Z" fill="#3A2A2A"/></g>
+<path d="M-150 -380 H150 V-150 H-150 Z" fill="none" stroke="#3A1810" stroke-width="10"/>
+<rect x="-150" y="-100" width="130" height="420" rx="8" fill="none" stroke="#3A1810" stroke-width="7"/><rect x="20" y="-100" width="130" height="420" rx="8" fill="none" stroke="#3A1810" stroke-width="7"/>
+<circle cx="150" cy="40" r="20" fill="url(#brass)" filter="url(#shadow)"/></g>
+<g id="knock2" opacity="0"><path d="M720 420 q34 34 0 68 M752 396 q56 58 0 116 M784 372 q78 82 0 164" stroke="#0B1220" stroke-width="9" fill="none" stroke-linecap="round"/></g>''') + """
+<div id="quote" style="position:absolute; left:40px; right:40px; top:50px; padding:28px 32px; border-radius:26px; background:#0B1220; border:4px solid #F5B82E">
+  <div style="font-weight:800; font-size:48px; line-height:1.15; color:#F4F1EA">“Taş benim evime düştü, benimdir.”</div>
+  <div style="font-weight:600; font-size:30px; color:#F5B82E; margin-top:12px">Ev sahibi Birdie Guy</div>
+</div>"""
+
+scale_svg = f'''<g filter="url(#shadow)"><rect x="-14" y="-380" width="28" height="560" fill="url(#brassBar)"/><path d="M-160 180 H160 L130 230 H-130 Z" fill="url(#brassBar)"/><circle cy="-390" r="28" fill="url(#brass)"/>
+<g id="beam2"><rect x="-350" y="-392" width="700" height="20" rx="10" fill="url(#brassBar)"/>
+<g id="panL2" transform="translate(-330 -380)"><path d="M0 0 L-90 210 M0 0 L90 210" stroke="#B8862E" stroke-width="5"/><path d="M-130 210 H130 Q110 262 0 262 Q-110 262 -130 210 Z" fill="url(#brassBar)"/><g transform="translate(0 168)">{rock2(.85)}</g></g>
+<g id="panR2" transform="translate(330 -380)"><path d="M0 0 L-90 210 M0 0 L90 210" stroke="#B8862E" stroke-width="5"/><path d="M-130 210 H130 Q110 262 0 262 Q-110 262 -130 210 Z" fill="url(#brassBar)"/>{''.join(f'<rect x="-74" y="{190-i*14}" width="148" height="22" rx="4" fill="#8DB37A" stroke="#3E5E30" stroke-width="3"/><circle cx="0" cy="{201-i*14}" r="6" fill="#5E8A4C"/>' for i in range(6))}<text x="0" y="100" text-anchor="middle" font-family="Mont" font-weight="800" font-size="50" fill="#9CC48A">$500</text></g></g></g>'''
+court = svg(f'''<rect width="960" height="1080" fill="#3A2416"/>
+<g filter="url(#dof)">{''.join(f'<rect x="{x}" y="0" width="150" height="760" fill="#5A3420" stroke="#2A160C" stroke-width="10"/><rect x="{x+20}" y="40" width="110" height="300" fill="#6A4028"/><rect x="{x+20}" y="380" width="110" height="300" fill="#6A4028"/>' for x in range(0, 960, 160))}
+<rect x="180" y="420" width="600" height="300" fill="#4A2A18"/><circle cx="480" cy="160" r="80" fill="#C9A24A" opacity=".6"/></g>
+<rect width="960" height="1080" fill="#000" opacity=".25"/>
+<rect y="860" width="960" height="220" fill="#2A160C" filter="url(#woodgrain)"/>
+<g transform="translate(480 620)">{scale_svg}</g>''') + mover("gavel2", gavel(.9), 260, 280) + """
+<div id="cal" style="position:absolute; right:36px; top:36px; width:200px; border-radius:18px; overflow:hidden; text-align:center; background:#F4F1EA; color:#0B1220">
+  <div style="background:#E8524A; color:#fff; font-weight:800; font-size:30px; padding:8px">DAVA</div><div style="font-weight:800; font-size:64px; padding:10px 0">1 YIL</div></div>"""
+
+nobody = svg(f'''<rect width="960" height="1080" fill="url(#wallpaper)"/><rect width="960" height="1080" fill="#3A2A1E" opacity=".35"/>
+<rect y="880" width="960" height="200" fill="#7A4A2A" filter="url(#woodgrain)"/><rect y="874" width="960" height="12" fill="#E9E2D0"/>
+<g id="ndoor2" transform="translate(560 500)"><rect x="-250" y="-440" width="60" height="820" fill="#E9E2D0"/>
+<polygon points="-190,-440 -60,-440 -60,380 -190,380" fill="#FFF3D0"/><polygon points="-190,-440 -60,-440 260,1000 -190,1000" fill="#FFF3D0" opacity=".22" filter="url(#dof)"/>
+<path d="M-60 -440 L170 -400 L170 340 L-60 380 Z" fill="url(#door2G)" filter="url(#woodgrain)"/><path d="M-60 -440 L170 -400 L170 340 L-60 380 Z" fill="#000" opacity=".2"/><circle cx="140" cy="-20" r="18" fill="url(#brass)"/></g>
+<g id="tag2" transform="translate(300 300) rotate(-10)" filter="url(#shadow)"><path d="M-170 -74 H134 L188 0 L134 74 H-170 Z" fill="#F5B82E" stroke="#7A5A10" stroke-width="5"/><circle cx="134" cy="0" r="12" fill="#7A5A10"/><text x="-20" y="18" text-anchor="middle" font-family="Mont" font-weight="800" font-size="54" fill="#0B1220">SATILIK</text><path id="nocross2" d="M-160 -62 L124 62" stroke="#E8524A" stroke-width="14" stroke-linecap="round" stroke-dasharray="320" stroke-dashoffset="320"/></g>
+<g transform="translate(740 870)">{rock2(1.7)}</g>''') + """
+<div class="chip red" id="stopchip" style="opacity:0">KAPI TUTUCU</div>"""
+
+meg = svg(f'''<rect width="960" height="1080" fill="#04070C"/>
+<circle cx="480" cy="600" r="380" fill="url(#fire2)" opacity=".16" filter="url(#glow)"/>
+{''.join(f'<circle class="spark" cx="{(i*137)%960}" cy="{(i*89)%1080}" r="{1.5+(i%3)}" fill="#FFB347" opacity=".5"/>' for i in range(40))}
+<g id="frag1b" transform="translate(470 640)">{rock2(2.6)}<path d="M40 -150 L10 -60 L50 10 L20 90" stroke="#FF9A3A" stroke-width="6" fill="none" filter="url(#glow)" id="crackglow" opacity="0"/></g>''') + \
+    mover("frag2b", rock2(1.3) + '<circle r="90" fill="url(#fire2)" opacity=".4" filter="url(#glow)"/>', 220, 220, "opacity:0") + """
+<div id="megtxt" class="big" style="top:130px; font-size:140px; color:#F5B82E; text-shadow:0 10px 0 #000">MEĞERSE</div>
+<div id="megsub" class="big" style="top:310px; font-size:44px; color:#C9D6E4">2. PARÇA</div>"""
+
+farm_bg = svg(f'''<rect width="960" height="1080" fill="url(#sky2)"/>{cloud(220, 160, 1)}{cloud(760, 220, .8, .8)}
+<g filter="url(#dof)">{''.join(tree_autumn(x, 560, .7, x % 7) for x in range(-40, 1000, 150))}</g>
+<rect y="540" width="960" height="60" fill="url(#hazeG)"/>
+<path d="M0 580 H960 V1080 H0 Z" fill="#A89A6A" filter="url(#grainy)"/>
+{''.join(f'<path d="M{480+(x-480)*0.08} 580 L{x} 1080" stroke="#6E7A3A" stroke-width="{8+abs(x-480)/40}" opacity=".55"/>' for x in range(-400, 1400, 110) if abs(x-480) > 160)}
+{''.join(f'<circle cx="{(i*73)%960}" cy="{620+(i*41)%440}" r="{3+(i%4)}" fill="#F4F0E6" opacity=".85"/>' for i in range(90) if abs(((i*73)%960)-480) > 150 + ((620+(i*41)%440)-580)*.6)}
+<path d="M450 580 L510 580 L760 1080 L200 1080 Z" fill="#B49A70" filter="url(#grainy)"/><path d="M480 580 V1080" stroke="#8A7550" stroke-width="5" stroke-dasharray="30 30" opacity=".6"/>
+{''.join(f'<rect x="{480+(i*28+70)}" y="{600+i*44}" width="{6+i*1.5}" height="{40+i*12}" fill="#5A4030"/>' for i in range(0, 11))}
+<path d="M550 610 L860 1060" stroke="#7A6050" stroke-width="3"/>
+<g id="farmrock2" transform="translate(540 870)">{rock2(1.1)}</g>
+<g id="newhouse2" transform="translate(760 520) scale(0)">{house2(0, 0, .35, "nh2")}</g>
+<g id="bills2" opacity="0">{''.join(f'<g class="bill2" transform="translate({360+(i*61)%260} {220+(i*37)%160}) rotate({(i*29)%60-30})"><rect x="-44" y="-20" width="88" height="40" rx="5" fill="#8DB37A" stroke="#3E5E30" stroke-width="3"/><circle r="10" fill="#5E8A4C"/></g>' for i in range(10))}</g>''')
+farmer = farm_bg + mover("farmerman2", farmer2(1.25), 220, 340) + mover("car2", car50s(.85), 460, 200) + f"""
+<div class="chip" style="bottom:36px">ÇİFTÇİ JULIUS McKINNEY</div>
+<div class="fill" id="mckwrap" style="background:#0B1220"><div class="fill" id="mckkb"><img src="{REAL['mckinney']}" alt="" style="object-position:62% 78%; filter:contrast(1.1)"></div><div class="vign"></div><div class="chip top">McKINNEY AİLESİ VE 2. PARÇA · 1954</div></div>"""
+
+end_right = svg(f'''<rect width="480" height="1080" fill="url(#sky2)"/>{cloud(240, 200, .7)}
+<rect y="700" width="480" height="380" fill="url(#grass2)" filter="url(#grainy)"/>
+<g transform="translate(250 620)">{house2(0, 0, .5, "eh2")}</g><g transform="translate(240 900)">{car50s(.7)}</g>''', 480, 1080, "", "position:absolute; left:480px; top:0; width:480px; height:1080px")
+end = f"""<div style="position:absolute; left:0; top:0; width:480px; height:1080px; overflow:hidden"><img src="{REAL['museum']}" style="width:100%; height:100%; object-fit:cover; object-position:44% 30%"></div>
+{end_right}
+<div style="position:absolute; left:476px; top:0; width:8px; height:1080px; background:#F4F1EA"></div>
+<div class="endlab" style="left:24px">ANN<br><span>taş müzede, para yok</span></div>
+<div class="endlab" style="left:504px">McKINNEY<br><span>ev + araba</span></div>"""
+
 HTML = {"hook": hook, "town": town, "room": room, "bruise": bruise, "panic": panic, "police": police, "door": door,
         "court": court, "nobody": nobody, "meg": meg, "farmer": farmer, "end": end, "sources": sources}
 scenes_html = "".join(scene(k, HTML[k]) for k in keys)
 
 s = lambda k: S[k][0]
 d = lambda k: win(k)[1]
+P = lambda cx, cy, w, h: f"x:{cx - w/2},y:{cy - h/2}"   # merkez -> sol-üst
 js = "".join(f'tl.fromTo("#{k}-in",{{opacity:0}},{{opacity:1,duration:{FADE},ease:"power1.out"}},{s(k)});' for k in keys if k != "hook")
 js += f"""
 tl.fromTo("#hookkb",{{scale:1.9,transformOrigin:"42% 62%"}},{{scale:1.02,duration:{d('hook')},ease:"power2.inOut"}},0);
+tl.fromTo("#thouse",{{scale:1,transformOrigin:"28% 52%"}},{{scale:1.55,duration:{d('town')},ease:"power1.inOut"}},{s('town')});
+tl.fromTo("#tfence",{{y:0}},{{y:120,duration:{d('town')},ease:"power1.inOut"}},{s('town')});
+tl.fromTo("#tclouds",{{x:0}},{{x:-60,duration:{d('town')},ease:"none"}},{s('town')});
+tl.fromTo("#datecard",{{y:-40,opacity:0}},{{y:0,opacity:1,duration:.5,ease:"back.out(1.7)"}},{s('town')+.3});
+tl.fromTo("#roomcam2",{{scale:1.12,transformOrigin:"45% 60%"}},{{scale:1,duration:2.2,ease:"power2.out"}},{s('room')});
+tl.fromTo("#minhand2",{{rotation:180,transformOrigin:"50% 92%"}},{{rotation:270,duration:2,ease:"power1.out"}},{s('room')});
+tl.fromTo("#winball2",{{attr:{{transform:"translate(80 -120) scale(.18)"}}}},{{attr:{{transform:"translate(-70 70) scale(.22)"}},duration:{hit-s('room')},ease:"power1.in"}},{s('room')});
+tl.set("#rock2",{{opacity:1}},{hit+.15});
+tl.fromTo("#rock2",{{{P(520,-120,160,160)},rotation:0}},{{{P(520,150,160,160)},rotation:40,duration:.4,ease:"power2.in"}},{hit+.15});
+tl.to("#hole2",{{opacity:1,duration:.05}},{hit+.55});
+tl.set("#burst2",{{opacity:1}},{hit+.55});tl.to("#burst2",{{opacity:0,duration:.7}},{hit+.6});
+tl.set("#dust2",{{opacity:.95,scale:.6,transformOrigin:"50% 20%"}},{hit+.55});tl.to("#dust2",{{opacity:0,scale:1.6,duration:2.4,ease:"power2.out"}},{hit+.6});
+tl.fromTo("#roomcam2",{{x:-12}},{{x:12,duration:.05,repeat:9,yoyo:true}},{hit+.55});
+tl.to("#rock2",{{{P(740,600,160,160)},rotation:200,duration:{radio-hit-.55},ease:"power1.in"}},{hit+.55});
+tl.to("#radiocrack2",{{opacity:1,duration:.05}},{radio});
+tl.to("#rock2",{{{P(470,690,160,160)},rotation:320,duration:{hip-radio},ease:"power2.out"}},{radio});
+tl.set("#burst3",{{opacity:1}},{hip});tl.to("#burst3",{{opacity:0,duration:.6}},{hip+.05});
+tl.to("#hipmark2",{{attr:{{r:60}},duration:.6}},{hip});
+tl.to("#traj2",{{opacity:.85,duration:.3}},{hip+.3});
+tl.fromTo("#kg2",{{opacity:0,y:-20}},{{opacity:1,y:0,duration:.4}},{hit+.7});
+tl.fromTo("#stamp",{{scale:2.4,opacity:0}},{{scale:1,opacity:1,duration:.35,ease:"power3.in"}},{A('kayıtlara')});
 tl.fromTo("#bruisekb",{{scale:1.05,transformOrigin:"64% 66%"}},{{scale:1.5,duration:{alive-s('bruise')},ease:"power1.inOut"}},{s('bruise')});
 tl.to("#bedwrap",{{opacity:1,duration:.5}},{alive-.2});
 tl.fromTo("#bedkb",{{scale:1.15}},{{scale:1.0,duration:{S['bruise'][1]-alive+.5},ease:"power1.out"}},{alive-.2});
-tl.fromTo("#policekb",{{scale:1.0,transformOrigin:"60% 25%"}},{{scale:1.25,duration:{d('police')},ease:"power1.inOut"}},{s('police')});
-tl.fromTo("#mckkb",{{scale:1.12,transformOrigin:"62% 85%"}},{{scale:1.0,duration:{road-s('farmer')+.6},ease:"power1.out"}},{s('farmer')});
-tl.to("#mckwrap",{{opacity:0,duration:.5}},{road+.5});
-tl.fromTo("#hookball",{{attr:{{transform:"translate(900 80) scale(.6)"}}}},{{attr:{{transform:"translate(560 700) scale(1.3)"}},duration:{d('hook')-.6},ease:"power2.in"}},0);
-tl.to("#hookflash",{{opacity:1,duration:.12}},{d('hook')-.6}).to("#hookflash",{{opacity:0,duration:.4}});
-tl.fromTo("#townhouse",{{scale:1,transformOrigin:"28% 66%"}},{{scale:1.9,duration:{d('town')},ease:"power2.in"}},{s('town')});
-tl.fromTo("#datecard",{{y:-40,opacity:0}},{{y:0,opacity:1,duration:.5,ease:"back.out(1.7)"}},{s('town')+.3});
-tl.fromTo("#roomcam",{{scale:1.15,transformOrigin:"50% 60%"}},{{scale:1,duration:2,ease:"power2.out"}},{s('room')});
-tl.fromTo("#minhand",{{rotation:180,transformOrigin:"50% 92%"}},{{rotation:270,duration:2,ease:"power1.out"}},{s('room')});
-tl.fromTo("#hourhand",{{rotation:0,transformOrigin:"50% 88%"}},{{rotation:-8,duration:2}},{s('room')});
-tl.fromTo("#winball",{{attr:{{transform:"translate(70 -100)"}}}},{{attr:{{transform:"translate(-60 60)"}},duration:{hit-s('room')},ease:"power1.in"}},{s('room')});
-tl.set("#rock",{{opacity:1}},{hit+.2});
-tl.fromTo("#rock",{{attr:{{transform:"translate(520 -40) scale(.8)"}}}},{{attr:{{transform:"translate(520 150) scale(.8)"}},duration:.35,ease:"power2.in"}},{hit+.2});
-tl.to("#hole",{{opacity:1,duration:.05}},{hit+.55});tl.fromTo("#impact",{{attr:{{r:10}},opacity:1}},{{attr:{{r:200}},opacity:0,duration:.6}},{hit+.55});
-tl.to("#debris",{{opacity:1,duration:.05}},{hit+.55});tl.fromTo(".deb",{{y:0,rotation:0}},{{y:()=>300,rotation:200,duration:1.2,ease:"power1.in",stagger:.03}},{hit+.55});
-tl.fromTo("#roomcam",{{x:-10}},{{x:10,duration:.06,repeat:7,yoyo:true}},{hit+.55});
-tl.to("#traj",{{opacity:.9,duration:.2}},{hit+.6});
-tl.fromTo("#traj",{{attr:{{"stroke-dashoffset":900}}}},{{attr:{{"stroke-dashoffset":0}},duration:{hip-hit-.6},ease:"none"}},{hit+.6});
-tl.to("#rock",{{attr:{{transform:"translate(740 560) scale(.8)"}},duration:{radio-hit-.55},ease:"power1.in"}},{hit+.55});
-tl.to("#radiocrack",{{opacity:1,duration:.05}},{radio});
-tl.to("#rock",{{attr:{{transform:"translate(440 690) scale(.8)"}},duration:{hip-radio},ease:"power1.out"}},{radio});
-tl.fromTo("#impact2",{{attr:{{r:10}},opacity:1}},{{attr:{{r:160}},opacity:0,duration:.5}},{hip});
-tl.to("#hipmark",{{attr:{{r:70}},duration:.6}},{hip});
-tl.fromTo("#kg",{{opacity:0,y:-20}},{{opacity:1,y:0,duration:.4}},{hit+.6});
-tl.fromTo("#stamp",{{scale:2.4,opacity:0}},{{scale:1,opacity:1,duration:.35,ease:"power3.in"}},{A('kayıtlara')});
-tl.fromTo("#crowd > g",{{y:200,opacity:0}},{{y:0,opacity:1,duration:.5,stagger:.08,ease:"back.out(1.5)"}},{s('panic')+.2});
+tl.fromTo("#crowd2 > g",{{y:220,opacity:0}},{{y:0,opacity:1,duration:.55,stagger:.07,ease:"back.out(1.5)"}},{s('panic')+.2});
 tl.fromTo("#q1",{{scale:0,opacity:0}},{{scale:1,opacity:1,duration:.35,ease:"back.out(2)"}},{A('uçak')});
 tl.fromTo("#q2",{{scale:0,opacity:0}},{{scale:1,opacity:1,duration:.35,ease:"back.out(2)"}},{A('Sovyet')});
+tl.fromTo("#policekb",{{scale:1.0,transformOrigin:"60% 25%"}},{{scale:1.25,duration:{d('police')},ease:"power1.inOut"}},{s('police')});
 tl.fromTo("#afstamp",{{scale:2.4,opacity:0}},{{scale:1,opacity:1,duration:.3,ease:"power3.in"}},{A('Hava')});
-tl.fromTo("#doorg",{{scale:1.15,transformOrigin:"50% 50%"}},{{scale:1,duration:{d('door')},ease:"power1.out"}},{s('door')});
-tl.to("#knock",{{opacity:1,duration:.05,repeat:5,yoyo:true}},{s('door')+.4});
+tl.fromTo("#doorg2",{{scale:1.12,transformOrigin:"50% 40%"}},{{scale:1,duration:{d('door')},ease:"power1.out"}},{s('door')});
+tl.to("#lady",{{opacity:.85,duration:.6}},{s('door')+.2});
+tl.to("#knock2",{{opacity:1,duration:.06,repeat:5,yoyo:true}},{s('door')+.4});
 tl.fromTo("#quote",{{y:-40,opacity:0}},{{y:0,opacity:1,duration:.45,ease:"back.out(1.6)"}},{A('Taş benim')});
-tl.fromTo("#beam",{{rotation:0,transformOrigin:"50% 50%"}},{{rotation:-9,duration:1.2,ease:"elastic.out(1,.5)"}},{A('beş')});
-tl.fromTo("#panL",{{rotation:0}},{{rotation:9,duration:1.2,ease:"elastic.out(1,.5)"}},{A('beş')});
-tl.fromTo("#panR",{{rotation:0}},{{rotation:9,duration:1.2,ease:"elastic.out(1,.5)"}},{A('beş')});
+tl.fromTo("#gavel2",{{{P(760,180,260,280)},rotation:-70,transformOrigin:"50% 85%"}},{{{P(760,330,260,280)},rotation:10,duration:.32,ease:"power4.in"}},{A('beş')-.35});
+tl.to("#gavel2",{{rotation:0,duration:.25,ease:"back.out(3)"}},{A('beş')-.03});
+tl.fromTo("#beam2",{{rotation:0,transformOrigin:"50% 50%"}},{{rotation:-9,duration:1.2,ease:"elastic.out(1,.5)"}},{A('beş')});
+tl.fromTo("#panL2",{{rotation:0}},{{rotation:9,duration:1.2,ease:"elastic.out(1,.5)"}},{A('beş')});
+tl.fromTo("#panR2",{{rotation:0}},{{rotation:9,duration:1.2,ease:"elastic.out(1,.5)"}},{A('beş')});
 tl.fromTo("#cal",{{rotationX:90,opacity:0}},{{rotationX:0,opacity:1,duration:.5}},{s('court')+.2});
-tl.to("#nocross",{{attr:{{"stroke-dashoffset":0}},duration:.4}},{A('Alıcı')});
-tl.to("#tag",{{y:-400,opacity:0,duration:.6,ease:"power2.in"}},{stopper-.6});
-tl.fromTo("#stoprock",{{attr:{{transform:"translate(720 860) scale(1.5)"}}}},{{attr:{{transform:"translate(700 860) scale(1.5)"}},duration:.3}},{stopper});
+tl.to("#nocross2",{{attr:{{"stroke-dashoffset":0}},duration:.4}},{A('Alıcı')});
+tl.to("#tag2",{{y:-420,opacity:0,duration:.6,ease:"power2.in"}},{stopper-.6});
 tl.to("#stopchip",{{opacity:1,duration:.3}},{stopper});
-tl.fromTo("#ndoor",{{scale:1,transformOrigin:"80% 90%"}},{{scale:1.25,duration:{d('nobody')},ease:"power1.inOut"}},{s('nobody')});
+tl.fromTo("#ndoor2",{{scale:1,transformOrigin:"80% 90%"}},{{scale:1.22,duration:{d('nobody')},ease:"power1.inOut"}},{s('nobody')});
 tl.fromTo("#megtxt",{{scale:2.2,opacity:0}},{{scale:1,opacity:1,duration:.35,ease:"back.out(2)"}},{s('meg')+.05});
-tl.to("#frag1",{{attr:{{transform:"translate(330 600) scale(1.6)"}},duration:.8,ease:"power2.out"}},{s('meg')+.9});
-tl.fromTo("#frag2",{{opacity:0,attr:{{transform:"translate(480 600) scale(1.4)"}}}},{{opacity:1,attr:{{transform:"translate(660 620) scale(1.6)"}},duration:.8,ease:"power2.out"}},{s('meg')+.9});
-tl.fromTo("#megsub",{{opacity:0}},{{opacity:1,duration:.4}},{s('meg')+1.3});
-tl.fromTo("#farmerman",{{x:-200}},{{x:0,duration:1.4,ease:"power1.out"}},{s('farmer')});
-tl.to("#farmrock",{{attr:{{transform:"translate(470 700) scale(1.2)"}},duration:.6,ease:"back.out(2)"}},{s('farmer')+1.6});
-tl.to("#rich",{{opacity:1,duration:.4}},{house_car-.4});
-tl.fromTo("#newhouse",{{scale:0,transformOrigin:"50% 100%"}},{{scale:.5,duration:.5,ease:"back.out(1.8)"}},{house_car});
-tl.fromTo("#car",{{x:-400}},{{x:0,duration:.6,ease:"power2.out"}},{A('araba')});
-tl.fromTo(".bill",{{y:-300,rotation:-30,opacity:0}},{{y:0,rotation:15,opacity:1,duration:.7,stagger:.05,ease:"bounce.out"}},{house_car-.6});
+tl.fromTo(".spark",{{y:0}},{{y:-160,duration:{d('meg')},ease:"none"}},{s('meg')});
+tl.to("#crackglow",{{opacity:1,duration:.3}},{s('meg')+.7});
+tl.set("#frag2b",{{opacity:1}},{s('meg')+.95});
+tl.fromTo("#frag2b",{{{P(500,600,220,220)},rotation:0}},{{{P(760,700,220,220)},rotation:160,duration:.55,ease:"power3.out"}},{s('meg')+.95});
+tl.to("#frag1b",{{attr:{{transform:"translate(380 640)"}},duration:.55,ease:"power3.out"}},{s('meg')+.95});
+tl.fromTo("#megsub",{{opacity:0}},{{opacity:1,duration:.4}},{s('meg')+1.4});
+tl.fromTo("#mckkb",{{scale:1.12,transformOrigin:"62% 85%"}},{{scale:1.0,duration:{road-s('farmer')+.6},ease:"power1.out"}},{s('farmer')});
+tl.to("#mckwrap",{{opacity:0,duration:.5}},{road+.5});
+tl.fromTo("#farmerman2",{{{P(150,880,220,340)}}},{{{P(290,860,220,340)},duration:1.6,ease:"power1.out"}},{road+.5});
+tl.to("#farmrock2",{{attr:{{transform:"translate(540 780) scale(1.1)"}},duration:.5,ease:"back.out(2)"}},{road+2.2});
+tl.to("#bills2",{{opacity:1,duration:.3}},{house_car-.6});
+tl.fromTo(".bill2",{{y:-300,opacity:0}},{{y:0,opacity:1,duration:.8,stagger:.05,ease:"bounce.out"}},{house_car-.6});
+tl.to("#newhouse2",{{attr:{{transform:"translate(760 520) scale(1)"}},duration:.5,ease:"back.out(1.8)"}},{house_car});
+tl.fromTo("#car2",{{{P(-300,960,460,200)}}},{{{P(640,960,460,200)},duration:.7,ease:"power3.out"}},{A('araba')});
 tl.fromTo(".endlab",{{y:40,opacity:0}},{{y:0,opacity:1,duration:.4,stagger:.5}},{s('end')+.2});
 """
 
@@ -298,6 +468,6 @@ css = """
 .endlab span { font-weight:600; font-size:32px; color:#F5B82E; }
 """
 html = page(words, mouth, scenes_html, js, total=TOTAL, voice_end=VOICE_END, kicker="MEĞERSE DOSYASI <b>|</b> VAKA 04 · GÖKTAŞI",
-            title="UZAYDAN GELEN TAŞ", voice_src="assets/hodges/voice.mp3", extra_css=css, glow="#3A2414")
+            title="UZAYDAN GELEN TAŞ", voice_src="assets/hodges/voice.mp3", extra_css=css, glow="#3A2414", fx=True, defs=DEFS2)
 (HF / "index.html").write_text(html, encoding="utf-8")
 print("hf/index.html yazıldı; süre", TOTAL, "sn; sahneler:", {k: round(v[0], 2) for k, v in S.items()})

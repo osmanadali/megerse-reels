@@ -87,7 +87,14 @@ html, body { width: 1080px; height: 1920px; overflow: hidden; background: #0B122
 """
 
 
-def page(words, mouth, scenes_html, scenes_js, *, total, voice_end, kicker, title, voice_src, extra_css="", glow="#17304A"):
+def component(name):
+    return (HF / f"compositions/components/{name}.html").read_text(encoding="utf-8")
+
+
+def page(words, mouth, scenes_html, scenes_js, *, total, voice_end, kicker, title, voice_src, extra_css="", glow="#17304A", fx=False, defs=""):
+    """fx=True: sahne alanına film greni + data-hf-motion-blur işaretli öğelere motion blur."""
+    grain = component("grain-overlay").replace("opacity: 0.15;", "opacity: 0.09;") if fx else ""
+    mblur = component("motion-blur") if fx else ""
     svg = (HF / "avatar/osman.svg").read_text(encoding="utf-8").replace("<svg ", '<svg id="av" data-m="0" data-b="0" ', 1)
     cap_html, cap_js = captions(words)
     return f"""<!doctype html>
@@ -104,11 +111,12 @@ def page(words, mouth, scenes_html, scenes_js, *, total, voice_end, kicker, titl
   <div id="kicker">{kicker}</div>
   <div id="title">{title}</div>
   <audio id="vo" src="{voice_src}" data-start="0" data-duration="{voice_end}" data-track-index="9" data-volume="1"></audio>
-  <div id="panel">{scenes_html}</div>
+  <div id="panel"><svg width="0" height="0" style="position:absolute" aria-hidden="true">{defs}</svg>{scenes_html}{grain}</div>
   <div id="avatarbox">{svg}</div>
   <div id="bubble">{cap_html}</div>
   <div id="handle">@megerse.tr</div>
 </div>
+{mblur}
 <script>
 const tl = gsap.timeline({{ paused: true }});
 tl.fromTo("#title",{{y:-30,opacity:0}},{{y:0,opacity:1,duration:.5,ease:"back.out(1.6)"}},.1);
@@ -117,6 +125,7 @@ tl.fromTo("#bubble",{{x:-30,opacity:0}},{{x:0,opacity:1,duration:.4}},.15);
 {scenes_js}
 {avatar_js(mouth, voice_end)}
 {cap_js}
+tl.set({{}}, {{}}, {total});
 window.__timelines["main"] = tl;
 </script>
 </body>
