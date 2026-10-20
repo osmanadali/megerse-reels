@@ -19,7 +19,8 @@ TOTAL = round(VOICE_END + 4, 2)
 FADE = 0.45
 
 # Osman'ın vereceği gerçek görseller (yoksa vektör)
-REAL = {k: f"assets/hodges/{v}" for k, v in {"bruise": "morluk.jpg", "ann": "ann-tas.jpg", "roof": "cati.jpg", "museum": "muze.jpg"}.items()}
+REAL = {k: f"assets/hodges/{v}" for k, v in {"hookphoto": "ek-1.jpg", "bruise": "ek-2.jpg", "bed": "ann-yatak.jpg", "police": "cati-polis.jpg",
+                                             "mckinney": "mckinney-aile.jpg", "museum": "muze.jpg"}.items()}
 has = lambda k: (HF / REAL[k]).exists()
 
 A = lambda p, after=0.0: anchor(words, p, after)
@@ -44,6 +45,8 @@ hit = A("Yaklaşık")      # taşın düşüş cümlesi
 radio = A("radyoya")
 hip = A("kalçasına")
 stopper = A("kapı tutucu")
+alive = A("Ama yaşıyor")
+road = A("yolda")
 house_car = A("bir ev")
 
 
@@ -122,7 +125,8 @@ bruise_fallback = f"""<svg class="fill" viewBox="0 0 960 1080">{DEFS}
 <circle id="bruisespot" cx="560" cy="560" r="150" fill="url(#bruise)"/>
 <text x="480" y="920" text-anchor="middle" font-family="Mont" font-weight="600" font-size="30" fill="#5A5248">sol kalça · büyük morluk</text>
 </svg>"""
-bruise = real_or("bruise", bruise_fallback) + """
+bruise = f"""<div class="fill" id="bruisekb"><img src="{REAL['bruise']}" alt="" style="object-position:62% 60%"></div>
+<div class="fill" id="bedwrap" style="opacity:0"><div class="fill" id="bedkb"><img src="{REAL['bed']}" alt="" style="object-position:70% 40%"></div></div><div class="vign"></div>""" + """
 <div id="stamp" style="position:absolute; left:120px; top:420px; width:720px; padding:20px; border:8px solid #E8524A; border-radius:18px; color:#E8524A; background:rgba(244,241,234,.92); text-align:center; font-weight:800; font-size:52px; line-height:1.1; transform:rotate(-8deg)">KAYITLARA GEÇEN<br>İLK İNSAN</div>"""
 
 panic = f"""<svg class="fill" viewBox="0 0 960 1080">{DEFS}
@@ -197,24 +201,31 @@ farmer = f"""<svg class="fill" viewBox="0 0 960 1080">{DEFS}
   {''.join(f'<rect class="bill" x="{380+(i*53)%220}" y="{200+(i*31)%120}" width="70" height="34" rx="4" fill="url(#cash)" stroke="#3E5E30" stroke-width="3"/>' for i in range(10))}
 </g>
 </svg>
-<div class="chip" style="bottom:36px">ÇİFTÇİ JULIUS McKINNEY</div>"""
+<div class="chip" style="bottom:36px">ÇİFTÇİ JULIUS McKINNEY</div>
+<div class="fill" id="mckwrap" style="background:#0B1220"><div class="fill" id="mckkb"><img src="{REAL['mckinney']}" alt="" style="object-position:62% 78%; filter:contrast(1.1)"></div><div class="vign"></div><div class="chip top">McKINNEY AİLESİ VE 2. PARÇA · 1954</div></div>"""
 
 end_fallback_left = f"""<svg viewBox="0 0 480 1080" style="position:absolute; left:0; top:0; width:480px; height:1080px">{DEFS}
 <rect width="480" height="1080" fill="#2A2420"/><path d="M60 180 L380 220 L380 860 L60 900 Z" fill="#7A2E22" stroke="#2B1510" stroke-width="8"/><g transform="translate(330 900) scale(1.3)">{ROCK}</g></svg>"""
-end_left = (f'<div style="position:absolute; left:0; top:0; width:480px; height:1080px; overflow:hidden"><img src="{REAL["ann"]}" style="width:100%; height:100%; object-fit:cover"></div>' if has("ann") else end_fallback_left)
+end_left = f'<div style="position:absolute; left:0; top:0; width:480px; height:1080px; overflow:hidden"><img src="{REAL["museum"]}" style="width:100%; height:100%; object-fit:cover; object-position:44% 30%"></div>'
 end = f"""{end_left}
 <svg viewBox="0 0 480 1080" style="position:absolute; left:480px; top:0; width:480px; height:1080px">{DEFS}
 <rect width="480" height="1080" fill="#BFD8EC"/><rect y="760" width="480" height="320" fill="url(#lawn)"/>
 <g transform="translate(240 620) scale(.62)">{house(0, 0, 1, "eh")}</g>
 <g transform="translate(240 900) scale(.8)"><path d="M-150 0 Q-140 -60 -80 -70 L-40 -120 H60 L110 -70 Q160 -60 160 0 Z" fill="#E0503E" stroke="#5A1A12" stroke-width="5"/><circle cx="-80" cy="4" r="30" fill="#1A1A1A"/><circle cx="90" cy="4" r="30" fill="#1A1A1A"/></g></svg>
 <div style="position:absolute; left:476px; top:0; width:8px; height:1080px; background:#F4F1EA"></div>
-<div class="endlab" style="left:24px">ANN<br><span>kapı tutucu</span></div>
+<div class="endlab" style="left:24px">ANN<br><span>taş müzede, para yok</span></div>
 <div class="endlab" style="left:504px">McKINNEY<br><span>ev + araba</span></div>"""
 
 sources = """<div class="fill" style="padding:90px 70px; background:#0B1220">
 <div style="font-weight:800; font-size:56px; color:#F5B82E; margin-bottom:40px">KAYNAKLAR</div>
-<div class="src">Encyclopedia of Alabama: Hodges Meteorite Strike<br>Wikipedia: Sylacauga (meteorite)<br>ScienceAlert (2024)<br>Smithsonian Magazine<br>Alabama Museum of Natural History</div></div>"""
+<div class="src">Fotoğraflar: arşiv / basın, 1954<br>Encyclopedia of Alabama: Hodges Meteorite Strike<br>Wikipedia: Sylacauga (meteorite)<br>ScienceAlert (2024)<br>Smithsonian Magazine<br>Alabama Museum of Natural History</div></div>"""
 
+hook_vector = hook  # artlib adayı: ateş topu + ev
+hook = f"""<div class="fill" id="hookkb"><img src="{REAL['hookphoto']}" alt="" style="object-position:50% 35%; filter:contrast(1.08)"></div><div class="vign"></div>
+<div class="chip red">GERÇEK FOTOĞRAF · 1954</div>"""
+police = f"""<div class="fill" id="policekb"><img src="{REAL['police']}" alt="" style="object-position:60% 30%"></div><div class="vign"></div>
+<div id="afstamp" style="position:absolute; left:110px; top:780px; width:740px; padding:18px; border:8px solid #5BC0EB; border-radius:16px; color:#5BC0EB; text-align:center; font-weight:800; font-size:46px; transform:rotate(-6deg); background:rgba(11,18,32,.85)">ABD HAVA KUVVETLERİ</div>
+<div class="chip top">POLİS ŞEFİ VE ANN HODGES</div>"""
 HTML = {"hook": hook, "town": town, "room": room, "bruise": bruise, "panic": panic, "police": police, "door": door,
         "court": court, "nobody": nobody, "meg": meg, "farmer": farmer, "end": end, "sources": sources}
 scenes_html = "".join(scene(k, HTML[k]) for k in keys)
@@ -223,6 +234,13 @@ s = lambda k: S[k][0]
 d = lambda k: win(k)[1]
 js = "".join(f'tl.fromTo("#{k}-in",{{opacity:0}},{{opacity:1,duration:{FADE},ease:"power1.out"}},{s(k)});' for k in keys if k != "hook")
 js += f"""
+tl.fromTo("#hookkb",{{scale:1.9,transformOrigin:"42% 62%"}},{{scale:1.02,duration:{d('hook')},ease:"power2.inOut"}},0);
+tl.fromTo("#bruisekb",{{scale:1.05,transformOrigin:"64% 66%"}},{{scale:1.5,duration:{alive-s('bruise')},ease:"power1.inOut"}},{s('bruise')});
+tl.to("#bedwrap",{{opacity:1,duration:.5}},{alive-.2});
+tl.fromTo("#bedkb",{{scale:1.15}},{{scale:1.0,duration:{S['bruise'][1]-alive+.5},ease:"power1.out"}},{alive-.2});
+tl.fromTo("#policekb",{{scale:1.0,transformOrigin:"60% 25%"}},{{scale:1.25,duration:{d('police')},ease:"power1.inOut"}},{s('police')});
+tl.fromTo("#mckkb",{{scale:1.12,transformOrigin:"62% 85%"}},{{scale:1.0,duration:{road-s('farmer')+.6},ease:"power1.out"}},{s('farmer')});
+tl.to("#mckwrap",{{opacity:0,duration:.5}},{road+.5});
 tl.fromTo("#hookball",{{attr:{{transform:"translate(900 80) scale(.6)"}}}},{{attr:{{transform:"translate(560 700) scale(1.3)"}},duration:{d('hook')-.6},ease:"power2.in"}},0);
 tl.to("#hookflash",{{opacity:1,duration:.12}},{d('hook')-.6}).to("#hookflash",{{opacity:0,duration:.4}});
 tl.fromTo("#townhouse",{{scale:1,transformOrigin:"28% 66%"}},{{scale:1.9,duration:{d('town')},ease:"power2.in"}},{s('town')});
@@ -245,11 +263,9 @@ tl.fromTo("#impact2",{{attr:{{r:10}},opacity:1}},{{attr:{{r:160}},opacity:0,dura
 tl.to("#hipmark",{{attr:{{r:70}},duration:.6}},{hip});
 tl.fromTo("#kg",{{opacity:0,y:-20}},{{opacity:1,y:0,duration:.4}},{hit+.6});
 tl.fromTo("#stamp",{{scale:2.4,opacity:0}},{{scale:1,opacity:1,duration:.35,ease:"power3.in"}},{A('kayıtlara')});
-tl.fromTo("#bruise-in svg, #bruise-kb",{{scale:1}},{{scale:1.12,duration:{d('bruise')},ease:"none"}},{s('bruise')});
 tl.fromTo("#crowd > g",{{y:200,opacity:0}},{{y:0,opacity:1,duration:.5,stagger:.08,ease:"back.out(1.5)"}},{s('panic')+.2});
 tl.fromTo("#q1",{{scale:0,opacity:0}},{{scale:1,opacity:1,duration:.35,ease:"back.out(2)"}},{A('uçak')});
 tl.fromTo("#q2",{{scale:0,opacity:0}},{{scale:1,opacity:1,duration:.35,ease:"back.out(2)"}},{A('Sovyet')});
-tl.fromTo("#evbox",{{y:80,opacity:0}},{{y:0,opacity:1,duration:.5,ease:"power2.out"}},{s('police')+.1});
 tl.fromTo("#afstamp",{{scale:2.4,opacity:0}},{{scale:1,opacity:1,duration:.3,ease:"power3.in"}},{A('Hava')});
 tl.fromTo("#doorg",{{scale:1.15,transformOrigin:"50% 50%"}},{{scale:1,duration:{d('door')},ease:"power1.out"}},{s('door')});
 tl.to("#knock",{{opacity:1,duration:.05,repeat:5,yoyo:true}},{s('door')+.4});
