@@ -24,7 +24,7 @@ Yeni sohbette ilk mesaj: "HANDOFF.md'yi oku ve kaldığın yerden devam et."
    - Sınırda: **Tsutomu Yamaguchi** (76.5 ama özgünlük 58 < 60; taze açıyla geçer).
    - Tur 2 GEÇTİ: **Harrison Okene** (80.7), **Mauro Prosperi** (78.3), **Beck Weathers** (78.2), **Frank Hayes** (76.2). Düzeltmeler dosyada.
 2. ⏳ **İlk reel: Okene.** Senaryo v2 (görsel yerleşimi + dalgıç kapanışı, Osman onayladı): `reels/okene/senaryo.md`. Görseller: `reels/okene/gorseller.md`. Ses: ElevenLabs "Fatih Yıldırım" (voice_id `7VqWGAWwo2HMrylfKrcm`, eleven_v4), flow `qW2pK44UhjUG0UIXX9YF`, 4 varyasyon indirildi: `hf/assets/okene/ses/ses-1..4.mp3` (67,6/69,3/67,6/69,8 sn; 845 kredi/adet). **Seçilen: ses-4** (`hf/assets/okene/voice.mp3`, 69,8 sn). Seslendirilen metin `reels/okene/metin.txt`; kelime zamanları `reels/okene/words.json` (124 kelime, `scripts/align.py --text` ile, yazım metinden).
-3. ⏳ Avatar: fotoğraflar `hf/assets/avatar/osman-1..5.jpg` (git dışı), kaynak **osman-4.jpg**. SadTalker kuruldu: `/home/user/tools/SadTalker` (betik `scripts/install-sadtalker.sh`). 10 sn CPU testi çalışıyor (`--still --preprocess crop --size 256 --cpu`).
+3. ⏳ Avatar: fotoğraflar `hf/assets/avatar/osman-1..5.jpg` (git dışı), kaynak **osman-4.jpg**. SadTalker kuruldu: `/home/user/tools/SadTalker` (betik `scripts/install-sadtalker.sh`). 10 sn CPU testi tamam (`--still --preprocess crop --size 256 --cpu`): kalite kabul edilebilir, ama **~22 dk / 10 sn** (70 sn ≈ 2,5 saat). Öneri: Colab ücretsiz GPU. Test: `hf/assets/avatar/test-10sn.mp4`. Osman'ın kararı bekleniyor.
 4. ⏳ Sonraki adımlar: senaryo → ElevenLabs ses → kelime zamanları (faster-whisper) → HyperFrames kompozisyonu (avatar + görseller + altyazı) → render → puanlama skill'i.
 
 ## Açık konular / riskler
