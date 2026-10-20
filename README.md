@@ -23,3 +23,11 @@
 6. `scripts/check.sh out/<id>.mp4` → puanlama skill'i (bağımsız hakem, ≥75 kapısı)
 
 Kurulum: `./setup.sh`. Önizleme: `npm run studio`.
+
+## Viral reel araştırması (Apify MCP)
+`.mcp.json`, Claude Code'a Apify MCP sunucusunu tanıtır. `APIFY_TOKEN` ortam değişkeni gerekir (bulut oturumunda ortamın gizli değişkenlerine ekle; dosyaya yazma). Yüklenen Actor'lar:
+- `apify/instagram-reel-scraper`: bir hesabın reel'leri (izlenme, beğeni, yorum, süre, açıklama)
+- `apify/instagram-hashtag-scraper`: hashtag'deki gönderiler/reel'ler
+- `apify/instagram-scraper`: profil, gönderi, yorum
+
+Actor'lar Apify kredisi harcar; `resultsLimit` gibi limitleri düşük tut. Bulunan referans reel'ler puanlama skill'ine (adım 6) karşılaştırma örneği olarak verilir.
