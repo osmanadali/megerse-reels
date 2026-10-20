@@ -23,7 +23,7 @@ Yeni sohbette ilk mesaj: "HANDOFF.md'yi oku ve kaldığın yerden devam et."
    - GEÇTİ: **Ann Hodges** (77.5).
    - Sınırda: **Tsutomu Yamaguchi** (76.5 ama özgünlük 58 < 60; taze açıyla geçer).
    - Tur 2 GEÇTİ: **Harrison Okene** (80.7), **Mauro Prosperi** (78.3), **Beck Weathers** (78.2), **Frank Hayes** (76.2). Düzeltmeler dosyada.
-2. ⏳ Osman: geçen konular için görsel araştırması yapacak ve kullanım talimatı verecek.
+2. ⏳ **İlk reel: Okene.** Senaryo v1: `reels/okene/senaryo.md`. Osman görsel araştırıyor (özellikle 8. sahne için gerçek dalgıç kamerası görüntüsü, ITV 2.12.2013).
 3. ⏳ Osman: avatar için fotoğraflarını gönderecek.
 4. ⏳ Sonraki adımlar: senaryo → ElevenLabs ses → kelime zamanları (faster-whisper) → HyperFrames kompozisyonu (avatar + görseller + altyazı) → render → puanlama skill'i.
 
