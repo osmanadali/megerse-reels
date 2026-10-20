@@ -28,7 +28,8 @@ Yeni sohbette ilk mesaj: "HANDOFF.md'yi oku ve kaldığın yerden devam et."
 4. ✅ **Okene v1 render**: `python3 reels/okene/build.py` → `hf/index.html` → `cd hf && npx -y hyperframes@0.8.181 render -o renders/okene-v1.mp4` (74 sn, ~4 dk render, -16 LUFS). Fontlar: `hf/assets/fonts/` (node_modules/@fontsource/montserrat'tan latin + latin-ext 600/800 kopyası; git dışı).
 5. ✅ v2: batış sahnesi gerçekçi vektörle yeniden çizildi (`hf/art/ship.frag`, yüzey→devrilme→kamera dibe iner→tortu bulutu); render `hf/renders/okene-v2.mp4`.
 6. ✅ v3 (`hf/renders/okene-v3.mp4`, 73,6 sn): "ceset daha | sandığı" arasındaki 0,26 sn duraksama kesildi (`voice.mp3` artık kesilmiş sürüm, orijinal `ses/ses-4.mp3`; ffmpeg atrim 49.26 / 49.50 + 20 ms crossfade). Kelime zamanları ve ağız yeniden çıkarıldı (`scripts/mouth.py`). Yeni sahne `team` (65,5 sn): Osman'ın verdiği `basinc-odasi-dalgiclar.jpg`, en soldaki **Nico van Heerden** çemberle + etiketle işaretli.
-7. ⏳ Osman'ın v3 geri bildirimi → → düzeltmeler → bağımsız hakem (puanlama skill'i, görsel kuralı güncel haliyle).
+7. ✅ Paylaşım paketi: açıklama `reels/okene/caption.md`, kapak `hf/cover-okene.html` → `hf/renders/okene-kapak.jpg` (chromium headless ekran görüntüsü). Hakem puanlaması yapılmadı.
+8. ⏳ Sıradaki konu → → düzeltmeler → bağımsız hakem (puanlama skill'i, görsel kuralı güncel haliyle).
 
 ## Açık konular / riskler
 - **Konuşan avatar ücretsiz + GPU'suz:** Fotoğraftan dudak senkronlu gerçekçi avatar için açık kaynak seçenekler (LivePortrait, SadTalker, Wav2Lip) GPU ister; bu konteynerde CPU'da çok yavaş olabilir. Alternatifler: kısa bir test ile CPU süresini ölç; ya da Osman kendi facecam'ini çeker; ya da Google Colab (ücretsiz GPU) üzerinde avatar üret, burada birleştir. Fotoğraflar gelince test edilecek.
