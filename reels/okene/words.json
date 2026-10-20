@@ -1,0 +1,627 @@
+[
+ {
+  "text": "Bu",
+  "startMs": 0,
+  "endMs": 160
+ },
+ {
+  "text": "adam,",
+  "startMs": 160,
+  "endMs": 460
+ },
+ {
+  "text": "okyanusun",
+  "startMs": 780,
+  "endMs": 1400
+ },
+ {
+  "text": "dibinde,",
+  "startMs": 1400,
+  "endMs": 1840
+ },
+ {
+  "text": "karanlıkta,",
+  "startMs": 1840,
+  "endMs": 2940
+ },
+ {
+  "text": "yaklaşık",
+  "startMs": 2940,
+  "endMs": 3840
+ },
+ {
+  "text": "üç",
+  "startMs": 3840,
+  "endMs": 4180
+ },
+ {
+  "text": "gün",
+  "startMs": 4180,
+  "endMs": 4400
+ },
+ {
+  "text": "yaşadı.",
+  "startMs": 4400,
+  "endMs": 4900
+ },
+ {
+  "text": "Mayıs",
+  "startMs": 5660,
+  "endMs": 6040
+ },
+ {
+  "text": "2013.",
+  "startMs": 6040,
+  "endMs": 6580
+ },
+ {
+  "text": "Nijerya",
+  "startMs": 7260,
+  "endMs": 7780
+ },
+ {
+  "text": "açıkları.",
+  "startMs": 7780,
+  "endMs": 8280
+ },
+ {
+  "text": "Jascon-4",
+  "startMs": 8920,
+  "endMs": 9680
+ },
+ {
+  "text": "adlı",
+  "startMs": 9680,
+  "endMs": 10100
+ },
+ {
+  "text": "römorkör,",
+  "startMs": 10100,
+  "endMs": 10720
+ },
+ {
+  "text": "sabaha",
+  "startMs": 10980,
+  "endMs": 11320
+ },
+ {
+  "text": "karşı",
+  "startMs": 11320,
+  "endMs": 11740
+ },
+ {
+  "text": "dev",
+  "startMs": 11740,
+  "endMs": 12180
+ },
+ {
+  "text": "bir",
+  "startMs": 12180,
+  "endMs": 12480
+ },
+ {
+  "text": "dalgayla",
+  "startMs": 12480,
+  "endMs": 13100
+ },
+ {
+  "text": "alabora",
+  "startMs": 13100,
+  "endMs": 13640
+ },
+ {
+  "text": "oluyor.",
+  "startMs": 13640,
+  "endMs": 13860
+ },
+ {
+  "text": "Gemi",
+  "startMs": 14600,
+  "endMs": 14960
+ },
+ {
+  "text": "ters",
+  "startMs": 14960,
+  "endMs": 15260
+ },
+ {
+  "text": "dönüp",
+  "startMs": 15260,
+  "endMs": 15640
+ },
+ {
+  "text": "otuz",
+  "startMs": 15640,
+  "endMs": 16040
+ },
+ {
+  "text": "metre",
+  "startMs": 16040,
+  "endMs": 16420
+ },
+ {
+  "text": "derinliğe",
+  "startMs": 16420,
+  "endMs": 17040
+ },
+ {
+  "text": "batıyor.",
+  "startMs": 17040,
+  "endMs": 17420
+ },
+ {
+  "text": "İçeride",
+  "startMs": 18000,
+  "endMs": 18300
+ },
+ {
+  "text": "on",
+  "startMs": 18300,
+  "endMs": 18600
+ },
+ {
+  "text": "iki",
+  "startMs": 18600,
+  "endMs": 18900
+ },
+ {
+  "text": "kişi",
+  "startMs": 18900,
+  "endMs": 19300
+ },
+ {
+  "text": "var.",
+  "startMs": 19300,
+  "endMs": 19520
+ },
+ {
+  "text": "Gemi",
+  "startMs": 20200,
+  "endMs": 20420
+ },
+ {
+  "text": "aşçısı",
+  "startMs": 20420,
+  "endMs": 20900
+ },
+ {
+  "text": "Harrison",
+  "startMs": 20900,
+  "endMs": 21280
+ },
+ {
+  "text": "Okene,",
+  "startMs": 21280,
+  "endMs": 21900
+ },
+ {
+  "text": "karanlıkta",
+  "startMs": 22320,
+  "endMs": 22940
+ },
+ {
+  "text": "el",
+  "startMs": 22940,
+  "endMs": 23260
+ },
+ {
+  "text": "yordamıyla",
+  "startMs": 23260,
+  "endMs": 23860
+ },
+ {
+  "text": "bir",
+  "startMs": 23860,
+  "endMs": 24080
+ },
+ {
+  "text": "kamaraya",
+  "startMs": 24080,
+  "endMs": 24540
+ },
+ {
+  "text": "giriyor",
+  "startMs": 24540,
+  "endMs": 25040
+ },
+ {
+  "text": "ve",
+  "startMs": 25040,
+  "endMs": 25600
+ },
+ {
+  "text": "tavanda",
+  "startMs": 25600,
+  "endMs": 26120
+ },
+ {
+  "text": "bir",
+  "startMs": 26120,
+  "endMs": 26560
+ },
+ {
+  "text": "metre",
+  "startMs": 26560,
+  "endMs": 26840
+ },
+ {
+  "text": "kadar",
+  "startMs": 26840,
+  "endMs": 27200
+ },
+ {
+  "text": "hava",
+  "startMs": 27200,
+  "endMs": 27560
+ },
+ {
+  "text": "buluyor.",
+  "startMs": 27560,
+  "endMs": 27940
+ },
+ {
+  "text": "Soğuk",
+  "startMs": 28400,
+  "endMs": 28880
+ },
+ {
+  "text": "su",
+  "startMs": 28880,
+  "endMs": 29080
+ },
+ {
+  "text": "göğsüne",
+  "startMs": 29080,
+  "endMs": 29780
+ },
+ {
+  "text": "kadar.",
+  "startMs": 29780,
+  "endMs": 30100
+ },
+ {
+  "text": "Etrafı",
+  "startMs": 30720,
+  "endMs": 31300
+ },
+ {
+  "text": "zifiri",
+  "startMs": 31300,
+  "endMs": 31720
+ },
+ {
+  "text": "karanlık.",
+  "startMs": 31720,
+  "endMs": 32280
+ },
+ {
+  "text": "Saatlerce",
+  "startMs": 32740,
+  "endMs": 33580
+ },
+ {
+  "text": "dua",
+  "startMs": 33580,
+  "endMs": 33860
+ },
+ {
+  "text": "ediyor.",
+  "startMs": 33860,
+  "endMs": 34200
+ },
+ {
+  "text": "Hava",
+  "startMs": 34880,
+  "endMs": 35160
+ },
+ {
+  "text": "her",
+  "startMs": 35160,
+  "endMs": 35520
+ },
+ {
+  "text": "nefeste",
+  "startMs": 35520,
+  "endMs": 36020
+ },
+ {
+  "text": "azalıyor.",
+  "startMs": 36020,
+  "endMs": 36540
+ },
+ {
+  "text": "Yaklaşık",
+  "startMs": 37160,
+  "endMs": 37720
+ },
+ {
+  "text": "altmış",
+  "startMs": 37720,
+  "endMs": 38060
+ },
+ {
+  "text": "saat",
+  "startMs": 38060,
+  "endMs": 38440
+ },
+ {
+  "text": "geçiyor.",
+  "startMs": 38440,
+  "endMs": 38900
+ },
+ {
+  "text": "Sonra…",
+  "startMs": 39560,
+  "endMs": 39980
+ },
+ {
+  "text": "bir",
+  "startMs": 39980,
+  "endMs": 40760
+ },
+ {
+  "text": "ışık.",
+  "startMs": 40760,
+  "endMs": 41160
+ },
+ {
+  "text": "Dalgıçlar,",
+  "startMs": 41820,
+  "endMs": 42520
+ },
+ {
+  "text": "cesetleri",
+  "startMs": 42520,
+  "endMs": 43200
+ },
+ {
+  "text": "çıkarmak",
+  "startMs": 43200,
+  "endMs": 43680
+ },
+ {
+  "text": "için",
+  "startMs": 43680,
+  "endMs": 43940
+ },
+ {
+  "text": "gemiye",
+  "startMs": 43940,
+  "endMs": 44340
+ },
+ {
+  "text": "girmiş.",
+  "startMs": 44340,
+  "endMs": 44800
+ },
+ {
+  "text": "Dalgıç",
+  "startMs": 45200,
+  "endMs": 45920
+ },
+ {
+  "text": "koridorda",
+  "startMs": 45920,
+  "endMs": 46720
+ },
+ {
+  "text": "bir",
+  "startMs": 46720,
+  "endMs": 46860
+ },
+ {
+  "text": "el",
+  "startMs": 46860,
+  "endMs": 47180
+ },
+ {
+  "text": "görüyor.",
+  "startMs": 47180,
+  "endMs": 47580
+ },
+ {
+  "text": "Bir",
+  "startMs": 48260,
+  "endMs": 48400
+ },
+ {
+  "text": "ceset",
+  "startMs": 48400,
+  "endMs": 48860
+ },
+ {
+  "text": "daha",
+  "startMs": 48860,
+  "endMs": 49100
+ },
+ {
+  "text": "sandığı",
+  "startMs": 49100,
+  "endMs": 50080
+ },
+ {
+  "text": "ele",
+  "startMs": 50080,
+  "endMs": 50320
+ },
+ {
+  "text": "uzanıyor…",
+  "startMs": 50320,
+  "endMs": 50860
+ },
+ {
+  "text": "Meğerse",
+  "startMs": 51500,
+  "endMs": 52060
+ },
+ {
+  "text": "o",
+  "startMs": 52060,
+  "endMs": 52280
+ },
+ {
+  "text": "el,",
+  "startMs": 52280,
+  "endMs": 52540
+ },
+ {
+  "text": "dalgıcı",
+  "startMs": 52540,
+  "endMs": 53380
+ },
+ {
+  "text": "yakalıyor.",
+  "startMs": 53380,
+  "endMs": 53860
+ },
+ {
+  "text": "On",
+  "startMs": 54580,
+  "endMs": 54730
+ },
+ {
+  "text": "iki",
+  "startMs": 54730,
+  "endMs": 54880
+ },
+ {
+  "text": "kişiden",
+  "startMs": 54880,
+  "endMs": 55420
+ },
+ {
+  "text": "on",
+  "startMs": 55420,
+  "endMs": 55810
+ },
+ {
+  "text": "biri",
+  "startMs": 55810,
+  "endMs": 56200
+ },
+ {
+  "text": "ölmüştü.",
+  "startMs": 56200,
+  "endMs": 56800
+ },
+ {
+  "text": "Okene",
+  "startMs": 57100,
+  "endMs": 57740
+ },
+ {
+  "text": "tek",
+  "startMs": 57740,
+  "endMs": 58180
+ },
+ {
+  "text": "sağ",
+  "startMs": 58180,
+  "endMs": 58420
+ },
+ {
+  "text": "kalandı.",
+  "startMs": 58420,
+  "endMs": 59020
+ },
+ {
+  "text": "Bir",
+  "startMs": 59560,
+  "endMs": 59720
+ },
+ {
+  "text": "daha",
+  "startMs": 59720,
+  "endMs": 59940
+ },
+ {
+  "text": "denize",
+  "startMs": 59940,
+  "endMs": 60360
+ },
+ {
+  "text": "dönmeyeceğine",
+  "startMs": 60360,
+  "endMs": 61160
+ },
+ {
+  "text": "yemin",
+  "startMs": 61160,
+  "endMs": 61520
+ },
+ {
+  "text": "etti.",
+  "startMs": 61520,
+  "endMs": 61860
+ },
+ {
+  "text": "İki",
+  "startMs": 62480,
+  "endMs": 62700
+ },
+ {
+  "text": "yıl",
+  "startMs": 62700,
+  "endMs": 62920
+ },
+ {
+  "text": "sonra…",
+  "startMs": 62920,
+  "endMs": 63300
+ },
+ {
+  "text": "dalgıçlık",
+  "startMs": 63300,
+  "endMs": 64300
+ },
+ {
+  "text": "diplomasını",
+  "startMs": 64300,
+  "endMs": 64940
+ },
+ {
+  "text": "aldı.",
+  "startMs": 64940,
+  "endMs": 65320
+ },
+ {
+  "text": "Diplomayı",
+  "startMs": 65780,
+  "endMs": 66360
+ },
+ {
+  "text": "ona",
+  "startMs": 66360,
+  "endMs": 66560
+ },
+ {
+  "text": "veren",
+  "startMs": 66560,
+  "endMs": 66980
+ },
+ {
+  "text": "kişi,",
+  "startMs": 66980,
+  "endMs": 67260
+ },
+ {
+  "text": "onu",
+  "startMs": 67640,
+  "endMs": 67960
+ },
+ {
+  "text": "dipte",
+  "startMs": 67960,
+  "endMs": 68560
+ },
+ {
+  "text": "bulan",
+  "startMs": 68560,
+  "endMs": 68880
+ },
+ {
+  "text": "dalgıçtı.",
+  "startMs": 68880,
+  "endMs": 69520
+ }
+]
