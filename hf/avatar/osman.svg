@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <defs>
+    <clipPath id="frame"><rect x="6" y="6" width="388" height="388" rx="44"/></clipPath>
+    <linearGradient id="skin" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#C98B63"/><stop offset=".5" stop-color="#DCA27B"/><stop offset="1" stop-color="#C4865F"/>
+    </linearGradient>
+  </defs>
+  <g clip-path="url(#frame)">
+    <rect width="400" height="400" fill="#F2ECE1"/>
+    <g id="head">
+      <!-- tişört -->
+      <path d="M40 410 C50 335 95 312 150 300 L250 300 C305 312 350 335 360 410 Z" fill="#FBFBF8" stroke="#1F2430" stroke-width="6" stroke-linejoin="round"/>
+      <path d="M155 302 C170 330 230 330 245 302" fill="none" stroke="#1F2430" stroke-width="5" stroke-linecap="round"/>
+      <path d="M95 345 C110 360 112 385 110 405 M305 345 C290 360 288 385 290 405" fill="none" stroke="#D9D6CF" stroke-width="4" stroke-linecap="round"/>
+      <!-- boyun -->
+      <path d="M165 255 L165 305 C185 322 215 322 235 305 L235 255 Z" fill="#BF8159" stroke="#1F2430" stroke-width="6" stroke-linejoin="round"/>
+      <!-- kulaklar -->
+      <path d="M118 175 C98 168 92 200 104 222 C112 236 124 236 128 228 Z" fill="#C98B63" stroke="#1F2430" stroke-width="6" stroke-linejoin="round"/>
+      <path d="M282 175 C302 168 308 200 296 222 C288 236 276 236 272 228 Z" fill="#C98B63" stroke="#1F2430" stroke-width="6" stroke-linejoin="round"/>
+      <!-- yüz -->
+      <path d="M116 150 C114 108 148 92 200 92 C252 92 286 108 284 150 L285 200 C285 252 248 286 200 288 C152 286 115 252 115 200 Z" fill="url(#skin)" stroke="#1F2430" stroke-width="6" stroke-linejoin="round"/>
+      <!-- hafif sakal gölgesi -->
+      <path d="M128 215 C140 262 170 282 200 283 C230 282 260 262 272 215 C262 248 235 268 200 270 C165 268 138 248 128 215 Z" fill="#8A5E44" opacity=".28"/>
+      <!-- saç: dolgun kısa kesim, dokulu kâkül, yanlar kısa (fade) -->
+      <path d="M114 160 C104 100 138 58 200 56 C262 58 296 100 286 160 C282 146 278 134 272 128 L272 122 C266 126 260 124 256 120 C250 126 242 126 236 121 C230 127 222 127 216 122 C210 128 202 128 196 122 C190 128 182 128 176 122 C170 127 162 127 156 121 C150 126 142 126 136 120 C132 124 128 126 128 122 C122 132 118 146 114 160 Z" fill="#1E1A19" stroke="#1F2430" stroke-width="6" stroke-linejoin="round"/>
+      <path d="M150 80 q8 -5 16 0 M176 70 q8 -5 16 0 M206 70 q8 -5 16 0 M232 80 q8 -5 16 0 M162 98 q8 -5 16 0 M194 92 q8 -5 16 0 M222 98 q8 -5 16 0" stroke="#55504D" stroke-width="3" fill="none" stroke-linecap="round"/>
+      <path d="M117 158 C115 146 117 134 122 126 L126 170 Z M283 158 C285 146 283 134 278 126 L274 170 Z" fill="#3A3230" opacity=".75"/>
+      <!-- kaşlar: kalın -->
+      <path d="M142 146 C155 134 175 133 189 140 L187 150 C172 145 158 147 145 154 Z" fill="#1E1A19"/>
+      <path d="M258 146 C245 134 225 133 211 140 L213 150 C228 145 242 147 255 154 Z" fill="#1E1A19"/>
+      <!-- gözler -->
+      <g id="eyes-open">
+        <path d="M148 172 C158 162 178 162 188 172 C178 180 158 180 148 172 Z" fill="#FFFFFF" stroke="#1F2430" stroke-width="4"/>
+        <path d="M212 172 C222 162 242 162 252 172 C242 180 222 180 212 172 Z" fill="#FFFFFF" stroke="#1F2430" stroke-width="4"/>
+        <circle cx="168" cy="171" r="7" fill="#3B2216"/><circle cx="232" cy="171" r="7" fill="#3B2216"/>
+        <circle cx="170" cy="168.5" r="2" fill="#fff"/><circle cx="234" cy="168.5" r="2" fill="#fff"/>
+        <path d="M147 170 C158 159 178 159 189 169 M211 169 C222 159 242 159 253 170" fill="none" stroke="#1F2430" stroke-width="5" stroke-linecap="round"/>
+      </g>
+      <g id="eyes-closed" style="display:none">
+        <path d="M148 173 C160 178 176 178 188 173 M212 173 C224 178 240 178 252 173" fill="none" stroke="#1F2430" stroke-width="5" stroke-linecap="round"/>
+      </g>
+      <!-- burun: geniş -->
+      <path d="M195 172 C194 190 190 204 184 212 C178 218 180 226 188 226 C192 230 196 229 200 227 C204 229 208 230 212 226 C220 226 222 218 216 212" fill="none" stroke="#1F2430" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M188 221 q4 -4 7 0 M205 221 q4 -4 7 0" stroke="#7A4A33" stroke-width="3" fill="none" stroke-linecap="round"/>
+      <path d="M200 178 C202 194 204 204 208 210" stroke="#E8B591" stroke-width="4" fill="none" stroke-linecap="round" opacity=".8"/>
+      <!-- ağız (bıyığın altında): 0 kapalı .. 3 açık -->
+      <g id="mouth-0"><path d="M182 250 C194 254 206 254 218 250" fill="none" stroke="#5A2A22" stroke-width="5" stroke-linecap="round"/></g>
+      <g id="mouth-1" style="display:none"><path d="M182 248 C192 258 208 258 218 248 C208 252 192 252 182 248 Z" fill="#5A1F1C" stroke="#1F2430" stroke-width="4" stroke-linejoin="round"/></g>
+      <g id="mouth-2" style="display:none"><path d="M180 247 C190 266 210 266 220 247 C208 251 192 251 180 247 Z" fill="#5A1F1C" stroke="#1F2430" stroke-width="4" stroke-linejoin="round"/><path d="M190 260 C196 264 204 264 210 260" fill="none" stroke="#C9555A" stroke-width="4" stroke-linecap="round"/></g>
+      <g id="mouth-3" style="display:none"><path d="M182 246 C186 276 214 276 218 246 C206 250 194 250 182 246 Z" fill="#5A1F1C" stroke="#1F2430" stroke-width="4" stroke-linejoin="round"/><path d="M189 266 C195 272 205 272 211 266" fill="none" stroke="#C9555A" stroke-width="5" stroke-linecap="round"/></g>
+      <!-- bıyık: dolgun, uçları aşağı -->
+      <path d="M200 230 C188 226 172 228 164 238 C160 246 162 254 166 258 C172 248 186 244 200 244 C214 244 228 248 234 258 C238 254 240 246 236 238 C228 228 212 226 200 230 Z" fill="#2A211D" stroke="#1F2430" stroke-width="4" stroke-linejoin="round"/>
+      <path d="M176 236 l-3 8 M186 233 l-2 8 M214 233 l2 8 M224 236 l3 8" stroke="#4E423C" stroke-width="2.5" stroke-linecap="round"/>
+    </g>
+  </g>
+  <rect x="6" y="6" width="388" height="388" rx="44" fill="none" stroke="#1F2430" stroke-width="10"/>
+</svg>
