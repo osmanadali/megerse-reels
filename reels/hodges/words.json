@@ -1,0 +1,742 @@
+[
+ {
+  "text": "Bu",
+  "startMs": 0,
+  "endMs": 180
+ },
+ {
+  "text": "kadın,",
+  "startMs": 180,
+  "endMs": 400
+ },
+ {
+  "text": "evinde",
+  "startMs": 400,
+  "endMs": 1160
+ },
+ {
+  "text": "uyurken",
+  "startMs": 1160,
+  "endMs": 1680
+ },
+ {
+  "text": "uzaydan",
+  "startMs": 1680,
+  "endMs": 2360
+ },
+ {
+  "text": "gelen",
+  "startMs": 2360,
+  "endMs": 2580
+ },
+ {
+  "text": "bir",
+  "startMs": 2580,
+  "endMs": 2860
+ },
+ {
+  "text": "taşla",
+  "startMs": 2860,
+  "endMs": 3340
+ },
+ {
+  "text": "vuruldu.",
+  "startMs": 3340,
+  "endMs": 3800
+ },
+ {
+  "text": "30",
+  "startMs": 4280,
+  "endMs": 4480
+ },
+ {
+  "text": "Kasım",
+  "startMs": 4480,
+  "endMs": 5000
+ },
+ {
+  "text": "1954.",
+  "startMs": 5000,
+  "endMs": 5900
+ },
+ {
+  "text": "Alabama'da",
+  "startMs": 6860,
+  "endMs": 7580
+ },
+ {
+  "text": "küçük",
+  "startMs": 7580,
+  "endMs": 7780
+ },
+ {
+  "text": "bir",
+  "startMs": 7780,
+  "endMs": 8080
+ },
+ {
+  "text": "kasaba,",
+  "startMs": 8080,
+  "endMs": 8620
+ },
+ {
+  "text": "Sylacauga.",
+  "startMs": 9040,
+  "endMs": 9660
+ },
+ {
+  "text": "Ann",
+  "startMs": 9660,
+  "endMs": 10280
+ },
+ {
+  "text": "Hodges",
+  "startMs": 10280,
+  "endMs": 10900
+ },
+ {
+  "text": "öğle",
+  "startMs": 10900,
+  "endMs": 11220
+ },
+ {
+  "text": "yemeğinden",
+  "startMs": 11220,
+  "endMs": 11660
+ },
+ {
+  "text": "sonra",
+  "startMs": 11660,
+  "endMs": 12020
+ },
+ {
+  "text": "kanepede",
+  "startMs": 12020,
+  "endMs": 12720
+ },
+ {
+  "text": "uyuyor.",
+  "startMs": 12720,
+  "endMs": 13180
+ },
+ {
+  "text": "Saat",
+  "startMs": 13680,
+  "endMs": 14080
+ },
+ {
+  "text": "bire",
+  "startMs": 14080,
+  "endMs": 14320
+ },
+ {
+  "text": "çeyrek",
+  "startMs": 14320,
+  "endMs": 14760
+ },
+ {
+  "text": "kala,",
+  "startMs": 14760,
+  "endMs": 15040
+ },
+ {
+  "text": "gökyüzünde",
+  "startMs": 15420,
+  "endMs": 15940
+ },
+ {
+  "text": "bir",
+  "startMs": 15940,
+  "endMs": 16080
+ },
+ {
+  "text": "ateş",
+  "startMs": 16080,
+  "endMs": 16600
+ },
+ {
+  "text": "topu",
+  "startMs": 16600,
+  "endMs": 16880
+ },
+ {
+  "text": "beliriyor.",
+  "startMs": 16880,
+  "endMs": 17320
+ },
+ {
+  "text": "Yaklaşık",
+  "startMs": 17860,
+  "endMs": 18400
+ },
+ {
+  "text": "dört",
+  "startMs": 18400,
+  "endMs": 18700
+ },
+ {
+  "text": "kiloluk",
+  "startMs": 18700,
+  "endMs": 19180
+ },
+ {
+  "text": "bir",
+  "startMs": 19180,
+  "endMs": 19360
+ },
+ {
+  "text": "taş",
+  "startMs": 19360,
+  "endMs": 19640
+ },
+ {
+  "text": "çatıyı",
+  "startMs": 19640,
+  "endMs": 20240
+ },
+ {
+  "text": "deliyor,",
+  "startMs": 20240,
+  "endMs": 20620
+ },
+ {
+  "text": "radyoya",
+  "startMs": 21080,
+  "endMs": 21520
+ },
+ {
+  "text": "çarpıp",
+  "startMs": 21520,
+  "endMs": 22000
+ },
+ {
+  "text": "sekiyor",
+  "startMs": 22000,
+  "endMs": 22500
+ },
+ {
+  "text": "ve",
+  "startMs": 22500,
+  "endMs": 23040
+ },
+ {
+  "text": "Ann'in",
+  "startMs": 23040,
+  "endMs": 23600
+ },
+ {
+  "text": "kalçasına",
+  "startMs": 23600,
+  "endMs": 24240
+ },
+ {
+  "text": "çarpıyor.",
+  "startMs": 24240,
+  "endMs": 24760
+ },
+ {
+  "text": "Kalçasında",
+  "startMs": 25280,
+  "endMs": 25920
+ },
+ {
+  "text": "kocaman",
+  "startMs": 25920,
+  "endMs": 26560
+ },
+ {
+  "text": "bir",
+  "startMs": 26560,
+  "endMs": 26780
+ },
+ {
+  "text": "morluk",
+  "startMs": 26780,
+  "endMs": 27220
+ },
+ {
+  "text": "kalıyor.",
+  "startMs": 27220,
+  "endMs": 27620
+ },
+ {
+  "text": "Ama",
+  "startMs": 28080,
+  "endMs": 28340
+ },
+ {
+  "text": "yaşıyor.",
+  "startMs": 28340,
+  "endMs": 28780
+ },
+ {
+  "text": "Göktaşı",
+  "startMs": 28780,
+  "endMs": 29940
+ },
+ {
+  "text": "çarptığı",
+  "startMs": 29940,
+  "endMs": 30540
+ },
+ {
+  "text": "kayıtlara",
+  "startMs": 30540,
+  "endMs": 31080
+ },
+ {
+  "text": "geçen",
+  "startMs": 31080,
+  "endMs": 31520
+ },
+ {
+  "text": "ilk",
+  "startMs": 31520,
+  "endMs": 31920
+ },
+ {
+  "text": "insan",
+  "startMs": 31920,
+  "endMs": 32300
+ },
+ {
+  "text": "oluyor.",
+  "startMs": 32300,
+  "endMs": 32520
+ },
+ {
+  "text": "Kasaba",
+  "startMs": 33180,
+  "endMs": 33660
+ },
+ {
+  "text": "ayağa",
+  "startMs": 33660,
+  "endMs": 34140
+ },
+ {
+  "text": "kalkıyor.",
+  "startMs": 34140,
+  "endMs": 34600
+ },
+ {
+  "text": "Kimi",
+  "startMs": 35080,
+  "endMs": 35380
+ },
+ {
+  "text": "uçak",
+  "startMs": 35380,
+  "endMs": 35700
+ },
+ {
+  "text": "düştü",
+  "startMs": 35700,
+  "endMs": 36060
+ },
+ {
+  "text": "sanıyor,",
+  "startMs": 36060,
+  "endMs": 36420
+ },
+ {
+  "text": "kimi",
+  "startMs": 36900,
+  "endMs": 37080
+ },
+ {
+  "text": "Sovyet",
+  "startMs": 37080,
+  "endMs": 37540
+ },
+ {
+  "text": "saldırısı.",
+  "startMs": 37540,
+  "endMs": 38120
+ },
+ {
+  "text": "Polis",
+  "startMs": 38600,
+  "endMs": 38940
+ },
+ {
+  "text": "taşa",
+  "startMs": 38940,
+  "endMs": 39300
+ },
+ {
+  "text": "el",
+  "startMs": 39300,
+  "endMs": 39540
+ },
+ {
+  "text": "koyuyor",
+  "startMs": 39540,
+  "endMs": 40040
+ },
+ {
+  "text": "ve",
+  "startMs": 40040,
+  "endMs": 40420
+ },
+ {
+  "text": "Hava",
+  "startMs": 40420,
+  "endMs": 40780
+ },
+ {
+  "text": "Kuvvetleri'ne",
+  "startMs": 40780,
+  "endMs": 41480
+ },
+ {
+  "text": "gönderiyor.",
+  "startMs": 41480,
+  "endMs": 42020
+ },
+ {
+  "text": "Sonra",
+  "startMs": 42580,
+  "endMs": 42920
+ },
+ {
+  "text": "ev",
+  "startMs": 42920,
+  "endMs": 43260
+ },
+ {
+  "text": "sahibi",
+  "startMs": 43260,
+  "endMs": 43660
+ },
+ {
+  "text": "kapıyı",
+  "startMs": 43660,
+  "endMs": 44040
+ },
+ {
+  "text": "çalıyor:",
+  "startMs": 44040,
+  "endMs": 44420
+ },
+ {
+  "text": "Taş",
+  "startMs": 45040,
+  "endMs": 45280
+ },
+ {
+  "text": "benim",
+  "startMs": 45280,
+  "endMs": 45540
+ },
+ {
+  "text": "evime",
+  "startMs": 45540,
+  "endMs": 45900
+ },
+ {
+  "text": "düştü,",
+  "startMs": 45900,
+  "endMs": 46300
+ },
+ {
+  "text": "benimdir.",
+  "startMs": 46640,
+  "endMs": 47080
+ },
+ {
+  "text": "Bir",
+  "startMs": 47660,
+  "endMs": 47840
+ },
+ {
+  "text": "yıl",
+  "startMs": 47840,
+  "endMs": 48080
+ },
+ {
+  "text": "süren",
+  "startMs": 48080,
+  "endMs": 48400
+ },
+ {
+  "text": "kavganın",
+  "startMs": 48400,
+  "endMs": 48920
+ },
+ {
+  "text": "sonunda",
+  "startMs": 48920,
+  "endMs": 49380
+ },
+ {
+  "text": "ev",
+  "startMs": 49380,
+  "endMs": 49860
+ },
+ {
+  "text": "sahibi",
+  "startMs": 49860,
+  "endMs": 50300
+ },
+ {
+  "text": "beş",
+  "startMs": 50300,
+  "endMs": 50510
+ },
+ {
+  "text": "yüz",
+  "startMs": 50510,
+  "endMs": 50720
+ },
+ {
+  "text": "dolar",
+  "startMs": 50720,
+  "endMs": 51140
+ },
+ {
+  "text": "alıyor,",
+  "startMs": 51140,
+  "endMs": 51460
+ },
+ {
+  "text": "taş",
+  "startMs": 51920,
+  "endMs": 52180
+ },
+ {
+  "text": "Ann'e",
+  "startMs": 52180,
+  "endMs": 52700
+ },
+ {
+  "text": "dönüyor.",
+  "startMs": 52700,
+  "endMs": 53040
+ },
+ {
+  "text": "Ama",
+  "startMs": 53500,
+  "endMs": 53720
+ },
+ {
+  "text": "artık",
+  "startMs": 53720,
+  "endMs": 54040
+ },
+ {
+  "text": "kimse",
+  "startMs": 54040,
+  "endMs": 54380
+ },
+ {
+  "text": "ilgilenmiyor.",
+  "startMs": 54380,
+  "endMs": 55180
+ },
+ {
+  "text": "Alıcı",
+  "startMs": 55700,
+  "endMs": 56000
+ },
+ {
+  "text": "yok.",
+  "startMs": 56000,
+  "endMs": 56260
+ },
+ {
+  "text": "Aile",
+  "startMs": 56760,
+  "endMs": 57180
+ },
+ {
+  "text": "o",
+  "startMs": 57180,
+  "endMs": 57460
+ },
+ {
+  "text": "taşı",
+  "startMs": 57460,
+  "endMs": 57800
+ },
+ {
+  "text": "bir",
+  "startMs": 57800,
+  "endMs": 57960
+ },
+ {
+  "text": "süre…",
+  "startMs": 57960,
+  "endMs": 58460
+ },
+ {
+  "text": "kapı",
+  "startMs": 58460,
+  "endMs": 59140
+ },
+ {
+  "text": "tutucu",
+  "startMs": 59140,
+  "endMs": 59520
+ },
+ {
+  "text": "olarak",
+  "startMs": 59520,
+  "endMs": 59760
+ },
+ {
+  "text": "kullanıyor.",
+  "startMs": 59760,
+  "endMs": 60420
+ },
+ {
+  "text": "Meğerse",
+  "startMs": 60860,
+  "endMs": 61420
+ },
+ {
+  "text": "aynı",
+  "startMs": 61420,
+  "endMs": 61780
+ },
+ {
+  "text": "göktaşının",
+  "startMs": 61780,
+  "endMs": 62480
+ },
+ {
+  "text": "ikinci",
+  "startMs": 62480,
+  "endMs": 63000
+ },
+ {
+  "text": "bir",
+  "startMs": 63000,
+  "endMs": 63140
+ },
+ {
+  "text": "parçası",
+  "startMs": 63140,
+  "endMs": 63680
+ },
+ {
+  "text": "daha",
+  "startMs": 63680,
+  "endMs": 63860
+ },
+ {
+  "text": "varmış.",
+  "startMs": 63860,
+  "endMs": 64380
+ },
+ {
+  "text": "Çiftçi",
+  "startMs": 64840,
+  "endMs": 65280
+ },
+ {
+  "text": "Julius",
+  "startMs": 65280,
+  "endMs": 65700
+ },
+ {
+  "text": "McKinney",
+  "startMs": 65700,
+  "endMs": 66500
+ },
+ {
+  "text": "onu",
+  "startMs": 66500,
+  "endMs": 66820
+ },
+ {
+  "text": "yolda",
+  "startMs": 66820,
+  "endMs": 67240
+ },
+ {
+  "text": "buluyor.",
+  "startMs": 67240,
+  "endMs": 67620
+ },
+ {
+  "text": "Anlatılana",
+  "startMs": 68060,
+  "endMs": 68660
+ },
+ {
+  "text": "göre",
+  "startMs": 68660,
+  "endMs": 68920
+ },
+ {
+  "text": "sattığı",
+  "startMs": 68920,
+  "endMs": 69680
+ },
+ {
+  "text": "parayla",
+  "startMs": 69680,
+  "endMs": 70180
+ },
+ {
+  "text": "bir",
+  "startMs": 70180,
+  "endMs": 70400
+ },
+ {
+  "text": "ev",
+  "startMs": 70400,
+  "endMs": 70780
+ },
+ {
+  "text": "ve",
+  "startMs": 70780,
+  "endMs": 71120
+ },
+ {
+  "text": "bir",
+  "startMs": 71120,
+  "endMs": 71300
+ },
+ {
+  "text": "araba",
+  "startMs": 71300,
+  "endMs": 71780
+ },
+ {
+  "text": "alıyor.",
+  "startMs": 71780,
+  "endMs": 72100
+ },
+ {
+  "text": "Taş",
+  "startMs": 72660,
+  "endMs": 73040
+ },
+ {
+  "text": "Ann'e",
+  "startMs": 73040,
+  "endMs": 73420
+ },
+ {
+  "text": "çarptı.",
+  "startMs": 73420,
+  "endMs": 73920
+ },
+ {
+  "text": "Parayı",
+  "startMs": 74300,
+  "endMs": 74640
+ },
+ {
+  "text": "başkası",
+  "startMs": 74640,
+  "endMs": 75120
+ },
+ {
+  "text": "kazandı.",
+  "startMs": 75120,
+  "endMs": 75660
+ }
+]
