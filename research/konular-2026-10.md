@@ -34,3 +34,21 @@ Toplam = (izlenebilirlik + 1.2×viral + özgünlük + doğruluk) / 4.2. Kapı: �
 Notlar:
 - Hodges: "doğrulanmış ilk insan" → "kayıtlara geçen ilk insan" de. Kapanış zayıf, güçlendir. Ev sahibi: Birdie Guy.
 - Yamaguchi: tarihler 6 ve 9 Ağustos 1945; 2009'da resmî çift hibakuşa olarak tanındı, 2010'da 93 yaşında öldü. "Tanınan tek" de.
+
+---
+
+# Tur 2: daha az işlenmiş konular
+
+11. **Harrison Okene**: 2013, Nijerya açıklarında römorkör Jascon-4 alabora oldu ve ~30 m dibe battı. Aşçı Okene karanlıkta bir hava cebinde 60 saat yaşadı. Meğerse: Cesetleri çıkarmaya gelen dalgıç bir eli tuttuğunda o el onu geri tuttu; 12 kişilik mürettebattan tek sağ kalandı (dalgıç kamerası kaydı var).
+12. **Leonid Rogozov**: 1961, Antarktika'daki Sovyet istasyonunda tek doktor apandisit oldu; uçak yok, kar fırtınası. Meğerse: Ameliyatı kendine yaptı; ayna tutan meteorologla, bayılırsa ne yapacaklarını önceden öğrettiği ekiple yaklaşık 2 saat sürdü.
+13. **Mauro Prosperi**: 1994, Sahra'da 250 km'lik Marathon des Sables yarışında kum fırtınasında kayboldu, 9 gün çölde kaldı (idrar, yarasa kanı). Meğerse: Umudunu kesip bileklerini kestiğinde susuzluktan kalınlaşan kanı akmadı. Yarıştığı yerden ~300 km uzakta, Cezayir'de bulundu.
+14. **Poon Lim**: 1942, torpillenen gemiden tek başına bir sala çıktı ve okyanusta 133 gün yaşadı. Meğerse: Yüzme bilmiyordu. Kurtulunca "Umarım kimse bu rekoru kırmak zorunda kalmaz" dedi.
+15. **Larry Walters**: 1982, bir kamp sandalyesine 40'tan fazla helyum balonu bağlayıp ~4.900 m'ye çıktı; havalimanı yaklaşma koridorunda pilotlar onu gördüğünü bildirdi. Meğerse: İnmek için yanında havalı tüfek vardı ve balonları tek tek vurdu; çocukluk hayaliydi.
+16. **Vecihi Hürkuş**: Türkiye'de tasarlanıp üretilen ilk uçağı (Vecihi K-VI, 1930) kendi imkânıyla yaptı ve uçurdu. Meğerse: Uçağı yapan adamın "diploması yok" denilerek uçması engellendi; o da yurt dışına gidip pilot diploması aldı. (Ayrıntılar kaynakla doğrulanmalı.)
+17. **Michel Lotito ("Monsieur Mangetout")**: Bisiklet, televizyon, yatak ve bütün bir Cessna 150 uçağını parça parça yiyen adam. Meğerse: Guinness ona ödül olarak pirinç bir plaket verdi; onu da yedi.
+18. **Frank Hayes**: 1923, New York Belmont Park. Jokey yarışın ortasında kalp krizinden öldü ama atı Sweet Kiss (20'ye 1) birinci geldi. Meğerse: Yarışı kazanan ilk ölü jokey oldu; at "Ölümün Tatlı Öpücüğü" diye anıldı ve bir daha yarışmadı.
+19. **Radyum Kızları**: 1917-1920'ler, ABD saat fabrikalarında genç kadınlar radyumlu boyayı fırçaları dudaklarıyla sivriltip kadranlara sürdü; "zararsız" denildi. Meğerse: Yöneticiler korunarak çalışıyordu. Davaları işçi güvenliği yasalarını değiştirdi; kemiklerinin hâlâ radyoaktif olduğu belirtiliyor.
+20. **Beck Weathers**: 1996 Everest felaketinde iki kez "öldü" diye karda bırakıldı. Meğerse: Ertesi gün tek başına yürüyerek kampa girdi; eşi rekor irtifada helikopter kurtarması organize etti. Ellerini ve burnunu kaybetti ama yaşadı.
+
+## Tur 2 hakem sonuçları
+(aşağıya eklenecek)

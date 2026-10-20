@@ -8,7 +8,8 @@ Yeni sohbette ilk mesaj: "HANDOFF.md'yi oku ve kaldığın yerden devam et."
 - **Tek ücretli araç: ElevenLabs, yalnızca seslendirme.** Geri kalan her şey ücretsiz/açık kaynak. (Apify iptal edildi.)
 - Ekran: altta veya sol altta **facecam tarzı avatar** (Osman'ın fotoğraflarından) hikayeyi anlatır; geri kalan alanda hikaye görselleri döner.
 - Altyazı sesle **kelime kelime senkron**.
-- Görseller **gerçekçi** (artık yalnızca vektör çizim değil): Osman internetten görsel bulur, nasıl kullanılacağını söyler. Animasyon, geçiş, kamera hareketi kaliteli olmalı; düz kesme yok.
+- **Görsel kuralı (önemli):** Osman gerçek görsel verirse o kullanılır (nasıl kullanılacağını o söyler). Osman vermediği her şey **kesinlikle vektör çizim**, ama vektörler **gerçekçi** olmalı (detaylı, gölgeli/ışıklı, doğru oranlı; çocuksu/emoji tarzı değil). Kendi kafamdan fotoğraf/stok görsel eklemem.
+- Animasyon, geçiş, kamera hareketi kaliteli olmalı; düz kesme yok.
 - Render kısa sürmeli, token tasarruflu çalış, her adımda bu dosyayı güncelle + commit + push.
 
 ## Kurulu olanlar
@@ -21,11 +22,12 @@ Yeni sohbette ilk mesaj: "HANDOFF.md'yi oku ve kaldığın yerden devam et."
 1. ✅ 10 konu adayı + bağımsız hakem puanı: `research/konular-2026-10.md`
    - GEÇTİ: **Ann Hodges** (77.5).
    - Sınırda: **Tsutomu Yamaguchi** (76.5 ama özgünlük 58 < 60; taze açıyla geçer).
+   - Tur 2 (11-20, daha az işlenmiş konular) hakemde; sonuçlar aynı dosyaya.
 2. ⏳ Osman: geçen konular için görsel araştırması yapacak ve kullanım talimatı verecek.
 3. ⏳ Osman: avatar için fotoğraflarını gönderecek.
 4. ⏳ Sonraki adımlar: senaryo → ElevenLabs ses → kelime zamanları (faster-whisper) → HyperFrames kompozisyonu (avatar + görseller + altyazı) → render → puanlama skill'i.
 
 ## Açık konular / riskler
 - **Konuşan avatar ücretsiz + GPU'suz:** Fotoğraftan dudak senkronlu gerçekçi avatar için açık kaynak seçenekler (LivePortrait, SadTalker, Wav2Lip) GPU ister; bu konteynerde CPU'da çok yavaş olabilir. Alternatifler: kısa bir test ile CPU süresini ölç; ya da Osman kendi facecam'ini çeker; ya da Google Colab (ücretsiz GPU) üzerinde avatar üret, burada birleştir. Fotoğraflar gelince test edilecek.
-- Puanlama skill'indeki "tamamen vektör çizim, fotoğraf yok" kuralı yeni formatla çelişiyor; skill güncellenmeli (Osman onaylarsa).
+- Puanlama skill'i (claude.ai'de senkronlu) hâlâ "tamamen vektör, fotoğraf yok" diyor. Yerine geçecek kural yukarıdaki görsel kuralı; skill claude.ai'den güncellenene kadar hakeme bu kuralı ayrıca ver. Gerçek görsel = eksi değil; vektörde "gerçekçilik" puanlanır.
 - Daha fazla geçer konu için yeni aday turu yapılabilir (az işlenmiş, Türk izleyiciye yakın hikayeler).
