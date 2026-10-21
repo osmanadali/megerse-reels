@@ -1,0 +1,627 @@
+[
+ {
+  "text": "Mersinliler",
+  "startMs": 0,
+  "endMs": 720
+ },
+ {
+  "text": "bunu",
+  "startMs": 720,
+  "endMs": 960
+ },
+ {
+  "text": "bilir:",
+  "startMs": 960,
+  "endMs": 1480
+ },
+ {
+  "text": "Yazın",
+  "startMs": 1900,
+  "endMs": 2320
+ },
+ {
+  "text": "Erdemli",
+  "startMs": 2320,
+  "endMs": 3020
+ },
+ {
+  "text": "yolu",
+  "startMs": 3020,
+  "endMs": 3260
+ },
+ {
+  "text": "bitmez.",
+  "startMs": 3260,
+  "endMs": 3640
+ },
+ {
+  "text": "D400.",
+  "startMs": 4240,
+  "endMs": 5120
+ },
+ {
+  "text": "Tatil",
+  "startMs": 5640,
+  "endMs": 6220
+ },
+ {
+  "text": "trafiği,",
+  "startMs": 6220,
+  "endMs": 6940
+ },
+ {
+  "text": "kızgın",
+  "startMs": 6940,
+  "endMs": 7460
+ },
+ {
+  "text": "asfalt,",
+  "startMs": 7460,
+  "endMs": 7940
+ },
+ {
+  "text": "kilometrelerce",
+  "startMs": 7940,
+  "endMs": 9260
+ },
+ {
+  "text": "kuyruk.",
+  "startMs": 9260,
+  "endMs": 9700
+ },
+ {
+  "text": "Yetkililere",
+  "startMs": 9700,
+  "endMs": 10840
+ },
+ {
+  "text": "göre",
+  "startMs": 10840,
+  "endMs": 11100
+ },
+ {
+  "text": "yazın",
+  "startMs": 11100,
+  "endMs": 11780
+ },
+ {
+  "text": "Mersin'den",
+  "startMs": 11780,
+  "endMs": 12460
+ },
+ {
+  "text": "Kızkalesi'ne",
+  "startMs": 12460,
+  "endMs": 12930
+ },
+ {
+  "text": "yol,",
+  "startMs": 12930,
+  "endMs": 13400
+ },
+ {
+  "text": "iki",
+  "startMs": 13400,
+  "endMs": 13870
+ },
+ {
+  "text": "buçuk",
+  "startMs": 13870,
+  "endMs": 14340
+ },
+ {
+  "text": "saate",
+  "startMs": 14340,
+  "endMs": 14820
+ },
+ {
+  "text": "kadar",
+  "startMs": 14820,
+  "endMs": 15100
+ },
+ {
+  "text": "uzuyordu.",
+  "startMs": 15100,
+  "endMs": 15640
+ },
+ {
+  "text": "19",
+  "startMs": 16200,
+  "endMs": 16460
+ },
+ {
+  "text": "Ekim",
+  "startMs": 16460,
+  "endMs": 16860
+ },
+ {
+  "text": "gecesi,",
+  "startMs": 16860,
+  "endMs": 17460
+ },
+ {
+  "text": "saat",
+  "startMs": 17460,
+  "endMs": 17820
+ },
+ {
+  "text": "on",
+  "startMs": 17820,
+  "endMs": 18190
+ },
+ {
+  "text": "ikiyi",
+  "startMs": 18190,
+  "endMs": 18560
+ },
+ {
+  "text": "bir",
+  "startMs": 18560,
+  "endMs": 18760
+ },
+ {
+  "text": "geçe,",
+  "startMs": 18760,
+  "endMs": 19260
+ },
+ {
+  "text": "bu",
+  "startMs": 19260,
+  "endMs": 19620
+ },
+ {
+  "text": "tablo",
+  "startMs": 19620,
+  "endMs": 19980
+ },
+ {
+  "text": "değişti.",
+  "startMs": 19980,
+  "endMs": 20520
+ },
+ {
+  "text": "Çeşmeli-Kızkalesi",
+  "startMs": 21040,
+  "endMs": 22160
+ },
+ {
+  "text": "otoyolu",
+  "startMs": 22160,
+  "endMs": 22580
+ },
+ {
+  "text": "trafiğe",
+  "startMs": 22580,
+  "endMs": 23160
+ },
+ {
+  "text": "açıldı.",
+  "startMs": 23160,
+  "endMs": 23540
+ },
+ {
+  "text": "Elli",
+  "startMs": 24080,
+  "endMs": 24220
+ },
+ {
+  "text": "iki",
+  "startMs": 24220,
+  "endMs": 24360
+ },
+ {
+  "text": "kilometre.",
+  "startMs": 24360,
+  "endMs": 25180
+ },
+ {
+  "text": "Yedi",
+  "startMs": 25180,
+  "endMs": 25820
+ },
+ {
+  "text": "tünel,",
+  "startMs": 25820,
+  "endMs": 26320
+ },
+ {
+  "text": "beş",
+  "startMs": 26320,
+  "endMs": 26860
+ },
+ {
+  "text": "viyadük,",
+  "startMs": 26860,
+  "endMs": 27400
+ },
+ {
+  "text": "on",
+  "startMs": 27400,
+  "endMs": 27940
+ },
+ {
+  "text": "köprülü",
+  "startMs": 27940,
+  "endMs": 28520
+ },
+ {
+  "text": "kavşak.",
+  "startMs": 28520,
+  "endMs": 29080
+ },
+ {
+  "text": "Hedef:",
+  "startMs": 29080,
+  "endMs": 29900
+ },
+ {
+  "text": "Aynı",
+  "startMs": 29900,
+  "endMs": 30600
+ },
+ {
+  "text": "yol,",
+  "startMs": 30600,
+  "endMs": 30820
+ },
+ {
+  "text": "on",
+  "startMs": 30820,
+  "endMs": 31170
+ },
+ {
+  "text": "sekiz",
+  "startMs": 31170,
+  "endMs": 31520
+ },
+ {
+  "text": "dakika.",
+  "startMs": 31520,
+  "endMs": 32080
+ },
+ {
+  "text": "İlk",
+  "startMs": 32080,
+  "endMs": 32920
+ },
+ {
+  "text": "gün",
+  "startMs": 32920,
+  "endMs": 33120
+ },
+ {
+  "text": "on",
+  "startMs": 33120,
+  "endMs": 33380
+ },
+ {
+  "text": "yedi",
+  "startMs": 33380,
+  "endMs": 33640
+ },
+ {
+  "text": "bin",
+  "startMs": 33640,
+  "endMs": 33900
+ },
+ {
+  "text": "altı",
+  "startMs": 33900,
+  "endMs": 34160
+ },
+ {
+  "text": "yüz",
+  "startMs": 34160,
+  "endMs": 34420
+ },
+ {
+  "text": "seksen",
+  "startMs": 34420,
+  "endMs": 34680
+ },
+ {
+  "text": "bir",
+  "startMs": 34680,
+  "endMs": 34940
+ },
+ {
+  "text": "araç",
+  "startMs": 34940,
+  "endMs": 35400
+ },
+ {
+  "text": "geçti.",
+  "startMs": 35400,
+  "endMs": 35820
+ },
+ {
+  "text": "Bir",
+  "startMs": 36240,
+  "endMs": 36460
+ },
+ {
+  "text": "sürücüye",
+  "startMs": 36460,
+  "endMs": 37000
+ },
+ {
+  "text": "göre",
+  "startMs": 37000,
+  "endMs": 37240
+ },
+ {
+  "text": "Çeşmeli'den",
+  "startMs": 37240,
+  "endMs": 38140
+ },
+ {
+  "text": "Erdemli'ye",
+  "startMs": 38140,
+  "endMs": 38980
+ },
+ {
+  "text": "sadece",
+  "startMs": 38980,
+  "endMs": 39440
+ },
+ {
+  "text": "sekiz",
+  "startMs": 39440,
+  "endMs": 40020
+ },
+ {
+  "text": "dakika.",
+  "startMs": 40020,
+  "endMs": 40540
+ },
+ {
+  "text": "Peki",
+  "startMs": 41020,
+  "endMs": 41320
+ },
+ {
+  "text": "bu",
+  "startMs": 41320,
+  "endMs": 41820
+ },
+ {
+  "text": "yol",
+  "startMs": 41820,
+  "endMs": 42000
+ },
+ {
+  "text": "ne",
+  "startMs": 42000,
+  "endMs": 42200
+ },
+ {
+  "text": "zamandır",
+  "startMs": 42200,
+  "endMs": 42620
+ },
+ {
+  "text": "bekleniyordu?",
+  "startMs": 42620,
+  "endMs": 43360
+ },
+ {
+  "text": "Meğerse",
+  "startMs": 43900,
+  "endMs": 44460
+ },
+ {
+  "text": "ilk",
+  "startMs": 44460,
+  "endMs": 44840
+ },
+ {
+  "text": "ihalesi",
+  "startMs": 44840,
+  "endMs": 45480
+ },
+ {
+  "text": "2018'de",
+  "startMs": 45480,
+  "endMs": 46420
+ },
+ {
+  "text": "yapılmış",
+  "startMs": 46420,
+  "endMs": 46940
+ },
+ {
+  "text": "ve",
+  "startMs": 46940,
+  "endMs": 47300
+ },
+ {
+  "text": "tek",
+  "startMs": 47300,
+  "endMs": 47640
+ },
+ {
+  "text": "bir",
+  "startMs": 47640,
+  "endMs": 47880
+ },
+ {
+  "text": "firma",
+  "startMs": 47880,
+  "endMs": 48240
+ },
+ {
+  "text": "bile",
+  "startMs": 48240,
+  "endMs": 48420
+ },
+ {
+  "text": "teklif",
+  "startMs": 48420,
+  "endMs": 48840
+ },
+ {
+  "text": "vermemiş.",
+  "startMs": 48840,
+  "endMs": 49460
+ },
+ {
+  "text": "Proje",
+  "startMs": 49860,
+  "endMs": 50280
+ },
+ {
+  "text": "ikiye",
+  "startMs": 50280,
+  "endMs": 50740
+ },
+ {
+  "text": "bölünmüş,",
+  "startMs": 50740,
+  "endMs": 51300
+ },
+ {
+  "text": "ihale",
+  "startMs": 51660,
+  "endMs": 51980
+ },
+ {
+  "text": "yenilenmiş,",
+  "startMs": 51980,
+  "endMs": 52760
+ },
+ {
+  "text": "bedeli",
+  "startMs": 53200,
+  "endMs": 53540
+ },
+ {
+  "text": "iki",
+  "startMs": 53540,
+  "endMs": 53900
+ },
+ {
+  "text": "milyardan",
+  "startMs": 53900,
+  "endMs": 54420
+ },
+ {
+  "text": "beş",
+  "startMs": 54420,
+  "endMs": 54780
+ },
+ {
+  "text": "buçuk",
+  "startMs": 54780,
+  "endMs": 55140
+ },
+ {
+  "text": "milyar",
+  "startMs": 55140,
+  "endMs": 55580
+ },
+ {
+  "text": "liranın",
+  "startMs": 55580,
+  "endMs": 55920
+ },
+ {
+  "text": "üzerine",
+  "startMs": 55920,
+  "endMs": 56340
+ },
+ {
+  "text": "çıkmış.",
+  "startMs": 56340,
+  "endMs": 56920
+ },
+ {
+  "text": "İlk",
+  "startMs": 57280,
+  "endMs": 57740
+ },
+ {
+  "text": "ihaleden",
+  "startMs": 57740,
+  "endMs": 58260
+ },
+ {
+  "text": "açılışa,",
+  "startMs": 58260,
+  "endMs": 58940
+ },
+ {
+  "text": "tam",
+  "startMs": 58940,
+  "endMs": 59380
+ },
+ {
+  "text": "sekiz",
+  "startMs": 59380,
+  "endMs": 59840
+ },
+ {
+  "text": "yıl.",
+  "startMs": 59840,
+  "endMs": 60220
+ },
+ {
+  "text": "Şimdi",
+  "startMs": 60720,
+  "endMs": 61000
+ },
+ {
+  "text": "soru",
+  "startMs": 61000,
+  "endMs": 61520
+ },
+ {
+  "text": "şu:",
+  "startMs": 61520,
+  "endMs": 61640
+ },
+ {
+  "text": "Önümüzdeki",
+  "startMs": 62120,
+  "endMs": 62720
+ },
+ {
+  "text": "yaz,",
+  "startMs": 62720,
+  "endMs": 63000
+ },
+ {
+  "text": "Erdemli",
+  "startMs": 63000,
+  "endMs": 63700
+ },
+ {
+  "text": "kuyruğu",
+  "startMs": 63700,
+  "endMs": 64240
+ },
+ {
+  "text": "gerçekten",
+  "startMs": 64240,
+  "endMs": 64500
+ },
+ {
+  "text": "bitecek",
+  "startMs": 64500,
+  "endMs": 65200
+ },
+ {
+  "text": "mi?",
+  "startMs": 65200,
+  "endMs": 65440
+ },
+ {
+  "text": "Yorumlara",
+  "startMs": 65900,
+  "endMs": 66360
+ },
+ {
+  "text": "yaz.",
+  "startMs": 66360,
+  "endMs": 66600
+ }
+]
