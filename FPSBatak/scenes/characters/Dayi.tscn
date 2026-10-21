@@ -1,7 +1,8 @@
-[gd_scene load_steps=54 format=3]
+[gd_scene load_steps=55 format=3]
 
 [ext_resource type="Script" path="res://scripts/core/opponent_placeholder.gd" id="1_opp"]
 [ext_resource type="Script" path="res://scripts/characters/character_idle.gd" id="2_idle"]
+[ext_resource type="Script" path="res://scripts/characters/character_gesture.gd" id="3_gesture"]
 
 [sub_resource type="FastNoiseLite" id="Noise_knit"]
 frequency = 0.12
@@ -469,71 +470,77 @@ transform = Transform3D(1.06, 0, 0, 0, 0.61802, -0.0895, 0, 0.04955, 1.11642, 0,
 mesh = SubResource("Mesh_brim")
 transform = Transform3D(1, 0, 0, 0, 0.98384, 0.111, 0, -0.17903, 0.60998, 0, 0.052, -0.098)
 
-[node name="UpperArmL" type="MeshInstance3D" parent="Body"]
+[node name="ArmL" type="Node3D" parent="Body"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.2, 1.04, 0.05)
+
+[node name="UpperArm" type="MeshInstance3D" parent="Body/ArmL"]
 mesh = SubResource("Mesh_upper_arm")
-transform = Transform3D(-0.97281, -0.19842, -0.11949, 0.23162, -0.83336, -0.50186, 0, -0.51589, 0.85666, -0.225, 0.935, -0.015)
+transform = Transform3D(-0.97281, -0.19842, -0.11949, 0.23162, -0.83336, -0.50186, 0, -0.51589, 0.85666, -0.025, -0.105, -0.065)
 
-[node name="ForearmL" type="MeshInstance3D" parent="Body"]
+[node name="Forearm" type="MeshInstance3D" parent="Body/ArmL"]
 mesh = SubResource("Mesh_forearm")
-transform = Transform3D(0.48564, 0.59735, 0.63822, -0.87416, 0.33186, 0.35457, 0, -0.7301, 0.68334, -0.1825, 0.8675, -0.1625)
+transform = Transform3D(0.48564, 0.59735, 0.63822, -0.87416, 0.33186, 0.35457, 0, -0.7301, 0.68334, 0.0175, -0.1725, -0.2125)
 
-[node name="CuffL" type="MeshInstance3D" parent="Body"]
+[node name="Cuff" type="MeshInstance3D" parent="Body/ArmL"]
 mesh = SubResource("Mesh_cuff")
-transform = Transform3D(0.48564, 0.59735, 0.63822, -0.87416, 0.33186, 0.35457, 0, -0.7301, 0.68334, -0.23785, 0.83675, -0.09485)
+transform = Transform3D(0.48564, 0.59735, 0.63822, -0.87416, 0.33186, 0.35457, 0, -0.7301, 0.68334, -0.03785, -0.20325, -0.14485)
 
-[node name="HandL" type="Node3D" parent="Body"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.115, 0.905, -0.245)
+[node name="Hand" type="Node3D" parent="Body/ArmL"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.085, -0.135, -0.295)
 
-[node name="Palm" type="MeshInstance3D" parent="Body/HandL"]
+[node name="Palm" type="MeshInstance3D" parent="Body/ArmL/Hand"]
 mesh = SubResource("Mesh_hand")
 transform = Transform3D(0.85, 0, 0, 0, 0.7, 0, 0, 0, 1.2, 0, 0, 0)
 
-[node name="Thumb" type="MeshInstance3D" parent="Body/HandL"]
+[node name="Thumb" type="MeshInstance3D" parent="Body/ArmL/Hand"]
 mesh = SubResource("Mesh_thumb")
 transform = Transform3D(0.95534, -0.29552, 0, 0.2439, 0.78847, 0.56464, -0.16686, -0.53942, 0.82534, 0.035, 0.02, -0.02)
 
-[node name="UpperArmR" type="MeshInstance3D" parent="Body"]
+[node name="ArmR" type="Node3D" parent="Body"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.2, 1.04, 0.05)
+
+[node name="UpperArm" type="MeshInstance3D" parent="Body/ArmR"]
 mesh = SubResource("Mesh_upper_arm")
-transform = Transform3D(-0.96476, 0.21982, 0.1446, -0.26312, -0.80602, -0.53019, 0, -0.54956, 0.83546, 0.23, 0.93, -0.025)
+transform = Transform3D(-0.96476, 0.21982, 0.1446, -0.26312, -0.80602, -0.53019, 0, -0.54956, 0.83546, 0.03, -0.11, -0.075)
 
-[node name="ForearmR" type="MeshInstance3D" parent="Body"]
+[node name="Forearm" type="MeshInstance3D" parent="Body/ArmR"]
 mesh = SubResource("Mesh_forearm")
-transform = Transform3D(0, -0.12361, 0.99233, -0.99655, -0.08241, -0.01027, 0.08305, -0.9889, -0.12319, 0.245, 0.81, -0.22)
+transform = Transform3D(0, -0.12361, 0.99233, -0.99655, -0.08241, -0.01027, 0.08305, -0.9889, -0.12319, 0.045, -0.23, -0.27)
 
-[node name="CuffR" type="MeshInstance3D" parent="Body"]
+[node name="Cuff" type="MeshInstance3D" parent="Body/ArmR"]
 mesh = SubResource("Mesh_cuff")
-transform = Transform3D(0, -0.12361, 0.99233, -0.99655, -0.08241, -0.01027, 0.08305, -0.9889, -0.12319, 0.2573, 0.8182, -0.1216)
+transform = Transform3D(0, -0.12361, 0.99233, -0.99655, -0.08241, -0.01027, 0.08305, -0.9889, -0.12319, 0.0573, -0.2218, -0.1716)
 
-[node name="HandR" type="Node3D" parent="Body"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.23, 0.8, -0.34)
+[node name="Hand" type="Node3D" parent="Body/ArmR"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.03, -0.24, -0.39)
 
-[node name="Palm" type="MeshInstance3D" parent="Body/HandR"]
+[node name="Palm" type="MeshInstance3D" parent="Body/ArmR/Hand"]
 mesh = SubResource("Mesh_hand")
 transform = Transform3D(0.85, 0, 0, 0, 0.7, 0, 0, 0, 1.2, 0, 0, 0)
 
-[node name="Thumb" type="MeshInstance3D" parent="Body/HandR"]
+[node name="Thumb" type="MeshInstance3D" parent="Body/ArmR/Hand"]
 mesh = SubResource("Mesh_thumb")
 transform = Transform3D(0.95534, -0.29552, 0, 0.2439, 0.78847, 0.56464, -0.16686, -0.53942, 0.82534, -0.03, 0.02, -0.02)
 
-[node name="Cigarette" type="Node3D" parent="Body"]
+[node name="Cigarette" type="Node3D" parent="Body/ArmR/Hand"]
 
-[node name="Filter" type="MeshInstance3D" parent="Body/Cigarette"]
+[node name="Filter" type="MeshInstance3D" parent="Body/ArmR/Hand/Cigarette"]
 mesh = SubResource("Mesh_cig_filter")
-transform = Transform3D(0.21317, -0.54841, -0.80858, 0.97702, 0.11965, 0.17642, 0, -0.8276, 0.56131, 0.20897, 0.81132, -0.3791)
+transform = Transform3D(0.21317, -0.54841, -0.80858, 0.97702, 0.11965, 0.17642, 0, -0.8276, 0.56131, -0.02103, 0.01132, -0.0391)
 cast_shadow = 0
 
-[node name="Paper" type="MeshInstance3D" parent="Body/Cigarette"]
+[node name="Paper" type="MeshInstance3D" parent="Body/ArmR/Hand/Cigarette"]
 mesh = SubResource("Mesh_cig_paper")
-transform = Transform3D(0.21317, -0.54841, -0.80858, 0.97702, 0.11965, 0.17642, 0, -0.8276, 0.56131, 0.19197, 0.81503, -0.40476)
+transform = Transform3D(0.21317, -0.54841, -0.80858, 0.97702, 0.11965, 0.17642, 0, -0.8276, 0.56131, -0.03803, 0.01503, -0.06476)
 cast_shadow = 0
 
-[node name="Ember" type="MeshInstance3D" parent="Body/Cigarette"]
+[node name="Ember" type="MeshInstance3D" parent="Body/ArmR/Hand/Cigarette"]
 mesh = SubResource("Mesh_ember")
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.181, 0.81742, -0.42131)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.049, 0.01742, -0.08131)
 cast_shadow = 0
 
-[node name="Smoke" type="CPUParticles3D" parent="Body/Cigarette"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.181, 0.81742, -0.42131)
+[node name="Smoke" type="CPUParticles3D" parent="Body/ArmR/Hand/Cigarette"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.049, 0.01742, -0.08131)
 amount = 5
 lifetime = 3.2
 local_coords = false
@@ -551,11 +558,15 @@ scale_amount_max = 1.0
 scale_amount_curve = SubResource("Curve_smoke")
 color_ramp = SubResource("Grad_smoke")
 
-[node name="Idle" type="Node" parent="."]
+[node name="Gesture" type="Node" parent="." node_paths=PackedStringArray("arm")]
+script = ExtResource("3_gesture")
+arm = NodePath("../Body/ArmR")
+
+[node name="Idle" type="Node" parent="." node_paths=PackedStringArray("torso", "head", "ember")]
 script = ExtResource("2_idle")
 torso = NodePath("../Body/Torso")
 head = NodePath("../Body/Torso/Head")
-ember = NodePath("../Body/Cigarette/Ember")
+ember = NodePath("../Body/ArmR/Hand/Cigarette/Ember")
 
 [node name="NameLabel" type="Label3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.78, -0.42)

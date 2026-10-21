@@ -22,6 +22,8 @@ var _bubble_tween: Tween
 
 func _ready() -> void:
 	_name_label.text = display_name
+	# Elindeki kart görünümü eklendiğinde kart oynama jestine bağlan (varsa).
+	_hand_anchor.child_entered_tree.connect(_on_hand_view_added)
 	if not apply_tint:
 		return
 	var body := get_node_or_null("Body") as MeshInstance3D
@@ -35,6 +37,12 @@ func _ready() -> void:
 	var head_mat := mat.duplicate() as StandardMaterial3D
 	head_mat.albedo_color = body_color.lightened(0.25)
 	head.material_override = head_mat
+
+
+func _on_hand_view_added(child: Node) -> void:
+	var gesture := get_node_or_null("Gesture")
+	if gesture and child.has_signal("card_taken") and gesture.has_method("play"):
+		child.card_taken.connect(gesture.play)
 
 
 ## İsim plakasının ikinci satırı (ör. "2 el · 15 puan").

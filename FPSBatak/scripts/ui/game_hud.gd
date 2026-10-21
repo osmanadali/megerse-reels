@@ -15,7 +15,7 @@ signal bury_confirmed
 const GOLD := UiTheme.GOLD
 const TEXT := UiTheme.TEXT
 ## Karar panellerinin dikey konumu (ekran yüksekliğine oran, panelin altı).
-const ACTION_BOTTOM_RATIO := 0.74
+const ACTION_BOTTOM_RATIO := 0.71  # iki sıralı elde seçilip kalkan kart panele binmesin
 
 var hand: HandView
 var _theme: Theme

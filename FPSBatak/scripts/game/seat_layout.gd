@@ -38,9 +38,13 @@ func build(player_count: int, table_center: Vector3) -> void:
 		var look := table_center
 		look.y = 0.0
 		seat.look_at(look, Vector3.UP)  # yerel -Z masaya baksın
+		var is_character := character_scenes.has(i)
 		var scene: PackedScene = character_scenes.get(i, opponent_scene)
 		var opp: OpponentPlaceholder = scene.instantiate()
-		opp.display_name = opponent_names[(i - 1) % opponent_names.size()]
+		# Karakter kendi adını taşır ("Dayı"); yer tutucular "Rakip N" olur.
+		# Ad, TableController üzerinden HUD ve isim plakasına aynen gider.
+		if not is_character:
+			opp.display_name = opponent_names[(i - 1) % opponent_names.size()]
 		opp.body_color = opponent_colors[(i - 1) % opponent_colors.size()]
 		seat.add_child(opp)
 		_seats.append(seat)
