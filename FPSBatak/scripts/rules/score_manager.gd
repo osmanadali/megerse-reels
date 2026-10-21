@@ -3,7 +3,8 @@ extends RefCounted
 ## Toplam puanları tutar ve el sonu puanlarını hesaplar.
 ##
 ## Kural: ihaleyi alan ihalesini tutturursa aldığı el kadar artı, tutturamazsa
-## (batarsa) ihale kadar eksi yazar. Diğer oyuncular aldıkları el kadar yazar.
+## (batarsa) ihale kadar eksi yazar. Diğer oyuncular aldıkları el kadar yazar;
+## hiç el alamayan ise ihale kadar eksi yazar ("sıfır alan ihaleye batar").
 
 var totals: Array[int] = []
 
@@ -18,6 +19,8 @@ static func round_scores(bidder: int, bid: int, tricks: Array[int]) -> Array[int
 	for seat in tricks.size():
 		if seat == bidder:
 			out.append(tricks[seat] if tricks[seat] >= bid else -bid)
+		elif tricks[seat] == 0:
+			out.append(-bid)
 		else:
 			out.append(tricks[seat])
 	return out

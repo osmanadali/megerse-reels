@@ -224,7 +224,9 @@ func test_scores() -> void:
 	check(sm.apply_round(0, 7, made) == [8, 5, 3], "ihale tuttu: alınan el yazılır")
 	var failed: Array[int] = [6, 6, 4]
 	check(sm.apply_round(0, 7, failed) == [-7, 6, 4], "ihale battı: -ihale")
-	check(sm.totals == [1, 11, 7], "toplam puan")
+	var zero: Array[int] = [9, 7, 0]
+	check(sm.apply_round(1, 8, zero) == [9, -8, -8], "sıfır alan ihaleye batar (ihaleyi alan da 7/8 battı)")
+	check(sm.totals == [10, 3, -1], "toplam puan")
 
 
 func test_ai_bid_trump_bury() -> void:

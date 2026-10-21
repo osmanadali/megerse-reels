@@ -31,7 +31,7 @@ Geliştirme argümanları (`--` sonrasına yazılır):
 4. İlk löveyi ihaleyi alan açar. Takıma uymak, yükseltmek, takım yoksa koz atmak zorunlu;
    koz kırılmadan koz açılamaz.
 5. Puan: ihaleyi alan tutturursa aldığı el kadar artı, batarsa ihale kadar eksi;
-   diğerleri aldığı el kadar artı.
+   diğerleri aldığı el kadar artı. **Hiç el alamayan ihaleye batar** (ihale kadar eksi).
 
 Kart oynama: "SIRA SENDE" yazınca parlak kartlardan birine tıkla
 (dokunmatikte: önce dokun-seç, sonra tekrar dokun-oyna). Karartılmış kartlar o an oynanamaz.
