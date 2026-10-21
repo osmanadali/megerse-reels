@@ -13,6 +13,7 @@ extends Node3D
 @onready var _body: MeshInstance3D = $Body
 @onready var _head: MeshInstance3D = $Head
 @onready var _name_label: Label3D = $NameLabel
+@onready var _hand_anchor: Marker3D = $HandAnchor
 
 
 func _ready() -> void:
@@ -24,3 +25,8 @@ func _ready() -> void:
 	head_mat.albedo_color = body_color.lightened(0.25)
 	_head.material_override = head_mat
 	_name_label.text = display_name
+
+
+## Karakterin kartları tuttuğu nokta. Yerel +Z karaktere doğru bakar.
+func get_hand_anchor() -> Node3D:
+	return _hand_anchor

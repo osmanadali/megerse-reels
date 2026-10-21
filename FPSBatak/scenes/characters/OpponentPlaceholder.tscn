@@ -90,3 +90,6 @@ outline_modulate = Color(0, 0, 0, 0.8)
 text = "Rakip"
 font_size = 48
 outline_size = 10
+
+[node name="HandAnchor" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.94, -0.342, 0, 0.342, 0.94, 0, 0.99, -0.22)

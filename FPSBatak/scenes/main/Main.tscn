@@ -5,6 +5,10 @@
 [ext_resource type="PackedScene" path="res://scenes/characters/OpponentPlaceholder.tscn" id="3_opp"]
 [ext_resource type="Script" path="res://scripts/camera/seated_camera.gd" id="4_cam"]
 [ext_resource type="Script" path="res://scripts/debug/screenshot_tool.gd" id="5_shot"]
+[ext_resource type="Script" path="res://scripts/ui/game_hud.gd" id="6_hud"]
+[ext_resource type="Script" path="res://scripts/cards/card_face_renderer.gd" id="7_faces"]
+[ext_resource type="Script" path="res://scripts/audio/sfx.gd" id="8_sfx"]
+[ext_resource type="Script" path="res://scripts/game/table_controller.gd" id="9_ctrl"]
 
 [sub_resource type="Environment" id="Env_kahvehane"]
 background_mode = 1
@@ -194,16 +198,17 @@ display_name = "Rakip 3"
 body_color = Color(0.45, 0.42, 0.18, 1)
 
 [node name="PlayerCamera" type="Camera3D" parent="Seats/Seat0_South" node_paths=PackedStringArray("look_target")]
-transform = Transform3D(1, 0, 0, 0, 0.970, 0.242, 0, -0.242, 0.970, 0, 1.24, 0.12)
+transform = Transform3D(1, 0, 0, 0, 0.951, 0.309, 0, -0.309, 0.951, 0, 1.24, 0.12)
 current = true
 fov = 54.0
 near = 0.03
 far = 30.0
 script = ExtResource("4_cam")
 look_target = NodePath("../../../Table/PlayArea")
-look_height_offset = 0.24
+look_height_offset = 0.17
 
 [node name="HUD" type="CanvasLayer" parent="."]
+script = ExtResource("6_hud")
 
 [node name="Title" type="Label" parent="HUD"]
 offset_left = 24.0
@@ -227,17 +232,20 @@ theme_override_constants/outline_size = 6
 theme_override_font_sizes/font_size = 18
 text = "Masaya Otur. Kartını Oyna."
 
-[node name="DebugInfo" type="Label" parent="HUD"]
-anchors_preset = 2
-anchor_top = 1.0
-anchor_bottom = 1.0
-offset_left = 24.0
-offset_top = -48.0
-offset_right = 900.0
-offset_bottom = -16.0
-grow_vertical = 0
-theme_override_colors/font_color = Color(0.8, 0.8, 0.8, 0.7)
-theme_override_font_sizes/font_size = 16
-
 [node name="ScreenshotTool" type="Node" parent="."]
 script = ExtResource("5_shot")
+
+[node name="CardFaces" type="Node" parent="."]
+script = ExtResource("7_faces")
+
+[node name="Sfx" type="Node" parent="."]
+script = ExtResource("8_sfx")
+
+[node name="TableController" type="Node" parent="." node_paths=PackedStringArray("table", "seats_root", "camera", "faces", "hud", "sfx")]
+script = ExtResource("9_ctrl")
+table = NodePath("../Table")
+seats_root = NodePath("../Seats")
+camera = NodePath("../Seats/Seat0_South/PlayerCamera")
+faces = NodePath("../CardFaces")
+hud = NodePath("../HUD")
+sfx = NodePath("../Sfx")

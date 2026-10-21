@@ -148,16 +148,27 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.767, 0)
 [node name="TrickSlots" type="Node3D" parent="PlayArea"]
 
 [node name="Slot0_South" type="Marker3D" parent="PlayArea/TrickSlots"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.15)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.075)
 
 [node name="Slot1_East" type="Marker3D" parent="PlayArea/TrickSlots"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.17, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.21, 0, -0.085)
 
 [node name="Slot2_North" type="Marker3D" parent="PlayArea/TrickSlots"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.15)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.245)
 
 [node name="Slot3_West" type="Marker3D" parent="PlayArea/TrickSlots"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.17, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.21, 0, -0.085)
 
-[node name="DeckSpot" type="Marker3D" parent="PlayArea"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3, 0, 0.3)
+[node name="TrickPiles" type="Node3D" parent="PlayArea"]
+
+[node name="Pile0_South" type="Marker3D" parent="PlayArea/TrickPiles"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3, 0, 0.36)
+
+[node name="Pile1_East" type="Marker3D" parent="PlayArea/TrickPiles"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.36, 0, -0.3)
+
+[node name="Pile2_North" type="Marker3D" parent="PlayArea/TrickPiles"]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -0.3, 0, -0.36)
+
+[node name="Pile3_West" type="Marker3D" parent="PlayArea/TrickPiles"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -0.36, 0, 0.3)
