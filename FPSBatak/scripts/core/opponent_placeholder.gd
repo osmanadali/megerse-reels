@@ -1,17 +1,18 @@
 class_name OpponentPlaceholder
 extends Node3D
-## Rakip için geçici yer tutucu (sandalye + gövde + baş + isim).
+## Masadaki rakibin görsel düğümü (sandalye + karakter + isim + söz balonu).
 ##
-## İleride karakter sistemi (Dinozor, Kurt, Robot...) bu düğümün yerine
-## gerçek modeli koyacak. Şimdilik sadece masada üç kişinin oturduğu hissini
-## vermek ve koltuk konumlarını göstermek için var.
+## Hem yer tutucu (kapsül gövde) hem gerçek karakter sahneleri (ör. Dayı) bu
+## sınıfı kullanır; oyun yalnızca bu arayüzü bilir: set_info, get_hand_anchor,
+## say, hide_bubble. Karakterler yalnızca görseldir: oynayış, zorluk ve AI
+## karakterden bağımsızdır.
 ## Yerel -Z yönü masanın ortasına bakar.
 
 @export var display_name := "Rakip"
 @export var body_color := Color(0.5, 0.5, 0.5)
-
-@onready var _body: MeshInstance3D = $Body
-@onready var _head: MeshInstance3D = $Head
+## Yer tutucu gövdeyi `body_color` ile boyar. Kendi malzemeleri olan
+## karakterlerde kapalıdır.
+@export var apply_tint := true
 @onready var _name_label: Label3D = $NameLabel
 @onready var _hand_anchor: Marker3D = $HandAnchor
 @onready var _bubble: Label3D = $Bubble
@@ -20,14 +21,20 @@ var _bubble_tween: Tween
 
 
 func _ready() -> void:
+	_name_label.text = display_name
+	if not apply_tint:
+		return
+	var body := get_node_or_null("Body") as MeshInstance3D
+	var head := get_node_or_null("Head") as MeshInstance3D
+	if body == null or head == null:
+		return
 	var mat := StandardMaterial3D.new()
 	mat.albedo_color = body_color
 	mat.roughness = 0.8
-	_body.material_override = mat
+	body.material_override = mat
 	var head_mat := mat.duplicate() as StandardMaterial3D
 	head_mat.albedo_color = body_color.lightened(0.25)
-	_head.material_override = head_mat
-	_name_label.text = display_name
+	head.material_override = head_mat
 
 
 ## İsim plakasının ikinci satırı (ör. "2 el · 15 puan").

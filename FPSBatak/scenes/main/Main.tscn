@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3]
+[gd_scene load_steps=16 format=3]
 
 [ext_resource type="Script" path="res://scripts/main/main.gd" id="1_main"]
 [ext_resource type="PackedScene" path="res://scenes/table/Table.tscn" id="2_table"]
@@ -13,6 +13,7 @@
 [ext_resource type="Script" path="res://scripts/camera/menu_camera.gd" id="11_menucam"]
 [ext_resource type="Script" path="res://scripts/ui/main_menu.gd" id="12_menu"]
 [ext_resource type="PackedScene" path="res://scenes/environment/Coffeehouse.tscn" id="13_env"]
+[ext_resource type="PackedScene" path="res://scenes/characters/Dayi.tscn" id="14_dayi"]
 
 [sub_resource type="Environment" id="Env_kahvehane"]
 background_mode = 1
@@ -45,6 +46,9 @@ environment = SubResource("Env_kahvehane")
 [node name="Seats" type="Node3D" parent="."]
 script = ExtResource("10_seats")
 opponent_scene = ExtResource("3_opp")
+character_scenes = {
+2: ExtResource("14_dayi")
+}
 
 [node name="Seat0_South" type="Marker3D" parent="Seats"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.82)

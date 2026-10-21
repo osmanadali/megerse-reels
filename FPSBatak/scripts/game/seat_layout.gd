@@ -3,10 +3,13 @@ extends Node3D
 ## Koltukları oyuncu sayısına göre masanın etrafına dizer ve rakipleri oturtur.
 ##
 ## Seat0 (oyuncu ve kamera) sahnede sabittir; diğer koltuklar çalışma anında
-## eşit açılarla oluşturulur. Karakter sistemi geldiğinde burada
-## OpponentPlaceholder yerine seçilen karakterin sahnesi kullanılacak.
+## eşit açılarla oluşturulur. Her koltuk varsayılan sahneyi (yer tutucu) ya da
+## `character_scenes` içinde o koltuğa atanmış karakteri kullanır. Karakterler
+## yalnızca kozmetiktir; koltuğun AI'sı ve kuralları karakterden bağımsızdır.
 
 @export var opponent_scene: PackedScene
+## Koltuk numarası -> karakter sahnesi (OpponentPlaceholder arayüzünde).
+@export var character_scenes: Dictionary = {}
 ## Koltukların masa merkezine uzaklığı (m).
 @export var seat_radius := 1.0
 @export var opponent_names: Array[String] = ["Rakip 1", "Rakip 2", "Rakip 3"]
@@ -35,7 +38,8 @@ func build(player_count: int, table_center: Vector3) -> void:
 		var look := table_center
 		look.y = 0.0
 		seat.look_at(look, Vector3.UP)  # yerel -Z masaya baksın
-		var opp: OpponentPlaceholder = opponent_scene.instantiate()
+		var scene: PackedScene = character_scenes.get(i, opponent_scene)
+		var opp: OpponentPlaceholder = scene.instantiate()
 		opp.display_name = opponent_names[(i - 1) % opponent_names.size()]
 		opp.body_color = opponent_colors[(i - 1) % opponent_colors.size()]
 		seat.add_child(opp)
