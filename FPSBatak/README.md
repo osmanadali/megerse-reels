@@ -48,8 +48,10 @@ Akış: **el analizi** (`HandAnalysis`) → **beklenen löve** (`TrickEstimator`
 
 - Beklenen löve, el özelliklerinin (koz uzunluğu ve büyükleri, yan As/Papaz/Kız, K-Q dizisi,
   renk boşluğu, tek/iki kartlı renk, koz çakma potansiyeli, uzun yan renk) doğrusal birleşimidir.
-  Katsayılar elle verilmedi; `tools/ai/calibrate_bidding.gd` ile AI'lar birbirine karşı
-  oynatılarak ölçüldü (normal 40.000, gömmeli 24.000 el). Normal ve gömmeli için ayrı tablolar.
+  Katsayılar elle verilmedi; `tools/ai/calibrate_bidding.gd` ile oyundaki kart oynama AI'sı
+  (CardTracker + PlayPolicy) birbirine karşı oynatılarak ölçüldü. Normal: ihale kararının
+  verildiği bölgedeki 51.110 el (AI'nın seçeceği koz, tahmin ≥ 3); gömmeli: 24.000 el (4 koz).
+  Normal ve gömmeli için ayrı tablolar.
 - Gömmeli modda özellikler, AI'nın gömeceği 4 kart çıkarıldıktan sonraki elden hesaplanır.
 - Teklif: tutma olasılığı %60'ın üstünde kalan en yüksek seviyeye kadar, her seferinde
   yalnızca geçerli en küçük teklif. Herkes pas derse zorunlu ihaleyi zaten alacak oyuncu,

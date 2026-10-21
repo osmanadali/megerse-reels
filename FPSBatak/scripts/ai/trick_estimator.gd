@@ -7,10 +7,15 @@ extends RefCounted
 ## Katsayılar elle verilmedi; tools/ai/calibrate_bidding.gd ile oyundaki kart
 ## oynama AI'sı (CardTracker + PlayPolicy, NORMAL) birbirine karşı oynatılarak
 ## (en küçük kareler) ölçüldü:
-##   Normal İhaleli : 10.000 dağıtım × 4 koz = 40.000 el (tohum 1)
+##   Normal İhaleli : 60.000 dağıtım, yalnızca AI'nın seçeceği koz ve tahmini
+##                    ≥ 3 löve olan eller (ihale kararının verildiği bölge),
+##                    51.110 el (tohum 1; `-- standard 60000 1 best minmu=3`)
 ##   Gömmeli İhaleli:  6.000 dağıtım × 4 koz = 24.000 el (tohum 2)
 ## (İlk kalibrasyon eski bağlamsız kart oynamayla yapılmıştı; güncel AI daha
-## çok löve aldığı için yeniden kalibre edildi.)
+## çok löve aldığı için yeniden kalibre edildi. Normalde 4 kozun hepsiyle
+## yapılan fit, ihale bölgesinde löveyi ~0,3 eksik tahmin ettiği için karar
+## bölgesi seçildi. Gömmelide karar bölgesi fiti yüksek tekliflerde (9–10)
+## fazla iyimser çıktığından 4 kozlu fit korundu.)
 ## Ölçümde ihaleyi alan ilk löveyi açtığı için "ilk eli açma avantajı" sabit
 ## terimin içindedir.
 ##
@@ -24,12 +29,12 @@ extends RefCounted
 ## terimdedir. Gömmenin değeri yalnızca gömmeli modda uygulanır.
 
 ## Katsayılar HandAnalysis.FEATURE_NAMES sırasıyla.
-const COEF_STANDARD: Array[float] = [-0.5464, 0.4510, 0.9231, 0.6679, 0.4231, 0.2415, 0.9562,
-	0.6403, -0.0628, 0.2589, 0.9062, 0.5171, 0.1260, 0.1938, -0.0380]
+const COEF_STANDARD: Array[float] = [-1.6761, 0.6998, 0.9897, 0.8218, 0.5201, 0.3190, 0.9984,
+	0.6632, 0.0441, 0.2622, 1.5968, 0.9021, 0.3489, -0.1308, -0.0279]
 const COEF_BURIED: Array[float] = [1.3855, 0.4427, 0.7889, 0.5499, 0.3630, 0.1414, 0.9080,
 	0.7320, 0.1787, 0.3975, 0.5823, 0.3507, 0.1504, 0.2791, -0.0402]
 ## σ(μ) = a + b·μ
-const SIGMA_STANDARD := Vector2(0.8467, 0.0295)
+const SIGMA_STANDARD := Vector2(0.8699, 0.0063)
 const SIGMA_BURIED := Vector2(1.2769, 0.0510)
 
 
