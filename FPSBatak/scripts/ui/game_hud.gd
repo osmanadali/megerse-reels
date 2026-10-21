@@ -37,6 +37,9 @@ var _trump_panel: PanelContainer
 var _end_button: Button
 var _setup_panel: PanelContainer
 var _setup_settings: MatchSettings
+var _rounds_wrap: Control
+var _target_wrap: Control
+var _setup_note: Label
 var _match_panel: PanelContainer
 var _match_label: Label
 
@@ -240,11 +243,27 @@ func show_setup(current: MatchSettings) -> void:
 	_setup_settings = current
 	_setup_panel.visible = true
 	# Kayıtlı seçimleri butonlara yansıt.
-	var selected := {"RowMode": current.mode, "RowRounds": current.rounds,
-		"RowTarget": current.target_score}
+	var selected := {"RowMode": current.mode, "RowEnd": current.end_condition,
+		"RowRounds": current.rounds, "RowTarget": current.target_score}
 	for row in _setup_panel.find_children("Row*", "HBoxContainer", true, false):
 		for b: Button in row.get_children():
 			b.button_pressed = b.get_meta("value") == selected[row.name]
+	_update_end_rows()
+
+
+func _pick_end_condition(v: int) -> void:
+	_setup_settings.end_condition = v
+	_update_end_rows()
+
+
+## Oyun türüne göre yalnızca tur sayısı ya da yalnızca hedef puan seçeneklerini göster.
+func _update_end_rows() -> void:
+	var by_rounds := _setup_settings.end_condition == MatchSettings.EndCondition.ROUNDS
+	_rounds_wrap.visible = by_rounds
+	_target_wrap.visible = not by_rounds
+	_setup_note.text = "Seçilen tur sayısı oynanır; sonunda en yüksek puanlı kazanır." if by_rounds \
+		else "Tur sınırı yok; hedef puana ilk ulaşan kazanır."
+	_setup_panel.reset_size()  # gizlenen satır kadar küçül, ortada kal
 
 
 func _build_setup_panel() -> void:
@@ -266,13 +285,17 @@ func _build_setup_panel() -> void:
 		"%s\n%d kişi · ihale %d–%d" % [buried.display_name, buried.player_count,
 			buried.min_bid, buried.max_bid]],
 		Vector2(300, 84)))
-	box.add_child(_option_row("TUR SAYISI", "RowRounds", MatchSettings.ROUND_OPTIONS,
-		func(v: int): _setup_settings.rounds = v))
-	box.add_child(_option_row("HEDEF PUAN", "RowTarget", MatchSettings.TARGET_OPTIONS,
-		func(v: int): _setup_settings.target_score = v))
-	var note := _make_label(18, Color(TEXT, 0.7))
-	note.text = "Tur sayısı dolunca ya da biri hedef puana ulaşınca oyun biter."
-	box.add_child(note)
+	box.add_child(_option_row("OYUN TÜRÜ", "RowEnd",
+		[MatchSettings.EndCondition.ROUNDS, MatchSettings.EndCondition.TARGET],
+		_pick_end_condition, ["TUR SAYISI İLE", "HEDEF PUAN İLE"], Vector2(240, 60)))
+	_rounds_wrap = _option_row("TUR SAYISI", "RowRounds", MatchSettings.ROUND_OPTIONS,
+		func(v: int): _setup_settings.rounds = v)
+	box.add_child(_rounds_wrap)
+	_target_wrap = _option_row("HEDEF PUAN", "RowTarget", MatchSettings.TARGET_OPTIONS,
+		func(v: int): _setup_settings.target_score = v)
+	box.add_child(_target_wrap)
+	_setup_note = _make_label(18, Color(TEXT, 0.7))
+	box.add_child(_setup_note)
 	box.add_child(_make_button("MASAYA OTUR", _on_setup_confirmed, Vector2(340, 72)))
 	add_child(_setup_panel)
 

@@ -3,8 +3,9 @@ extends Node
 ##
 ## Kullanım (başsız, hızlandırılmış):
 ##   godot --headless --path FPSBatak -- --autoplay \
-##       --validate=standard:5:101,buried:11:51 [--expect-saved-mode=buried]
-## Her girdi "mod:tur:hedef"tir; maçlar sırayla oynanır (aralarında mod değişir).
+##       --validate=standard:tur:5,buried:hedef:51 [--expect-saved-mode=buried]
+## Her girdi "mod:tur:N" (N tur oyna) veya "mod:hedef:N" (N puana ulaşan kazanır);
+## maçlar sırayla oynanır (aralarında mod değişir).
 ## Son maçtan sonra rapor yazar ve hata sayısını çıkış koduyla bildirir.
 ## Normal oyunda bu düğüm hiç oluşturulmaz.
 
@@ -32,9 +33,12 @@ func setup(controller: TableController, plan_arg: String) -> void:
 	c = controller
 	for entry in plan_arg.split(","):
 		var p := entry.split(":")
+		var by_rounds := p[1] == "tur"
 		_plan.append({
 			"mode": GameRules.Mode.STANDARD_BIDDING if p[0] == "standard" else GameRules.Mode.BURIED_BIDDING,
-			"rounds": int(p[1]), "target": int(p[2]),
+			"end": MatchSettings.EndCondition.ROUNDS if by_rounds else MatchSettings.EndCondition.TARGET,
+			"rounds": int(p[2]) if by_rounds else 7,
+			"target": 71 if by_rounds else int(p[2]),
 		})
 	Engine.time_scale = TIME_SCALE
 	_check_saved_mode_on_start()
@@ -70,6 +74,7 @@ func _check_saved_mode_on_start() -> void:
 func _save_plan_entry(i: int) -> void:
 	var s := MatchSettings.new()
 	s.mode = _plan[i].mode
+	s.end_condition = _plan[i].end
 	s.rounds = _plan[i].rounds
 	s.target_score = _plan[i].target
 	s.save()  # tur/hedef, ayar ekranındaki seçeneklerden biri olmalı (5/7/9/11, 51/71/91/101)
@@ -225,12 +230,16 @@ func _on_match_finished(winners: Array[int]) -> void:
 	var e := _plan_entry()
 	var totals := c.scores.totals
 	check(_match_over_seen, "maç bitme koşulu sağlanmadan bitti")
-	check(c.rounds_played <= e.rounds, "maç tur sayısını aştı")
-	if c.rounds_played < e.rounds:
-		check(totals.max() >= e.target, "tur dolmadan bitti ama hedef skora ulaşılmadı")
+	check(c.settings.end_condition == e.end, "yanlış oyun türü")
+	if e.end == MatchSettings.EndCondition.ROUNDS:
+		check(c.rounds_played == e.rounds, "tur oyunu %d turda bitti, beklenen %d" % [c.rounds_played, e.rounds])
+	else:
+		check(totals.max() >= e.target, "hedef oyunu hedefe ulaşılmadan bitti")
 	check(winners == MatchSettings.winners(totals), "kazanan yanlış")
-	_log.append("MAÇ %d (%s) bitti: %d tur, toplam %s, hedef %d, kazanan %s" % [_match_index + 1,
-		c.rules.display_name, c.rounds_played, totals, e.target, winners])
+	var kind := "%d tur oyunu" % e.rounds if e.end == MatchSettings.EndCondition.ROUNDS \
+		else "%d hedef oyunu" % e.target
+	_log.append("MAÇ %d (%s, %s) bitti: %d tur oynandı, toplam %s, kazanan %s" % [_match_index + 1,
+		c.rules.display_name, kind, c.rounds_played, totals, winners])
 	_match_over_seen = false
 	_match_index += 1
 	if _match_index < _plan.size():

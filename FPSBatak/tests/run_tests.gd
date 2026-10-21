@@ -258,13 +258,23 @@ func test_ai_bid_trump_bury() -> void:
 
 func test_match_end() -> void:
 	var m := MatchSettings.new()
+	m.end_condition = MatchSettings.EndCondition.ROUNDS
 	m.rounds = 5
 	m.target_score = 51
 	var low: Array[int] = [10, 20, 5]
-	check(not m.is_match_over(4, low), "4/5 el, hedef yok: devam")
-	check(m.is_match_over(5, low), "5/5 el: maç biter")
+	check(not m.is_match_over(4, low), "tur oyunu: 4/5 tur, devam")
+	check(m.is_match_over(5, low), "tur oyunu: 5/5 tur, maç biter")
 	var high: Array[int] = [10, 51, 5]
-	check(m.is_match_over(2, high), "hedef puana ulaşan maçı bitirir")
+	check(not m.is_match_over(2, high), "tur oyunu: 51'e ulaşmak maçı bitirmez")
+	check(not m.is_match_over(4, [10, 80, 5] as Array[int]), "tur oyunu: puan ne olursa olsun turlar oynanır")
+	var t := MatchSettings.new()
+	t.end_condition = MatchSettings.EndCondition.TARGET
+	t.rounds = 5
+	t.target_score = 51
+	check(not t.is_match_over(5, low), "hedef oyunu: 5 tur oynandı ama hedefe ulaşılmadı, devam")
+	check(not t.is_match_over(30, [50, -10, 49] as Array[int]), "hedef oyunu: tur sınırı yok")
+	check(t.is_match_over(2, high), "hedef oyunu: hedefe ulaşan maçı bitirir")
+	check(MatchSettings.winners([52, 60, 10] as Array[int]) == [1], "hedef oyunu: aynı turda ikisi geçerse en yüksek kazanır")
 	check(MatchSettings.winners(high) == [1], "en yüksek puan kazanır")
 	var tie: Array[int] = [30, 30, -7]
 	check(MatchSettings.winners(tie) == [0, 1], "eşitlikte berabere")
@@ -420,10 +430,13 @@ func test_mode_persists_across_restart() -> void:
 		s.mode = m
 		s.rounds = 9
 		s.target_score = 91
+		s.end_condition = MatchSettings.EndCondition.TARGET if m == GameRules.Mode.STANDARD_BIDDING \
+			else MatchSettings.EndCondition.ROUNDS
 		s.save()
 		var loaded := MatchSettings.load_saved()
 		check(loaded.mode == m and loaded.rounds == 9 and loaded.target_score == 91,
 			"kayıtlı mod/tur/hedef yeniden açılışta aynı (%d)" % m)
+		check(loaded.end_condition == s.end_condition, "kayıtlı oyun türü (tur/hedef) yeniden açılışta aynı")
 		check(GameRules.for_mode(loaded.mode).mode == m, "kayıtlı moddan doğru kural seti")
 	if backup.is_empty():
 		DirAccess.remove_absolute(path)

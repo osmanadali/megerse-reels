@@ -240,13 +240,16 @@ func _show_match_end(last_round_summary: String) -> void:
 		hud.new_game_requested.emit()
 
 
-## Geliştirme: `--rounds=N --target=M --mode=standard|buried` ile ayar panelini atlamak için.
+## Geliştirme: `--rounds=N` (tur oyunu) / `--target=M` (hedef oyunu) ve
+## `--mode=standard|buried` ile ayar panelini atlamak için.
 static func _apply_dev_args(s: MatchSettings) -> void:
 	for arg in OS.get_cmdline_user_args():
 		if arg.begins_with("--rounds="):
 			s.rounds = int(arg.trim_prefix("--rounds="))
+			s.end_condition = MatchSettings.EndCondition.ROUNDS
 		elif arg.begins_with("--target="):
 			s.target_score = int(arg.trim_prefix("--target="))
+			s.end_condition = MatchSettings.EndCondition.TARGET
 		elif arg == "--mode=standard":
 			s.mode = GameRules.Mode.STANDARD_BIDDING
 		elif arg == "--mode=buried":
@@ -527,8 +530,10 @@ func _spawn_card(card: CardData, world_transform: Transform3D) -> Card3D:
 
 
 func _refresh_info() -> void:
-	var header := "%s   ·   TUR %d / %d   ·   HEDEF %d" % [rules.display_name,
-		min(rounds_played + 1, settings.rounds), settings.rounds, settings.target_score]
+	var progress := "TUR %d / %d" % [rounds_played + 1, settings.rounds] \
+		if settings.end_condition == MatchSettings.EndCondition.ROUNDS \
+		else "TUR %d   ·   HEDEF %d" % [rounds_played + 1, settings.target_score]
+	var header := "%s   ·   %s" % [rules.display_name, progress]
 	var bidder_name := "" if bidder == NO_SEAT else _seat_names[bidder]
 	hud.update_info(header, bidder_name, bid, trump, tricks_won[Seat.LOCAL_PLAYER],
 		scores.totals[Seat.LOCAL_PLAYER])
