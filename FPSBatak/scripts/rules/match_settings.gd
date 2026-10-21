@@ -11,6 +11,7 @@ const TARGET_OPTIONS: Array[int] = [51, 71, 91, 101]
 const SAVE_PATH := "user://settings.cfg"
 const SECTION := "match"
 
+@export var mode := GameRules.Mode.BURIED_BIDDING
 @export var rounds := 7
 @export var target_score := 71
 
@@ -33,6 +34,7 @@ static func winners(totals: Array[int]) -> Array[int]:
 func save() -> void:
 	var cfg := ConfigFile.new()
 	cfg.load(SAVE_PATH)  # varsa diğer bölümleri koru
+	cfg.set_value(SECTION, "mode", mode)
 	cfg.set_value(SECTION, "rounds", rounds)
 	cfg.set_value(SECTION, "target_score", target_score)
 	cfg.save(SAVE_PATH)
@@ -49,4 +51,7 @@ static func load_saved() -> MatchSettings:
 			s.rounds = r
 		if TARGET_OPTIONS.has(t):
 			s.target_score = t
+		var m: int = cfg.get_value(SECTION, "mode", s.mode)
+		if GameRules.Mode.values().has(m):
+			s.mode = m
 	return s

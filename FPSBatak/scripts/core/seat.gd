@@ -15,8 +15,15 @@ static func next(seat: int, count: int) -> int:
 	return (seat + 1) % count
 
 
+## 4 kişide yan rakipler tam 90°'de otursa kameranın görüş alanından taşar;
+## bu yüzden biraz öne (karşıya doğru) alınırlar. Sıra ve yön değişmez.
+const FOUR_PLAYER_ANGLES_DEG := [0.0, 112.0, 180.0, 248.0]
+
+
 ## Koltuğun masa merkezine göre yönü (radyan). 0 = oyuncu (+Z), artan açı sağa.
 static func angle(seat: int, count: int) -> float:
+	if count == 4:
+		return deg_to_rad(FOUR_PLAYER_ANGLES_DEG[seat])
 	return TAU * seat / count
 
 

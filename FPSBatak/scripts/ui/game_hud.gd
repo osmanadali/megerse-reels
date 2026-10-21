@@ -22,6 +22,7 @@ var _theme: Theme
 var _turn_banner: Label
 var _status: Label
 var _info: Label
+var _my_info: Label
 var _end_panel: PanelContainer
 var _end_label: Label
 var _bid_panel: PanelContainer
@@ -57,13 +58,23 @@ func _ready() -> void:
 	_place_above_hand(_status, 900, 34)
 	add_child(_status)
 
+	# Üstte tek ince satır: tur, hedef, ihale, koz. Rakiplerin el/puanı
+	# masada kendi isim plakalarında, oyuncununki sol altta gösterilir.
 	_info = _make_label(20, TEXT)
-	# Üst orta: rakiplerin isimleriyle çakışmayan boş alan (pencere).
 	_info.set_anchors_and_offsets_preset(Control.PRESET_CENTER_TOP)
-	_info.offset_left = -260
-	_info.offset_right = 260
-	_info.offset_top = 14
+	_info.offset_left = -500
+	_info.offset_right = 500
+	_info.offset_top = 6
 	add_child(_info)
+	_my_info = _make_label(22, GOLD)
+	_my_info.horizontal_alignment = HORIZONTAL_ALIGNMENT_LEFT
+	_my_info.set_anchors_and_offsets_preset(Control.PRESET_BOTTOM_LEFT)
+	_my_info.offset_left = 24
+	_my_info.offset_right = 400
+	var vp_h := get_viewport().get_visible_rect().size.y
+	_my_info.offset_top = -vp_h * (1.0 - ACTION_BOTTOM_RATIO) - 8
+	_my_info.offset_bottom = _my_info.offset_top + 30
+	add_child(_my_info)
 
 	_build_bid_panel()
 	_build_bury_panel()
@@ -84,17 +95,16 @@ func show_status(text: String) -> void:
 
 
 ## Üst ortadaki bilgi: tur/hedef, ihale, koz, alınan eller ve toplam puan.
-func update_info(header: String, names: Array, tricks: Array, totals: Array, bidder: int, bid: int,
-		trump: int) -> void:
-	var lines: PackedStringArray = [header]
-	if bidder >= 0:
-		lines.append("İHALE: %s — %d" % [names[bidder], bid])
+## Üst satır (tur/hedef/ihale/koz) ve oyuncunun kendi el/puan bilgisi.
+func update_info(header: String, bidder_name: String, bid: int, trump: int, my_tricks: int,
+		my_total: int) -> void:
+	var parts: PackedStringArray = [header]
+	if not bidder_name.is_empty():
+		parts.append("İHALE: %s %d" % [bidder_name, bid])
 	if trump >= 0:
-		lines.append("KOZ: %s %s" % [CardData.SUIT_SYMBOLS[trump], CardData.SUIT_NAMES_TR[trump]])
-	lines.append("")
-	for i in names.size():
-		lines.append("%s   el %d   puan %d" % [names[i], tricks[i], totals[i]])
-	_info.text = "\n".join(lines)
+		parts.append("KOZ: %s %s" % [CardData.SUIT_SYMBOLS[trump], CardData.SUIT_NAMES_TR[trump]])
+	_info.text = "   ·   ".join(parts)
+	_my_info.text = "SEN   %d el   ·   %d puan" % [my_tricks, my_total]
 
 
 # --- İhale ---------------------------------------------------------------------
@@ -225,10 +235,11 @@ func show_setup(current: MatchSettings) -> void:
 	_setup_settings = current
 	_setup_panel.visible = true
 	# Kayıtlı seçimleri butonlara yansıt.
+	var selected := {"RowMode": current.mode, "RowRounds": current.rounds,
+		"RowTarget": current.target_score}
 	for row in _setup_panel.find_children("Row*", "HBoxContainer", true, false):
 		for b: Button in row.get_children():
-			b.button_pressed = b.get_meta("value") == (
-				current.rounds if row.name == "RowRounds" else current.target_score)
+			b.button_pressed = b.get_meta("value") == selected[row.name]
 
 
 func _build_setup_panel() -> void:
@@ -240,6 +251,16 @@ func _build_setup_panel() -> void:
 	var title := _make_label(44, GOLD)
 	title.text = "MASA AYARLARI"
 	box.add_child(title)
+	var standard := GameRules.standard_bidding()
+	var buried := GameRules.buried_bidding()
+	box.add_child(_option_row("OYUN MODU", "RowMode",
+		[GameRules.Mode.STANDARD_BIDDING, GameRules.Mode.BURIED_BIDDING],
+		func(v: int): _setup_settings.mode = v,
+		["%s\n%d kişi · ihale %d–%d" % [standard.display_name, standard.player_count,
+			standard.min_bid, standard.max_bid],
+		"%s\n%d kişi · ihale %d–%d" % [buried.display_name, buried.player_count,
+			buried.min_bid, buried.max_bid]],
+		Vector2(300, 84)))
 	box.add_child(_option_row("TUR SAYISI", "RowRounds", MatchSettings.ROUND_OPTIONS,
 		func(v: int): _setup_settings.rounds = v))
 	box.add_child(_option_row("HEDEF PUAN", "RowTarget", MatchSettings.TARGET_OPTIONS,
@@ -257,8 +278,9 @@ func _on_setup_confirmed() -> void:
 	start_requested.emit(_setup_settings)
 
 
-## Başlık + tek seçimli buton satırı.
-func _option_row(caption: String, row_name: String, values: Array[int], on_pick: Callable) -> VBoxContainer:
+## Başlık + tek seçimli buton satırı. `labels` verilmezse değerler yazılır.
+func _option_row(caption: String, row_name: String, values: Array, on_pick: Callable,
+		labels: Array = [], button_size := Vector2(96, 60)) -> VBoxContainer:
 	var wrap := VBoxContainer.new()
 	wrap.add_theme_constant_override("separation", 6)
 	var label := _make_label(22, GOLD)
@@ -269,8 +291,12 @@ func _option_row(caption: String, row_name: String, values: Array[int], on_pick:
 	row.alignment = BoxContainer.ALIGNMENT_CENTER
 	row.add_theme_constant_override("separation", 10)
 	var group := ButtonGroup.new()
-	for v in values:
-		var b := _make_button(str(v), func(): on_pick.call(v), Vector2(96, 60))
+	for i in values.size():
+		var v: int = values[i]
+		var text: String = labels[i] if i < labels.size() else str(v)
+		var b := _make_button(text, func(): on_pick.call(v), button_size)
+		if not labels.is_empty():
+			b.add_theme_font_size_override("font_size", 22)
 		b.toggle_mode = true
 		b.button_group = group
 		b.set_meta("value", v)

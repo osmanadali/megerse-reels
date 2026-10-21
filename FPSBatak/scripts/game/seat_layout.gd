@@ -17,9 +17,14 @@ var _seats: Array[Node3D] = []
 var _opponents := {}  # koltuk -> OpponentPlaceholder
 
 
-## Koltukları kurar. `table_center` masanın dünya konumu.
+## Koltukları kurar (önceki kurulum varsa kaldırılır). `table_center` masanın
+## dünya konumu.
 func build(player_count: int, table_center: Vector3) -> void:
-	_seats = [get_child(0)]  # Seat0_South
+	for old in get_children().slice(1):  # Seat0_South (oyuncu + kamera) kalır
+		remove_child(old)
+		old.queue_free()
+	_opponents.clear()
+	_seats = [get_child(0)]
 	for i in range(1, player_count):
 		var seat := Marker3D.new()
 		seat.name = "Seat%d" % i

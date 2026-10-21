@@ -25,6 +25,18 @@ func _init() -> void:
 	test_ai_bid_trump_bury()
 	test_match_end()
 	test_player_stats()
+	test_buried_mode_unchanged()
+	# Normal İhaleli (4 kişi)
+	test_std_deal_13_each()
+	test_std_min_bid_5()
+	test_std_max_bid_13()
+	test_std_rejects_below_5()
+	test_std_rejects_above_13()
+	test_std_pass_is_final()
+	test_std_must_outbid()
+	test_std_all_pass_gives_4_to_dealer_right()
+	test_std_winner_chooses_trump()
+	test_std_starts_with_52_cards()
 	print("\n%d kontrol, %d hata" % [_checks, _failures])
 	quit(1 if _failures > 0 else 0)
 
@@ -176,12 +188,12 @@ func test_ai_uses_only_legal_cards() -> void:
 
 
 func test_rules_presets() -> void:
-	check(GameRules.three_player_gommeli().is_valid(), "3 kişi gömmeli kural seti tutarlı")
-	check(GameRules.four_player_ihaleli().is_valid(), "4 kişi ihaleli kural seti tutarlı")
+	check(GameRules.buried_bidding().is_valid(), "3 kişi gömmeli kural seti tutarlı")
+	check(GameRules.standard_bidding().is_valid(), "4 kişi ihaleli kural seti tutarlı")
 
 
 func test_three_player_deal() -> void:
-	var rules := GameRules.three_player_gommeli()
+	var rules := GameRules.buried_bidding()
 	var d := DeckManager.new(11)
 	d.shuffle()
 	var hands := d.deal(rules.player_count, rules.cards_per_player)
@@ -198,7 +210,7 @@ func test_three_player_deal() -> void:
 
 
 func test_bidding_flow() -> void:
-	var bm := BidManager.new(GameRules.three_player_gommeli(), 2)  # dağıtan 2 → ilk konuşan 0
+	var bm := BidManager.new(GameRules.buried_bidding(), 2)  # dağıtan 2 → ilk konuşan 0
 	check(bm.current_seat() == 0, "ihaleyi dağıtanın sağındaki açar")
 	check(bm.valid_bids()[0] == 7 and bm.valid_bids()[-1] == 16, "ihale aralığı 7..16")
 	bm.bid(7)
@@ -211,10 +223,10 @@ func test_bidding_flow() -> void:
 
 
 func test_bidding_all_pass() -> void:
-	var bm := BidManager.new(GameRules.three_player_gommeli(), 1)
+	var bm := BidManager.new(GameRules.buried_bidding(), 1)
 	bm.pass_turn(); bm.pass_turn(); bm.pass_turn()
 	check(bm.is_finished() and bm.current_holder == 2 and bm.current_bid == 7, "herkes pas: dağıtanın yanındaki 7 ile alır")
-	var top := BidManager.new(GameRules.three_player_gommeli(), 0)
+	var top := BidManager.new(GameRules.buried_bidding(), 0)
 	top.bid(16)
 	check(top.is_finished() and top.current_holder == 1, "16 (en yüksek) ihaleyi hemen bitirir")
 
@@ -273,3 +285,126 @@ func test_player_stats() -> void:
 	check(again.matches_played == 1 and again.matches_won == 1 and again.best_match_score == 42, "maç kaydı kalıcı")
 	check(again.summary_lines()[3].contains("%50"), "ihale başarı oranı")
 	DirAccess.remove_absolute(ProjectSettings.globalize_path(path))
+
+
+# --- Gömmeli İhaleli kurallarının korunduğu --------------------------------------
+
+func test_buried_mode_unchanged() -> void:
+	var r := GameRules.buried_bidding()
+	check(r.mode == GameRules.Mode.BURIED_BIDDING and r.player_count == 3, "gömmeli: 3 oyuncu")
+	check(r.cards_per_player == 16 and r.buried_cards == 4, "gömmeli: 16 kart + 4 kapalı")
+	check(r.min_bid == 7 and r.max_bid == 16 and r.all_pass_bid == 7, "gömmeli: ihale 7..16, zorunlu 7")
+	check(r.phases_after_bid() == [GameRules.PHASE_BURY, GameRules.PHASE_TRUMP, GameRules.PHASE_TAKE_KITTY],
+		"gömmeli: göm → koz → yeri al")
+
+
+# --- Normal İhaleli (4 kişi) -----------------------------------------------------
+
+## Dağıtan 3 → dağıtanın sağındaki (ilk konuşan) 0.
+func std_bm(dealer := 3) -> BidManager:
+	return BidManager.new(GameRules.standard_bidding(), dealer)
+
+
+func test_std_deal_13_each() -> void:
+	var r := GameRules.standard_bidding()
+	var d := DeckManager.new(21)
+	d.shuffle()
+	var hands := d.deal(r.player_count, r.cards_per_player)
+	check(r.player_count == 4 and hands.size() == 4, "normal: 4 oyuncu")
+	check(hands.all(func(h): return h.size() == 13), "normal: her oyuncuya 13 kart")
+	check(d.take_remaining().is_empty() and r.buried_cards == 0, "normal: ortada kapalı kart yok, gömme yok")
+
+
+func test_std_min_bid_5() -> void:
+	var bm := std_bm()
+	check(GameRules.standard_bidding().min_bid == 5, "normal: kuralda en az 5")
+	check(bm.valid_bids()[0] == 5, "normal: ilk geçerli teklif 5")
+	check(bm.bid(5) and bm.current_bid == 5, "normal: 5 kabul edilir")
+
+
+func test_std_max_bid_13() -> void:
+	var bm := std_bm()
+	check(GameRules.standard_bidding().max_bid == 13, "normal: kuralda en çok 13")
+	check(bm.valid_bids()[-1] == 13, "normal: son geçerli teklif 13")
+	check(bm.bid(13) and bm.is_finished() and bm.current_holder == 0, "normal: 13 en yüksek, ihaleyi bitirir")
+
+
+func test_std_rejects_below_5() -> void:
+	var bm := std_bm()
+	for low in [0, 1, 4]:
+		check(not bm.bid(low), "normal: %d reddedilir" % low)
+	check(bm.current_bid == 0 and bm.current_seat() == 0 and not bm.is_finished(), "normal: red durumu değiştirmez")
+
+
+func test_std_rejects_above_13() -> void:
+	var bm := std_bm()
+	check(not bm.bid(14) and not bm.bid(52), "normal: 13'ten büyük reddedilir")
+	check(bm.current_bid == 0 and bm.current_seat() == 0, "normal: red durumu değiştirmez")
+
+
+func test_std_pass_is_final() -> void:
+	var bm := std_bm()
+	bm.pass_turn()          # 0 pas
+	bm.bid(6)               # 1
+	bm.bid(7)               # 2
+	bm.bid(8)               # 3
+	check(bm.has_passed(0) and bm.current_seat() == 1, "normal: pas diyen 0 atlanır, sıra 1'de")
+	bm.bid(9)               # 1
+	check(bm.current_seat() == 2, "normal: 0 tekrar ihaleye giremez")
+	bm.pass_turn(); bm.pass_turn()
+	check(bm.is_finished() and bm.current_holder == 1 and bm.current_bid == 9, "normal: ihale 1'de 9")
+
+
+func test_std_must_outbid() -> void:
+	var bm := std_bm()
+	bm.bid(7)
+	check(not bm.bid(7) and not bm.bid(6), "normal: eşit veya düşük teklif reddedilir")
+	check(bm.valid_bids()[0] == 8, "normal: sıradaki en az 8 demeli")
+	check(bm.bid(8) and bm.current_holder == 1, "normal: daha yüksek teklif kabul")
+
+
+func test_std_all_pass_gives_4_to_dealer_right() -> void:
+	for dealer in 4:
+		var bm := std_bm(dealer)
+		for i in 4:
+			bm.pass_turn()
+		var right := BidManager.dealer_right(dealer, 4)
+		check(bm.is_finished() and bm.forced, "normal: herkes pas → yeni tur yok (dağıtan %d)" % dealer)
+		check(bm.current_holder == right and bm.current_bid == 4,
+			"normal: ihale 4 ile dağıtanın sağındakine (dağıtan %d → %d)" % [dealer, right])
+	# İlk konuşan (dağıtanın sağındaki) pas dese de diğer üçü pas deyince ihale yine ona 4 ile kalır.
+	var bm2 := std_bm(3)
+	bm2.pass_turn(); bm2.pass_turn(); bm2.pass_turn(); bm2.pass_turn()
+	check(bm2.current_holder == 0 and bm2.current_bid == 4, "normal: dağıtan 3 → zorunlu ihale 0'da 4")
+
+
+func test_std_winner_chooses_trump() -> void:
+	var r := GameRules.standard_bidding()
+	check(r.phases_after_bid() == [GameRules.PHASE_TRUMP], "normal: ihaleden sonra yalnızca koz seçimi")
+	var d := DeckManager.new(5)
+	d.shuffle()
+	var hands := d.deal(4, 13)
+	var bm := BidManager.new(r, 3)
+	bm.bid(5); bm.pass_turn(); bm.pass_turn(); bm.pass_turn()
+	var winner := bm.current_holder
+	var trump := AIPlayer.choose_trump(hands[winner])
+	check(CardData.Suit.values().has(trump), "normal: ihaleyi alan geçerli bir koz seçer")
+	# Seçilen koz kurallarda kullanılır: kazanan oyun açar, koz kırılmadan koz açamaz.
+	var legal := BatakRules.legal_cards(hands[winner], [], trump, false)
+	var non_trump: Array = hands[winner].filter(func(c): return c.suit != trump)
+	check(non_trump.is_empty() or legal.all(func(c): return c.suit != trump), "normal: koz kurala işler")
+
+
+func test_std_starts_with_52_cards() -> void:
+	var r := GameRules.standard_bidding()
+	check(r.is_valid(), "normal: kural seti tutarlı")
+	check(r.player_count * r.cards_per_player + r.buried_cards == 52, "normal: 4 x 13 = 52")
+	var d := DeckManager.new(9)
+	check(d.cards_remaining() == 52, "normal: oyun 52 kartla başlar")
+	d.shuffle()
+	var hands := d.deal(r.player_count, r.cards_per_player)
+	var ids := {}
+	for h in hands:
+		for card in h:
+			ids[card.get_id()] = true
+	check(ids.size() == 52 and d.cards_remaining() == 0, "normal: 52 kartın hepsi dağıtılır")

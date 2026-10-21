@@ -82,9 +82,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.045, 0.02, -0.115)
 mesh = SubResource("Mesh_eye")
 
 [node name="NameLabel" type="Label3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.49, 0.04)
-pixel_size = 0.0013
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.83, -0.4)
+pixel_size = 0.0009
 billboard = 1
+no_depth_test = true
 modulate = Color(1, 0.86, 0.55, 1)
 outline_modulate = Color(0, 0, 0, 0.8)
 text = "Rakip"

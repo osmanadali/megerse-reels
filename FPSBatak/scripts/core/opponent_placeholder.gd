@@ -30,6 +30,11 @@ func _ready() -> void:
 	_name_label.text = display_name
 
 
+## İsim plakasının ikinci satırı (ör. "2 el · 15 puan").
+func set_info(line: String) -> void:
+	_name_label.text = display_name if line.is_empty() else "%s\n%s" % [display_name, line]
+
+
 ## Karakterin kartları tuttuğu nokta. Yerel +Z karaktere doğru bakar.
 func get_hand_anchor() -> Node3D:
 	return _hand_anchor

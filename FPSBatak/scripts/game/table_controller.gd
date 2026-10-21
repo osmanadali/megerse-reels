@@ -37,7 +37,9 @@ const NO_SEAT := -1
 @export var sfx: Sfx
 @export var ai_difficulty := AIPlayer.Difficulty.NORMAL
 
-var rules := GameRules.three_player_gommeli()
+## Oynanan modun kuralları (Normal İhaleli / Gömmeli İhaleli). Maç başında
+## seçilen moda göre değişir.
+var rules: GameRules
 var settings: MatchSettings
 var rounds_played := 0
 var deck := DeckManager.new()
@@ -65,10 +67,11 @@ var _autoplay_ai := AIPlayer.new(Seat.LOCAL_PLAYER)
 
 
 func _ready() -> void:
-	assert(rules.is_valid(), "Kural seti tutarsız")
-	_n = rules.player_count
-	scores = ScoreManager.new(_n)
-	_setup_table()
+	_table_cards = Node3D.new()
+	_table_cards.name = "TableCards"
+	add_child(_table_cards)
+	# Menü arka planında da son seçilen modun masası görünsün.
+	_apply_rules(GameRules.for_mode(MatchSettings.load_saved().mode))
 	hud.next_round_requested.connect(_on_next_round)
 	hud.start_requested.connect(_start_match)
 	hud.new_game_requested.connect(_show_setup)
@@ -96,16 +99,27 @@ func _show_setup() -> void:
 
 func _start_match(s: MatchSettings) -> void:
 	settings = s
+	if rules.mode != s.mode:
+		_apply_rules(GameRules.for_mode(s.mode))
 	scores = ScoreManager.new(_n)
 	rounds_played = 0
 	dealer = _n - 1  # ilk elde ihaleyi oyuncu açsın
 	_play_round()
 
 
-func _setup_table() -> void:
+## Kural setini uygular: oyuncu sayısına göre koltukları, rakipleri ve
+## masa yerleşimini (yeniden) kurar.
+func _apply_rules(r: GameRules) -> void:
+	assert(r.is_valid(), "Kural seti tutarsız")
+	rules = r
+	_n = rules.player_count
+	scores = ScoreManager.new(_n)
 	var center: Vector3 = table.get_node("PlayArea").global_position
 	_layout = TableLayout.new(center, _n)
 	seats_root.build(_n, center)
+	_seat_names.clear()
+	_ai.clear()
+	_opponent_hands.clear()
 	for i in _n:
 		var opp := seats_root.get_opponent(i)
 		if opp == null:
@@ -116,9 +130,6 @@ func _setup_table() -> void:
 		opp.get_hand_anchor().add_child(view)
 		_opponent_hands[i] = view
 		_ai[i] = AIPlayer.new(i, ai_difficulty)
-	_table_cards = Node3D.new()
-	_table_cards.name = "TableCards"
-	add_child(_table_cards)
 
 
 func _play_round() -> void:
@@ -137,21 +148,20 @@ func _play_round() -> void:
 
 	hud.show_status("Kartlar dağıtılıyor…")
 	await _deal_animated()
-	if not await _run_bidding():
-		hud.show_status("Herkes pas dedi, yeniden dağıtılıyor…")
-		await _wait(1.2)
-		dealer = Seat.next(dealer, _n)
-		_play_round()
-		return
+	await _run_bidding()
 	_refresh_info()
-	# Gömmeli batak sırası: önce elden göm, kozu söyle, sonra yeri alıp aç.
+	# İhaleden sonraki aşamalar moda göre: Normal İhaleli'de yalnızca koz;
+	# Gömmeli'de önce elden göm, kozu söyle, sonra yeri al.
 	var ai_trump := AIPlayer.choose_trump(hands[bidder])  # AI kozunu gömmeden önce belirler
-	if rules.kitty_size > 0:
-		await _bury(ai_trump)
-	await _choose_trump(ai_trump)
-	_refresh_info()
-	if rules.kitty_size > 0:
-		await _take_kitty()
+	for phase in rules.phases_after_bid():
+		match phase:
+			GameRules.PHASE_BURY:
+				await _bury(ai_trump)
+			GameRules.PHASE_TRUMP:
+				await _choose_trump(ai_trump)
+				_refresh_info()
+			GameRules.PHASE_TAKE_KITTY:
+				await _take_kitty()
 
 	var leader := bidder
 	for trick_no in rules.cards_per_player:
@@ -215,13 +225,17 @@ func _show_match_end(last_round_summary: String) -> void:
 		hud.new_game_requested.emit()
 
 
-## Geliştirme: `--rounds=N --target=M` ile ayar panelini atlamak için.
+## Geliştirme: `--rounds=N --target=M --mode=standard|buried` ile ayar panelini atlamak için.
 static func _apply_dev_args(s: MatchSettings) -> void:
 	for arg in OS.get_cmdline_user_args():
 		if arg.begins_with("--rounds="):
 			s.rounds = int(arg.trim_prefix("--rounds="))
 		elif arg.begins_with("--target="):
 			s.target_score = int(arg.trim_prefix("--target="))
+		elif arg == "--mode=standard":
+			s.mode = GameRules.Mode.STANDARD_BIDDING
+		elif arg == "--mode=buried":
+			s.mode = GameRules.Mode.BURIED_BIDDING
 
 
 # --- Dağıtım -----------------------------------------------------------------
@@ -285,8 +299,8 @@ func _make_deck_stack(pos: Vector3) -> Node3D:
 
 # --- İhale ---------------------------------------------------------------------
 
-## İhale turunu oynatır. Kimse almazsa (ve kural zorlamıyorsa) false döner.
-func _run_bidding() -> bool:
+## İhale turunu oynatır. Herkes pas derse ihale kurala göre zorunlu verilir.
+func _run_bidding() -> void:
 	var bm := BidManager.new(rules, dealer)
 	while not bm.is_finished():
 		var seat := bm.current_seat()
@@ -297,30 +311,26 @@ func _run_bidding() -> bool:
 				else "En yüksek: %s — %d" % [_seat_names[bm.current_holder], bm.current_bid]
 			if _autoplay:
 				await _wait(AI_THINK_MAX)
-				choice = _autoplay_ai.choose_bid(hands[seat], bm.valid_bids(), rules.kitty_size)
+				choice = _autoplay_ai.choose_bid(hands[seat], bm.valid_bids(), rules.buried_cards)
 			else:
 				hud.show_bidding(bm.valid_bids(), current)
 				choice = await hud.bid_chosen
 		else:
 			hud.show_status("%s düşünüyor…" % _seat_names[seat])
 			await _wait(randf_range(AI_THINK_MIN, AI_THINK_MAX))
-			choice = _ai[seat].choose_bid(hands[seat], bm.valid_bids(), rules.kitty_size)
-		if choice == BidManager.PASS:
+			choice = _ai[seat].choose_bid(hands[seat], bm.valid_bids(), rules.buried_cards)
+		if choice == BidManager.PASS or not bm.bid(choice):
+			choice = BidManager.PASS
 			bm.pass_turn()
-		else:
-			bm.bid(choice)
 		_announce(seat, "PAS" if choice == BidManager.PASS else str(choice))
-	if bm.is_void():
-		return false
 	bidder = bm.current_holder
 	bid = bm.current_bid
 	var who := "Sen" if bidder == Seat.LOCAL_PLAYER else _seat_names[bidder]
-	if bm.last_call[bidder] == BidManager.PASS:  # herkes pas: ilk konuşan zorunlu alır
+	if bm.forced:  # herkes pas: yeni tur yok, dağıtanın sağındakine zorunlu
 		hud.show_status("Herkes pas dedi — ihale zorunlu olarak %s'de: %d" % [who, bid])
 	else:
 		hud.show_status("İhale %s'de: %d" % [who, bid])
 	await _wait(ANNOUNCE_PAUSE)
-	return true
 
 
 ## Bir oyuncunun sözünü gösterir: rakipte baş üstü balon, oyuncuda durum yazısı.
@@ -355,7 +365,7 @@ func _take_kitty() -> void:
 
 ## İhaleyi alan, yerdeki kartları görmeden kendi elinden gömer.
 func _bury(ai_trump: int) -> void:
-	var count := rules.kitty_size
+	var count := rules.buried_cards
 	var to_bury: Array[CardData]
 	if bidder == Seat.LOCAL_PLAYER and not _autoplay:
 		hud.show_status("")
@@ -500,9 +510,13 @@ func _spawn_card(card: CardData, world_transform: Transform3D) -> Card3D:
 
 
 func _refresh_info() -> void:
-	var header := "TUR %d / %d   ·   HEDEF %d" % [min(rounds_played + 1, settings.rounds),
-		settings.rounds, settings.target_score]
-	hud.update_info(header, _seat_names, tricks_won, scores.totals, bidder, bid, trump)
+	var header := "%s   ·   TUR %d / %d   ·   HEDEF %d" % [rules.display_name,
+		min(rounds_played + 1, settings.rounds), settings.rounds, settings.target_score]
+	var bidder_name := "" if bidder == NO_SEAT else _seat_names[bidder]
+	hud.update_info(header, bidder_name, bid, trump, tricks_won[Seat.LOCAL_PLAYER],
+		scores.totals[Seat.LOCAL_PLAYER])
+	for seat in range(1, _n):
+		seats_root.get_opponent(seat).set_info("%d el · %d puan" % [tricks_won[seat], scores.totals[seat]])
 
 
 func _wait(seconds: float) -> void:
