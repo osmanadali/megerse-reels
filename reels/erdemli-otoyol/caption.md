@@ -1,9 +1,14 @@
-Yazın Erdemli yolu bitmezdi. 19 Ekim gecesi bu değişti. 🚗
+Yazın Erdemli yolu bitmezdi… 🚗☀️
 
-Çeşmeli-Kızkalesi otoyolu açıldı: 52 km, 7 tünel, 5 viyadük. Hedef: yazın 2,5 saate kadar uzayan yol 18 dakika.
-Ama bu yolun hikayesi 2018'de, teklif gelmeyen bir ihaleyle başlıyor.
+D-400'de tatil trafiği, kızgın asfalt, kilometrelerce kuyruk. Yetkililere göre yazın Mersin'den Kızkalesi'ne yol 2,5 saate kadar uzuyordu.
 
-Önümüzdeki yaz kuyruk bitecek mi? Yorumlara yaz 👇
+19 Ekim 2026 gecesi saat 00.01'de Çeşmeli-Kızkalesi otoyolu trafiğe açıldı. 52 kilometre, 7 tünel, 5 viyadük, 10 köprülü kavşak. Hedef: aynı yol 18 dakika. İlk gün 17.681 araç geçti; bir sürücüye göre Çeşmeli'den Erdemli'ye sadece 8 dakika.
 
-Kaynaklar: AA, CNN Türk, Vatan, Aksiyon (19-20.10.2026), Habertürk, Resmî Gazete. "18 dk" bakanlık hedefidir.
-#mersin #erdemli #çeşmeli #kızkalesi #otoyol #silifke #mersintrafik #meğerse
+Meğerse bu yolun ilk ihalesi 2018'de yapılmış ve tek bir firma bile teklif vermemiş. Proje ikiye bölünmüş, ihale yenilenmiş, bedel 2,1 milyardan 5,6 milyar liraya çıkmış. İlk ihaleden açılışa tam 8 yıl.
+
+Önümüzdeki yaz Erdemli kuyruğu gerçekten bitecek mi? Yorumlara yaz 👇
+
+📚 Kaynaklar: AA, CNN Türk, Vatan, Aksiyon, Memurlar.net (19-20.10.2026), Habertürk (2018), Resmî Gazete ihale ilanı (2021)
+ℹ️ "18 dakika" ve "2,5 saat" bakanlığın açıkladığı rakamlardır; "8 dakika" bir sürücünün anlatımıdır.
+
+#meğerse #mersin #erdemli #çeşmeli #kızkalesi #silifke #taşucu #otoyol #mersinotoyolu #d400 #mersintrafik #yaztatili #mersinhaber #gündem #reels #keşfet
