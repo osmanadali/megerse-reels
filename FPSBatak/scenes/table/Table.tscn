@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3]
+[gd_scene load_steps=17 format=3]
 
 [sub_resource type="FastNoiseLite" id="Noise_wood"]
 noise_type = 3
@@ -9,10 +9,10 @@ fractal_octaves = 3
 colors = PackedColorArray(0.7, 0.7, 0.7, 1, 1, 1, 1, 1)
 
 [sub_resource type="NoiseTexture2D" id="Tex_wood"]
-color_ramp = SubResource("Grad_wood")
 width = 256
 height = 256
 seamless = true
+color_ramp = SubResource("Grad_wood")
 noise = SubResource("Noise_wood")
 
 [sub_resource type="StandardMaterial3D" id="Mat_wood"]
@@ -33,10 +33,10 @@ frequency = 0.35
 colors = PackedColorArray(0.82, 0.82, 0.82, 1, 1, 1, 1, 1)
 
 [sub_resource type="NoiseTexture2D" id="Tex_felt"]
-color_ramp = SubResource("Grad_felt")
 width = 128
 height = 128
 seamless = true
+color_ramp = SubResource("Grad_felt")
 noise = SubResource("Noise_felt")
 
 [sub_resource type="StandardMaterial3D" id="Mat_felt"]
@@ -45,32 +45,56 @@ albedo_texture = SubResource("Tex_felt")
 roughness = 0.95
 uv1_scale = Vector3(4, 4, 4)
 
-[sub_resource type="BoxMesh" id="Mesh_top"]
+[sub_resource type="CylinderMesh" id="Mesh_top"]
 material = SubResource("Mat_wood")
-size = Vector3(1.1, 0.045, 1.1)
+top_radius = 0.66
+bottom_radius = 0.65
+height = 0.045
+radial_segments = 48
+rings = 1
 
-[sub_resource type="BoxMesh" id="Mesh_felt"]
+[sub_resource type="CylinderMesh" id="Mesh_felt"]
 material = SubResource("Mat_felt")
-size = Vector3(0.92, 0.006, 0.92)
+top_radius = 0.56
+bottom_radius = 0.56
+height = 0.006
+radial_segments = 48
+rings = 1
 
-[sub_resource type="BoxMesh" id="Mesh_leg"]
+[sub_resource type="TorusMesh" id="Mesh_rail"]
 material = SubResource("Mat_wood_dark")
-size = Vector3(0.065, 0.715, 0.065)
+inner_radius = 0.56
+outer_radius = 0.65
+rings = 48
+ring_segments = 8
 
-[sub_resource type="BoxMesh" id="Mesh_apron_x"]
+[sub_resource type="CylinderMesh" id="Mesh_pedestal"]
 material = SubResource("Mat_wood_dark")
-size = Vector3(0.95, 0.09, 0.03)
+top_radius = 0.07
+bottom_radius = 0.09
+height = 0.69
+radial_segments = 16
+rings = 1
 
-[sub_resource type="BoxMesh" id="Mesh_apron_z"]
+[sub_resource type="CylinderMesh" id="Mesh_base"]
 material = SubResource("Mat_wood_dark")
-size = Vector3(0.03, 0.09, 0.95)
+top_radius = 0.2
+bottom_radius = 0.32
+height = 0.05
+radial_segments = 24
+rings = 1
 
-[sub_resource type="BoxShape3D" id="Shape_top"]
-size = Vector3(1.1, 0.05, 1.1)
-
-[sub_resource type="BoxMesh" id="Mesh_rail"]
+[sub_resource type="CylinderMesh" id="Mesh_apron"]
 material = SubResource("Mat_wood_dark")
-size = Vector3(1.1, 0.012, 0.09)
+top_radius = 0.6
+bottom_radius = 0.55
+height = 0.07
+radial_segments = 48
+rings = 1
+
+[sub_resource type="CylinderShape3D" id="Shape_top"]
+height = 0.05
+radius = 0.66
 
 [node name="Table" type="Node3D"]
 
@@ -82,59 +106,21 @@ mesh = SubResource("Mesh_top")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.763, 0)
 mesh = SubResource("Mesh_felt")
 
-[node name="Legs" type="Node3D" parent="."]
-
-[node name="LegNE" type="MeshInstance3D" parent="Legs"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.47, 0.3575, -0.47)
-mesh = SubResource("Mesh_leg")
-
-[node name="LegNW" type="MeshInstance3D" parent="Legs"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.47, 0.3575, -0.47)
-mesh = SubResource("Mesh_leg")
-
-[node name="LegSE" type="MeshInstance3D" parent="Legs"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.47, 0.3575, 0.47)
-mesh = SubResource("Mesh_leg")
-
-[node name="LegSW" type="MeshInstance3D" parent="Legs"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.47, 0.3575, 0.47)
-mesh = SubResource("Mesh_leg")
-
-[node name="Apron" type="Node3D" parent="."]
-
-[node name="North" type="MeshInstance3D" parent="Apron"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.67, -0.47)
-mesh = SubResource("Mesh_apron_x")
-
-[node name="South" type="MeshInstance3D" parent="Apron"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.67, 0.47)
-mesh = SubResource("Mesh_apron_x")
-
-[node name="East" type="MeshInstance3D" parent="Apron"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.47, 0.67, 0)
-mesh = SubResource("Mesh_apron_z")
-
-[node name="West" type="MeshInstance3D" parent="Apron"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.47, 0.67, 0)
-mesh = SubResource("Mesh_apron_z")
-
-[node name="Rails" type="Node3D" parent="."]
-
-[node name="RailNorth" type="MeshInstance3D" parent="Rails"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.766, -0.505)
+[node name="Rail" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.5, 0, 0, 0, 1, 0, 0.765, 0)
 mesh = SubResource("Mesh_rail")
 
-[node name="RailSouth" type="MeshInstance3D" parent="Rails"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.766, 0.505)
-mesh = SubResource("Mesh_rail")
+[node name="Apron" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.68, 0)
+mesh = SubResource("Mesh_apron")
 
-[node name="RailEast" type="MeshInstance3D" parent="Rails"]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.505, 0.766, 0)
-mesh = SubResource("Mesh_rail")
+[node name="Pedestal" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.37, 0)
+mesh = SubResource("Mesh_pedestal")
 
-[node name="RailWest" type="MeshInstance3D" parent="Rails"]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.505, 0.766, 0)
-mesh = SubResource("Mesh_rail")
+[node name="Base" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.025, 0)
+mesh = SubResource("Mesh_base")
 
 [node name="Body" type="StaticBody3D" parent="."]
 
@@ -144,31 +130,3 @@ shape = SubResource("Shape_top")
 
 [node name="PlayArea" type="Marker3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.767, 0)
-
-[node name="TrickSlots" type="Node3D" parent="PlayArea"]
-
-[node name="Slot0_South" type="Marker3D" parent="PlayArea/TrickSlots"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.075)
-
-[node name="Slot1_East" type="Marker3D" parent="PlayArea/TrickSlots"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.21, 0, -0.085)
-
-[node name="Slot2_North" type="Marker3D" parent="PlayArea/TrickSlots"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.245)
-
-[node name="Slot3_West" type="Marker3D" parent="PlayArea/TrickSlots"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.21, 0, -0.085)
-
-[node name="TrickPiles" type="Node3D" parent="PlayArea"]
-
-[node name="Pile0_South" type="Marker3D" parent="PlayArea/TrickPiles"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3, 0, 0.36)
-
-[node name="Pile1_East" type="Marker3D" parent="PlayArea/TrickPiles"]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.36, 0, -0.3)
-
-[node name="Pile2_North" type="Marker3D" parent="PlayArea/TrickPiles"]
-transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -0.3, 0, -0.36)
-
-[node name="Pile3_West" type="Marker3D" parent="PlayArea/TrickPiles"]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -0.36, 0, 0.3)

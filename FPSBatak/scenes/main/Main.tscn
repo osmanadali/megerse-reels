@@ -9,6 +9,7 @@
 [ext_resource type="Script" path="res://scripts/cards/card_face_renderer.gd" id="7_faces"]
 [ext_resource type="Script" path="res://scripts/audio/sfx.gd" id="8_sfx"]
 [ext_resource type="Script" path="res://scripts/game/table_controller.gd" id="9_ctrl"]
+[ext_resource type="Script" path="res://scripts/game/seat_layout.gd" id="10_seats"]
 
 [sub_resource type="Environment" id="Env_kahvehane"]
 background_mode = 1
@@ -172,40 +173,21 @@ mesh = SubResource("Mesh_cord")
 [node name="Table" parent="." instance=ExtResource("2_table")]
 
 [node name="Seats" type="Node3D" parent="."]
+script = ExtResource("10_seats")
+opponent_scene = ExtResource("3_opp")
 
 [node name="Seat0_South" type="Marker3D" parent="Seats"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.82)
 
-[node name="Seat1_East" type="Marker3D" parent="Seats"]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.88, 0, 0)
-
-[node name="Seat2_North" type="Marker3D" parent="Seats"]
-transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0, 0, -0.82)
-
-[node name="Seat3_West" type="Marker3D" parent="Seats"]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -0.88, 0, 0)
-
-[node name="Opponent1" parent="Seats/Seat1_East" instance=ExtResource("3_opp")]
-display_name = "Rakip 1"
-body_color = Color(0.55, 0.2, 0.16, 1)
-
-[node name="Opponent2" parent="Seats/Seat2_North" instance=ExtResource("3_opp")]
-display_name = "Rakip 2"
-body_color = Color(0.2, 0.32, 0.55, 1)
-
-[node name="Opponent3" parent="Seats/Seat3_West" instance=ExtResource("3_opp")]
-display_name = "Rakip 3"
-body_color = Color(0.45, 0.42, 0.18, 1)
-
 [node name="PlayerCamera" type="Camera3D" parent="Seats/Seat0_South" node_paths=PackedStringArray("look_target")]
-transform = Transform3D(1, 0, 0, 0, 0.951, 0.309, 0, -0.309, 0.951, 0, 1.24, 0.12)
+transform = Transform3D(1, 0, 0, 0, 0.961, 0.276, 0, -0.276, 0.961, 0, 1.24, 0.12)
 current = true
 fov = 54.0
 near = 0.03
 far = 30.0
 script = ExtResource("4_cam")
 look_target = NodePath("../../../Table/PlayArea")
-look_height_offset = 0.17
+look_height_offset = 0.21
 
 [node name="HUD" type="CanvasLayer" parent="."]
 script = ExtResource("6_hud")

@@ -1,28 +1,26 @@
 class_name Seat
 extends RefCounted
-## Masadaki koltuk düzeni.
+## Masadaki koltuk düzeni (3 veya 4 kişi).
 ##
-## Oyun saat yönünün tersine (sağa doğru) ilerler:
-##   0 = SEN (güney, kameranın olduğu yer)
-##   1 = SAĞ (doğu, +X)
-##   2 = KARŞI (kuzey, -Z)
-##   3 = SOL (batı, -X)
-## Kurallar yalnızca indeksleri bilir; dünyadaki konumlar Main sahnesindeki
-## Seats/* marker düğümlerinden okunur.
+## Koltuk 0 her zaman SENsin (kameranın olduğu yer, masanın +Z tarafı).
+## Oyun saat yönünün tersine, yani sağına doğru ilerler. Koltuklar masa
+## etrafına eşit açılarla dizilir: 3 kişide rakipler sağ-ön ve sol-ön
+## çaprazdadır, 4 kişide sağ, karşı ve sol.
 
-enum Position { SOUTH = 0, EAST = 1, NORTH = 2, WEST = 3 }
-
-const COUNT := 4
-const LOCAL_PLAYER := Position.SOUTH
-
-const NAMES_TR := {
-	Position.SOUTH: "Sen",
-	Position.EAST: "Sağ",
-	Position.NORTH: "Karşı",
-	Position.WEST: "Sol",
-}
+const LOCAL_PLAYER := 0
 
 
 ## Sıradaki koltuk (saat yönünün tersi).
-static func next(seat: int) -> int:
-	return (seat + 1) % COUNT
+static func next(seat: int, count: int) -> int:
+	return (seat + 1) % count
+
+
+## Koltuğun masa merkezine göre yönü (radyan). 0 = oyuncu (+Z), artan açı sağa.
+static func angle(seat: int, count: int) -> float:
+	return TAU * seat / count
+
+
+## Masa merkezinden koltuğa doğru yatay birim vektör.
+static func direction(seat: int, count: int) -> Vector3:
+	var a := angle(seat, count)
+	return Vector3(sin(a), 0.0, cos(a))

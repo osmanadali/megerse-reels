@@ -82,6 +82,14 @@ func deal(player_count: int = PLAYER_COUNT, cards_each: int = CARDS_PER_PLAYER,
 	return hands
 
 
+## Dağıtımdan sonra destede kalan kartları (yer kartları) çeker.
+func take_remaining() -> Array[CardData]:
+	var rest: Array[CardData] = _draw_pile.duplicate()
+	rest.reverse()  # destenin üstünden alttan doğru
+	_draw_pile.clear()
+	return rest
+
+
 ## Bir kartın masaya oynandığını (veya gömüldüğünü) kaydeder.
 func register_played(card: CardData) -> void:
 	_played.append(card)

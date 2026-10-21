@@ -9,8 +9,10 @@ extends Control
 ##
 ## Etkileşim: fareyle üzerine gelince kart kalkar, tıklayınca oynanır.
 ## Dokunmatik ekranda ilk dokunuş kartı seçer (kaldırır), ikincisi oynar.
+## Gömme sırasında çoklu seçim modu: tıklanan kartlar seçilir/bırakılır.
 
 signal card_chosen(card: CardData)
+signal selection_changed(count: int)
 
 const CARD_HEIGHT_RATIO := 0.28       # ekran yüksekliğine göre
 const CARD_ASPECT := 256.0 / 358.0
@@ -25,6 +27,8 @@ const FAN_CURVE_RATIO := 0.006        # kenarlara doğru aşağı inme miktarı
 
 var _cards: Array[HandCard] = []
 var _input_enabled := false
+## > 0 iken çoklu seçim modundayız (en fazla bu kadar kart seçilebilir).
+var _multi_select_max := 0
 
 
 func _ready() -> void:
@@ -79,8 +83,41 @@ func set_input_enabled(enabled: bool, legal: Array[CardData] = []) -> void:
 		hc.playable = not enabled or legal.any(func(c: CardData): return c.same_as(hc.card))
 
 
+## Gömme için çoklu seçimi başlatır.
+func begin_multi_select(max_count: int) -> void:
+	_multi_select_max = max_count
+	_input_enabled = true
+	for hc in _cards:
+		hc.selected = false
+		hc.playable = true
+	selection_changed.emit(0)
+
+
+## Çoklu seçimi bitirir ve seçilen kartları döndürür.
+func end_multi_select() -> Array[CardData]:
+	var out: Array[CardData] = []
+	for hc in _cards:
+		if hc.selected:
+			out.append(hc.card)
+		hc.selected = false
+	_multi_select_max = 0
+	_input_enabled = false
+	return out
+
+
+func selected_count() -> int:
+	return _cards.filter(func(hc: HandCard): return hc.selected).size()
+
+
 func _on_card_pressed(hc: HandCard) -> void:
 	if not _input_enabled:
+		return
+	if _multi_select_max > 0:
+		if hc.selected or selected_count() < _multi_select_max:
+			hc.selected = not hc.selected
+		else:
+			hc.shake()
+		selection_changed.emit(selected_count())
 		return
 	if not hc.playable:
 		hc.shake()

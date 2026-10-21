@@ -17,6 +17,12 @@ func _init() -> void:
 	test_rules_trump_obligation()
 	test_trick_winner()
 	test_ai_uses_only_legal_cards()
+	test_rules_presets()
+	test_three_player_deal()
+	test_bidding_flow()
+	test_bidding_all_pass()
+	test_scores()
+	test_ai_bid_trump_bury()
 	print("\n%d kontrol, %d hata" % [_checks, _failures])
 	quit(1 if _failures > 0 else 0)
 
@@ -165,3 +171,71 @@ func test_ai_uses_only_legal_cards() -> void:
 			var legal := BatakRules.legal_cards(hand, trick, S.SPADES, false)
 			var chosen := ai.choose_card(legal, trick, S.SPADES)
 			check(legal.has(chosen), "AI yasal kart oynar")
+
+
+func test_rules_presets() -> void:
+	check(GameRules.three_player_gommeli().is_valid(), "3 kişi gömmeli kural seti tutarlı")
+	check(GameRules.four_player_ihaleli().is_valid(), "4 kişi ihaleli kural seti tutarlı")
+
+
+func test_three_player_deal() -> void:
+	var rules := GameRules.three_player_gommeli()
+	var d := DeckManager.new(11)
+	d.shuffle()
+	var hands := d.deal(rules.player_count, rules.cards_per_player)
+	var kitty := d.take_remaining()
+	check(hands.size() == 3 and hands[2].size() == 16, "3 x 16 kart")
+	check(kitty.size() == 4, "yerde 4 kart")
+	var ids := {}
+	for h in hands:
+		for card in h:
+			ids[card.get_id()] = true
+	for card in kitty:
+		ids[card.get_id()] = true
+	check(ids.size() == 52, "eller + yer = 52 benzersiz kart")
+
+
+func test_bidding_flow() -> void:
+	var bm := BidManager.new(GameRules.three_player_gommeli(), 2)  # dağıtan 2 → ilk konuşan 0
+	check(bm.current_seat() == 0, "ihaleyi dağıtanın sağındaki açar")
+	check(bm.valid_bids()[0] == 5 and bm.valid_bids()[-1] == 16, "ihale aralığı 5..16")
+	bm.bid(6)
+	check(bm.current_seat() == 1 and bm.valid_bids()[0] == 7, "sonraki en az 7 der")
+	bm.pass_turn()
+	bm.bid(7)
+	check(bm.current_seat() == 0, "pas diyen atlanır")
+	bm.pass_turn()
+	check(bm.is_finished() and bm.current_holder == 2 and bm.current_bid == 7, "ihale 2'de 7")
+
+
+func test_bidding_all_pass() -> void:
+	var bm := BidManager.new(GameRules.three_player_gommeli(), 1)
+	bm.pass_turn(); bm.pass_turn(); bm.pass_turn()
+	check(bm.is_finished() and bm.current_holder == 1 and bm.current_bid == 5, "herkes pas: dağıtan 5 ile alır")
+	var top := BidManager.new(GameRules.three_player_gommeli(), 0)
+	top.bid(16)
+	check(top.is_finished() and top.current_holder == 1, "16 (en yüksek) ihaleyi hemen bitirir")
+
+
+func test_scores() -> void:
+	var sm := ScoreManager.new(3)
+	var made: Array[int] = [8, 5, 3]
+	check(sm.apply_round(0, 7, made) == [8, 5, 3], "ihale tuttu: alınan el yazılır")
+	var failed: Array[int] = [6, 6, 4]
+	check(sm.apply_round(0, 7, failed) == [-7, 6, 4], "ihale battı: -ihale")
+	check(sm.totals == [1, 11, 7], "toplam puan")
+
+
+func test_ai_bid_trump_bury() -> void:
+	var strong := cards("S_A S_K S_Q S_J S_10 S_9 S_8 H_A H_K D_A D_K C_A C_K H_2 D_2 C_2")
+	var weak := cards("S_2 S_3 S_4 H_2 H_3 H_4 H_5 D_2 D_3 D_4 D_5 C_2 C_3 C_4 C_5 C_6")
+	var ai := AIPlayer.new(1, AIPlayer.Difficulty.NORMAL)
+	var valid: Array[int] = [5, 6, 7, 8]
+	check(ai.choose_bid(strong, valid, 4) == 5, "güçlü el ihaleye girer")
+	check(ai.choose_bid(weak, valid, 4) == BidManager.PASS, "zayıf el pas der")
+	check(AIPlayer.choose_trump(strong) == S.SPADES, "uzun ve güçlü takım koz")
+	var with_kitty := strong.duplicate()
+	with_kitty.append_array(cards("H_3 D_3 C_3 C_4"))
+	var buried := AIPlayer.choose_bury(with_kitty, 4)
+	check(buried.size() == 4, "4 kart gömülür")
+	check(not buried.any(func(c: CardData): return c.suit == S.SPADES or c.rank == R.ACE), "koz ve As gömülmez")
