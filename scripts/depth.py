@@ -105,6 +105,16 @@ class Scene:
         kw.setdefault("lit_left", self.cam.lit_left)
         self.add(x, z, figure(**kw), FIG_H, h, w=h * .3)
 
+    def add_toon(self, x, z, look_at=None, h=175, **kw):
+        """2D çizgi film karakteri (scripts/toon.py). look_at=(x, z): o yöne döner ve gözü oraya bakar."""
+        from toon import TOON_H, toon_figure
+        if look_at:
+            dx, dz = look_at[0] - x, look_at[1] - z
+            kw.setdefault("flip", dx < 0)
+            kw.setdefault("look", (1, max(-.6, min(.6, dz / 400))))
+        kw.setdefault("light_from_left", self.cam.lit_left)
+        self.add(x, z, toon_figure(**kw), TOON_H, h, w=h * .3)
+
     def row(self, x, z0, dz, n, art, art_h, h, w=None, jitter=0):
         """Eşit dünya aralığı → mekânsal sıkışma kendiliğinden."""
         for i in range(n):

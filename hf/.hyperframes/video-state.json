@@ -1,7 +1,7 @@
 {
   "version": 1,
   "historyId": "0e987ff4-b9b0-4d04-ba27-c8d3529849a2",
-  "currentRevision": "3b1eee99-89f8-46b4-a3dc-dbb0e01e8612",
+  "currentRevision": "beec120f-89a8-4c3c-a72f-4c9c6a521b62",
   "pendingChanges": false,
   "files": {
     "AGENTS.md": {
@@ -61,12 +61,12 @@
       "content": "/root/.cache/hyperframes/history/0e987ff4-b9b0-4d04-ba27-c8d3529849a2/blobs/91/91874c27fe7c675d88b3b68032a6fd256ba878bf72bf196a743c6e59c11b1bb1"
     },
     "demo/build_demo.py": {
-      "hash": "93bb02dcbf95b1a560b3ba9a63d08fe2af3664d234cf1eba471be8b31963121e",
-      "content": "/root/.cache/hyperframes/history/0e987ff4-b9b0-4d04-ba27-c8d3529849a2/blobs/93/93bb02dcbf95b1a560b3ba9a63d08fe2af3664d234cf1eba471be8b31963121e"
+      "hash": "e186b33b99eafb256d83a342f946eaca151e5482c9c92e7569353150cb81334f",
+      "content": "/root/.cache/hyperframes/history/0e987ff4-b9b0-4d04-ba27-c8d3529849a2/blobs/e1/e186b33b99eafb256d83a342f946eaca151e5482c9c92e7569353150cb81334f"
     },
     "demo/derinlik.html": {
-      "hash": "e4e898bb10f36be838b87304106014e44f9257ba2c0bb71285b9d1531d20038e",
-      "content": "/root/.cache/hyperframes/history/0e987ff4-b9b0-4d04-ba27-c8d3529849a2/blobs/e4/e4e898bb10f36be838b87304106014e44f9257ba2c0bb71285b9d1531d20038e"
+      "hash": "27113f5a5944d1a15db0d2708fb81bc9735b1a4d38f1c21362a2a4621b0badb2",
+      "content": "/root/.cache/hyperframes/history/0e987ff4-b9b0-4d04-ba27-c8d3529849a2/blobs/27/27113f5a5944d1a15db0d2708fb81bc9735b1a4d38f1c21362a2a4621b0badb2"
     },
     "hyperframes.json": {
       "hash": "5d8d5949e1c12c145fd050e0034f3b35b80a8e0319c1649302bee34fe63e2b02",
@@ -99,6 +99,10 @@
     "demo/ots.html": {
       "hash": "77fcca9577caca67a139e97ba03d4c7e06eb2ef65433a89517b151ad66b32e4d",
       "content": "/root/.cache/hyperframes/history/0e987ff4-b9b0-4d04-ba27-c8d3529849a2/blobs/77/77fcca9577caca67a139e97ba03d4c7e06eb2ef65433a89517b151ad66b32e4d"
+    },
+    "assets/ref/stil-1.avif": {
+      "hash": "9b5a22a78638563caf0ee341fb23095ca117b62b4840f38ef9dab08bd2ba0780",
+      "content": "/root/.cache/hyperframes/history/0e987ff4-b9b0-4d04-ba27-c8d3529849a2/blobs/9b/9b5a22a78638563caf0ee341fb23095ca117b62b4840f38ef9dab08bd2ba0780"
     }
   },
   "revisions": {
@@ -333,6 +337,29 @@
           "after": "/root/.cache/hyperframes/history/0e987ff4-b9b0-4d04-ba27-c8d3529849a2/blobs/77/77fcca9577caca67a139e97ba03d4c7e06eb2ef65433a89517b151ad66b32e4d"
         }
       }
+    },
+    "beec120f-89a8-4c3c-a72f-4c9c6a521b62": {
+      "actor": {
+        "kind": "outside",
+        "name": "Outside"
+      },
+      "label": "Changed outside the app",
+      "startedAt": 1792542930700,
+      "endedAt": 1792542930722,
+      "files": {
+        "assets/ref/stil-1.avif": {
+          "before": null,
+          "after": "/root/.cache/hyperframes/history/0e987ff4-b9b0-4d04-ba27-c8d3529849a2/blobs/9b/9b5a22a78638563caf0ee341fb23095ca117b62b4840f38ef9dab08bd2ba0780"
+        },
+        "demo/build_demo.py": {
+          "before": "/root/.cache/hyperframes/history/0e987ff4-b9b0-4d04-ba27-c8d3529849a2/blobs/93/93bb02dcbf95b1a560b3ba9a63d08fe2af3664d234cf1eba471be8b31963121e",
+          "after": "/root/.cache/hyperframes/history/0e987ff4-b9b0-4d04-ba27-c8d3529849a2/blobs/e1/e186b33b99eafb256d83a342f946eaca151e5482c9c92e7569353150cb81334f"
+        },
+        "demo/derinlik.html": {
+          "before": "/root/.cache/hyperframes/history/0e987ff4-b9b0-4d04-ba27-c8d3529849a2/blobs/e4/e4e898bb10f36be838b87304106014e44f9257ba2c0bb71285b9d1531d20038e",
+          "after": "/root/.cache/hyperframes/history/0e987ff4-b9b0-4d04-ba27-c8d3529849a2/blobs/27/27113f5a5944d1a15db0d2708fb81bc9735b1a4d38f1c21362a2a4621b0badb2"
+        }
+      }
     }
   },
   "checks": {
@@ -347,15 +374,15 @@
   },
   "renders": {
     "latest": {
-      "id": "a8f66bb7-439b-43f6-bf74-66f7f5f009c8",
-      "completedAt": 1792533979288,
-      "output": "/home/user/megerse-reels/hf/renders/ots-demo.mp4",
+      "id": "55902e6d-47bf-45d9-a03a-e941a4c8ae46",
+      "completedAt": 1792542965620,
+      "output": "/home/user/megerse-reels/hf/renders/derinlik-demo.mp4",
       "status": "completed",
-      "revision": "3b1eee99-89f8-46b4-a3dc-dbb0e01e8612"
+      "revision": "beec120f-89a8-4c3c-a72f-4c9c6a521b62"
     },
     "retainedRevisions": [
-      "3b1eee99-89f8-46b4-a3dc-dbb0e01e8612",
-      "dc920965-cc76-40a2-8a44-ea16043247d7"
+      "beec120f-89a8-4c3c-a72f-4c9c6a521b62",
+      "3b1eee99-89f8-46b4-a3dc-dbb0e01e8612"
     ]
   },
   "pendingArtifactCleanup": []
