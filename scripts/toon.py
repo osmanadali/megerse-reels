@@ -39,6 +39,76 @@ def darker(hexc, f=.72):
     return "#%02X%02X%02X" % (int(r * f), int(g * f * .97), int(b * f * 1.02 if b * f * 1.02 < 255 else 255))
 
 
+def lighter(hexc, f=.35):
+    h = hexc.lstrip("#")
+    r, g, b = (int(h[i:i + 2], 16) for i in (0, 2, 4))
+    return "#%02X%02X%02X" % tuple(int(c + (255 - c) * f) for c in (r, g, b))
+
+
+def _fringe(pts):
+    """Saç çizgisi tutamları: (taban, uç, taban, uç...) noktalarından yumuşak sivri kıvrımlar."""
+    d = ""
+    for i in range(1, len(pts) - 1, 2):
+        (bx, by), (tx, ty), (nx, ny) = pts[i - 1], pts[i], pts[i + 1]
+        d += f" Q{(bx+tx)/2:.1f} {(by+ty)/2-1.2:.1f} {tx:.1f} {ty:.1f} Q{(tx+nx)/2+.6:.1f} {(ty+ny)/2-1.6:.1f} {nx:.1f} {ny:.1f}"
+    return d
+
+
+HAIR_STYLES = ("short", "fade", "quiff", "balding", "long", "bob")
+
+
+def hair_parts(style, col, L=-1):
+    """Saç: (arka, ön) döndürür. arka: gövdenin arkasına (uzun saç), ön: başın üstüne; kulak önün üstüne çizilir.
+    Baş üç-çeyrek sağa; ense/arka solda (x<0), yüz sağda."""
+    hl, sh = lighter(col, .28), darker(col, .6) if col != "#16110F" else "#000000"
+    back, strands, shine = "", "", ""
+    if style == "short":        # referans 1: düz üst, öne yatık kısa perçem, favoriler, ense
+        d = ("M-17.2 -141 C-21.4 -146 -22.8 -156 -21.2 -163.5 C-19.4 -172.6 -11 -181 0 -181.2 C10.4 -181.6 18.6 -177 19.8 -169 "
+             "C20.6 -165 19.8 -161 18.4 -158.2"
+             + _fringe([(18.4, -158.2), (15.6, -157.4), (13.4, -161.6), (11.2, -157.8), (8.4, -162.2), (5.4, -158.6), (2.2, -162.6), (-1.4, -159.4), (-5.4, -162)])
+             + " C-8.6 -161.4 -10.8 -159.6 -11.8 -156.4 L-12.2 -150 L-14.8 -148.6 C-15.4 -151 -16 -153.4 -16.6 -153.6 Z")
+        strands = line("M-3 -178.6 Q6 -173 10.6 -162.6 M-9 -176 Q-2 -170 1.4 -163.4 M5 -180 Q14 -175.6 15.6 -163 M-15 -171 Q-20 -162 -19.2 -150 M-12 -174 Q-15 -166 -14 -156", .55, .8)
+        shine = f'<path d="M-15.6 -167 Q-9 -177.6 4 -178.6 Q-2 -176 -4 -173.6 L-6.6 -175 L-8 -171.4 L-11 -172.6 L-12 -168.6 Z" fill="{hl}"/>'
+    elif style == "fade":       # referans 2: kafaya yakın kısa üst, net saç çizgisi + şakak köşesi, yanlar açık (fade)
+        d = ("M-16.8 -143 C-20.4 -148 -21 -158 -19.4 -165 C-17 -173.6 -9 -178.6 1 -178.6 C10 -178.6 17 -174.6 18.6 -167 "
+             "C19 -164 18.8 -161.6 18 -160 L14.6 -160.4 C12 -162.4 6 -163 0 -162.6 C-5 -162.4 -9 -161.4 -10.4 -159.4 "
+             "L-11.6 -156 L-12.4 -150 L-14.8 -148.6 C-15.4 -151 -16 -153.4 -16.6 -153.6 Z")
+        fade = (f'<path d="M-12.4 -156 L-12.4 -150 L-14.8 -148.6 C-15.4 -151 -16 -153.4 -16.6 -153.6 L-16.8 -143 C-20.4 -148 -21 -156 -20.4 -160 Z" '
+                f'fill="{col}" opacity=".5"/>')
+        strands = fade + "".join(f'<circle cx="{x}" cy="{y}" r=".45" fill="{hl}"/>' for x, y in [(-8, -172), (-4, -175), (2, -176), (8, -174), (12, -170), (-12, -168), (-2, -170), (5, -168.6), (10, -165.4), (-6, -166)])
+        shine = f'<path d="M-14 -169 Q-6 -177 4 -176.8 Q-4 -174.6 -8 -172 Z" fill="{hl}" opacity=".8"/>'
+    elif style == "quiff":      # yukarı ve geriye taranmış hacimli ön (1950'ler)
+        d = ("M-17.2 -141 C-21.6 -146 -23 -157 -21.4 -165 C-19.6 -174 -12 -181.4 -2 -183 C6 -186 15 -187 21.4 -182 "
+             "C24 -179.4 22.6 -175.4 19.4 -174.6 C21 -171 20.6 -165 18.6 -160.4 C15 -163 9 -164.6 2 -164.2 C-4 -164 -9 -162.4 -11.2 -159 "
+             "L-12.2 -150 L-14.8 -148.6 C-15.4 -151 -16 -153.4 -16.6 -153.6 Z")
+        strands = line("M-14 -168 Q-4 -180 14 -184 M-12 -163 Q0 -176 19 -178 M-8 -164 Q4 -172 18 -170 M-16 -158 Q-20 -152 -19 -146", .55, .8)
+        shine = f'<path d="M-10 -174 Q2 -183.4 16 -184 Q6 -181 -2 -177.6 L-4 -179 L-6 -175 Z" fill="{hl}"/>'
+    elif style == "balding":    # yaşlı: tepe açık, yanlarda ve ensede saç
+        d = ("M-17.2 -141 C-19.6 -145 -19.8 -152 -18.8 -158 C-18 -162 -16.4 -164.4 -15.2 -163.4 C-14.2 -160 -13 -155 -12.2 -150 "
+             "L-14.8 -148.6 C-15.4 -151 -16 -153.4 -16.6 -153.6 Z")
+        strands = line("M-17.6 -158 Q-18.4 -151 -17.4 -145 M-15.6 -160 Q-16 -154 -14.8 -150", .5, .7) + \
+            cel("M16.4 -164 C18.6 -162 19 -158 18 -154 L16.8 -155 Z", col, sh, L, .6, .9)
+        shine = ""
+    elif style == "long":       # kadın: yandan ayrık, yüzü çerçeveleyen, omuz arkasına uzun
+        back = cel("M-21 -160 C-26 -140 -26 -112 -23 -96 L-18 -100 L-15 -94 L-10 -99 L4 -99 L10 -95 L14 -100 L19 -97 C22 -112 23 -140 20 -160 Z", col, sh, L, 2.4, 1.1)
+        d = ("M-19.4 -150 C-22.6 -166 -12 -182 2 -182 C15.6 -182 22.6 -170 21.4 -156 C21 -146 22 -134 20.4 -122 "
+             "L18.4 -116.6 L17 -122.6 L14.8 -118.6 C15.8 -132 16.6 -146 15.4 -156 C12.6 -161.6 7 -163.6 2.4 -163.4 "
+             "Q-5 -163 -9.8 -157 C-12 -151 -12.6 -144 -13.4 -136 C-14 -128 -14 -120 -15 -113 L-17.4 -117.6 L-19.6 -111.6 L-20.6 -120 "
+             "C-21.6 -132 -20.2 -142 -19.4 -150 Z")
+        strands = line("M3 -181 Q1.6 -172 2 -163.6 M-3 -179 Q-14 -170 -17 -150 Q-18 -130 -17.4 -118 M-8 -170 Q-13 -160 -14 -140 "
+                       "M9 -180 Q18 -172 18.6 -150 Q19 -132 18.2 -120 M6 -177 Q14 -168 15.8 -158", .55, .8)
+        shine = f'<path d="M-16 -166 Q-8 -179 2 -180 Q-4 -177 -8 -173 L-10.6 -174.4 L-12 -170.4 L-14.6 -171 Z" fill="{hl}"/>'
+    elif style == "bob":        # kadın kısa küt
+        back = cel("M-21 -160 C-25 -146 -24 -132 -21 -126 L18 -126 C22 -134 22 -148 20 -160 Z", col, sh, L, 2, 1.1)
+        d = ("M-19.6 -150 C-22.6 -167 -12 -182 2 -182 C15.6 -182 22.6 -170 21.4 -156 C21.2 -146 21.6 -136 20 -128 L15.4 -128 "
+             "C16 -140 16.4 -150 15.2 -156 C11 -160 4 -161 -2 -160.4 Q-8 -160 -10.6 -156 C-12.4 -148 -12.8 -138 -13.4 -128 L-19.4 -128 "
+             "C-21 -136 -20.4 -144 -19.6 -150 Z")
+        strands = line("M-2 -181 Q-10 -172 -16 -150 Q-17.6 -138 -17 -130 M8 -180 Q17 -170 18 -150 Q18.6 -138 18 -130", .55, .8)
+        shine = f'<path d="M-16 -166 Q-8 -179 2 -180 Q-4 -177 -8 -173 L-10.6 -174.4 L-12 -170.4 L-14.6 -171 Z" fill="{hl}"/>'
+    front = cel(d, col, sh, L, 1.4, 1.1) + shine + strands
+    return back, front
+
+
 # ---------------- el ----------------
 def hand(x, y, ang=0, s=1.0, skin="#F2C9A0", light=-1, pose="open", mirror=False):
     """Beş parmaklı el. Bilek (x,y), ang: kolun yönü (derece, 0 = aşağı). pose: open (açık, hafif aralık) | fist | point | hold."""
@@ -77,7 +147,7 @@ def sneaker(x, y, s=1.0, col="#7FA9D6", light=-1, toward=1):
 # ---------------- karakter ----------------
 def toon_figure(flip=False, pose="stand", look=(1, 0), expr=None, skin="#F2C9A0", hair="#16110F",
                 shirt="#7A1E22", sleeve="#F4F1EA", pants="#8A7A5A", shoes="#7FA9D6", socks=True, shorts=True,
-                vest=None, earring=False, light_from_left=True, female=False, hair_style="short"):
+                vest=None, earring=False, light_from_left=True, female=False, hair_style=None):
     """Tam boy üç-çeyrek karakter (referans stil). look=(gx,gy): göz bebeği yönü (-1..1, yüz yönüne göre).
     expr: lid (0 açık .. 1 kapalı; .45 ağır kapak), smile (-1..1), talk (0..1 ağız açık), brow (-1..1).
     pose: stand (eller açık yanda) | talk (yakın el jest) | point | walk | hands_pockets."""
@@ -85,7 +155,9 @@ def toon_figure(flip=False, pose="stand", look=(1, 0), expr=None, skin="#F2C9A0"
     e.update(expr or {})
     L = (-1 if light_from_left else 1) * (-1 if flip else 1)     # yansıtılmış grupta ışık dünyaya göre sabit
     sk, skS = skin, darker(skin, .8)
-    out = []
+    hs = hair_style or ("long" if female else "short")
+    hair_back, hair_front = hair_parts(hs, hair, L)
+    out = [hair_back]
 
     # --- bacaklar, çorap, ayakkabı (uzak bacak önce)
     walk = pose == "walk"
@@ -148,21 +220,13 @@ def toon_figure(flip=False, pose="stand", look=(1, 0), expr=None, skin="#F2C9A0"
     head = ("M-16 -158 C-17 -150 -16.6 -142 -13.5 -137 C-10 -131 -4 -127.6 2.5 -127.4 C8 -127.6 13 -131 15.4 -137 "
             "C17.4 -142 18 -150 17.4 -158 C16 -170 8 -175 0 -174.6 C-9 -174 -15 -168 -16 -158 Z")
     out.append(cel(head, sk, skS, L, 2.6, 1.15))
-    # kulak (yakın taraf)
-    ear = cel("M-15.6 -152 C-20.6 -153.6 -21.6 -144 -16.8 -141.4 C-15.6 -141 -14.6 -142 -14.6 -143 Z", sk, skS, L, 1, .9) + line("M-17 -149.5 q-2.2 2 .3 5", .5, .7)
-    if earring:
-        ear += f'<circle cx="-17.4" cy="-140.6" r="1.4" fill="none" stroke="#C9C4B8" stroke-width=".8"/><circle cx="-17.4" cy="-140.6" r="1.4" fill="none" stroke="{INK}" stroke-width=".3"/>'
-    out.append(ear)
-    # saç
-    if female:
-        hp = ("M-18 -150 C-21 -166 -10 -178 2 -177 C14 -177 21 -168 19 -152 C18 -140 20 -128 16 -118 L10 -122 C13 -132 14 -146 12 -156 "
-              "C8 -160 0 -162 -6 -160 C-10 -158 -12 -152 -13 -146 C-14 -136 -12 -126 -14 -118 L-20 -122 C-17 -132 -17 -142 -18 -150 Z")
-    elif hair_style == "short":
-        hp = ("M-16.6 -152 C-18.6 -166 -10 -177 2 -176.6 C13 -176.4 19 -168 18 -156 C16.6 -158.6 14 -160 11 -160 "
-              "C6 -160.4 0 -160 -5 -159 C-9 -158.4 -11.6 -156 -12.6 -151 C-13 -148 -13.4 -146 -14.2 -145 C-15.8 -147 -16.4 -149.6 -16.6 -152 Z")
-    else:
-        hp = "M-16.6 -152 C-18.6 -168 -8 -178 2 -177 C14 -177 20 -168 18 -156 C14 -160 4 -162 -6 -160 C-10 -158 -13 -152 -14.2 -145 Z"
-    out.append(cel(hp, hair, "#000000", L, 1.4, 1.1) + line("M-6 -172 Q2 -175 10 -171", 1.6, .5, "#5A5050"))
+    # saç (ön kütle), sonra kulak saçın üstüne (uzun/küt saçta kulak örtülü)
+    out.append(hair_front)
+    if hs not in ("long", "bob"):
+        ear = cel("M-15.6 -152 C-20.6 -153.6 -21.6 -144 -16.8 -141.4 C-15.6 -141 -14.6 -142 -14.6 -143 Z", sk, skS, L, 1, .9) + line("M-17 -149.5 q-2.2 2 .3 5", .5, .7)
+        if earring:
+            ear += f'<circle cx="-17.4" cy="-140.6" r="1.4" fill="none" stroke="#C9C4B8" stroke-width=".8"/><circle cx="-17.4" cy="-140.6" r="1.4" fill="none" stroke="{INK}" stroke-width=".3"/>'
+        out.append(ear)
     # gözler: beyaz + iris + ağır üst kapak + kaş
     gx, gy = look
     lid = e["lid"]

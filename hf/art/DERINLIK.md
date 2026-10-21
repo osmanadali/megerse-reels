@@ -93,6 +93,7 @@ Demo: `python3 hf/demo/build_ots.py && (cd hf && npx -y hyperframes@0.8.181 rend
 # v4: karakter stili = 2D çizgi film (Osman'ın referansı, 21.10.2026)
 Referans: `hf/assets/ref/stil-1.avif` (git dışı). Karakterler artık **gerçekçi portre değil**, `scripts/toon.py`:
 - Koyu sürekli kontur (`INK`), düz renk + tek ton keskin gölge (`cel()`: gölge ışığın tersindeki kenarda sert şerit).
+- Saç: `hair_style` = short | fade | quiff | balding | long | bob (hacim, tutamlı saç çizgisi, favori, ense, akış çizgileri, tırtıklı parlaklık; uzun saçta omuz arkası kütle). Kulak saçın üstüne çizilir.
 - Büyük baş, iri göz: beyaz + koyu iris + parıltı + **ağır üst kapak** (`expr.lid`), kalın kaş, basit burun çizgisi, ağız (`smile`, `talk`).
 - Eller beş parmaklı (`hand(pose=open|point|fist|hold)`), kıyafette kıvrım çizgisi, cep, kemer tokası, çizgili çorap, spor ayakkabı (taban, burun, bağcık).
 - Sahnede: `Scene.add_toon(x, z, look_at=(x2, z2), ...)` → konuştuğu kişiye döner, gözü ona bakar; perspektif, gölge, pus, kamera sistemi aynen geçerli.
