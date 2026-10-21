@@ -5,7 +5,10 @@
 Tamamen offline, birinci şahıs 3D Türk Batak oyunu. Godot 4.3+ / GDScript.
 
 ## Çalıştırma
-Godot 4.3 ile `FPSBatak/project.godot` dosyasını açıp F5. (Esc: çıkış)
+Godot 4.3 ile `FPSBatak/project.godot` dosyasını açıp F5.
+
+**Ana menü:** Oyuna Başla · Karakterler (yakında) · Masalar · Kartlar · İstatistikler · Ayarlar (ses, tam ekran) · Çıkış.
+Oyun içinde **Esc**: Devam / Ana Menü / Çıkış. İstatistikler ve ayarlar cihazda saklanır (`user://`).
 
 ## Testler
 ```
@@ -18,6 +21,7 @@ Geliştirme argümanları (`--` sonrasına yazılır):
 - `--rounds=N --target=M` autoplay'de maç ayarları
 - `--speed=4` oyunu hızlandırır (yavaş yazılım render'ında kare sayısıyla sınırlıdır)
 - `--preview-panels` (ekran görüntüsüyle birlikte) ihale/gömme/koz panellerini sırayla açar
+- `--menu-start=1.5`, `--menu-panel=stats`, `--esc-at=5`, `--menu-return-at=7` menü akışını otomatik dener
 
 ## Oynanış: 3 kişilik gömmeli ihaleli batak
 0. Oyun başında **Masa Ayarları**: tur sayısı (5/7/9/11) ve hedef puan (51/71/91/101).
@@ -49,10 +53,10 @@ batak için hazır ayar: `GameRules.four_player_ihaleli()`.
 | `scripts/rules` | `GameRules` (varyant ayarları), `MatchSettings` (tur/hedef, maç sonu), `BatakRules` (uyma/yükseltme/koz), `BidManager` (ihale), `ScoreManager` (puan) |
 | `scripts/ai` | `AIPlayer` — yalnızca kendi eli + açık kartlarla karar verir; zorluk seviyeleri için hazır |
 | `scripts/game` | `TableController` (dağıt → ihale → göm → koz → löveler → puan), `SeatLayout`, `TableLayout`, `OpponentHandView` |
-| `scripts/ui` | `GameHUD`, `HandView` (yelpaze el), `HandCard` |
+| `scripts/ui` | `MainMenu` (ana menü + duraklatma), `GameHUD`, `HandView` (yelpaze el), `HandCard`, `UiTheme` (ortak tema) |
 | `scripts/audio` | `Sfx` — kodla üretilen yer tutucu kart sesleri |
-| `scripts/core` | `Seat` (koltuk düzeni), ortak yardımcılar |
-| `scripts/camera` | `SeatedCamera` (oturan oyuncu bakışı) |
+| `scripts/core` | `Seat` (koltuk düzeni), `PlayerStats` (istatistik), `UserSettings` (ses/ekran) |
+| `scripts/camera` | `SeatedCamera` (oturan oyuncu bakışı), `MenuCamera` (menüde masanın etrafında dönen kamera) |
 | `tests` | Başsız birim testleri |
 
 Koltuk 0 = Sen; rakipler masaya eşit açılarla dizilir (3 kişide sağ-ön ve sol-ön). Oyun sağa doğru (saat yönü tersine) ilerler.

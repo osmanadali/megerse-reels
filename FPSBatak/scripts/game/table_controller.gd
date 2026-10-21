@@ -72,8 +72,13 @@ func _ready() -> void:
 	hud.next_round_requested.connect(_on_next_round)
 	hud.start_requested.connect(_start_match)
 	hud.new_game_requested.connect(_show_setup)
+	faces.build()  # kart dokuları menü açıkken hazırlanır
+
+
+## Oyunu başlatır (ana menüden "Oyuna Başla" ile çağrılır).
+func begin() -> void:
 	if not faces.is_ready:
-		await faces.build()
+		await faces.textures_ready
 	_show_setup()
 
 
@@ -163,6 +168,10 @@ func _finish_round() -> void:
 	var verb := ("İHALEYİ YAPTIN" if made else "BATTIN") if bidder == Seat.LOCAL_PLAYER \
 		else (who + " İHALEYİ YAPTI" if made else who + " BATTI")
 	var summary := "%s  (%d / %d)" % [verb, tricks_won[bidder], bid]
+	if not _autoplay:  # geliştirme koşuları istatistiği kirletmesin
+		var stats := PlayerStats.load_from()
+		stats.record_round(bidder == Seat.LOCAL_PLAYER, made)
+		stats.save()
 	hud.show_status("")
 	if settings.is_match_over(rounds_played, scores.totals):
 		_show_match_end(summary)
@@ -181,6 +190,11 @@ func _on_next_round() -> void:
 ## Maç sonu: kazananı ilan eder ve sıralamayı gösterir.
 func _show_match_end(last_round_summary: String) -> void:
 	var winners := MatchSettings.winners(scores.totals)
+	if not _autoplay:
+		var stats := PlayerStats.load_from()
+		stats.record_match(winners.size() == 1 and winners[0] == Seat.LOCAL_PLAYER,
+			scores.totals[Seat.LOCAL_PLAYER])
+		stats.save()
 	var title: String
 	if winners.size() > 1:
 		title = "BERABERE!"

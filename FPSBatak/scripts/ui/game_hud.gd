@@ -7,15 +7,13 @@ extends CanvasLayer
 signal next_round_requested
 signal start_requested(settings: MatchSettings)
 signal new_game_requested
+signal main_menu_requested
 signal bid_chosen(amount: int)   # BidManager.PASS = pas
 signal trump_chosen(suit: int)
 signal bury_confirmed
 
-const GOLD := Color(0.95, 0.77, 0.4)
-const TEXT := Color(0.92, 0.88, 0.8)
-const PANEL_BG := Color(0.06, 0.045, 0.035, 0.86)
-const BUTTON_BG := Color(0.16, 0.11, 0.07, 0.95)
-const BUTTON_HOVER := Color(0.32, 0.21, 0.1, 0.98)
+const GOLD := UiTheme.GOLD
+const TEXT := UiTheme.TEXT
 ## Karar panellerinin dikey konumu (ekran yüksekliğine oran, panelin altı).
 const ACTION_BOTTOM_RATIO := 0.74
 
@@ -43,7 +41,7 @@ var _match_label: Label
 
 
 func _ready() -> void:
-	_theme = _make_theme()
+	_theme = UiTheme.make()
 	hand = HandView.new()
 	add_child(hand)
 	move_child(hand, 0)  # el, diğer HUD öğelerinin altında
@@ -239,12 +237,9 @@ func _build_setup_panel() -> void:
 	_setup_panel.grow_horizontal = Control.GROW_DIRECTION_BOTH
 	_setup_panel.grow_vertical = Control.GROW_DIRECTION_BOTH
 	var box := _panel_box(_setup_panel)
-	var title := _make_label(54, GOLD)
-	title.text = "FPS BATAK"
+	var title := _make_label(44, GOLD)
+	title.text = "MASA AYARLARI"
 	box.add_child(title)
-	var slogan := _make_label(22, TEXT)
-	slogan.text = "Masaya Otur. Kartını Oyna."
-	box.add_child(slogan)
 	box.add_child(_option_row("TUR SAYISI", "RowRounds", MatchSettings.ROUND_OPTIONS,
 		func(v: int): _setup_settings.rounds = v))
 	box.add_child(_option_row("HEDEF PUAN", "RowTarget", MatchSettings.TARGET_OPTIONS,
@@ -300,6 +295,7 @@ func _build_match_panel() -> void:
 	_match_label = _make_label(30, GOLD)
 	box.add_child(_match_label)
 	box.add_child(_make_button("YENİ OYUN", _on_new_game, Vector2(320, 68)))
+	box.add_child(_make_button("ANA MENÜ", func(): main_menu_requested.emit(), Vector2(320, 68)))
 	add_child(_match_panel)
 
 
@@ -364,33 +360,3 @@ func _make_label(font_size: int, color: Color) -> Label:
 	l.add_theme_constant_override("outline_size", 8)
 	l.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	return l
-
-
-func _make_theme() -> Theme:
-	var t := Theme.new()
-	var panel := StyleBoxFlat.new()
-	panel.bg_color = PANEL_BG
-	panel.set_border_width_all(2)
-	panel.border_color = GOLD
-	panel.set_corner_radius_all(14)
-	panel.set_content_margin_all(22)
-	t.set_stylebox("panel", "PanelContainer", panel)
-	for state in ["normal", "hover", "pressed", "hover_pressed", "disabled", "focus"]:
-		var sb := StyleBoxFlat.new()
-		sb.bg_color = BUTTON_HOVER if state == "hover" else BUTTON_BG
-		if state in ["pressed", "hover_pressed"]:  # seçili (toggle) buton
-			sb.bg_color = Color(0.55, 0.36, 0.12, 0.98)
-		sb.set_border_width_all(3 if state in ["pressed", "hover_pressed"] else 2)
-		sb.border_color = GOLD if state != "disabled" else Color(GOLD, 0.3)
-		sb.set_corner_radius_all(10)
-		sb.set_content_margin_all(8)
-		if state == "focus":
-			sb.draw_center = false
-		t.set_stylebox(state, "Button", sb)
-	t.set_font_size("font_size", "Button", 28)
-	t.set_color("font_color", "Button", TEXT)
-	t.set_color("font_hover_color", "Button", GOLD)
-	t.set_color("font_pressed_color", "Button", Color(1, 0.95, 0.85))
-	t.set_color("font_hover_pressed_color", "Button", Color(1, 0.95, 0.85))
-	t.set_color("font_disabled_color", "Button", Color(TEXT, 0.35))
-	return t

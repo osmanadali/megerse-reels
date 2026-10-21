@@ -24,6 +24,7 @@ func _init() -> void:
 	test_scores()
 	test_ai_bid_trump_bury()
 	test_match_end()
+	test_player_stats()
 	print("\n%d kontrol, %d hata" % [_checks, _failures])
 	quit(1 if _failures > 0 else 0)
 
@@ -255,3 +256,20 @@ func test_match_end() -> void:
 	var tie: Array[int] = [30, 30, -7]
 	check(MatchSettings.winners(tie) == [0, 1], "eşitlikte berabere")
 	check(MatchSettings.ROUND_OPTIONS == [5, 7, 9, 11] and MatchSettings.TARGET_OPTIONS == [51, 71, 91, 101], "seçenekler")
+
+
+func test_player_stats() -> void:
+	var path := "user://test_stats.cfg"
+	DirAccess.remove_absolute(ProjectSettings.globalize_path(path))
+	var st := PlayerStats.load_from(path)
+	check(st.matches_played == 0, "boş istatistik")
+	st.record_round(true, true)
+	st.record_round(true, false)
+	st.record_round(false, false)
+	st.record_match(true, 42)
+	st.save()
+	var again := PlayerStats.load_from(path)
+	check(again.rounds_played == 3 and again.bids_taken == 2 and again.bids_made == 1, "tur/ihale sayıları")
+	check(again.matches_played == 1 and again.matches_won == 1 and again.best_match_score == 42, "maç kaydı kalıcı")
+	check(again.summary_lines()[3].contains("%50"), "ihale başarı oranı")
+	DirAccess.remove_absolute(ProjectSettings.globalize_path(path))
