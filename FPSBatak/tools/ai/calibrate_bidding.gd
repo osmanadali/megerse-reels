@@ -13,12 +13,22 @@ extends SceneTree
 ## Bu AI ihaleyi bildiği için her koz adayında ihale, AI'nın o elle o kozla
 ## %60 eşiğinde söyleyeceği en yüksek teklif kabul edilir (yetmezse en düşük
 ## teklif). Sondaki `oldplay` argümanı eski bağlamsız kart oynamayla ölçer.
+##
+## `best` argümanı: her dağıtımda yalnızca AI'nın gerçekten seçeceği koz
+## (TrickEstimator.best) oynatılır; `minmu=X` ile yalnızca tahmini X ve üstü
+## eller (ihale kararının verildiği bölge) regresyona girer. Seçim yalnızca
+## elin özelliklerine bağlıdır (sonuca değil); bu bölgede tahmin yansızdır.
 
 const Sim := preload("res://tools/ai/sim_common.gd")
 
 func _init() -> void:
 	var args := OS.get_cmdline_user_args()
 	var old_play := "oldplay" in args
+	var best_only := "best" in args
+	var min_mu := -INF
+	for x in args:
+		if x.begins_with("minmu="):
+			min_mu = float(x.substr(6))
 	var buried := args[0] == "buried"
 	var deals := int(args[1])
 	var rng := RandomNumberGenerator.new()
@@ -39,7 +49,13 @@ func _init() -> void:
 		deck.shuffle()
 		var hands := deck.deal(rules.player_count, rules.cards_per_player)
 		var kitty := deck.take_remaining()
-		for trump in 4:
+		var trumps: Array = [0, 1, 2, 3]
+		if best_only:
+			var be := TrickEstimator.best(hands[0], rules)
+			if be.mu < min_mu:
+				continue
+			trumps = [be.trump]
+		for trump in trumps:
 			var hs := Sim.copy_hands(hands)
 			var h0: Array[CardData] = hs[0]
 			var bid := _assumed_bid(h0, trump, rules)
@@ -73,7 +89,8 @@ func _init() -> void:
 		buckets[b][1] += r[1]
 		buckets[b][2] += e * e
 	var sigma := sqrt(se / rows.size())
-	print("MOD: %s, örnek: %d el x 4 koz = %d" % ["GÖMMELİ" if buried else "NORMAL", deals, rows.size()])
+	print("MOD: %s, dağıtım: %d, örnek: %d%s" % ["GÖMMELİ" if buried else "NORMAL", deals, rows.size(),
+		" (yalnızca en iyi koz, μ ≥ %s)" % min_mu if best_only else " (4 koz)"])
 	print("Katsayılar:")
 	for i in p:
 		print("  %+.4f  %s" % [w[i], HandAnalysis.FEATURE_NAMES[i]])
