@@ -165,7 +165,7 @@ func _play_round() -> void:
 	_refresh_info()
 	# İhaleden sonraki aşamalar moda göre: Normal İhaleli'de yalnızca koz;
 	# Gömmeli'de önce elden göm, kozu söyle, sonra yeri al.
-	var ai_trump := AIPlayer.choose_trump(hands[bidder])  # AI kozunu gömmeden önce belirler
+	var ai_trump := AIPlayer.choose_trump(hands[bidder], rules)  # AI kozunu gömmeden önce belirler
 	for phase in rules.phases_after_bid():
 		match phase:
 			GameRules.PHASE_BURY:
@@ -329,14 +329,14 @@ func _run_bidding() -> void:
 				else "En yüksek: %s — %d" % [_seat_names[bm.current_holder], bm.current_bid]
 			if _autoplay:
 				await _wait(AI_THINK_MAX)
-				choice = _autoplay_ai.choose_bid(hands[seat], bm.valid_bids(), rules.buried_cards)
+				choice = _autoplay_ai.choose_bid_in_context(hands[seat], BidContext.from_bid_manager(bm, rules))
 			else:
 				hud.show_bidding(bm.valid_bids(), current)
 				choice = await hud.bid_chosen
 		else:
 			hud.show_status("%s düşünüyor…" % _seat_names[seat])
 			await _wait(randf_range(AI_THINK_MIN, AI_THINK_MAX))
-			choice = _ai[seat].choose_bid(hands[seat], bm.valid_bids(), rules.buried_cards)
+			choice = _ai[seat].choose_bid_in_context(hands[seat], BidContext.from_bid_manager(bm, rules))
 		if choice == BidManager.PASS or not bm.bid(choice):
 			choice = BidManager.PASS
 			bm.pass_turn()
@@ -511,7 +511,11 @@ func _collect_trick(cards: Array[Card3D], winner_seat: int) -> void:
 		_pile_counts[winner_seat] += 1
 		last = c3d.move_to(Transform3D(Card3D.table_basis(false, yaw), pos), COLLECT_FLIGHT, 0.03)
 		await _wait(COLLECT_STAGGER)
-	await last.finished
+	# Uzun bir kare (takılma, yavaş cihaz) sırasında son animasyon bu bekleme
+	# içinde bitmiş olabilir; bitmiş bir Tween'in `finished` sinyalini beklemek
+	# oyunu sonsuza kadar dondurur. Yalnızca hâlâ çalışıyorsa bekle.
+	if last.is_valid() and last.is_running():
+		await last.finished
 
 
 # --- Yardımcılar ----------------------------------------------------------------

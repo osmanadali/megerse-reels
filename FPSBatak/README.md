@@ -41,6 +41,20 @@ Ortak kurallar:
 - Puan: ihaleyi alan tutturursa aldığı el kadar artı, batarsa ihale kadar eksi; diğerleri aldığı el kadar artı, **hiç el alamayan ihale kadar eksi**.
 - Maç: tur sayısı (5/7/9/11) dolunca ya da biri hedef puana (51/71/91/101) ulaşınca biter.
 
+## AI ihale sistemi
+Akış: **el analizi** (`HandAnalysis`) → **beklenen löve** (`TrickEstimator`) →
+**teklif başarı olasılığı** P(löve ≥ k) → **ihale durumu** (`BidContext`) → **son teklif** (`BidStrategy`).
+
+- Beklenen löve, el özelliklerinin (koz uzunluğu ve büyükleri, yan As/Papaz/Kız, K-Q dizisi,
+  renk boşluğu, tek/iki kartlı renk, koz çakma potansiyeli, uzun yan renk) doğrusal birleşimidir.
+  Katsayılar elle verilmedi; `tools/ai/calibrate_bidding.gd` ile AI'lar birbirine karşı
+  oynatılarak ölçüldü (normal 40.000, gömmeli 24.000 el). Normal ve gömmeli için ayrı tablolar.
+- Gömmeli modda özellikler, AI'nın gömeceği 4 kart çıkarıldıktan sonraki elden hesaplanır.
+- Teklif: tutma olasılığı %60'ın üstünde kalan en yüksek seviyeye kadar, her seferinde
+  yalnızca geçerli en küçük teklif. Herkes pas derse zorunlu ihaleyi zaten alacak oyuncu,
+  kimse teklif vermemişken en düşük teklifi %50 eşikle söyler.
+- Ölçüm: `tools/ai/benchmark_bidding.gd` (eski AI birebir `tools/ai/legacy_bidding.gd`).
+
 Kart oynama: "SIRA SENDE" yazınca parlak kartlardan birine tıkla
 (dokunmatikte: önce dokun-seç, sonra tekrar dokun-oyna). Karartılmış kartlar o an oynanamaz.
 
@@ -52,7 +66,8 @@ Kart oynama: "SIRA SENDE" yazınca parlak kartlardan birine tıkla
 | `scenes/characters` | Rakip yer tutucusu (ileride karakter sistemi) |
 | `scripts/cards` | `CardData` (veri), `DeckManager` (deste), `CardFaceRenderer` (prosedürel kart yüzleri), `Card3D` (masadaki kart) |
 | `scripts/rules` | `GameRules` (mod kuralları), `MatchSettings` (tur/hedef, maç sonu), `BatakRules` (uyma/yükseltme/koz), `BidManager` (ihale), `ScoreManager` (puan) |
-| `scripts/ai` | `AIPlayer` — yalnızca kendi eli + açık kartlarla karar verir; zorluk seviyeleri için hazır |
+| `scripts/ai` | `AIPlayer`, `HandAnalysis`, `TrickEstimator`, `BidContext`, `BidStrategy` — yalnızca kendi eli + açık bilgiyle karar verir |
+| `tools/ai` | AI kalibrasyon ve ölçüm araçları (oyunda kullanılmaz) |
 | `scripts/game` | `TableController` (dağıt → ihale → göm → koz → löveler → puan), `SeatLayout`, `TableLayout`, `OpponentHandView` |
 | `scripts/ui` | `MainMenu` (ana menü + duraklatma), `GameHUD`, `HandView` (yelpaze el), `HandCard`, `UiTheme` (ortak tema) |
 | `scripts/audio` | `Sfx` — kodla üretilen yer tutucu kart sesleri |

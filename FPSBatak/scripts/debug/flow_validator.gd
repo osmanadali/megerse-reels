@@ -48,6 +48,25 @@ func setup(controller: TableController, plan_arg: String) -> void:
 	c.trick_finished.connect(_on_trick_finished)
 	c.round_finished.connect(_on_round_finished)
 	c.match_finished.connect(_on_match_finished)
+	_watchdog()
+
+
+## İlerleme durursa (gerçek zamanda 20 sn hiç löve/tur olayı yoksa) oyunun
+## hangi aşamada beklediğini yazdırır.
+var _events := 0
+func _watchdog() -> void:
+	var last := -1
+	while true:
+		await get_tree().create_timer(20.0, true, false, true).timeout
+		if _events == last:
+			var tw := c._table_cards.get_children().filter(func(x): return not x.is_queued_for_deletion())
+			var views: PackedStringArray = []
+			for seat in c._opponent_hands:
+				views.append("%d:%d" % [seat, c._opponent_hands[seat].count()])
+			push_error("TAKILMA: tur %d, ihale %d/%d, koz %d, löveler %s, eller %s, oyuncu eli %d, rakip elleri %s, masada %d düğüm" % [
+				c.rounds_played + 1, c.bidder, c.bid, c.trump, c.tricks_won,
+				c.hands.map(func(h): return h.size()), c.hud.hand._cards.size(), ", ".join(views), tw.size()])
+		last = _events
 
 
 func check(cond: bool, msg: String) -> void:
@@ -87,6 +106,7 @@ func _plan_entry() -> Dictionary:
 # --- Tur başı ---------------------------------------------------------------------
 
 func _on_round_dealt() -> void:
+	_events += 1
 	print("[doğrulama] dağıtıldı")
 	var r := c.rules
 	var n := c._n
@@ -147,6 +167,7 @@ func _on_round_dealt() -> void:
 # --- İhale ------------------------------------------------------------------------
 
 func _on_bidding_finished(bm: BidManager) -> void:
+	_events += 1
 	var r := c.rules
 	var right := BidManager.dealer_right(c.dealer, c._n)
 	check(c.bidder >= 0 and c.bidder < c._n, "ihaleyi alan geçersiz")
@@ -167,6 +188,7 @@ func _on_bidding_finished(bm: BidManager) -> void:
 # --- Löve -------------------------------------------------------------------------
 
 func _on_trick_finished(trick: Array[CardData], seats: Array[int], winner_seat: int) -> void:
+	_events += 1
 	_tricks_checked += 1
 	var n := c._n
 	check(c.trump >= 0, "koz seçilmeden löve oynandı")
