@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
   <defs>
     <clipPath id="frame"><rect x="6" y="6" width="388" height="388" rx="44"/></clipPath>
-    <linearGradient id="skin" x1="0" y1="0" x2="1" y2="0">
+    <linearGradient id="avskin" x1="0" y1="0" x2="1" y2="0">
       <stop offset="0" stop-color="#C98B63"/><stop offset=".5" stop-color="#DCA27B"/><stop offset="1" stop-color="#C4865F"/>
     </linearGradient>
   </defs>
@@ -18,13 +18,13 @@
       <path d="M118 175 C98 168 92 200 104 222 C112 236 124 236 128 228 Z" fill="#C98B63" stroke="#1F2430" stroke-width="6" stroke-linejoin="round"/>
       <path d="M282 175 C302 168 308 200 296 222 C288 236 276 236 272 228 Z" fill="#C98B63" stroke="#1F2430" stroke-width="6" stroke-linejoin="round"/>
       <!-- yüz -->
-      <path d="M116 150 C114 108 148 92 200 92 C252 92 286 108 284 150 L285 200 C285 252 248 286 200 288 C152 286 115 252 115 200 Z" fill="url(#skin)" stroke="#1F2430" stroke-width="6" stroke-linejoin="round"/>
+      <path d="M116 150 C114 108 148 92 200 92 C252 92 286 108 284 150 L285 200 C285 252 248 286 200 288 C152 286 115 252 115 200 Z" fill="url(#avskin)" stroke="#1F2430" stroke-width="6" stroke-linejoin="round"/>
       <!-- hafif sakal gölgesi -->
       <path d="M128 215 C140 262 170 282 200 283 C230 282 260 262 272 215 C262 248 235 268 200 270 C165 268 138 248 128 215 Z" fill="#8A5E44" opacity=".28"/>
-      <!-- saç: kısa, dikleştirilmiş; tepede sivri uçlar, alında düz saç çizgisi (Osman'ın referansı 21.10) -->
-      <path d="M116 160 C108 112 124 80 144 70 L143 62 L153 66 C158 62 164 58 170 56 L173 47 L180 53 C188 50 196 49 202 49 L206 41 L211 49 C220 50 228 52 234 55 L240 47 L243 58 C250 61 256 65 262 70 L270 62 L268 76 C282 90 292 120 284 160 C281 146 278 136 274 130 C240 125 160 125 126 130 C122 136 119 146 116 160 Z" fill="#1E1A19" stroke="#1F2430" stroke-width="6" stroke-linejoin="round"/>
-      <path d="M182 80 q9 -6 18 0 M214 80 q9 -6 18 0" stroke="#6A6461" stroke-width="3.5" fill="none" stroke-linecap="round"/>
-      <path d="M117 158 C115 146 117 136 122 130 L126 170 Z M283 158 C285 146 283 136 278 130 L274 170 Z" fill="#3A3230" opacity=".75"/>
+      <!-- saç: dolgun kısa kesim, dokulu kâkül, yanlar kısa (fade) -->
+      <path d="M114 160 C104 100 138 58 200 56 C262 58 296 100 286 160 C282 146 278 134 272 128 L272 122 C266 126 260 124 256 120 C250 126 242 126 236 121 C230 127 222 127 216 122 C210 128 202 128 196 122 C190 128 182 128 176 122 C170 127 162 127 156 121 C150 126 142 126 136 120 C132 124 128 126 128 122 C122 132 118 146 114 160 Z" fill="#1E1A19" stroke="#1F2430" stroke-width="6" stroke-linejoin="round"/>
+      <path d="M150 80 q8 -5 16 0 M176 70 q8 -5 16 0 M206 70 q8 -5 16 0 M232 80 q8 -5 16 0 M162 98 q8 -5 16 0 M194 92 q8 -5 16 0 M222 98 q8 -5 16 0" stroke="#55504D" stroke-width="3" fill="none" stroke-linecap="round"/>
+      <path d="M117 158 C115 146 117 134 122 126 L126 170 Z M283 158 C285 146 283 134 278 126 L274 170 Z" fill="#3A3230" opacity=".75"/>
       <!-- kaşlar: kalın -->
       <path d="M142 146 C155 134 175 133 189 140 L187 150 C172 145 158 147 145 154 Z" fill="#1E1A19"/>
       <path d="M258 146 C245 134 225 133 211 140 L213 150 C228 145 242 147 255 154 Z" fill="#1E1A19"/>
