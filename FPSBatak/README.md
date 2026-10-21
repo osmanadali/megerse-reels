@@ -19,9 +19,10 @@ Geliştirme argümanları (`--` sonrasına yazılır):
 
 ## Oynanış: 3 kişilik gömmeli ihaleli batak
 1. Herkese 16 kart dağıtılır, ortaya 4 kart kapalı konur.
-2. **İhale** dağıtanın sağından başlar (en az 5, en çok 16). Pas diyen bir daha giremez.
-   Herkes pas derse dağıtan 5 ile almak zorundadır.
-3. İhaleyi alan yerdeki 4 kartı eline alır, **4 kart gömer** (kartlara tıkla → GÖM), sonra **kozu seçer**.
+2. **İhale** dağıtanın yanından başlar (en az 7, en çok 16). Pas diyen bir daha giremez.
+   Herkes pas derse dağıtanın yanındaki (ilk konuşan) 7 ile almak zorundadır.
+3. İhaleyi alan önce kendi elinden **4 kart gömer** (kartlara tıkla → GÖM), sonra **kozu söyler**,
+   ardından yerdeki 4 kartı eline alır.
 4. İlk löveyi ihaleyi alan açar. Takıma uymak, yükseltmek, takım yoksa koz atmak zorunlu;
    koz kırılmadan koz açılamaz.
 5. Puan: ihaleyi alan tutturursa aldığı el kadar artı, batarsa ihale kadar eksi;

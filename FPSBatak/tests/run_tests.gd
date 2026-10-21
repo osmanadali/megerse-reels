@@ -198,20 +198,20 @@ func test_three_player_deal() -> void:
 func test_bidding_flow() -> void:
 	var bm := BidManager.new(GameRules.three_player_gommeli(), 2)  # dağıtan 2 → ilk konuşan 0
 	check(bm.current_seat() == 0, "ihaleyi dağıtanın sağındaki açar")
-	check(bm.valid_bids()[0] == 5 and bm.valid_bids()[-1] == 16, "ihale aralığı 5..16")
-	bm.bid(6)
-	check(bm.current_seat() == 1 and bm.valid_bids()[0] == 7, "sonraki en az 7 der")
-	bm.pass_turn()
+	check(bm.valid_bids()[0] == 7 and bm.valid_bids()[-1] == 16, "ihale aralığı 7..16")
 	bm.bid(7)
+	check(bm.current_seat() == 1 and bm.valid_bids()[0] == 8, "sonraki en az 8 der")
+	bm.pass_turn()
+	bm.bid(8)
 	check(bm.current_seat() == 0, "pas diyen atlanır")
 	bm.pass_turn()
-	check(bm.is_finished() and bm.current_holder == 2 and bm.current_bid == 7, "ihale 2'de 7")
+	check(bm.is_finished() and bm.current_holder == 2 and bm.current_bid == 8, "ihale 2'de 8")
 
 
 func test_bidding_all_pass() -> void:
 	var bm := BidManager.new(GameRules.three_player_gommeli(), 1)
 	bm.pass_turn(); bm.pass_turn(); bm.pass_turn()
-	check(bm.is_finished() and bm.current_holder == 1 and bm.current_bid == 5, "herkes pas: dağıtan 5 ile alır")
+	check(bm.is_finished() and bm.current_holder == 2 and bm.current_bid == 7, "herkes pas: dağıtanın yanındaki 7 ile alır")
 	var top := BidManager.new(GameRules.three_player_gommeli(), 0)
 	top.bid(16)
 	check(top.is_finished() and top.current_holder == 1, "16 (en yüksek) ihaleyi hemen bitirir")
@@ -230,12 +230,10 @@ func test_ai_bid_trump_bury() -> void:
 	var strong := cards("S_A S_K S_Q S_J S_10 S_9 S_8 H_A H_K D_A D_K C_A C_K H_2 D_2 C_2")
 	var weak := cards("S_2 S_3 S_4 H_2 H_3 H_4 H_5 D_2 D_3 D_4 D_5 C_2 C_3 C_4 C_5 C_6")
 	var ai := AIPlayer.new(1, AIPlayer.Difficulty.NORMAL)
-	var valid: Array[int] = [5, 6, 7, 8]
-	check(ai.choose_bid(strong, valid, 4) == 5, "güçlü el ihaleye girer")
+	var valid: Array[int] = [7, 8, 9, 10]
+	check(ai.choose_bid(strong, valid, 4) == 7, "güçlü el ihaleye girer")
 	check(ai.choose_bid(weak, valid, 4) == BidManager.PASS, "zayıf el pas der")
 	check(AIPlayer.choose_trump(strong) == S.SPADES, "uzun ve güçlü takım koz")
-	var with_kitty := strong.duplicate()
-	with_kitty.append_array(cards("H_3 D_3 C_3 C_4"))
-	var buried := AIPlayer.choose_bury(with_kitty, 4)
+	var buried := AIPlayer.choose_bury(strong, 4, AIPlayer.choose_trump(strong))
 	check(buried.size() == 4, "4 kart gömülür")
 	check(not buried.any(func(c: CardData): return c.suit == S.SPADES or c.rank == R.ACE), "koz ve As gömülmez")

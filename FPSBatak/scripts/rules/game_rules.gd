@@ -7,15 +7,18 @@ extends Resource
 
 @export_range(3, 4) var player_count := 3
 @export var cards_per_player := 16
-## Yere kapalı konan ve ihaleyi alanın alıp aynı sayıda gömdüğü kart sayısı.
+## Yere kapalı konan kart sayısı. İhaleyi alan önce elinden bu kadar kart
+## gömer, kozu söyler, sonra yerdeki kartları alıp oyunu açar.
 @export var kitty_size := 4
-@export var min_bid := 5
+@export var min_bid := 7
 @export var max_bid := 16
-## Herkes pas derse dağıtan en düşük ihaleyle almak zorunda (false: yeniden dağıt).
-@export var all_pass_forces_dealer := true
+## Herkes pas derse dağıtanın yanındaki (ilk konuşan) en düşük ihaleyle almak
+## zorunda (false: yeniden dağıt).
+@export var all_pass_forces_first_bidder := true
 
 
-## Varsayılan: 3 kişilik gömmeli ihaleli batak (16'şar kart + 4 yer kartı).
+## Varsayılan: 3 kişilik gömmeli ihaleli batak (16'şar kart + 4 yer kartı,
+## ihale 7..16).
 static func three_player_gommeli() -> GameRules:
 	return GameRules.new()
 

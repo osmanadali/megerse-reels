@@ -61,9 +61,9 @@ static func choose_trump(hand: Array[CardData]) -> int:
 
 
 ## Gömülecek kartlar: kozu ve Asları korur; kısa takımları boşaltmaya,
-## olmazsa en küçük kartlardan kurtulmaya çalışır.
-static func choose_bury(hand: Array[CardData], count: int) -> Array[CardData]:
-	var trump := choose_trump(hand)
+## olmazsa en küçük kartlardan kurtulmaya çalışır. Gömme kozdan önce
+## yapıldığı için AI söyleyeceği kozu (`trump`) önceden belirler.
+static func choose_bury(hand: Array[CardData], count: int, trump: int) -> Array[CardData]:
 	var lengths := {}
 	for c in hand:
 		lengths[c.suit] = lengths.get(c.suit, 0) + 1

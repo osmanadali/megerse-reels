@@ -12,7 +12,7 @@ var player_count: int
 var dealer: int
 var min_bid: int
 var max_bid: int
-var forces_dealer: bool
+var forces_first_bidder: bool
 
 var current_bid := 0
 var current_holder := -1
@@ -28,7 +28,7 @@ func _init(rules: GameRules, p_dealer: int) -> void:
 	dealer = p_dealer
 	min_bid = rules.min_bid
 	max_bid = rules.max_bid
-	forces_dealer = rules.all_pass_forces_dealer
+	forces_first_bidder = rules.all_pass_forces_first_bidder
 	_turn = Seat.next(dealer, player_count)
 	for i in player_count:
 		_passed.append(false)
@@ -69,7 +69,7 @@ func pass_turn() -> void:
 	_advance()
 
 
-## Herkes pas dedi ve kimse ihale almadı mı? (forces_dealer=false ise yeniden dağıtılır)
+## Herkes pas dedi ve kimse ihale almadı mı? (zorlama kapalıysa yeniden dağıtılır)
 func is_void() -> bool:
 	return _finished and current_holder < 0
 
@@ -81,8 +81,8 @@ func _advance() -> void:
 		return
 	if active == 0:  # kimse ihale almadı
 		_finished = true
-		if forces_dealer:
-			current_holder = dealer
+		if forces_first_bidder:
+			current_holder = Seat.next(dealer, player_count)
 			current_bid = min_bid
 		return
 	for step in player_count:

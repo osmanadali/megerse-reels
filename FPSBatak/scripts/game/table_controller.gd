@@ -1,7 +1,7 @@
 class_name TableController
 extends Node
 ## Masadaki akışı yönetir:
-##   dağıt → ihale → yerdeki kartları al → göm → koz seç → löveler → puan.
+##   dağıt → ihale → göm → koz söyle → yerdeki kartları al → löveler → puan.
 ##
 ## Kurallar BatakRules/BidManager/ScoreManager'da, kararlar AIPlayer'da,
 ## varyant ayarları GameRules'ta. Bu sınıf yalnızca sırayı yürütür ve
@@ -115,11 +115,14 @@ func _play_round() -> void:
 		_play_round()
 		return
 	_refresh_info()
+	# Gömmeli batak sırası: önce elden göm, kozu söyle, sonra yeri alıp aç.
+	var ai_trump := AIPlayer.choose_trump(hands[bidder])  # AI kozunu gömmeden önce belirler
+	if rules.kitty_size > 0:
+		await _bury(ai_trump)
+	await _choose_trump(ai_trump)
+	_refresh_info()
 	if rules.kitty_size > 0:
 		await _take_kitty()
-		await _bury()
-	await _choose_trump()
-	_refresh_info()
 
 	var leader := bidder
 	for trick_no in rules.cards_per_player:
@@ -238,7 +241,10 @@ func _run_bidding() -> bool:
 	bidder = bm.current_holder
 	bid = bm.current_bid
 	var who := "Sen" if bidder == Seat.LOCAL_PLAYER else _seat_names[bidder]
-	hud.show_status("İhale %s'de: %d" % [who, bid])
+	if bm.last_call[bidder] == BidManager.PASS:  # herkes pas: ilk konuşan zorunlu alır
+		hud.show_status("Herkes pas dedi — ihale zorunlu olarak %s'de: %d" % [who, bid])
+	else:
+		hud.show_status("İhale %s'de: %d" % [who, bid])
 	await _wait(ANNOUNCE_PAUSE)
 	return true
 
@@ -254,7 +260,8 @@ func _announce(seat: int, text: String) -> void:
 
 # --- Yer kartları ve gömme -------------------------------------------------------
 
-## İhaleyi alan yerdeki kartları eline alır (rakipse kapalı kalır).
+## İhaleyi alan, gömüp kozu söyledikten sonra yerdeki kartları eline alır
+## (rakipse kapalı kalır).
 func _take_kitty() -> void:
 	hands[bidder].append_array(kitty)
 	for i in _kitty_cards.size():
@@ -272,7 +279,8 @@ func _take_kitty() -> void:
 	await _wait(KITTY_FLIGHT)
 
 
-func _bury() -> void:
+## İhaleyi alan, yerdeki kartları görmeden kendi elinden gömer.
+func _bury(ai_trump: int) -> void:
 	var count := rules.kitty_size
 	var to_bury: Array[CardData]
 	if bidder == Seat.LOCAL_PLAYER and not _autoplay:
@@ -286,7 +294,7 @@ func _bury() -> void:
 		if bidder != Seat.LOCAL_PLAYER:
 			hud.show_status("%s kart gömüyor…" % _seat_names[bidder])
 		await _wait(AI_THINK_MAX)
-		to_bury = AIPlayer.choose_bury(hands[bidder], count)
+		to_bury = AIPlayer.choose_bury(hands[bidder], count, ai_trump)
 	var spot := _layout.bury_spot(bidder)
 	var yaw := _layout.seat_yaw(bidder)
 	for i in to_bury.size():
@@ -306,14 +314,14 @@ func _bury() -> void:
 	await _wait(PLAY_FLIGHT)
 
 
-func _choose_trump() -> void:
+func _choose_trump(ai_trump: int) -> void:
 	if bidder == Seat.LOCAL_PLAYER and not _autoplay:
 		hud.show_status("")
 		hud.show_trump_choice()
 		trump = await hud.trump_chosen
 	else:
 		await _wait(AI_THINK_MIN)
-		trump = AIPlayer.choose_trump(hands[bidder])
+		trump = ai_trump
 	var text := "Koz %s" % CardData.SUIT_SYMBOLS[trump]
 	_announce(bidder, text)
 	if bidder != Seat.LOCAL_PLAYER:
