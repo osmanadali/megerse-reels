@@ -1,7 +1,8 @@
 class_name TableController
 extends Node
 ## Masadaki akışı yönetir:
-##   dağıt → ihale → göm → koz söyle → yerdeki kartları al → löveler → puan.
+##   maç ayarları → [dağıt → ihale → göm → koz söyle → yerdeki kartları al →
+##   löveler → puan] x el sayısı → maç sonu.
 ##
 ## Kurallar BatakRules/BidManager/ScoreManager'da, kararlar AIPlayer'da,
 ## varyant ayarları GameRules'ta. Bu sınıf yalnızca sırayı yürütür ve
@@ -37,6 +38,8 @@ const NO_SEAT := -1
 @export var ai_difficulty := AIPlayer.Difficulty.NORMAL
 
 var rules := GameRules.three_player_gommeli()
+var settings: MatchSettings
+var rounds_played := 0
 var deck := DeckManager.new()
 var scores: ScoreManager
 var hands: Array = []
@@ -64,12 +67,33 @@ var _autoplay_ai := AIPlayer.new(Seat.LOCAL_PLAYER)
 func _ready() -> void:
 	assert(rules.is_valid(), "Kural seti tutarsız")
 	_n = rules.player_count
-	dealer = _n - 1  # ilk elde ihaleyi oyuncu açsın
 	scores = ScoreManager.new(_n)
 	_setup_table()
-	hud.restart_requested.connect(_on_restart)
+	hud.next_round_requested.connect(_on_next_round)
+	hud.start_requested.connect(_start_match)
+	hud.new_game_requested.connect(_show_setup)
 	if not faces.is_ready:
 		await faces.build()
+	_show_setup()
+
+
+## Maç başı: kayıtlı ayarlarla masa ayarları panelini açar.
+func _show_setup() -> void:
+	_clear_table()
+	hud.show_status("")
+	settings = MatchSettings.load_saved()
+	if _autoplay:
+		_apply_dev_args(settings)
+		_start_match(settings)
+	else:
+		hud.show_setup(settings)
+
+
+func _start_match(s: MatchSettings) -> void:
+	settings = s
+	scores = ScoreManager.new(_n)
+	rounds_played = 0
+	dealer = _n - 1  # ilk elde ihaleyi oyuncu açsın
 	_play_round()
 
 
@@ -132,22 +156,58 @@ func _play_round() -> void:
 
 func _finish_round() -> void:
 	var deltas := scores.apply_round(bidder, bid, tricks_won)
+	rounds_played += 1
 	_refresh_info()
 	var made := tricks_won[bidder] >= bid
 	var who := "SEN" if bidder == Seat.LOCAL_PLAYER else _seat_names[bidder].to_upper()
 	var verb := ("İHALEYİ YAPTIN" if made else "BATTIN") if bidder == Seat.LOCAL_PLAYER \
 		else (who + " İHALEYİ YAPTI" if made else who + " BATTI")
+	var summary := "%s  (%d / %d)" % [verb, tricks_won[bidder], bid]
 	hud.show_status("")
-	hud.show_round_end("%s  (%d / %d)" % [verb, tricks_won[bidder], bid],
-		_seat_names, tricks_won, deltas, scores.totals)
+	if settings.is_match_over(rounds_played, scores.totals):
+		_show_match_end(summary)
+		return
+	hud.show_round_end(summary, _seat_names, tricks_won, deltas, scores.totals, "SONRAKİ TUR")
 	if _autoplay:
 		await _wait(1.5)
-		hud.restart_requested.emit()
+		hud.next_round_requested.emit()
 
 
-func _on_restart() -> void:
+func _on_next_round() -> void:
 	dealer = Seat.next(dealer, _n)
 	_play_round()
+
+
+## Maç sonu: kazananı ilan eder ve sıralamayı gösterir.
+func _show_match_end(last_round_summary: String) -> void:
+	var winners := MatchSettings.winners(scores.totals)
+	var title: String
+	if winners.size() > 1:
+		title = "BERABERE!"
+	elif winners[0] == Seat.LOCAL_PLAYER:
+		title = "KAZANDIN!"
+	else:
+		title = "KAZANAN: %s" % _seat_names[winners[0]].to_upper()
+	var order: Array = range(_n)
+	order.sort_custom(func(a: int, b: int): return scores.totals[a] > scores.totals[b])
+	var lines: Array[String] = ["Son el: " + last_round_summary, ""]
+	for place in order.size():
+		var seat: int = order[place]
+		lines.append("%d.  %s — %d puan" % [place + 1, _seat_names[seat], scores.totals[seat]])
+	hud.show_match_end("OYUN BİTTİ — " + title, lines)
+	if _autoplay:
+		print("[autoplay] maç bitti, oyun süresi %.1f sn" % (Time.get_ticks_msec() / 1000.0 * Engine.time_scale))
+		await _wait(20.0)
+		hud.new_game_requested.emit()
+
+
+## Geliştirme: `--rounds=N --target=M` ile ayar panelini atlamak için.
+static func _apply_dev_args(s: MatchSettings) -> void:
+	for arg in OS.get_cmdline_user_args():
+		if arg.begins_with("--rounds="):
+			s.rounds = int(arg.trim_prefix("--rounds="))
+		elif arg.begins_with("--target="):
+			s.target_score = int(arg.trim_prefix("--target="))
 
 
 # --- Dağıtım -----------------------------------------------------------------
@@ -426,7 +486,9 @@ func _spawn_card(card: CardData, world_transform: Transform3D) -> Card3D:
 
 
 func _refresh_info() -> void:
-	hud.update_info(_seat_names, tricks_won, scores.totals, bidder, bid, trump)
+	var header := "TUR %d / %d   ·   HEDEF %d" % [min(rounds_played + 1, settings.rounds),
+		settings.rounds, settings.target_score]
+	hud.update_info(header, _seat_names, tricks_won, scores.totals, bidder, bid, trump)
 
 
 func _wait(seconds: float) -> void:

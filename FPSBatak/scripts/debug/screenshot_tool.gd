@@ -3,6 +3,7 @@ extends Node
 ##   -- --screenshot=<yol.png>                 (yaklaşık 0.5 sn sonra tek kare)
 ##   -- --screenshot=<yol.png> --shot-times=2,6.5,9
 ##        (verilen saniyelerde <yol>_0.png, <yol>_1.png ... kaydeder)
+##   --speed=4         oyunu hızlandırır (zamanlar oyun saniyesidir)
 ##   --preview-panels  her karede sırayla ihale / gömme / koz panelini açar
 ##                     (karar panellerinin görünümünü kontrol etmek için)
 ## Son kareden sonra oyunu kapatır. Normal oyunda hiçbir şey yapmaz.
@@ -20,6 +21,8 @@ func _ready() -> void:
 			_times.clear()
 			for t in arg.trim_prefix("--shot-times=").split(","):
 				_times.append(float(t))
+		elif arg.begins_with("--speed="):
+			Engine.time_scale = float(arg.trim_prefix("--speed="))
 		elif arg == "--preview-panels":
 			_preview_panels = true
 	if _path.is_empty():

@@ -4,7 +4,9 @@ extends CanvasLayer
 ## karar panelleri elin hemen üstünde, masanın ön kısmında belirir.
 ## Koyu zemin + altın/bakır vurgular.
 
-signal restart_requested
+signal next_round_requested
+signal start_requested(settings: MatchSettings)
+signal new_game_requested
 signal bid_chosen(amount: int)   # BidManager.PASS = pas
 signal trump_chosen(suit: int)
 signal bury_confirmed
@@ -33,6 +35,11 @@ var _bury_label: Label
 var _bury_button: Button
 var _bury_count := 4
 var _trump_panel: PanelContainer
+var _end_button: Button
+var _setup_panel: PanelContainer
+var _setup_settings: MatchSettings
+var _match_panel: PanelContainer
+var _match_label: Label
 
 
 func _ready() -> void:
@@ -64,6 +71,8 @@ func _ready() -> void:
 	_build_bury_panel()
 	_build_trump_panel()
 	_build_end_panel()
+	_build_setup_panel()
+	_build_match_panel()
 
 
 # --- Genel ---------------------------------------------------------------------
@@ -76,9 +85,10 @@ func show_status(text: String) -> void:
 	_status.text = text
 
 
-## Sağ üstteki bilgi: ihale, koz, alınan eller ve toplam puan.
-func update_info(names: Array, tricks: Array, totals: Array, bidder: int, bid: int, trump: int) -> void:
-	var lines: PackedStringArray = []
+## Üst ortadaki bilgi: tur/hedef, ihale, koz, alınan eller ve toplam puan.
+func update_info(header: String, names: Array, tricks: Array, totals: Array, bidder: int, bid: int,
+		trump: int) -> void:
+	var lines: PackedStringArray = [header]
 	if bidder >= 0:
 		lines.append("İHALE: %s — %d" % [names[bidder], bid])
 	if trump >= 0:
@@ -183,11 +193,13 @@ func _build_trump_panel() -> void:
 
 # --- El sonu -------------------------------------------------------------------
 
-func show_round_end(title: String, names: Array, tricks: Array, deltas: Array, totals: Array) -> void:
+func show_round_end(title: String, names: Array, tricks: Array, deltas: Array, totals: Array,
+		button_text: String) -> void:
 	var lines: PackedStringArray = [title, ""]
 	for i in names.size():
 		lines.append("%s — %d el   %+d   (toplam %d)" % [names[i], tricks[i], deltas[i], totals[i]])
 	_end_label.text = "\n".join(lines)
+	_end_button.text = button_text
 	_end_panel.visible = true
 
 
@@ -203,8 +215,97 @@ func _build_end_panel() -> void:
 	var box := _panel_box(_end_panel)
 	_end_label = _make_label(28, GOLD)
 	box.add_child(_end_label)
-	box.add_child(_make_button("YENİDEN DAĞIT", func(): restart_requested.emit(), Vector2(320, 64)))
+	_end_button = _make_button("SONRAKİ TUR", func(): next_round_requested.emit(), Vector2(320, 64))
+	box.add_child(_end_button)
 	add_child(_end_panel)
+
+
+# --- Masa ayarları (maç başı) ----------------------------------------------------
+
+## Maç başı ayar panelini gösterir; seçim `start_requested` ile döner.
+func show_setup(current: MatchSettings) -> void:
+	_setup_settings = current
+	_setup_panel.visible = true
+	# Kayıtlı seçimleri butonlara yansıt.
+	for row in _setup_panel.find_children("Row*", "HBoxContainer", true, false):
+		for b: Button in row.get_children():
+			b.button_pressed = b.get_meta("value") == (
+				current.rounds if row.name == "RowRounds" else current.target_score)
+
+
+func _build_setup_panel() -> void:
+	_setup_panel = _make_panel()
+	_setup_panel.set_anchors_and_offsets_preset(Control.PRESET_CENTER)
+	_setup_panel.grow_horizontal = Control.GROW_DIRECTION_BOTH
+	_setup_panel.grow_vertical = Control.GROW_DIRECTION_BOTH
+	var box := _panel_box(_setup_panel)
+	var title := _make_label(54, GOLD)
+	title.text = "FPS BATAK"
+	box.add_child(title)
+	var slogan := _make_label(22, TEXT)
+	slogan.text = "Masaya Otur. Kartını Oyna."
+	box.add_child(slogan)
+	box.add_child(_option_row("TUR SAYISI", "RowRounds", MatchSettings.ROUND_OPTIONS,
+		func(v: int): _setup_settings.rounds = v))
+	box.add_child(_option_row("HEDEF PUAN", "RowTarget", MatchSettings.TARGET_OPTIONS,
+		func(v: int): _setup_settings.target_score = v))
+	var note := _make_label(18, Color(TEXT, 0.7))
+	note.text = "Tur sayısı dolunca ya da biri hedef puana ulaşınca oyun biter."
+	box.add_child(note)
+	box.add_child(_make_button("MASAYA OTUR", _on_setup_confirmed, Vector2(340, 72)))
+	add_child(_setup_panel)
+
+
+func _on_setup_confirmed() -> void:
+	_setup_panel.visible = false
+	_setup_settings.save()
+	start_requested.emit(_setup_settings)
+
+
+## Başlık + tek seçimli buton satırı.
+func _option_row(caption: String, row_name: String, values: Array[int], on_pick: Callable) -> VBoxContainer:
+	var wrap := VBoxContainer.new()
+	wrap.add_theme_constant_override("separation", 6)
+	var label := _make_label(22, GOLD)
+	label.text = caption
+	wrap.add_child(label)
+	var row := HBoxContainer.new()
+	row.name = row_name
+	row.alignment = BoxContainer.ALIGNMENT_CENTER
+	row.add_theme_constant_override("separation", 10)
+	var group := ButtonGroup.new()
+	for v in values:
+		var b := _make_button(str(v), func(): on_pick.call(v), Vector2(96, 60))
+		b.toggle_mode = true
+		b.button_group = group
+		b.set_meta("value", v)
+		row.add_child(b)
+	wrap.add_child(row)
+	return wrap
+
+
+# --- Maç sonu --------------------------------------------------------------------
+
+func show_match_end(title: String, lines: Array[String]) -> void:
+	_match_label.text = title + "\n\n" + "\n".join(lines)
+	_match_panel.visible = true
+
+
+func _build_match_panel() -> void:
+	_match_panel = _make_panel()
+	_match_panel.set_anchors_and_offsets_preset(Control.PRESET_CENTER)
+	_match_panel.grow_horizontal = Control.GROW_DIRECTION_BOTH
+	_match_panel.grow_vertical = Control.GROW_DIRECTION_BOTH
+	var box := _panel_box(_match_panel)
+	_match_label = _make_label(30, GOLD)
+	box.add_child(_match_label)
+	box.add_child(_make_button("YENİ OYUN", _on_new_game, Vector2(320, 68)))
+	add_child(_match_panel)
+
+
+func _on_new_game() -> void:
+	_match_panel.visible = false
+	new_game_requested.emit()
 
 
 # --- Yardımcılar ----------------------------------------------------------------
@@ -274,10 +375,12 @@ func _make_theme() -> Theme:
 	panel.set_corner_radius_all(14)
 	panel.set_content_margin_all(22)
 	t.set_stylebox("panel", "PanelContainer", panel)
-	for state in ["normal", "hover", "pressed", "disabled", "focus"]:
+	for state in ["normal", "hover", "pressed", "hover_pressed", "disabled", "focus"]:
 		var sb := StyleBoxFlat.new()
-		sb.bg_color = BUTTON_HOVER if state in ["hover", "pressed"] else BUTTON_BG
-		sb.set_border_width_all(2)
+		sb.bg_color = BUTTON_HOVER if state == "hover" else BUTTON_BG
+		if state in ["pressed", "hover_pressed"]:  # seçili (toggle) buton
+			sb.bg_color = Color(0.55, 0.36, 0.12, 0.98)
+		sb.set_border_width_all(3 if state in ["pressed", "hover_pressed"] else 2)
 		sb.border_color = GOLD if state != "disabled" else Color(GOLD, 0.3)
 		sb.set_corner_radius_all(10)
 		sb.set_content_margin_all(8)
@@ -287,5 +390,7 @@ func _make_theme() -> Theme:
 	t.set_font_size("font_size", "Button", 28)
 	t.set_color("font_color", "Button", TEXT)
 	t.set_color("font_hover_color", "Button", GOLD)
+	t.set_color("font_pressed_color", "Button", Color(1, 0.95, 0.85))
+	t.set_color("font_hover_pressed_color", "Button", Color(1, 0.95, 0.85))
 	t.set_color("font_disabled_color", "Button", Color(TEXT, 0.35))
 	return t

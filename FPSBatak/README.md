@@ -14,10 +14,15 @@ godot --headless --path FPSBatak -s res://tests/run_tests.gd
 ```
 Geliştirme argümanları (`--` sonrasına yazılır):
 - `--screenshot=/yol/shot.png [--shot-times=2,6.5]` belirtilen saniyelerde ekran görüntüsü alıp çıkar
-- `--autoplay` oyuncunun kararlarını da AI verir (görsel test için)
+- `--autoplay` oyuncunun kararlarını da AI verir, ayar panelini atlar (görsel test için)
+- `--rounds=N --target=M` autoplay'de maç ayarları
+- `--speed=4` oyunu hızlandırır (yavaş yazılım render'ında kare sayısıyla sınırlıdır)
 - `--preview-panels` (ekran görüntüsüyle birlikte) ihale/gömme/koz panellerini sırayla açar
 
 ## Oynanış: 3 kişilik gömmeli ihaleli batak
+0. Oyun başında **Masa Ayarları**: tur sayısı (5/7/9/11) ve hedef puan (51/71/91/101).
+   Oyun, tur sayısı dolunca ya da biri hedef puana ulaşınca biter; en yüksek puan kazanır.
+   Son seçim cihazda saklanır (`user://settings.cfg`).
 1. Herkese 16 kart dağıtılır, ortaya 4 kart kapalı konur.
 2. **İhale** dağıtanın yanından başlar (en az 7, en çok 16). Pas diyen bir daha giremez.
    Herkes pas derse dağıtanın yanındaki (ilk konuşan) 7 ile almak zorundadır.
@@ -41,7 +46,7 @@ batak için hazır ayar: `GameRules.four_player_ihaleli()`.
 | `scenes/table` | Yuvarlak masa (ahşap + keçe); masa üstü konumlar `TableLayout` ile oyuncu sayısına göre hesaplanır |
 | `scenes/characters` | Rakip yer tutucusu (ileride karakter sistemi) |
 | `scripts/cards` | `CardData` (veri), `DeckManager` (deste), `CardFaceRenderer` (prosedürel kart yüzleri), `Card3D` (masadaki kart) |
-| `scripts/rules` | `GameRules` (varyant ayarları), `BatakRules` (uyma/yükseltme/koz), `BidManager` (ihale), `ScoreManager` (puan) |
+| `scripts/rules` | `GameRules` (varyant ayarları), `MatchSettings` (tur/hedef, maç sonu), `BatakRules` (uyma/yükseltme/koz), `BidManager` (ihale), `ScoreManager` (puan) |
 | `scripts/ai` | `AIPlayer` — yalnızca kendi eli + açık kartlarla karar verir; zorluk seviyeleri için hazır |
 | `scripts/game` | `TableController` (dağıt → ihale → göm → koz → löveler → puan), `SeatLayout`, `TableLayout`, `OpponentHandView` |
 | `scripts/ui` | `GameHUD`, `HandView` (yelpaze el), `HandCard` |

@@ -23,6 +23,7 @@ func _init() -> void:
 	test_bidding_all_pass()
 	test_scores()
 	test_ai_bid_trump_bury()
+	test_match_end()
 	print("\n%d kontrol, %d hata" % [_checks, _failures])
 	quit(1 if _failures > 0 else 0)
 
@@ -237,3 +238,18 @@ func test_ai_bid_trump_bury() -> void:
 	var buried := AIPlayer.choose_bury(strong, 4, AIPlayer.choose_trump(strong))
 	check(buried.size() == 4, "4 kart gömülür")
 	check(not buried.any(func(c: CardData): return c.suit == S.SPADES or c.rank == R.ACE), "koz ve As gömülmez")
+
+
+func test_match_end() -> void:
+	var m := MatchSettings.new()
+	m.rounds = 5
+	m.target_score = 51
+	var low: Array[int] = [10, 20, 5]
+	check(not m.is_match_over(4, low), "4/5 el, hedef yok: devam")
+	check(m.is_match_over(5, low), "5/5 el: maç biter")
+	var high: Array[int] = [10, 51, 5]
+	check(m.is_match_over(2, high), "hedef puana ulaşan maçı bitirir")
+	check(MatchSettings.winners(high) == [1], "en yüksek puan kazanır")
+	var tie: Array[int] = [30, 30, -7]
+	check(MatchSettings.winners(tie) == [0, 1], "eşitlikte berabere")
+	check(MatchSettings.ROUND_OPTIONS == [5, 7, 9, 11] and MatchSettings.TARGET_OPTIONS == [51, 71, 91, 101], "seçenekler")
