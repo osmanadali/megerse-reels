@@ -8,11 +8,17 @@ extends SceneTree
 ## oynatılır (gömmelide önce o koza göre gömülür, sonra yer alınır). Elin
 ## özellikleri (HandAnalysis) ile gerçekte alınan löve arasında en küçük
 ## kareler doğrusu kurulur; ayrıca tahmin hatasının dağılımı ölçülür.
+##
+## El, oyundaki kart oynama AI'sıyla oynatılır (CardTracker + PlayPolicy).
+## Bu AI ihaleyi bildiği için her koz adayında ihale, AI'nın o elle o kozla
+## %60 eşiğinde söyleyeceği en yüksek teklif kabul edilir (yetmezse en düşük
+## teklif). Sondaki `oldplay` argümanı eski bağlamsız kart oynamayla ölçer.
 
 const Sim := preload("res://tools/ai/sim_common.gd")
 
 func _init() -> void:
 	var args := OS.get_cmdline_user_args()
+	var old_play := "oldplay" in args
 	var buried := args[0] == "buried"
 	var deals := int(args[1])
 	var rng := RandomNumberGenerator.new()
@@ -36,12 +42,15 @@ func _init() -> void:
 		for trump in 4:
 			var hs := Sim.copy_hands(hands)
 			var h0: Array[CardData] = hs[0]
+			var bid := _assumed_bid(h0, trump, rules)
+			var buried_cards: Array[CardData] = []
 			if buried:
-				Sim.apply_bury_and_kitty(h0, kitty, trump)
+				buried_cards = Sim.apply_bury_and_kitty(h0, kitty, trump)
 				# Özellikler: gömmeden sonra, yeri almadan önceki 12 kart (AI ihale anında bunu bilebilir).
 			var known: Array[CardData] = h0.slice(0, h0.size() - kitty.size()) if buried else h0.duplicate()
 			var f := HandAnalysis.features(known, trump)
-			var y: int = Sim.play_out(hs, trump, 0)[0]
+			var y: int = Sim.play_out(hs, trump, 0)[0] if old_play \
+				else Sim.play_out_current(rules, hs, trump, 0, bid, buried_cards)[0]
 			for i in p:
 				xty[i] += f[i] * y
 				for j in p:
@@ -88,6 +97,17 @@ func _init() -> void:
 	var s0 := (sy - s1 * sx) / sw
 	print("σ(μ) = %.4f + %.4f·μ" % [s0, s1])
 	quit()
+
+
+## AI'nın bu elle bu kozla tutma olasılığı eşiğin üstünde kalan en yüksek teklifi.
+static func _assumed_bid(hand: Array[CardData], trump: int, rules: GameRules) -> int:
+	var e := TrickEstimator.estimate(hand, trump, rules)
+	var t: float = BidStrategy.THRESHOLD[rules.mode]
+	var bid := rules.min_bid
+	for b in range(rules.min_bid, rules.max_bid + 1):
+		if TrickEstimator.prob_at_least(b, e.mu, e.sigma) >= t:
+			bid = b
+	return bid
 
 
 static func _dot(w: PackedFloat64Array, f: PackedFloat32Array) -> float:
