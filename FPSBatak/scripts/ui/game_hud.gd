@@ -95,6 +95,11 @@ func show_status(text: String) -> void:
 
 
 ## Üst ortadaki bilgi: tur/hedef, ihale, koz, alınan eller ve toplam puan.
+func clear_info() -> void:
+	_info.text = ""
+	_my_info.text = ""
+
+
 ## Üst satır (tur/hedef/ihale/koz) ve oyuncunun kendi el/puan bilgisi.
 func update_info(header: String, bidder_name: String, bid: int, trump: int, my_tricks: int,
 		my_total: int) -> void:

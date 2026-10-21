@@ -30,6 +30,16 @@ func get_back() -> Texture2D:
 ## Dokuları üretir. Her kart için bir SubViewport aynı karede çizilir,
 ## görüntüleri alınır ve viewport'lar silinir.
 func build() -> void:
+	if DisplayServer.get_name() == "headless":
+		# Başsız çalışmada (testler) hiç kare çizilmez; frame_post_draw beklemek
+		# sonsuza kadar sürer. Görüntüsüz yer tutucu dokularla hemen hazır ol.
+		for s in CardData.Suit.values():
+			for r in CardData.Rank.values():
+				_faces[CardData.create(s, r).get_id()] = PlaceholderTexture2D.new()
+		_back = PlaceholderTexture2D.new()
+		is_ready = true
+		textures_ready.emit.call_deferred()
+		return
 	var jobs := {}  # kimlik -> SubViewport
 	for s in CardData.Suit.values():
 		for r in CardData.Rank.values():

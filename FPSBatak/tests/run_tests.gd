@@ -37,6 +37,7 @@ func _init() -> void:
 	test_std_all_pass_gives_4_to_dealer_right()
 	test_std_winner_chooses_trump()
 	test_std_starts_with_52_cards()
+	test_mode_persists_across_restart()
 	print("\n%d kontrol, %d hata" % [_checks, _failures])
 	quit(1 if _failures > 0 else 0)
 
@@ -408,3 +409,24 @@ func test_std_starts_with_52_cards() -> void:
 		for card in h:
 			ids[card.get_id()] = true
 	check(ids.size() == 52 and d.cards_remaining() == 0, "normal: 52 kartın hepsi dağıtılır")
+
+
+## Oyundan çıkıp tekrar girince seçilen mod (ve tur/hedef) aynen yüklenmeli.
+func test_mode_persists_across_restart() -> void:
+	var path := ProjectSettings.globalize_path(MatchSettings.SAVE_PATH)
+	var backup := FileAccess.get_file_as_string(path) if FileAccess.file_exists(path) else ""
+	for m in [GameRules.Mode.STANDARD_BIDDING, GameRules.Mode.BURIED_BIDDING]:
+		var s := MatchSettings.new()
+		s.mode = m
+		s.rounds = 9
+		s.target_score = 91
+		s.save()
+		var loaded := MatchSettings.load_saved()
+		check(loaded.mode == m and loaded.rounds == 9 and loaded.target_score == 91,
+			"kayıtlı mod/tur/hedef yeniden açılışta aynı (%d)" % m)
+		check(GameRules.for_mode(loaded.mode).mode == m, "kayıtlı moddan doğru kural seti")
+	if backup.is_empty():
+		DirAccess.remove_absolute(path)
+	else:
+		var f := FileAccess.open(path, FileAccess.WRITE)
+		f.store_string(backup)

@@ -29,6 +29,14 @@ const PLAY_YAW_JITTER := 0.12
 const HAND_TO_WORLD_DEPTH := 0.45
 const NO_SEAT := -1
 
+## Akış olayları (görsel/oyun davranışını etkilemez; doğrulama ve ileride
+## istatistik/karakter tepkileri için dinlenebilir).
+signal round_dealt
+signal bidding_finished(bm: BidManager)
+signal trick_finished(trick: Array[CardData], seats: Array[int], winner_seat: int)
+signal round_finished(deltas: Array[int])
+signal match_finished(winners: Array[int])
+
 @export var table: Node3D
 @export var seats_root: SeatLayout
 @export var camera: SeatedCamera
@@ -89,6 +97,10 @@ func begin() -> void:
 func _show_setup() -> void:
 	_clear_table()
 	hud.show_status("")
+	# Önceki maçın el/puan bilgisi ayar ekranında görünmesin.
+	hud.clear_info()
+	for seat in range(1, _n):
+		seats_root.get_opponent(seat).set_info("")
 	settings = MatchSettings.load_saved()
 	if _autoplay:
 		_apply_dev_args(settings)
@@ -148,6 +160,7 @@ func _play_round() -> void:
 
 	hud.show_status("Kartlar dağıtılıyor…")
 	await _deal_animated()
+	round_dealt.emit()
 	await _run_bidding()
 	_refresh_info()
 	# İhaleden sonraki aşamalar moda göre: Normal İhaleli'de yalnızca koz;
@@ -173,6 +186,7 @@ func _finish_round() -> void:
 	var deltas := scores.apply_round(bidder, bid, tricks_won)
 	rounds_played += 1
 	_refresh_info()
+	round_finished.emit(deltas)
 	var made := tricks_won[bidder] >= bid
 	var who := "SEN" if bidder == Seat.LOCAL_PLAYER else _seat_names[bidder].to_upper()
 	var verb := ("İHALEYİ YAPTIN" if made else "BATTIN") if bidder == Seat.LOCAL_PLAYER \
@@ -219,6 +233,7 @@ func _show_match_end(last_round_summary: String) -> void:
 		var seat: int = order[place]
 		lines.append("%d.  %s — %d puan" % [place + 1, _seat_names[seat], scores.totals[seat]])
 	hud.show_match_end("OYUN BİTTİ — " + title, lines)
+	match_finished.emit(winners)
 	if _autoplay:
 		print("[autoplay] maç bitti, oyun süresi %.1f sn" % (Time.get_ticks_msec() / 1000.0 * Engine.time_scale))
 		await _wait(20.0)
@@ -330,6 +345,7 @@ func _run_bidding() -> void:
 		hud.show_status("Herkes pas dedi — ihale zorunlu olarak %s'de: %d" % [who, bid])
 	else:
 		hud.show_status("İhale %s'de: %d" % [who, bid])
+	bidding_finished.emit(bm)
 	await _wait(ANNOUNCE_PAUSE)
 
 
@@ -460,6 +476,7 @@ func _play_trick(leader: int) -> int:
 	await _collect_trick(placed, winner_seat)
 	tricks_won[winner_seat] += 1
 	_refresh_info()
+	trick_finished.emit(trick, trick_seats, winner_seat)
 	return winner_seat
 
 

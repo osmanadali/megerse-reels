@@ -21,6 +21,11 @@ func _ready() -> void:
 	_menu.main_menu_requested.connect(_back_to_menu)
 	_hud.main_menu_requested.connect(_back_to_menu)
 	if "--autoplay" in OS.get_cmdline_user_args():
+		for arg in OS.get_cmdline_user_args():
+			if arg.begins_with("--validate="):  # geliştirme: uçtan uca doğrulama
+				var v: Node = load("res://scripts/debug/flow_validator.gd").new()
+				add_child(v)
+				v.setup(_controller, arg.trim_prefix("--validate="))
 		_menu.hide_all()
 		_player_camera.make_current()
 		_in_game = true
