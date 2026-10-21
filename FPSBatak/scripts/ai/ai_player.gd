@@ -4,7 +4,8 @@ extends RefCounted
 ##
 ## Hile yok: AI yalnızca kendi elini, oynayabileceği kartları ve masaya açık
 ## oynanmış kartları görür. Başka oyuncuların ellerine hiçbir referansı yoktur.
-## Zorluk seviyeleri ve kişilikler ileride bu sınıfın stratejisini değiştirecek.
+## Strateji yalnızca zorluk seviyesine bağlıdır; karakterler (dinozor, kurt,
+## robot...) yalnızca görseldir ve oynayışı değiştirmez.
 
 enum Difficulty { EASY, NORMAL, HARD, MASTER }
 
@@ -19,15 +20,13 @@ func _init(p_seat: int, p_difficulty: Difficulty = Difficulty.NORMAL) -> void:
 	_rng.randomize()
 
 
-## Risk iştahı: beklenen löve tahminine eklenen kaydırma (şu an 0). Kişilikler
-## (agresif dinozor, temkinli tilki...) ileride bu değeri değiştirecek.
+## Beklenen löve tahminine eklenen sabit kaydırma (0). Karaktere bağlı değildir.
 var aggression := 0.0
 
 
 # --- İhale ---------------------------------------------------------------------
 # Karar zinciri BidStrategy'de: el analizi → beklenen löve → başarı olasılığı
-# → ihale durumu → son teklif. Bu sınıf yalnızca oyuncuya özgü ayarları
-# (zorluk, kişilik) ekler.
+# → ihale durumu → son teklif. Bu sınıf yalnızca zorluk ayarını ekler.
 
 ## İhale durumunu bilerek teklif seçer; BidManager.PASS (0) = pas.
 func choose_bid_in_context(hand: Array[CardData], ctx: BidContext) -> int:
@@ -79,7 +78,25 @@ static func choose_bury(hand: Array[CardData], count: int, trump: int) -> Array[
 
 # --- Kart oynama ---------------------------------------------------------------
 
-## `legal` içinden oynanacak kartı seçer. `trick` masadaki açık kartlardır.
+## Bağlamlı kart seçimi (oyunda kullanılan yol). Seçim her zaman
+## `ctx.legal` (BatakRules.legal_cards) içinden yapılır:
+##   EASY   : rastgele yasal kart
+##   NORMAL : CardTracker + PlayPolicy (yalnızca kesin bilinen renk boşlukları)
+##   HARD/MASTER : PlayPolicy + bilinmeyen boşlukların olasılıkla tahmini
+## Karakterlerin oynayışı farklı değildir; yalnızca zorluk seviyesi etkiler.
+func choose_card_in_context(ctx: PlayContext) -> CardData:
+	assert(not ctx.legal.is_empty())
+	if difficulty == Difficulty.EASY:
+		return ctx.legal[_rng.randi_range(0, ctx.legal.size() - 1)]
+	var pick := PlayPolicy.choose(ctx, difficulty >= Difficulty.HARD)
+	if pick == null or not ctx.legal.has(pick):  # güvenlik: asla kural dışı kart
+		push_warning("PlayPolicy yasal olmayan kart döndürdü; ilk yasal kart oynanıyor")
+		return ctx.legal[0]
+	return pick
+
+
+## Bağlamsız eski API (testler ve basit kullanım için korunur): `legal`
+## içinden oynanacak kartı seçer. `trick` masadaki açık kartlardır.
 func choose_card(legal: Array[CardData], trick: Array[CardData], trump: int) -> CardData:
 	assert(not legal.is_empty())
 	if difficulty == Difficulty.EASY:

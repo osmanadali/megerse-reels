@@ -60,6 +60,10 @@ var bidder: int = NO_SEAT
 var bid := 0
 var dealer := 0
 var tricks_won: Array[int] = []
+## Kart oynama AI'larının ortak açık bilgi kaydı (yalnızca masada görülenler).
+var _tracker: CardTracker
+## İhale sahibinin gömdüğü kartlar; yalnızca ihale sahibinin AI'sına verilir.
+var _buried: Array[CardData] = []
 
 var _n := 3
 var _layout: TableLayout
@@ -151,6 +155,7 @@ func _play_round() -> void:
 	trump_broken = false
 	bidder = NO_SEAT
 	bid = 0
+	_buried.clear()
 	tricks_won.clear()
 	_pile_counts.clear()
 	for i in _n:
@@ -176,6 +181,7 @@ func _play_round() -> void:
 			GameRules.PHASE_TAKE_KITTY:
 				await _take_kitty()
 
+	_tracker = CardTracker.new(_n, trump, bidder, bid, rules.cards_per_player, _buried.size())
 	var leader := bidder
 	for trick_no in rules.cards_per_player:
 		leader = await _play_trick(leader)
@@ -398,6 +404,7 @@ func _bury(ai_trump: int) -> void:
 			hud.show_status("%s kart gömüyor…" % _seat_names[bidder])
 		await _wait(AI_THINK_MAX)
 		to_bury = AIPlayer.choose_bury(hands[bidder], count, ai_trump)
+	_buried = to_bury.duplicate()
 	var spot := _layout.bury_spot(bidder)
 	var yaw := _layout.seat_yaw(bidder)
 	for i in to_bury.size():
@@ -449,7 +456,7 @@ func _play_trick(leader: int) -> int:
 			hud.show_turn(true)
 			if _autoplay:
 				await _wait(AI_THINK_MAX)
-				card = _autoplay_ai.choose_card(legal, trick, trump)
+				card = _autoplay_ai.choose_card_in_context(_context(seat, legal, trick, trick_seats))
 			else:
 				hud.hand.set_input_enabled(true, legal)
 				card = await hud.hand.card_chosen
@@ -458,9 +465,10 @@ func _play_trick(leader: int) -> int:
 		else:
 			hud.show_status("%s düşünüyor…" % _seat_names[seat])
 			await _wait(randf_range(AI_THINK_MIN, AI_THINK_MAX))
-			card = _ai[seat].choose_card(legal, trick, trump)
+			card = _ai[seat].choose_card_in_context(_context(seat, legal, trick, trick_seats))
 		hand.erase(card)
 		deck.register_played(card)
+		_tracker.record_play(seat, card)
 		if card.suit == trump:
 			trump_broken = true
 		trick.append(card)
@@ -478,9 +486,17 @@ func _play_trick(leader: int) -> int:
 	placed[w].set_highlighted(false)
 	await _collect_trick(placed, winner_seat)
 	tricks_won[winner_seat] += 1
+	_tracker.record_trick_end(winner_seat)
 	_refresh_info()
 	trick_finished.emit(trick, trick_seats, winner_seat)
 	return winner_seat
+
+
+## AI'nın karar bağlamı: kendi eli, yasal kartlar, masadaki açık kartlar ve
+## tracker. Gömülen kartlar yalnızca ihale sahibine verilir (hile yok).
+func _context(seat: int, legal: Array[CardData], trick: Array[CardData], trick_seats: Array[int]) -> PlayContext:
+	return PlayContext.build(rules, seat, hands[seat], legal, trick, trick_seats, _tracker,
+		_buried if seat == bidder else ([] as Array[CardData]))
 
 
 ## Kartı oyuncunun elinden/rakibin elinden masadaki yuvasına uçurur.

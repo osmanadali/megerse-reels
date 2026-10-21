@@ -14,6 +14,7 @@ Oyun içinde **Esc**: Devam / Ana Menü / Çıkış. İstatistikler ve ayarlar c
 ```
 godot --headless --path FPSBatak --import          # ilk seferde sınıf önbelleği için
 godot --headless --path FPSBatak -s res://tests/run_tests.gd
+godot --headless --path FPSBatak -s res://tests/run_card_play_tests.gd   # kart oynama AI'sı
 ```
 Geliştirme argümanları (`--` sonrasına yazılır):
 - `--screenshot=/yol/shot.png [--shot-times=2,6.5]` belirtilen saniyelerde ekran görüntüsü alıp çıkar
@@ -55,6 +56,28 @@ Akış: **el analizi** (`HandAnalysis`) → **beklenen löve** (`TrickEstimator`
   kimse teklif vermemişken en düşük teklifi %50 eşikle söyler.
 - Ölçüm: `tools/ai/benchmark_bidding.gd` (eski AI birebir `tools/ai/legacy_bidding.gd`).
 
+## AI kart oynama sistemi
+Kurallar sert kısıttır: AI yalnızca `BatakRules.legal_cards()` listesinden seçer (renge uyma,
+mecburi yükseltme, koz zorunluluğu, kozda yükseltme). Strateji bu listenin içinde çalışır.
+
+- `CardTracker`: yalnızca masada açık oynanan kartlar — hangi kart hangi lövede kimden çıktı,
+  löveyi kim aldı, koz kırıldı mı, ihale ve kalan gereken löve. Hamlelerden kurallara göre
+  çıkarım: renge uymayan o renkte boş; koz da atmayan kozda da boş; mecburi yükseltmeye
+  rağmen geçmeyen o renkte daha büyük karta sahip değil. Gömmelide gömülen 4 kartı yalnızca
+  ihale sahibi bilir; savunanlar için bunlar "bilinmeyen 4 kart" olarak hesaba girer.
+- `PlayContext`: karar anında AI'nın meşru olarak bildiği her şey (kendi eli, yasal kartlar,
+  masa, koz, rol, ihale, alınan/gereken löve, kalan löve, mod, tracker).
+- `PlayPolicy`: her yasal kart puanlanır — bu kartla löveyi alma olasılığı (arkadaki
+  oyuncuların görünmeyen kartları tutma olasılığından), kartı saklamanın gelecekteki değeri,
+  rol (ihale sahibi aciliyeti / savunanın ihale sahibini durdurması ve sıfır löve cezası) ve
+  açılış/atış terimleri. Rol öncelikleri sabit kural değil ağırlıktır; ağırlıklar
+  `tools/ai/benchmark_play.gd` ile aynı ellerde ölçülerek seçildi.
+- Zorluk: Kolay rastgele yasal kart; Normal tracker + puanlama (yalnızca kesin renk boşlukları);
+  Zor/Usta ayrıca bilinmeyen renk boşluklarını olasılıkla tahmin eder. Karakterler oynayışı
+  değiştirmez.
+- Eski `AIPlayer.choose_card(legal, trick, trump)` API'si korunur; oyun
+  `choose_card_in_context(PlayContext)` kullanır.
+
 Kart oynama: "SIRA SENDE" yazınca parlak kartlardan birine tıkla
 (dokunmatikte: önce dokun-seç, sonra tekrar dokun-oyna). Karartılmış kartlar o an oynanamaz.
 
@@ -66,7 +89,7 @@ Kart oynama: "SIRA SENDE" yazınca parlak kartlardan birine tıkla
 | `scenes/characters` | Rakip yer tutucusu (ileride karakter sistemi) |
 | `scripts/cards` | `CardData` (veri), `DeckManager` (deste), `CardFaceRenderer` (prosedürel kart yüzleri), `Card3D` (masadaki kart) |
 | `scripts/rules` | `GameRules` (mod kuralları), `MatchSettings` (tur/hedef, maç sonu), `BatakRules` (uyma/yükseltme/koz), `BidManager` (ihale), `ScoreManager` (puan) |
-| `scripts/ai` | `AIPlayer`, `HandAnalysis`, `TrickEstimator`, `BidContext`, `BidStrategy` — yalnızca kendi eli + açık bilgiyle karar verir |
+| `scripts/ai` | `AIPlayer`, `HandAnalysis`, `TrickEstimator`, `BidContext`, `BidStrategy`, `CardTracker`, `PlayContext`, `PlayPolicy` — yalnızca kendi eli + açık bilgiyle karar verir |
 | `tools/ai` | AI kalibrasyon ve ölçüm araçları (oyunda kullanılmaz) |
 | `scripts/game` | `TableController` (dağıt → ihale → göm → koz → löveler → puan), `SeatLayout`, `TableLayout`, `OpponentHandView` |
 | `scripts/ui` | `MainMenu` (ana menü + duraklatma), `GameHUD`, `HandView` (yelpaze el), `HandCard`, `UiTheme` (ortak tema) |
