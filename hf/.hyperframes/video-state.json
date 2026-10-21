@@ -1,7 +1,7 @@
 {
   "version": 1,
   "historyId": "0e987ff4-b9b0-4d04-ba27-c8d3529849a2",
-  "currentRevision": "c4ba8f05-46ce-4a1c-8d13-0174e7301eef",
+  "currentRevision": "3b1eee99-89f8-46b4-a3dc-dbb0e01e8612",
   "pendingChanges": false,
   "files": {
     "AGENTS.md": {
@@ -93,12 +93,12 @@
       "content": "/root/.cache/hyperframes/history/0e987ff4-b9b0-4d04-ba27-c8d3529849a2/blobs/3d/3d429fcf1fe704bfcabbe36854f142766894751ac9481c088f611ed7cddd0554"
     },
     "demo/build_ots.py": {
-      "hash": "456df58ae7374b3f810f71c44897bf95be01ef05937634c307d48634a1c2f601",
-      "content": "/root/.cache/hyperframes/history/0e987ff4-b9b0-4d04-ba27-c8d3529849a2/blobs/45/456df58ae7374b3f810f71c44897bf95be01ef05937634c307d48634a1c2f601"
+      "hash": "8ed56ea3684483fd8bcb3b94aa23e12494c01a0fc46078e10d5fb1c14b6a189a",
+      "content": "/root/.cache/hyperframes/history/0e987ff4-b9b0-4d04-ba27-c8d3529849a2/blobs/8e/8ed56ea3684483fd8bcb3b94aa23e12494c01a0fc46078e10d5fb1c14b6a189a"
     },
     "demo/ots.html": {
-      "hash": "43620b718f70e25bbc0b114d65cf6f48658ab647fc41c7001c94f6df6e50ceff",
-      "content": "/root/.cache/hyperframes/history/0e987ff4-b9b0-4d04-ba27-c8d3529849a2/blobs/43/43620b718f70e25bbc0b114d65cf6f48658ab647fc41c7001c94f6df6e50ceff"
+      "hash": "77fcca9577caca67a139e97ba03d4c7e06eb2ef65433a89517b151ad66b32e4d",
+      "content": "/root/.cache/hyperframes/history/0e987ff4-b9b0-4d04-ba27-c8d3529849a2/blobs/77/77fcca9577caca67a139e97ba03d4c7e06eb2ef65433a89517b151ad66b32e4d"
     }
   },
   "revisions": {
@@ -238,6 +238,101 @@
           "after": "/root/.cache/hyperframes/history/0e987ff4-b9b0-4d04-ba27-c8d3529849a2/blobs/e4/e4e898bb10f36be838b87304106014e44f9257ba2c0bb71285b9d1531d20038e"
         }
       }
+    },
+    "248b770b-6164-4c0d-a624-7bbf48c34e55": {
+      "actor": {
+        "kind": "outside",
+        "name": "Outside"
+      },
+      "label": "Changed outside the app",
+      "startedAt": 1792533551723,
+      "endedAt": 1792533551749,
+      "files": {
+        "demo/build_ots.py": {
+          "before": "/root/.cache/hyperframes/history/0e987ff4-b9b0-4d04-ba27-c8d3529849a2/blobs/45/456df58ae7374b3f810f71c44897bf95be01ef05937634c307d48634a1c2f601",
+          "after": "/root/.cache/hyperframes/history/0e987ff4-b9b0-4d04-ba27-c8d3529849a2/blobs/c1/c1813eac2f65c0c0d67e0869ba28e577350ff849031452f5ff2282a9e454fbad"
+        },
+        "demo/ots.html": {
+          "before": "/root/.cache/hyperframes/history/0e987ff4-b9b0-4d04-ba27-c8d3529849a2/blobs/43/43620b718f70e25bbc0b114d65cf6f48658ab647fc41c7001c94f6df6e50ceff",
+          "after": "/root/.cache/hyperframes/history/0e987ff4-b9b0-4d04-ba27-c8d3529849a2/blobs/1d/1da68ae8addd9935afe026b45c216b172cea975e480ca3237fa530da7260684d"
+        }
+      }
+    },
+    "d1bbb497-8872-4d18-85b0-e7e4e0543979": {
+      "actor": {
+        "kind": "outside",
+        "name": "Outside"
+      },
+      "label": "Changed outside the app",
+      "startedAt": 1792533619917,
+      "endedAt": 1792533619931,
+      "files": {
+        "demo/build_ots.py": {
+          "before": "/root/.cache/hyperframes/history/0e987ff4-b9b0-4d04-ba27-c8d3529849a2/blobs/c1/c1813eac2f65c0c0d67e0869ba28e577350ff849031452f5ff2282a9e454fbad",
+          "after": "/root/.cache/hyperframes/history/0e987ff4-b9b0-4d04-ba27-c8d3529849a2/blobs/c5/c5b9fa046c8d4a99c12fe49c7c411f48a6ed8a108342fb22fbf31b4746904595"
+        },
+        "demo/ots.html": {
+          "before": "/root/.cache/hyperframes/history/0e987ff4-b9b0-4d04-ba27-c8d3529849a2/blobs/1d/1da68ae8addd9935afe026b45c216b172cea975e480ca3237fa530da7260684d",
+          "after": "/root/.cache/hyperframes/history/0e987ff4-b9b0-4d04-ba27-c8d3529849a2/blobs/08/08bf0f018028c2aea5f7d5418cf859b383a568f024ca4dd55c3f61bb40eca457"
+        }
+      }
+    },
+    "6d62cc2c-29a1-4ccf-be9d-553f44268118": {
+      "actor": {
+        "kind": "outside",
+        "name": "Outside"
+      },
+      "label": "Changed outside the app",
+      "startedAt": 1792533779147,
+      "endedAt": 1792533779162,
+      "files": {
+        "demo/build_ots.py": {
+          "before": "/root/.cache/hyperframes/history/0e987ff4-b9b0-4d04-ba27-c8d3529849a2/blobs/c5/c5b9fa046c8d4a99c12fe49c7c411f48a6ed8a108342fb22fbf31b4746904595",
+          "after": "/root/.cache/hyperframes/history/0e987ff4-b9b0-4d04-ba27-c8d3529849a2/blobs/8f/8f851cd856ebf7b0d7b3edc82900245b1e0c9ef4199885e658a4189c771e5671"
+        },
+        "demo/ots.html": {
+          "before": "/root/.cache/hyperframes/history/0e987ff4-b9b0-4d04-ba27-c8d3529849a2/blobs/08/08bf0f018028c2aea5f7d5418cf859b383a568f024ca4dd55c3f61bb40eca457",
+          "after": "/root/.cache/hyperframes/history/0e987ff4-b9b0-4d04-ba27-c8d3529849a2/blobs/c9/c93cf9cb6c97f3e6d032d6fb189bff3c4b30825723a4c18e11412502f20ffac4"
+        }
+      }
+    },
+    "dc920965-cc76-40a2-8a44-ea16043247d7": {
+      "actor": {
+        "kind": "outside",
+        "name": "Outside"
+      },
+      "label": "Changed outside the app",
+      "startedAt": 1792533850894,
+      "endedAt": 1792533850909,
+      "files": {
+        "demo/build_ots.py": {
+          "before": "/root/.cache/hyperframes/history/0e987ff4-b9b0-4d04-ba27-c8d3529849a2/blobs/8f/8f851cd856ebf7b0d7b3edc82900245b1e0c9ef4199885e658a4189c771e5671",
+          "after": "/root/.cache/hyperframes/history/0e987ff4-b9b0-4d04-ba27-c8d3529849a2/blobs/21/21aa8fda71b6ac4429f71db792b98be516ff02a5cc9ddb1987763caee28257b5"
+        },
+        "demo/ots.html": {
+          "before": "/root/.cache/hyperframes/history/0e987ff4-b9b0-4d04-ba27-c8d3529849a2/blobs/c9/c93cf9cb6c97f3e6d032d6fb189bff3c4b30825723a4c18e11412502f20ffac4",
+          "after": "/root/.cache/hyperframes/history/0e987ff4-b9b0-4d04-ba27-c8d3529849a2/blobs/df/dfc319a6a127ce105340c2983347884cd674c589f8cb6f004e85c297fa13fd39"
+        }
+      }
+    },
+    "3b1eee99-89f8-46b4-a3dc-dbb0e01e8612": {
+      "actor": {
+        "kind": "outside",
+        "name": "Outside"
+      },
+      "label": "Changed outside the app",
+      "startedAt": 1792533925668,
+      "endedAt": 1792533925684,
+      "files": {
+        "demo/build_ots.py": {
+          "before": "/root/.cache/hyperframes/history/0e987ff4-b9b0-4d04-ba27-c8d3529849a2/blobs/21/21aa8fda71b6ac4429f71db792b98be516ff02a5cc9ddb1987763caee28257b5",
+          "after": "/root/.cache/hyperframes/history/0e987ff4-b9b0-4d04-ba27-c8d3529849a2/blobs/8e/8ed56ea3684483fd8bcb3b94aa23e12494c01a0fc46078e10d5fb1c14b6a189a"
+        },
+        "demo/ots.html": {
+          "before": "/root/.cache/hyperframes/history/0e987ff4-b9b0-4d04-ba27-c8d3529849a2/blobs/df/dfc319a6a127ce105340c2983347884cd674c589f8cb6f004e85c297fa13fd39",
+          "after": "/root/.cache/hyperframes/history/0e987ff4-b9b0-4d04-ba27-c8d3529849a2/blobs/77/77fcca9577caca67a139e97ba03d4c7e06eb2ef65433a89517b151ad66b32e4d"
+        }
+      }
     }
   },
   "checks": {
@@ -252,15 +347,15 @@
   },
   "renders": {
     "latest": {
-      "id": "2672c89e-e1ec-4485-9119-dba67966c6b4",
-      "completedAt": 1792533193956,
-      "output": "/home/user/megerse-reels/hf/renders/derinlik-demo.mp4",
+      "id": "a8f66bb7-439b-43f6-bf74-66f7f5f009c8",
+      "completedAt": 1792533979288,
+      "output": "/home/user/megerse-reels/hf/renders/ots-demo.mp4",
       "status": "completed",
-      "revision": "c4ba8f05-46ce-4a1c-8d13-0174e7301eef"
+      "revision": "3b1eee99-89f8-46b4-a3dc-dbb0e01e8612"
     },
     "retainedRevisions": [
-      "c4ba8f05-46ce-4a1c-8d13-0174e7301eef",
-      "d2a5763e-b136-43b7-928e-2a474b7793e8"
+      "3b1eee99-89f8-46b4-a3dc-dbb0e01e8612",
+      "dc920965-cc76-40a2-8a44-ea16043247d7"
     ]
   },
   "pendingArtifactCleanup": []

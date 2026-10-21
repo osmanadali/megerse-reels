@@ -18,6 +18,7 @@ import math
 DEFS_P = """
 <filter id="skin" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="1.6" numOctaves="2" seed="5" result="n"/><feColorMatrix in="n" type="matrix" values="0 0 0 0 .35  0 0 0 0 .16  0 0 0 0 .1  0 0 0 .22 0" result="d"/><feComposite in="d" in2="SourceGraphic" operator="in" result="d2"/><feMerge><feMergeNode in="SourceGraphic"/><feMergeNode in="d2"/></feMerge></filter>
 <filter id="tweed" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency=".9 .35" numOctaves="3" seed="3" result="n"/><feColorMatrix in="n" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 .45 -.05" result="d"/><feComposite in="d" in2="SourceGraphic" operator="in" result="d2"/><feMerge><feMergeNode in="SourceGraphic"/><feMergeNode in="d2"/></feMerge></filter>
+<filter id="stubble" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency="2.4" numOctaves="1" seed="12" result="n"/><feColorMatrix in="n" type="matrix" values="0 0 0 0 .12  0 0 0 0 .08  0 0 0 0 .06  0 0 0 -2.2 1.35" result="d"/><feComposite in="d" in2="SourceGraphic" operator="in"/></filter>
 <filter id="soft3" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="3"/></filter>
 <filter id="soft8" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="8"/></filter>
 <filter id="dofFG" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="9"/></filter>
@@ -85,18 +86,18 @@ def head(turn=.4, gaze=(.6, 0), expr=None, skin="#C98B63", hair="#2B1D14", iris=
     th = math.radians(max(0, min(.85, turn)) * 80)
     sn, cs = math.sin(th), math.cos(th)
     c = 62 * sn
-    fw = 74 if female else 80                          # yanak yarı genişliği
-    jw = 46 if female else 56                          # çene köşesi
+    fw = 82 if female else 88                          # yanak yarı genişliği
+    jw = 46 if female else 68                          # çene köşesi
     back = -96 - 14 * sn
     face = (f"M{c*.3:.1f} -150 C{c+fw*cs*.9+10*sn:.1f} -150 {c+fw*cs+8*sn:.1f} -100 {c+fw*cs+6*sn:.1f} -50 "      # alın → şakak (uzak)
             f"C{c+(fw+6)*cs+10*sn:.1f} -14 {c+(fw+4)*cs+8*sn:.1f} 10 {c+(fw-6)*cs+6*sn:.1f} 40 "                    # elmacık
-            f"C{c+(fw-14)*cs+6*sn:.1f} 80 {c+jw*cs+10*sn:.1f} 112 {c+16*sn+16*cs:.1f} 138 "                         # yanak → çene
-            f"C{c+8*sn:.1f} 148 {c-16*cs:.1f} 148 {c-30*cs-6*sn:.1f} 136 "                                          # çene ucu
+            f"C{c+(fw-14)*cs+6*sn:.1f} 80 {c+jw*cs+10*sn:.1f} 112 {c+16*sn+16*cs:.1f} 146 "                         # yanak → çene
+            f"C{c+8*sn:.1f} 156 {c-16*cs:.1f} 156 {c-30*cs-6*sn:.1f} 144 "                                          # çene ucu
             f"C{c-jw*cs-30*sn:.1f} 112 {c-(fw-6)*cs-46*sn:.1f} 90 {c-(fw+4)*cs-52*sn:.1f} 50 "                       # yakın çene hattı → çene köşesi
             f"C{back+6:.1f} 30 {back:.1f} -10 {back:.1f} -50 C{back:.1f} -120 {-40-10*sn:.1f} -150 {c*.3:.1f} -150 Z")
     lshG = "pl" if lit_left else "pr"
-    ey = -14
-    nearx, farx = c - 34 * cs - 2 * sn, c + 34 * cs - 4 * sn
+    ey = -2
+    nearx, farx = c - 40 * cs - 2 * sn, c + 40 * cs - 4 * sn
     ew = 40
     eyes = (f'<g transform="translate({nearx:.1f} 0) scale({1-.12*sn:.2f} 1) translate({-nearx:.1f} 0)">{eye(nearx, ey, ew, False, gaze, iris, e["lid"], age, lit_left, pid + "a")}</g>'
             + f'<g transform="translate({farx:.1f} 0) scale({1-.5*sn:.2f} 1) translate({-farx:.1f} 0)">{eye(farx, ey, ew, True, gaze, iris, e["lid"], age, lit_left, pid + "b")}</g>')
@@ -104,19 +105,20 @@ def head(turn=.4, gaze=(.6, 0), expr=None, skin="#C98B63", hair="#2B1D14", iris=
     brows = (f'<g transform="translate({nearx:.1f} 0) scale({1-.1*sn:.2f} 1) translate({-nearx:.1f} 0)">{brow(nearx - 2, ey - 30, 50, False, e["brow"], e["knit"], bcol)}</g>'
              f'<g transform="translate({farx:.1f} 0) scale({1-.5*sn:.2f} 1) translate({-farx:.1f} 0)">{brow(farx + 2, ey - 30, 50, True, e["brow"], e["knit"], bcol)}</g>')
     tipx = c + 6 + 26 * sn
-    nose = (f'<path d="M{c-8:.1f} -30 C{c-10+4*sn:.1f} 0 {tipx-20:.1f} 24 {tipx-16:.1f} 40" stroke="#6A3420" stroke-opacity=".3" stroke-width="5" fill="none" filter="url(#soft3)"/>'
-            f'<path d="M{c+2+4*sn:.1f} -28 C{c+6+10*sn:.1f} 0 {tipx+2:.1f} 26 {tipx+3:.1f} 40" fill="none" stroke="#6A3420" stroke-opacity="{.1+.3*sn:.2f}" stroke-width="2"/>'
+    nose = (f'<path d="M{c-8:.1f} -52 C{c-10+4*sn:.1f} 0 {tipx-20:.1f} 24 {tipx-16:.1f} 40" stroke="#6A3420" stroke-opacity=".3" stroke-width="5" fill="none" filter="url(#soft3)"/>'
+            f'<path d="M{c+2+4*sn:.1f} -50 C{c+6+10*sn:.1f} -10 {tipx+2:.1f} 26 {tipx+3:.1f} 40" fill="none" stroke="#6A3420" stroke-opacity="{.1+.3*sn:.2f}" stroke-width="2"/>'
             f'<path d="M{tipx-6:.1f} 32 Q{tipx+4:.1f} 32 {tipx+3:.1f} 42 Q{tipx+2:.1f} 52 {tipx-12:.1f} 52" fill="none" stroke="#6A3420" stroke-opacity="{.15+.35*sn:.2f}" stroke-width="1.8"/>'
             f'<ellipse cx="{tipx-6:.1f}" cy="50" rx="16" ry="7" fill="#5A2A18" opacity=".2" filter="url(#soft3)"/><ellipse cx="{tipx-3:.1f}" cy="38" rx="4" ry="3" fill="#fff" opacity=".22" filter="url(#soft3)"/>'
-            f'<path d="M{tipx-28:.1f} 47 Q{tipx-32:.1f} 34 {tipx-20:.1f} 36" stroke="#6A3420" stroke-opacity=".45" stroke-width="2.2" fill="none"/>'
+            + (f'<path d="M{tipx+8:.1f} 47 Q{tipx+12:.1f} 34 {tipx+2:.1f} 34" stroke="#6A3420" stroke-opacity=".3" stroke-width="2.2" fill="none"/>' if not female and sn < .3 else '') + f'<path d="M{tipx-30:.1f} 48 Q{tipx-36:.1f} 32 {tipx-20:.1f} 34" stroke="#6A3420" stroke-opacity=".45" stroke-width="2.2" fill="none"/>'
             f'<path d="M{tipx-20:.1f} 51 Q{tipx-15:.1f} 55 {tipx-9:.1f} 52" stroke="#3A1A10" stroke-width="3" fill="none" stroke-linecap="round" opacity=".7"/>'
             f'<ellipse cx="{tipx-10:.1f}" cy="62" rx="22" ry="7" fill="url(#aoR)" opacity=".55"/>')
-    my, mx, sm = 86, c + 4 * sn, e["smile"]
+    nose = f'<g transform="translate(0 20)">{nose}</g>'
+    my, mx, sm = 104, c + 4 * sn, e["smile"]
     mw = (44 if female else 50) * (1 - .3 * sn)
     ml, mr = mx - mw * (.5 + .1 * sn), mx + mw * (.5 - .1 * sn)
     opn = e["open"] * 10
-    lip = "#B4564C" if female else "#A4544A"
-    mouth = (f'<path d="M{mx-3:.1f} 58 Q{mx:.1f} 70 {mx+1:.1f} 74" stroke="#6A3420" stroke-opacity=".22" stroke-width="5" fill="none" filter="url(#soft3)"/>'
+    lip = "#B4564C" if female else "#8E5246"
+    mouth = (f'<path d="M{mx-3:.1f} 78 Q{mx:.1f} 88 {mx+1:.1f} 92" stroke="#6A3420" stroke-opacity=".22" stroke-width="5" fill="none" filter="url(#soft3)"/>'
              f'<path d="M{ml:.1f} {my-sm*5:.1f} Q{mx-10:.1f} {my-9:.1f} {mx-2:.1f} {my-6:.1f} Q{mx+3:.1f} {my-9:.1f} {mx+10:.1f} {my-8:.1f} Q{mr-4:.1f} {my-5:.1f} {mr:.1f} {my-sm*5:.1f} '
              f'Q{mx:.1f} {my+2+opn:.1f} {ml:.1f} {my-sm*5:.1f} Z" fill="{lip}"/>'
              + (f'<path d="M{ml+6:.1f} {my-sm*4:.1f} Q{mx:.1f} {my+opn*.6:.1f} {mr-6:.1f} {my-sm*4:.1f} Q{mx:.1f} {my+opn:.1f} {ml+6:.1f} {my-sm*4:.1f} Z" fill="#2A0E0A"/>' if opn else "")
@@ -126,17 +128,44 @@ def head(turn=.4, gaze=(.6, 0), expr=None, skin="#C98B63", hair="#2B1D14", iris=
              f'<ellipse cx="{mx:.1f}" cy="{my+opn+24:.1f}" rx="20" ry="6" fill="url(#aoR)" opacity=".4"/>'
              f'<path d="M{ml-6:.1f} {my-26-sm*3:.1f} Q{ml-14:.1f} {my-8:.1f} {ml-4:.1f} {my+6-sm*4:.1f}" stroke="#6A3420" stroke-opacity="{.1+age*.25+sm*.15:.2f}" stroke-width="2" fill="none"/>')
     earx = c - 92 * cs - 6 * sn
-    ear = (f'<path d="M{earx+8:.1f} -24 C{earx-18:.1f} -40 {earx-24:.1f} 20 {earx-2:.1f} 36 C{earx+6:.1f} 40 {earx+10:.1f} 20 {earx+8:.1f} -24 Z" fill="{skin}"/>'
+    ear = (f'<g transform="translate(0 12)"><path d="M{earx+8:.1f} -24 C{earx-18:.1f} -40 {earx-24:.1f} 20 {earx-2:.1f} 36 C{earx+6:.1f} 40 {earx+10:.1f} 20 {earx+8:.1f} -24 Z" fill="{skin}"/>'
            f'<path d="M{earx+3:.1f} -16 C{earx-12:.1f} -24 {earx-14:.1f} 14 {earx:.1f} 24" stroke="#7A4030" stroke-opacity=".55" stroke-width="3" fill="none"/>'
-           f'<path d="M{earx-18:.1f} -16 C{earx-22:.1f} 0 {earx-16:.1f} 20 {earx-4:.1f} 32" stroke="#E2624E" stroke-opacity="{.55 if lit_left else .15}" stroke-width="4" fill="none" filter="url(#soft3)"/>') if (sn > .15 and not female) else ""
+           f'<path d="M{earx-18:.1f} -16 C{earx-22:.1f} 0 {earx-16:.1f} 20 {earx-4:.1f} 32" stroke="#E2624E" stroke-opacity="{.55 if lit_left else .15}" stroke-width="4" fill="none" filter="url(#soft3)"/></g>') if not female else ""
+    if not female and sn <= .15:     # önden: iki kulak, kafanın iki yanında
+        one = lambda x0, m: (f'<g transform="translate({x0:.1f} 12) scale({m} 1)"><path d="M6 -26 C-14 -40 -20 20 -2 36 C6 40 10 20 6 -26 Z" fill="{skin}"/>'
+                             f'<path d="M2 -16 C-10 -24 -12 14 0 24" stroke="#7A4030" stroke-opacity=".5" stroke-width="3" fill="none"/></g>')
+        ear = one(c - (fw + 2) * cs, 1) + one(c + (fw + 2) * cs, -1)
     sss = f'<path d="M{tipx+3:.1f} 30 Q{tipx+8:.1f} 42 {tipx:.1f} 50" stroke="#E2624E" stroke-opacity=".3" stroke-width="3" fill="none" filter="url(#soft3)"/>'
     shade = f'<path d="{face}" fill="url(#{lshG})"/>'
+    if not female:
+        lowface = (f"M{c-(fw-4)*cs-40*sn:.1f} 52 C{c-40*cs:.1f} 66 {c+30*cs:.1f} 66 {c+(fw-6)*cs+6*sn:.1f} 46 "
+                   f"C{c+(fw-14)*cs+6*sn:.1f} 84 {c+jw*cs+10*sn:.1f} 116 {c+16*sn+16*cs:.1f} 146 C{c+8*sn:.1f} 156 {c-16*cs:.1f} 156 {c-30*cs-6*sn:.1f} 144 "
+                   f"C{c-jw*cs-30*sn:.1f} 116 {c-(fw-6)*cs-46*sn:.1f} 92 {c-(fw-4)*cs-40*sn:.1f} 52 Z")
+        rugged = (f'<defs><mask id="{pid}sm" maskUnits="userSpaceOnUse" x="-300" y="-300" width="600" height="600"><path d="{lowface}" fill="#fff" filter="url(#soft8)" transform="translate(0 10)"/></mask></defs>'
+                  f'<g mask="url(#{pid}sm)"><path d="{lowface}" fill="#1E1410" opacity=".5" filter="url(#stubble)"/><path d="{lowface}" fill="#3A2A20" opacity=".12"/></g>'
+                  f'<path d="M{c-56*cs:.1f} -26 Q{c:.1f} -40 {c+52*cs:.1f} -26" stroke="#3A1A0E" stroke-opacity=".3" stroke-width="12" fill="none" filter="url(#soft8)"/>'   # kaş kemeri gölgesi
+                  f'<path d="M{c-60*cs:.1f} -54 Q{c:.1f} -70 {c+50*cs:.1f} -56" stroke="#fff" stroke-opacity=".1" stroke-width="10" fill="none" filter="url(#soft8)"/>'
+                  + "".join(f'<path d="M{x-16:.1f} 18 Q{x:.1f} 28 {x+16:.1f} 18" stroke="#5A2A1A" stroke-opacity=".3" stroke-width="3" fill="none" filter="url(#soft3)"/>' for x in (nearx, farx))   # göz altı torbası
+                  + f'<ellipse cx="{c+18*sn:.1f}" cy="50" rx="22" ry="16" fill="#B8503E" opacity=".18" filter="url(#soft8)"/>'                                       # burun kızarıklığı
+                  + "".join(f'<path d="M{c-44*cs:.1f} {-96+k*12} Q{c:.1f} {-102+k*12} {c+40*cs:.1f} {-96+k*12}" stroke="#6A3420" stroke-opacity="{.04+age*.08:.2f}" stroke-width="1.4" fill="none"/>' for k in range(3))
+                  + f'<path d="M{c-jw*cs-26*sn:.1f} 110 Q{c-20*cs:.1f} 150 {c+16*sn+12*cs:.1f} 146" stroke="#2A1008" stroke-opacity=".22" stroke-width="8" fill="none" filter="url(#soft3)"/>')   # çene hattı
+        shade = shade + rugged
     cheek = f'<path d="M{c+(fw-4)*cs+6*sn:.1f} 0 C{c+(fw-14)*cs:.1f} 40 {c+(fw-30)*cs:.1f} 70 {c+(fw-40)*cs:.1f} 90" stroke="#6A3420" stroke-opacity="{.25*sn:.2f}" stroke-width="10" fill="none" filter="url(#soft8)"/>'
-    blush = f'<ellipse cx="{nearx-6:.1f}" cy="40" rx="34" ry="22" fill="url(#blush)"/><ellipse cx="{farx+4:.1f}" cy="40" rx="{26*(1-.4*sn):.1f}" ry="20" fill="url(#blush)"/>'
-    nw = 44 if female else 54
-    neck = (f'<path d="M{c-nw-14*sn:.1f} 70 C{c-nw-16*sn:.1f} 130 {c-nw-20:.1f} 170 {c-nw-34:.1f} 205 L{c+nw+30:.1f} 205 C{c+nw+10:.1f} 170 {c+nw+4:.1f} 130 {c+nw-6*sn:.1f} 70 Z" fill="{skin}"/>'
-            f'<path d="M{c-nw-14*sn:.1f} 70 C{c-nw-16*sn:.1f} 130 {c-nw-20:.1f} 170 {c-nw-34:.1f} 205 L{c+nw+30:.1f} 205 C{c+nw+10:.1f} 170 {c+nw+4:.1f} 130 {c+nw-6*sn:.1f} 70 Z" fill="url(#{lshG})"/>'
-            f'<path d="M{c-nw:.1f} 128 Q{c:.1f} 170 {c+nw:.1f} 124" stroke="#2A1008" stroke-opacity=".35" stroke-width="26" fill="none" filter="url(#soft8)"/>')
+    blush = f'<ellipse cx="{nearx-6:.1f}" cy="52" rx="34" ry="22" fill="url(#blush)"/><ellipse cx="{farx+4:.1f}" cy="52" rx="{26*(1-.4*sn):.1f}" ry="20" fill="url(#blush)"/>'
+    nw = 44 if female else 56
+    earx0 = c - 92 * cs - 6 * sn
+    bt = (-(nw - 4) - 34 * sn, 100 - 56 * sn)                 # ense üstü: dönünce kafatası tabanına (kulak arkası) kayar
+    ft = ((nw - 4) * (1 - sn) + (c + 20 * sn - 10) * sn, 100 + 28 * sn)   # boğaz üstü: dönünce çenenin altına
+    bb, fb = (-nw - 34, 205), (nw + 30 + 8 * sn, 205)        # yakaya iniş (trapez eğimi)
+    neck_d = (f"M{bt[0]:.1f} {bt[1]} C{bt[0]-4:.1f} 110 {bb[0]+16:.1f} 160 {bb[0]:.1f} {bb[1]} L{fb[0]:.1f} {fb[1]} "
+              f"C{fb[0]-14:.1f} 180 {ft[0]+6:.1f} 160 {ft[0]:.1f} {ft[1]} Z")
+    adam = (f'<path d="M{ft[0]-2:.1f} 150 q6 8 1 18" stroke="#000" stroke-opacity=".22" stroke-width="3" fill="none"/>'
+            f'<ellipse cx="{ft[0]-6:.1f}" cy="158" rx="5" ry="8" fill="#fff" opacity=".12"/>') if not female else ""
+    neck = (f'<path d="{neck_d}" fill="{skin}"/><path d="{neck_d}" fill="url(#{lshG})"/>'
+            f'<path d="{neck_d}" fill="#2A1008" opacity="{.12+.2*sn:.2f}"/>'
+            f'<path d="M{earx0+4:.1f} 70 C{earx0+20:.1f} 120 {-6:.1f} 170 {8:.1f} 205" stroke="#2A1008" stroke-opacity=".28" stroke-width="7" fill="none" filter="url(#soft3)"/>'   # SCM kası
+            f'<path d="M{earx0+10:.1f} 74 C{earx0+26:.1f} 120 {2:.1f} 168 {16:.1f} 205" stroke="#fff" stroke-opacity=".08" stroke-width="5" fill="none"/>'
+            f'{adam}<path d="M{earx0+10:.1f} 92 Q{c:.1f} 168 {ft[0]+10:.1f} 126" stroke="#2A1008" stroke-opacity=".38" stroke-width="22" fill="none" filter="url(#soft8)"/>')   # çenenin boyuna düşen gölgesi
     if female:
         hair_back = (f'<path d="M{back-14:.1f} -60 C{back-34:.1f} 40 {back-30:.1f} 150 {back+10:.1f} 210 C{back+40:.1f} 240 {back+80:.1f} 226 {c-40:.1f} 200 '
                      f'L{c+70:.1f} 200 C{c+fw*cs+50:.1f} 190 {c+fw*cs+40:.1f} 120 {c+fw*cs+30:.1f} 40 C{c+fw*cs+30:.1f} -40 {c+fw*cs+20:.1f} -100 {c*.3:.1f} -150 Z" fill="{hair}"/>'
@@ -146,10 +175,11 @@ def head(turn=.4, gaze=(.6, 0), expr=None, skin="#C98B63", hair="#2B1D14", iris=
     else:
         hair_back = ""
         hair_top = (f'<path d="M{back-6:.1f} -10 C{back-16:.1f} -120 -40 -176 {16+c*.4:.1f} -168 C{c+fw*cs+34:.1f} -160 {c+fw*cs+26:.1f} -96 {c+fw*cs+10:.1f} -76 '
-                    f'C{c+fw*cs-8:.1f} -110 {c+10:.1f} -122 {c-30:.1f} -118 C{c-60:.1f} -112 {earx+30:.1f} -84 {earx+16:.1f} -40 C{earx-4:.1f} -30 {earx-14:.1f} 40 {back+30:.1f} 74 C{back+6:.1f} 60 {back-4:.1f} 30 {back-6:.1f} -10 Z" fill="{hair}"/>')
+                    f'C{c+fw*cs-8:.1f} -110 {c+10:.1f} -122 {c-30:.1f} -118 C{c-60:.1f} -112 {earx+30:.1f} -84 {earx+16:.1f} -40 C{earx-4:.1f} -30 {earx-14:.1f} {-30+70*sn:.1f} {back+30:.1f} {-20+94*sn:.1f} C{back+6:.1f} {-30+90*sn:.1f} {back-4:.1f} 30 {back-6:.1f} -10 Z" fill="{hair}"/>')
     strands = "".join(f'<path d="M{back+i*16:.1f} {-60-abs(math.sin(i))*40:.1f} Q{-40+i*10+c*.3:.1f} -160 {20+i*7+c*.5:.1f} -152" stroke="#000" stroke-opacity=".12" stroke-width="2" fill="none"/>' for i in range(10))
+    strands = f'<defs><clipPath id="{pid}hc"><path d="{hair_top.split(chr(34))[1]}"/></clipPath></defs><g clip-path="url(#{pid}hc)">{strands}</g>'
     hair_hl = f'<path d="M{-50+c*.3:.1f} -146 Q{c*.4:.1f} -170 {50+c*.4:.1f} -150" stroke="#fff" stroke-opacity=".16" stroke-width="10" fill="none" filter="url(#soft3)"/>'
-    chinAO = f'<ellipse cx="{c:.1f}" cy="150" rx="60" ry="14" fill="url(#aoR)"/>'
+    chinAO = f'<ellipse cx="{c:.1f}" cy="160" rx="60" ry="14" fill="url(#aoR)"/>'
     back_part = f'<defs>{_iris_defs(pid+"a", iris)}{_iris_defs(pid+"b", iris)}</defs>{hair_back}{neck}'
     front = (f'<g filter="url(#skin)"><path d="{face}" fill="{skin}"/>{blush}{cheek}{shade}</g>{chinAO}{brows}{eyes}{nose}{sss}{mouth}{hair_top}{strands}{hair_hl}{ear}')
     return (back_part, front) if split else back_part + front
@@ -183,27 +213,52 @@ def jacket(turn=.4, coat="#3B4A62", shirt="#EDE7DA", tie="#7A2A24", female=False
     return f'<g filter="url(#tweed)"><path d="{body}" fill="{coat}"/>{folds}{seams}</g>{shirtV}{lap}<path d="{body}" fill="url(#{lshG})" opacity=".9"/>{btn}'
 
 
-def hand_cup(skin="#C98B63", lit_left=True, sleeve="#3B4A62", cuff="#EDE7DA"):
-    """Fincanı kavrayan sağ el (parmak boğumları, tırnaklar, AO). Yerel: fincan merkezi (0,0), ~160 birim."""
+def hand_cup(skin="#C98B63", lit_left=True, sleeve=None, cuff=None):
+    """Fincanı sağdan kavrayan el. Avuç fincanın sağ yanında, dört parmak fincanın önünden sarılır (işaret parmağı üstte,
+    serçe altta ve kısa), başparmak fincanın arkasında kalır (görünmez). Bilek (130, 10) noktasında biter → arm_rest() ile kola bağlanır.
+    Yerel: fincan merkezi (0,0)."""
     cup = ('<path d="M-60 -70 L60 -70 L50 70 Q0 86 -50 70 Z" fill="url(#ceramic)"/><ellipse cx="0" cy="-70" rx="60" ry="14" fill="#E9E4DA"/>'
            '<ellipse cx="0" cy="-67" rx="52" ry="10" fill="#3A2214"/><ellipse cx="-14" cy="-69" rx="20" ry="3" fill="#7A4A2A" opacity=".7"/>'
-           '<path d="M-48 -50 Q-54 0 -44 60" stroke="#fff" stroke-opacity=".7" stroke-width="6" fill="none" filter="url(#soft3)"/>'
-           '<path d="M58 -40 C110 -40 110 40 52 40" stroke="#EDE8DE" stroke-width="14" fill="none"/>')
+           '<path d="M-48 -50 Q-54 0 -44 60" stroke="#fff" stroke-opacity=".7" stroke-width="6" fill="none" filter="url(#soft3)"/>')
+    # elin sırtı: parmak köklerinden (x≈44) bileğe (x≈130)
+    back = (f'<path d="M40 -52 C64 -60 96 -44 118 -18 C132 -4 134 26 126 40 C108 58 70 70 42 64 Z" fill="{skin}"/>'
+            f'<path d="M40 -52 C64 -60 96 -44 118 -18 C132 -4 134 26 126 40 C108 58 70 70 42 64 Z" fill="url(#{"pl" if lit_left else "pr"})"/>'
+            + "".join(f'<path d="M{50+i*2} {-40+i*28} Q{84} {-20+i*16} {118} {-4+i*10}" stroke="#7A4630" stroke-opacity=".18" stroke-width="2" fill="none"/>' for i in range(4)))   # tendonlar
     fingers = []
-    for i, (y, ln) in enumerate([(-38, 1), (-8, 1.06), (22, 1), (50, .82)]):
-        x0 = 20
-        seg = f"M{x0} {y} q{-22*ln:.1f} -3 {-38*ln:.1f} 2 q{-12*ln:.1f} 4 {-20*ln:.1f} 11"
-        fingers.append(f'<path d="{seg}" stroke="#000" stroke-opacity=".35" stroke-width="27" fill="none" stroke-linecap="round" transform="translate(1 3)" filter="url(#soft3)"/>'
-                       f'<path d="{seg}" stroke="{skin}" stroke-width="21" fill="none" stroke-linecap="round" stroke-linejoin="round"/>'
-                       f'<path d="{seg}" stroke="#5A2A18" stroke-opacity=".22" stroke-width="7" fill="none" stroke-linecap="round" transform="translate(0 6)"/>'
-                       f'<path d="M{x0-18*ln:.1f} {y-6:.1f} q2 6 0 11 M{x0-38*ln:.1f} {y-4:.1f} q2 6 0 11" stroke="#7A4630" stroke-opacity=".5" stroke-width="1.6" fill="none"/>'
-                       f'<ellipse cx="{x0-56*ln:.1f}" cy="{y+11:.1f}" rx="5" ry="6" fill="#E8C0A8" stroke="#9A6A50" stroke-width="1"/>')
-    palm = (f'<path d="M14 -52 C70 -60 110 -20 116 30 C120 70 80 90 40 82 C20 78 14 60 16 40 Z" fill="{skin}"/>'
-            f'<path d="M14 -52 C70 -60 110 -20 116 30 C120 70 80 90 40 82 C20 78 14 60 16 40 Z" fill="url(#{"pl" if lit_left else "pr"})"/>'
-            f'<path d="M26 -46 C-6 -64 -40 -72 -58 -60" stroke="{skin}" stroke-width="26" fill="none" stroke-linecap="round"/>'
-            f'<path d="M-36 -68 q2 7 0 12" stroke="#7A4630" stroke-opacity=".5" stroke-width="1.6" fill="none"/><ellipse cx="-60" cy="-62" rx="7" ry="6" fill="#E8C0A8" stroke="#9A6A50" stroke-width="1"/>'
-            f'<path d="M70 -20 Q60 20 74 60" stroke="#7A4630" stroke-opacity=".3" stroke-width="2" fill="none"/>')
-    return cup + "".join(fingers[::-1]) + palm + '<rect x="96" y="-10" width="70" height="110" fill="' + sleeve + '" filter="url(#tweed)"/><rect x="92" y="-6" width="14" height="104" fill="' + cuff + '"/>'
+    for i, (y, ln, wd) in enumerate([(-40, 1.0, 21), (-13, 1.04, 21), (14, .96, 20), (40, .8, 17)]):
+        x0 = 46
+        p1, p2 = x0 - 40 * ln, x0 - 70 * ln          # orta ve uç boğum
+        seg = f"M{x0} {y} L{p1:.1f} {y+2:.1f} Q{p2+6:.1f} {y+3:.1f} {p2:.1f} {y+12:.1f}"
+        fingers.append(f'<path d="{seg}" stroke="#2A1208" stroke-opacity=".35" stroke-width="{wd+3}" fill="none" stroke-linecap="round" stroke-linejoin="round" transform="translate(1 3)" filter="url(#soft3)"/>'
+                       f'<path d="{seg}" stroke="{skin}" stroke-width="{wd}" fill="none" stroke-linecap="round" stroke-linejoin="round"/>'
+                       f'<path d="{seg}" stroke="#5A2A18" stroke-opacity=".2" stroke-width="{wd*.3:.1f}" fill="none" stroke-linecap="round" transform="translate(0 {wd*.32:.1f})"/>'
+                       f'<circle cx="{x0-2}" cy="{y-2}" r="{wd*.42:.1f}" fill="#fff" opacity=".12"/>'                                          # kök boğum parlaklığı
+                       f'<path d="M{p1+3:.1f} {y-wd*.35:.1f} q-2 {wd*.35:.1f} 0 {wd*.7:.1f}" stroke="#7A4630" stroke-opacity=".5" stroke-width="1.5" fill="none"/>'
+                       f'<ellipse cx="{p2+3:.1f}" cy="{y+9:.1f}" rx="{wd*.26:.1f}" ry="{wd*.3:.1f}" fill="#E9C4AE" stroke="#9A6A50" stroke-width="1" transform="rotate(-25 {p2+3:.1f} {y+9:.1f})"/>')
+    ao = '<ellipse cx="44" cy="0" rx="10" ry="60" fill="url(#aoR)"/>'
+    return cup + back + ao + "".join(fingers[::-1])
+
+
+def arm_rest(shoulder, elbow, wrist, sleeve="#7A3B30", cuff=None, w1=58, w2=40, lit_left=True):
+    """Masaya dayanan kol (ekran koordinatı): omuz → dirsek (masada) → bilek. Konik kol, dirsekte kumaş kıvrımları,
+    dirseğin masaya temas gölgesi, manşet. Eli bileğe hand_cup ile koy."""
+    (sx, sy), (ex, ey), (wx, wy) = shoulder, elbow, wrist
+    def band(a, b, wa, wb):
+        dx, dy = b[0] - a[0], b[1] - a[1]
+        L = math.hypot(dx, dy)
+        nx, ny = -dy / L, dx / L
+        return (f"M{a[0]+nx*wa/2:.1f} {a[1]+ny*wa/2:.1f} L{b[0]+nx*wb/2:.1f} {b[1]+ny*wb/2:.1f} "
+                f"L{b[0]-nx*wb/2:.1f} {b[1]-ny*wb/2:.1f} L{a[0]-nx*wa/2:.1f} {a[1]-ny*wa/2:.1f} Z")
+    upper, fore = band((sx, sy), (ex, ey), w1, w1 * .9), band((ex, ey), (wx, wy), w1 * .95, w2)
+    sh = "pl" if lit_left else "pr"
+    folds = "".join(f'<path d="M{ex-20+i*10:.1f} {ey-24+i*4:.1f} q{8:.1f} {12:.1f} {-2:.1f} {26:.1f}" stroke="#000" stroke-opacity=".3" stroke-width="3" fill="none" filter="url(#soft3)"/>' for i in range(3))
+    cuffd = f'<path d="{band((wx+(ex-wx)*.12, wy+(ey-wy)*.12), (wx, wy), w2*1.05, w2*1.05)}" fill="{cuff or sleeve}" stroke="#000" stroke-opacity=".3" stroke-width="2"/>'
+    return (f'<ellipse cx="{ex:.1f}" cy="{ey+w1*.42:.1f}" rx="{w1*.9:.1f}" ry="9" fill="#000" opacity=".45" filter="url(#soft3)"/>'
+            f'<ellipse cx="{sx:.1f}" cy="{sy:.1f}" rx="{w1*.5:.1f}" ry="{w1*.6:.1f}" fill="{sleeve}" filter="url(#tweed)"/>'
+            f'<path d="M{sx-w1*.5:.1f} {sy:.1f} Q{sx-w1*.45:.1f} {sy+w1:.1f} {sx-w1*.38:.1f} {sy+w1*1.8:.1f}" stroke="#000" stroke-opacity=".3" stroke-width="6" fill="none" filter="url(#soft3)"/>'
+            f'<path d="{upper}" fill="{sleeve}" filter="url(#tweed)"/><path d="{upper}" fill="#000" opacity=".08"/>'
+            f'<circle cx="{ex:.1f}" cy="{ey:.1f}" r="{w1*.47:.1f}" fill="{sleeve}" filter="url(#tweed)"/>'
+            f'<path d="{fore}" fill="{sleeve}" filter="url(#tweed)"/><path d="{fore}" fill="#000" opacity=".12"/>{folds}{cuffd}')
 
 
 def back_shoulder(coat="#2E3B4E", hair="#2B1D14", skin="#B97D58", lit_left=True):
@@ -243,7 +298,9 @@ def chiaroscuro(cx, cy, r=700, dark=.72):
 
 def bust(turn=.4, flip=False, lit_left=True, coat="#3B4A62", female=False, skin="#C98B63", hair="#2B1D14", iris="#5A3A1E",
          gaze=(.7, 0), expr=None, age=.35, pid="b", tie="#7A2A24"):
-    """Baş + omuzlar tek parça. flip=True sola bakar (ışık dünyaya göre sabit kalır)."""
+    """Baş + omuzlar tek parça. flip=True sola bakar (ışık dünyaya göre sabit kalır).
+    turn en fazla .6: konuşma sahnelerinde sinemadaki gibi karakter kameraya hafif açılır (cheat); tam profil kullanılmaz."""
+    turn = min(turn, .6)
     ll = lit_left != flip
     hb, hf = head(turn, gaze, expr, skin, hair, iris, age, female, ll, pid, split=True)
     inner = hb + f'<g transform="translate(0 -72)">{jacket(turn, coat=coat, female=female, lit_left=ll, tie=tie)}</g>' + hf

@@ -4,7 +4,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT / "scripts"))
 from artlib2 import DEFS2  # noqa: E402
-from portrait import DEFS_P, back_shoulder, bust, chiaroscuro, defs_light, hand_cup, light_shafts  # noqa: E402
+from portrait import DEFS_P, arm_rest, back_shoulder, bust, chiaroscuro, defs_light, hand_cup, light_shafts  # noqa: E402
 
 DUR = 6
 # arka plan: 1950'ler salon, sol üstte pencere (anahtar ışık soldan), alan derinliği ile bulanık
@@ -22,7 +22,8 @@ mid = f"""<svg class="fill" viewBox="0 0 960 1080" style="overflow:visible">
 <path d="M-200 880 L1200 860 L1200 1300 L-200 1300 Z" fill="#5A341E" filter="url(#woodgrain)"/><path d="M-200 880 L1200 860" stroke="#C8925A" stroke-opacity=".55" stroke-width="5"/>
 <rect x="-200" y="900" width="1400" height="40" fill="#000" opacity=".25" filter="url(#soft8)"/>
 <ellipse cx="530" cy="1000" rx="80" ry="14" fill="#000" opacity=".55" filter="url(#soft3)"/><path d="M560 990 L760 1010 L740 1030 L540 1010 Z" fill="#000" opacity=".25" filter="url(#soft8)"/>
-<g transform="translate(520 935) scale(.95)">{hand_cup("#D9A07A", sleeve="#7A3B30", cuff="#D9A07A")}</g></svg>"""
+{arm_rest((826, 712), (842, 905), (650, 945), sleeve="#7A3B30", w1=104, w2=62)}
+<g transform="translate(520 935) scale(.95)">{hand_cup("#D9A07A")}</g></svg>"""
 # ön plan: adamın omzu ve başı (sırtı kameraya), bulanık, kadrajı keser
 fg = f"""<svg class="fill" viewBox="0 0 960 1080" style="overflow:visible"><g transform="translate(70 700) scale(1.25)" filter="url(#dofFG)">{back_shoulder(lit_left=True)}</g></svg>"""
 top = f'<svg class="fill" viewBox="0 0 960 1080" style="overflow:visible">{chiaroscuro(560, 400, 820, .7)}</svg>'
