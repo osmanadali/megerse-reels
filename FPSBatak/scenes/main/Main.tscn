@@ -1,0 +1,243 @@
+[gd_scene load_steps=20 format=3]
+
+[ext_resource type="Script" path="res://scripts/main/main.gd" id="1_main"]
+[ext_resource type="PackedScene" path="res://scenes/table/Table.tscn" id="2_table"]
+[ext_resource type="PackedScene" path="res://scenes/characters/OpponentPlaceholder.tscn" id="3_opp"]
+[ext_resource type="Script" path="res://scripts/camera/seated_camera.gd" id="4_cam"]
+[ext_resource type="Script" path="res://scripts/debug/screenshot_tool.gd" id="5_shot"]
+
+[sub_resource type="Environment" id="Env_kahvehane"]
+background_mode = 1
+background_color = Color(0.035, 0.025, 0.02, 1)
+ambient_light_source = 2
+ambient_light_color = Color(0.45, 0.33, 0.22, 1)
+ambient_light_energy = 0.35
+tonemap_mode = 3
+tonemap_white = 6.0
+glow_enabled = true
+glow_intensity = 0.6
+glow_bloom = 0.05
+fog_enabled = true
+fog_light_color = Color(0.12, 0.08, 0.05, 1)
+fog_density = 0.04
+adjustment_enabled = true
+adjustment_saturation = 1.1
+
+[sub_resource type="StandardMaterial3D" id="Mat_floor"]
+albedo_color = Color(0.16, 0.09, 0.05, 1)
+roughness = 0.75
+
+[sub_resource type="PlaneMesh" id="Mesh_floor"]
+material = SubResource("Mat_floor")
+size = Vector2(8, 8)
+
+[sub_resource type="StandardMaterial3D" id="Mat_wall"]
+albedo_color = Color(0.3, 0.2, 0.13, 1)
+roughness = 0.9
+
+[sub_resource type="BoxMesh" id="Mesh_wall"]
+material = SubResource("Mat_wall")
+size = Vector3(8, 3.2, 0.1)
+
+[sub_resource type="StandardMaterial3D" id="Mat_wainscot"]
+albedo_color = Color(0.2, 0.11, 0.06, 1)
+roughness = 0.6
+
+[sub_resource type="BoxMesh" id="Mesh_wainscot"]
+material = SubResource("Mat_wainscot")
+size = Vector3(8, 1.0, 0.12)
+
+[sub_resource type="StandardMaterial3D" id="Mat_window"]
+albedo_color = Color(0.03, 0.05, 0.12, 1)
+emission_enabled = true
+emission = Color(0.08, 0.13, 0.3, 1)
+emission_energy_multiplier = 0.8
+
+[sub_resource type="BoxMesh" id="Mesh_window"]
+material = SubResource("Mat_window")
+size = Vector3(1.8, 1.1, 0.02)
+
+[sub_resource type="BoxMesh" id="Mesh_window_frame"]
+material = SubResource("Mat_wainscot")
+size = Vector3(1.95, 1.25, 0.04)
+
+[sub_resource type="StandardMaterial3D" id="Mat_lamp"]
+albedo_color = Color(0.55, 0.36, 0.12, 1)
+metallic = 0.6
+roughness = 0.4
+emission_enabled = true
+emission = Color(1, 0.7, 0.35, 1)
+emission_energy_multiplier = 0.4
+
+[sub_resource type="CylinderMesh" id="Mesh_lamp"]
+material = SubResource("Mat_lamp")
+top_radius = 0.06
+bottom_radius = 0.22
+height = 0.18
+radial_segments = 24
+rings = 1
+cap_bottom = false
+
+[sub_resource type="CylinderMesh" id="Mesh_cord"]
+material = SubResource("Mat_lamp")
+top_radius = 0.005
+bottom_radius = 0.005
+height = 1.1
+radial_segments = 6
+rings = 1
+
+[node name="Main" type="Node3D"]
+script = ExtResource("1_main")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Env_kahvehane")
+
+[node name="Lighting" type="Node3D" parent="."]
+
+[node name="TableLamp" type="OmniLight3D" parent="Lighting"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.85, 0)
+light_color = Color(1, 0.8, 0.52, 1)
+light_energy = 2.6
+shadow_enabled = true
+omni_range = 4.5
+omni_attenuation = 1.3
+
+[node name="WindowGlow" type="OmniLight3D" parent="Lighting"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6, -3.2)
+light_color = Color(0.35, 0.45, 0.85, 1)
+light_energy = 0.6
+omni_range = 3.0
+
+[node name="RoomFill" type="OmniLight3D" parent="Lighting"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, 2.4, 1.5)
+light_color = Color(1, 0.7, 0.45, 1)
+light_energy = 0.35
+omni_range = 5.0
+
+[node name="Room" type="Node3D" parent="."]
+
+[node name="Floor" type="MeshInstance3D" parent="Room"]
+mesh = SubResource("Mesh_floor")
+
+[node name="WallNorth" type="MeshInstance3D" parent="Room"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6, -3.5)
+mesh = SubResource("Mesh_wall")
+
+[node name="WallSouth" type="MeshInstance3D" parent="Room"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6, 3.5)
+mesh = SubResource("Mesh_wall")
+
+[node name="WallEast" type="MeshInstance3D" parent="Room"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 3.5, 1.6, 0)
+mesh = SubResource("Mesh_wall")
+
+[node name="WallWest" type="MeshInstance3D" parent="Room"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -3.5, 1.6, 0)
+mesh = SubResource("Mesh_wall")
+
+[node name="WainscotNorth" type="MeshInstance3D" parent="Room"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, -3.43)
+mesh = SubResource("Mesh_wainscot")
+
+[node name="WainscotEast" type="MeshInstance3D" parent="Room"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 3.43, 0.5, 0)
+mesh = SubResource("Mesh_wainscot")
+
+[node name="WainscotWest" type="MeshInstance3D" parent="Room"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -3.43, 0.5, 0)
+mesh = SubResource("Mesh_wainscot")
+
+[node name="WindowFrame" type="MeshInstance3D" parent="Room"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.75, -3.43)
+mesh = SubResource("Mesh_window_frame")
+
+[node name="Window" type="MeshInstance3D" parent="Room"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.75, -3.405)
+mesh = SubResource("Mesh_window")
+
+[node name="HangingLamp" type="Node3D" parent="Room"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.95, 0)
+
+[node name="Shade" type="MeshInstance3D" parent="Room/HangingLamp"]
+mesh = SubResource("Mesh_lamp")
+
+[node name="Cord" type="MeshInstance3D" parent="Room/HangingLamp"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.64, 0)
+mesh = SubResource("Mesh_cord")
+
+[node name="Table" parent="." instance=ExtResource("2_table")]
+
+[node name="Seats" type="Node3D" parent="."]
+
+[node name="Seat0_South" type="Marker3D" parent="Seats"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.82)
+
+[node name="Seat1_East" type="Marker3D" parent="Seats"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.88, 0, 0)
+
+[node name="Seat2_North" type="Marker3D" parent="Seats"]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0, 0, -0.82)
+
+[node name="Seat3_West" type="Marker3D" parent="Seats"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -0.88, 0, 0)
+
+[node name="Opponent1" parent="Seats/Seat1_East" instance=ExtResource("3_opp")]
+display_name = "Rakip 1"
+body_color = Color(0.55, 0.2, 0.16, 1)
+
+[node name="Opponent2" parent="Seats/Seat2_North" instance=ExtResource("3_opp")]
+display_name = "Rakip 2"
+body_color = Color(0.2, 0.32, 0.55, 1)
+
+[node name="Opponent3" parent="Seats/Seat3_West" instance=ExtResource("3_opp")]
+display_name = "Rakip 3"
+body_color = Color(0.45, 0.42, 0.18, 1)
+
+[node name="PlayerCamera" type="Camera3D" parent="Seats/Seat0_South" node_paths=PackedStringArray("look_target")]
+transform = Transform3D(1, 0, 0, 0, 0.970, 0.242, 0, -0.242, 0.970, 0, 1.24, 0.12)
+current = true
+fov = 54.0
+near = 0.03
+far = 30.0
+script = ExtResource("4_cam")
+look_target = NodePath("../../../Table/PlayArea")
+look_height_offset = 0.24
+
+[node name="HUD" type="CanvasLayer" parent="."]
+
+[node name="Title" type="Label" parent="HUD"]
+offset_left = 24.0
+offset_top = 16.0
+offset_right = 640.0
+offset_bottom = 90.0
+theme_override_colors/font_color = Color(0.92, 0.75, 0.42, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 0.85)
+theme_override_constants/outline_size = 8
+theme_override_font_sizes/font_size = 30
+text = "FPS BATAK"
+
+[node name="Slogan" type="Label" parent="HUD"]
+offset_left = 26.0
+offset_top = 56.0
+offset_right = 640.0
+offset_bottom = 90.0
+theme_override_colors/font_color = Color(0.85, 0.8, 0.7, 0.85)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 0.85)
+theme_override_constants/outline_size = 6
+theme_override_font_sizes/font_size = 18
+text = "Masaya Otur. Kartını Oyna."
+
+[node name="DebugInfo" type="Label" parent="HUD"]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 24.0
+offset_top = -48.0
+offset_right = 900.0
+offset_bottom = -16.0
+grow_vertical = 0
+theme_override_colors/font_color = Color(0.8, 0.8, 0.8, 0.7)
+theme_override_font_sizes/font_size = 16
+
+[node name="ScreenshotTool" type="Node" parent="."]
+script = ExtResource("5_shot")

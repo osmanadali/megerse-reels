@@ -1,0 +1,92 @@
+[gd_scene load_steps=9 format=3]
+
+[ext_resource type="Script" path="res://scripts/core/opponent_placeholder.gd" id="1_script"]
+
+[sub_resource type="StandardMaterial3D" id="Mat_chair"]
+albedo_color = Color(0.25, 0.14, 0.07, 1)
+roughness = 0.7
+
+[sub_resource type="BoxMesh" id="Mesh_seat"]
+material = SubResource("Mat_chair")
+size = Vector3(0.45, 0.04, 0.42)
+
+[sub_resource type="BoxMesh" id="Mesh_back"]
+material = SubResource("Mat_chair")
+size = Vector3(0.45, 0.55, 0.035)
+
+[sub_resource type="BoxMesh" id="Mesh_chair_leg"]
+material = SubResource("Mat_chair")
+size = Vector3(0.035, 0.45, 0.035)
+
+[sub_resource type="CapsuleMesh" id="Mesh_body"]
+radius = 0.19
+height = 0.78
+radial_segments = 16
+rings = 4
+
+[sub_resource type="SphereMesh" id="Mesh_head"]
+radius = 0.13
+height = 0.26
+radial_segments = 16
+rings = 8
+
+[sub_resource type="SphereMesh" id="Mesh_eye"]
+radius = 0.02
+height = 0.04
+radial_segments = 8
+rings = 4
+
+[node name="OpponentPlaceholder" type="Node3D"]
+script = ExtResource("1_script")
+
+[node name="Chair" type="Node3D" parent="."]
+
+[node name="Seat" type="MeshInstance3D" parent="Chair"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.45, 0.05)
+mesh = SubResource("Mesh_seat")
+
+[node name="Back" type="MeshInstance3D" parent="Chair"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.745, 0.255)
+mesh = SubResource("Mesh_back")
+
+[node name="LegFL" type="MeshInstance3D" parent="Chair"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.2, 0.225, -0.14)
+mesh = SubResource("Mesh_chair_leg")
+
+[node name="LegFR" type="MeshInstance3D" parent="Chair"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.2, 0.225, -0.14)
+mesh = SubResource("Mesh_chair_leg")
+
+[node name="LegBL" type="MeshInstance3D" parent="Chair"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.2, 0.225, 0.24)
+mesh = SubResource("Mesh_chair_leg")
+
+[node name="LegBR" type="MeshInstance3D" parent="Chair"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.2, 0.225, 0.24)
+mesh = SubResource("Mesh_chair_leg")
+
+[node name="Body" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.86, 0.06)
+mesh = SubResource("Mesh_body")
+
+[node name="Head" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.38, 0.04)
+mesh = SubResource("Mesh_head")
+
+[node name="EyeL" type="MeshInstance3D" parent="Head"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.045, 0.02, -0.115)
+mesh = SubResource("Mesh_eye")
+
+[node name="EyeR" type="MeshInstance3D" parent="Head"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.045, 0.02, -0.115)
+mesh = SubResource("Mesh_eye")
+
+[node name="NameLabel" type="Label3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.62, 0.04)
+pixel_size = 0.0018
+billboard = 1
+modulate = Color(1, 0.86, 0.55, 1)
+outline_modulate = Color(0, 0, 0, 0.8)
+text = "Rakip"
+font_size = 48
+outline_size = 10
