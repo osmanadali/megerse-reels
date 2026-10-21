@@ -1,0 +1,787 @@
+[
+ {
+  "text": "Bu",
+  "startMs": 0,
+  "endMs": 200
+ },
+ {
+  "text": "adam,",
+  "startMs": 200,
+  "endMs": 460
+ },
+ {
+  "text": "Nazilere",
+  "startMs": 460,
+  "endMs": 1340
+ },
+ {
+  "text": "tek",
+  "startMs": 1340,
+  "endMs": 1620
+ },
+ {
+  "text": "bir",
+  "startMs": 1620,
+  "endMs": 1860
+ },
+ {
+  "text": "cümleyle",
+  "startMs": 1860,
+  "endMs": 2380
+ },
+ {
+  "text": "kafa",
+  "startMs": 2380,
+  "endMs": 2660
+ },
+ {
+  "text": "tuttu",
+  "startMs": 2660,
+  "endMs": 3080
+ },
+ {
+  "text": "ve",
+  "startMs": 3080,
+  "endMs": 3560
+ },
+ {
+  "text": "elli",
+  "startMs": 3560,
+  "endMs": 4020
+ },
+ {
+  "text": "kişiyi",
+  "startMs": 4020,
+  "endMs": 4460
+ },
+ {
+  "text": "Auşviç",
+  "startMs": 4460,
+  "endMs": 5140
+ },
+ {
+  "text": "yolundan",
+  "startMs": 5140,
+  "endMs": 5620
+ },
+ {
+  "text": "geri",
+  "startMs": 5620,
+  "endMs": 5840
+ },
+ {
+  "text": "aldı.",
+  "startMs": 5840,
+  "endMs": 6320
+ },
+ {
+  "text": "1944,",
+  "startMs": 6940,
+  "endMs": 7460
+ },
+ {
+  "text": "Rodos",
+  "startMs": 8400,
+  "endMs": 8860
+ },
+ {
+  "text": "adası.",
+  "startMs": 8860,
+  "endMs": 9340
+ },
+ {
+  "text": "Ada",
+  "startMs": 9760,
+  "endMs": 10060
+ },
+ {
+  "text": "Alman",
+  "startMs": 10380,
+  "endMs": 10580
+ },
+ {
+  "text": "işgalinde.",
+  "startMs": 10580,
+  "endMs": 11300
+ },
+ {
+  "text": "Türkiye'nin",
+  "startMs": 11920,
+  "endMs": 12640
+ },
+ {
+  "text": "başkonsolosu",
+  "startMs": 12640,
+  "endMs": 13360
+ },
+ {
+  "text": "Selahattin",
+  "startMs": 13360,
+  "endMs": 13960
+ },
+ {
+  "text": "Ülkümen",
+  "startMs": 13960,
+  "endMs": 14480
+ },
+ {
+  "text": "otuz",
+  "startMs": 14840,
+  "endMs": 15060
+ },
+ {
+  "text": "yaşında.",
+  "startMs": 15060,
+  "endMs": 15620
+ },
+ {
+  "text": "Şubat",
+  "startMs": 16200,
+  "endMs": 16540
+ },
+ {
+  "text": "ayında",
+  "startMs": 16540,
+  "endMs": 16880
+ },
+ {
+  "text": "konsolosluk",
+  "startMs": 16880,
+  "endMs": 17760
+ },
+ {
+  "text": "bombalanıyor.",
+  "startMs": 17760,
+  "endMs": 18440
+ },
+ {
+  "text": "İki",
+  "startMs": 19000,
+  "endMs": 19200
+ },
+ {
+  "text": "çalışanı",
+  "startMs": 19200,
+  "endMs": 19660
+ },
+ {
+  "text": "ölüyor,",
+  "startMs": 19660,
+  "endMs": 20100
+ },
+ {
+  "text": "eşi",
+  "startMs": 20540,
+  "endMs": 20860
+ },
+ {
+  "text": "ağır",
+  "startMs": 20860,
+  "endMs": 21260
+ },
+ {
+  "text": "yaralanıyor.",
+  "startMs": 21260,
+  "endMs": 21860
+ },
+ {
+  "text": "Anılarına",
+  "startMs": 22420,
+  "endMs": 22940
+ },
+ {
+  "text": "göre",
+  "startMs": 22940,
+  "endMs": 23160
+ },
+ {
+  "text": "bombalayan",
+  "startMs": 23160,
+  "endMs": 24060
+ },
+ {
+  "text": "Alman",
+  "startMs": 24060,
+  "endMs": 24560
+ },
+ {
+  "text": "uçakları.",
+  "startMs": 24560,
+  "endMs": 25100
+ },
+ {
+  "text": "Temmuz.",
+  "startMs": 25680,
+  "endMs": 26160
+ },
+ {
+  "text": "Gestapo",
+  "startMs": 26680,
+  "endMs": 27200
+ },
+ {
+  "text": "adadaki",
+  "startMs": 27200,
+  "endMs": 27800
+ },
+ {
+  "text": "bütün",
+  "startMs": 27800,
+  "endMs": 28220
+ },
+ {
+  "text": "Yahudileri",
+  "startMs": 28220,
+  "endMs": 28780
+ },
+ {
+  "text": "topluyor.",
+  "startMs": 28780,
+  "endMs": 29300
+ },
+ {
+  "text": "Yakındaki",
+  "startMs": 29300,
+  "endMs": 30220
+ },
+ {
+  "text": "bir",
+  "startMs": 30220,
+  "endMs": 30540
+ },
+ {
+  "text": "adaya",
+  "startMs": 30540,
+  "endMs": 30860
+ },
+ {
+  "text": "götürüleceklerini",
+  "startMs": 30860,
+  "endMs": 31780
+ },
+ {
+  "text": "söylüyorlar.",
+  "startMs": 31780,
+  "endMs": 32500
+ },
+ {
+  "text": "Gerçek",
+  "startMs": 32940,
+  "endMs": 33360
+ },
+ {
+  "text": "varış",
+  "startMs": 33360,
+  "endMs": 33640
+ },
+ {
+  "text": "noktası:",
+  "startMs": 33640,
+  "endMs": 34180
+ },
+ {
+  "text": "Auşviç.",
+  "startMs": 34540,
+  "endMs": 35140
+ },
+ {
+  "text": "Ülkümen,",
+  "startMs": 35620,
+  "endMs": 36160
+ },
+ {
+  "text": "Alman",
+  "startMs": 36500,
+  "endMs": 36840
+ },
+ {
+  "text": "komutanın",
+  "startMs": 36840,
+  "endMs": 37340
+ },
+ {
+  "text": "karşısına",
+  "startMs": 37340,
+  "endMs": 37900
+ },
+ {
+  "text": "çıkıyor:",
+  "startMs": 37900,
+  "endMs": 38300
+ },
+ {
+  "text": "Aralarında",
+  "startMs": 38820,
+  "endMs": 39360
+ },
+ {
+  "text": "Türk",
+  "startMs": 39360,
+  "endMs": 39580
+ },
+ {
+  "text": "vatandaşları",
+  "startMs": 39580,
+  "endMs": 40320
+ },
+ {
+  "text": "var.",
+  "startMs": 40320,
+  "endMs": 40480
+ },
+ {
+  "text": "Onları",
+  "startMs": 40780,
+  "endMs": 41100
+ },
+ {
+  "text": "bırakın.",
+  "startMs": 41100,
+  "endMs": 41540
+ },
+ {
+  "text": "Komutan",
+  "startMs": 41920,
+  "endMs": 42340
+ },
+ {
+  "text": "itiraz",
+  "startMs": 42340,
+  "endMs": 42920
+ },
+ {
+  "text": "ediyor:",
+  "startMs": 42920,
+  "endMs": 43180
+ },
+ {
+  "text": "Bizim",
+  "startMs": 43720,
+  "endMs": 43940
+ },
+ {
+  "text": "kanunumuza",
+  "startMs": 43940,
+  "endMs": 44720
+ },
+ {
+  "text": "göre",
+  "startMs": 44720,
+  "endMs": 44920
+ },
+ {
+  "text": "Yahudi,",
+  "startMs": 44920,
+  "endMs": 45680
+ },
+ {
+  "text": "Yahudidir.",
+  "startMs": 45680,
+  "endMs": 46360
+ },
+ {
+  "text": "Ülkümen'in",
+  "startMs": 46860,
+  "endMs": 47580
+ },
+ {
+  "text": "cevabı:",
+  "startMs": 47580,
+  "endMs": 48140
+ },
+ {
+  "text": "Bizim",
+  "startMs": 48500,
+  "endMs": 48740
+ },
+ {
+  "text": "kanunumuzda",
+  "startMs": 48740,
+  "endMs": 49680
+ },
+ {
+  "text": "Yahudi,",
+  "startMs": 49680,
+  "endMs": 50340
+ },
+ {
+  "text": "Hristiyan,",
+  "startMs": 50600,
+  "endMs": 51140
+ },
+ {
+  "text": "Müslüman",
+  "startMs": 51340,
+  "endMs": 51640
+ },
+ {
+  "text": "ayrımı",
+  "startMs": 51640,
+  "endMs": 52040
+ },
+ {
+  "text": "yok.",
+  "startMs": 52040,
+  "endMs": 52240
+ },
+ {
+  "text": "Hepsi",
+  "startMs": 52680,
+  "endMs": 53080
+ },
+ {
+  "text": "eşit",
+  "startMs": 53080,
+  "endMs": 53440
+ },
+ {
+  "text": "vatandaştır.",
+  "startMs": 53440,
+  "endMs": 54180
+ },
+ {
+  "text": "Ve",
+  "startMs": 54600,
+  "endMs": 54860
+ },
+ {
+  "text": "listesini",
+  "startMs": 54860,
+  "endMs": 55520
+ },
+ {
+  "text": "uzatıyor.",
+  "startMs": 55520,
+  "endMs": 56020
+ },
+ {
+  "text": "Yaklaşık",
+  "startMs": 56540,
+  "endMs": 57140
+ },
+ {
+  "text": "elli",
+  "startMs": 57140,
+  "endMs": 57640
+ },
+ {
+  "text": "isim.",
+  "startMs": 57640,
+  "endMs": 57940
+ },
+ {
+  "text": "Almanlar",
+  "startMs": 58500,
+  "endMs": 59060
+ },
+ {
+  "text": "onları",
+  "startMs": 59060,
+  "endMs": 59500
+ },
+ {
+  "text": "bırakıyor;",
+  "startMs": 59500,
+  "endMs": 59980
+ },
+ {
+  "text": "her",
+  "startMs": 60440,
+  "endMs": 60640
+ },
+ {
+  "text": "gün",
+  "startMs": 60640,
+  "endMs": 60900
+ },
+ {
+  "text": "Gestapo'ya",
+  "startMs": 60900,
+  "endMs": 61780
+ },
+ {
+  "text": "imza",
+  "startMs": 61780,
+  "endMs": 62200
+ },
+ {
+  "text": "vermek",
+  "startMs": 62200,
+  "endMs": 62560
+ },
+ {
+  "text": "şartıyla.",
+  "startMs": 62560,
+  "endMs": 63100
+ },
+ {
+  "text": "Meğerse",
+  "startMs": 63660,
+  "endMs": 64260
+ },
+ {
+  "text": "o",
+  "startMs": 64260,
+  "endMs": 64560
+ },
+ {
+  "text": "elli",
+  "startMs": 64560,
+  "endMs": 64940
+ },
+ {
+  "text": "kişiden",
+  "startMs": 64940,
+  "endMs": 65360
+ },
+ {
+  "text": "yalnızca",
+  "startMs": 65360,
+  "endMs": 66220
+ },
+ {
+  "text": "on",
+  "startMs": 66220,
+  "endMs": 66530
+ },
+ {
+  "text": "üçü",
+  "startMs": 66530,
+  "endMs": 66840
+ },
+ {
+  "text": "gerçekten",
+  "startMs": 66840,
+  "endMs": 67240
+ },
+ {
+  "text": "Türk",
+  "startMs": 67240,
+  "endMs": 67640
+ },
+ {
+  "text": "vatandaşıydı.",
+  "startMs": 67640,
+  "endMs": 68500
+ },
+ {
+  "text": "Gerisini,",
+  "startMs": 68920,
+  "endMs": 69420
+ },
+ {
+  "text": "eşleri,",
+  "startMs": 69920,
+  "endMs": 70300
+ },
+ {
+  "text": "akrabaları,",
+  "startMs": 70640,
+  "endMs": 71280
+ },
+ {
+  "text": "kâğıtlarının",
+  "startMs": 71780,
+  "endMs": 72360
+ },
+ {
+  "text": "süresi",
+  "startMs": 72360,
+  "endMs": 72780
+ },
+ {
+  "text": "dolmuş",
+  "startMs": 72780,
+  "endMs": 73140
+ },
+ {
+  "text": "olanları,",
+  "startMs": 73140,
+  "endMs": 73720
+ },
+ {
+  "text": "kendi",
+  "startMs": 73720,
+  "endMs": 74280
+ },
+ {
+  "text": "kararıyla",
+  "startMs": 74280,
+  "endMs": 74920
+ },
+ {
+  "text": "yazmıştı.",
+  "startMs": 74920,
+  "endMs": 75480
+ },
+ {
+  "text": "Adadan",
+  "startMs": 76060,
+  "endMs": 76440
+ },
+ {
+  "text": "götürülen",
+  "startMs": 76440,
+  "endMs": 77000
+ },
+ {
+  "text": "bin",
+  "startMs": 77000,
+  "endMs": 77260
+ },
+ {
+  "text": "altı",
+  "startMs": 77260,
+  "endMs": 77520
+ },
+ {
+  "text": "yüzü",
+  "startMs": 77520,
+  "endMs": 77780
+ },
+ {
+  "text": "aşkın",
+  "startMs": 77780,
+  "endMs": 78160
+ },
+ {
+  "text": "kişiden,",
+  "startMs": 78160,
+  "endMs": 78580
+ },
+ {
+  "text": "yalnızca",
+  "startMs": 78580,
+  "endMs": 79620
+ },
+ {
+  "text": "yüz",
+  "startMs": 79620,
+  "endMs": 79800
+ },
+ {
+  "text": "elli",
+  "startMs": 79800,
+  "endMs": 79980
+ },
+ {
+  "text": "kadarı",
+  "startMs": 79980,
+  "endMs": 80520
+ },
+ {
+  "text": "geri",
+  "startMs": 80520,
+  "endMs": 80680
+ },
+ {
+  "text": "döndü.",
+  "startMs": 80680,
+  "endMs": 81100
+ },
+ {
+  "text": "1989'da",
+  "startMs": 82200,
+  "endMs": 83120
+ },
+ {
+  "text": "Yad",
+  "startMs": 83120,
+  "endMs": 83640
+ },
+ {
+  "text": "Vaşem,",
+  "startMs": 83640,
+  "endMs": 84060
+ },
+ {
+  "text": "ona",
+  "startMs": 84060,
+  "endMs": 84620
+ },
+ {
+  "text": "Uluslar",
+  "startMs": 84620,
+  "endMs": 85320
+ },
+ {
+  "text": "Arasında",
+  "startMs": 85320,
+  "endMs": 85780
+ },
+ {
+  "text": "Dürüst",
+  "startMs": 85780,
+  "endMs": 86400
+ },
+ {
+  "text": "İnsan",
+  "startMs": 86400,
+  "endMs": 86680
+ },
+ {
+  "text": "unvanını",
+  "startMs": 86680,
+  "endMs": 87400
+ },
+ {
+  "text": "verdi.",
+  "startMs": 87400,
+  "endMs": 87640
+ },
+ {
+  "text": "Bir",
+  "startMs": 88320,
+  "endMs": 88500
+ },
+ {
+  "text": "konsolos,",
+  "startMs": 88500,
+  "endMs": 89160
+ },
+ {
+  "text": "bir",
+  "startMs": 89580,
+  "endMs": 89700
+ },
+ {
+  "text": "liste",
+  "startMs": 89700,
+  "endMs": 90260
+ },
+ {
+  "text": "ve",
+  "startMs": 90260,
+  "endMs": 90680
+ },
+ {
+  "text": "tek",
+  "startMs": 90680,
+  "endMs": 91100
+ },
+ {
+  "text": "bir",
+  "startMs": 91100,
+  "endMs": 91340
+ },
+ {
+  "text": "cümle:",
+  "startMs": 91340,
+  "endMs": 91740
+ },
+ {
+  "text": "Hepsi",
+  "startMs": 92300,
+  "endMs": 92800
+ },
+ {
+  "text": "eşit",
+  "startMs": 92800,
+  "endMs": 93260
+ },
+ {
+  "text": "vatandaştır.",
+  "startMs": 93260,
+  "endMs": 94020
+ }
+]

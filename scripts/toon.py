@@ -144,13 +144,44 @@ def sneaker(x, y, s=1.0, col="#7FA9D6", light=-1, toward=1):
             + f'<circle cx="-4.5" cy="-6" r=".9" fill="#E9E4DA" stroke="{INK}" stroke-width=".4"/></g>')
 
 
+def oxford(x, y, s=1.0, col="#2A1C14", light=-1):
+    """Deri klasik ayakkabı (takım elbise)."""
+    d = "M-6 -6 C-6.6 -3 -6.4 -1 -6 0 L13 0 C16.4 0 17.4 -1.6 16.4 -3.2 C13.6 -5.4 8 -5.6 4 -7 C1 -8 -4 -8 -6 -6 Z"
+    return (f'<g transform="translate({x:.2f} {y:.2f}) scale({s})">' + cel(d, col, darker(col, .6), light, 1.4, .9)
+            + f'<path d="M7 -5.2 Q11 -5.6 14.6 -3.6" stroke="#fff" stroke-opacity=".35" stroke-width=".9" fill="none"/>' + line("M-6.4 -.6 H16", .6, .8) + "</g>")
+
+
+def boot(x, y, s=1.0, col="#141010", light=-1):
+    """Uzun konçlu asker çizmesi (dizin altına kadar)."""
+    d = "M-5.2 -30 L-5 -6 C-6 -3 -6 -1 -5.6 0 L13 0 C16 0 17 -1.6 16 -3.2 C13.4 -5.2 8 -5.6 5 -7 L5.4 -30 Z"
+    return (f'<g transform="translate({x:.2f} {y:.2f}) scale({s})">' + cel(d, col, "#000", light, 1.6, 1.0)
+            + f'<path d="M-3.6 -28 L-3.2 -10" stroke="#fff" stroke-opacity=".22" stroke-width="1.4"/>' + line("M-5.8 -.6 H15.6", .6, .8) + "</g>")
+
+
+def hat_parts(hat, L):
+    if hat == "fedora":
+        return (cel("M-24 -170.6 C-22 -173.6 22 -174.6 26 -171 C24 -168.4 -20 -167.4 -24 -170.6 Z", "#3A3430", "#221E1B", L, 1, 1.0)
+                + cel("M-15 -171 C-15.6 -182 -10 -188.6 2 -188.6 C14 -188.6 18.6 -182 18.4 -171.6 C10 -170 -6 -170 -15 -171 Z", "#4A423C", "#2A2420", L, 2, 1.1)
+                + cel("M-15.2 -174.6 C-6 -173.4 10 -173.4 18.6 -175 L18.5 -171.8 C10 -170.4 -6 -170.4 -15.1 -171.4 Z", "#1E1A18", "#000", L, .5, .8)
+                + line("M-2 -187.4 Q2 -184 6 -187.6", .6, .6))
+    if hat == "officer":
+        return (cel("M-16.4 -172 C-19 -178 -14 -186 2 -187 C18 -187.6 24 -182 22 -176 C14 -173 -6 -172.4 -16.4 -172 Z", "#5E6450", "#3E4334", L, 2, 1.1)
+                + cel("M-15.6 -175.4 C-6 -173.8 10 -173.8 20 -175.6 L19.6 -170.8 C10 -169.6 -6 -169.6 -15.4 -170.6 Z", "#2A2C24", "#121410", L, .6, .9)
+                + cel("M8 -171 C14 -171.4 22 -170 26 -167 C20 -165.6 12 -166.4 6 -168.4 Z", "#0E0E0E", "#000", L, .4, .9)
+                + '<rect x="0" y="-174.2" width="3.6" height="2.6" rx=".4" fill="#C9C4B8" stroke="#1B1414" stroke-width=".4"/>')
+    return ""
+
+
 # ---------------- karakter ----------------
 def toon_figure(flip=False, pose="stand", look=(1, 0), expr=None, skin="#F2C9A0", hair="#16110F",
                 shirt="#7A1E22", sleeve="#F4F1EA", pants="#8A7A5A", shoes="#7FA9D6", socks=True, shorts=True,
-                vest=None, earring=False, light_from_left=True, female=False, hair_style=None):
+                vest=None, earring=False, light_from_left=True, female=False, hair_style=None,
+                outfit="tee", jacket="#2E3440", tie="#7A1E22", hat=None, prop=None):
     """Tam boy üç-çeyrek karakter (referans stil). look=(gx,gy): göz bebeği yönü (-1..1, yüz yönüne göre).
     expr: lid (0 açık .. 1 kapalı; .45 ağır kapak), smile (-1..1), talk (0..1 ağız açık), brow (-1..1).
-    pose: stand (eller açık yanda) | talk (yakın el jest) | point | walk | hands_pockets."""
+    pose: stand (eller açık yanda) | talk (yakın el jest) | point | walk | hands_pockets | offer (eli ileri uzatır: prop=paper ile liste).
+    outfit: tee | suit (ceket, gömlek, kravat, deri ayakkabı) | uniform (gri subay ceketi, kemer, cepler, çizme; simgesiz) | dress (kadın elbise).
+    hat: fedora | officer. prop: paper | suitcase."""
     e = dict(lid=.42, smile=.5, talk=0, brow=0)
     e.update(expr or {})
     L = (-1 if light_from_left else 1) * (-1 if flip else 1)     # yansıtılmış grupta ışık dünyaya göre sabit
@@ -158,11 +189,18 @@ def toon_figure(flip=False, pose="stand", look=(1, 0), expr=None, skin="#F2C9A0"
     hs = hair_style or ("long" if female else "short")
     hair_back, hair_front = hair_parts(hs, hair, L)
     out = [hair_back]
+    long_sl = outfit in ("suit", "uniform")
+    if outfit in ("suit", "uniform", "dress"):
+        shorts, socks = False, False
+    if outfit in ("uniform", "suit"):
+        pants = jacket
+    arm_col, arm_sh = (jacket, darker(jacket)) if long_sl else (sk, skS)
+    sleeve_col = jacket if long_sl else (shirt if outfit == "dress" else sleeve)
 
     # --- bacaklar, çorap, ayakkabı (uzak bacak önce)
     walk = pose == "walk"
     far_x, near_x = (9, -4) if not walk else (14, -10)
-    leg_col = pants if not shorts else sk
+    leg_col = pants if not (shorts or outfit == "dress") else sk
     for lx, far in ((far_x, True), (near_x, False)):
         knee_y = -42
         top = -78 if not shorts else -50
@@ -173,7 +211,13 @@ def toon_figure(flip=False, pose="stand", look=(1, 0), expr=None, skin="#F2C9A0"
         if socks:
             sd = f"M{lx-4.6:.1f} -24 L{lx-4.4:.1f} -9 L{lx+4.4:.1f} -9 L{lx+4.6:.1f} -24 Z"
             g += cel(sd, "#F4F1EA", "#CFCAC0", L, 1.4, .9) + f'<path d="M{lx-4.6:.1f} -22 H{lx+4.6:.1f} M{lx-4.6:.1f} -19.6 H{lx+4.6:.1f}" stroke="#8A1E22" stroke-width="1.1"/>'
-        g += sneaker(lx - 2 + (3 if far else 0), 0 if not walk or far else -1, .95 if far else 1.0, shoes, L, 1)
+        fx_, fs_ = lx - 2 + (3 if far else 0), .95 if far else 1.0
+        if outfit == "uniform":
+            g += boot(fx_, 0, fs_, "#141010", L)
+        elif outfit in ("suit", "dress"):
+            g += oxford(fx_, 0, fs_, shoes if outfit == "dress" else "#2A1C14", L)
+        else:
+            g += sneaker(fx_, 0 if not walk or far else -1, fs_, shoes, L, 1)
         out.append(f'<g style="filter:brightness({.9 if far else 1})">{g}</g>')
 
     # --- şort / pantolon üst kısmı + kemer
@@ -183,37 +227,82 @@ def toon_figure(flip=False, pose="stand", look=(1, 0), expr=None, skin="#F2C9A0"
                    + cel("M6 -72 H15 V-58 H6 Z", pants, darker(pants), L, 1.2, .7) + line("M6 -69.5 H15", .5) + line("M7 -66 h7", .35, .5, "#000"))
     else:
         out.append(cel("M-11 -84 L-11 -74 L17 -74 L16 -84 Z", pants, darker(pants), L, 3, 1.1))
-    out.append(cel("M-11.4 -86 L16.4 -86 L16.2 -82 L-11.2 -82 Z", "#8A6A3A", "#6A4E28", L, 1, .8)
-               + '<rect x="0.5" y="-86.6" width="5" height="5.2" rx=".6" fill="#D9B14A" stroke="#1B1414" stroke-width=".6"/>')
+    if outfit == "tee":
+        out.append(cel("M-11.4 -86 L16.4 -86 L16.2 -82 L-11.2 -82 Z", "#8A6A3A", "#6A4E28", L, 1, .8)
+                   + '<rect x="0.5" y="-86.6" width="5" height="5.2" rx=".6" fill="#D9B14A" stroke="#1B1414" stroke-width=".6"/>')
 
     # --- uzak kol (gövde arkasında)
     hx_far = 18
-    far_arm = cel("M13 -120 C17 -118 19 -112 19 -104 L20 -84 L16.6 -84 L15 -104 Z", sk, skS, L, 1.4, 1.0)
+    far_arm = cel("M13 -120 C17 -118 19 -112 19 -104 L20 -84 L16.6 -84 L15 -104 Z", arm_col, arm_sh, L, 1.4, 1.0)
+    if outfit == "suit":
+        far_arm += cel("M16.4 -87 L20.2 -87 L20.1 -84.4 L16.6 -84.4 Z", "#F4F1EA", "#CFCAC0", L, .4, .6)
     out.append(f'<g style="filter:brightness(.88)">{far_arm}{hand(hx_far - 1.6, -85, -8, .95, sk, L, "open")}</g>')
 
     # --- gövde: tişört/atlet + kollar
     torso = "M-14 -121 C-16 -110 -14 -96 -12 -84 L16 -84 C17 -96 17 -110 14 -121 C8 -124 -8 -124 -14 -121 Z"
-    out.append(cel(torso, shirt, darker(shirt), L, 3.2, 1.15)
-               + line("M-10 -98 q2 3 1 6 M10 -100 q-2 4 0 8 M-4 -86 q3 -2 6 0", .5, .55)
-               + line("M-12.5 -112 L-11 -103 M12 -110 l1 4", .4, .35, "#000"))
+    coat = "M-14.6 -121 C-16.6 -108 -15.4 -88 -14.4 -71 L18.2 -71 C18.2 -88 17.6 -108 14.6 -121 C8 -124 -8 -124 -14.6 -121 Z"
+    if outfit == "suit":
+        out.append(cel(coat, jacket, darker(jacket), L, 3.2, 1.15)
+                   + cel("M-3.4 -123 L1.6 -103 L6.8 -123 Z", "#F4F1EA", "#CFCAC0", L, .6, .8)
+                   + cel("M.8 -121 L3.6 -121 L4.4 -104.6 L2.3 -100.6 L.2 -104.6 Z", tie, darker(tie), L, .6, .7)
+                   + line("M-3.4 -123 L-2 -110 L1.6 -100 M6.8 -123 L5.4 -111 L1.6 -100", .8)
+                   + line("M1.6 -100 L1.8 -71", .6, .8)
+                   + '<circle cx="3.2" cy="-92" r=".9" fill="#1B1414"/><circle cx="3.2" cy="-82" r=".9" fill="#1B1414"/>'
+                   + line("M-11.6 -96 q2 3 .6 6 M11 -98 q-2 4 0 8 M8.6 -114 h4", .5, .55)
+                   + cel("M9 -114.6 L12.6 -114.6 L12.4 -112.6 L9 -112.8 Z", "#F4F1EA", "#CFCAC0", L, .3, .4))
+    elif outfit == "uniform":
+        out.append(cel(coat, jacket, darker(jacket), L, 3.2, 1.15)
+                   + line("M2.4 -119 L2.6 -71", .6, .8) + "".join(f'<circle cx="3.6" cy="{y}" r=".8" fill="#B9B4A8" stroke="#1B1414" stroke-width=".3"/>' for y in (-114, -106, -98, -80))
+                   + cel("M-11 -114 L-3 -114 L-3 -108 L-11 -108 Z", jacket, darker(jacket), L, .6, .6) + cel("M7 -114 L14 -114 L14 -108 L7 -108 Z", jacket, darker(jacket), L, .6, .6)
+                   + cel("M-12 -82 L-3 -82 L-3 -74 L-12 -74 Z", jacket, darker(jacket), L, .6, .6) + cel("M7 -82 L16 -82 L16 -74 L7 -74 Z", jacket, darker(jacket), L, .6, .6)
+                   + cel("M-14.8 -90 L18 -90 L18 -86.2 L-14.8 -86.2 Z", "#2A1E16", "#120C08", L, .6, .8)
+                   + '<rect x="0" y="-90.6" width="5" height="5" rx=".6" fill="#8E8A7E" stroke="#1B1414" stroke-width=".5"/>'
+                   + cel("M-4.4 -125 L-3.6 -119 L8 -119 L8.6 -125 Q2 -122.6 -4.4 -125 Z", darker(jacket, .8), darker(jacket, .6), L, .6, .8)
+                   + '<rect x="-3" y="-123.4" width="3" height="2.4" fill="#C9C4B8" stroke="#1B1414" stroke-width=".3"/><rect x="4" y="-123.4" width="3" height="2.4" fill="#C9C4B8" stroke="#1B1414" stroke-width=".3"/>'
+                   + cel("M-15 -121.6 L-8 -123 L-8 -120.4 L-15.4 -119 Z", darker(jacket, .8), darker(jacket, .6), L, .4, .6))
+    elif outfit == "dress":
+        dress = "M-14 -121 C-16 -110 -14 -98 -12 -88 C-16 -72 -19 -58 -20 -46 L24 -46 C22 -58 19 -72 16 -88 C17 -98 17 -110 14 -121 C8 -124 -8 -124 -14 -121 Z"
+        out.append(cel(dress, shirt, darker(shirt), L, 3.6, 1.15)
+                   + cel("M-13 -90 L16.2 -90 L16 -86.6 L-12.6 -86.6 Z", darker(shirt, .6), darker(shirt, .45), L, .5, .7)
+                   + line("M-8 -70 q1 10 -2 22 M4 -72 L5 -48 M14 -70 q2 10 4 22", .5, .55)
+                   + cel("M-5 -123 Q2 -116 9 -123 L8 -125 Q2 -120 -4 -125 Z", "#F4F1EA", "#CFCAC0", L, .5, .8))
+    else:
+        out.append(cel(torso, shirt, darker(shirt), L, 3.2, 1.15)
+                   + line("M-10 -98 q2 3 1 6 M10 -100 q-2 4 0 8 M-4 -86 q3 -2 6 0", .5, .55)
+                   + line("M-12.5 -112 L-11 -103 M12 -110 l1 4", .4, .35, "#000"))
     if vest:
         out.append(cel("M-12 -118 L-2 -100 L5 -118 L13 -119 L15 -86 L-11 -86 Z", vest, darker(vest), L, 3, 1.0))
-    out.append(cel("M-3 -122 Q2 -117 7 -122 L6 -124 Q2 -121 -2 -124 Z", sleeve, "#CFCAC0", L, .6, .8))   # yaka
+    if outfit == "tee":
+        out.append(cel("M-3 -122 Q2 -117 7 -122 L6 -124 Q2 -121 -2 -124 Z", sleeve, "#CFCAC0", L, .6, .8))   # yaka
     # yakın kol
-    nsl = cel("M-14 -121 C-21 -120 -24 -112 -24 -104 L-15 -102 Z", sleeve, "#CFCAC0", L, 1.6, 1.05)
+    nsl = cel("M-14 -121 C-21 -120 -24 -112 -24 -104 L-15 -102 Z", sleeve_col, darker(sleeve_col, .8), L, 1.6, 1.05)
+    cuff = (lambda x, y, a: f'<g transform="translate({x:.2f} {y:.2f}) rotate({a:.1f})">' + cel("M-2.6 -1.4 L2.6 -1.4 L2.4 1.4 L-2.4 1.4 Z", "#F4F1EA", "#CFCAC0", L, .3, .5) + "</g>") if outfit == "suit" else (lambda x, y, a: "")
     if pose == "talk":
-        arm = cel("M-21 -104 L-24 -92 C-22 -88 -17 -88 -12 -92 L-2 -98 L-4 -101 L-14 -96 L-17 -104 Z", sk, skS, L, 1.4, 1.0)
+        arm = cel("M-21 -104 L-24 -92 C-22 -88 -17 -88 -12 -92 L-2 -98 L-4 -101 L-14 -96 L-17 -104 Z", arm_col, arm_sh, L, 1.4, 1.0)
         out.append(arm + nsl + hand(-1, -99.5, -125, 1.0, sk, L, "open"))
     elif pose == "point":
-        arm = cel("M-21 -104 L-6 -112 L-5 -108 L-17 -100 Z", sk, skS, L, 1.2, 1.0)
+        arm = cel("M-21 -104 L-6 -112 L-5 -108 L-17 -100 Z", arm_col, arm_sh, L, 1.2, 1.0)
         out.append(arm + nsl + hand(-4, -111, -112, 1.0, sk, L, "point"))
     elif pose == "hands_pockets":
-        arm = cel("M-21 -104 L-20 -86 L-13 -82 L-15 -102 Z", sk, skS, L, 1.4, 1.0)
+        arm = cel("M-21 -104 L-20 -86 L-13 -82 L-15 -102 Z", arm_col, arm_sh, L, 1.4, 1.0)
         out.append(arm + nsl)
+    elif pose == "offer":
+        arm = cel("M-22 -106 L-19 -96 L8 -101 L8 -106 L-12 -104 L-16 -108 Z", arm_col, arm_sh, L, 1.2, 1.0)
+        paper = ""
+        if prop == "paper":
+            paper = ('<g transform="translate(13 -112) rotate(-8)">' + cel("M0 0 L13 0 L13 17 L0 17 Z", "#F7F2E2", "#D9D0B8", L, .8, .7)
+                     + "".join(line(f"M2 {3+i*2.2:.1f} H{9+(i*3)%4}", .35, .7) for i in range(6)) + "</g>")
+        out.append(arm + nsl + cuff(8, -103.5, -95) + paper + hand(9.4, -103.4, -95, 1.0, sk, L, "hold"))
     else:
         sw = 6 if walk else 0
-        arm = cel(f"M-22.5 -104 L{-25-sw*.3:.1f} -86 L{-21-sw*.3:.1f} -86 L-16 -103 Z", sk, skS, L, 1.4, 1.0)
-        out.append(arm + nsl + hand(-23 - sw * .3, -87, 12 + sw, 1.0, sk, L, "open"))
+        arm = cel(f"M-22.5 -104 L{-25-sw*.3:.1f} -86 L{-21-sw*.3:.1f} -86 L-16 -103 Z", arm_col, arm_sh, L, 1.4, 1.0)
+        ha = (-23 - sw * .3, -87)
+        if prop == "suitcase":
+            case = (f'<g transform="translate({ha[0]-1:.1f} {ha[1]+15:.1f})">' + line("M-3 -5 L-3 -12 Q0 -14 3 -12 L3 -5", 1.2)
+                    + cel("M-12 -5 L12 -5 L12 13 L-12 13 Z", "#7A4A2A", "#5A3218", L, 1.6, 1.0) + line("M-12 1 H12", .5, .6) + "</g>")
+            out.append(arm + nsl + cuff(ha[0], ha[1] + 1, 12) + case + hand(ha[0], ha[1], 0, 1.0, sk, L, "fist"))
+        else:
+            out.append(arm + nsl + cuff(ha[0], ha[1] + 1, 12 + sw) + hand(ha[0], ha[1], 12 + sw, 1.0, sk, L, "open"))
 
     # --- boyun + baş (üç-çeyrek sağa)
     out.append(cel("M-3.5 -132 L-3.4 -121 Q1 -119 5.6 -121 L5.2 -132 Z", sk, skS, L, 1.6, 1.0))
@@ -227,6 +316,7 @@ def toon_figure(flip=False, pose="stand", look=(1, 0), expr=None, skin="#F2C9A0"
         if earring:
             ear += f'<circle cx="-17.4" cy="-140.6" r="1.4" fill="none" stroke="#C9C4B8" stroke-width=".8"/><circle cx="-17.4" cy="-140.6" r="1.4" fill="none" stroke="{INK}" stroke-width=".3"/>'
         out.append(ear)
+    out.append(hat_parts(hat, L))
     # gözler: beyaz + iris + ağır üst kapak + kaş
     gx, gy = look
     lid = e["lid"]
