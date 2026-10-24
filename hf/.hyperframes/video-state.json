@@ -1,7 +1,7 @@
 {
   "version": 1,
   "historyId": "0e987ff4-b9b0-4d04-ba27-c8d3529849a2",
-  "currentRevision": "2dec3d66-24ce-474d-b680-d98656f0a4e2",
+  "currentRevision": "4858c278-ad1b-42f2-ab5e-7abc013a5490",
   "pendingChanges": false,
   "files": {
     "AGENTS.md": {
@@ -77,8 +77,8 @@
       "content": "/root/.cache/hyperframes/history/0e987ff4-b9b0-4d04-ba27-c8d3529849a2/blobs/6c/6c9565cd3e85314ad3a64bf79a16aee0c16f39003588ffee6ef7eba7726a746e"
     },
     "index.html": {
-      "hash": "b20e4d6408356d4537326f3d9faa4388e8db90f5ea6ad9ad71c8f8eaec1e1cc9",
-      "content": "/root/.cache/hyperframes/history/0e987ff4-b9b0-4d04-ba27-c8d3529849a2/blobs/b2/b20e4d6408356d4537326f3d9faa4388e8db90f5ea6ad9ad71c8f8eaec1e1cc9"
+      "hash": "4a6d96909a2ed5cd5f47b0f6fc94b9af7b6478c132462706378f0d6b99f7898f",
+      "content": "/root/.cache/hyperframes/history/0e987ff4-b9b0-4d04-ba27-c8d3529849a2/blobs/4a/4a6d96909a2ed5cd5f47b0f6fc94b9af7b6478c132462706378f0d6b99f7898f"
     },
     "meta.json": {
       "hash": "f16d4c7a86701bea500c9ec8b8114e3e2ad5c4cc395208cc3e672dac3a861ded",
@@ -127,6 +127,14 @@
     "avatar/mouth-erdemli.json": {
       "hash": "f453de0bf065a0aba0f35180470a2703dd7b9cf356f813d448b65c859f65c703",
       "content": "/root/.cache/hyperframes/history/0e987ff4-b9b0-4d04-ba27-c8d3529849a2/blobs/f4/f453de0bf065a0aba0f35180470a2703dd7b9cf356f813d448b65c859f65c703"
+    },
+    "assets/erdemli/kapak-bg.png": {
+      "hash": "147c5bb3e2bea3667a950342dfa16958573dd152c9469f0e483941b0a34a4838",
+      "content": "/root/.cache/hyperframes/history/0e987ff4-b9b0-4d04-ba27-c8d3529849a2/blobs/14/147c5bb3e2bea3667a950342dfa16958573dd152c9469f0e483941b0a34a4838"
+    },
+    "cover-erdemli.html": {
+      "hash": "21a867514b24cbac9bf4861fb9792bdaf58d85437cbe07d2f9c8e216e92bf485",
+      "content": "/root/.cache/hyperframes/history/0e987ff4-b9b0-4d04-ba27-c8d3529849a2/blobs/21/21a867514b24cbac9bf4861fb9792bdaf58d85437cbe07d2f9c8e216e92bf485"
     }
   },
   "revisions": {
@@ -544,6 +552,29 @@
           "after": "/root/.cache/hyperframes/history/0e987ff4-b9b0-4d04-ba27-c8d3529849a2/blobs/b2/b20e4d6408356d4537326f3d9faa4388e8db90f5ea6ad9ad71c8f8eaec1e1cc9"
         }
       }
+    },
+    "4858c278-ad1b-42f2-ab5e-7abc013a5490": {
+      "actor": {
+        "kind": "outside",
+        "name": "Outside"
+      },
+      "label": "Changed outside the app",
+      "startedAt": 1792854826491,
+      "endedAt": 1792854826511,
+      "files": {
+        "assets/erdemli/kapak-bg.png": {
+          "before": null,
+          "after": "/root/.cache/hyperframes/history/0e987ff4-b9b0-4d04-ba27-c8d3529849a2/blobs/14/147c5bb3e2bea3667a950342dfa16958573dd152c9469f0e483941b0a34a4838"
+        },
+        "cover-erdemli.html": {
+          "before": null,
+          "after": "/root/.cache/hyperframes/history/0e987ff4-b9b0-4d04-ba27-c8d3529849a2/blobs/21/21a867514b24cbac9bf4861fb9792bdaf58d85437cbe07d2f9c8e216e92bf485"
+        },
+        "index.html": {
+          "before": "/root/.cache/hyperframes/history/0e987ff4-b9b0-4d04-ba27-c8d3529849a2/blobs/b2/b20e4d6408356d4537326f3d9faa4388e8db90f5ea6ad9ad71c8f8eaec1e1cc9",
+          "after": "/root/.cache/hyperframes/history/0e987ff4-b9b0-4d04-ba27-c8d3529849a2/blobs/4a/4a6d96909a2ed5cd5f47b0f6fc94b9af7b6478c132462706378f0d6b99f7898f"
+        }
+      }
     }
   },
   "checks": {
@@ -553,8 +584,8 @@
   },
   "snapshots": {
     "latest": {
-      "revision": "2dec3d66-24ce-474d-b680-d98656f0a4e2",
-      "id": "8f5b2de0-9d41-46dc-b4a9-eeff0466aa13-0"
+      "revision": "4858c278-ad1b-42f2-ab5e-7abc013a5490",
+      "id": "0129f273-af9f-407a-b922-18d721f14ad5-1"
     },
     "revisions": {
       "2a9b87ad-94a0-46b2-b595-92c999e95595": [],
@@ -1102,6 +1133,48 @@
           "contentHash": "9d42787d91b17c26b57353961213c408b9a13e96722951faf77f8cc4319c33f0",
           "revision": "2dec3d66-24ce-474d-b680-d98656f0a4e2",
           "inputFingerprint": "59d302cbb3024e874ffa36e03f730c36738d4f3a5f2f41519701396f80d6a707",
+          "inputScope": "local-project-files",
+          "attribution": "recorded-revision"
+        }
+      ],
+      "4858c278-ad1b-42f2-ab5e-7abc013a5490": [
+        {
+          "scope": "full",
+          "id": "0129f273-af9f-407a-b922-18d721f14ad5-0",
+          "image": "/tmp/claude-0/-home-user-megerse-reels/1e62b7f2-956e-5f69-b1d6-c21f48458332/scratchpad/th/frame-00-at-2.4s.png",
+          "time": 2.4,
+          "metadata": {
+            "width": 1080,
+            "height": 1920,
+            "zoomScale": 1,
+            "browserGpuMode": "auto",
+            "warnings": [],
+            "partial": false
+          },
+          "createdAt": 1792854847555,
+          "contentHash": "1739001328b3f7eb1a6658ddfb0d3424f543399bf7ab92319db0b7d587cdcb1b",
+          "revision": "4858c278-ad1b-42f2-ab5e-7abc013a5490",
+          "inputFingerprint": "06bae48e9797ea4d8cdbd6ef2818a9c36a9e474a45ce620de70d68abc1968605",
+          "inputScope": "local-project-files",
+          "attribution": "recorded-revision"
+        },
+        {
+          "scope": "full",
+          "id": "0129f273-af9f-407a-b922-18d721f14ad5-1",
+          "image": "/tmp/claude-0/-home-user-megerse-reels/1e62b7f2-956e-5f69-b1d6-c21f48458332/scratchpad/th/frame-01-at-6.2s.png",
+          "time": 6.2,
+          "metadata": {
+            "width": 1080,
+            "height": 1920,
+            "zoomScale": 1,
+            "browserGpuMode": "auto",
+            "warnings": [],
+            "partial": false
+          },
+          "createdAt": 1792854847558,
+          "contentHash": "c670eba28fb97ea9074cf7147dc72296f77c9850524df43fe65bddc3c2aeb7ef",
+          "revision": "4858c278-ad1b-42f2-ab5e-7abc013a5490",
+          "inputFingerprint": "06bae48e9797ea4d8cdbd6ef2818a9c36a9e474a45ce620de70d68abc1968605",
           "inputScope": "local-project-files",
           "attribution": "recorded-revision"
         }
