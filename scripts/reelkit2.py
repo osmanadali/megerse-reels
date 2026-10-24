@@ -28,7 +28,7 @@ html, body { width: 1080px; height: 1920px; overflow: hidden; background: #000; 
 #tchip { position: absolute; left: 44px; top: 70px; padding: 12px 22px; border-radius: 16px; background: rgba(10,10,14,.72); border: 3px solid rgba(255,255,255,.85); font-weight: 800; font-size: 34px; letter-spacing: .02em; }
 #tchip b { color: #FFD23F; }
 #handle { position: absolute; right: 44px; top: 84px; font-weight: 600; font-size: 30px; color: rgba(255,255,255,.8); }
-.cap { position: absolute; left: 70px; right: 70px; top: 1090px; height: 300px; display: flex; flex-wrap: wrap; align-content: center; justify-content: center; gap: 0 22px; text-align: center; opacity: 0;
+.cap { position: absolute; left: 60px; right: 60px; top: 1010px; height: 300px; display: flex; flex-wrap: wrap; align-content: center; justify-content: center; gap: 0 34px; text-align: center; opacity: 0;
   font-weight: 800; font-size: 86px; line-height: 1.08; color: #fff; text-transform: uppercase;
   text-shadow: 0 6px 0 #000, 0 0 24px rgba(0,0,0,.65); -webkit-text-stroke: 3px #000; paint-order: stroke fill; }
 .cap span { display: inline-block; }
