@@ -74,12 +74,16 @@ def captions_kinetic(words, per=3):
 
 
 CAP6_CSS = """
-#capbg { position: absolute; left: 0; right: 0; top: 1170px; height: 460px; pointer-events: none; background: linear-gradient(180deg, transparent, rgba(0,0,0,.42) 28%, rgba(0,0,0,.42) 72%, transparent); }
-.cap6 { position: absolute; left: 70px; right: 70px; top: 1250px; height: 250px; display: flex; flex-wrap: wrap; align-content: center; justify-content: center; gap: 8px 0; text-align: center; opacity: 0;
+#capbg { position: absolute; left: 0; right: 0; top: CAPBG_TOPpx; height: 460px; pointer-events: none; background: linear-gradient(180deg, transparent, rgba(0,0,0,.42) 28%, rgba(0,0,0,.42) 72%, transparent); }
+.cap6 { position: absolute; left: 70px; right: 70px; top: CAP_TOPpx; height: 250px; display: flex; flex-wrap: wrap; align-content: center; justify-content: center; gap: 8px 0; text-align: center; opacity: 0;
   font-weight: 800; font-size: 76px; line-height: 1.1; color: #fff; text-transform: uppercase; letter-spacing: .01em; text-shadow: 0 4px 0 rgba(0,0,0,.85), 0 0 26px rgba(0,0,0,.7); }
 .cap6 span { display: inline-block; margin: 0 .1em; padding: .03em .17em .05em; border-radius: 18px; }
 """
 SH6 = "0 4px 0 rgba(0,0,0,.85), 0 0 26px rgba(0,0,0,.7)"
+# Instagram güvenli alan: üstte "Reels / Arkadaşlar" sekmesi (~0-250), altta kullanıcı adı/açıklama (~1600+).
+# cap_top=1250: beyaz saç v2 (eski); arsa reeli ve sonrası LAYOUT_V7 (görsel alan 300-1330, altyazı 1350-1600).
+LAYOUT_V7 = dict(cap_top=1350, top_tag=270, low_tag=1230, vis=(300, 1330))
+VIGN_V7 = "#vign { background: radial-gradient(85% 60% at 50% 46%, transparent 55%, rgba(0,0,0,.5) 100%), linear-gradient(180deg, rgba(0,0,0,.55) 0%, transparent 13%, transparent 66%, rgba(0,0,0,.45) 82%, rgba(0,0,0,.7) 100%); }\n"
 
 
 def captions_box(words, per=3, maxc=17):
@@ -124,12 +128,12 @@ def ring_js(mouth, voice_end):
             f'tl.set("#avring",{{scale:1,opacity:.5}},{voice_end});')
 
 
-def page(words, mouth, scenes_html, scenes_js, *, total, voice_end, title, voice_src, extra_css="", defs="", grain=True, avatar=True, chrome=True, caps="kinetic"):
+def page(words, mouth, scenes_html, scenes_js, *, total, voice_end, title, voice_src, extra_css="", defs="", grain=True, avatar=True, chrome=True, caps="kinetic", cap_top=1250):
     """avatar=False: anlatıcı yok (ekran tamamen sahneye); chrome=False: başlık çipi ve kanal adı yok; caps="box": v6 altyazı."""
     svg = (HF / "avatar/osman.svg").read_text(encoding="utf-8").replace("<svg ", '<svg id="av" data-m="0" data-b="0" ', 1)
     cap_html, cap_js = captions_box(words) if caps == "box" else captions_kinetic(words)
     if caps == "box":
-        extra_css = CAP6_CSS + extra_css
+        extra_css = CAP6_CSS.replace("CAPBG_TOP", str(cap_top - 80)).replace("CAP_TOP", str(cap_top)) + (VIGN_V7 if cap_top >= 1350 else "") + extra_css
         cap_html = '<div id="capbg"></div>' + cap_html
     av_html = f'<div id="avwrap"><div id="avring"></div><div id="avbox">{svg}</div></div>' if avatar else ""
     av_js = (f'tl.fromTo("#avwrap",{{scale:.5,opacity:0}},{{scale:1,opacity:1,duration:.4,ease:"back.out(2)"}},.2);\n'
