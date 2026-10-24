@@ -286,6 +286,24 @@ def toon_figure(flip=False, pose="stand", look=(1, 0), expr=None, skin="#F2C9A0"
     elif pose == "hands_pockets":
         arm = cel("M-21 -104 L-20 -86 L-13 -82 L-15 -102 Z", arm_col, arm_sh, L, 1.4, 1.0)
         out.append(arm + nsl)
+    elif pose == "pluck":
+        # yakın kol başa kalkar, cımbız tepedeki beyaz teli tutar (Osman: beyaz saç reeli)
+        def band(pts, w):
+            import math as _m
+            L_, R_ = [], []
+            for i, (x, y) in enumerate(pts):
+                x2, y2 = pts[min(i + 1, len(pts) - 1)]
+                x1, y1 = pts[max(i - 1, 0)]
+                dx, dy = x2 - x1, y2 - y1
+                n = _m.hypot(dx, dy) or 1
+                L_.append((x - dy / n * w / 2, y + dx / n * w / 2))
+                R_.append((x + dy / n * w / 2, y - dx / n * w / 2))
+            return "M" + " L".join(f"{a:.1f} {b:.1f}" for a, b in L_ + R_[::-1]) + " Z"
+        arm = cel(band([(-17, -112), (-28, -130), (-33, -146), (-24, -166), (-14, -176)], 8), arm_col, arm_sh, L, 1.2, 1.0)
+        hair_w = '<path d="M-4 -176 C-5 -182 -3 -188 -1 -194" stroke="#1B1414" stroke-width="2.4" fill="none" stroke-linecap="round"/><path d="M-4 -176 C-5 -182 -3 -188 -1 -194" stroke="#F4F4F0" stroke-width="1.2" fill="none" stroke-linecap="round"/>'
+        tw = ('<g transform="translate(-1 -193) rotate(-150)">' + cel("M-1 0 L-3 -26 L1 -28 L1 0 Z", "#C9CDD2", "#8A9096", L, .5, .5)
+              + cel("M1 0 L5 -27 L8 -25 L3 0 Z", "#DDE1E6", "#9AA0A6", L, .5, .5) + "</g>")
+        out.append(arm + nsl + hair_w + tw + hand(-13, -177, 160, 1.0, sk, L, "hold"))
     elif pose == "offer":
         arm = cel("M-22 -106 L-19 -96 L8 -101 L8 -106 L-12 -104 L-16 -108 Z", arm_col, arm_sh, L, 1.2, 1.0)
         paper = ""
