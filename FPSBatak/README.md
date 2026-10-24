@@ -1,0 +1,103 @@
+# FPS BATAK
+
+**Masaya Otur. Kartını Oyna.**
+
+Tamamen offline, birinci şahıs 3D Türk Batak oyunu. Godot 4.3+ / GDScript.
+
+## Çalıştırma
+Godot 4.3 ile `FPSBatak/project.godot` dosyasını açıp F5.
+
+**Ana menü:** Oyuna Başla · Karakterler (yakında) · Masalar · Kartlar · İstatistikler · Ayarlar (ses, tam ekran) · Çıkış.
+Oyun içinde **Esc**: Devam / Ana Menü / Çıkış. İstatistikler ve ayarlar cihazda saklanır (`user://`).
+
+## Testler
+```
+godot --headless --path FPSBatak --import          # ilk seferde sınıf önbelleği için
+godot --headless --path FPSBatak -s res://tests/run_tests.gd
+godot --headless --path FPSBatak -s res://tests/run_card_play_tests.gd   # kart oynama AI'sı
+```
+Geliştirme argümanları (`--` sonrasına yazılır):
+- `--screenshot=/yol/shot.png [--shot-times=2,6.5]` belirtilen saniyelerde ekran görüntüsü alıp çıkar
+- `--autoplay` oyuncunun kararlarını da AI verir, ayar panelini atlar (görsel test için)
+- `--rounds=N --target=M --mode=standard|buried` autoplay'de maç ayarları
+- `--speed=4` oyunu hızlandırır (yavaş yazılım render'ında kare sayısıyla sınırlıdır)
+- `--preview-panels` (ekran görüntüsüyle birlikte) ihale/gömme/koz panellerini sırayla açar
+- `--menu-start=1.5`, `--menu-panel=stats`, `--esc-at=5`, `--menu-return-at=7` menü akışını otomatik dener
+
+## Oyun modları
+Masa ayarlarından seçilir. Her modun kuralları `scripts/rules/game_rules.gd` içinde ayrı bir
+yapılandırmadır (`GameRules.standard_bidding()` / `GameRules.buried_bidding()`).
+
+| | NORMAL İHALELİ (`STANDARD_BIDDING`) | GÖMMELİ İHALELİ (`BURIED_BIDDING`) |
+|---|---|---|
+| Oyuncu | 4 (1 insan + 3 AI) | 3 (1 insan + 2 AI) |
+| Kart | 13'er, ortada kart yok | 16'şar + 4 kapalı yer kartı |
+| İhale | en az 5, en çok 13 | en az 7, en çok 16 |
+| Herkes pas | ihale **4** ile dağıtanın sağındakine (yeni tur yok) | ihale **7** ile dağıtanın sağındakine |
+| İhaleden sonra | ihaleyi alan kozu söyler, oyunu açar | önce 4 kart gömer, kozu söyler, yerdeki 4 kartı (göstermeden) alır, oyunu açar |
+
+Ortak kurallar:
+- Sırayla teklif verilir veya PAS denir; PAS diyen o ihale turuna tekrar giremez; mevcut en yüksek teklifin üzerine çıkmak zorunludur.
+- Takıma uymak, yükseltmek, takım yoksa koz atmak zorunlu; koz kırılmadan koz açılamaz.
+- Puan: ihaleyi alan tutturursa aldığı el kadar artı, batarsa ihale kadar eksi; diğerleri aldığı el kadar artı, **hiç el alamayan ihale kadar eksi**.
+- Maç: tur sayısı (5/7/9/11) dolunca ya da biri hedef puana (51/71/91/101) ulaşınca biter.
+
+## AI ihale sistemi
+Akış: **el analizi** (`HandAnalysis`) → **beklenen löve** (`TrickEstimator`) →
+**teklif başarı olasılığı** P(löve ≥ k) → **ihale durumu** (`BidContext`) → **son teklif** (`BidStrategy`).
+
+- Beklenen löve, el özelliklerinin (koz uzunluğu ve büyükleri, yan As/Papaz/Kız, K-Q dizisi,
+  renk boşluğu, tek/iki kartlı renk, koz çakma potansiyeli, uzun yan renk) doğrusal birleşimidir.
+  Katsayılar elle verilmedi; `tools/ai/calibrate_bidding.gd` ile oyundaki kart oynama AI'sı
+  (CardTracker + PlayPolicy) birbirine karşı oynatılarak ölçüldü. Normal: ihale kararının
+  verildiği bölgedeki 51.110 el (AI'nın seçeceği koz, tahmin ≥ 3); gömmeli: 24.000 el (4 koz).
+  Normal ve gömmeli için ayrı tablolar.
+- Gömmeli modda özellikler, AI'nın gömeceği 4 kart çıkarıldıktan sonraki elden hesaplanır.
+- Teklif: tutma olasılığı %60'ın üstünde kalan en yüksek seviyeye kadar, her seferinde
+  yalnızca geçerli en küçük teklif. Herkes pas derse zorunlu ihaleyi zaten alacak oyuncu,
+  kimse teklif vermemişken en düşük teklifi %50 eşikle söyler.
+- Ölçüm: `tools/ai/benchmark_bidding.gd` (eski AI birebir `tools/ai/legacy_bidding.gd`).
+
+## AI kart oynama sistemi
+Kurallar sert kısıttır: AI yalnızca `BatakRules.legal_cards()` listesinden seçer (renge uyma,
+mecburi yükseltme, koz zorunluluğu, kozda yükseltme). Strateji bu listenin içinde çalışır.
+
+- `CardTracker`: yalnızca masada açık oynanan kartlar — hangi kart hangi lövede kimden çıktı,
+  löveyi kim aldı, koz kırıldı mı, ihale ve kalan gereken löve. Hamlelerden kurallara göre
+  çıkarım: renge uymayan o renkte boş; koz da atmayan kozda da boş; mecburi yükseltmeye
+  rağmen geçmeyen o renkte daha büyük karta sahip değil. Gömmelide gömülen 4 kartı yalnızca
+  ihale sahibi bilir; savunanlar için bunlar "bilinmeyen 4 kart" olarak hesaba girer.
+- `PlayContext`: karar anında AI'nın meşru olarak bildiği her şey (kendi eli, yasal kartlar,
+  masa, koz, rol, ihale, alınan/gereken löve, kalan löve, mod, tracker).
+- `PlayPolicy`: her yasal kart puanlanır — bu kartla löveyi alma olasılığı (arkadaki
+  oyuncuların görünmeyen kartları tutma olasılığından), kartı saklamanın gelecekteki değeri,
+  rol (ihale sahibi aciliyeti / savunanın ihale sahibini durdurması ve sıfır löve cezası) ve
+  açılış/atış terimleri. Rol öncelikleri sabit kural değil ağırlıktır; ağırlıklar
+  `tools/ai/benchmark_play.gd` ile aynı ellerde ölçülerek seçildi.
+- Zorluk: Kolay rastgele yasal kart; Normal tracker + puanlama (yalnızca kesin renk boşlukları);
+  Zor/Usta ayrıca bilinmeyen renk boşluklarını olasılıkla tahmin eder. Karakterler oynayışı
+  değiştirmez.
+- Eski `AIPlayer.choose_card(legal, trick, trump)` API'si korunur; oyun
+  `choose_card_in_context(PlayContext)` kullanır.
+
+Kart oynama: "SIRA SENDE" yazınca parlak kartlardan birine tıkla
+(dokunmatikte: önce dokun-seç, sonra tekrar dokun-oyna). Karartılmış kartlar o an oynanamaz.
+
+## Yapı
+| Klasör | İçerik |
+|---|---|
+| `scenes/main` | Ana sahne: ortam, ışık, oda, koltuklar, kamera, HUD |
+| `scenes/table` | Yuvarlak masa (ahşap + keçe); masa üstü konumlar `TableLayout` ile oyuncu sayısına göre hesaplanır |
+| `scenes/characters` | Rakip yer tutucusu (ileride karakter sistemi) |
+| `scripts/cards` | `CardData` (veri), `DeckManager` (deste), `CardFaceRenderer` (prosedürel kart yüzleri), `Card3D` (masadaki kart) |
+| `scripts/rules` | `GameRules` (mod kuralları), `MatchSettings` (tur/hedef, maç sonu), `BatakRules` (uyma/yükseltme/koz), `BidManager` (ihale), `ScoreManager` (puan) |
+| `scripts/ai` | `AIPlayer`, `HandAnalysis`, `TrickEstimator`, `BidContext`, `BidStrategy`, `CardTracker`, `PlayContext`, `PlayPolicy` — yalnızca kendi eli + açık bilgiyle karar verir |
+| `tools/ai` | AI kalibrasyon ve ölçüm araçları (oyunda kullanılmaz) |
+| `scripts/game` | `TableController` (dağıt → ihale → göm → koz → löveler → puan), `SeatLayout`, `TableLayout`, `OpponentHandView` |
+| `scripts/ui` | `MainMenu` (ana menü + duraklatma), `GameHUD`, `HandView` (yelpaze el), `HandCard`, `UiTheme` (ortak tema) |
+| `scripts/audio` | `Sfx` — kodla üretilen yer tutucu kart sesleri |
+| `scripts/core` | `Seat` (koltuk düzeni), `PlayerStats` (istatistik), `UserSettings` (ses/ekran) |
+| `scripts/camera` | `SeatedCamera` (oturan oyuncu bakışı), `MenuCamera` (menüde masanın etrafında dönen kamera) |
+| `tests` | Başsız birim testleri |
+
+Koltuk 0 = Sen; rakipler masaya eşit açılarla dizilir (3 kişide sağ-ön ve sol-ön). Oyun sağa doğru (saat yönü tersine) ilerler.

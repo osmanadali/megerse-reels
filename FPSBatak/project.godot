@@ -1,0 +1,27 @@
+; Engine configuration file.
+; FPS BATAK — "Masaya Otur. Kartını Oyna."
+
+config_version=5
+
+[application]
+
+config/name="FPS BATAK"
+config/description="Masaya Otur. Kartını Oyna."
+run/main_scene="res://scenes/main/Main.tscn"
+config/features=PackedStringArray("4.3", "Mobile")
+config/icon="res://icon.svg"
+
+[display]
+
+window/size/viewport_width=1920
+window/size/viewport_height=1080
+window/size/window_width_override=1280
+window/size/window_height_override=720
+window/stretch/mode="canvas_items"
+window/stretch/aspect="expand"
+
+[rendering]
+
+renderer/rendering_method="mobile"
+textures/vram_compression/import_etc2_astc=true
+anti_aliasing/quality/msaa_3d=2
