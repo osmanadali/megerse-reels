@@ -244,14 +244,16 @@ _ICON = {
 }
 
 
-def outro_html(handle="@megerse.tr", tagline="bilinen yanlışlar · gerçek hikâyeler"):
+def outro_html(handle="@megerse.tr", tagline="bilinen yanlışlar · gerçek hikâyeler", label3="PAYLAŞ", fixed_icons=False):
+    """fixed_icons=True: düğme ikonları sabit solda (uçan gönder uçağının ineceği nokta belli olsun: #ob3 ikon merkezi 329,1119)."""
+    fi = " fi" if fixed_icons else ""
     hand = ('<svg viewBox="0 0 80 100" width="120" height="150"><path d="M30 8 C30 0 42 0 42 8 V44 L60 40 C70 38 76 46 72 56 L64 86 C62 94 56 98 48 98 H32 C24 98 18 92 16 86 L8 60 C6 52 14 48 20 54 L30 64 Z" '
             'fill="#F2D2B6" stroke="#1B1414" stroke-width="5" stroke-linejoin="round"/></svg>')
     return ('<div class="fill" style="background:radial-gradient(80% 60% at 50% 40%,#2A2440,#08060E)"></div>'
             f'<div id="ostamp">MEĞERSE</div><div id="ohandle">{handle}</div><div id="otag">{tagline}</div>'
-            f'<div class="obtn y" id="ob1"><span class="oi" id="ob1i">{_ICON["follow"]}</span><span id="ob1a">TAKİP ET</span><span id="ob1b">TAKİPTESİN ✓</span></div>'
-            f'<div class="obtn" id="ob2">{_ICON["comment"]}<span>YORUM YAZ</span></div>'
-            f'<div class="obtn" id="ob3">{_ICON["share"]}<span>PAYLAŞ</span></div>'
+            f'<div class="obtn y{fi}" id="ob1"><span class="oi" id="ob1i">{_ICON["follow"]}</span><span id="ob1a">TAKİP ET</span><span id="ob1b">TAKİPTESİN ✓</span></div>'
+            f'<div class="obtn{fi}" id="ob2">{_ICON["comment"]}<span>YORUM YAZ</span></div>'
+            f'<div class="obtn{fi}" id="ob3">{_ICON["share"]}<span>{label3}</span></div>'
             f'<div id="otap">{hand}</div>')
 
 
@@ -264,10 +266,11 @@ OUTRO_CSS = """
 #ob1 { top:760px; } #ob2 { top:910px; } #ob3 { top:1060px; }
 #ob1 .oi { display:flex; } #ob1b { position:absolute; left:0; right:0; text-align:center; opacity:0; }
 #otap { position:absolute; left:640px; top:860px; opacity:0; }
+.obtn.fi > svg, .obtn.fi > .oi { position:absolute; left:70px; top:30px; } .obtn.fi { padding-left:60px; }
 """
 
 
-def outro_js(t0, sel="#outro-in"):
+def outro_js(t0, sel="#outro-in", land_t=None):
     """damga iner → kanal adı → üç düğme sırayla → el 'takip et'e dokunur (TAKİPTESİN ✓) → yorum sallanır → paylaş uçağı kayar."""
     t = t0
     return (f'tl.fromTo("#ostamp",{{scale:2.4,opacity:0}},{{scale:1,opacity:1,duration:.2,ease:"power4.in",immediateRender:false}},{t+.1:.2f});tl.set("#ostamp",{{opacity:0}},0);'
@@ -281,8 +284,59 @@ def outro_js(t0, sel="#outro-in"):
             f'tl.to("#otap",{{x:40,y:150,duration:.3,ease:"power2.inOut"}},{t+2.2:.2f});'
             f'tl.fromTo("#ob2",{{rotation:-3}},{{rotation:3,duration:.07,repeat:5,yoyo:true,ease:"none",immediateRender:false}},{t+2.45:.2f});tl.set("#ob2",{{rotation:0}},{t+2.9:.2f});'
             f'tl.to("#otap",{{x:40,y:300,duration:.3,ease:"power2.inOut"}},{t+2.75:.2f});'
-            f'tl.fromTo("#ob3 svg",{{x:0}},{{x:22,y:-10,duration:.25,yoyo:true,repeat:1,ease:"power2.out",immediateRender:false}},{t+3.0:.2f});')
+            f'tl.fromTo("#ob3 svg",{{x:0}},{{x:22,y:-10,duration:.25,yoyo:true,repeat:1,ease:"power2.out",immediateRender:false}},{t+3.0:.2f});'
+            + (f'tl.set("#ob3 svg",{{opacity:0}},0);tl.set("#ob3 svg",{{opacity:1}},{land_t:.2f});'
+               f'tl.fromTo("#ob3",{{scale:1.14,backgroundColor:"#FFD23F"}},{{scale:1,backgroundColor:"#FFFFFF",duration:.45,ease:"back.out(3)",immediateRender:false}},{land_t:.2f});' if land_t else ""))
 
 
 def outro_sfx(t0):
     return [(t0 + .3, "boom", .45), (t0 + 1.88, "pop", .5)]
+
+
+# ---------------- paylaşım çağrısı: gönder düğmesi → uçak kalkar → outro'daki GÖNDER düğmesine iner ----------------
+SHARE_CSS = """
+#ctabtn { position:absolute; left:0; right:0; margin:0 auto; top:1180px; width:440px; height:124px; border-radius:64px; background:#fff; color:#141414; font-weight:800; font-size:56px; box-shadow:0 12px 0 rgba(0,0,0,.55); opacity:0; z-index:40; }
+#ctabtn > svg { position:absolute; left:50px; top:33px; } #ctabtn span { position:absolute; left:140px; top:30px; }
+#ctaring { position:absolute; left:0; right:0; margin:0 auto; top:1180px; width:440px; height:124px; border-radius:64px; border:7px solid #FFD23F; opacity:0; z-index:39; }
+#ctahand { position:absolute; left:600px; top:1250px; opacity:0; z-index:41; }
+.oplane { position:absolute; left:0; top:0; width:58px; height:58px; opacity:0; z-index:80; color:#FFFFFF; filter:drop-shadow(0 0 14px rgba(255,210,63,.9)); }
+.oplane.tr { color:#FFD23F; filter:none; }
+"""
+_HAND = ('<svg viewBox="0 0 80 100" width="110" height="138"><path d="M30 8 C30 0 42 0 42 8 V44 L60 40 C70 38 76 46 72 56 L64 86 C62 94 56 98 48 98 H32 C24 98 18 92 16 86 L8 60 C6 52 14 48 20 54 L30 64 Z" '
+         'fill="#F2D2B6" stroke="#1B1414" stroke-width="5" stroke-linejoin="round"/></svg>')
+CTA_ICON = (399, 1242)      # #ctabtn ikon merkezi
+OB3_ICON = (329, 1119)      # outro (fixed_icons) #ob3 ikon merkezi
+# uçuş: (x, y, dönüş, ölçek, süre, ease)
+_FLIGHT = [(620, 980, -20, 1.8, .3, "power2.out"), (850, 640, -40, 2.6, .32, "sine.inOut"), (760, 390, -140, 2.4, .3, "sine.inOut"),
+           (930, 800, -200, 2.0, .3, "sine.inOut"), (OB3_ICON[0], OB3_ICON[1], -360, 1.0, .5, "power2.in")]   # takla atıp sağdan süzülüp iner
+FLIGHT_DUR = sum(f[4] for f in _FLIGHT)
+
+
+def share_cta_html(text="GÖNDER"):
+    return (f'<div id="ctaring"></div><div id="ctabtn">{_ICON["share"]}<span>{text}</span></div><div id="ctahand">{_HAND}</div>'
+            + "".join(f'<div class="oplane{" tr" if k else ""}" id="opl{k}">{_ICON["share"]}</div>' for k in range(7)))
+
+
+def share_cta_js(t_show, t_go):
+    """t_show: düğme belirir (çağrı cümlesi başlarken); t_go: el dokunur, uçak kalkar (cümle bitince).
+    Dönüş: (js, outro_t0, land_t). Outro sahnesini outro_t0'da başlat, outro_js(outro_t0, land_t=land_t), outro_html(label3="GÖNDER", fixed_icons=True)."""
+    js = [f'tl.fromTo("#ctabtn",{{y:80,opacity:0,scale:.7}},{{y:0,opacity:1,scale:1,duration:.35,ease:"back.out(2.2)",immediateRender:false}},{t_show:.2f});tl.set("#ctabtn",{{opacity:0}},0);',
+          f'tl.fromTo("#ctaring",{{scale:1,opacity:.8}},{{scale:1.25,opacity:0,duration:.7,repeat:{max(0, int((t_go - t_show - .4) / .7))},ease:"power1.out",immediateRender:false}},{t_show + .35:.2f});tl.set("#ctaring",{{opacity:0}},0);',
+          f'tl.fromTo("#ctahand",{{x:140,y:160,opacity:0}},{{x:0,y:0,opacity:1,duration:.35,ease:"power2.out",immediateRender:false}},{t_go - .55:.2f});tl.set("#ctahand",{{opacity:0}},0);',
+          f'tl.to("#ctahand",{{scale:.86,duration:.08,yoyo:true,repeat:1}},{t_go - .12:.2f});tl.to("#ctabtn",{{scale:.93,duration:.08,yoyo:true,repeat:1}},{t_go - .12:.2f});',
+          f'tl.set("#ctabtn > svg",{{opacity:0}},{t_go:.2f});tl.to("#ctabtn,#ctahand",{{opacity:0,y:30,duration:.3}},{t_go + .25:.2f});']
+    for k in range(7):           # 0: uçak, 1-6: iz (gecikmeli, küçülen, sönen)
+        d, sc, op = k * .045, (1 if k == 0 else .62 - k * .07), (1 if k == 0 else .7 - k * .1)
+        x0, y0 = CTA_ICON
+        js.append(f'tl.set("#opl{k}",{{x:{x0 - 29},y:{y0 - 29},rotation:0,scale:{sc},opacity:0}},0);tl.set("#opl{k}",{{opacity:{op}}},{t_go + d:.2f});')
+        t = t_go + d
+        for (x, y, r, s_, dur, ease) in _FLIGHT:
+            js.append(f'tl.to("#opl{k}",{{x:{x - 29},y:{y - 29},rotation:{r},scale:{s_ * sc:.2f},duration:{dur},ease:"{ease}"}},{t:.2f});')
+            t += dur
+        js.append(f'tl.set("#opl{k}",{{opacity:0}},{t:.2f});')
+    land_t = round(t_go + FLIGHT_DUR, 2)
+    return "".join(js), round(t_go + .45, 2), land_t
+
+
+def share_cta_sfx(t_go, land_t):
+    return [(t_go, "swish", .5), (land_t, "pop", .5)]
