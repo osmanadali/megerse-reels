@@ -1,6 +1,6 @@
 # Beyaz saç reeli: seslendirme metni ve yönergeler (v2)
 
-Tahmini süre: **1 dk 40 sn – 1 dk 50 sn** (akıcı okumada; boşlukları ben ayrıca kısaltacağım). Kısaltma yok; fare deneyleri tam anlatılıyor, **Meğerse en sonda**.
+Tahmini süre: **1 dk 35 sn – 1 dk 45 sn** (+1,8 sn intro) (akıcı okumada; boşlukları ben ayrıca kısaltacağım). Kısaltma yok; fare deneyleri tam anlatılıyor, **Meğerse en sonda**.
 Bütün olgular `arastirma.json`'daki doğrulanmış kaynaklara dayanıyor (UAMS, Cleveland Clinic, Healthline, Cell 2015, Nature 2023).
 
 ## İşaretler
@@ -53,10 +53,11 @@ Genel tempo: konuşur gibi, **akıcı ve hafif hızlı**. Cümle sonlarında ses
 
 > // **Meğerse** yıllardır korktuğumuz şey yanlışmış: / **koparınca beyaz çoğalmıyor.** / Ama koparmaya devam edersen, / bir gün o noktada **hiç saç kalmayabilir.**
 
-### 9. Kapanış çağrısı
-[Samimi, gülümseyerek, hızlı.]
+### Kapanış
+Sözlü kapanış çağrısı yok: video Meğerse cümlesiyle biter, ardından sessiz döngü kartı (aynaya dönüş + ekranda "Sizde kaç tane çıkar denirdi? 👇").
 
-> Sizin evde kaç tane çıkar denirdi? / **Rakamı yorumlara yaz.**
+### İntro
+Kancadan ("...sandığından daha tuhaf.") hemen sonra ~1,8 sn kanal introsu girer; seste o noktaya otomatik boşluk eklenir.
 
 ---
 

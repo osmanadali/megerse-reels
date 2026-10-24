@@ -73,6 +73,46 @@ def captions_kinetic(words, per=3):
     return "".join(html), "".join(js)
 
 
+CAP6_CSS = """
+#capbg { position: absolute; left: 0; right: 0; top: 1170px; height: 460px; pointer-events: none; background: linear-gradient(180deg, transparent, rgba(0,0,0,.42) 28%, rgba(0,0,0,.42) 72%, transparent); }
+.cap6 { position: absolute; left: 70px; right: 70px; top: 1250px; height: 250px; display: flex; flex-wrap: wrap; align-content: center; justify-content: center; gap: 8px 0; text-align: center; opacity: 0;
+  font-weight: 800; font-size: 76px; line-height: 1.1; color: #fff; text-transform: uppercase; letter-spacing: .01em; text-shadow: 0 4px 0 rgba(0,0,0,.85), 0 0 26px rgba(0,0,0,.7); }
+.cap6 span { display: inline-block; margin: 0 .1em; padding: .03em .17em .05em; border-radius: 18px; }
+"""
+SH6 = "0 4px 0 rgba(0,0,0,.85), 0 0 26px rgba(0,0,0,.7)"
+
+
+def captions_box(words, per=3, maxc=17):
+    """v6 altyazı: 2-3 kelime (≤ maxc harf); etkin kelime sarı yuvarlak kutuya girer, hafif eğik zıplar."""
+    chunks, cur = [], []
+    for w in words:
+        if cur and (len(cur) >= per or sum(len(x["text"]) for x in cur) + len(w["text"]) > maxc):
+            chunks.append(cur)
+            cur = []
+        cur.append(w)
+        if w["text"][-1] in ".,…?!:;":
+            chunks.append(cur)
+            cur = []
+    if cur:
+        chunks.append(cur)
+    html, js = [], []
+    on = '{backgroundColor:"#FFD23F",color:"#141414",textShadow:"none"}'
+    off = f'{{backgroundColor:"rgba(255,210,63,0)",color:"#FFFFFF",textShadow:"{SH6}",rotation:0}}'
+    for ci, ch in enumerate(chunks):
+        a = ch[0]["startMs"] / 1000
+        b = chunks[ci + 1][0]["startMs"] / 1000 if ci + 1 < len(chunks) else ch[-1]["endMs"] / 1000 + .4
+        b = min(b, ch[-1]["endMs"] / 1000 + .9)          # uzun suskunlukta ekranda asılı kalmasın
+        spans = "".join(f'<span id="k{ci}_{wi}">{w["text"].rstrip(".,;:")}</span>' for wi, w in enumerate(ch))
+        html.append(f'<div class="cap6" id="k{ci}">{spans}</div>')
+        js.append(f'tl.set("#k{ci}",{{opacity:1}},{a:.2f});tl.fromTo("#k{ci}",{{y:34,opacity:0,scale:.92}},{{y:0,opacity:1,scale:1,duration:.18,ease:"back.out(2.2)",immediateRender:false}},{a:.2f});tl.set("#k{ci}",{{opacity:0}},{b:.2f});')
+        for wi, w in enumerate(ch):
+            t = w["startMs"] / 1000
+            js.append(f'tl.set("#k{ci}_{wi}",{on},{t:.2f});tl.fromTo("#k{ci}_{wi}",{{scale:1.16,rotation:-5}},{{scale:1,rotation:-2,duration:.18,ease:"back.out(3)",immediateRender:false}},{t:.2f});')
+            if wi + 1 < len(ch):
+                js.append(f'tl.set("#k{ci}_{wi}",{off},{ch[wi+1]["startMs"]/1000:.2f});')
+    return "".join(html), "".join(js)
+
+
 def ring_js(mouth, voice_end):
     """avatar halkası sesle nabız atar (ağız seviyesinden)."""
     ev, prev = [], None
@@ -84,9 +124,18 @@ def ring_js(mouth, voice_end):
             f'tl.set("#avring",{{scale:1,opacity:.5}},{voice_end});')
 
 
-def page(words, mouth, scenes_html, scenes_js, *, total, voice_end, title, voice_src, extra_css="", defs="", grain=True):
+def page(words, mouth, scenes_html, scenes_js, *, total, voice_end, title, voice_src, extra_css="", defs="", grain=True, avatar=True, chrome=True, caps="kinetic"):
+    """avatar=False: anlatıcı yok (ekran tamamen sahneye); chrome=False: başlık çipi ve kanal adı yok; caps="box": v6 altyazı."""
     svg = (HF / "avatar/osman.svg").read_text(encoding="utf-8").replace("<svg ", '<svg id="av" data-m="0" data-b="0" ', 1)
-    cap_html, cap_js = captions_kinetic(words)
+    cap_html, cap_js = captions_box(words) if caps == "box" else captions_kinetic(words)
+    if caps == "box":
+        extra_css = CAP6_CSS + extra_css
+        cap_html = '<div id="capbg"></div>' + cap_html
+    av_html = f'<div id="avwrap"><div id="avring"></div><div id="avbox">{svg}</div></div>' if avatar else ""
+    av_js = (f'tl.fromTo("#avwrap",{{scale:.5,opacity:0}},{{scale:1,opacity:1,duration:.4,ease:"back.out(2)"}},.2);\n'
+             f'{avatar_js(mouth, voice_end)}\n{ring_js(mouth, voice_end)}') if avatar else ""
+    ch_html = f'<div id="tchip">{title}</div><div id="handle">@megerse.tr</div>' if chrome else ""
+    ch_js = 'tl.fromTo("#tchip",{y:-40,opacity:0},{y:0,opacity:1,duration:.4,ease:"back.out(2)"},.3);' if chrome else ""
     g = component("grain-overlay").replace("opacity: 0.15;", "opacity: 0.08;") if grain else ""
     mblur = component("motion-blur")
     return f"""<!doctype html>
@@ -104,19 +153,17 @@ def page(words, mouth, scenes_html, scenes_js, *, total, voice_end, title, voice
   <div id="vign"></div>{g}
   <div id="flash"></div>
   <div id="prog"><div id="progf"></div></div>
-  <div id="tchip">{title}</div><div id="handle">@megerse.tr</div>
+  {ch_html}
   {cap_html}
-  <div id="avwrap"><div id="avring"></div><div id="avbox">{svg}</div></div>
+  {av_html}
 </div>
 {mblur}
 <script>
 const tl = gsap.timeline({{ paused: true }});
 tl.fromTo("#progf",{{scaleX:0}},{{scaleX:1,duration:{voice_end},ease:"none"}},0);
-tl.fromTo("#avwrap",{{scale:.5,opacity:0}},{{scale:1,opacity:1,duration:.4,ease:"back.out(2)"}},.2);
-tl.fromTo("#tchip",{{y:-40,opacity:0}},{{y:0,opacity:1,duration:.4,ease:"back.out(2)"}},.3);
+{ch_js}
 {scenes_js}
-{avatar_js(mouth, voice_end)}
-{ring_js(mouth, voice_end)}
+{av_js}
 {cap_js}
 tl.set({{}}, {{}}, {total});
 window.__timelines = window.__timelines || {{}};
@@ -138,3 +185,44 @@ def punch_js(sel, t, s=1.08, dur=.35):
 
 def shake_js(sel, t, amp=14, n=8):
     return f'tl.fromTo("{sel}",{{x:-{amp}}},{{x:{amp},duration:.04,repeat:{n},yoyo:true,ease:"none",immediateRender:false}},{t:.2f});tl.set("{sel}",{{x:0}},{t+.04*(n+1):.2f});'
+
+
+# ---------------- kanal introsu (kancadan sonra, ~1,8 sn) ----------------
+INTRO_DUR = 1.8
+
+
+def intro_html(case_no="05"):
+    """'Meğerse dosyası' introsu: dosya kaydı gelir, MEĞERSE damgası iner, kanal adı. Sahne kabı içine konur."""
+    folder = ('<svg viewBox="0 0 1080 1920" class="fill" id="ifold-svg"><g id="ifold" transform="translate(540 900)">'
+              '<path d="M-400 -260 L-400 300 L400 300 L400 -260 Z" fill="#000" opacity=".35" transform="translate(16 22)"/>'
+              '<path d="M-400 -300 L-160 -300 L-120 -260 L400 -260 L400 300 L-400 300 Z" fill="#C9965A" stroke="#1B1414" stroke-width="10" stroke-linejoin="round"/>'
+              '<rect x="-360" y="-300" width="700" height="520" rx="10" fill="#F4EEDC" stroke="#1B1414" stroke-width="6" transform="rotate(-3)"/>'
+              + "".join(f'<path d="M-300 {-200+i*48} H{180 - (i*61) % 160}" stroke="#9A907A" stroke-width="10" stroke-linecap="round" transform="rotate(-3)"/>' for i in range(7))
+              + '<path d="M-400 -180 L400 -180 L400 300 L-400 300 Z" fill="#DDA968" stroke="#1B1414" stroke-width="10" stroke-linejoin="round"/>'
+              '<path d="M-400 -180 L400 -180" stroke="#fff" stroke-opacity=".35" stroke-width="8"/>'
+              f'<text x="-340" y="250" font-family="Mont" font-weight="800" font-size="46" fill="#6A4A22">DOSYA NO: {case_no}</text>'
+              '<path d="M260 -330 C260 -380 320 -380 320 -330 L320 -150 C320 -120 280 -120 280 -150 L280 -320" fill="none" stroke="#B9BEC4" stroke-width="12" stroke-linecap="round"/>'
+              '</g></svg>')
+    return (f'<div class="fill" style="background:radial-gradient(80% 60% at 50% 45%,#2A2440,#08060E)"></div>{folder}'
+            '<div id="istamp">MEĞERSE</div><div id="ihandle">@megerse.tr</div><div id="itag">bilinen yanlışlar · gerçek hikâyeler</div>')
+
+
+INTRO_CSS = """
+#istamp { position:absolute; left:120px; right:120px; top:780px; padding:18px 0; text-align:center; border:16px solid #E8423A; border-radius:26px; color:#E8423A; background:rgba(244,238,220,.9); font-weight:800; font-size:150px; letter-spacing:.04em; transform:rotate(-8deg); opacity:0; }
+#ihandle { position:absolute; left:0; right:0; top:1250px; text-align:center; font-weight:800; font-size:64px; color:#FFD23F; -webkit-text-stroke:4px #000; paint-order:stroke fill; opacity:0; }
+#itag { position:absolute; left:0; right:0; top:1340px; text-align:center; font-weight:600; font-size:36px; color:#E6E2F0; opacity:0; }
+"""
+
+
+def intro_js(t0, sel="#intro-in"):
+    t = t0
+    return (f'tl.fromTo("#ifold",{{attr:{{transform:"translate(540 1700) rotate(14)"}}}},{{attr:{{transform:"translate(540 900) rotate(0)"}},duration:.35,ease:"back.out(1.6)",immediateRender:false}},{t:.2f});'
+            f'tl.fromTo("#istamp",{{scale:2.6,opacity:0,rotation:-2}},{{scale:1,opacity:1,rotation:-8,duration:.18,ease:"power4.in",immediateRender:false}},{t+.45:.2f});'
+            + flash_js(t + .63, .55, .25) + shake_js("#ifold-svg", t + .63, 18, 5)
+            + f'tl.fromTo("#ihandle",{{y:30,opacity:0}},{{y:0,opacity:1,duration:.25,ease:"back.out(2)",immediateRender:false}},{t+.8:.2f});'
+            f'tl.fromTo("#itag",{{opacity:0}},{{opacity:1,duration:.25,immediateRender:false}},{t+.95:.2f});'
+            f'tl.to("{sel}",{{scale:2.4,opacity:0,duration:.3,ease:"power2.in"}},{t+INTRO_DUR-.3:.2f});')
+
+
+def intro_sfx(t0):
+    return [(t0, "whoosh", 1.0), (t0 + .63, "boom", 1.0), (t0 + .64, "pluck", .6), (t0 + .82, "ding", .8), (t0 + INTRO_DUR - .3, "swish", .9)]
