@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3]
+[gd_scene load_steps=17 format=3]
 
 [ext_resource type="Script" path="res://scripts/main/main.gd" id="1_main"]
 [ext_resource type="PackedScene" path="res://scenes/table/Table.tscn" id="2_table"]
@@ -14,6 +14,7 @@
 [ext_resource type="Script" path="res://scripts/ui/main_menu.gd" id="12_menu"]
 [ext_resource type="PackedScene" path="res://scenes/environment/Coffeehouse.tscn" id="13_env"]
 [ext_resource type="PackedScene" path="res://scenes/characters/Dayi.tscn" id="14_dayi"]
+[ext_resource type="PackedScene" path="res://scenes/characters/Teyze.tscn" id="15_teyze"]
 
 [sub_resource type="Environment" id="Env_kahvehane"]
 background_mode = 1
@@ -47,6 +48,7 @@ environment = SubResource("Env_kahvehane")
 script = ExtResource("10_seats")
 opponent_scene = ExtResource("3_opp")
 character_scenes = {
+1: ExtResource("15_teyze"),
 2: ExtResource("14_dayi")
 }
 
