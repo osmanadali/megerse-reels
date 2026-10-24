@@ -225,4 +225,58 @@ def intro_js(t0, sel="#intro-in"):
 
 
 def intro_sfx(t0):
-    return [(t0, "whoosh", 1.0), (t0 + .63, "boom", 1.0), (t0 + .64, "pluck", .6), (t0 + .82, "ding", .8), (t0 + INTRO_DUR - .3, "swish", .9)]
+    """az ve kısık (Osman: efekt yerinde, yüksek değil)."""
+    return [(t0, "whoosh", .6), (t0 + .63, "boom", .7)]
+
+
+# ---------------- kanal outrosu (ses bittikten sonra, sessiz; soru yok: takip / yorum / paylaş) ----------------
+OUTRO_DUR = 3.6
+_ICON = {
+    "follow": '<svg viewBox="0 0 48 48" width="58" height="58"><circle cx="19" cy="15" r="9" fill="currentColor"/><path d="M3 41 C3 29 35 29 35 41 Z" fill="currentColor"/><path d="M39 14 V30 M31 22 H47" stroke="currentColor" stroke-width="5" stroke-linecap="round"/></svg>',
+    "comment": '<svg viewBox="0 0 48 48" width="58" height="58"><path d="M6 8 H42 A4 4 0 0 1 46 12 V32 A4 4 0 0 1 42 36 H20 L10 44 V36 H6 A4 4 0 0 1 2 32 V12 A4 4 0 0 1 6 8 Z" fill="currentColor"/><circle cx="14" cy="22" r="3" fill="#fff"/><circle cx="24" cy="22" r="3" fill="#fff"/><circle cx="34" cy="22" r="3" fill="#fff"/></svg>',
+    "share": '<svg viewBox="0 0 48 48" width="58" height="58"><path d="M3 22 L45 4 L32 44 L23 27 Z" fill="currentColor"/><path d="M23 27 L45 4" stroke="#fff" stroke-width="3"/></svg>',
+}
+
+
+def outro_html(handle="@megerse.tr", tagline="bilinen yanlışlar · gerçek hikâyeler"):
+    hand = ('<svg viewBox="0 0 80 100" width="120" height="150"><path d="M30 8 C30 0 42 0 42 8 V44 L60 40 C70 38 76 46 72 56 L64 86 C62 94 56 98 48 98 H32 C24 98 18 92 16 86 L8 60 C6 52 14 48 20 54 L30 64 Z" '
+            'fill="#F2D2B6" stroke="#1B1414" stroke-width="5" stroke-linejoin="round"/></svg>')
+    return ('<div class="fill" style="background:radial-gradient(80% 60% at 50% 40%,#2A2440,#08060E)"></div>'
+            f'<div id="ostamp">MEĞERSE</div><div id="ohandle">{handle}</div><div id="otag">{tagline}</div>'
+            f'<div class="obtn y" id="ob1">{_ICON["follow"]}<span id="ob1a">TAKİP ET</span><span id="ob1b">TAKİPTESİN ✓</span></div>'
+            f'<div class="obtn" id="ob2">{_ICON["comment"]}<span>YORUM YAZ</span></div>'
+            f'<div class="obtn" id="ob3">{_ICON["share"]}<span>PAYLAŞ</span></div>'
+            f'<div id="otap">{hand}</div>')
+
+
+OUTRO_CSS = """
+#ostamp { position:absolute; left:0; right:0; margin:0 auto; top:300px; width:fit-content; padding:8px 40px; border:12px solid #E8423A; border-radius:22px; color:#E8423A; background:rgba(244,238,220,.92); font-weight:800; font-size:96px; letter-spacing:.04em; transform:rotate(-6deg); opacity:0; }
+#ohandle { position:absolute; left:0; right:0; top:520px; text-align:center; font-weight:800; font-size:76px; color:#FFD23F; text-shadow:0 6px 0 #000; opacity:0; }
+#otag { position:absolute; left:0; right:0; top:618px; text-align:center; font-weight:600; font-size:36px; color:#E6E2F0; opacity:0; }
+.obtn { position:absolute; left:0; right:0; margin:0 auto; width:620px; height:118px; border-radius:60px; background:#fff; color:#141414; display:flex; align-items:center; justify-content:center; gap:22px; font-weight:800; font-size:52px; box-shadow:0 10px 0 rgba(0,0,0,.55); opacity:0; }
+.obtn.y { background:#FFD23F; }
+#ob1 { top:760px; } #ob2 { top:910px; } #ob3 { top:1060px; }
+#ob1 span { position:relative; } #ob1b { position:absolute !important; left:150px; opacity:0; }
+#otap { position:absolute; left:640px; top:860px; opacity:0; }
+"""
+
+
+def outro_js(t0, sel="#outro-in"):
+    """damga iner → kanal adı → üç düğme sırayla → el 'takip et'e dokunur (TAKİPTESİN ✓) → yorum sallanır → paylaş uçağı kayar."""
+    t = t0
+    return (f'tl.fromTo("#ostamp",{{scale:2.4,opacity:0}},{{scale:1,opacity:1,duration:.2,ease:"power4.in",immediateRender:false}},{t+.1:.2f});tl.set("#ostamp",{{opacity:0}},0);'
+            + flash_js(t + .3, .35, .25)
+            + f'tl.fromTo("#ohandle",{{y:24,opacity:0}},{{y:0,opacity:1,duration:.25,ease:"back.out(2)",immediateRender:false}},{t+.4:.2f});tl.set("#ohandle",{{opacity:0}},0);'
+            f'tl.fromTo("#otag",{{opacity:0}},{{opacity:1,duration:.25,immediateRender:false}},{t+.55:.2f});tl.set("#otag",{{opacity:0}},0);'
+            f'tl.fromTo(".obtn",{{scale:.6,opacity:0}},{{scale:1,opacity:1,duration:.3,stagger:.14,ease:"back.out(2.2)",immediateRender:false}},{t+.75:.2f});tl.set(".obtn",{{opacity:0}},0);'
+            f'tl.fromTo("#otap",{{x:160,y:220,opacity:0}},{{x:0,y:0,opacity:1,duration:.4,ease:"power2.out",immediateRender:false}},{t+1.35:.2f});tl.set("#otap",{{opacity:0}},0);'
+            f'tl.to("#otap",{{scale:.86,duration:.08,yoyo:true,repeat:1}},{t+1.8:.2f});tl.to("#ob1",{{scale:.94,duration:.08,yoyo:true,repeat:1}},{t+1.8:.2f});'
+            f'tl.set("#ob1a",{{opacity:0}},{t+1.88:.2f});tl.set("#ob1b",{{opacity:1}},{t+1.88:.2f});tl.to("#ob1",{{backgroundColor:"#5EF0D2",duration:.15}},{t+1.88:.2f});'
+            f'tl.to("#otap",{{x:40,y:150,duration:.3,ease:"power2.inOut"}},{t+2.2:.2f});'
+            f'tl.fromTo("#ob2",{{rotation:-3}},{{rotation:3,duration:.07,repeat:5,yoyo:true,ease:"none",immediateRender:false}},{t+2.45:.2f});tl.set("#ob2",{{rotation:0}},{t+2.9:.2f});'
+            f'tl.to("#otap",{{x:40,y:300,duration:.3,ease:"power2.inOut"}},{t+2.75:.2f});'
+            f'tl.fromTo("#ob3 svg",{{x:0}},{{x:22,y:-10,duration:.25,yoyo:true,repeat:1,ease:"power2.out",immediateRender:false}},{t+3.0:.2f});')
+
+
+def outro_sfx(t0):
+    return [(t0 + .3, "boom", .45), (t0 + 1.88, "pop", .5)]
