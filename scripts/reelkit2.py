@@ -81,10 +81,10 @@ CAP6_CSS = """
 """
 SH6 = "0 4px 0 rgba(0,0,0,.85), 0 0 26px rgba(0,0,0,.7)"
 # Instagram güvenli alan: üstte "Reels / Arkadaşlar" sekmesi (~0-250), altta kullanıcı adı/açıklama (~1600+).
-# cap_top=1250: beyaz saç v2 (eski); arsa reeli ve sonrası LAYOUT_V7 (görsel alan 250-1390, altyazı 1400-1650, ortalı;
+# cap_top=1250: beyaz saç v2 (eski); arsa reeli ve sonrası LAYOUT_V7 (görsel alan 200-1410, altyazı 1440-1670, 70 px, ortalı;
 # son kelime sağ düğmelerin altına girebilir, Osman: ortalılık daha önemli).
-LAYOUT_V7 = dict(cap_top=1400, top_tag=250, low_tag=1290, vis=(250, 1390))
-VIGN_V7 = "#vign { background: radial-gradient(85% 60% at 50% 46%, transparent 55%, rgba(0,0,0,.5) 100%), linear-gradient(180deg, rgba(0,0,0,.55) 0%, transparent 12%, transparent 70%, rgba(0,0,0,.45) 84%, rgba(0,0,0,.7) 100%); }\n"
+LAYOUT_V7 = dict(cap_top=1440, top_tag=200, low_tag=1310, vis=(200, 1410))
+VIGN_V7 = ".cap6 { font-size: 70px; height: 230px; }\n#vign { background: radial-gradient(85% 60% at 50% 46%, transparent 55%, rgba(0,0,0,.5) 100%), linear-gradient(180deg, rgba(0,0,0,.55) 0%, transparent 12%, transparent 70%, rgba(0,0,0,.45) 84%, rgba(0,0,0,.7) 100%); }\n"
 
 
 def captions_box(words, per=3, maxc=17):
@@ -134,7 +134,7 @@ def page(words, mouth, scenes_html, scenes_js, *, total, voice_end, title, voice
     svg = (HF / "avatar/osman.svg").read_text(encoding="utf-8").replace("<svg ", '<svg id="av" data-m="0" data-b="0" ', 1)
     cap_html, cap_js = captions_box(words) if caps == "box" else captions_kinetic(words)
     if caps == "box":
-        extra_css = CAP6_CSS.replace("CAPBG_TOP", str(cap_top - 80)).replace("CAP_TOP", str(cap_top)) + (VIGN_V7 if cap_top >= 1400 else "") + extra_css
+        extra_css = CAP6_CSS.replace("CAPBG_TOP", str(cap_top - 80)).replace("CAP_TOP", str(cap_top)) + (VIGN_V7 if cap_top >= 1440 else "") + extra_css
         cap_html = '<div id="capbg"></div>' + cap_html
     av_html = f'<div id="avwrap"><div id="avring"></div><div id="avbox">{svg}</div></div>' if avatar else ""
     av_js = (f'tl.fromTo("#avwrap",{{scale:.5,opacity:0}},{{scale:1,opacity:1,duration:.4,ease:"back.out(2)"}},.2);\n'
