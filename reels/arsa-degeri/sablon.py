@@ -38,7 +38,7 @@ body{{width:1080px;height:1920px;overflow:hidden;font-family:Mont,sans-serif;pos
 .zl{{position:absolute;font-weight:800;font-size:24px;color:#fff;background:rgba(0,0,0,.6);padding:6px 12px;border-radius:10px}}
 .tag{{position:absolute;left:0;right:0;margin:0 auto;width:fit-content;padding:14px 24px;border-radius:18px;font-weight:800;font-size:44px;background:#FFD23F;color:#111;box-shadow:0 8px 0 #000}}
 .tag.dark{{background:rgba(10,10,14,.85);color:#fff;border:3px solid #fff;box-shadow:none;font-size:38px}}
-.cap{{position:absolute;left:70px;right:70px;top:{L["cap_top"]}px;height:230px;display:flex;flex-wrap:wrap;align-content:center;justify-content:center;font-weight:800;font-size:70px;line-height:1.1;color:#fff;text-shadow:0 4px 0 rgba(0,0,0,.85),0 0 26px rgba(0,0,0,.7)}}
+.cap{{position:absolute;left:110px;right:110px;top:{L["cap_top"]}px;height:230px;display:flex;flex-wrap:wrap;align-content:center;justify-content:center;font-weight:800;font-size:70px;line-height:1.1;color:#fff;text-shadow:0 4px 0 rgba(0,0,0,.85),0 0 26px rgba(0,0,0,.7)}}
 .cap span{{display:inline-block;margin:0 .1em;padding:.03em .17em .05em;border-radius:18px}}
 .cap span.on{{background:#FFD23F;color:#141414;text-shadow:none;transform:rotate(-2deg)}}
 .ig{{color:#fff;text-shadow:0 2px 6px rgba(0,0,0,.6)}}
@@ -48,14 +48,14 @@ body{{width:1080px;height:1920px;overflow:hidden;font-family:Mont,sans-serif;pos
 <div class="abs ig" style="left:0;right:0;top:120px;text-align:center;font-weight:800;font-size:40px">Reels&nbsp;&nbsp;&nbsp;&nbsp;<span style="opacity:.6">Arkadaşlar</span></div>
 <div class="zl" style="left:20px;top:14px">0–190 · Instagram üst sekmesi</div>
 <div class="tag" style="top:{L["top_tag"]}px">ÜST ETİKET · 200</div>
-<div class="abs" style="left:40px;right:40px;top:{V0}px;height:{V1 - V0}px;border:4px dashed #5EF0D2;border-radius:24px"></div>
-<div class="zl" style="left:56px;top:{V0 + 110}px;color:#5EF0D2">GÖRSEL ALAN {V0}–{V1}</div>
+<div class="abs" style="left:{L["side"]}px;right:{L["side"]}px;top:{V0}px;height:{V1 - V0}px;border:4px dashed #5EF0D2;border-radius:24px"></div>
+<div class="zl" style="left:116px;top:{V0 + 110}px;color:#5EF0D2">GÖRSEL ALAN {V0}–{V1}</div>
 <div class="tag dark" style="top:{L["low_tag"]}px">ALT ETİKET · {L["low_tag"]}</div>
 <div class="abs" style="left:0;right:0;top:{L["cap_top"] - 80}px;height:460px;background:linear-gradient(180deg,transparent,rgba(0,0,0,.42) 28%,rgba(0,0,0,.42) 72%,transparent)"></div>
 <div class="cap"><span>ARSA</span><span class="on">DEĞERİ</span><span>NASIL</span></div>
-<div class="zl" style="left:20px;top:{L["cap_top"] + 6}px;color:#FFD23F">ALTYAZI {L["cap_top"]}–1670</div>
+<div class="zl" style="left:116px;top:{L["cap_top"] + 6}px;color:#FFD23F">ALTYAZI {L["cap_top"]}–1670</div>
 <div class="band" style="top:1675px;height:245px"></div>
-<div class="band" style="top:1050px;left:auto;right:0;width:140px;height:550px"></div><div class="abs" style="left:60px;right:60px;top:{L["cap_top"]}px;height:230px;border:3px dashed #FFD23F;border-radius:18px"></div>
+<div class="band" style="top:1050px;left:auto;right:0;width:140px;height:550px"></div><div class="abs" style="left:110px;right:110px;top:{L["cap_top"]}px;height:230px;border:3px dashed #FFD23F;border-radius:18px"></div><div class="band" style="top:190px;left:0;right:auto;width:{L["side"]}px;height:1485px;background:rgba(120,90,255,.25);border-color:rgba(170,150,255,.9)"></div><div class="band" style="top:190px;left:auto;right:0;width:{L["side"]}px;height:1485px;background:rgba(120,90,255,.25);border-color:rgba(170,150,255,.9)"></div><div class="zl" style="left:110px;top:1176px;color:#C9B8FF">iPhone: yanlardan ~100 px kırpılır</div>
 <div class="abs ig" style="right:34px;top:1090px;display:flex;flex-direction:column;align-items:center;gap:52px;font-weight:600;font-size:24px">{heart}{bubble}{plane}</div>
 <div class="abs ig" style="left:36px;top:1700px;display:flex;align-items:center;gap:18px;font-weight:800;font-size:34px"><div style="width:64px;height:64px;border-radius:50%;background:#FFD23F"></div>megerse.tr <span style="border:2px solid #fff;border-radius:12px;padding:4px 14px;font-size:28px">Takip et</span></div>
 <div class="abs ig" style="left:36px;top:1785px;font-weight:600;font-size:30px;opacity:.9">Arsa değerleri nasıl hesaplanıyor? 🏗️ …</div>

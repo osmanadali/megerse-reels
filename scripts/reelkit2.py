@@ -83,8 +83,9 @@ SH6 = "0 4px 0 rgba(0,0,0,.85), 0 0 26px rgba(0,0,0,.7)"
 # Instagram güvenli alan: üstte "Reels / Arkadaşlar" sekmesi (~0-250), altta kullanıcı adı/açıklama (~1600+).
 # cap_top=1250: beyaz saç v2 (eski); arsa reeli ve sonrası LAYOUT_V7 (görsel alan 200-1410, altyazı 1440-1670, 70 px, ortalı;
 # son kelime sağ düğmelerin altına girebilir, Osman: ortalılık daha önemli).
-LAYOUT_V7 = dict(cap_top=1440, top_tag=200, low_tag=1310, vis=(200, 1410))
-VIGN_V7 = ".cap6 { font-size: 70px; height: 230px; }\n#vign { background: radial-gradient(85% 60% at 50% 46%, transparent 55%, rgba(0,0,0,.5) 100%), linear-gradient(180deg, rgba(0,0,0,.55) 0%, transparent 12%, transparent 70%, rgba(0,0,0,.45) 84%, rgba(0,0,0,.7) 100%); }\n"
+# iPhone: Reels ekranı doldururken 9:16 videonun yanlarını kırpar (~%9/yan) → önemli her şey x 100-980 içinde (side=100).
+LAYOUT_V7 = dict(cap_top=1440, top_tag=200, low_tag=1310, vis=(200, 1410), side=100)
+VIGN_V7 = ".cap6 { font-size: 70px; height: 230px; left: 110px; right: 110px; }\n#vign { background: radial-gradient(85% 60% at 50% 46%, transparent 55%, rgba(0,0,0,.5) 100%), linear-gradient(180deg, rgba(0,0,0,.55) 0%, transparent 12%, transparent 70%, rgba(0,0,0,.45) 84%, rgba(0,0,0,.7) 100%); }\n"
 
 
 def captions_box(words, per=3, maxc=17):
