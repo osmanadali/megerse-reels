@@ -1,0 +1,960 @@
+{
+ "final": {
+  "script": "Arsa değerleri nasıl hesaplanıyor? Yan yana iki arsa, ikisi de örneğin beş yüz metrekare; biri kat kat pahalıya satılabiliyor. Neden? İlk ipucu: tapuda arsa yazması, tek başına imarlı demek değil. Ne yapılabileceğini imar durum belgesi gösteriyor. İkinci ipucu: emsal, yani kaks, katlar alanı katsayısı. Parselle çarpınca inşaat hakkı çıkıyor: örneğin bir buçuksa, beş yüz metrekareden yedi yüz elli. Üçüncü ipucu: yol. Kat adedi yazmayan eski planlarda, yedi metreye kadar yolda en çok iki kat, elli metreyi aşanda on sekiz kat. Dördüncü ipucu: köşe. Yol boyu ticaret kararı varsa, köşe parselin bodrumu ayrı dükkân olabiliyor; ara parselinki olamıyor. Değerlemede emsal ise benzer satış demek: metrekareye çevrilip konum, imar, tarih farkı için yüzdeyle düzeltiliyor. Yüzdeler formülden değil, gerekçeli takdirden. Urla'daki gerçek bir raporda, projenin bugüne indirgenmiş satışından inşaat maliyeti ve yüklenici kârı düşülünce arsaya yaklaşık sekiz yüz yedi milyon lira kalmış. Benzer satışlarsa yaklaşık altı yüz altmış beş milyon demiş. Uzman ortalama almamış; proje hesabı tahmine dayandığından satışları seçmiş. Meğerse arsa değeri, toprağın büyüklüğünden çok, üstünde yasal olarak yapılabilecek en verimli kullanıma göre hesaplanıyormuş.",
+  "beats": [
+   {
+    "text": "Arsa değerleri nasıl hesaplanıyor? Yan yana iki arsa, ikisi de örneğin beş yüz metrekare; biri kat kat pahalıya satılabiliyor. Neden?",
+    "visual": "Tam ekran, alacakaranlık ışıklı izometrik sahne. Kamera kuşbakışından hızla alçalıp yan yana iki birebir aynı boş parselin arasına iniyor. İki parselin zemininde aynı anda parlayan '500 m²' ölçü çizgileri kendini çiziyor, köşede küçük 'örnek' etiketi var. Üstlerine aynı anda iki fiyat etiketi düşüyor. Soldaki sabit kalıyor, sağdakinin rakamları slot makinesi gibi dönerek katlanıyor ve etiket yukarı uzayan bir ışık sütununa dönüşüyor. 'Neden?' sözcüğüyle iki parselin arasından yerden dev bir soru işareti hologramı yükseliyor, sahne hafifçe titriyor.",
+    "claim_ids": [
+     "B-c4",
+     "A-c4"
+    ]
+   },
+   {
+    "text": "İlk ipucu: tapuda arsa yazması, tek başına imarlı demek değil. Ne yapılabileceğini imar durum belgesi gösteriyor.",
+    "visual": "Kamera yere yaklaşıyor, iki parselin önünde iki tapu belgesi havada süzülüyor. İkisinde de 'Cinsi: ARSA' satırı büyüteç altında parlıyor, sonra yanında 'imarlı mı?' yazısı titreyip soluyor. Tapuların arkasından resmi 'İMAR DURUM BELGESİ' sayfası katman katman açılıyor. Kullanım, emsal, kat adedi ve çekme mesafesi satırları sırayla doluyor ve her satır bir ışık huzmesi olarak parselin üstüne yansıyıp zeminde sınır çizgilerine dönüşüyor.",
+    "claim_ids": [
+     "B-c5"
+    ]
+   },
+   {
+    "text": "İkinci ipucu: emsal, yani kaks, katlar alanı katsayısı. Parselle çarpınca inşaat hakkı çıkıyor: örneğin bir buçuksa, beş yüz metrekareden yedi yüz elli.",
+    "visual": "İzometrik parsel tam ekran, zeminde '500 m²' ızgarası yanıyor. Üstten 'EMSAL = KAKS · Katlar Alanı Katsayısı' etiketi kayarak oturuyor. '× 1,50' çarpanı ekranın kenarından uçup parsele çarpıyor, çarpma noktasından yarı saydam kat plakaları tek tek yükseliyor. Yan tarafta sayaç 0'dan '750 m² · emsale esas inşaat alanı' değerine koşuyor, köşede küçük 'örnek' notu duruyor.",
+    "claim_ids": [
+     "B-c1",
+     "B-c14",
+     "V-kaks"
+    ]
+   },
+   {
+    "text": "Üçüncü ipucu: yol. Kat adedi yazmayan eski planlarda, yedi metreye kadar yolda en çok iki kat, elli metreyi aşanda on sekiz kat.",
+    "visual": "Kamera yükselip iki parselin önündeki yolları gösteriyor: biri dar bir sokak, '≤ 7 m' ölçü okuyla; diğeri geniş bir bulvar, '> 50 m' ölçü okuyla. Dar sokaktaki parselde bina ikinci katta kırmızı ışıklı yarı saydam bir tavan düzlemine çarpıp duruyor. Bulvar tarafında katlar hızla on sekize tırmanıyor, yanında kat sayacı tıkırdıyor, kamera kulenin tepesine kadar tilt yapıyor. Alt köşede küçük not: '2017 öncesi planlar · kat adedi belirtilmemişse · bodrum hariç'.",
+    "claim_ids": [
+     "B-c4"
+    ]
+   },
+   {
+    "text": "Dördüncü ipucu: köşe. Yol boyu ticaret kararı varsa, köşe parselin bodrumu ayrı dükkân olabiliyor; ara parselinki olamıyor.",
+    "visual": "Kesit görünümlü izometrik sokak, üstte 'yol boyu ticaret kararı' şeridi. İki yola bakan köşe parselin bodrumu çekmece gibi kayarak açılıyor, yola bakan cam vitrinli ayrı bir dükkânın ışıkları yanıyor ve 'ayrı bağımsız bölüm' etiketi beliriyor. Kamera yatay kayarak tek cepheli ara parsele geçiyor. Onun bodrumu da açılıyor ama vitrin yerine yalnızca zemin kattaki dükkâna çıkan iç merdiven görünüyor ve vitrin olması gereken yere gri bir çarpı düşüyor.",
+    "claim_ids": [
+     "B-c11"
+    ]
+   },
+   {
+    "text": "Değerlemede emsal ise benzer satış demek: metrekareye çevrilip konum, imar, tarih farkı için yüzdeyle düzeltiliyor.",
+    "visual": "Ekranın ortasına iri 'EMSAL' kelimesi geliyor ve ortadan ikiye yarılıyor. Sol yarıda 'imarda: KAKS' yazıyor ve önceki kat plakalarına bağlanıyor. Sağ yarıda 'değerlemede: benzer satış' yazıyor. Kamera sağ yarıdan içeri dalıyor, izometrik mahalle haritasına benzer arsa satışları için iğneler düşüyor. Her iğneden çıkan satış kartı '÷ m²' animasyonuyla TL/m² birim fiyata dönüşüyor. Kartlar 'konum', 'imar', 'tarih' sütunlarına akıyor, üzerlerine +% ve −% düzeltme çipleri yapışıyor ve birim fiyatlar canlı değişiyor.",
+    "claim_ids": [
+     "B-c14",
+     "A-c5",
+     "A-c6"
+    ]
+   },
+   {
+    "text": "Yüzdeler formülden değil, gerekçeli takdirden.",
+    "visual": "Ortada parlak, matematik sembolleriyle dolu bir 'FORMÜL' kutusu beliriyor ve bir an sonra cam gibi çatlayıp parçalanıyor. Parçaların arasından bir rapor sayfası öne çıkıyor; satırlara el yazısıyla tek tek 'gerekçe' notları yazılıyor, yüzde çipleri bu notların yanına yerleşiyor.",
+    "claim_ids": [
+     "A-c6"
+    ]
+   },
+   {
+    "text": "Urla'daki gerçek bir raporda, projenin bugüne indirgenmiş satışından inşaat maliyeti ve yüklenici kârı düşülünce arsaya yaklaşık sekiz yüz yedi milyon lira kalmış.",
+    "visual": "Türkiye haritasında bir iğne İzmir Urla'ya iniyor, zoom ile bilgi kartı açılıyor: 'Gerçek değerleme raporu · 35 parsel · değerleme tarihi 30.09.2024'. Sahne derinlikli bir şelale grafiğe dönüşüyor. Yükselen yeşil sütunda 'indirgenmiş satış hasılatı 1.863.548.251 TL', aşağı inen kırmızı blokta 'indirgenmiş inşaat maliyeti −591.007.457 TL', turuncu blokta 'yüklenici kârı (%25) −465.887.063 TL' yazıyor. En sağda kalan altın sütunun sayacı '806.653.731 TL' değerine akıyor, altında küçük not: '≈ 26.227 TL/m²'.",
+    "claim_ids": [
+     "A-c10",
+     "A-c8",
+     "A-c9"
+    ]
+   },
+   {
+    "text": "Benzer satışlarsa yaklaşık altı yüz altmış beş milyon demiş. Uzman ortalama almamış; proje hesabı tahmine dayandığından satışları seçmiş.",
+    "visual": "Altın sütunun yanında ikinci bir sütun yükseliyor: 'pazar yaklaşımı · benzer satışlar 664,84 milyon TL'. Aradaki boşluk kırmızı bir parantezle işaretleniyor: '≈ 142 milyon TL · ≈ %21'. Ortada parlak bir 'ORTALAMA' düğmesi beliriyor ve sönüp silinerek kayboluyor. Proje sütununun tepesinde bulanık bir kristal küre dönüyor, üstünde 'geleceğe dönük tahmin' yazıyor. Uzmanın kalemi pazar sütununu daire içine alıyor ve sütunun altına 'nihai değer' etiketi kayıyor.",
+    "claim_ids": [
+     "A-c11",
+     "A-c3"
+    ]
+   },
+   {
+    "text": "Meğerse arsa değeri, toprağın büyüklüğünden çok, üstünde yasal olarak yapılabilecek en verimli kullanıma göre hesaplanıyormuş.",
+    "visual": "Final: kamera ilk sahnedeki iki komşu parsele geri dönüyor. Önceki ipuçları (imar durum belgesi, emsal, yol, köşe) ince ışık çizgileri halinde iki parsele akıyor. Her parselin üstünde, yasal olarak yapılabilecek hayalet bina aynı anda yükseliyor: biri dar sokağa bakan alçak bir yapı, diğeri bulvar köşesinde yüksek ve bodrumunda vitrinli dükkânı olan bir kule. Zemindeki '500 m²' etiketleri solup küçülüyor, fiyat sütunları hayalet binaların boyuna göre yeniden diziliyor. Ekrana sakin bir tipografiyle 'en verimli ve en iyi kullanım' yazısı geliyor, ardından sessiz takip/yorum/paylaş outrosuna yumuşak geçiş oluyor.",
+    "claim_ids": [
+     "A-c4",
+     "B-c14"
+    ]
+   }
+  ],
+  "caption": "Aynı büyüklükteki iki komşu arsanın fiyatı kat kat ayrışabiliyor. Videoda bu farkı açıklayan dört ipucu ve gerçek bir değerleme raporundan çıkan iki ayrı rakam var.\n\nVideodaki başlıklar:\n• Tapuda \"arsa\" yazması, parselin tek başına imarlı olduğu anlamına gelmez. Bir parselde ne ve ne kadar yapılabileceğini ilgili idarenin verdiği imar durum belgesi gösterir.\n• Emsal, yani KAKS (katlar alanı katsayısı), net imar parseli alanıyla çarpılınca emsale esas inşaat alanı çıkar. Örnek: 500 m² × 1,50 = 750 m². Bazı alanlar emsale girmediği için binanın gerçek brüt alanı bundan büyük olabilir.\n• 2017 öncesi planlarda kat adedi belirtilmemişse kat sayısını yol genişliği belirler: 7 m'ye kadar yolda en çok 2 kat, 50 m'yi aşan yolda en çok 18 kat (bodrum hariç).\n• Yol boyu ticaret kararı olan konut alanlarında, köşe başı parselin yola bakan bodrumuna ayrı dükkân yapılabilir. Tek cepheli ara parselde bodrum ancak zemin kattaki dükkânın içten bağlantılı parçası olabilir.\n• Değerlemede \"emsal\", benzer satış anlamına gelir. Satışlar m² birim fiyatına çevrilir, konum, imar ve tarih farkları için yüzde düzeltmesi yapılır. Bu yüzdeler bir formülden değil, uzmanın gerekçeli takdirinden gelir.\n• İzmir Urla'daki 35 parsellik raporda (değerleme tarihi 30.09.2024) proje hesabı yaklaşık 806,65 milyon TL, pazar yaklaşımı 664,84 milyon TL buldu. Uzman, proje hesabı geleceğe dönük tahminlere dayandığı için ortalama almadan pazar yaklaşımını esas aldı.\n\nKaynaklar: Planlı Alanlar İmar Yönetmeliği (mevzuat.gov.tr) · Uluslararası Değerleme Standartları (IVS 2022 ve TDUB Türkçe metni) · İzmir Urla 35 parsel gayrimenkul değerleme raporu (Kasım 2024)\n\nNot: Bu içerik bilgilendirme amaçlıdır; hukuki, finansal veya yatırım tavsiyesi değildir. Örnek rakamlar yalnızca anlatım içindir. Her parselin durumunu kendi imar durum belgesi ve değerleme raporu belirler.\n\n#arsa #arsadeğeri #gayrimenkul #emlak #gayrimenkuldeğerleme #değerleme #imar #imardurumbelgesi #kaks #emsal #tapu #köşeparsel #urla #meğerse #bilgi",
+  "sources": [
+   {
+    "id": "A-c3",
+    "safe": "Uluslararası Değerleme Standartlarında üç temel yaklaşım var: pazar (emsal karşılaştırma), gelir ve maliyet yaklaşımı. Uzman tek bir yöntemle yetinebilir. Birden fazla yöntem kullanırsa sonuçları ortalama almadan, gerekçesini yazarak tek bir değere bağlamalıdır.",
+    "url": "https://tdub.org.tr/uploads/1713774623_7f198ca9cc737c27553d.pdf"
+   },
+   {
+    "id": "A-c4",
+    "safe": "Standartlara göre pazar değeri, varlığın 'en verimli ve en iyi kullanımını' yansıtır. Bu, fiziken mümkün, yasal olarak izinli ve finansal olarak yapılabilir olup en yüksek değeri veren kullanımdır. Mevcut kullanım da olabilir, başka bir kullanım da. Farklıysa, varlığı o kullanıma dönüştürmenin maliyeti değeri düşürür. İmar kısıtları ve bunların değişme olasılığı da hesaba katılır.",
+    "url": "https://cbvinstitute.com/wp-content/uploads/2021/08/IVS-2022.pdf"
+   },
+   {
+    "id": "A-c5",
+    "safe": "Arsada en sık kullanılan yöntem genellikle pazar (emsal) yaklaşımıdır. Benzer arsaların fiyatları m² birim fiyatına çevrilir ve farklılıklar için yüzde düzeltmeleri yapılır. Uygulamada ilan fiyatı kullanıldığında bir pazarlık payı düşülür. Standart ise ilan fiyatlarının tek başına değer göstergesi olarak kullanılmamasını istiyor.",
+    "url": "https://www.ykyatirim.com.tr/media/h41dmanh/ek-6-d-79520242307_izmir-urla_35adetarsa_rev27-11-2.pdf"
+   },
+   {
+    "id": "A-c6",
+    "safe": "Emsaller; konum, arazinin niteliği, imar durumu ve izin verilen kullanım, satışın koşulları, satış tarihi ve piyasa koşullarındaki farklara göre düzeltilir. Uzman her düzeltmenin gerekçesini ve nasıl hesaplandığını raporda yazmak zorundadır. Yüzdeler bir formülden değil, uzmanın gerekçeli takdirinden gelir.",
+    "url": "https://tdub.org.tr/uploads/1713774623_7f198ca9cc737c27553d.pdf"
+   },
+   {
+    "id": "A-c8",
+    "safe": "Gelir yaklaşımı, varlığın gelecekte getireceği nakit akışlarını bugünkü tek bir değere çevirir. Boş arsada bu çoğu zaman, arsaya yapılabilecek projenin satış gelirleri ve maliyetleri bugüne indirgenerek uygulanır.",
+    "url": "https://www.ykyatirim.com.tr/media/h41dmanh/ek-6-d-79520242307_izmir-urla_35adetarsa_rev27-11-2.pdf"
+   },
+   {
+    "id": "A-c9",
+    "safe": "Geliştirme (Türkçe standartta 'kalıntı') yönteminde arsa değeri, bitmiş projenin değerinden inşaat ve diğer geliştirme maliyetleri ile geliştirici kârı düşülerek bulunur. Kalan tutar arsaya ödenebilecek değeri gösterir. Ancak sonuç küçük varsayım değişikliklerine çok duyarlıdır ve her zaman pazar değerine eşit olmayabilir.",
+    "url": "https://tdub.org.tr/uploads/1713774623_7f198ca9cc737c27553d.pdf"
+   },
+   {
+    "id": "A-c10",
+    "safe": "Gerçek bir raporda (İzmir Urla, 35 parsel, rapor tarihi Kasım 2024, değerleme tarihi 30.09.2024) arsa değeri şöyle hesaplanmış: 1.863.548.251 TL indirgenmiş satış hasılatı − 591.007.457 TL indirgenmiş inşaat maliyeti − 465.887.063 TL yüklenici kârı (hasılatın %25'i) = 806.653.731 TL. Bu, m² başına yaklaşık 26.227 TL ediyor.",
+    "url": "https://www.ykyatirim.com.tr/media/h41dmanh/ek-6-d-79520242307_izmir-urla_35adetarsa_rev27-11-2.pdf"
+   },
+   {
+    "id": "A-c11",
+    "safe": "Aynı arsa farklı yöntemlerle farklı değer alabilir. Urla raporunda pazar yaklaşımı 664,84 milyon TL, gelir/geliştirme hesabı 806,65 milyon TL bulmuş. Uzman, gelir hesabının geleceğe dönük tahminlere dayandığını belirterek nihai değer olarak pazar yaklaşımını seçmiş. Aradaki fark yaklaşık 142 milyon TL, yani yaklaşık %21.",
+    "url": "https://www.ykyatirim.com.tr/media/h41dmanh/ek-6-d-79520242307_izmir-urla_35adetarsa_rev27-11-2.pdf"
+   },
+   {
+    "id": "B-c1",
+    "safe": "Emsal (KAKS) net imar parseli alanıyla çarpılınca emsale esas toplam inşaat alanı çıkar. Örneğin 500 m² parselde emsal 1,50 ise 750 m² olur. Bazı alanlar emsale girmediği için binanın gerçek brüt alanı bundan büyük olabilir.",
+    "url": "https://www.mevzuat.gov.tr/anasayfa/MevzuatFihristDetayIframe?MevzuatTur=7&MevzuatNo=23722&MevzuatTertip=5"
+   },
+   {
+    "id": "B-c4",
+    "safe": "Yönetmelikten (2017) önceki planlarda kat adedi veya bina yüksekliği belirtilmemişse, kat sayısını parselin önündeki yolun genişliği belirler. 7 m'ye kadar olan yolda en çok 2 kat, 50 m'yi aşan yolda en çok 18 kat yapılabilir (bodrum hariç).",
+    "url": "https://www.mevzuat.gov.tr/anasayfa/MevzuatFihristDetayIframe?MevzuatTur=7&MevzuatNo=23722&MevzuatTertip=5"
+   },
+   {
+    "id": "B-c5",
+    "safe": "Bir parselde ne ve ne kadar yapılabileceğini resmi olarak ilgili idarenin verdiği imar durum belgesi gösterir. Bu idare genellikle belediye, mücavir alan dışında il özel idaresidir. Tapuda 'arsa' yazması tek başına imarlı olduğu anlamına gelmez.",
+    "url": "https://www.mevzuat.gov.tr/anasayfa/MevzuatFihristDetayIframe?MevzuatTur=7&MevzuatNo=23722&MevzuatTertip=5"
+   },
+   {
+    "id": "B-c11",
+    "safe": "Yol boyu ticaret kararı olan konut alanlarında köşe başı veya iki yola cephesi olan parsellerde, yola bakan bodrum kata ayrı bir dükkân (ticari bağımsız bölüm) yapılabilir. Tek cepheli ara parsellerde bodrum ancak zemin kattaki dükkânın içten bağlantılı parçası olabilir. Ticari kullanımın altına konut yapılamaz.",
+    "url": "https://www.mevzuat.gov.tr/anasayfa/MevzuatFihristDetayIframe?MevzuatTur=7&MevzuatNo=23722&MevzuatTertip=5"
+   },
+   {
+    "id": "B-c14",
+    "safe": "Lisanslı değerleme raporlarında arsa, uzak bir imar beklentisine göre değil, 'en verimli ve en iyi kullanım'a göre değerlenir. Bu, yasal olarak izin verilen, fiziken mümkün, finansal olarak yapılabilir ve en yüksek değeri veren kullanımdır. Değerlemede 'emsal' karşılaştırılabilir satış, imarda ise KAKS demektir.",
+    "url": "https://www.bilgedegerleme.com/yatirim-degerleme/tasinmazlarin-en-etkin-ve-en-verimli-kullanim-analizi/"
+   },
+   {
+    "id": "V-kaks",
+    "safe": "Planlı Alanlar İmar Yönetmeliği md. 4 tanımı: 'Katlar alanı katsayısı (KAKS) (Emsal): Yapının inşa edilen tüm kat alanlarının toplamının imar parseli alanına oranı.' (Bu denetimde güncel resmi PDF metninden doğrulandı; aynı metinde yol genişliği tablosu ≤7 m: 2 kat, >50 m: 18 kat, bodrum hariç, ve köşe başı bodrum dükkân hükmü de teyit edildi.)",
+    "url": "https://www.mevzuat.gov.tr/MevzuatMetin/yonetmelik/7.5.23722.pdf"
+   }
+  ],
+  "cover_idea": "Tam kadraj, alacakaranlık ışıklı izometrik sahne. Yan yana iki birebir aynı boş parsel var, ikisinin zemininde de parlayan ince '500 m²' ölçü çizgisi. Soldaki dar bir sokağa bakıyor ve üstünde iki katlı, yarı saydam hayalet bir yapı duruyor. Sağdaki geniş bir bulvarın köşesinde ve üstünde on sekiz katlı, bodrumunda ışıklı vitrini olan hayalet bir kule yükseliyor. İki parselin arasında aynı uzunlukta iki ölçü oku birbirine bakıyor. Üst üçte birde kalın, iki satırlık başlık: 'AYNI METREKARE / KAT KAT FARKLI DEĞER'. Damga, rozet, mühür, logo ya da ok-emoji yok; kadrajda yalnızca iki parsel, iki hayalet bina ve başlık var.",
+  "judge_notes": "PUANLAMA (her başlık 10 üzerinden)\n- Senaryo A: Kurallar 9 · Viral güç 9 · Doğruluk 8 → 26/30. KAZANAN. Kanca ile final birbirine bağlanıyor. Dört ipucu iki komşu arsa sorusuna doğrudan cevap veriyor ve her biri 7-10 saniyelik ayrı bir şaşırtma (iki kat ile on sekiz kat farkı, köşe parselde bodrum dükkân). Ritim dedektif kurgusuyla ilerliyor. Eksikleri: final cümlesi 'en verimli binadan hesaplanıyormuş' diyordu; oysa Urla'da nihai değer benzer satışlardan geldi, yani final kendi kanıtıyla çelişiyordu. KAKS açılımı resmi metne uymuyordu ('kat alanı katsayısı').\n- Senaryo B: Kurallar 8 · Viral güç 7 · Doğruluk 8 → 23/30. Yöntem anlatımı daha düzenli ve 'ortalama almamış' iyi bir ters köşe. Eksikleri: 'canlı hesaplayalım' gereksiz bir cümle ve karakter harcıyor. 'Komşu tarlaysa' sahnesi kancadaki 'iki arsa' kurgusuyla çelişiyor. Bir milyar sekiz yüz altmış dört milyon gibi uzun rakamları seslendirmek ElevenLabs kredisini yiyor ve ritmi düşürüyor. KAKS açılımı resmi değil ('kat alanları katsayısı').\n\nB'DEN AŞILANANLAR\n'Uzman ortalama almamış' (A-c3, A-c11) metne alındı. 'Emsal' kelimesinin iki anlamı (imarda KAKS, değerlemede benzer satış; B-c14) ayrı bir şaşırtma beat'i oldu. Kancada 'satılabiliyor' yumuşatması kullanıldı. Kesin Urla rakamları seslendirmeden çıkarıldı, yalnızca ekrandaki şelale grafikte duruyor.\n\nDOĞRULUK DÜZELTMELERİ\n1) KAKS'ın resmi açılımı 'Katlar alanı katsayısı (KAKS) (Emsal)'. Bunu Planlı Alanlar İmar Yönetmeliği md. 4'te, mevzuat.gov.tr'deki güncel PDF'ten kontrol ettim ve metinde düzelttim (kaynak id: V-kaks, listede yoktu, ek doğrulama). Aynı PDF'te yol tablosu (≤7 m: 2 kat; >50 m: 18 kat; 'En Çok Kat Adedi (Bodrum Hariç)') ve köşe başı bodrumunda ticari bağımsız bölüm hükmü de birebir duruyor.\n2) Final 'en verimli kullanıma göre' olarak değiştirildi (A-c4, B-c14). Böylece Urla'da emsal seçilmesiyle çelişmiyor.\n3) Kanca varsayımsal bir örnek ('örneğin', 'satılabiliyor'). Dayanağı aynı büyüklükteki parselde yol genişliğine göre 2 ile 18 kat arasında değişen hak (B-c4) ve değerin en verimli kullanımı yansıtması (A-c4).\n4) 'İnşaat hakkı' ifadesi B-c1'deki 'emsale esas inşaat alanı'nın sadeleştirilmiş hali. Görselde ve açıklamada tam terim kullanıldı.\n5) Urla matematiği kontrol edildi: 1.863.548.251 − 591.007.457 − 465.887.063 = 806.653.731. 'Yaklaşık sekiz yüz yedi milyon' ve 'yaklaşık altı yüz altmış beş milyon' yuvarlamaları doğru.\n6) Pazarlık payı (A-c5) ve tarla düzenleme ortaklık payı (B-c2, B-c7) karakter bütçesi ve kurgu tutarlılığı için çıkarıldı. İkisi de doğru bilgi ama bu metne sığmadı.\n\nKURAL KONTROLÜ\n- Metin doğrudan 'Arsa değerleri nasıl hesaplanıyor?' ile açılıyor. 'Cevap sonda' gibi bir ibare yok.\n- 'Meğerse' yalnızca son cümlede bir kez geçiyor. Sonda soru ya da sözlü çağrı yok. Tek ara soru ilk beat'teki 'Neden?'.\n- Uzunluk: 1245 karakter (NFC, boşluk dahil), 172 kelime. Yaklaşık 75-85 saniye.\n- Seslendirilen metinde hiç rakam yok, sayıların hepsi yazıyla. 'kaks' ilk geçtiği yerde 'katlar alanı katsayısı' diye açılıyor.\n- Hukuki ya da finansal tavsiye yok.\n- Beat süreleri 3 ile 10,5 saniye arasında. En kısası 'Yüzdeler formülden değil...' beat'i; bilerek kısa tutulmuş bir vurgu.\n- Senaryo A'nın görsellerindeki 'VAKA DOSYASI' damgası ve mühür öğeleri çıkarıldı. Kapakta da damga, rozet ya da logo yok.\n\nCLAIM ID ÖNEKİ\nGörevdeki üç liste aynı c1-c14 numaralarını kullanıyor. Karışmasın diye önek koydum:\n- 'A-' = 1. liste (değerleme standartları, SPK)\n- 'B-' = 2. liste (imar)\n- 'C-' = 3. liste (emlak vergisi). Bu listeden hiçbir ifade kullanılmadı.\n- 'V-kaks' = bu denetimde resmi metinden yaptığım ek doğrulama.\nBuradaki 'A-' ve 'B-' liste önekidir, Senaryo A ve B ile karıştırılmamalı.\n\nTTS NOTLARI\n'dükkân' ve 'kârı' şapkalı yazıldı. 'Urla'daki' kesme işaretiyle yazıldı. 'aşanda' kelimesi 'aşan yolda' anlamında, Türkçede doğal bir kısaltma."
+ },
+ "facts": [
+  {
+   "id": "c1",
+   "claim": "Türkiye'de sermaye piyasası mevzuatına göre yapılan her değerlemede, TDUB ve TSPB'nin yayımladığı Uluslararası Değerleme Standartlarına (UDS, İngilizce kısaltmasıyla IVS) uymak zorunludur.",
+   "detail": "Dayanak: SPK'nın 'Sermaye Piyasasında Değerleme Standartları Hakkında Tebliğ' (III-62.1), madde 3/1. Tebliğ 01.02.2017 tarihli ve 29966 sayılı Resmî Gazete'de yayımlandı. 6362 sayılı SPKn'nin 62/2 ve 128/1-c maddelerine dayanıyor ve eski Seri:VIII No:45 tebliğini kaldırdı. Madde 3/2'ye göre standart ile SPK düzenlemesi çelişirse SPK düzenlemesi uygulanır. SPK duyurusuna göre standartlar IVSC metinlerine dayanıyor ve SPK, TDUB ve TSPB birlikte hazırladı. Uygulamada raporlar 'UDS 2017' metnine atıf yapıyor (aşağıdaki Urla raporu gibi). SPK'nın 2017'den sonraki bir IVS sürümünü (2022/2025) Türkçe olarak onayladığını doğrulayamadım. Kapsam yalnızca sermaye piyasası. Bankacılık ve kamulaştırma kendi mevzuatına tabi, ama o mevzuat da SPK sistemine bağlanıyor (bkz. c12, c13).",
+   "sources": [
+    "https://www.mevzuat.gov.tr/File/GeneratePdf?mevzuatNo=23301&mevzuatTur=Teblig&mevzuatTertip=5",
+    "https://spk.gov.tr/duyurular/basin-duyurulari/2017/sermaye-piyasasinda-degerleme-standartlari-hakkinda-teblig-ile-ilgili-basin-duyurusu",
+    "https://tdub.org.tr/uploads/1714051034_0dd0ac7d5c6530e0b9db.pdf",
+    "https://tdub.org.tr/degerleme-standartlari/uluslararasi-degerleme-standartlari"
+   ],
+   "confidence": "high",
+   "viral": "Arsa değerlemesi 'emlakçının tahmini' değil. Resmi raporlar, dünyada kullanılan bir standarda bağlı ve uymak yasal zorunluluk.",
+   "verdict": "dogru",
+   "safe": "Türkiye'de sermaye piyasası mevzuatına göre yapılan değerlemelerde, TDUB ve TSPB'nin yayımladığı Uluslararası Değerleme Standartlarına (UDS) uymak zorunludur (SPK Tebliği III-62.1, md. 3). Bu standartlar ile SPK'nın kendi düzenlemesi çelişirse SPK düzenlemesi uygulanır. Bugün kullanılan Türkçe metin UDS 2017'dir.",
+   "note": "mevzuat.gov.tr'deki III-62.1 metnini okudum (GeneratePdf mevzuatNo=23301). 3/1 ve 3/2 iddiadaki gibi. Dayanağı SPKn 62/2 ve 128/1-c. Seri:VIII No:45'i 4. madde kaldırıyor. Tebliğde değişiklik yok. SPK'nın 01.02.2017 basın duyurusu da iddiayla uyumlu: standartlar SPK, TDUB ve TSPB'nin ortak çalışması, IVSC metnine dayanıyor. TDUB'un 23.06.2017 tarihli 3 no'lu genelgesine göre UDS 2017'yi SPK, 22.06.2017 tarih ve 25/856 sayılı kararla uygun gördü. TDUB sitesinde 2026'da hâlâ yalnızca 'UDS 2017' PDF'i duruyor. 2022 ya da 2025 sürümünün Türkçe onayına rastlamadım, o yüzden bağlayıcı sürüm büyük olasılıkla UDS 2017. Kapsam yalnızca sermaye piyasası. Viral cümledeki 'resmi raporlar' ifadesi geniş: vergi değeri, belediye rayici ya da sıradan bir bilirkişi raporu bu tebliğe doğrudan bağlı değil. Videoda 'SPK ve banka kapsamındaki raporlar' demek daha doğru.",
+   "orig_sources": [
+    "https://spk.gov.tr/duyurular/basin-duyurulari/2017/sermaye-piyasasinda-degerleme-standartlari-hakkinda-teblig-ile-ilgili-basin-duyurusu",
+    "https://alomaliye.com/2017/02/01/sermaye-piyasasinda-degerleme-iii-62-1/"
+   ]
+  },
+  {
+   "id": "c2",
+   "claim": "Resmi gayrimenkul değerlemesini, SPK'nın yetkilendirdiği değerleme şirketlerinde çalışan lisanslı uzmanlar yapar; uzman olmak için en az 4 yıllık üniversite diploması, 3 yıl tecrübe ve Gayrimenkul Değerleme Lisansı gerekir.",
+   "detail": "III-62.3 sayılı Tebliğ (RG 31.08.2019/30874). Madde 3/1-ç gayrimenkul değerleme uzmanını tanımlıyor: 4 yıllık üniversite, 3 yıl tecrübe, lisans. Madde 3/1-ı sorumlu değerleme uzmanını tanımlıyor: en az 5 yıl tecrübe, şirkette en az %10 pay. Madde 4/1'e göre şirket anonim şirket olmalı, ödenmiş sermayesi en az 1.000.000 TL olmalı, oy haklarının en az %51'i sorumlu uzmanlarda bulunmalı ve kadroda en az 2'si sorumlu uzman olmak üzere en az 10 tam zamanlı uzman çalışmalı (madde 4/2 banka/kamu ortaklı şirketlere istisna tanıyor). SPK tanıtım rehberine göre lisans SPL tarafından veriliyor, tecrübe belgesini TDUB veriyor, raporu kontrol edip imzalayanlarda 5 yıl tecrübe aranıyor ve hatalı ya da yanıltıcı rapor lisans iptaline yol açabiliyor (SPKn md. 96). 6362 sayılı SPKn md. 76/1-2: lisans sahipleri ve değerleme kuruluşları TDUB'a üyelik başvurusu yapmak zorunda. Md. 76/6: değerleme hizmetlerinin asgari ücret tarifesini her yıl SPK belirliyor ve Resmî Gazete'de yayımlanıyor. Not: III-62.3 maddelerini 2019 tarihli ilk metinden okudum. 18.07.2020 değişikliğinin bu maddeleri etkileyip etkilemediğini ayrıca kontrol etmedim.",
+   "sources": [
+    "https://www.turmob.org.tr/arsiv/mbs/resmigazete/30874-30874-2.pdf",
+    "https://www.alomaliye.com/2020/07/18/sermaye-piyasasi-gayrimenkul-degerleme-iii-62-3-a/amp/",
+    "https://spk.gov.tr/data/695546ca8f95db281807a9c3/2025-68.pdf",
+    "https://spk.gov.tr/kurumlar/gayrimenkul-degerleme-kuruluslari/tanitim-rehberi",
+    "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.6362.pdf"
+   ],
+   "confidence": "high",
+   "viral": "Arsanıza 'resmi' değer biçecek kişinin sınavla alınmış bir lisansı var. Değerleme ücretinin bile Resmî Gazete'de yayımlanan bir asgari tarifesi bulunuyor.",
+   "verdict": "duzeltilmeli",
+   "safe": "Sermaye piyasası ve banka işlemleri için yapılan gayrimenkul değerlemelerini, SPK'nın yetkilendirdiği değerleme şirketleri lisanslı uzmanlara yaptırır. Gayrimenkul değerleme uzmanı olmak için en az 4 yıllık üniversite mezuniyeti, en az 3 yıl tecrübe ve Gayrimenkul Değerleme Lisansı gerekir. Raporu şirket adına tek başına imzalayabilen sorumlu uzmanda en az 5 yıl tecrübe aranır. Konut için ayrıca, en az 1 yıl tecrübe isteyen ayrı bir Konut Değerleme Lisansı var.",
+   "note": "III-62.3'ün RG 31.08.2019/30874 metnini okudum. 3/1-ç (4 yıl üniversite, 3 yıl tecrübe, lisans), 3/1-ı (en az %10 pay, 5 yıl tecrübe, raporu tek başına imzalama yetkisi) ve 4/1-a, ç, d, e iddiadaki gibi. 18.07.2020 tarihli III-62.3.a yalnızca 11/4'ü, 13/1'e eklenen bendi ve Geçici 1'i değiştirmiş. Lexpera'ya göre son değişiklik bu, yani 3. ve 4. maddeler aynı kalmış. Düzeltilecek noktalar: (1) 4/3'e göre 1.000.000 TL asgari sermaye her yıl yeniden değerleniyor. SPK Bülteni 2025/68'e göre bu tutar 2024'te 7,5 milyon, 2025'te 12 milyon, 2026'da 20.000.000 TL. Dolayısıyla '1 milyon TL' bugün için yanlış. (2) 3/1-f'ye göre ayrı bir 'Konut Değerleme Uzmanı' kategorisi var: 1 yıl tecrübe ve Konut Değerleme Lisansı yetiyor, 4 yıllık diploma şartı tanımda yok. (3) Uzman şirkette tam zamanlı çalışabileceği gibi sözleşmeyle dışarıdan da hizmet verebilir. (4) 'Resmi değerleme' ifadesi fazla geniş. Kamulaştırmada idarenin kıymet takdir komisyonu kendi personelinden oluşur (2942 md. 8). Mahkeme bilirkişi kurulunda ise yalnızca bir üyenin lisanslı uzman ya da taşınmaz geliştirme alanında yüksek lisanslı olması şart (md. 15). SPK tanıtım rehberi şunları doğruluyor: lisansı SPL veriyor, tecrübe belgesini TDUB veriyor, rapor imzalayan ve kontrol edenlerde 5 yıl aranıyor, hatalı ya da yanıltıcı rapor SPKn 96 kapsamında lisans iptaline yol açabiliyor. SPKn 76/1-3 (TDUB üyeliği) ve 76/6 (SPK her yıl asgari ücret tarifesini belirler, tarife Resmî Gazete'de yayımlanır) da metinde aynen var.",
+   "orig_sources": [
+    "https://spk.gov.tr/kurumlar/gayrimenkul-degerleme-kuruluslari/tanitim-rehberi",
+    "https://www.alomaliye.com/2019/08/31/gayrimenkul-degerleme-kuruluslari-iii-62-3",
+    "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.6362.pdf"
+   ]
+  },
+  {
+   "id": "c3",
+   "claim": "Uluslararası Değerleme Standartlarına göre üç ana değerleme yaklaşımı vardır: pazar (emsal karşılaştırma), gelir ve maliyet yaklaşımı.",
+   "detail": "IVS 105 'Değerleme Yaklaşımları ve Yöntemleri' paragraf 10.1 (IVS 31 Ocak 2022 metni): üç yaklaşım da fiyat dengesi, fayda beklentisi ya da ikame ilkesine dayanıyor. Paragraf 10.4: uzman tek yöntemle yetinebilir. Birden fazla yöntem kullanırsa farklı sonuçları uzlaştırıp tek bir değere bağlamalı ve bunu raporda anlatmalı. IVS 400 (Gayrimenkul) paragraf 40.1: üç yaklaşımın hepsi gayrimenkule uygulanabilir. Paragraf numaralarını 2022 İngilizce metninden doğruladım. SPK'nın kabul ettiği Türkçe UDS 2017 metninde numaralar küçük farklılıklar gösterebilir.",
+   "sources": [
+    "https://cbvinstitute.com/wp-content/uploads/2021/08/IVS-2022.pdf",
+    "https://tdub.org.tr/uploads/1713774623_7f198ca9cc737c27553d.pdf"
+   ],
+   "confidence": "high",
+   "verdict": "dogru",
+   "safe": "Uluslararası Değerleme Standartlarında üç temel yaklaşım var: pazar (emsal karşılaştırma), gelir ve maliyet yaklaşımı. Uzman tek bir yöntemle yetinebilir. Birden fazla yöntem kullanırsa sonuçları ortalama almadan, gerekçesini yazarak tek bir değere bağlamalıdır.",
+   "note": "IVS 2022'de IVS 105 10.1 (üç yaklaşım; fiyat dengesi, fayda beklentisi ve ikame ilkeleri), 10.4 (tek yöntem yeterli olabilir, sonuçlar 'without averaging' uzlaştırılır ve raporda anlatılır) ve IVS 400 40.1'i okudum. SPK'nın kabul ettiği Türkçe UDS 2017'de (TDUB PDF'i) numaralar aynı: UDS 105 10.1 ve 10.4, UDS 400 40.1. Türkçe metin de 'ortalama alınmaksızın' diyor. Urla raporu da bu üç yaklaşımı sayıyor.",
+   "orig_sources": [
+    "https://cbvinstitute.com/wp-content/uploads/2021/08/IVS-2022.pdf",
+    "https://www.ykyatirim.com.tr/media/h41dmanh/ek-6-d-79520242307_izmir-urla_35adetarsa_rev27-11-2.pdf"
+   ]
+  },
+  {
+   "id": "c4",
+   "claim": "Standartlara göre bir arsanın pazar değeri, bugünkü kullanımına değil, fiziken mümkün, yasal olarak izinli ve finansal olarak yapılabilir olan en yüksek değerli kullanımına göre belirlenir.",
+   "detail": "IVS 104 'Değer Esasları' paragraf 30.4 ve 140.1-140.2 (IVS 2022). Bu kavrama 'en verimli ve en iyi kullanım' (highest and best use) deniyor. En iyi kullanım mevcut kullanımdan farklıysa, varlığı o kullanıma dönüştürmenin maliyeti de değeri etkiliyor (140.2). Arsada 'yasal olarak izinli' şartı pratikte imar durumuna ve yapılaşma hakkına dayanıyor. Bu yüzden imar, emsal düzeltmelerinde ayrı bir kalem olarak ele alınıyor (bkz. c6).",
+   "sources": [
+    "https://cbvinstitute.com/wp-content/uploads/2021/08/IVS-2022.pdf",
+    "https://tdub.org.tr/uploads/1713774623_7f198ca9cc737c27553d.pdf"
+   ],
+   "confidence": "high",
+   "viral": "Tarla olarak kullandığınız arazi, imar izni varsa üzerine yapılabilecek en kârlı yapıya göre değerlenir. Değeri, şu an ne olduğu değil, yasal olarak ne olabileceği belirler.",
+   "verdict": "duzeltilmeli",
+   "safe": "Standartlara göre pazar değeri, varlığın 'en verimli ve en iyi kullanımını' yansıtır. Bu, fiziken mümkün, yasal olarak izinli ve finansal olarak yapılabilir olup en yüksek değeri veren kullanımdır. Mevcut kullanım da olabilir, başka bir kullanım da. Farklıysa, varlığı o kullanıma dönüştürmenin maliyeti değeri düşürür. İmar kısıtları ve bunların değişme olasılığı da hesaba katılır.",
+   "note": "IVS 2022'de IVS 104 30.4 ve 140.1-140.5'i, UDS 2017 Türkçesinde aynı numaralı maddeleri okudum. Kavramın özü doğru. Ancak 30.4 ve 140.3, en iyi kullanımın 'mevcut kullanımın devamı' da olabileceğini açıkça söylüyor. Bu yüzden 'bugünkü kullanımına değil' ifadesi yanlış bir zıtlık kuruyor. 140.5(b), imar kısıtlarının değişme olasılığının da dikkate alınmasını istiyor. 140.5(c), finansal yapılabilirliği dönüştürme maliyetinden sonra hesaplıyor. Viral metin de düzeltilmeli. 'Değeri şu an ne olduğu değil, yasal olarak ne olabileceği belirler' cümlesi abartılı, çünkü dönüştürme maliyeti, süresi ve riski düşülüyor. Kamulaştırmada ise 'ilerisi için düşünülen kullanma şekillerine göre getireceği kâr' dikkate alınmıyor (2942 md. 11, bkz. c14).",
+   "orig_sources": [
+    "https://cbvinstitute.com/wp-content/uploads/2021/08/IVS-2022.pdf"
+   ]
+  },
+  {
+   "id": "c5",
+   "claim": "Arsada en yaygın yöntem pazar yaklaşımıdır: benzer arsaların fiyatları m² birim fiyatına çevrilir, farklılıklar için yüzde düzeltmeler yapılır, ilan fiyatı kullanıldıysa bir 'pazarlık payı' düşülür.",
+   "detail": "IVS 105 paragraf 20.1: pazar yaklaşımı, varlığı fiyat bilgisi bulunan aynı ya da benzer varlıklarla karşılaştırır. IVS 400 paragraf 50.1-50.2: gayrimenkulde yaygın kullanılır. Karşılaştırma birimi arazide hektar, binada m² başına fiyattır. Gerçek örnek (INVEST Gayrimenkul Değerleme, İzmir Urla 35 parsel raporu, no 2024/2307, 11.11.2024): 4 arsa emsalinin 'istenen fiyatları' m²'ye çevrilmiş (15.884–21.000 TL/m²). Konum (%0 ile %20), alan (%0 ile %7), yapılaşma hakkı (%0 ile %20), projeye uygunluk (%8) ve pazarlık payı (-%3) düzeltmeleri uygulanmış. Düzeltilmiş değerlerin ortalaması 22.660 TL/m² çıkmış. Aynı raporda konut emsallerinden %5 ile %10 arası pazarlık payı düşülmüş. Rakamlar o rapora ait, genel bir kural değil.",
+   "sources": [
+    "https://cbvinstitute.com/wp-content/uploads/2021/08/IVS-2022.pdf",
+    "https://tdub.org.tr/uploads/1713774623_7f198ca9cc737c27553d.pdf",
+    "https://www.ykyatirim.com.tr/media/h41dmanh/ek-6-d-79520242307_izmir-urla_35adetarsa_rev27-11-2.pdf"
+   ],
+   "confidence": "high",
+   "viral": "Değerleme uzmanı ilan sitelerindeki fiyatları olduğu gibi almaz. 'Bu fiyattan satılmaz' diyerek üzerinden pazarlık payını düşer.",
+   "verdict": "dogru",
+   "safe": "Arsada en sık kullanılan yöntem genellikle pazar (emsal) yaklaşımıdır. Benzer arsaların fiyatları m² birim fiyatına çevrilir ve farklılıklar için yüzde düzeltmeleri yapılır. Uygulamada ilan fiyatı kullanıldığında bir pazarlık payı düşülür. Standart ise ilan fiyatlarının tek başına değer göstergesi olarak kullanılmamasını istiyor.",
+   "note": "IVS 105 20.1 ve IVS 400 50.1-50.2 doğrulandı: pazar yaklaşımı gayrimenkulde 'yaygın' uygulanıyor. 'En yaygın' ifadesi standartta geçmiyor, uygulamaya dayalı bir yorum. 50.2'deki karşılaştırma birimleri yalnızca örnek. IVS 2022 arazi için 'hectare' diyor, Türkçe UDS 2017 'arsa için birim dekar' diyor. Yani 'arazide hektar' sabit bir kural değil, Türkiye'de arsada m² yaygın. Urla raporunda (s. 25-26) şunlar doğrulandı: 4 arsa emsalinin istenen fiyatları 15.884-21.000 TL/m²; konum %0-20, alan %0-7, yapılaşma hakkı %0-20, projeye uygunluk %8, pazarlık payı -%3 düzeltmesi; ortalama 22.660 TL/m²; konut emsallerinde %5-10 pazarlık payı. Önemli bir not: UDS 2017 ve IVS 2022'de 105/30.3, ilan ve teklif fiyatlarına dayanan 'karşılaştırılabilir listeler yöntemi'nin tek başına kullanılmamasını istiyor. Urla raporundaki tüm emsaller ilan fiyatıydı. Pazarlık payı düşmek ise bir uygulama alışkanlığı, standartta açık bir kural değil.",
+   "orig_sources": [
+    "https://cbvinstitute.com/wp-content/uploads/2021/08/IVS-2022.pdf",
+    "https://www.ykyatirim.com.tr/media/h41dmanh/ek-6-d-79520242307_izmir-urla_35adetarsa_rev27-11-2.pdf"
+   ]
+  },
+  {
+   "id": "c6",
+   "claim": "Emsaller konum, arazinin niteliği, imar ve izin verilen kullanım, satışın koşulları, satış tarihi ve piyasa koşullarındaki farklara göre düzeltilir; uzman her düzeltmenin gerekçesini ve nasıl hesaplandığını raporda belgelemek zorundadır.",
+   "detail": "IVS 400 paragraf 50.4: gayrimenkulde dikkate alınacak farklar arasında konum, arazinin niteliği, izin verilen kullanım ya da imar, fiyatın oluştuğu koşullar, fiyat tarihi ile değerleme tarihi ve piyasa koşulları sayılıyor. IVS 105 paragraf 20.5: düzeltmeler makul olmalı, gerekçeleri ve nasıl hesaplandıkları belgelenmeli. Şekil, eğim ve yol cephesi uygulamada arazinin fiziksel niteliği farkı olarak düzeltiliyor. Ancak bunlar için Türkiye'de bağlayıcı, sabit bir katsayı tablosu bulamadım. Bu bir yokluk tespiti, kesin değil. Urla raporunda büyük parsele m² başına daha düşük değer verildiği ('alan büyüdükçe şerefiye küçülmekte') ve puan aralıklarının 'mesleki deneyim ve şirketimizdeki diğer verilerden' alındığı yazıyor. Yani yüzdeler uzmanın gerekçeli takdirine dayanıyor.",
+   "sources": [
+    "https://cbvinstitute.com/wp-content/uploads/2021/08/IVS-2022.pdf",
+    "https://tdub.org.tr/uploads/1713774623_7f198ca9cc737c27553d.pdf",
+    "https://www.ykyatirim.com.tr/media/h41dmanh/ek-6-d-79520242307_izmir-urla_35adetarsa_rev27-11-2.pdf"
+   ],
+   "confidence": "high",
+   "viral": "'Konum farkı %15' gibi oranlar bir formülden çıkmaz; uzmanın takdiridir. Standart bu yüzden her oranın gerekçesini yazılı olarak istiyor.",
+   "verdict": "dogru",
+   "safe": "Emsaller; konum, arazinin niteliği, imar durumu ve izin verilen kullanım, satışın koşulları, satış tarihi ve piyasa koşullarındaki farklara göre düzeltilir. Uzman her düzeltmenin gerekçesini ve nasıl hesaplandığını raporda yazmak zorundadır. Yüzdeler bir formülden değil, uzmanın gerekçeli takdirinden gelir.",
+   "note": "IVS 400 50.4 (a)-(g) doğrulandı. Liste hak türü, konum, arazi niteliği ya da bina yaşı, izin verilen kullanım ya da imar, fiyatın oluştuğu koşullar, tarih ve piyasa koşullarını sayıyor ve 'bunlarla sınırlı değil' diyor. IVS 105 20.5 düzeltmelerin makul olmasını ve belgelenmesini istiyor. Türkçe UDS 2017'deki 20.5 daha da açık: 'gerekçeleri ile nasıl sayısallaştırıldıklarına raporlarında yer vermeleri gerekir'. Urla raporunda 'puan aralıkları mesleki deneyim ve şirketimizdeki diğer verilerden elde edilmiştir' ve 'alan büyüdükçe şerefiye küçülmekte' ifadeleri aynen var. Bağlayıcı bir katsayı tablosu bulunmadığı bilgisini ben de çürütemedim.",
+   "orig_sources": [
+    "https://cbvinstitute.com/wp-content/uploads/2021/08/IVS-2022.pdf",
+    "https://www.ykyatirim.com.tr/media/h41dmanh/ek-6-d-79520242307_izmir-urla_35adetarsa_rev27-11-2.pdf"
+   ]
+  },
+  {
+   "id": "c7",
+   "claim": "Maliyet yaklaşımı 'kimse eşdeğer faydadaki bir varlık için onu yeniden edinme maliyetinden fazlasını ödemez' ilkesine dayanır ve esas olarak binalarda kullanılır; üzerinde yapı olmayan boş arsada tek başına kullanılması çoğu zaman mümkün değildir.",
+   "detail": "IVS 105 paragraf 60.1: maliyet yaklaşımında cari ikame ya da yeniden üretim maliyeti hesaplanır ve fiziksel bozulma ile diğer yıpranma türleri düşülür. IVS 400 paragraf 70.2 ve 70.5: gayrimenkulde genellikle amortismana tabi ikame maliyeti yöntemi kullanılır ve ikame maliyetine arazinin değeri de eklenir. Yani arazinin değeri başka bir yöntemle bulunmalı. Kamulaştırma Kanunu (2942) madde 11/1-h de yapılar için resmi birim fiyatları, yapı maliyet hesaplarını ve yıpranma payını sayıyor. Urla raporunda bu yaklaşım için 'Rapora konu taşınmaz üzerinde yapı olmadığından bu yöntemin kullanılması mümkün olmamıştır' deniyor. 'Çoğu zaman' ifadesi bu kaynaklardan yapılmış bir çıkarım. IVS boş arsada maliyet yaklaşımını açıkça yasaklamıyor.",
+   "sources": [
+    "https://cbvinstitute.com/wp-content/uploads/2021/08/IVS-2022.pdf",
+    "https://tdub.org.tr/uploads/1713774623_7f198ca9cc737c27553d.pdf",
+    "https://www.ykyatirim.com.tr/media/h41dmanh/ek-6-d-79520242307_izmir-urla_35adetarsa_rev27-11-2.pdf",
+    "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.2942.pdf"
+   ],
+   "confidence": "medium",
+   "verdict": "dogru",
+   "safe": "Maliyet yaklaşımı şu ilkeye dayanır: gereksiz zaman kaybı ya da risk yoksa alıcı, eşdeğer faydadaki bir varlık için onu satın alarak ya da yaparak edinme maliyetinden fazlasını ödemez. Gayrimenkulde genellikle yapılara uygulanır, arsa değeri ise ayrıca, çoğunlukla emsal yöntemiyle bulunur. Bu yüzden üzerinde yapı olmayan boş arsada genellikle tek başına kullanılmaz.",
+   "note": "IVS 105 60.1 doğrulandı (ilke, ikame ya da yeniden üretim maliyeti ve yıpranma düşümü). İlkenin standarttaki 'gereksiz zaman, elverişsizlik ve risk yoksa' şartı iddiada atlanmış. IVS 400 70.2 (amortismana tabi ikame maliyeti yöntemi) ve 70.5 (ikame maliyeti arsa değerini de yansıtmalı) da doğrulandı, Türkçe UDS 2017'de numaralar aynı. 2942 md. 11/1-h metni aynen var. Urla raporundaki 8.3 bölümü 'taşınmaz üzerinde yapı olmadığından bu yöntemin kullanılması mümkün olmamıştır' diyor. İddiadaki 'esas olarak binalarda' ifadesi gayrimenkul için doğru. Genel IVS'te maliyet yaklaşımı makine-ekipman ve maddi olmayan varlıklarda da kullanılıyor. 'Çoğu zaman mümkün değil' bir çıkarım, standart bunu yasaklamıyor. İddia sahibinin bu çekincesi yerinde.",
+   "orig_sources": [
+    "https://cbvinstitute.com/wp-content/uploads/2021/08/IVS-2022.pdf",
+    "https://www.ykyatirim.com.tr/media/h41dmanh/ek-6-d-79520242307_izmir-urla_35adetarsa_rev27-11-2.pdf",
+    "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.2942.pdf"
+   ]
+  },
+  {
+   "id": "c8",
+   "claim": "Gelir yaklaşımı, varlığın gelecekte getireceği nakit akışlarını bugünkü tek bir değere indirger; arsada bu genellikle arsaya yapılabilecek projenin satış gelirleri ve maliyetleri üzerinden kurulur.",
+   "detail": "IVS 105 paragraf 40.1: değer, varlığın üreteceği gelirin, nakit akışının ya da maliyet tasarrufunun bugünkü değerine göre belirlenir. Yaygın yöntem indirgenmiş nakit akışları (İNA). Urla raporunda arsa değeri şöyle varsayılmış: satış hasılatının İNA ile bulunan bugünkü değeri eksi geliştirme maliyetinin İNA ile bulunan bugünkü değeri. Raporda nominal iskonto oranı %33 (risk primi %8) alınmış. Satış fiyatlarının üç yılda sırasıyla %35, %30 ve %25 artacağı öngörülmüş. Bunlar o raporun varsayımları, genel oranlar değil. Tarım arazisinde gelir yaklaşımının kanuni bir karşılığı da var (bkz. c13).",
+   "sources": [
+    "https://cbvinstitute.com/wp-content/uploads/2021/08/IVS-2022.pdf",
+    "https://www.ykyatirim.com.tr/media/h41dmanh/ek-6-d-79520242307_izmir-urla_35adetarsa_rev27-11-2.pdf"
+   ],
+   "confidence": "high",
+   "verdict": "dogru",
+   "safe": "Gelir yaklaşımı, varlığın gelecekte getireceği nakit akışlarını bugünkü tek bir değere çevirir. Boş arsada bu çoğu zaman, arsaya yapılabilecek projenin satış gelirleri ve maliyetleri bugüne indirgenerek uygulanır.",
+   "note": "IVS 105 40.1 ve UDS 2017 Türkçe 40.1 doğrulandı. Urla raporunda (8.2) arsa değeri gerçekten şöyle varsayılmış: indirgenmiş satış hasılatı eksi indirgenmiş geliştirme maliyeti. Nominal iskonto oranı %33 (risksiz getiri %25, risk primi %8). Satış fiyatlarına %35, %30 ve %25 artış uygulanmış: 131.000, 176.850, 229.905 ve 287.381 TL/m². İndirgenmiş toplamları 30.09.2024 değerleme tarihinden gün sayısı/365 esasıyla %33'le yeniden hesapladım, rapordaki 1.863.548.251 ve 591.007.457 TL'yi kuruşu kuruşuna buldum. 'Arsada genellikle' ifadesi bir çıkarım. Kira getiren arsada ya da tarım arazisinde gelir başka biçimde kurulabilir (bkz. c13).",
+   "orig_sources": [
+    "https://cbvinstitute.com/wp-content/uploads/2021/08/IVS-2022.pdf",
+    "https://www.ykyatirim.com.tr/media/h41dmanh/ek-6-d-79520242307_izmir-urla_35adetarsa_rev27-11-2.pdf"
+   ]
+  },
+  {
+   "id": "c9",
+   "claim": "Geliştirme (artık değer, 'residual') yönteminde arsa değeri, tamamlanmış projenin değerinden inşaat ve diğer geliştirme maliyetleri ile geliştirici kârı düşülerek bulunur.",
+   "detail": "IVS 410 'Geliştirme Amaçlı Gayrimenkuller' paragraf 40.1(b): bu yöntem pazar, gelir ve maliyet yaklaşımlarının bir karışımıdır. Tamamlanmış projenin brüt değerinden geliştirme maliyetleri ve geliştiricinin getirisi düşülerek artık (residual) değere ulaşılır. Paragraf 90.1: proje tamamlanınca beklenen değerden, projeyi bitirmek için gereken tüm bilinen ya da beklenen maliyetler riskler de gözetilerek düşülür ve kalan tutar artık değerdir. Paragraf 90.6'da dikkate alınacak girdiler sayılıyor: tamamlanmış mülk değeri, inşaat maliyetleri, danışman ücretleri, pazarlama maliyetleri, zaman planı, finansman maliyetleri, geliştirme kârı ve iskonto oranı. Formülün kısa hâli: arsa = proje değeri − maliyetler − geliştirici kârı.",
+   "sources": [
+    "https://cbvinstitute.com/wp-content/uploads/2021/08/IVS-2022.pdf",
+    "https://tdub.org.tr/uploads/1713774623_7f198ca9cc737c27553d.pdf"
+   ],
+   "confidence": "high",
+   "viral": "Müteahhit arsaya ne kadar ödeyeceğini bu yöntemle, geriye doğru hesaplar: önce bitmiş binanın değeri bulunur, maliyet ve kâr düşülür, kalan arsanın değeridir.",
+   "verdict": "dogru",
+   "safe": "Geliştirme (Türkçe standartta 'kalıntı') yönteminde arsa değeri, bitmiş projenin değerinden inşaat ve diğer geliştirme maliyetleri ile geliştirici kârı düşülerek bulunur. Kalan tutar arsaya ödenebilecek değeri gösterir. Ancak sonuç küçük varsayım değişikliklerine çok duyarlıdır ve her zaman pazar değerine eşit olmayabilir.",
+   "note": "IVS 410 40.1(b), 90.1-90.3 ve 90.6 (a)-(h) IVS 2022'de doğrulandı. Türkçe UDS 2017'de numaralar aynı. Ancak resmi Türkçe terim 'kalıntı yöntemi / kalıntı değer', videoda bu terim kullanılabilir. UDS 2017'deki 90.1'in ek bir cümlesi var: 'kalıntı değer geliştirme amaçlı mülkün mevcut haliyle pazar değerine eşit olabilir veya olmayabilir'. Viral cümledeki 'müteahhit bu yöntemle hesaplar' genellemesi kaynakta yok. 'Geliştiriciler çoğu zaman bu mantıkla hesaplar' demek daha güvenli.",
+   "orig_sources": [
+    "https://cbvinstitute.com/wp-content/uploads/2021/08/IVS-2022.pdf"
+   ]
+  },
+  {
+   "id": "c10",
+   "claim": "Gerçek bir raporda (Urla, Kasım 2024) arsa değeri şöyle hesaplanmış: 1.863.548.251 TL indirgenmiş satış hasılatı − 591.007.457 TL indirgenmiş inşaat maliyeti − 465.887.063 TL (%25) yüklenici kârı = 806.653.731 TL.",
+   "detail": "Kaynak: INVEST Gayrimenkul Değerleme ve Danışmanlık A.Ş.'nin İzmir Urla'daki 35 parsel için hazırladığı değerleme raporu (no 2024/2307, rapor tarihi 11.11.2024, ekspertiz tarihi 07.11.2024). Rapor Yapı Kredi Yatırım sitesinde bir ek belge olarak yayımlanmış. Tablo: K (arsa) = F (indirgenmiş hasılat) − G (indirgenmiş inşaat maliyeti) − J (F × %25 kâr). Bu da m² başına 26.227 TL ediyor (arsa alanı 30.756,04 m², satılabilir konut alanı 13.535 m², satış fiyatı 131.000 TL/m²). Hesabı kendim doğruladım: 1.863.548.251 × 0,25 = 465.887.063. %25 kâr oranı bu raporun varsayımı, yasal ya da standart bir oran değil. Videoda 'gerçek bir rapordan' diye belirtilmeli.",
+   "sources": [
+    "https://www.ykyatirim.com.tr/media/h41dmanh/ek-6-d-79520242307_izmir-urla_35adetarsa_rev27-11-2.pdf"
+   ],
+   "confidence": "high",
+   "viral": "Bu hesapta müteahhide ayrılan kâr (yaklaşık 466 milyon TL), arsanın değerinin (yaklaşık 807 milyon TL) yarısından fazla.",
+   "verdict": "dogru",
+   "safe": "Gerçek bir raporda (İzmir Urla, 35 parsel, rapor tarihi Kasım 2024, değerleme tarihi 30.09.2024) arsa değeri şöyle hesaplanmış: 1.863.548.251 TL indirgenmiş satış hasılatı − 591.007.457 TL indirgenmiş inşaat maliyeti − 465.887.063 TL yüklenici kârı (hasılatın %25'i) = 806.653.731 TL. Bu, m² başına yaklaşık 26.227 TL ediyor.",
+   "note": "Rapor PDF'inin 32. sayfasındaki tablo doğrulandı: K = F − G − J, J = F × %25. Arsa alanı 30.756,04 m², konut alanı 13.535 m², satış fiyatı 131.000 TL/m². Rapor no 2024/2307, tarih 11 Kasım 2024, ekspertiz 07 Kasım 2024, şirket INVEST Gayrimenkul Değerleme ve Danışmanlık A.Ş. Aritmetiği kontrol ettim: F−G = 1.272.540.794, F×0,25 = 465.887.062,75, K = 806.653.731, K/A = 26.227. Değerin hangi tarih itibarıyla takdir edildiğine dikkat: 30.09.2024. Yayımlanan PDF raporun yalnızca 25-49. sayfalarını içeren bir ek ve 'rev27-11' adıyla revize edilmiş. Viral cümle de doğru: yüklenici kârı arsa değerinin yaklaşık %58'i. Bir not: inşaat maliyetinin içinde ayrıca %20 'müteahhit ücreti' kalemi de var (yaklaşık 82 milyon TL, nominal). Bu yüzden 466 milyonu 'müteahhide ayrılan' değil, 'yüklenici kârı' diye anmak daha doğru.",
+   "orig_sources": [
+    "https://www.ykyatirim.com.tr/media/h41dmanh/ek-6-d-79520242307_izmir-urla_35adetarsa_rev27-11-2.pdf"
+   ]
+  },
+  {
+   "id": "c11",
+   "claim": "Aynı arsa farklı yöntemlerle farklı değer alabilir: Urla raporunda pazar yaklaşımı 664,84 milyon TL, geliştirme/gelir hesabı 806,65 milyon TL bulmuş ve uzman nihai değer olarak pazar yaklaşımını seçmiş.",
+   "detail": "Fark yaklaşık 141,8 milyon TL, yani yaklaşık %21. Raporun gerekçesi: gelir yöntemi geleceğe dönük tahminlere dayanıyor ve içinde geliştirici kârı var. Piyasa rayiçleri daha tutarlı bulunduğu için pazar yaklaşımı esas alınmış. KDV dahil toplam pazar değeri 731.324.000 TL (raporda KDV %10 alınmış). IVS 410 paragraf 90.2-90.3: artık (residual) değer küçük değişikliklere çok duyarlıdır, bu yüzden her önemli girdi için ayrı duyarlılık analizi yapılmalı ve yöntem dikkatle kullanılmalıdır. ÖRNEK (uydurma rakamlar, sadece mantığı göstermek için): proje 100, maliyet 60, kâr 20 ise arsa 20 olur. Proje değeri %10 düşüp 90 olursa arsa 10'a iner, yani arsa değeri yarı yarıya düşer.",
+   "sources": [
+    "https://www.ykyatirim.com.tr/media/h41dmanh/ek-6-d-79520242307_izmir-urla_35adetarsa_rev27-11-2.pdf",
+    "https://cbvinstitute.com/wp-content/uploads/2021/08/IVS-2022.pdf",
+    "https://tdub.org.tr/uploads/1713774623_7f198ca9cc737c27553d.pdf"
+   ],
+   "confidence": "high",
+   "viral": "Aynı arsa, aynı uzman ve aynı rapor: yönteme göre 142 milyon TL fark çıkıyor. Arsa değeri tek ve kesin bir sayı değil.",
+   "verdict": "dogru",
+   "safe": "Aynı arsa farklı yöntemlerle farklı değer alabilir. Urla raporunda pazar yaklaşımı 664,84 milyon TL, gelir/geliştirme hesabı 806,65 milyon TL bulmuş. Uzman, gelir hesabının geleceğe dönük tahminlere dayandığını belirterek nihai değer olarak pazar yaklaşımını seçmiş. Aradaki fark yaklaşık 142 milyon TL, yani yaklaşık %21.",
+   "note": "Rapordaki 8.4 ve 10. bölümler doğrulandı: 664.840.000 ve 806.650.000 TL. KDV hariç 664.840.000, KDV dahil 731.324.000 TL, KDV oranı %10. Fark 141.810.000 TL, %21,3. Raporun gerekçesi iddiadaki gibi. Rapor ayrıca 'en düşük değerin tespiti emsal karşılaştırma yöntemi ile yapılmıştır' diyerek temkinli davrandığını yazıyor. IVS 410 90.2-90.3 (ve aynı numaralarla UDS 2017) doğrulandı: kalıntı değer çok duyarlı ve her önemli girdi için duyarlılık analizi isteniyor. IVS 105 10.6 da birbirinden çok uzak sonuçlarda nedenin araştırılmasını istiyor. Uydurma örneğin aritmetiği yalnızca kâr sabit tutarsa doğru (100−60−20=20 → 90−60−20=10). Kâr, Urla'daki gibi proje değerinin yüzdesiyse arsa 12'ye iner, yani düşüş %40 olur. Örnek videoda 'sabit kâr varsayımıyla' diye verilmeli.",
+   "orig_sources": [
+    "https://www.ykyatirim.com.tr/media/h41dmanh/ek-6-d-79520242307_izmir-urla_35adetarsa_rev27-11-2.pdf",
+    "https://cbvinstitute.com/wp-content/uploads/2021/08/IVS-2022.pdf"
+   ]
+  },
+  {
+   "id": "c12",
+   "claim": "Bankaya teminat olarak gösterilen gayrimenkulü, BDDK'nın yetkilendirdiği ve aynı zamanda SPK yetkili ve TDUB üyesi olan değerleme kuruluşları değerler; BDDK yönetmeliğine göre değeri 10 milyon TL'yi aşan gayrimenkul için iki farklı kuruluştan rapor alınması gerekir.",
+   "detail": "'Bankaların Değerleme Hizmeti Almaları ve Bankalara Değerleme Hizmeti Verecek Kuruluşların Yetkilendirilmesi ve Faaliyetleri Hakkında Yönetmelik' (RG 12.01.2017/29946, mevzuat.gov.tr güncel metni). Madde 4/1-a-2 ve 4/2: kredi teminatı gayrimenkullerin değerlemesini BDDK'nın yetkilendirdiği kuruluşlar yapar. Madde 9/1-a: bu kuruluşlar SPK yetkili ve Birlik (TDUB) üyesi olmalıdır. Madde 20/2 (RG 17.09.2022/31956 ile değişik): 10 milyon TL üzerindeki gayrimenkulde 30 gün içinde iki farklı kuruluştan rapor alınır. Fark %10'dan azsa iki değerin ortalaması alınır. Fark daha fazlaysa üçüncü bir kuruluşa rapor yaptırılır ve birbirine en yakın iki değerin ortalaması esas alınır. Bağımsız bölüm niteliğindeki konut ve işyerleri dışında bu raporları en az 5 yıl tecrübeli uzman hazırlamalıdır. Madde 20/1: banka bir raporu gerçeğe uygun bulmazsa 30 gün içinde başka bir kuruluşa değerleme yaptırabilir. Fark en az %20 ise üçüncü rapor alınır. Güven 'orta', çünkü madde 20/3 BDDK Kuruluna bu tutarı karar ile değiştirme yetkisi veriyor ve 2022'den sonra böyle bir karar alınıp alınmadığını doğrulayamadım. 2020'deki ilk düzenlemede eşik 5 milyon TL idi (NTV, 10.01.2020).",
+   "sources": [
+    "https://www.mevzuat.gov.tr/File/GeneratePdf?mevzuatNo=23228&mevzuatTur=KurumVeKurulusYonetmeligi&mevzuatTertip=5",
+    "https://www.bddk.org.tr/Mevzuat/Liste/56",
+    "https://www.ntv.com.tr/ekonomi/5-milyon-ustu-gayrimenkule-iki-degerleme-raporu-IDA1gkmbp0CotPz5Jj6asg",
+    "https://www.alomaliye.com/2022/09/17/bankalara-degerleme-hizmeti-verecek-kuruluslarin-yetkilendirilmesi-17-09-2022/"
+   ],
+   "confidence": "medium",
+   "viral": "Pahalı bir gayrimenkulde banka tek rapora güvenmez. İki rapor %10'dan fazla farklıysa üçüncü bir şirket çağrılır ve uç değer hesaptan atılır.",
+   "verdict": "dogru",
+   "safe": "Bankaya teminat olarak verilen gayrimenkulü, BDDK'nın yetkilendirdiği değerleme kuruluşları değerler. Bu kuruluşların SPK yetkili ve TDUB üyesi olması şarttır. BDDK yönetmeliğine göre değeri 10 milyon TL'yi aşan gayrimenkul için 30 gün içinde iki farklı kuruluştan rapor alınır. İki değer arasındaki fark %10'dan fazlaysa üçüncü bir kuruluşa rapor yaptırılır ve birbirine en yakın iki değerin ortalaması esas alınır.",
+   "note": "mevzuat.gov.tr'den 24.10.2026'da üretilen güncel PDF'i okudum. 4/1-a-2, 4/2, 9/1-a ve 20/1 (fark %20 olunca üçüncü rapor) iddiadaki gibi. 20/2'nin 17.09.2022/31956 tarihli değişikliği bir ay sonra yürürlüğe girmiş ve içeriği iddiadakiyle aynı: 10 milyon TL, %10 eşiği, birbirine en yakın iki değerin ortalaması, bağımsız bölüm niteliğindeki konut ve işyerleri dışında 5 yıl tecrübeli uzman şartı. 20/3, Kurula tutarı değiştirme yetkisi veriyor. Metinde 2022'den sonra değişiklik yok. BDDK'nın Resmî Gazete'de yayımlanmayan kurul kararları listesini 11.06.2026 tarihine kadar taradım, tutarı değiştiren bir karar göremedim (yalnızca yetki verme ve iptal kararları var). NTV'nin 10.01.2020 tarihli haberi ilk eşiğin 5 milyon TL olduğunu doğruluyor. Not: 10 milyon TL nominal bir tutar, enflasyona göre güncellenmiyor.",
+   "orig_sources": [
+    "https://www.mevzuat.gov.tr/File/GeneratePdf?mevzuatNo=23228&mevzuatTur=KurumVeKurulusYonetmeligi&mevzuatTertip=5",
+    "https://www.alomaliye.com/2022/09/17/bankalara-degerleme-hizmeti-verecek-kuruluslarin-yetkilendirilmesi-17-09-2022/",
+    "https://www.ntv.com.tr/ekonomi/5-milyon-ustu-gayrimenkule-iki-degerleme-raporu-IDA1gkmbp0CotPz5Jj6asg"
+   ]
+  },
+  {
+   "id": "c13",
+   "claim": "Kamulaştırmada mahkemenin bilirkişi kurulu SPK'nın kabul ettiği standartlara uygun, gerekçeli bir rapor hazırlar; arsada kamulaştırma gününden önceki özel amaçsız emsal satışlar, tarım arazisinde ise taşınmazın olduğu gibi kullanılmasıyla getireceği net gelir esas alınır.",
+   "detail": "2942 sayılı Kamulaştırma Kanunu madde 11/1: (f) bendi arazide net geliri, (g) bendi arsada emsal satışları, (h) bendi yapılarda resmi birim fiyatları, maliyet hesaplarını ve yıpranma payını, (ı) bendi diğer objektif ölçüleri sayıyor. 'SPK tarafından kabul edilen değerleme standartlarına uygun' ifadesi 6754 sayılı Kanunla 2016'da eklendi. Madde 15 (6754 sayılı Kanunla değişik): bilirkişi kurulu en az üç kişi olmak zorunda. Bunlardan biri 6362 sayılı SPKn'ye göre yetkilendirilmiş bir gayrimenkul değerleme uzmanı ya da taşınmaz geliştirme alanında yüksek lisans veya doktora yapmış bir uzman olmalı. İdarenin kendi kıymet takdir komisyonu da madde 8'e göre madde 11'deki esasları uyguluyor. Not: (f) bendindeki 'kamulaştırma tarihindeki' ibaresini Anayasa Mahkemesi iptal etti (E.2015/55, K.2016/45). Metni mevzuat.gov.tr güncel PDF'inden okudum.",
+   "sources": [
+    "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.2942.pdf"
+   ],
+   "confidence": "high",
+   "viral": "Devlet aynı köyde tarlanızı ve arsanızı farklı hesaplar: arsaya emsal satışlara göre, tarlaya getirdiği net gelire göre bedel biçilir.",
+   "verdict": "dogru",
+   "safe": "Kamulaştırma davasında mahkemenin en az üç kişilik bilirkişi kurulu, SPK'nın kabul ettiği değerleme standartlarına uygun, gerekçeli bir rapor hazırlar. Arsa niteliğindeki taşınmazda kamulaştırmadan önceki, özel amaç taşımayan emsal satışlar esas alınır. Arazi niteliğindeki (imar planı dışındaki, çoğunlukla tarım) taşınmazda ise taşınmazın olduğu gibi kullanılmasıyla getireceği net gelir esas alınır.",
+   "note": "2942'nin mevzuat.gov.tr'deki güncel metnini okudum (2026 değişiklikleri de işlenmiş). Madde 11'in f, g, h ve ı bentleri ile 'SPK tarafından kabul edilen değerleme standartlarına uygun' ibaresi doğrulandı (6754/38, 2016). 'Kamulaştırma tarihindeki' ibaresinin iptali de doğrulandı (AYM E.2015/55, K.2016/45). Madde 15 (6754/39): en az üç kişilik kurul, üyelerden birinin taşınmaz geliştirme alanında yüksek lisans ya da doktora yapmış biri veya SPKn'ye göre yetkilendirilmiş bir gayrimenkul değerleme uzmanı olması zorunlu. Madde 8: idarenin kıymet takdir komisyonu md. 11'deki esaslara göre çalışıyor. 2025-2026 değişiklikleri ve AYM kararları 11, 12 ve 15. maddelere dokunmamış. Küçük bir düzeltme: Kanun 'tarım arazisi' değil 'arazi' diyor. Ayrıca md. 11 yalnızca bu iki ölçüyü değil; cins, yüzölçümü, vergi beyanı, resmi kıymet takdirleri ve diğer objektif ölçüleri de sayıyor.",
+   "orig_sources": [
+    "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.2942.pdf"
+   ]
+  },
+  {
+   "id": "c14",
+   "claim": "Kamulaştırma bedeli hesaplanırken, kamulaştırmayı gerektiren projenin yaratacağı değer artışı ve taşınmazın ileride düşünülen kullanım şekliyle getireceği kâr dikkate alınmaz.",
+   "detail": "2942 sayılı Kamulaştırma Kanunu madde 11'de, (a)-(ı) bentlerini içeren birinci fıkradan hemen sonra gelen fıkra: 'Taşınmaz malın değerinin tespitinde, kamulaştırmayı gerektiren imar ve hizmet teşebbüsünün sebep olacağı değer artışları ile ilerisi için düşünülen kullanma şekillerine göre getireceği kâr dikkate alınmaz.' Kısmi kamulaştırmada kalan parçanın değeri düşer ya da artarsa madde 12 ayrı bir hesap öngörüyor. Artış nedeniyle yapılacak indirim kamulaştırma bedelinin %50'sini geçemez (madde 12, son fıkra). Bu kural kamulaştırmaya özgü. Normal satış amaçlı değerlemede en iyi kullanım ilkesi (c4) geçerli. Video ikisini karıştırmamalı.",
+   "sources": [
+    "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.2942.pdf"
+   ],
+   "confidence": "high",
+   "viral": "Arsanızdan otoyol geçecek diye değeri artacak olsa bile, devlet o yol yüzünden oluşan değer artışını size ödemez.",
+   "verdict": "dogru",
+   "safe": "Kamulaştırma bedeli hesaplanırken, kamulaştırmaya yol açan projenin yaratacağı değer artışı ve taşınmazın ileride düşünülen kullanım şekliyle getireceği kâr dikkate alınmaz. Kısmen kamulaştırmada kalan parçanın değeri bu yüzden artarsa, artış bedelden düşülebilir, ama indirim bedelin yarısını geçemez.",
+   "note": "2942 md. 11'de bentlerden ve 'Esas tutarak...' cümlesinden sonra gelen fıkra aynen doğrulandı: 'kamulaştırmayı gerektiren imar ve hizmet teşebbüsünün sebep olacağı değer artışları ile ilerisi için düşünülen kullanma şekillerine göre getireceği kâr dikkate alınmaz'. Md. 12/a, b, c ve %50 sınırı da doğrulandı. Ancak detaydaki 'madde 12, son fıkra' atfı yanlış. %50 sınırı (c) bendinin hemen arkasındaki 'Şu kadar ki' fıkrasında. Madde 12'nin devamında başka fıkralar var (kalan kısmın yararlanılamaz olması, baraj kamulaştırması vb.). Güncel metinde bu hükümlere ilişkin bir değişiklik ya da AYM iptali yok. Kamulaştırmaya özgü kural ile c4'teki en iyi kullanım ilkesini birbirinden ayırma uyarısı yerinde.",
+   "orig_sources": [
+    "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.2942.pdf"
+   ]
+  },
+  {
+   "id": "c1",
+   "claim": "İmar dilinde 'emsal' denen KAKS, parsel alanıyla çarpılınca o parselde yapılabilecek, emsale esas toplam kat alanını verir; örneğin 500 m² parselde emsal 1,50 ise 750 m² çıkar.",
+   "detail": "Planlı Alanlar İmar Yönetmeliği (RG 03.07.2017/30113) md.4/1-(tt) KAKS'ı (Emsal) şöyle tanımlar: 'Yapının inşa edilen tüm kat alanlarının toplamının imar parseli alanına oranı'. md.21/1'e göre katlar alanına bodrum, asma kat, çatı arası, açık ve kapalı çıkmalar girer. md.22'de sayılan kullanımlar (ortak otopark, teknik hacim vb.) hesaba girmez. md.5/8'e göre emsal dışı alanların toplamı, emsale esas alanın %30'unu aşamaz; yangın merdiveni, otopark gibi bazı kalemler bu sınırın dışındadır ve fıkra 2025-2026'da değişti. Bu yüzden binanın gerçek brüt alanı emsal hesabından büyük olabilir, 'parsel × emsal = toplam inşaat' demek eksik kalır. ÖRNEK (varsayımsal): 500 × 1,50 = 750 m² emsale esas alan; buna istisnalar hariç en fazla yaklaşık 750 × 0,30 = 225 m² emsal dışı alan eklenebilir. Planda emsal verilmemişse katlar alanı TAKS × kat adedi ile hesaplanır (md.21/4). Mevzuat metni 24.10.2026'da mevzuat.gov.tr'den okundu.",
+   "sources": [
+    "https://www.mevzuat.gov.tr/anasayfa/MevzuatFihristDetayIframe?MevzuatTur=7&MevzuatNo=23722&MevzuatTertip=5"
+   ],
+   "confidence": "high",
+   "viral": "Herkes 'emsal' kelimesini duyar ama bunun basit bir çarpma olduğunu bilen azdır; arsanın asıl 'ürünü' bu m²'dir.",
+   "verdict": "dogru",
+   "safe": "Emsal (KAKS) net imar parseli alanıyla çarpılınca emsale esas toplam inşaat alanı çıkar. Örneğin 500 m² parselde emsal 1,50 ise 750 m² olur. Bazı alanlar emsale girmediği için binanın gerçek brüt alanı bundan büyük olabilir.",
+   "note": "mevzuat.gov.tr'deki güncel PAİY metnini WebFetch ile okudum. md.4/1-(tt) KAKS tanımı ve md.21/1 (bodrum, asma kat, çatı arası, çıkmalar katlar alanına dahil) teyit edildi. md.21/4 (emsal verilmemişse TAKS × kat adedi) ve md.22 (başlığı 'Katlar alanı hesabına dâhil edilmeyen kullanımlar') da teyit edildi. md.5/8'de emsal harici alanların toplamı emsale esas alanın %30'unu aşamaz. 'Ancak' ile başlayan istisna listesi (zorunlu otopark alanının 2 katı; sığınak, asansör, merdivenler, şaftlar, teknik hacimler; mescit; tamamen gömülü ortak alanlar; çocuk oyun alanı) 'bu hesaba dâhil edilmeksizin emsal haricidir'. Zorunlu yangın merdiveni de bu sınırın dışında kalıyor. 5/8'de RG 13.08.2025, 14.01.2026 ve 01.07.2026 değişiklik notları var. Hesaplar doğru. Küçük not: md.21/4'teki TAKS × kat adedi bir katsayı verir, m² bulmak için parsel alanıyla da çarpmak gerekir.",
+   "orig_sources": [
+    "https://www.mevzuat.gov.tr/anasayfa/MevzuatFihristDetayIframe?MevzuatTur=7&MevzuatNo=23722&MevzuatTertip=5",
+    "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=23722&MevzuatTur=7&MevzuatTertip=5"
+   ]
+  },
+  {
+   "id": "c2",
+   "claim": "Emsal hesabı tapudaki brüt alandan değil, yol ve park gibi kamuya ayrılan kısımlar düştükten sonra kalan net imar parseli alanından yapılır.",
+   "detail": "Planlı Alanlar İmar Yönetmeliği md.5/5 (Değişik: RG 25.07.2019/30842): 'Taban alanı ve emsal hesabı; net imar parseli alanı üzerinden yapılır.' Tarla imar uygulamasına girdiğinde 3194 sayılı İmar Kanunu md.18'e göre düzenleme ortaklık payı (DOP) kesilir ve inşaat hakkı kalan imar parseline göre hesaplanır. ÖRNEK (varsayımsal): 1.000 m²'lik bir yerden %45 DOP kesilirse emsal 550 m² üzerinden hesaplanır. Gerçek kesinti oranı her uygulamada farklıdır ve %45 yalnızca üst sınırdır.",
+   "sources": [
+    "https://www.mevzuat.gov.tr/anasayfa/MevzuatFihristDetayIframe?MevzuatTur=7&MevzuatNo=23722&MevzuatTertip=5",
+    "https://www.mevzuat.gov.tr/anasayfa/MevzuatFihristDetayIframe?MevzuatTur=1&MevzuatNo=3194&MevzuatTertip=5"
+   ],
+   "confidence": "high",
+   "viral": "'1.000 m² aldım' diyen kişi inşaat hakkını belki 550 m² üzerinden alacak.",
+   "verdict": "dogru",
+   "safe": "Taban alanı ve emsal hesabı net imar parseli alanı üzerinden yapılır. Tarla imar uygulamasına girdiğinde önce düzenleme ortaklık payı kesilir, inşaat hakkı kalan parsele göre hesaplanır. Örneğin %45 kesilirse 1.000 m²'nin 550 m²'si kalır, ama %45 yalnızca üst sınırdır.",
+   "note": "PAİY md.5/5 '(Değişik:RG-25/7/2019-30842) Taban alanı ve emsal hesabı; net imar parseli alanı üzerinden yapılır' hükmü teyit edildi, fıkrada istisna yok. 3194 md.18'de DOP 'düzenleme dolayısıyla meydana gelen değer artışları karşılığında' alınır ve 'yüzde kırk beşini geçemez'. Örnek hesap doğru. Not: zaten imar parseli olarak tescil edilmiş bir yerde tapu alanı genellikle imar parseli alanına eşittir. Bu durumda yalnız plandaki yola veya parka terk edilecek kısımlar düşülür. 'Tapudaki brüt alan' ayrımı en çok imar uygulaması görmemiş arazi için anlamlı.",
+   "orig_sources": [
+    "https://www.mevzuat.gov.tr/anasayfa/MevzuatFihristDetayIframe?MevzuatTur=7&MevzuatNo=23722&MevzuatTertip=5",
+    "https://www.mevzuat.gov.tr/anasayfa/MevzuatFihristDetayIframe?MevzuatTur=1&MevzuatNo=3194&MevzuatTertip=5"
+   ]
+  },
+  {
+   "id": "c3",
+   "claim": "TAKS binanın parselde kaplayacağı taban alanını sınırlar ve planda açıkça yazmıyorsa ayrık veya blok nizamda %40'ı geçemez.",
+   "detail": "Planlı Alanlar İmar Yönetmeliği md.4/1-(cccc): TAKS, taban alanının imar parseli alanına oranıdır. Arazi eğimi nedeniyle zemin üstünde kalan bodrum katlar, zemin kat izdüşümüyle birlikte değerlendirilir. md.5/6'ya göre ayrık veya blok nizamda, uygulama imar planında belirlenmemişse 'TAKS %40'ı geçemez' (fıkra RG 01.07.2026/33297 ile değişti). md.20/3: planda belirlenmemişse TAKS'a ve bahçe mesafelerine göre bulunan taban alanlarından küçük olanı uygulanır. ÖRNEK (varsayımsal): 500 m² × 0,30 = 150 m² taban. Emsal 1,50 ise 750/150 ≈ 5 kat eder, ama kat adedi, yükseklik sınırı ve çekme mesafeleri ayrıca bağlayıcıdır.",
+   "sources": [
+    "https://www.mevzuat.gov.tr/anasayfa/MevzuatFihristDetayIframe?MevzuatTur=7&MevzuatNo=23722&MevzuatTertip=5",
+    "https://hukukcularevi.com/taks-kaks-emsal-cekme-mesafesi-planli-alanlar-imar-yonetmeligi/"
+   ],
+   "confidence": "high",
+   "viral": "Emsal 'ne kadar' inşaat yapabileceğini söyler, TAKS ise 'yere ne kadar yayılabileceğini'.",
+   "verdict": "duzeltilmeli",
+   "safe": "TAKS binanın parselde kaplayacağı taban alanını sınırlar. Ayrık veya blok nizamda planda TAKS yazmıyorsa genel kural %40'tır. Ancak 1 Temmuz 2026 değişikliğiyle, emsal verilip TAKS verilmeyen parsellerde, emsal aşılmamak ve çekme mesafelerine uyulmak şartıyla TAKS %60'a kadar çıkabiliyor.",
+   "note": "PAİY md.5/6 'Değişik:RG-1/7/2026-33297' notuyla okundu. İlk cümle 'Ayrık veya blok nizam olan yerlerde, uygulama imar planında açıkça belirlenmemiş ise TAKS %40'ı geçemez' diyor. Aynı fıkranın devamında iki kural var. Birincisi: KAKS verilmeyen parsellerde %40 taban × kat adedi ile bulunan KAKS içinde kalmak ve 'TAKS %60'ı geçmemek şartıyla' çekme mesafelerine göre uygulama yapılır. İkincisi: 'KAKS verilip TAKS verilmeyen parsellerde de, TAKS %60'ı geçmemek şartıyla' aynı şekilde uygulanır. hukukcularevi.com'un 2026 değişiklik yazısı da emsal verilip TAKS verilmeyen parselde %60'ı doğruluyor. İddiadaki kesin '%40'ı geçemez' ifadesi bu yüzden eksik ve yanıltıcı. md.4/1-(cccc) (eğim nedeniyle zemin üstünde kalan bodrumlar TAKS'a dahil) ve md.20/3 (TAKS ve bahçe mesafelerinden küçük olan) teyit edildi.",
+   "orig_sources": [
+    "https://www.mevzuat.gov.tr/anasayfa/MevzuatFihristDetayIframe?MevzuatTur=7&MevzuatNo=23722&MevzuatTertip=5"
+   ]
+  },
+  {
+   "id": "c4",
+   "claim": "Planda kat adedi veya bina yüksekliği yazmıyorsa kat sayısını parselin önündeki yolun genişliği belirler: 7 metre ve altındaki yolda en fazla 2, 50 metreyi aşan yolda en fazla 18 kat (bodrum hariç).",
+   "detail": "Planlı Alanlar İmar Yönetmeliği md.9 ('Yol genişliklerine göre bina kat adetleri') tablosu: ≤7 m: 2 kat; 7–10 m: 3; 10–12 m: 4; 12–15 m: 5; 15–20 m: 6; 20–25 m: 8; 25–35 m: 10; 35–50 m: 14; 50 m üstü: 18. Tablo yalnızca uygulama imar planında kat adedi ya da bina yüksekliği belirtilmemiş mevcut parseller için geçerlidir ve kat adedi binanın kot aldığı noktaya göre sayılır. md.5/11: planda veya yönetmelikte gösterilen kat adedi ya da bina yüksekliği aşılamaz, kat yükseklikleri azaltılarak kat sayısı artırılamaz. md.28: konut bölgelerinde zemin ve normal kat yüksekliği kural olarak 3,60 m'dir. Halk arasındaki 'gabari' karşılığında yönetmelik 'bina yüksekliği' (md.4/1-n) ve 'kat adedi' terimlerini kullanır; okuduğum güncel metinde 'gabari' kelimesi geçmiyor. İmar durum belgelerinde bu sınır 'Hmax' gibi kısaltmalarla da görülebilir.",
+   "sources": [
+    "https://www.mevzuat.gov.tr/anasayfa/MevzuatFihristDetayIframe?MevzuatTur=7&MevzuatNo=23722&MevzuatTertip=5"
+   ],
+   "confidence": "high",
+   "viral": "Aynı mahallede dar sokaktaki arsayla geniş caddedeki arsanın kat hakkı farklı olabilir.",
+   "verdict": "dogru",
+   "safe": "Yönetmelikten (2017) önceki planlarda kat adedi veya bina yüksekliği belirtilmemişse, kat sayısını parselin önündeki yolun genişliği belirler. 7 m'ye kadar olan yolda en çok 2 kat, 50 m'yi aşan yolda en çok 18 kat yapılabilir (bodrum hariç).",
+   "note": "PAİY md.9 tablosu ('En Çok Kat Adedi (Bodrum Hariç)') teyit edildi: ≤7 m 2; 7-10 m 3; 10-12 m 4; 12-15 m 5; 15-20 m 6; 20-25 m 8; 25-35 m 10; 35-50 m 14; >50 m 18. Kapsam 'Bu Yönetmeliğin yürürlüğe girdiği tarihten önceki mevcut uygulama imar planlarında kat adetleri veya bina yükseklikleri belirtilmemiş parseller' ile sınırlı. Ana iddia bu kapsamı belirtmiyor, ama detayda yazıyor. md.5/11 teyit edildi. Detaydaki md.28 bilgisi düzeltilmeli: 3,60 m sabit değil 'en fazla' değerdir. Ayrıca 2023 değişikliğiyle bodrum hariç 3 katı geçmeyen binalarda üst sınır 4,00 m oldu. Metnin üç bölümünde de 'gabari' kelimesi geçmiyor.",
+   "orig_sources": [
+    "https://www.mevzuat.gov.tr/anasayfa/MevzuatFihristDetayIframe?MevzuatTur=7&MevzuatNo=23722&MevzuatTertip=5"
+   ]
+  },
+  {
+   "id": "c5",
+   "claim": "Bir arsada ne ve ne kadar yapılabileceğini resmi olarak belediyeden alınan imar durum belgesi gösterir; tapuda 'arsa' yazması tek başına imarlı olduğu anlamına gelmez.",
+   "detail": "Planlı Alanlar İmar Yönetmeliği md.4/1-(ll): imar durum belgesi, bir parselin Kanun, uygulama imar planı, plan notları ve yönetmelikteki kullanım kararlarını ve yapılaşma şartlarını, ayrıca imar parselini sınır ve boyutlarıyla gösteren belgedir. md.55/4 ('Yapı ruhsatı işlemleri') bu belgenin ilgili idarece başvuru üzerine verileceğini düzenler. Yönetmeliğin kapsamı uygulama imar planı olan alanlardır (md.2). Vergi hukukundaki 'arsa' tanımı ayrı bir konudur: Emlak Vergisi Kanunu md.12'ye göre 'Belediye sınırları içinde belediyece parsellenmiş arazi arsa sayılır.' Bir hukuk bürosu rehberi de tapuda 'arsa' görünmesinin tek başına imarlı olmak anlamına gelmediğini ve e-Devlet/tapu bilgisinin ayrıntılı imar incelemesinin yerine geçmediğini vurguluyor.",
+   "sources": [
+    "https://www.mevzuat.gov.tr/anasayfa/MevzuatFihristDetayIframe?MevzuatTur=7&MevzuatNo=23722&MevzuatTertip=5",
+    "https://www.mevzuat.gov.tr/anasayfa/MevzuatFihristDetayIframe?MevzuatTur=1&MevzuatNo=1319&MevzuatTertip=5",
+    "https://www.ffkpartnerhukuk.com.tr/imarli-arsa-nasil-sorgulanir-2026-guncel-hukuki-rehber/"
+   ],
+   "confidence": "high",
+   "viral": "Tapuda 'arsa' yazıyor diye ev yapılabileceğini sanan çok kişi var.",
+   "verdict": "dogru",
+   "safe": "Bir parselde ne ve ne kadar yapılabileceğini resmi olarak ilgili idarenin verdiği imar durum belgesi gösterir. Bu idare genellikle belediye, mücavir alan dışında il özel idaresidir. Tapuda 'arsa' yazması tek başına imarlı olduğu anlamına gelmez.",
+   "note": "PAİY md.4/1-(ll) imar durum belgesi tanımı teyit edildi. md.55/4 (Değişik: RG 27.12.2019-30991): belge, onaylı jeolojik-jeoteknik etüt raporuyla birlikte başvurudan itibaren 2 iş günü içinde verilir. md.2 kapsamı uygulama imar planı olan alanlar. Emlak Vergisi Kanunu md.12'deki 'Belediye sınırları içinde belediyece parsellenmiş arazi arsa sayılır' cümlesi teyit edildi, maddede 'imar' kelimesi geçmiyor. FFK Partner rehberinde 'tek başına imarlı olduğu anlamına gelmez' ve e-Devlet bilgisinin 'ayrıntılı imar incelemesinin yerine geçmez' ifadeleri var. Küçük not: belgeyi her zaman belediye değil, 'ilgili idare' verir.",
+   "orig_sources": [
+    "https://www.mevzuat.gov.tr/anasayfa/MevzuatFihristDetayIframe?MevzuatTur=7&MevzuatNo=23722&MevzuatTertip=5",
+    "https://www.mevzuat.gov.tr/anasayfa/MevzuatFihristDetayIframe?MevzuatTur=1&MevzuatNo=1319&MevzuatTertip=5",
+    "https://www.ffkpartnerhukuk.com.tr/imarli-arsa-nasil-sorgulanir-2026-guncel-hukuki-rehber/"
+   ]
+  },
+  {
+   "id": "c6",
+   "claim": "Kanun bile tarla ile arsayı farklı ölçer: kamulaştırmada arazi, olduğu gibi kullanılırsa getireceği net gelire göre, arsa ise emsal satışlara göre değerlenir.",
+   "detail": "2942 sayılı Kamulaştırma Kanunu md.11/1-(f): 'Arazilerde, ... mevkii ve şartlarına göre ve olduğu gibi kullanılması halinde getireceği net gelirini'; md.11/1-(g): 'Arsalarda, kamulaştırılma gününden önceki özel amacı olmayan emsal satışlara göre satış değerini'. md.11/2: kamulaştırmayı gerektiren imar ve hizmet teşebbüsünün sebep olacağı değer artışları değer tespitinde dikkate alınmaz. Piyasadan ÖRNEK (tek rapor, yalnızca fikir vermek için): TSKB Gayrimenkul Değerleme A.Ş.'nin 27.05.2022 tarihli Kayseri Kocasinan raporunda 'Tarım Alanı' emsalleri yaklaşık 19–45 TL/m², E:0,50 yapılaşma haklı konut alanı emsalleri ise yaklaşık 176–244 TL/m² (ilan ve geçmiş satış fiyatları, farklı mahalleler) olarak yer alıyor. Bu oran genellenemez.",
+   "sources": [
+    "https://www.mevzuat.gov.tr/anasayfa/MevzuatFihristDetayIframe?MevzuatTur=1&MevzuatNo=2942&MevzuatTertip=5",
+    "https://cdn.gedik.com/media/media/i0wjnzji/ek6-ba__ms_z-gayrimenkul-de_erleme-raporlar_-rapor-no2022c120.pdf"
+   ],
+   "confidence": "high",
+   "viral": "Tarlanın değerini 'ne kadar ürün verir', arsanın değerini 'yanındaki kaça satıldı' belirliyor.",
+   "verdict": "dogru",
+   "safe": "Kamulaştırma Kanunu tarla ile arsayı farklı ölçer. Arazinin değeri, olduğu gibi kullanılırsa getireceği net gelire göre bulunur. Arsanın değeri ise özel amaç taşımayan emsal satışlara göre bulunur.",
+   "note": "2942 md.11/1-(f) 'olduğu gibi kullanılması halinde getireceği net gelirini' ve (g) 'özel amacı olmayan emsal satışlara göre satış değerini' teyit edildi. (f) bendindeki 'kamulaştırma tarihindeki' ibaresi AYM'ce 2016'da iptal edildi. md.11/2 (imar ve hizmet teşebbüsünün sebep olacağı değer artışları dikkate alınmaz) teyit edildi. md.11/1'de bunlardan başka a-ı ölçütleri de var. TSKB raporunu (2022C120, 27.05.2022, Kocasinan/Kayseri) PDF'ten okudum. Tarım Alanı emsalleri 19,39, 34, 35 ve 45 TL/m²; ilki 2,5 yıl önceki bir satış, yani eski fiyat. E:0,50 emsalleri 176, 244 ve 180 TL/m², ilan fiyatları. Rakamlar doğru, iddianın 'genellenemez' uyarısı yerinde.",
+   "orig_sources": [
+    "https://www.mevzuat.gov.tr/anasayfa/MevzuatFihristDetayIframe?MevzuatTur=1&MevzuatNo=2942&MevzuatTertip=5",
+    "https://cdn.gedik.com/media/media/i0wjnzji/ek6-ba__ms_z-gayrimenkul-de_erleme-raporlar_-rapor-no2022c120.pdf"
+   ]
+  },
+  {
+   "id": "c7",
+   "claim": "Tarla imar uygulamasına girince yol, park, okul gibi kamusal alanlar için bedelsiz pay kesilir ve bu düzenleme ortaklık payı (DOP) 2019'dan beri en fazla %45'tir (önceden %40'tı).",
+   "detail": "3194 sayılı İmar Kanunu md.18 ('Parselasyon planlarının hazırlanması'): DOP, 'düzenleme dolayısıyla meydana gelen değer artışları karşılığında' alınır ve 'düzenlemeye tabi tutulan arazi ve arsaların düzenlemeden önceki yüzölçümlerinin yüzde kırk beşini geçemez'. 7181 sayılı Kanun md.9 (RG 10.07.2019/30827) 'kırkını' ibaresini 'kırk beşini' olarak değiştirdi. DOP yalnızca maddede sayılan umumi hizmet alanlarına (yol, meydan, park, otopark, eğitim ve sağlık tesisi, ibadet yeri vb.) ayrılabilir ve başka amaçla kullanılamaz. Bir parselden kural olarak bir kez DOP alınır; ancak plan kararıyla yapılaşma koşulu ve nüfus artarsa ilk uygulamadaki oran %45'e tamamlanabilir. Maddede son değişiklikler 7534 sayılı Kanunla (05.12.2024) yapıldı ve %45 tavanı güncel metinde duruyor. ÖRNEK (varsayımsal): 1.000 m²'den DOP olarak en fazla 450 m² kesilebilir.",
+   "sources": [
+    "https://www.mevzuat.gov.tr/anasayfa/MevzuatFihristDetayIframe?MevzuatTur=1&MevzuatNo=3194&MevzuatTertip=5",
+    "https://www.turmob.org.tr/arsiv/mbs/resmigazete/30827-30827-1.pdf"
+   ],
+   "confidence": "high",
+   "viral": "Tarlanın neredeyse yarısı imar gelince bedelsiz gidebilir; ama kalan kısım 'arsa' olduğu için daha değerli hale gelir.",
+   "verdict": "dogru",
+   "safe": "Tarla imar uygulamasına girince yol, park, okul gibi kamusal alanlar için bedelsiz düzenleme ortaklık payı (DOP) kesilir. Bu pay 2019'dan beri en fazla %45'tir, önceden %40'tı.",
+   "note": "3194 md.18'in başlığı 'Parselasyon planlarının hazırlanması' ve metinde 'yüzde kırk beşini geçemez' ifadesi teyit edildi. Umumi hizmet alanları listesi ve 'başka maksatlarla kullanılamaz' hükmü de metinde var. 'Bir defadan fazla ... alınmaması esastır' kuralının istisnası, yapılaşma koşulunda VE nüfusta artış olması hâlinde %45'e tamamlama. Değişiklik notları: 7181/9 (4.7.2019), 7221, 7333, 7534/6 (5.12.2024). RG 10.07.2019 tarihli 30827 sayılı PDF'te 7181 md.9'un 'kırkını' ibaresini 'kırk beşini' yaptığı ve başlığı değiştirdiği görülüyor. Not: kamu alanı ihtiyacı DOP'u aşarsa fazlası md.13 yöntemleriyle, örneğin kamulaştırma ile, bedeli ödenerek alınır. Yani toplam kayıp %45'i geçebilir ama aşan kısım bedelsiz değildir.",
+   "orig_sources": [
+    "https://www.mevzuat.gov.tr/anasayfa/MevzuatFihristDetayIframe?MevzuatTur=1&MevzuatNo=3194&MevzuatTertip=5",
+    "https://www.turmob.org.tr/arsiv/mbs/resmigazete/30827-30827-1.pdf"
+   ]
+  },
+  {
+   "id": "c8",
+   "claim": "Tarım arazileri asgari büyüklüğün altında bölünemez ve hisselendirilemez; 2020'den beri hisselendirme ve pay devri gibi işlemler ayrıca Bakanlık iznine bağlıdır.",
+   "detail": "5403 sayılı Toprak Koruma ve Arazi Kullanımı Kanunu md.8 (6537 sayılı Kanunla 2014'te değişik): tarım arazileri asgari tarımsal arazi büyüklüğünün altında 'ifraz edilemez, hisselendirilemez' ve 'pay ve paydaş adedi artırılamaz'. Asgari büyüklük mutlak, marjinal ve özel ürün arazilerinde 2 hektar, dikili tarım arazilerinde 0,5 hektar, örtü altı tarımda 0,3 hektardır; Bakanlık bunları artırabilir. md.8/B'ye 7255 sayılı Kanunla (28.10.2020) eklenen fıkra: 'Tarım arazilerinde; ifraz, hisselendirme, pay temliki, ... taksim ve vasıf değişikliği işlemleri Bakanlığın izni ile yapılır.' Burada Bakanlık, tarımdan sorumlu bakanlıktır.",
+   "sources": [
+    "https://www.mevzuat.gov.tr/anasayfa/MevzuatFihristDetayIframe?MevzuatTur=1&MevzuatNo=5403&MevzuatTertip=5"
+   ],
+   "confidence": "high",
+   "viral": "'Hisseli tarla al, sonra böler ev yaparsın' hesabı yasal olarak çoğu zaman tutmaz.",
+   "verdict": "dogru",
+   "safe": "Tarım arazileri Bakanlığın belirlediği asgari büyüklüğün altında bölünemez ve hisselendirilemez. Bu büyüklük mutlak, marjinal ve özel ürün arazisinde 2 hektar, dikili arazide 0,5 hektar, örtü altında 0,3 hektardır. 2020'den beri tarım arazisinde ifraz, hisselendirme, pay satışı ve taksim gibi işlemler ayrıca Tarım ve Orman Bakanlığı iznine bağlıdır.",
+   "note": "5403 md.8 teyit edildi: 'Tarım arazileri Bakanlıkça belirlenen büyüklüklerin altında ifraz edilemez, hisselendirilemez, Hazine taşınmazlarının satış işlemleri hariç olmak üzere pay ve paydaş adedi artırılamaz.' Büyüklükler 2 ha, 0,5 ha ve 0,3 ha. Bakanlık bunları artırabilir, azaltamaz. İstisnalar: tarım dışı kullanım izni alınmış alanlar, çay/fındık/zeytin alanları, kamu yatırımları. md.8/B'deki '(Ek fıkra: 28/10/2020-7255/18 md.)' fıkrası teyit edildi: ifraz, hisselendirme, pay temliki, elbirliğinden paylıya geçiş, elbirliğinin devri, paylı intikal, taksim ve vasıf değişikliği 'Bakanlığın izni ile yapılır'. 8/B'de 2024-2026 değişikliği yok. md.3'te Bakanlık hâlâ 'Tarım ve Köyişleri Bakanlığı' olarak tanımlı, bugünkü karşılığı Tarım ve Orman Bakanlığı. md.8'e 2026'da 7584 ile kooperatiflerle ilgili bir fıkra eklendi.",
+   "orig_sources": [
+    "https://www.mevzuat.gov.tr/anasayfa/MevzuatFihristDetayIframe?MevzuatTur=1&MevzuatNo=5403&MevzuatTertip=5"
+   ]
+  },
+  {
+   "id": "c9",
+   "claim": "Hisseli tapuda arsanın belli bir köşesini değil, bütünü üzerinde bir payı alırsınız ve diğer paydaşlar önalım hakkıyla bu payı sizden alabilir.",
+   "detail": "Türk Medeni Kanunu md.688: 'Paylı mülkiyette birden çok kimse, maddî olarak bölünmüş olmayan bir şeyin tamamına belli paylarla maliktir.' md.732: bir paydaş taşınmazdaki payını üçüncü kişiye satarsa diğer paydaşlar önalım hakkını kullanabilir. md.733 (güncel metin): hak, satışın bildiriminden itibaren üç ay ve her hâlde satıştan itibaren bir yıl geçince düşer. md.734: önalım davasında hâkim payın rayiç bedelini belirler. Haberlere göre süre 2 yıldan 1 yıla indirildi ve rayiç bedel esası 25.12.2025 tarihli RG'de (33118) yayımlanan, 7571 sayılı olarak anılan kanunla geldi; değişiklikten önceki satışlarda süre değişikliği uygulanmaz. md.698-699: her paydaş paylaşma isteyebilir; uzlaşma olmazsa hâkim aynen bölmeye ya da açık artırmayla satışa karar verir. Lisanslı değerleme raporlarında emsaller 'mülkiyet durumu' kalemiyle karşılaştırılır ve hisseli tapu ayrıca not edilir (ör. TSKB 2022 raporu). Ancak hisseli olmanın değeri ne kadar düşürdüğüne dair genel bir oran bulamadım.",
+   "sources": [
+    "https://www.mevzuat.gov.tr/anasayfa/MevzuatFihristDetayIframe?MevzuatTur=1&MevzuatNo=4721&MevzuatTertip=5",
+    "https://www.hukukihaber.net/onalim-hakki-uygulamasinda-yeni-donem-basliyor-onalim-davalarinda-koklu-degisiklikler-yapildi",
+    "https://cdn.gedik.com/media/media/i0wjnzji/ek6-ba__ms_z-gayrimenkul-de_erleme-raporlar_-rapor-no2022c120.pdf"
+   ],
+   "confidence": "high",
+   "viral": "Hisseli tapuda 'benim kısmım şurası' demek hukuken mümkün değil.",
+   "verdict": "dogru",
+   "safe": "Hisseli tapuda arsanın belli bir köşesini değil, bütünü üzerinde bir pay alırsınız. Payı üçüncü kişiye satılan paydaşın ortakları, önalım davasıyla bu payı mahkemenin belirleyeceği rayiç bedelle alıcıdan alabilir. Bunun için süre, satışın bildiriminden itibaren 3 ay ve her durumda satıştan itibaren 1 yıldır.",
+   "note": "TMK md.688 ('maddî olarak bölünmüş olmayan bir şeyin tamamına belli paylarla maliktir'), md.698-699 ve md.732 teyit edildi. md.733 '(Değişik birinci fıkra:24/12/2025-7571/35)' notunu taşıyor: süre 'üç ay ve her hâlde satışın üzerinden bir yıl'. Devlet İhale Kanunu kapsamındaki satışlarda ve cebri artırmada önalım kullanılamaz. md.734 '(Değişik ikinci fıkra:24/12/2025-7571/36)' notunu taşıyor: 'payın rayiç bedeli hâkim tarafından gecikmeksizin belirlenir'. hukukihaber yazısı RG 25.12.2025/33118'i ve 733 değişikliğinin önceki satışlara uygulanmayacağını doğruluyor. TSKB raporunda hisseli emsal 'Emsal taşınmaz hisseli tapuya sahiptir' diye not edilmiş, ama 'Mülkiyet Durumu' düzeltmesi %0 bırakılmış. Yani hisselilik için oran uygulanmamış.",
+   "orig_sources": [
+    "https://www.mevzuat.gov.tr/anasayfa/MevzuatFihristDetayIframe?MevzuatTur=1&MevzuatNo=4721&MevzuatTertip=5",
+    "https://www.hukukihaber.net/onalim-hakki-uygulamasinda-yeni-donem-basliyor-onalim-davalarinda-koklu-degisiklikler-yapildi",
+    "https://cdn.gedik.com/media/media/i0wjnzji/ek6-ba__ms_z-gayrimenkul-de_erleme-raporlar_-rapor-no2022c120.pdf"
+   ]
+  },
+  {
+   "id": "c10",
+   "claim": "Yola cephesi olmayan parsele yapı ruhsatı verilmez; asgari cephe ve derinlik ölçülerini sağlamayan arsada da yeni yapı ruhsatı düzenlenemez.",
+   "detail": "Planlı Alanlar İmar Yönetmeliği md.5/14: 'İfraz suretiyle yola cephesi olmayan parsel oluşturulamaz. Yola cephesi olmayan parsellere yapı ruhsatı düzenlenemez.' İstisna: yönetmelikten önce mevcut planlarla oluşmuş, fiilî durum yüzünden yola cephe sağlanamayan parsellerde, komşudan süresiz geçiş hakkı alınıp tapuya şerh verilmişse ruhsat düzenlenebilir. md.6 ('Parsel büyüklükleri'): 4 kata kadar konut ve ticaret alanlarında asgari cephe bitişik nizamda 6 m, blok nizamda yan bahçe + 6 m, ayrık nizamda iki yan bahçe + 6 m'dir; derinlik ön bahçesiz nizamda 13 m, ön bahçeli nizamda ön bahçe + 13 m'dir. md.6/5: 'Parsel büyüklükleri hakkındaki hükümlere uymayan arsalarda, yeni veya ilave yapı ruhsatı düzenlenemez.' Dar, sığ ya da düzensiz şekilli parselin değer kaybetmesinin hukuki gerekçesi budur.",
+   "sources": [
+    "https://www.mevzuat.gov.tr/anasayfa/MevzuatFihristDetayIframe?MevzuatTur=7&MevzuatNo=23722&MevzuatTertip=5"
+   ],
+   "confidence": "high",
+   "viral": "'Ucuz' diye alınan yolsuz ya da çok dar bir parsel, tek başına hiç ruhsat alamayabilir.",
+   "verdict": "duzeltilmeli",
+   "safe": "Kural olarak yola cephesi olmayan parsele ve asgari cephe/derinlik ölçüsünü sağlamayan parsele yeni yapı ruhsatı verilmez. Bunun istisnaları var: komşuları yasal olarak yapılaştığı için tek başına kalmış küçük parseller ve tapuya şerhli süresiz geçiş hakkı olan bazı eski parseller ruhsat alabilir.",
+   "note": "PAİY md.5/14 teyit edildi. İstisnanın şartları: yönetmelikten önce mevcut planlarla oluşmuş, bitişiğinde birleştirilebilecek boş parsel olmayan, fiili teşekkül yüzünden yola cephesi sağlanamayan, komşudan süresiz geçiş hakkı alınmış ve bu hak tapuya şerh edilmiş olması. md.6'daki ölçüler teyit edildi (4 kata kadar konut/ticaret: bitişik 6 m, ayrık yan bahçeler + 6 m; derinlik 13 m veya ön bahçe + 13 m). md.6/5 'yeni veya ilave yapı ruhsatı düzenlenemez' der. İddia mutlak bir dille yazılmış ama md.8 ('Parsele ilişkin hükümler') bunu yumuşatıyor. md.8/4'e göre komşuları mevzuata uygun yapılaştığı için müstakil kalan ve asgari ölçüleri sağlamayan parseller, diğer hükümlere uyarak yapılaşabilir. md.8/2'ye göre ölçüye uymayan parseldeki mevcut yasal yapı kullanılabilir ve onarılabilir. Bu yüzden 'hiç ruhsat alamaz' demek fazla kesin.",
+   "orig_sources": [
+    "https://www.mevzuat.gov.tr/anasayfa/MevzuatFihristDetayIframe?MevzuatTur=7&MevzuatNo=23722&MevzuatTertip=5"
+   ]
+  },
+  {
+   "id": "c11",
+   "claim": "Yol boyu ticaret kararı olan konut alanlarında köşe başı parsellerin yola bakan bodrum katlarına dükkân gibi ticari bağımsız bölüm yapılabilir, ara parsellerde ise bu izin yoktur.",
+   "detail": "Planlı Alanlar İmar Yönetmeliği md.51 ('Bodrumlar') beşinci fıkra: konut alanında olup ilgili idare meclisince yol boyu ticaret kararı alınan güzergâhlarda zemin katta ticaret yapılabilir. 'Ancak, köşe başı veya köşe başından başka iki yola cephesi olan parsellerde yapılacak binaların yola cephesi bulunan bodrum katlarına ticari kullanımlı bağımsız bölüm yapılabilir.' Ticari kullanımların altında konut yapılamaz. Köşe parselin değer avantajının bir kısmı bu ek kullanım imkânından gelir; kural her köşe parsel için değil, bu koşullar varsa geçerlidir.",
+   "sources": [
+    "https://www.mevzuat.gov.tr/anasayfa/MevzuatFihristDetayIframe?MevzuatTur=7&MevzuatNo=23722&MevzuatTertip=5"
+   ],
+   "confidence": "high",
+   "viral": "Köşe parseli değerli yapan şey sadece manzara değil, yönetmelikteki ek dükkân hakkı da olabilir.",
+   "verdict": "duzeltilmeli",
+   "safe": "Yol boyu ticaret kararı olan konut alanlarında köşe başı veya iki yola cephesi olan parsellerde, yola bakan bodrum kata ayrı bir dükkân (ticari bağımsız bölüm) yapılabilir. Tek cepheli ara parsellerde bodrum ancak zemin kattaki dükkânın içten bağlantılı parçası olabilir. Ticari kullanımın altına konut yapılamaz.",
+   "note": "PAİY md.51/5 okundu, fıkrada değişiklik notu yok. Konut alanında meclisçe 'yol boyu ticaret kararı alınan yol güzergâhlarında' zemin katta ticaret yapılabilir ve 'Bu kullanımların bodrum katlarında içten bağlantılı piyesleri olabilir'. 'Ancak, köşe başı veya köşe başından başka iki yola cephesi olan parsellerde' yola cepheli bodrum kata ticari bağımsız bölüm yapılabilir. 'Ticari kullanımların altında konut yapılamaz' cümlesi de var. İddiadaki 'ara parsellerde bu izin yoktur' ifadesi iki açıdan eksik. Birincisi, köşe başı olmayan ama iki yola cephesi olan parseller de bu haktan yararlanır. İkincisi, ara parselde de bodrum, zemin kattaki dükkânın içten bağlantılı parçası olarak kullanılabilir; yasak olan yalnızca ayrı bağımsız bölüm.",
+   "orig_sources": [
+    "https://www.mevzuat.gov.tr/anasayfa/MevzuatFihristDetayIframe?MevzuatTur=7&MevzuatNo=23722&MevzuatTertip=5"
+   ]
+  },
+  {
+   "id": "c12",
+   "claim": "Altyapı ve arazinin eğimi resmi değer takdirinde de ölçüttür: Gelir İdaresi, emlak vergisine esas arsa birim değerlerinde su, elektrik, doğalgaz, kanalizasyon ve topografyanın dikkate alınmasını istiyor.",
+   "detail": "Hazine ve Maliye Bakanlığı GİB, Emlak Vergisi Kanunu İç Genelgesi Seri No 2025/1 (14.03.2025), bölüm IV/8-c: bölgeler belirlenirken genel kullanım biçimi, nüfus ve yapı yoğunluğu, ulaşım durumu, topografya, imar planı durumu ve 'su, elektrik, doğalgaz ve kanalizasyon gibi alt yapı hizmetlerinin olup olmadığı' dikkate alınır. Metni alomaliye.com'daki yayından okudum, gib.gov.tr'deki aslını açamadım. Eğimin imar hukukundaki karşılığı: Planlı Alanlar İmar Yönetmeliği md.4/1-(cccc)'ye göre eğim nedeniyle zemin üstünde kalan bodrumlar TAKS'a girer; md.11 kot alma ve kademelendirmeyi düzenler. Lisanslı değerleme örneği: TSKB 2022 raporunun SWOT bölümünde 'topoğrafik olarak düz bir zeminde konumlu' olmak güçlü yan olarak yazılmış. INVEST Değerleme'nin 2024 Urla raporunda ise altyapı (hafriyat, doğalgaz, elektrik, su, telekom) proje maliyetine ayrı kalem olarak eklenmiş.",
+   "sources": [
+    "https://www.alomaliye.com/2025/03/14/emlak-vergisi-kanunu-ic-genelgesi-seri-no-2025-1/",
+    "https://cdn.gedik.com/media/media/i0wjnzji/ek6-ba__ms_z-gayrimenkul-de_erleme-raporlar_-rapor-no2022c120.pdf",
+    "https://www.ykyatirim.com.tr/media/h41dmanh/ek-6-d-79520242307_izmir-urla_35adetarsa_rev27-11-2.pdf",
+    "https://www.mevzuat.gov.tr/anasayfa/MevzuatFihristDetayIframe?MevzuatTur=7&MevzuatNo=23722&MevzuatTertip=5"
+   ],
+   "confidence": "medium",
+   "viral": "Devlet bile vergi değeri biçerken 'kanalizasyon var mı, arazi dik mi' diye bakıyor.",
+   "verdict": "dogru",
+   "safe": "Gelir İdaresi, emlak vergisine esas arsa birim değerleri için bölgeler belirlenirken su, elektrik, doğalgaz ve kanalizasyon gibi altyapının olup olmadığına ve arazinin topografik durumuna bakılmasını istiyor.",
+   "note": "alomaliye.com'daki Emlak Vergisi Kanunu İç Genelgesi Seri No 2025/1'i okudum (14.03.2025, GİB/Hazine ve Maliye Bakanlığı). Bölüm IV ('Arsalara Ait Takdirlerde Uyulacak Esaslar') madde 8-c'de 'su, elektrik, doğalgaz ve kanalizasyon gibi alt yapı hizmetlerinin olup olmadığı', 'topografik durumu' ve 'imar planlarındaki durumu' ölçütleri var. gib.gov.tr'deki aslını ben de açmadım. TSKB raporunun SWOT bölümünde, güçlü yanlar altında 'topoğrafik olarak düz bir zeminde konumludur' maddesi teyit edildi. INVEST Gayrimenkul Değerleme'nin 11.11.2024 tarihli 2024/2307 sayılı Urla raporunda, maliyete 'altyapı maliyeti (… hafriyat bedeli, doğalgaz, elektrik, atık-içme suyu ve telekom altyapısı vb.)' kalemi eklenmiş. PAİY md.4/1-(cccc)'deki eğim ile bodrum ilişkisi de teyit edildi.",
+   "orig_sources": [
+    "https://www.alomaliye.com/2025/03/14/emlak-vergisi-kanunu-ic-genelgesi-seri-no-2025-1/",
+    "https://www.mevzuat.gov.tr/anasayfa/MevzuatFihristDetayIframe?MevzuatTur=7&MevzuatNo=23722&MevzuatTertip=5",
+    "https://cdn.gedik.com/media/media/i0wjnzji/ek6-ba__ms_z-gayrimenkul-de_erleme-raporlar_-rapor-no2022c120.pdf",
+    "https://www.ykyatirim.com.tr/media/h41dmanh/ek-6-d-79520242307_izmir-urla_35adetarsa_rev27-11-2.pdf"
+   ]
+  },
+  {
+   "id": "c13",
+   "claim": "'İmar gelecek' beklentisiyle alınan arsada dikkat: maliklerin talebiyle yapılan ada bazındaki plan değişikliklerinde oluşan değer artışının %90'ı 'değer artış payı' olarak kamuya ödenir.",
+   "detail": "3194 sayılı İmar Kanunu Ek Madde 8 (Ek: 7221/12, 2020), dördüncü fıkra (Değişik: 05.12.2024-7534/7): taşınmaz maliklerinin tamamının talebi üzerine parsel bazında fonksiyon değişikliği ile ada bazında yapılan plan değişikliği sonucunda değeri artan parsellerin artan değerinin ve mahkemece iptal edilen plan değişikliklerindeki değer farkının 'yüzde doksanı (%90) değer artış payı olarak alınır'. Bedel 2942 md.11 esasları gözetilerek tespit edilir. Ek md.8/2: fonksiyon değişikliği hariç, parsel bazında nüfusu, yapı yoğunluğunu, kat adedini veya bina yüksekliğini artıran plan değişikliği yapılamaz. Ek md.8/9'da istisnalar var (6306 sayılı Kanun alanları, kamu yatırımları, vakıf alanları vb.). Haberlere göre uygulama yönetmeliği 22.11.2025'te yürürlüğe girdi; peşin ödemede %10 indirim var ve pay ödenmeden satış, devir ve ruhsat yapılamıyor. AYM 2023'te önceki 'artan değerin tamamı alınır' hükmünü iptal etmişti (RG 04.10.2023). Basına göre %90 düzenlemesi de AYM'ye taşındı; sonucu doğrulayamadım. Bu kural her plan değişikliğine değil, sayılan durumlara uygulanır.",
+   "sources": [
+    "https://www.mevzuat.gov.tr/anasayfa/MevzuatFihristDetayIframe?MevzuatTur=1&MevzuatNo=3194&MevzuatTertip=5",
+    "https://www.resmigazete.gov.tr/eskiler/2025/11/20251122-1.htm",
+    "https://www.alomaliye.com/2023/10/04/anayasa-mahkemesinin-e-2020-42-k-2023-99-sayili-karari-imar-plani-degisikligi/",
+    "https://www.sozcu.com.tr/imar-plani-degisikligine-vergi-gibi-yuk-deger-artisinin-yuzde-90-i-devlete-p262343",
+    "https://www.ntv.com.tr/ntvpara/imar-plani-degisen-arsalardan-kamuya-pay-verilecek-1698605"
+   ],
+   "confidence": "high",
+   "viral": "Plan değişikliğiyle arsanın değeri 10 milyon artarsa, bunun 9 milyonu kamuya ödenebilir (örnek rakam).",
+   "verdict": "duzeltilmeli",
+   "safe": "Taşınmaz maliklerinin tamamının talebiyle yapılan bazı plan değişikliklerinde arsanın artan değerinin %90'ı 'değer artış payı' olarak kamuya ödenir. Bunlar ada bazında yoğunluk, kat veya fonksiyon artışı ile parsel bazında konut dışı fonksiyon değişikliğidir. Pay ödenmeden satış ve ruhsat yapılamaz. Kural her imar gelişine değil, kanunda sayılan durumlara uygulanır ve istisnaları vardır.",
+   "note": "3194 Ek md.8'i okudum (Ek: 7221/12, 2020; 7534/7 ile 05.12.2024'te yeniden düzenlendi). Fıkra 4'ün kapsamı 'Taşınmaz maliklerinin tamamının talebi üzerine parsel bazında fonksiyon değişikliği ile ada bazında yapılacak imar planı değişikliği' ve mahkemece iptal edilen planlar; oran 'yüzde doksanı (%90)', bedel tespitinde 2942 md.11 gözetiliyor. Peşin ödemede %10 indirim, ödenmeden satış, devir ve ruhsat yasağı ile tapuya şerh kanun metninde var. Uygulama Yönetmeliği RG 22.11.2025/33085 ile yayımlanma günü yürürlüğe girdi. Yönetmelikte ada bazı için en az 1.000 m² şartı ve idarenin resen yaptığı uyum değişikliklerinin istisnası var. AYM'nin E.2020/42, K.2023/99 sayılı ve RG 04.10.2023'te yayımlanan kararı 'artan değerin tamamı' ibaresini iptal etmişti. %90 hükmünün AYM'ye taşındığı yalnızca Sözcü'de geçiyor, karar bulamadım. Düzeltme gerekçesi: ana iddia 'maliklerin talebiyle' diyor, oysa şart maliklerin TAMAMININ talebi. Ayrıca parsel bazında fonksiyon değişikliğini atlıyor. 'İmar gelecek' çerçevesi de yanıltıcı, çünkü idarenin kendi plan çalışmasıyla gelen imar bu kapsamda değil ve fıkra 9'da istisnalar var.",
+   "orig_sources": [
+    "https://www.mevzuat.gov.tr/anasayfa/MevzuatFihristDetayIframe?MevzuatTur=1&MevzuatNo=3194&MevzuatTertip=5",
+    "https://www.ntv.com.tr/ntvpara/imar-plani-degisen-arsalardan-kamuya-pay-verilecek-1698605",
+    "https://www.sozcu.com.tr/imar-plani-degisikligine-vergi-gibi-yuk-deger-artisinin-yuzde-90-i-devlete-p262343"
+   ]
+  },
+  {
+   "id": "c14",
+   "claim": "Lisanslı değerleme raporlarında arsa, uzak bir imar hayaline göre değil, yasal olarak izin verilen, fiziken mümkün ve finansal olarak yapılabilir 'en verimli ve en iyi kullanım'a göre değerlenir.",
+   "detail": "Sermaye piyasasında değerleme, SPK'nın Sermaye Piyasasında Değerleme Standartları Hakkında Tebliği (III-62.1, RG 01.02.2017/29966) çerçevesinde Uluslararası Değerleme Standartları'na göre yapılır. TSKB Gayrimenkul Değerleme A.Ş. raporundaki (2022) tanım: 'fiziki olarak uygun olan, yasalarca izin verilen, finansal olarak gerçekleştirilebilir' ve en yüksek getiriyi sağlayan kullanım. Bilge Gayrimenkul Değerleme'ye göre uzun vadeli projeksiyonlar bu analizin dışında tutulur. Emsaller konum, yüzölçümü, yapılaşma hakkı, mülkiyet durumu, fiziksel ve yasal özellikler ile pazarlık payı kalemleriyle tek tek düzeltilir. ÖRNEKLER (tek tek raporlar, genellenemez): TSKB 2022 Kayseri raporunda yapılaşma hakkı farkı için -%25, pazarlık payı için -%10 ile -%25 arası; INVEST Değerleme 2024 Urla raporunda daha düşük yapılaşma hakkı olan emsale %20, pazarlık payı -%3 düzeltme yapılmış ve 'alan büyüdükçe' birim değerin düştüğü kabul edilmiş. Not: Değerlemede 'emsal' karşılaştırılabilir satış demektir (2942 md.11/1-g'de de 'emsal satışlar'), imarda ise KAKS demektir.",
+   "sources": [
+    "https://spk.gov.tr/duyurular/basin-duyurulari/2017/sermaye-piyasasinda-degerleme-standartlari-hakkinda-teblig-ile-ilgili-basin-duyurusu",
+    "https://cdn.gedik.com/media/media/i0wjnzji/ek6-ba__ms_z-gayrimenkul-de_erleme-raporlar_-rapor-no2022c120.pdf",
+    "https://www.ykyatirim.com.tr/media/h41dmanh/ek-6-d-79520242307_izmir-urla_35adetarsa_rev27-11-2.pdf",
+    "https://www.bilgedegerleme.com/yatirim-degerleme/tasinmazlarin-en-etkin-ve-en-verimli-kullanim-analizi/"
+   ],
+   "confidence": "medium",
+   "viral": "Emlakçının 'emsal' dediğiyle belediyenin 'emsal' dediği tamamen farklı şeyler.",
+   "verdict": "dogru",
+   "safe": "Lisanslı değerleme raporlarında arsa, uzak bir imar beklentisine göre değil, 'en verimli ve en iyi kullanım'a göre değerlenir. Bu, yasal olarak izin verilen, fiziken mümkün, finansal olarak yapılabilir ve en yüksek değeri veren kullanımdır. Değerlemede 'emsal' karşılaştırılabilir satış, imarda ise KAKS demektir.",
+   "note": "SPK basın duyurusu, III-62.1 sayılı Tebliğ'in RG 01.02.2017/29966'da yayımlandığını ve IVSC'nin güncel standartlarını yürürlüğe koyduğunu teyit ediyor. TSKB raporundaki 7.4 tanımı 'fiziki olarak uygun olan, yasalarca izin verilen, finansal olarak gerçekleştirilebilir ... en yüksek getiriyi sağlayan kullanım' ve en verimli kullanım imar lejandına göre belirlenmiş. Bilge Değerleme sayfasında 'uzun vadeli projeksiyonlar en etkin ve en verimli kullanım analizinin dışında tutulmaktadır' cümlesi var. TSKB'de yapılaşma hakkı düzeltmesi -%25 doğru. Pazarlık payı tablolarda 0, -%10, -%15 ve -%25 olarak geçiyor, yani gerçek aralık 0 ile -%25 arası; iddiadaki '-%10 ile -%25' ifadesi tam değil. INVEST Urla raporunda (11.11.2024) daha düşük yapılaşma şartlı emsale +%20 düzeltme yapılmış ve 'Alan büyüdükçe şerefiye küçülmekte' deniyor. Pazarlık payı ilk tabloda -%3, ikinci tabloda -%5 ile -%10 arası. Not: piyasa yakın ve makul bir imar değişikliği beklentisine fiyat ödüyorsa bu değer yansıyabilir. 'Uzak' kelimesi bu yüzden önemli.",
+   "orig_sources": [
+    "https://spk.gov.tr/duyurular/basin-duyurulari/2017/sermaye-piyasasinda-degerleme-standartlari-hakkinda-teblig-ile-ilgili-basin-duyurusu",
+    "https://cdn.gedik.com/media/media/i0wjnzji/ek6-ba__ms_z-gayrimenkul-de_erleme-raporlar_-rapor-no2022c120.pdf",
+    "https://www.ykyatirim.com.tr/media/h41dmanh/ek-6-d-79520242307_izmir-urla_35adetarsa_rev27-11-2.pdf",
+    "https://www.bilgedegerleme.com/yatirim-degerleme/tasinmazlarin-en-etkin-ve-en-verimli-kullanim-analizi/"
+   ]
+  },
+  {
+   "id": "c1",
+   "claim": "Emlak vergisinde arsanın değeri, arsanın piyasada kaça satılacağına bakılarak bulunmaz; takdir komisyonunun o cadde ya da sokak için belirlediği \"asgari\" m² birim değer, arsanın yüzölçümüyle çarpılır.",
+   "detail": "1319 sayılı Emlak Vergisi Kanunu (EVK) md. 29/a'ya göre arsa ve arazinin vergi değeri, 213 sayılı VUK'a göre takdir komisyonlarının belirlediği birim değerlerle hesaplanır. Arsalarda bu değer her mahallede cadde, sokak ya da değer bakımından farklı bölge için ayrı ayrı belirlenir; arazide ise il/ilçe bazında kıraç, taban, sulak gibi cinslere göre belirlenir. Kanundaki adı \"asgari ölçüde birim değer\"dir (VUK mük. md. 49/b). EVK md. 31'e göre takdirde dikkate alınacak normlar (piyasa bedeli, maliyet bedeli, kira, yıllık üretim değeri) bir yönetmelikle belirlenir. Günlük dilde bu değere \"arsa rayiç değeri\" de deniyor; e-Devlet'teki hizmet de bu iki ifadeyi aynı anlamda kullanıyor. Örnek: 500 m² arsa × 2.000 TL birim değer = 1.000.000 TL vergi değeri (rakamlar örnektir).",
+   "sources": [
+    "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.1319.pdf",
+    "https://www.mevzuat.gov.tr/MevzuatMetin/1.4.213.pdf",
+    "https://www.turkiye.gov.tr/konyaalti-belediyesi-arsa-rayic-degeri-sorgulama",
+    "https://www.alomaliye.com/2025/03/14/emlak-vergisi-kanunu-ic-genelgesi-seri-no-2025-1/",
+    "https://www.turmob.org.tr/ekutuphane/Read/dcca5a10-3d55-40d7-b531-1244690fea66"
+   ],
+   "confidence": "high",
+   "viral": "Resmi 'rayiç'in kanundaki adı 'asgari' değer, yani bir taban. Arsanın gerçek fiyatını ölçmek için yapılmamış.",
+   "verdict": "dogru",
+   "safe": "Emlak vergisinde arsanın değeri, o arsanın tek tek piyasada kaça satılacağına bakılarak bulunmaz. Takdir komisyonunun o cadde, sokak ya da değer bölgesi için belirlediği \"asgari ölçüde\" m² birim değer, arsanın yüzölçümüyle çarpılır. Komisyon bu değeri belirlerken sokaktaki en düşük m² fiyatlarını esas alır. 2026'da buna ek olarak bir tavan var: değer, 2025 değerinin en fazla 3 katı olabilir.",
+   "note": "EVK md. 29/a metnini mevzuat.gov.tr'deki güncel PDF'ten okudum (2 Ocak 2026 sürümü). Metin \"VUK'un asgari ölçüde birim değer tespitine ilişkin hükümlerine göre ... takdir olunan birim değerlere göre\" diyor; arsa için ölçü mahalle ve cadde/sokak/değer bölgesi, arazi için il/ilçe ve kıraç/taban/sulak. EVK md. 31'deki normlar (piyasa bedeli, maliyet bedeli, kira, yıllık istihsal değeri) yönetmelikle belirleniyor; iddiada doğru aktarılmış. VUK mük. 49/b'de \"asgari ölçüde birim değer\" ifadesi geçiyor. Seri No: 89 Tebliğin 1. örneği vergi değerini birim değer × yüzölçümü olarak hesaplıyor. Emlak Vergisi İç Genelgesi 2025/1 (IV/13), takdirin \"metrekare fiyatı en düşük olanlar dikkate alınmak suretiyle\" yapılacağını söylüyor; bu, \"taban\" yorumunu destekliyor. e-Devlet (Konyaaltı) sayfası \"arsa rayiç değerini (metrekare birim değeri)\" ifadesini kullanıyor. İnce ayrıntılar: hisseli mülkte değer hisse oranıyla çarpılıyor; 2026'da geçici md. 23 tavanı uygulanıyor; ara yıllarda değer yeniden değerleme oranıyla güncelleniyor. Viral cümle de savunulabilir, ama komisyonlar piyasa fiyatına hiç bakmıyor değil; bakıyor ama en düşük fiyatları esas alıyor.",
+   "orig_sources": [
+    "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.1319.pdf",
+    "https://www.mevzuat.gov.tr/MevzuatMetin/1.4.213.pdf",
+    "https://www.turkiye.gov.tr/konyaalti-belediyesi-arsa-rayic-degeri-sorgulama"
+   ]
+  },
+  {
+   "id": "c2",
+   "claim": "Arsa m² birim değerlerini belediye başkanının başkanlık ettiği bir takdir komisyonu belirler; komisyonda mahallenin muhtarı da yer alır.",
+   "detail": "213 sayılı VUK md. 72/2'ye göre arsa birim değeri için kurulan komisyonun üyeleri şunlardır: belediye başkanı ya da görevlendirdiği memur (başkan), belediyenin yetkili bir memuru, defterdarın ya da vergi dairesi başkanının görevlendirdiği iki memur, tapu sicil müdürü ya da görevlendirdiği memur, ticaret odasının seçtiği bir üye (ilgili arsalar için organize sanayi bölgesinden bir üye) ve ilgili mahalle ya da köyün muhtarı. VUK mük. md. 49/b'ye göre büyükşehir olan illerde bu kararlar, vali başkanlığındaki bir merkez komisyonuna gider. Merkez komisyonu kararları 15 gün içinde inceler; farklı bir değer belirlerse ilgili komisyon takdirini yeniden yapar.",
+   "sources": [
+    "https://www.mevzuat.gov.tr/MevzuatMetin/1.4.213.pdf"
+   ],
+   "confidence": "high",
+   "viral": "Sokağınızın resmi m² değerini belirleyen masada mahalle muhtarınız da oturuyor.",
+   "verdict": "dogru",
+   "safe": "Arsa m² birim değerlerini, belediye başkanının ya da görevlendirdiği memurun başkanlık ettiği bir takdir komisyonu belirler. Komisyonda belediye, vergi dairesi ve tapu temsilcileri, ticaret odasından bir üye ve ilgili mahallenin muhtarı da yer alır. Büyükşehirlerde kararlar, vali başkanlığındaki merkez komisyonunca ayrıca incelenir.",
+   "note": "VUK md. 72/2'nin güncel metnini (Temmuz 2026 sürümü PDF) okudum. Komisyon şöyle kuruluyor: belediye başkanı ya da tevkil edeceği memur (başkan), belediyenin yetkili bir memuru, defterdarın ya da vergi dairesi başkanının görevlendireceği iki memur, tapu sicil müdürü ya da memuru, ticaret odasının seçtiği bir üye (ilgili arsalarda OSB temsilcisi) ve ilgili mahalle ya da köy muhtarı. Üye listesi 5904 sayılı Kanunla değişmiş haliyle iddiadakiyle birebir aynı. VUK md. 73 de birim değer tespitinde ticaret odası üyelerinden birinin yerine muhtarın katıldığını söylüyor. Mük. 49/b: büyükşehir olan illerde kararlar vali başkanlığındaki merkez komisyonuna gidiyor; komisyon 15 gün içinde inceliyor, farklı değer belirlerse ilgili komisyon yeniden takdir yapıyor. Hepsi doğrulandı.",
+   "orig_sources": [
+    "https://www.mevzuat.gov.tr/MevzuatMetin/1.4.213.pdf"
+   ]
+  },
+  {
+   "id": "c3",
+   "claim": "Arsa birim değerleri kural olarak dört yılda bir belirlenir; son genel takdir 2025'te yapıldı ve 2026'dan itibaren uygulanıyor.",
+   "detail": "VUK mük. md. 49/b dört yılda bir takdir yapılmasını öngörür ve Cumhurbaşkanına bu süreyi sekiz yıla kadar uzatma ya da iki yıla kadar kısaltma yetkisi verir. Kesinleşen değerler, tarh yılının başından Mayıs sonuna kadar belediyelerde ve muhtarlıklarda asılarak ilan edilir. EVK md. 21'e göre arazi vergisi, takdirin yapıldığı yılı izleyen yılın Ocak-Şubat aylarında tarh edilir. Seri No: 89 Emlak Vergisi Genel Tebliği'ne (RG 31.12.2025, 33124, 5. mükerrer) ve TÜRMOB'un 05.01.2026 tarihli sirkülerine göre 2026 değerleri 2025'te takdir edildi. Tebliğin 7. maddesine göre 2027, 2028 ve 2029'daki değerler bunların üzerinden hesaplanacak.",
+   "sources": [
+    "https://www.mevzuat.gov.tr/MevzuatMetin/1.4.213.pdf",
+    "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.1319.pdf",
+    "https://www.alomaliye.com/2025/12/31/emlak-vergisi-kanunu-genel-tebligi-seri-no-89/",
+    "https://www.turmob.org.tr/ekutuphane/Read/dcca5a10-3d55-40d7-b531-1244690fea66",
+    "https://www.alomaliye.com/2025/03/14/emlak-vergisi-kanunu-ic-genelgesi-seri-no-2025-1/"
+   ],
+   "confidence": "high",
+   "verdict": "dogru",
+   "safe": "Arsa birim değerleri kural olarak dört yılda bir belirlenir. Son genel takdir 2025'te yapıldı ve bu değerler 2026'dan itibaren uygulanıyor. 2027, 2028 ve 2029'daki değerler de bunların üzerinden hesaplanacak.",
+   "note": "VUK mük. 49/b'yi kontrol ettim: dört yılda bir takdir yapılıyor, Cumhurbaşkanı bu süreyi sekiz yıla kadar artırıp iki yıla kadar indirebiliyor, kesinleşen değerler tarh yılının başından Mayıs sonuna kadar belediye ve muhtarlıklarda ilan ediliyor. EVK md. 21/a: tarh, takdir yılını izleyen yılın Ocak-Şubat aylarında yapılıyor. Seri No: 89 Tebliğ (RG 31.12.2025, 33124, 5. mükerrer) md. 4/1 aynen \"2025 yılında, takdir komisyonlarınca 2026 yılı için ... takdirler yapılmıştır\" diyor. TÜRMOB'un 05.01.2026/21 sayılı sirküleri de aynı bilgiyi veriyor ve değerlerin 30 Haziran 2025'e kadar belirlendiğini ekliyor. İç Genelge 2025/1 de takdirlerin 2026 vergi değeri için yapıldığını söylüyor. Tebliğ md. 7, 2027-2029 değerlerinin 2026 değerleri üzerinden hesaplanacağını yazıyor. EVK PDF'inde 7566 sonrasında başka bir değişiklik görünmüyor.",
+   "orig_sources": [
+    "https://www.mevzuat.gov.tr/MevzuatMetin/1.4.213.pdf",
+    "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.1319.pdf",
+    "https://www.alomaliye.com/2025/12/31/emlak-vergisi-kanunu-genel-tebligi-seri-no-89/",
+    "https://www.turmob.org.tr/ekutuphane/Read/dcca5a10-3d55-40d7-b531-1244690fea66"
+   ]
+  },
+  {
+   "id": "c4",
+   "claim": "İki takdir arasındaki yıllarda vergi değeri, bir önceki yılın değeri yeniden değerleme oranı kadar artırılarak bulunur; Aralık 2025'e kadar bu artış oranın yalnızca yarısı kadardı.",
+   "detail": "Bu kural EVK md. 29'un 2. ve 3. fıkralarındadır. 7566 sayılı Kanunun 11. maddesi (RG 19.12.2025, sayı 33112) \"yeniden değerleme oranının yarısı nispetinde\" ifadesini \"yeniden değerleme oranında\" olarak değiştirdi. Aynı madde, Cumhurbaşkanının artışı yeniden değerleme oranına kadar yükseltme yetkisini kaldırdı. Artışı sıfıra kadar indirme yetkisi ise duruyor (EVK md. 29 son fıkra). Seri No: 89 Tebliğ md. 7'ye göre 2027-2029 değerleri, bir önceki yılın değerinin tam yeniden değerleme oranıyla artırılmasıyla bulunacak.",
+   "sources": [
+    "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.1319.pdf",
+    "https://www.resmigazete.gov.tr/eskiler/2025/12/20251219-1.htm",
+    "https://www.turmob.org.tr/ekutuphane/Read/dcca5a10-3d55-40d7-b531-1244690fea66",
+    "https://www.alomaliye.com/2025/12/31/emlak-vergisi-kanunu-genel-tebligi-seri-no-89/"
+   ],
+   "confidence": "high",
+   "viral": "Yıllarca resmi değer, enflasyon düzeltmesinin sadece yarısı kadar arttı; 2027'den itibaren tamamı kadar artacak.",
+   "verdict": "dogru",
+   "safe": "İki takdir arasındaki yıllarda vergi değeri, bir önceki yılın değeri yeniden değerleme oranı kadar artırılarak bulunur. 19 Aralık 2025'teki değişiklikten önce bu artış, yeniden değerleme oranının yalnızca yarısı kadardı. Yeni kural ilk kez 2027 değerlerinde uygulanacak. Cumhurbaşkanı artışı sıfıra kadar indirebilir.",
+   "note": "Güncel EVK md. 29 metnini ve dipnotlarını kontrol ettim. 7566/11 ile 2. ve 3. fıkralardaki \"yeniden değerleme oranının yarısı nispetinde\" ibaresi \"yeniden değerleme oranında\" oldu; son fıkradaki \"veya yeniden değerleme oranına kadar artırmaya\" ibaresi çıkarıldı. Sıfıra kadar indirme yetkisi duruyor. RG 19.12.2025, sayı 33112; md. 11 istisnalar arasında olmadığı için yayım tarihinde yürürlüğe girdi. Tebliğ md. 7/2'ye göre 2027-2029 değerleri, bir önceki yılın değerinin yeniden değerleme oranında artırılmasıyla bulunacak; TÜRMOB sirküleri de aynısını söylüyor. Viral cümleye dair uyarı: yeniden değerleme oranı TÜFE enflasyonu değil, ÜFE'ye dayalı bir oran. \"Enflasyon düzeltmesinin yarısı\" yerine \"yeniden değerleme oranının yarısı\" denmeli. Ayrıca Cumhurbaşkanı oranı düşürürse artış tam oran kadar olmayabilir.",
+   "orig_sources": [
+    "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.1319.pdf",
+    "https://www.resmigazete.gov.tr/eskiler/2025/12/20251219-1.htm",
+    "https://www.turmob.org.tr/ekutuphane/Read/f2dc7ad5-a781-4dc1-83a0-6174e3700af6",
+    "https://www.turmob.org.tr/ekutuphane/Read/dcca5a10-3d55-40d7-b531-1244690fea66"
+   ]
+  },
+  {
+   "id": "c5",
+   "claim": "2026'da uygulanan emlak vergisi değeri, komisyon daha yüksek bir değer belirlemiş olsa bile 2025 değerinin üç katını (kanundaki ifadeyle \"iki kat fazlasını\") geçemez.",
+   "detail": "Bu sınır EVK geçici md. 23'te (7566 sayılı Kanun md. 10) yer alıyor. Seri No: 89 Tebliğ ve TÜRMOB sirküleri sınırı şöyle açıklıyor: 2025 değeri 1.000 TL ise 2026 değeri en fazla 3.000 TL olur. Tebliğdeki 1. örnek şöyle: 1.500 m² bir arsanın birim değeri 2025'te 600 TL, 2026 için takdir edilen değer 4.000 TL. Buna göre vergi değeri 6.000.000 TL çıkıyor, ama tavan 2.700.000 TL. Uygulanacak birim değer de 1.800 TL'ye iniyor. Bu, tebliğdeki varsayımsal bir örnektir, gerçek bir arsa değildir. Yeni bina, ifraz-tevhit gibi durumlarda birim değer için de ilk yılda aynı \"iki kat fazlası\" sınırı uygulanır (geçici md. 23/2). Geçici md. 23/4'e göre bu sınırlı değerler, emlak vergi değerine bağlı diğer vergi ve harçlarda da esas alınır.",
+   "sources": [
+    "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.1319.pdf",
+    "https://www.resmigazete.gov.tr/eskiler/2025/12/20251219-1.htm",
+    "https://www.alomaliye.com/2025/12/31/emlak-vergisi-kanunu-genel-tebligi-seri-no-89/",
+    "https://www.turmob.org.tr/ekutuphane/Read/dcca5a10-3d55-40d7-b531-1244690fea66"
+   ],
+   "confidence": "high",
+   "viral": "Resmi tebliğin kendi örneğinde komisyon m²'ye 4.000 TL biçiyor, vergide kullanılan değer ise 1.800 TL.",
+   "verdict": "dogru",
+   "safe": "2026'da uygulanan emlak vergisi değeri, komisyon daha yüksek bir birim değer belirlemiş olsa bile 2025 değerinin üç katını (kanundaki ifadeyle \"iki kat fazlasını\") geçemez. Tebliğdeki varsayımsal örnekte komisyon m²'ye 4.000 TL biçiyor; sınır yüzünden vergide kullanılan birim değer 1.800 TL'ye iniyor.",
+   "note": "EVK geçici md. 23'ün 7566/10 ile değişmiş güncel metnini okudum: 2026 değeri \"2025 yılına ait vergi değerlerinin iki kat fazlasını geçemez\". TÜRMOB sirküleri bunu \"1.000 TL ise en fazla 3.000 TL\" diye açıklıyor. Tebliğin 1. örneğindeki rakamlar birebir doğru: 1.500 m², 2025 birim değeri 600 TL, 2025 vergi değeri 900.000 TL, 2026 takdiri 4.000 TL, hesaplanan değer 6.000.000 TL, tavan 2.700.000 TL, uygulanan birim değer 1.800 TL. Geçici md. 23/2: 33. madde hallerinde (8. fıkra hariç; yeni bina, ifraz-tevhit vb.) birim değer ilk yıl 2025 birim değerinin iki kat fazlasını geçemiyor; mükellef değişirse (33/6) 1. fıkra uygulanıyor. Geçici md. 23/4: sınırlı değerler, emlak vergi değerine bağlı diğer vergi, harç ve yükümlülüklerde de esas alınıyor (Tebliğ md. 8). Hepsi doğrulandı.",
+   "orig_sources": [
+    "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.1319.pdf",
+    "https://www.resmigazete.gov.tr/eskiler/2025/12/20251219-1.htm",
+    "https://www.alomaliye.com/2025/12/31/emlak-vergisi-kanunu-genel-tebligi-seri-no-89/",
+    "https://www.turmob.org.tr/ekutuphane/Read/dcca5a10-3d55-40d7-b531-1244690fea66"
+   ]
+  },
+  {
+   "id": "c6",
+   "claim": "Arsalarda emlak vergisi oranı binde 3, büyükşehir belediyesi sınırları ve mücavir alanlarda ise binde 6'dır.",
+   "detail": "Oranlar EVK md. 18'de yer alıyor; aynı maddede arazi için binde 1 (büyükşehirde binde 2) oranı var. Cumhurbaşkanı bu oranları yarısına kadar indirebilir ya da üç katına kadar artırabilir. TÜRMOB'un 2026 sirkülerine göre, tahakkuk eden verginin %10'u kadar \"Taşınmaz Kültür Varlıklarının Korunmasına Katkı Payı\" da ayrıca alınır. Örnek hesap: büyükşehirde 1.000.000 TL vergi değerli bir arsa için yıllık emlak vergisi 6.000 TL, katkı payı 600 TL olur (rakamlar örnektir).",
+   "sources": [
+    "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.1319.pdf",
+    "https://www.turmob.org.tr/ekutuphane/Read/dcca5a10-3d55-40d7-b531-1244690fea66"
+   ],
+   "confidence": "high",
+   "verdict": "dogru",
+   "safe": "Arsalarda emlak vergisi oranı binde 3, büyükşehir belediyesi sınırları ve mücavir alanlarda ise binde 6'dır. Buna ek olarak, verginin %10'u kadar kültür varlıkları katkı payı alınır. Örneğin büyükşehirde vergi değeri 1.000.000 TL olan bir arsa için yıllık vergi 6.000 TL, katkı payı 600 TL olur.",
+   "note": "EVK md. 18'i kontrol ettim: arazi binde 1, arsa binde 3; 5216 sayılı Kanunun uygulandığı büyükşehir belediye sınırları ve mücavir alanlarda %100 artırımlı; Cumhurbaşkanı oranları yarısına kadar indirip üç katına kadar artırabilir. TÜRMOB'un 2026 tablosu: büyükşehirde arsa binde 6 ve arazi binde 2, diğer yerlerde binde 3 ve binde 1. Katkı payı 2863 sayılı Kanunun 12. maddesine göre emlak vergisinin %10'u. 2026'da oranları değiştiren bir Cumhurbaşkanı kararı bulamadım. Örnek hesap doğru. Not: kırsal mahalle sayılan yerlerde muafiyet ya da %50 indirim olabilir.",
+   "orig_sources": [
+    "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.1319.pdf",
+    "https://www.turmob.org.tr/ekutuphane/Read/dcca5a10-3d55-40d7-b531-1244690fea66"
+   ]
+  },
+  {
+   "id": "c7",
+   "claim": "Resmi arsa birim değeri bir taban olarak tasarlandığı için çoğu zaman gerçek piyasa fiyatının gerisinde kalır; bu fark özellikle dört yıllık dönemin sonuna doğru açılır.",
+   "detail": "Yapısal nedenler şunlar: kanun bu değeri \"asgari ölçüde\" diye tanımlar (VUK mük. 49/b). Değer dört yılda bir belirlenir. Ara yıllarda 2025 sonuna kadar yeniden değerleme oranının ancak yarısı kadar artırıldı (EVK md. 29, eski metin). 2026 için ayrıca bir tavan var (geçici md. 23). Vergi Mahkemesi Başkanı Volkan Erdoğdu'nun 2025 tarihli yazısına göre dört yıllık dönemin sonuna doğru ilk takdir ile güncel piyasa değeri arasında makas açılıyor. FIG 2012'de yayımlanan Mehmet Ertaş bildirisi de belediyelerin asgari değerlerinin gerçek piyasa değerlerinin \"önemli ölçüde altında\" olduğunu söylüyor; bu kaynak eskidir. Güncel ve ülke çapında bir oran veren resmi bir veri bulamadım, bu yüzden iddiayı \"çoğu zaman\" diye sınırladım. Ters yönde bir görüş de var: E. Mülkiye Başmüfettişi Mahmut Esen 2025'te, basına yansıyan 20-30 katlık artışlara dayanarak bazı komisyonların ölçüyü kaçırdığını yazdı. Yani her yerde ve her zaman düşük olduğu söylenemez.",
+   "sources": [
+    "https://www.alomaliye.com/2025/07/14/emlak-vergisine-esas-arsa-birim-metrekare-degerlerine-karsi-yargi-yolu-hukuki-dayanaklar-surec-ve-guncel-ictihatlar-volkan-erdogdu-vergi-mahkemesi-baskani/",
+    "https://fig.net/resources/proceedings/fig_proceedings/fig2012/papers/ts05g/TS05G_ertas_5614.pdf",
+    "https://www.alomaliye.com/2025/11/05/emlak-vergisi-degerinin-takdir-komisyonunca-belirlenmesi-uygulamasi-kaldirilmalidir/",
+    "https://www.alomaliye.com/2025/03/14/emlak-vergisi-kanunu-ic-genelgesi-seri-no-2025-1/",
+    "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.1319.pdf"
+   ],
+   "confidence": "medium",
+   "viral": "Belediyenin 'rayiç' dediği rakam ile emlakçının söylediği fiyat çoğu zaman aynı şeyi ölçmüyor: biri vergi tabanı, öbürü piyasa fiyatı.",
+   "verdict": "duzeltilmeli",
+   "safe": "Resmi arsa birim değeri, sokaktaki en düşük m² fiyatları esas alınarak belirlenen \"asgari\" bir değerdir; bu yüzden çoğu yerde piyasa fiyatının altında kalması beklenir. 2025 sonuna kadar ara yıllardaki artış yeniden değerleme oranının yarısıyla sınırlıydı, bu yüzden fark dört yıllık dönemin sonuna doğru açılıyordu. 2026'daki üç kat tavanı da farkı büyütebilir. Ama bu her yerde geçerli değil: bazı yerlerde 2025 takdirleri fahiş bulundu ve dava konusu oldu. Ülke çapında bir oran yok.",
+   "note": "Kaynakları tek tek açtım. Volkan Erdoğdu'nun yazısında \"dört yıllık takdir döneminin sonlarına doğru ... makasın açılması\" ifadesi var. FIG 2012 (Mehmet Ertaş) belediye değerlerinin \"substantially below the real market values\" olduğunu söylüyor; ancak eski bir bildiri ve beyan sistemini anlatıyor. Mahmut Esen, 20-30 kat artış haberlerine dayanarak komisyonların ölçüyü kaçırdığı kanaatini aktarıyor. En güçlü yapısal dayanak, İç Genelge 2025/1 IV/13'teki \"metrekare fiyatı en düşük olanlar dikkate alınmak suretiyle\" ifadesi; bunu eklemek iddiayı güçlendirir. Düzeltme gerekçesi: \"fark dönem sonuna doğru açılır\" mekanizmasının ana nedeni olan yarım oranlı artış 19.12.2025'te kaldırıldı. 2027'den itibaren tam yeniden değerleme oranı uygulanacağından bu kısım geçmiş zamanla anlatılmalı. Ülke çapında istatistik yok; \"çoğu zaman\" bir beklenti, ölçülmüş bir veri değil.",
+   "orig_sources": [
+    "https://www.mevzuat.gov.tr/MevzuatMetin/1.4.213.pdf",
+    "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.1319.pdf",
+    "https://www.alomaliye.com/2025/07/14/emlak-vergisine-esas-arsa-birim-metrekare-degerlerine-karsi-yargi-yolu-hukuki-dayanaklar-surec-ve-guncel-ictihatlar-volkan-erdogdu-vergi-mahkemesi-baskani/",
+    "https://fig.net/resources/proceedings/fig_proceedings/fig2012/papers/ts05g/TS05G_ertas_5614.pdf",
+    "https://www.alomaliye.com/2025/11/05/emlak-vergisi-degerinin-takdir-komisyonunca-belirlenmesi-uygulamasi-kaldirilmalidir/"
+   ]
+  },
+  {
+   "id": "c8",
+   "claim": "Tapu harcı, alıcı ve satıcının tapuda beyan ettiği satış bedeli üzerinden alınır, ama bu bedel taşınmazın emlak vergisi değerinden düşük olamaz.",
+   "detail": "Kural 492 sayılı Harçlar Kanunu md. 63/2'de ve (4) sayılı tarife I/20-a'da yer alıyor. Tarifedeki ifade, 7566 sayılı Kanun md. 8 ile \"emlak vergisi değerinden az olmamak üzere beyan edilen devir ve iktisap bedeli\" olarak netleştirildi; KPMG'ye göre bu, mevcut uygulamayı değiştirmiyor. Harç, devreden ve devralan için ayrı ayrı binde 20'dir. Kanunda yazan oran binde 10'dur; binde 20, 2012/3735 sayılı BKK ile uygulanan orandır. Kat irtifaklı taşınmazlarda harç, bedelin tamamı üzerinden hesaplanır (md. 63/3). EVK md. 30/8'e göre tapu müdürlüğü, harç matrahında kullanılan emlak vergi değerini belediyenin sisteminden elektronik olarak sorgular. Örnek: 3.000.000 TL'ye satılan, emlak vergi değeri 1.000.000 TL olan bir arsada harç 3.000.000 TL üzerinden alınır: alıcı 60.000 TL, satıcı 60.000 TL öder (rakamlar örnektir).",
+   "sources": [
+    "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.492.pdf",
+    "https://www.resmigazete.gov.tr/eskiler/2025/12/20251219-1.htm",
+    "https://kpmgvergi.com/yayinlar/mali-bultenler/vergi/7566-sayili-kanun-resmi-gazete-de-yayimlandi/3316",
+    "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.1319.pdf"
+   ],
+   "confidence": "high",
+   "viral": "Kanunda tapu harcı binde 10 yazıyor, ama uygulanan oran binde 20. Toplamda satış bedelinin %4'ü ediyor.",
+   "verdict": "dogru",
+   "safe": "Tapu harcı, alıcı ve satıcının tapuda beyan ettiği satış bedeli üzerinden alınır; ama bu bedel taşınmazın emlak vergisi değerinden düşük olamaz. Harç alıcı ve satıcı için ayrı ayrı binde 20'dir (kanundaki oran binde 10, uygulanan oran binde 20), yani toplamda bedelin %4'ü eder.",
+   "note": "Harçlar Kanunu PDF'inin 23.09.2026 sürümünü okudum. md. 63/2: harç, \"emlak vergisi değerinden az olmamak üzere, beyan edilen devir ve iktisap bedeli üzerinden\" hesaplanıyor. md. 63/3: kat irtifaklılarda bedelin tamamı esas alınıyor. Tarife 4, I/20-a: devreden ve devralan için ayrı ayrı, kanuni oran binde 10, uygulanan oran binde 20. Dipnota göre 2012/3735 sayılı BKK binde 16,5'i binde 20 yaptı. 7566/8 ile tarife ifadesi düzeltildi; KPMG bunun \"hâlihazırdaki uygulamada olduğu gibi\" netleştirme olduğunu yazıyor. EVK md. 30/8'deki elektronik sorgulama kuralı doğrulandı. 2026'da tapu harcı oranını değiştiren bir karar bulamadım. Örnek hesap doğru: 3.000.000 × binde 20 = 60.000 TL, iki taraf için ayrı ayrı.",
+   "orig_sources": [
+    "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.492.pdf",
+    "https://www.resmigazete.gov.tr/eskiler/2025/12/20251219-1.htm",
+    "https://kpmgvergi.com/yayinlar/mali-bultenler/vergi/7566-sayili-kanun-resmi-gazete-de-yayimlandi/3316",
+    "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.1319.pdf"
+   ]
+  },
+  {
+   "id": "c9",
+   "claim": "Satış bedelini tapuda gerçeğinden düşük gösterirseniz eksik kalan harç sonradan istenir ve Aralık 2025'ten beri vergi ziyaı cezası %25 değil, harç farkının bir katıdır.",
+   "detail": "Harçlar Kanunu md. 63/4'e göre, ödenen harcın emlak vergisi değerinden düşük bir bedele dayandığı ya da beyan edilen bedelin gerçeği yansıtmadığı tespit edilirse, aradaki farkın harcı ikmalen veya re'sen tarh edilir. Bu maddedeki \"%25 nispetinde\" ifadesi 7566 sayılı Kanun md. 6 ile \"bir kat\" olarak değiştirildi. Aynı fıkraya göre bu tarhiyat, takdir komisyonu kararlarına dayanılarak yapılamaz. Yani emlak vergi değerinden yüksek beyan etmek de yetmeyebilir: idarenin, gerçek bedelin daha yüksek olduğunu başka verilerle tespit etmesi gerekir.",
+   "sources": [
+    "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.492.pdf",
+    "https://www.resmigazete.gov.tr/eskiler/2025/12/20251219-1.htm",
+    "https://kpmgvergi.com/yayinlar/mali-bultenler/vergi/7566-sayili-kanun-resmi-gazete-de-yayimlandi/3316"
+   ],
+   "confidence": "high",
+   "viral": "'Tapuda rayiçten gösterelim' alışkanlığının olası cezası, Aralık 2025'te dört katına çıktı (%25'ten %100'e).",
+   "verdict": "dogru",
+   "safe": "Satış bedelini tapuda gerçeğinden düşük gösterdiğiniz tespit edilirse, eksik kalan harç sonradan istenir. 19 Aralık 2025'ten beri bunun vergi ziyaı cezası, harç farkının %25'i değil, bir katıdır (%100). İdare bu tespiti yalnızca takdir komisyonu kararına dayanarak yapamaz.",
+   "note": "Harçlar Kanunu md. 63/4'ün güncel metni şöyle: \"... vergi ziyaı cezası bir kat uygulanır. Takdir komisyonu kararlarına istinaden bu fıkra uyarınca tarhiyat yapılamaz.\" 22 numaralı dipnot, \"% 25 nispetinde\" ibaresinin 7566/6 ile \"bir kat\" olarak değiştirildiğini gösteriyor. Değişiklik yayım tarihinde (19.12.2025) yürürlüğe girdi. KPMG de cezanın %25'ten bir kata çıkarıldığını yazıyor. %25'ten %100'e çıkış dört kat demek; viral cümle doğru. Uyarılar: kural 19.12.2025'ten sonraki işlemlere uygulanır; ceza VUK'taki indirim ya da uzlaşma yollarıyla azalabilir; eksik harcın istenmesi için idarenin bunu tespit etmesi gerekir. Bu nedenle \"tespit edilirse\" kaydı eklenmeli.",
+   "orig_sources": [
+    "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.492.pdf",
+    "https://www.resmigazete.gov.tr/eskiler/2025/12/20251219-1.htm",
+    "https://kpmgvergi.com/yayinlar/mali-bultenler/vergi/7566-sayili-kanun-resmi-gazete-de-yayimlandi/3316"
+   ]
+  },
+  {
+   "id": "c10",
+   "claim": "Arsanızın resmi m² birim değerini, bu hizmeti sunan belediyeler için e-Devlet'teki \"Arsa Metrekare Birim Değeri Sorgulama\" ekranından mahalle, sokak ve yıl seçerek öğrenebilirsiniz.",
+   "detail": "Bu hizmet turkiye.gov.tr'de belediye belediye ayrı sayfalar halinde sunuluyor; Konyaaltı, Bayraklı, Ödemiş, Tokat, Trabzon Ortahisar, Balıkesir Edremit gibi örnekler var. Konyaaltı sayfası mahalle, cadde/sokak ve yıl (2012-2026) seçtiriyor. Sayfadaki tanım şöyle: cadde ve sokakların \"arsa rayiç değerini, yani metrekare birim değerini\" yıllara göre öğrenmenizi sağlar. Her belediyenin bu hizmeti verdiği doğrulanmadı. Hizmet yoksa belediyenin emlak vergisi birimine başvurulabilir; ayrıca VUK mük. md. 49/b'ye göre kesinleşen değerler belediyede ve muhtarlıkta asılarak ilan edilir.",
+   "sources": [
+    "https://www.turkiye.gov.tr/konyaalti-belediyesi-arsa-rayic-degeri-sorgulama",
+    "https://www.turkiye.gov.tr/bayrakli-belediyesi-arsa-rayic-degeri-sorgulama",
+    "https://www.mevzuat.gov.tr/MevzuatMetin/1.4.213.pdf"
+   ],
+   "confidence": "high",
+   "verdict": "dogru",
+   "safe": "Belediyeniz bu hizmeti veriyorsa, e-Devlet'teki \"Arsa Metrekare Birim Değeri Sorgulama\" ekranından mahalle, sokak ve yıl seçerek arsanızın resmi m² birim değerini öğrenebilirsiniz. Hizmet yoksa belediyenin emlak vergisi birimine sorabilirsiniz; kesinleşen değerler belediyede ve muhtarlıkta da ilan edilir.",
+   "note": "Konyaaltı sayfasını açtım: hizmet adı \"Arsa Metrekare Birim Değeri Sorgulama\", alanlar Mahalle, Cadde/Sokak ve Yıl, yıl aralığı 2012-2026, açıklaması \"arsa rayiç değerini (metrekare birim değeri) yıllara göre sorgulayabilirsiniz\". Bayraklı sayfası da aynı formatta ve 2012-2026 aralığında. Ödemiş, Tokat, Ortahisar ve Edremit sayfalarını ayrıca açmadım. Mük. 49/b'deki ilan kuralı doğrulandı.",
+   "orig_sources": [
+    "https://www.turkiye.gov.tr/konyaalti-belediyesi-arsa-rayic-degeri-sorgulama",
+    "https://www.mevzuat.gov.tr/MevzuatMetin/1.4.213.pdf"
+   ]
+  },
+  {
+   "id": "c11",
+   "claim": "Takdir komisyonunun belirlediği birim değeri fahiş bulan mülk sahibi vergi mahkemesinde dava açabilir; bu hakkı yalnızca kurumlara tanıyan hüküm Anayasa Mahkemesi'nce 2012'de iptal edildi.",
+   "detail": "Anayasa Mahkemesi'nin E.2011/38, K.2012/89 sayılı, 31.5.2012 tarihli kararı (RG 13.10.2012, 28440), VUK mük. md. 49/b'de dava hakkını yalnızca kararın tebliğ edildiği daire, kurum ve muhtarlıklara tanıyan cümleyi iptal etti. Gerekçe, mükelleflerin yargı yolunun kapatılmasının hak arama özgürlüğü ve hukuk devleti ilkesiyle bağdaşmamasıydı. Vergi Mahkemesi Başkanı Volkan Erdoğdu'ya göre dava süresi, öğrenmeden itibaren 30 gündür (Danıştay VDDK E.2022/14, K.2023/2). Mahkemeler fahişlik değerlendirmesinde bilirkişi raporlarına dayanıyor. Süreyle ilgili bu bilgi tek bir kaynağa dayanıyor; somut durum için avukata danışılmalı.",
+   "sources": [
+    "https://www.mevzuat.gov.tr/MevzuatMetin/1.4.213.pdf",
+    "https://www.alomaliye.com/2012/10/13/anayasa-mahkemesi-karari-e-2011-38-k-2012-89-emlak-vergisi-takdir-komisyonu/",
+    "https://www.alomaliye.com/2025/07/14/emlak-vergisine-esas-arsa-birim-metrekare-degerlerine-karsi-yargi-yolu-hukuki-dayanaklar-surec-ve-guncel-ictihatlar-volkan-erdogdu-vergi-mahkemesi-baskani/",
+    "https://www.alomaliye.com/2023/04/28/danistay-vergi-dava-daireleri-kurulu-karari-e-2022-14-k-2023-2-takdir-komisyonu-kararlari/",
+    "https://www.erdem-erdem.av.tr/bilgi-bankasi/asgari-olcude-arsa-ve-arazi-birim-degerlerinin-tespitine-yonelik-takdir-komisyonu-kararlarina-karsi-dava-acma-suresine-iliskin-danistay-karari"
+   ],
+   "confidence": "high",
+   "verdict": "duzeltilmeli",
+   "safe": "Takdir komisyonunun belirlediği birim değeri fahiş bulan mülk sahibi vergi mahkemesinde dava açabilir. Anayasa Mahkemesi 2012'de, bu hakkı yalnızca kararın tebliğ edildiği kurumlara ve muhtarlıklara tanıyan cümleyi iptal etti. Danıştay'a göre dava süresi öğrenmeden itibaren 30 gün, ama en geç kararın alındığı yılın son günü; 2025 takdirleri için bu tarih 31.12.2025'ti. Bu süre geçtiyse hangi yolların kaldığını bir avukata danışın.",
+   "note": "AYM kararı doğrulandı: E.2011/38, K.2012/89, 31.5.2012, RG 13.10.2012/28440. Güncel VUK mük. 49/b metninde \"(İptal birinci cümle ...)\" notu var. İptal edilen cümle, dava hakkını \"kendilerine karar tebliğ edilen daire, kurum, teşekküller ve ilgili mahalle ve köy muhtarlıkları\"na tanıyordu; dolayısıyla \"yalnızca kurumlara\" ifadesi muhtarlıkları da kapsayacak şekilde düzeltilmeli. Gerekçe Anayasa md. 2 ve 36. Eksik olan nokta şu: Danıştay VDDK E.2022/14, K.2023/2 (RG 28.04.2023/32174), dava açılabilecek son günü \"en geç anılan kararların alındığı yılın son günü\" olarak sınırlıyor. Bugün (Ekim 2026) 2025 takdirlerine doğrudan dava açma süresi büyük olasılıkla dolmuş durumda. Erdoğdu'nun yazısı, takdirin hukuka aykırılığının tarhiyata karşı açılan davada da ileri sürülebileceği görüşüne yer veriyor, ama bu konu tartışmalı. Bilirkişi raporlarına dayanma bilgisi Erdoğdu'nun yazısıyla doğrulandı.",
+   "orig_sources": [
+    "https://www.mevzuat.gov.tr/MevzuatMetin/1.4.213.pdf",
+    "https://www.alomaliye.com/2012/10/13/anayasa-mahkemesi-karari-e-2011-38-k-2012-89-emlak-vergisi-takdir-komisyonu/",
+    "https://www.alomaliye.com/2025/07/14/emlak-vergisine-esas-arsa-birim-metrekare-degerlerine-karsi-yargi-yolu-hukuki-dayanaklar-surec-ve-guncel-ictihatlar-volkan-erdogdu-vergi-mahkemesi-baskani/"
+   ]
+  },
+  {
+   "id": "c12",
+   "claim": "Kat karşılığı inşaatta arsa sahibine düşecek payı belirleyen sabit bir yasal oran yoktur; oran müteahhitle pazarlıkla belirlenir ve arsanın konumuna, büyüklüğüne, imar haklarına, hisseli olup olmamasına, inşaat maliyetine ve bölgedeki satış fiyatlarına göre değişir.",
+   "detail": "Premar Akademi (Ağustos 2026) oranı belirleyen \"net yasal koşulların\" bulunmadığını yazıyor. Aynı kaynak sık görülen aralığı arsa sahibi için %30-%50, değerli konumlarda %60'a kadar olarak veriyor; bu bir sektör blogudur, istatistik değildir. SPK lisanslı değerleme kuruluşlarının KAP'a yüklenen raporlarında oranın arsa büyüklüğü, konum, hisseli olup olmama, proje kapsamı ve niteliği gibi etkenlere göre değiştiği yazıyor (Epos/Kiler GYO 2015; Net Kurumsal/Emlak Konut 2023). Emsalin yükselmesi, satış fiyatlarının yüksek, maliyetlerin düşük olması arsa sahibinin payını artırıyor (Premar).",
+   "sources": [
+    "https://www.premar.com.tr/blog/muteahhit-arsa-sahibine-yuzde-kac-verir-kat-karsiligi-arsa-orani",
+    "https://kap.org.tr/tr/api/file/download/33E834398C51023CE0530A4A622B5826",
+    "https://kap.org.tr/en/api/file/download/4028328d89555d7f018a6f4088325ac6"
+   ],
+   "confidence": "high",
+   "viral": "'%50-%50 standart' diye bir kural yok; oran tamamen pazarlık.",
+   "verdict": "dogru",
+   "safe": "Kat karşılığı inşaatta arsa sahibinin payını belirleyen sabit bir yasal oran yoktur. Oran sözleşmede, müteahhitle pazarlıkla belirlenir ve arsanın konumuna, büyüklüğüne, imar haklarına, hisseli olup olmamasına, inşaat maliyetine ve bölgedeki satış fiyatlarına göre değişir.",
+   "note": "Premar sayfasında ayrı bir yayın tarihi yok; \"son güncelleme 12 Ağustos 2026\" yazıyor. Sayfa \"net yasal koşullar bulunmamak\" ifadesini kullanıyor. Verdiği aralık %30-50, bazı yerlerde %60'a kadar; SSS bölümünde %35-60 deniyor, yani kaynak kendi içinde tutarsız ve bir sektör blogu. Emsal, satış fiyatı ve maliyet etkisi sayfada var. Kartal (Epos 2015) raporunda oranların \"arsanın büyüklüğü, konumu, hisseli olup olmaması gibi faktörlere\" göre değiştiği yazıyor. Avcılar (Net 2023) raporunda \"taşınmaz alanının büyüklüğü, proje kapsam ve toplam getirisi, ... niteliği ve konumu\" sayılıyor. Kanunda sabit bir oran yok; bu doğru. Viral cümledeki \"tamamen pazarlık\" ifadesi biraz abartılı: kentsel dönüşümde (6306) çoğunluk kararı azınlığı bağlayabiliyor. \"Oranı sözleşme belirler\" demek daha güvenli.",
+   "orig_sources": [
+    "https://www.premar.com.tr/blog/muteahhit-arsa-sahibine-yuzde-kac-verir-kat-karsiligi-arsa-orani",
+    "https://kap.org.tr/tr/api/file/download/33E834398C51023CE0530A4A622B5826",
+    "https://kap.org.tr/en/api/file/download/4028328d89555d7f018a6f4088325ac6"
+   ]
+  },
+  {
+   "id": "c13",
+   "claim": "SPK lisanslı değerleme raporlarından iki örnek: 2015'te İstanbul Kartal'da konutların %50-55'i arsa sahiplerine verilirken, 2023'te Avcılar bölgesinde kat karşılığı oranlarının %35-50 arasında değiştiği tespit edilmiş.",
+   "detail": "Epos Gayrimenkul'ün Kiler GYO için hazırladığı 03.11.2015 tarihli raporda (Kartal, Yukarı Mah. 568 ada 21 parsel) şu ifade var: \"Bölgede inşa edilen konutların %50-%55 arasındaki kısmının, arsa karşılığı olarak arsa sahiplerine verildiği görülmüştür.\" Net Kurumsal Gayrimenkul Değerleme'nin Emlak Konut GYO için hazırladığı 04.09.2023 tarihli raporda (Avcılar, Firuzköy) ise il genelinde ve özellikle bölgede kat karşılığı oranlarının %35-%50 arasında değişebildiği yazıyor. Aynı rapora göre hasılat paylaşımında girişimcinin kâr beklentisi %40-%50. Bu raporda oranın kimin payı olduğu açıkça yazmıyor. İki rakam da yalnızca o bölge ve o tarih için geçerli örneklerdir; Türkiye geneli için genellenemez. Bu raporlarda \"Hasılat Paylaşımı veya Kat Karşılığı Yöntemi ile Yapılacak Projelerde Emsal Pay Oranları\" ayrı bir başlık olarak yer alıyor; SPK'nın 2007 tarihli asgari hususlar duyurusu da bu kalemi sayıyor.",
+   "sources": [
+    "https://kap.org.tr/tr/api/file/download/33E834398C51023CE0530A4A622B5826",
+    "https://kap.org.tr/en/api/file/download/4028328d89555d7f018a6f4088325ac6",
+    "https://www.netgd.com.tr/assets/media/spk-raporlarda-bulunmasi-gereken-asgari-hususlar.pdf"
+   ],
+   "confidence": "high",
+   "verdict": "dogru",
+   "safe": "SPK lisanslı değerleme raporlarından iki örnek var. 2015'te İstanbul Kartal'daki bir raporda, bölgedeki konutların %50-55'inin arsa sahiplerine verildiği yazıyor. 2023'te Avcılar'daki bir raporda ise kat karşılığı oranlarının %35-50 arasında değişebildiği yazıyor. Bu rakamlar yalnızca o bölge ve o tarih için geçerli.",
+   "note": "İki KAP PDF'ini metne çevirip okudum. Kartal: Epos, Kiler GYO için, 03.11.2015, Yukarı Mah. 568 ada 21 parsel; 6.3'te aynen \"Bölgede inşa edilen konutların %50-%55 arasındaki kısmının, arsa karşılığı olarak arsa sahiplerine verildiği görülmüştür\" yazıyor; hesapta da arsa sahibi payı %55 alınmış. Avcılar: Net Kurumsal, Emlak Konut GYO için, 04.09.2023, Firuzköy; \"kat karşılığı oranlarının %35-%50 oranında değişebildiği, hasılat paylaşımı yönteminde ise girişimci kar beklenti oranlarının %40-%50\" olduğu yazıyor; payın kime ait olduğu belirtilmemiş. Aynı raporun başka bir yerinde kâr beklentisinin \"%35 civarında\" olduğu da yazıyor, yani rapor kendi içinde tam tutarlı değil. Avcılar projesi bir arsa satışı karşılığı gelir paylaşımı işi (Emlak Konut payı %35). SPK'nın 2007 duyurusunun (r) bendinde \"Hasılat paylaşımı veya kat karşılığı yöntemi ile yapılacak projelerde, emsal pay ...\" kalemi var; doğrulandı.",
+   "orig_sources": [
+    "https://kap.org.tr/tr/api/file/download/33E834398C51023CE0530A4A622B5826",
+    "https://kap.org.tr/en/api/file/download/4028328d89555d7f018a6f4088325ac6",
+    "https://www.netgd.com.tr/assets/media/spk-raporlarda-bulunmasi-gereken-asgari-hususlar.pdf"
+   ]
+  },
+  {
+   "id": "c14",
+   "claim": "Profesyonel değerlemede bir arsanın piyasa değeri, ya bölgedeki benzer arsa satışlarıyla karşılaştırılarak ya da üzerine yapılabilecek projenin satış gelirinden inşaat maliyeti ve müteahhit kârı düşülerek bulunur.",
+   "detail": "Epos Gayrimenkul'ün 2015 tarihli, KAP'ta yayımlanan raporu (bölüm 6.4) her iki yöntemi de kullanıyor. Önce emsal karşılaştırma yapılıyor. Ardından gelir kapitalizasyonu ve indirgenmiş nakit akımlarıyla projenin muhtemel gelirleri hesaplanıyor, inşaat maliyetleri ve geliştirici kârı düşülerek arsa değerine ulaşılıyor. Bu, resmi emlak vergisi değerinden tamamen farklı bir hesap: resmi değer sokak bazında tek bir m² rakamına bakar, piyasa değerlemesi ise arsanın imar hakkını ve proje potansiyelini hesaba katar.",
+   "sources": [
+    "https://kap.org.tr/tr/api/file/download/33E834398C51023CE0530A4A622B5826",
+    "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.1319.pdf",
+    "https://www.alomaliye.com/2025/03/14/emlak-vergisi-kanunu-ic-genelgesi-seri-no-2025-1/"
+   ],
+   "confidence": "high",
+   "viral": "Aynı sokaktaki iki arsanın resmi m² değeri aynı olabilir, ama imar hakkı farklıysa piyasa değerleri çok farklı çıkar.",
+   "verdict": "dogru",
+   "safe": "Profesyonel değerlemede bir arsanın piyasa değeri genellikle iki yolla bulunur: bölgedeki benzer arsa satışlarıyla karşılaştırarak ya da arsaya yapılabilecek projenin satış gelirinden inşaat maliyeti ve müteahhit kârı düşülerek. İki yöntem farklı sonuç verebilir, değerleme uzmanı hangisinin esas alınacağına karar verir.",
+   "note": "Epos 2015 raporunun 6.4 bölümünü okudum: emsal karşılaştırma ve gelir kapitalizasyonu/indirgenmiş nakit akımları birlikte kullanılmış; projenin muhtemel gelirleri hesaplanmış, maliyetler ve geliştirici kârı düşülerek arsa değerine ulaşılmış. Yani iddia doğru. İki yöntemin sonucu farklı çıkmış: emsal yöntemiyle 24.402.000 TL, gelir indirgeme yöntemiyle 32.520.000 TL. Rapor nihai değer olarak emsal yöntemini seçmiş. Detaydaki \"resmi değer sokak bazında tek bir m² rakamına bakar\" ifadesi biraz abartılı: EVK 29/a, sokak içinde \"değer bakımından farklı bölgeler\" ayrılmasına izin veriyor ve İç Genelge 2025/1, bölge ayrımında imar planı durumunun da dikkate alınacağını söylüyor. Viral cümledeki \"aynı olabilir\" kaydı bu yüzden doğru.",
+   "orig_sources": [
+    "https://kap.org.tr/tr/api/file/download/33E834398C51023CE0530A4A622B5826"
+   ]
+  }
+ ]
+}

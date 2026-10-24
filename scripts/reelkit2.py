@@ -248,7 +248,7 @@ def outro_html(handle="@megerse.tr", tagline="bilinen yanlışlar · gerçek hik
             'fill="#F2D2B6" stroke="#1B1414" stroke-width="5" stroke-linejoin="round"/></svg>')
     return ('<div class="fill" style="background:radial-gradient(80% 60% at 50% 40%,#2A2440,#08060E)"></div>'
             f'<div id="ostamp">MEĞERSE</div><div id="ohandle">{handle}</div><div id="otag">{tagline}</div>'
-            f'<div class="obtn y" id="ob1">{_ICON["follow"]}<span id="ob1a">TAKİP ET</span><span id="ob1b">TAKİPTESİN ✓</span></div>'
+            f'<div class="obtn y" id="ob1"><span class="oi" id="ob1i">{_ICON["follow"]}</span><span id="ob1a">TAKİP ET</span><span id="ob1b">TAKİPTESİN ✓</span></div>'
             f'<div class="obtn" id="ob2">{_ICON["comment"]}<span>YORUM YAZ</span></div>'
             f'<div class="obtn" id="ob3">{_ICON["share"]}<span>PAYLAŞ</span></div>'
             f'<div id="otap">{hand}</div>')
@@ -261,7 +261,7 @@ OUTRO_CSS = """
 .obtn { position:absolute; left:0; right:0; margin:0 auto; width:620px; height:118px; border-radius:60px; background:#fff; color:#141414; display:flex; align-items:center; justify-content:center; gap:22px; font-weight:800; font-size:52px; box-shadow:0 10px 0 rgba(0,0,0,.55); opacity:0; }
 .obtn.y { background:#FFD23F; }
 #ob1 { top:760px; } #ob2 { top:910px; } #ob3 { top:1060px; }
-#ob1 span { position:relative; } #ob1b { position:absolute !important; left:150px; opacity:0; }
+#ob1 .oi { display:flex; } #ob1b { position:absolute; left:0; right:0; text-align:center; opacity:0; }
 #otap { position:absolute; left:640px; top:860px; opacity:0; }
 """
 
@@ -276,7 +276,7 @@ def outro_js(t0, sel="#outro-in"):
             f'tl.fromTo(".obtn",{{scale:.6,opacity:0}},{{scale:1,opacity:1,duration:.3,stagger:.14,ease:"back.out(2.2)",immediateRender:false}},{t+.75:.2f});tl.set(".obtn",{{opacity:0}},0);'
             f'tl.fromTo("#otap",{{x:160,y:220,opacity:0}},{{x:0,y:0,opacity:1,duration:.4,ease:"power2.out",immediateRender:false}},{t+1.35:.2f});tl.set("#otap",{{opacity:0}},0);'
             f'tl.to("#otap",{{scale:.86,duration:.08,yoyo:true,repeat:1}},{t+1.8:.2f});tl.to("#ob1",{{scale:.94,duration:.08,yoyo:true,repeat:1}},{t+1.8:.2f});'
-            f'tl.set("#ob1a",{{opacity:0}},{t+1.88:.2f});tl.set("#ob1b",{{opacity:1}},{t+1.88:.2f});tl.to("#ob1",{{backgroundColor:"#5EF0D2",duration:.15}},{t+1.88:.2f});'
+            f'tl.set("#ob1a,#ob1i",{{opacity:0}},{t+1.88:.2f});tl.set("#ob1b",{{opacity:1}},{t+1.88:.2f});tl.to("#ob1",{{backgroundColor:"#5EF0D2",duration:.15}},{t+1.88:.2f});'
             f'tl.to("#otap",{{x:40,y:150,duration:.3,ease:"power2.inOut"}},{t+2.2:.2f});'
             f'tl.fromTo("#ob2",{{rotation:-3}},{{rotation:3,duration:.07,repeat:5,yoyo:true,ease:"none",immediateRender:false}},{t+2.45:.2f});tl.set("#ob2",{{rotation:0}},{t+2.9:.2f});'
             f'tl.to("#otap",{{x:40,y:300,duration:.3,ease:"power2.inOut"}},{t+2.75:.2f});'
