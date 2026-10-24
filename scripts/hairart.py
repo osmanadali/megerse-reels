@@ -80,3 +80,22 @@ def tweezers(open_=0.0):
             + cel(f"M-2 0 L-6 -110 L4 -120 L2 0 Z", "#C9CDD2", "#8A9096", -1, 2, 2.5)
             + f'<g transform="rotate({o})">' + cel(f"M2 0 L10 -116 L18 -110 L6 0 Z", "#DDE1E6", "#9AA0A6", -1, 2, 2.5) + "</g>"
             + '<path d="M-4 -100 L14 -104" stroke="#8A9096" stroke-width="3"/></g>')
+
+
+def bathroom_bg(W=1080, H=1920):
+    """Banyo: metro fayans duvar, aynanın çerçevesi (iç kısmı boş: yansıma ayrı katman), lavabo, üstte lamba ışığı."""
+    tiles = "".join(f'<rect x="{(c*120 + (r%2)*60) - 60}" y="{r*60}" width="116" height="56" rx="6" fill="#E6EEF0" stroke="#B9C8CC" stroke-width="3"/>' for r in range(33) for c in range(11))
+    mirror = (cel("M140 300 L940 300 L940 1300 L140 1300 Z", "#C9D2D6", "#9AA8AE", -1, 18, 8)
+              + '<rect x="170" y="330" width="740" height="940" rx="10" fill="#9FB8C2" stroke="#1B1414" stroke-width="6"/>')
+    lamp = (cel("M380 220 L700 220 L680 270 L400 270 Z", "#F2EBDD", "#C9C0AE", -1, 6, 6)
+            + '<ellipse cx="540" cy="290" rx="260" ry="40" fill="#FFF3C8" opacity=".55" filter="url(#glow)"/>')
+    sink = (cel("M60 1520 L1020 1520 L1020 1600 L60 1600 Z", "#F4F6F7", "#C9D0D4", -1, 10, 7)
+            + cel("M260 1600 Q540 1820 820 1600 Z", "#E9EEF0", "#B9C4C8", -1, 14, 7)
+            + cel("M500 1440 L520 1380 L620 1380 L620 1410 L540 1410 L530 1520 L500 1520 Z", "#C9CDD2", "#8A9096", -1, 6, 5))
+    return f'<rect width="{W}" height="{H}" fill="#DCE6E9"/>{tiles}{mirror}{lamp}{sink}'
+
+
+def mirror_glass():
+    """aynanın üstüne konan cam parlaması (yansıma katmanının üstünde)."""
+    return ('<path d="M190 360 L360 360 L190 620 Z" fill="#fff" opacity=".22"/><path d="M420 360 L470 360 L190 790 L190 714 Z" fill="#fff" opacity=".14"/>'
+            '<rect x="170" y="330" width="740" height="940" rx="10" fill="none" stroke="#1B1414" stroke-width="6"/>')
