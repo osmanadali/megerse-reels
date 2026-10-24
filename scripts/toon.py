@@ -180,7 +180,8 @@ def toon_figure(flip=False, pose="stand", look=(1, 0), expr=None, skin="#F2C9A0"
     """Tam boy üç-çeyrek karakter (referans stil). look=(gx,gy): göz bebeği yönü (-1..1, yüz yönüne göre).
     expr: lid (0 açık .. 1 kapalı; .45 ağır kapak), smile (-1..1), talk (0..1 ağız açık), brow (-1..1).
     pose: stand (eller açık yanda) | talk (yakın el jest) | point | walk | hands_pockets | offer (eli ileri uzatır: prop=paper ile liste).
-    outfit: tee | suit (ceket, gömlek, kravat, deri ayakkabı) | uniform (gri subay ceketi, kemer, cepler, çizme; simgesiz) | dress (kadın elbise).
+    outfit: tee | suit (ceket, gömlek, kravat, deri ayakkabı) | uniform (gri subay ceketi, kemer, cepler, çizme; simgesiz) | dress (kadın elbise)
+            | labcoat (diz boyu beyaz önlük, altında açık mavi forma, göğüs cebinde kalem; jacket=önlük rengi, örn. "#F4F6F8").
     hat: fedora | officer. prop: paper | suitcase."""
     e = dict(lid=.42, smile=.5, talk=0, brow=0)
     e.update(expr or {})
@@ -189,8 +190,8 @@ def toon_figure(flip=False, pose="stand", look=(1, 0), expr=None, skin="#F2C9A0"
     hs = hair_style or ("long" if female else "short")
     hair_back, hair_front = hair_parts(hs, hair, L)
     out = [hair_back]
-    long_sl = outfit in ("suit", "uniform")
-    if outfit in ("suit", "uniform", "dress"):
+    long_sl = outfit in ("suit", "uniform", "labcoat")
+    if outfit in ("suit", "uniform", "dress", "labcoat"):
         shorts, socks = False, False
     if outfit in ("uniform", "suit"):
         pants = jacket
@@ -260,6 +261,15 @@ def toon_figure(flip=False, pose="stand", look=(1, 0), expr=None, skin="#F2C9A0"
                    + cel("M-4.4 -125 L-3.6 -119 L8 -119 L8.6 -125 Q2 -122.6 -4.4 -125 Z", darker(jacket, .8), darker(jacket, .6), L, .6, .8)
                    + '<rect x="-3" y="-123.4" width="3" height="2.4" fill="#C9C4B8" stroke="#1B1414" stroke-width=".3"/><rect x="4" y="-123.4" width="3" height="2.4" fill="#C9C4B8" stroke="#1B1414" stroke-width=".3"/>'
                    + cel("M-15 -121.6 L-8 -123 L-8 -120.4 L-15.4 -119 Z", darker(jacket, .8), darker(jacket, .6), L, .4, .6))
+    elif outfit == "labcoat":
+        lab = "M-15 -121 C-17.4 -104 -17.6 -80 -18.6 -50 L21.6 -50 C20.6 -80 18.8 -104 14.8 -121 C8 -124 -8 -124 -15 -121 Z"
+        out.append(cel(lab, jacket, darker(jacket, .82), L, 3.2, 1.15)
+                   + cel("M-3.6 -123 L1.6 -101 L6.9 -123 Z", "#8FC8E8", "#6AA6C8", L, .6, .8)
+                   + line("M-3.6 -123 L-1.6 -108 L1.6 -101 M6.9 -123 L5 -109 L1.6 -101", .8)
+                   + line("M1.6 -101 L2.2 -50", .7, .8)
+                   + cel("M7.6 -112 L13.4 -112 L13.2 -104 L7.8 -104 Z", jacket, darker(jacket, .8), L, .5, .6)
+                   + line("M9.4 -114.6 L9.6 -108", 1.1, 1, "#2F6FB0")
+                   + line("M-14.6 -76 h8 M8 -76 h9", .6, .7) + line("M-13 -96 q2 3 .6 6 M12 -98 q-2 4 0 8", .5, .5))
     elif outfit == "dress":
         dress = "M-14 -121 C-16 -110 -14 -98 -12 -88 C-16 -72 -19 -58 -20 -46 L24 -46 C22 -58 19 -72 16 -88 C17 -98 17 -110 14 -121 C8 -124 -8 -124 -14 -121 Z"
         out.append(cel(dress, shirt, darker(shirt), L, 3.6, 1.15)
