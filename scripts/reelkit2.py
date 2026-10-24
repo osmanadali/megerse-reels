@@ -83,7 +83,7 @@ SH6 = "0 4px 0 rgba(0,0,0,.85), 0 0 26px rgba(0,0,0,.7)"
 # Instagram güvenli alan: üstte "Reels / Arkadaşlar" sekmesi (~0-250), altta kullanıcı adı/açıklama (~1600+).
 # cap_top=1250: beyaz saç v2 (eski); arsa reeli ve sonrası LAYOUT_V7 (görsel alan 300-1330, altyazı 1350-1600).
 LAYOUT_V7 = dict(cap_top=1350, top_tag=270, low_tag=1230, vis=(300, 1330))
-VIGN_V7 = "#vign { background: radial-gradient(85% 60% at 50% 46%, transparent 55%, rgba(0,0,0,.5) 100%), linear-gradient(180deg, rgba(0,0,0,.55) 0%, transparent 13%, transparent 66%, rgba(0,0,0,.45) 82%, rgba(0,0,0,.7) 100%); }\n"
+VIGN_V7 = ".cap6 { left: 60px; right: 150px; }\n#vign { background: radial-gradient(85% 60% at 50% 46%, transparent 55%, rgba(0,0,0,.5) 100%), linear-gradient(180deg, rgba(0,0,0,.55) 0%, transparent 13%, transparent 66%, rgba(0,0,0,.45) 82%, rgba(0,0,0,.7) 100%); }\n"
 
 
 def captions_box(words, per=3, maxc=17):
