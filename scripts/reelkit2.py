@@ -31,7 +31,7 @@ html, body { width: 1080px; height: 1920px; overflow: hidden; background: #000; 
 .cap { position: absolute; left: 60px; right: 60px; top: 1010px; height: 300px; display: flex; flex-wrap: wrap; align-content: center; justify-content: center; gap: 0 34px; text-align: center; opacity: 0;
   font-weight: 800; font-size: 86px; line-height: 1.08; color: #fff; text-transform: uppercase;
   text-shadow: 0 6px 0 #000, 0 0 24px rgba(0,0,0,.65); -webkit-text-stroke: 3px #000; paint-order: stroke fill; }
-.cap span { display: inline-block; }
+.cap span { display: inline-block; margin: 0 .16em; }
 .cap span.hot { color: #FFD23F; }
 #avwrap { position: absolute; left: 40px; top: 1360px; width: 230px; height: 230px; }
 #avring { position: absolute; inset: -10px; border-radius: 50%; border: 8px solid #FFD23F; }
@@ -67,7 +67,7 @@ def captions_kinetic(words, per=3):
         js.append(f'tl.set("#k{ci}",{{opacity:1}},{a:.2f});tl.fromTo("#k{ci}",{{scale:.82,y:24}},{{scale:1,y:0,duration:.16,ease:"back.out(3)"}},{a:.2f});tl.set("#k{ci}",{{opacity:0}},{b:.2f});')
         for wi, w in enumerate(ch):
             t = w["startMs"] / 1000
-            js.append(f'tl.set("#k{ci}_{wi}",{{color:"#FFD23F"}},{t:.2f});tl.fromTo("#k{ci}_{wi}",{{scale:1.18}},{{scale:1,duration:.18,ease:"power2.out"}},{t:.2f});')
+            js.append(f'tl.set("#k{ci}_{wi}",{{color:"#FFD23F"}},{t:.2f});tl.fromTo("#k{ci}_{wi}",{{scale:1.1}},{{scale:1,duration:.16,ease:"power2.out",immediateRender:false}},{t:.2f});')
             if wi + 1 < len(ch):
                 js.append(f'tl.set("#k{ci}_{wi}",{{color:"#FFFFFF"}},{ch[wi+1]["startMs"]/1000:.2f});')
     return "".join(html), "".join(js)
@@ -128,13 +128,13 @@ window.__timelines["main"] = tl;
 
 
 def flash_js(t, peak=.85, dur=.25):
-    return f'tl.fromTo("#flash",{{opacity:{peak}}},{{opacity:0,duration:{dur},ease:"power2.out"}},{t:.2f});'
+    return f'tl.fromTo("#flash",{{opacity:{peak}}},{{opacity:0,duration:{dur},ease:"power2.out",immediateRender:false}},{t:.2f});'
 
 
 def punch_js(sel, t, s=1.08, dur=.35):
     """vuruş anında hızlı yakınlaşma (zoom punch)."""
-    return f'tl.fromTo("{sel}",{{scale:{s}}},{{scale:1,duration:{dur},ease:"power3.out"}},{t:.2f});'
+    return f'tl.fromTo("{sel}",{{scale:{s}}},{{scale:1,duration:{dur},ease:"power3.out",immediateRender:false}},{t:.2f});'
 
 
 def shake_js(sel, t, amp=14, n=8):
-    return f'tl.fromTo("{sel}",{{x:-{amp}}},{{x:{amp},duration:.04,repeat:{n},yoyo:true,ease:"none"}},{t:.2f});tl.set("{sel}",{{x:0}},{t+.04*(n+1):.2f});'
+    return f'tl.fromTo("{sel}",{{x:-{amp}}},{{x:{amp},duration:.04,repeat:{n},yoyo:true,ease:"none",immediateRender:false}},{t:.2f});tl.set("{sel}",{{x:0}},{t+.04*(n+1):.2f});'

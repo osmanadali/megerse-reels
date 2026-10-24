@@ -1,0 +1,661 @@
+{
+ "facts": [
+  {
+   "id": "AC1",
+   "safe": "'Bir beyaz saçı koparırsan yerine on tane çıkar' lafı doğru değil.",
+   "detail": "Kaynak UAMS (Arkansas Üniversitesi Tıp Bilimleri), uzman Dr. Kraleti, aile hekimi ve koruyucu hekimlik uzmanı (8 Mart 2019). Hakemli bir çalışma değil, kurumun mit-çürütme yazısı.",
+   "url": "https://uamshealth.com/medical-myths/does-pulling-one-gray-hair-cause-more-to-grow-in-its-place/",
+   "viral": "Güçlü açılış cümlesi: 'Bir tane koparırsan on tane çıkar' lafı tıbben yanlış."
+  },
+  {
+   "id": "AC2",
+   "safe": "Her folikül tek bir saç teli üretir. Koparınca aynı folikülden yine tek tel çıkar, yeni folikül oluşmaz.",
+   "detail": "İnsan için UAMS hekim açıklaması. Mitin çökmesinin temel nedeni bu: kopan saçın yerine aynı folikülden yine tek saç çıkar.",
+   "url": "https://uamshealth.com/medical-myths/does-pulling-one-gray-hair-cause-more-to-grow-in-its-place/",
+   "viral": "Basit anlatım: 'Her saç telinin kendi yuvası var ve her yuvadan tek tel çıkar.'"
+  },
+  {
+   "id": "AC3",
+   "safe": "Beyaz saç bulaşıcı değil. Kopardığın tel komşularını beyazlatmaz, her folikül kendi hızında beyazlar.",
+   "detail": "UAMS. Her folikülün beyazlaması kendi içinde ilerler, kopan saçın komşulara bulaşan bir etkisi yok.",
+   "url": "https://uamshealth.com/medical-myths/does-pulling-one-gray-hair-cause-more-to-grow-in-its-place/",
+   "viral": "'Beyaz saç bulaşıcı değil' diye görselleştirilebilir: her folikülün kendi saati var."
+  },
+  {
+   "id": "AC4",
+   "safe": "Kopan beyaz saçın yerine aynı folikülden çıkan saç büyük olasılıkla yine beyaz olur. Koparmak beyazdan kurtarmaz.",
+   "detail": "UAMS. Yazıya göre saç, pigment hücreleri ölünce beyazlıyor. Bu yüzden koparmak beyaz saçtan kalıcı olarak kurtarmaz, aynı yerden yine beyaz saç çıkar.",
+   "url": "https://uamshealth.com/medical-myths/does-pulling-one-gray-hair-cause-more-to-grow-in-its-place/",
+   "viral": "Sürpriz: koparmak işe yaramıyor, beyaz saç aynı yerden geri geliyor."
+  },
+  {
+   "id": "AC5",
+   "safe": "Yaşla birlikte foliküllerdeki melanositler daha az melanin üretir, beyazlama koparsan da koparmasan da ilerler. Uzmanlara göre 'koparınca çoğaldı' algısı büyük olasılıkla bu doğal artıştan kaynaklanıyor.",
+   "detail": "Cleveland Clinic. Mekanizma doğrudan kaynakta var. 'İnsanlar bu yüzden çoğaldığını sanıyor' yorumu ise bu mekanizmayla UAMS'ın C3'teki ifadesinden yapılmış bir çıkarım. Cleveland Clinic dermatoloğu Dr. Melissa Piliang'ın mitin kaynağını 'yaşla birlikte doğal olarak artan beyaz saç' diye açıkladığı WKYC haberi yalnızca arama özetinde görüldü. Sayfa 403 verdi, açılamadı, doğrulanmadı.",
+   "url": "https://my.clevelandclinic.org/health/symptoms/gray-hair",
+   "viral": "'Saçın zaten beyazlıyordu, koparmak sadece fark etmeni sağladı.' Korelasyon ile nedensellik karışıyor."
+  },
+  {
+   "id": "AC6",
+   "safe": "Saçın rengi, tel kafa derisinden çıkmadan önce folikülde belirlenir. Gördüğün tel sadece sonuç.",
+   "detail": "Cleveland Clinic. Renk folikülde, saç teli oluşurken veriliyor.",
+   "url": "https://my.clevelandclinic.org/health/symptoms/gray-hair",
+   "viral": "'Rengin kararı kökte veriliyor, kopardığın tel sadece sonuç.'"
+  },
+  {
+   "id": "AC7",
+   "safe": "İstisna: strese bağlı beyazlamada stres azalınca bazı teller eski rengine dönebilir. Bu koparmakla olmaz, mevcut beyazların çoğu ise kalıcıdır.",
+   "detail": "Cleveland Clinic. Yalnızca strese bağlı beyazlama için söyleniyor. Yaşa bağlı beyazlamada beklenen sonuç bu değil. 'Kopan saç yine beyaz çıkar' kuralının 'büyük olasılıkla' diye yumuşatılmasının nedeni bu.",
+   "url": "https://my.clevelandclinic.org/health/symptoms/gray-hair",
+   "viral": "Merak uyandıran bir dipnot: bazı beyaz saçlar geri dönebilir, ama koparmakla değil."
+  },
+  {
+   "id": "AC8",
+   "safe": "Aynı folikülü tekrar tekrar koparmak enfeksiyona, iz kalmasına, hatta kel bölgelere yol açabilir.",
+   "detail": "UAMS hekim açıklaması. Risk tek seferlik koparmada değil, aynı foliküle tekrar tekrar yapılan travmada.",
+   "url": "https://uamshealth.com/medical-myths/does-pulling-one-gray-hair-cause-more-to-grow-in-its-place/",
+   "viral": "Asıl tehlike çoğalma değil, seyrelme: 'Fazla beyaz saç değil, hiç saç kalmayabilir.'"
+  },
+  {
+   "id": "AC9",
+   "safe": "Kökünden koparılan saç genelde geri çıkar. Bu birkaç ay, bazen bir yıldan fazla sürebilir. Yıllarca tekrarlanan koparmayla hasar görmüş foliküllerde süre daha da uzayabilir.",
+   "detail": "Healthline, tıbbi denetim Cynthia Cobb, DNP (2021). Süreler TLC Foundation'a dayanıyor ve büyük ölçüde trikotillomani (kompulsif saç koparma) bağlamında veriliyor. Tek bir telin geri çıkma süresi için kesin bir değer değil. Not: saç uzama hızı (~1,25 cm/ay) ve kafa derisindeki ~100.000 folikül rakamı açılan hiçbir sayfada doğrulanamadı. AAD tohum URL'si bu rakamları içermeyen bir 'Everyday hair care' hub sayfasına yönlendirdi, HowStuffWorks boş döndü. Bu rakamlar yalnızca arama özetlerinde görüldü.",
+   "url": "https://www.healthline.com/health/hair-follicle-pulled-out",
+   "viral": "'Kopardığın beyaz saç birkaç ay sonra aynı yerden geri gelecek.'"
+  },
+  {
+   "id": "AC10",
+   "safe": "Folikül tekrar tekrar hasar görürse saç yavaş uzayabilir. Yıllarca süren koparma kalıcı hasar bırakabilir.",
+   "detail": "Healthline. Trikotillomani bağlamında, insanlarda. Beyaz saçı ara sıra koparan biri için riskin büyüklüğü belirtilmemiş, mekanizma aynı.",
+   "url": "https://www.healthline.com/health/hair-follicle-pulled-out",
+   "viral": "Alışkanlığa dönüşen koparma, folikülü zamanla yorabilir."
+  },
+  {
+   "id": "AC11",
+   "safe": "Elle ya da cımbızla koparmak komplikasyon ve enfeksiyon riskini artırır. Batık kıl folikül iltihabına (folikülit) yol açabilir.",
+   "detail": "Healthline. Batık kıl daha çok tıraş, cımbız veya ağda yapılan bölgelerde görülüyor.",
+   "url": "https://www.healthline.com/health/hair-follicle-pulled-out",
+   "viral": "Cımbızla koparmanın görünmeyen bedeli: batık kıl ve iltihaplı folikül."
+  },
+  {
+   "id": "AC12",
+   "safe": "Koparılan saç genelde geri çıkar. İstisna, saç üretmeyi bırakmış folikül: oradan yeni saç çıkmaz.",
+   "detail": "Healthline. Folikülün saç üretmeyi bırakması yaşlanma, bir hastalık ya da tedaviyle ilişkilendiriliyor. Kalıcı hasarla birlikte okununca (C8, C10) tekrarlı koparmanın kel bölge riskini açıklıyor.",
+   "url": "https://www.healthline.com/health/hair-follicle-pulled-out",
+   "viral": "Kapanış mesajı: 'Koparma, kes ya da boya. Bir folikül kapanırsa geri dönüş yok.'"
+  },
+  {
+   "id": "BC1",
+   "safe": "Farelerde saç tekrar tekrar koparılıp yeniden çıkmaya zorlanınca, sıkışmış kök hücre içeren foliküllerin oranı %15'ten neredeyse yarıya çıktı. İnsanda böyle olduğu henüz kanıtlanmadı.",
+   "detail": "Tür: FARE. Başlangıç değeri sayfada '15' olarak geçiyor (koparma öncesi), sonrası 'nearly half' (yaklaşık %50); kesin yüzde verilmiyor. Ölçülen şey sıkışmış hücre içeren FOLİKÜL oranı. Makale: Nature, 19 Nisan 2023, 'Dedifferentiation maintains melanocyte stem cells in a dynamic niche'; baş yazar Qi Sun, kıdemli araştırmacı Mayumi Ito. İnsanlarda aynı mekanizmanın olduğu yalnızca hipotez ('may exist in humans').",
+   "url": "https://www.sciencedaily.com/releases/2023/04/230419125056.htm",
+   "viral": "'Saçı koparmak beyazlatır mı?' sorusunun bilimsel karşılığı: farede tekrarlı koparma sıkışan kök hücre oranını %15'ten ~%50'ye çıkardı. Ama bu fare deneyi; insan için kanıt değil."
+  },
+  {
+   "id": "BC2",
+   "safe": "Farelerde sıkışan kök hücreler çoğalamadı ve pigment yapan hücrelere dönüşemedi. Araştırmacılar beyazlamanın bu 'bukalemun' esnekliğinin kaybından kaynaklanabileceğini düşünüyor.",
+   "detail": "Tür: FARE. Mayumi Ito'nun alıntısı: 'It is the loss of chameleon-like function in melanocyte stem cells'. Qi Sun, insanlarda da geçerliyse sıkışan hücreleri yeniden hareket ettirmenin 'a potential pathway for reversing or preventing the graying of human hair' olabileceğini söylüyor; bu bir spekülasyon, tedavi yok.",
+   "url": "https://www.sciencedaily.com/releases/2023/04/230419125056.htm",
+   "viral": "'Beyazlayan saç = trafikte sıkışmış kök hücreler' metaforu çok güçlü bir görsel hikâye."
+  },
+  {
+   "id": "BC3",
+   "safe": "Farelerde doğru dağılımla koparılan 200 kıl, 1200'e kadar folikülü yeniden büyümeye geçirebildi. Yeni folikül oluşmadı, dinlenen foliküller topluca uyandı. Bu insan saçı için geçerli değil.",
+   "detail": "Tür: FARE (C57BL/6, sırt derisi). Cell 2015;161(2):277-290, doi:10.1016/j.cell.2015.02.016, 'Organ-level quorum sensing directs regeneration in hair stem cell populations'. Saç beyazlamasıyla değil, kıl yenilenmesiyle ilgili; insanda saç koparmanın saç çoğalttığı anlamına GELMEZ.",
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4393531",
+   "viral": "'200 kıl kopar, 1200 kıl çıksın' sayısı çarpıcı; fakat 'saçını kopar, gürleşsin' diye yanlış yorumlanmaya çok açık, mutlaka 'fare' vurgusu gerekli."
+  },
+  {
+   "id": "BC4",
+   "safe": "Farelerde aynı 200 kıl küçük bir alandan koparılınca yaklaşık 1300 kıl yeniden büyüdü. Geniş bir alana yayılınca 30 gün boyunca hiçbiri büyümedi.",
+   "detail": "Tür: FARE. Normal fare sırt kıl yoğunluğu 45-60 kıl/mm². Sonuç alıntısı: 'the eventual regeneration of approximately 450, 780 or 1300 hairs are obtained'; geniş alanlar için: 'no regeneration of plucked or unplucked follicles occurs even after 30 days'. 2,5 mm alan makalede test edilmemiş.",
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4393531",
+   "viral": "Aynı 200 kıl dağınık koparılınca HİÇ kıl çıkmaması, toplanınca 6 katı çıkması 'kalabalık kararı' fikrini kanıtlıyor; hikâyede sürpriz unsur."
+  },
+  {
+   "id": "BC5",
+   "safe": "Farelerde stres, savaş-kaç sinirlerinden noradrenalin salgılatıp pigment kök hücrelerini tüketti ve tüyler beş gün içinde beyazladı. Suçlu kortizol değildi.",
+   "detail": "Tür: FARE. Stres, kapsaisine yakın bir bileşik enjekte edilerek oluşturuldu. Bağışıklık sistemi ve kortizol neden olarak elendi ('After eliminating the immune system and the stress hormone cortisol as causes'). Science News kaynakçası: 'Hyperactivation of sympathetic nerves drives depletion of melanocyte stem cells', Nature, 22 Ocak 2020, B. Zhang et al. Kayıp kalıcı: 'The body can’t replenish the stem cells'. İnsanlara uygulanabilirlik bu sayfada belirtilmiyor. (Harvard HSCI haber sayfası 403 verdi, açılamadı.)",
+   "url": "https://www.sciencenews.org/article/how-stress-turns-hair-gray-triggers-body-fight-flight-response",
+   "viral": "'Stres saçı beyazlatır' efsanesinin mekanizması ilk kez gösterildi; suçlu kortizol değil, savaş-kaç sinirleri. Çarpıcı ters köşe."
+  },
+  {
+   "id": "BC6",
+   "safe": "14 kişilik küçük bir insan çalışmasında bazı beyaz teller doğal olarak eski rengine döndü. Tatile giden bir katılımcının beş teli tatil sırasında koyulaştı. Bu stresle bir ilişkiye işaret ediyor, kesin bir neden-sonuç değil.",
+   "detail": "Tür: İNSAN. Örneklem küçük (14 gönüllü), ilişki korelasyonel; nedensellik kanıtlanmadı. Yayın: eLife, 22 Haziran 2021; ilk yazar Ayelet Rosenberg, kıdemli yazar Martin Picard. Bulgu: 'Some gray hairs naturally regain their original color'.",
+   "url": "https://www.cuimc.columbia.edu/news/its-true-stress-does-turn-hair-gray-and-its-reversible",
+   "viral": "Fare çalışmasında 'kalıcı' denilen beyazlamanın insanda en azından bazı tellerde geri dönebildiğinin gösterilmesi; 'tatilde saçı koyulaştı' hikâyesi çok paylaşılabilir."
+  },
+  {
+   "id": "BC7",
+   "safe": "Araştırmacılar her teli milimetrenin yirmide biri inceliğinde dilimlere ayırdı. Her dilim yalnızca birkaç saatlik uzamaya denk geldiği için saç bir 'stres günlüğü' gibi okunabiliyor. Ekibe göre yıllardır beyaz saçlı 70 yaşındaki birinde stresi azaltmak saçı koyulaştırmaz.",
+   "detail": "Tür: İNSAN, 14 gönüllü. Dilim alıntısı: 'Each slice, about 1/20th of a millimeter wide, represents about an hour of hair growth.' Mitokondri açıklaması bir model önerisi, kanıtlanmış mekanizma değil.",
+   "url": "https://www.cuimc.columbia.edu/news/its-true-stress-does-turn-hair-gray-and-its-reversible",
+   "viral": "'Saçın saat saat stres geçmişini kaydediyor' fikri ilgi çekici; aynı zamanda 'stres azalınca beyazlar geçer' abartısını düzelten bir dürüstlük notu."
+  },
+  {
+   "id": "BC8",
+   "safe": "Saçın beyazlaması, telde melanin pigmentinin kaybolmasından kaynaklanır. Beyaz tel boyanmış değil, pigmentsiz bir teldir.",
+   "detail": "İnsan saçı, genel açıklama. 'Gri görünüm, pigmentli ve pigmentsiz tellerin karışımıdır' kısmını açtığım hiçbir sayfa doğrudan söylemedi (yalnızca arama sonuçlarında dermatologların 'gri = az melanin, beyaz = hiç melanin yok' ayrımı geçti); bu kısım bu iddiada DOĞRULANMIŞ değil, ayrı kaynakla teyit edilmeli.",
+   "url": "https://www.bradford.ac.uk/news/archive/2016/first-gene-for-grey-hair-found.php",
+   "viral": "'Aslında gri saç diye bir pigment yok' gibi bir giriş cümlesi için temel sağlar, ama 'karışım' kısmı doğrulanmadan söylenmemeli."
+  },
+  {
+   "id": "BC9",
+   "safe": "'50 yaşında herkesin yarısının saçı yarı yarıya beyazdır' kuralı abartılı. 4 binden fazla kişiyle yapılan bir araştırmaya göre bu oran dünya genelinde %50 değil, nüfusa göre %6 ile %23 arasında.",
+   "detail": "Tür: İNSAN, 4.192 erkek ve kadın gönüllü; saç rengi standart renk örnekleriyle karşılaştırıldı. Kaynak bir klinik blog yazısı (ikincil kaynak), makalenin kendisi açılmadı. Kural orijinalinde beyaz ırk (Kafkas) nüfus için söylenmiş.",
+   "url": "https://donovanmedical.com/hair-blog/50-50-50-rule-revisited",
+   "viral": "Herkesin bildiği bir 'kuralın' çürütülmesi: gerçek oran %50 değil, en fazla %23. Güçlü bir mit kırıcı."
+  },
+  {
+   "id": "BC10",
+   "safe": "45-65 yaş arasındaki kişilerin %74'ünde beyaz saç vardı, ama ortalama beyazlık yalnızca %27'ydi. Erkekler daha çok beyazladı, Asya ve Afrika kökenliler daha az.",
+   "detail": "Tür: İNSAN, 4.192 gönüllü, 45-65 yaş alt grubu. İkincil kaynak (blog). Ülkeler sayfada belirtilmiyor.",
+   "url": "https://donovanmedical.com/hair-blog/50-50-50-rule-revisited",
+   "viral": "'Çoğumuz beyazlıyoruz ama sandığımızdan çok daha az' karşıtlığı; etnik köken ve cinsiyet farkı yorumları tetikler."
+  },
+  {
+   "id": "BC11",
+   "safe": "2016'da Latin Amerika'dan 6 bini aşkın kişinin DNA'sı incelendi ve IRF4, beyazlamayla ilişkilendirilen ilk insan geni oldu. Beyazlamanın genetik bir yanı var ama bu tek gen tek başına belirleyici değil.",
+   "detail": "Tür: İNSAN, CANDELA kohortu; 6.630 kişi toplandı, eleme sonrası 6.357 kişi analiz edildi. IRF4 melanin üretimi ve depolanmasını düzenliyor. Adhikari: genler 'are unlikely to work in isolation'. Genetik ve çevre payları için yüzde verilmiyor. Kozmetik ve adli uygulamalar yalnızca olasılık.",
+   "url": "https://www.bradford.ac.uk/news/archive/2016/first-gene-for-grey-hair-found.php",
+   "viral": "'Beyaz saç geni bulundu' başlığı; ama tek başına belirleyici olmadığı notuyla."
+  },
+  {
+   "id": "BC12",
+   "safe": "2009'daki bir çalışmaya göre yaşla birlikte foliküllerde hidrojen peroksit birikiyor ve melanin üretimini bozabiliyor. Dergi editörü bunu 'saçımızı içeriden ağartıyoruz' diye özetledi.",
+   "detail": "Tür: İNSAN kıl folikülü hücre kültürleri ('examining cell cultures of human hair follicles'; makale özeti ayrıca saç tellerinde in vivo ölçümden söz ediyor). 'Ağartma' sözü yazarlara değil, FASEB J editörü Weissmann'a ait. Makale: 'Senile hair graying: H2O2-mediated oxidative stress affects human hair color by blunting methionine sulfoxide repair'. Tedavi önerilmedi; 'first step' olarak niteleniyor.",
+   "url": "https://www.sciencedaily.com/releases/2009/02/090223131123.htm",
+   "viral": "'Saçınız kendi kendini oksijenli suyla açıyor' görseli; berberdeki oksijenli su ile bağlantı kurulursa çok akılda kalıcı."
+  }
+ ],
+ "dropped": [],
+ "viral": {
+  "myth_wordings_tr": [
+   "EN YAYGIN SAYI 'İKİ'. Evrimağacı'nın doğruluk kontrolü inancı 'Bir beyaz saç koparırsan yerine iki tane çıkar' diye aktarıyor ve 'SAHTE' etiketini veriyor. Videonun ana cümlesi bu olsun.",
+   "Sayısız genel kalıp: 'Beyaz saçını koparma, yerine daha fazla beyaz saç çıkar!' (Webtekno: 'yediden yetmişe herkes' inanıyor). Başlıklarda en sık 'Beyaz saç kopardıkça çoğalır mı?' geçiyor (Milliyet, Habergazetesi, İşçi Haber).",
+   "Abartılı çocukluk kalıbı: 'Tek bir beyaz teli koparırsan bütün saçın beyazlar' ve 'saç iki şeyden beyazlar: ya yaşlanırsın ya beyazı koparırsın' (Habertürk, Kadir Kaymakçı).",
+   "Yayılma kalıbı: 'Koparırsan yanındaki siyahlar da hızla beyazlar' (Milliyet/Takvim'deki aktarımlar).",
+   "'YEDİ' YAZILI KAYNAKTA ÇIKMADI: 3 aramada da 'yedi tane çıkar' biçimine rastlanmadı. 'Yedi' yalnızca 'yediden yetmişe' deyiminde geçiyor. 'Üç' de çıkmadı. Bunları gerçek bir söyleniş gibi sunma, yorumda soru olarak kullan (CTA'ya bak).",
+   "Doğrulanmış bilim cümleleri: (1) Her folikül yalnızca bir tel üretir, Tobin'in deyişiyle 'minik saç fabrikaları'. Habertürk adını 'Desman Tobin' yazıyor, doğrusu Prof. Desmond Tobin, University College Dublin. (2) Koparınca kök yerinde kalır ve aynı delikten yine tek, yine beyaz bir tel çıkar. (3) İnanç bir korelasyon hatası: insanlar beyazlar zaten artarken koparmaya başlıyor. (4) Asıl risk sürekli koparmanın folikülü hasarlayıp teli hiç çıkmaz hale getirmesi. Örnek: 2000'lerin ince kaş modasında kaşlar bir daha çıkmadı. (5) Bonus: beyaz teller daha hızlı uzayabilir.",
+   "Kaynak notu: halktv.com.tr linki alakasız bir alan adına (googl.com) yönlendiriyor, kullanma. Evrimağacı sayfası 403 verdi, içeriği arama özetinden alındı.",
+   "Kaynaklar: https://www.webtekno.com/beyaz-sac-teli-koparmak-beyaz-saclari-cogaltir-mi-h155983.html | https://www.haberturk.com/ozel-icerikler/kadir-kaymakci/3872213-beyaz-saclar-hayatta-erteledigimiz-seylerin-gostergesi-mi | https://evrimagaci.org/next/beyaz-saclar-koparilirsa-yerine-daha-fazla-beyaz-sac-cikar-mi-788 | https://milliyet.com.tr/pembenar/galeri/beyaz-saclar-koparinca-cogalir-mi-yillardir-bu-efsaneyle-yasiyoruz-cevabi-sasirtti-7157867 | https://www.takvim.com.tr/yasam/2024/09/22/beyaz-sac-koparmak-beyazlari-cogaltir-mi-uzman-stilist-acikladi | https://listelist.com/beyaz-sac-tellerini-neden-koparmamalisiniz/"
+  ],
+  "hooks": [
+   "TAHMİN KANCASI (önerilen ana kanca): 0.0 sn'de cımbız beyaz teli çeker, 'pop' sesi gelir ve görüntü donar. Ekranda 'Yerine kaç tane çıkar?' yazar, altında 0 / 1 / 2 / 7 seçenekleri. Seslendirme: 'Bir koparırsan iki tane çıkar... öyle mi?'",
+   "TERSİNE ÇEVİRME / İKİNCİ DÖNGÜ: 'Beyaz saç koparmak beyazı çoğaltmaz. Ama başka bir şeyi sonsuza kadar yok eder.' Cevabı ilk saniyede ver, asıl merakı ikinci cümleye sakla.",
+   "KİMLİK KANCASI: 'Annenden ya da kuaföründen \"koparma, iki tane çıkar\" diye duyduysan... dur.' Kişi kendini ilk saniyede tanır.",
+   "SAYAÇ KANCASI: Ekranda 1 -> 2 -> 7 -> 49 diye sayaç patlar, sonra kırmızı X ile '1'e çakılır. Yazı: 'Hepsi yalan. Peki gerçek ne?'",
+   "SAYI KANCASI: 'Kafanda yaklaşık 100 bin minik fabrika var. Birini koparınca ne oluyor?' Folikül sayısı genel literatür bilgisi, kaynaklarda geçmiyor. Bu yüzden 'yaklaşık' diye söyle.",
+   "SUÇLAMA KANCASI: 'Saçların cımbız yüzünden beyazlamıyor. Asıl suçlu her gün aynada gördüğün bir şey.' Cevap: yaş. Korelasyon açıklamasına bağlanır.",
+   "Kural: kancadaki ilk kelime ya 'Bir' ya da bir rakam olsun. Kancayı ekran yazısı + ses + hareket ile aynı anda ver, ilk 2 sn'de bağlam (beyaz tel, cımbız) görünür olsun."
+  ],
+  "retention": [
+   "İSKELET (20-30 sn): 0-2 kanca + tahmin -> 2-6 'neden inanıyoruz' -> 6-10 'SAHTE' damgası ve 1 folikül = 1 tel -> 10-16 ikinci açık döngü 'ama asıl tehlike başka' -> 16-22 folikül hasarı ve ince kaş örneği -> 22-26 bonus (beyaz tel daha hızlı uzar) -> 26-30 CTA ve döngü sonu.",
+   "AÇIK DÖNGÜ ZİNCİRİ: Bir döngüyü kapattığın anda yenisini aç. 'Sahte' cevabını ~8. sn'de ver (fazla bekletmek sinir eder), aynı nefeste 'ama koparmanın gerçek bedeli var' diyerek ikinci döngüyü aç.",
+   "TAHMİN ETTİRME: Seçenekler ekranda 1-1.5 sn kalsın, tik-tak sesi çalsın. İzleyici kafasında bir rakam seçer ve cevabı görmek için kalır. Cevapta seçenek kartları tek tek kırmızıya döner, yalnızca '1' yeşil kalır.",
+   "SAYAÇ / İLERLEME: Köşede '3 gerçek: 1/3, 2/3, 3/3' sayacı olsun (korelasyon, folikül, hasar). İzleyici kaç adım kaldığını görürse sona kadar kalır.",
+   "DESEN KIRICI her 2-3 sn'de: ani yakınlaşma, 0.3 sn sessizlik, renk paletinin kırmızıdan turkuaza geçişi, plak cızırtısı, ekran sarsıntısı. Her kırıcı yeni bir bilgi taşısın, sadece süs olmasın.",
+   "KORELASYON TUZAĞI SAHNESİ: 'Koparmaya ne zaman başladın? Beyazlar zaten çoğalırken.' Kısa ve 'aha' anı yaratır, izleyicide en çok kayıt ve paylaşım tetikleyen kısım bu olur.",
+   "DÖNGÜ SONU: Son karede cımbız tekrar tele uzanır, yazı: 'Yine de koparacak mısın?' Görüntü ilk kareye birebir bağlansın ki otomatik yeniden oynatma kesintisiz görünsün.",
+   "ALTYAZI: Ekranın üst-orta güvenli alanında kelime kelime kinetik altyazı. Anahtar kelimeler renkli: SAHTE kırmızı, FOLİKÜL turkuaz, KÖK sarı. Sessiz izleyen de takip edebilsin."
+  ],
+  "visual_fx": [
+   "MAKRO YAKINLAŞMA: Saç derisi yüzeyinden tek beyaz tele hızlı dolly zoom yap, kenarlarda hız çizgileri olsun, 'whoosh' sesi gelsin. Tel ekranı ikiye bölen dikey bir çizgi gibi dursun.",
+   "FOLİKÜL KESİTİ (ana sahne): Deri katmanları kesitte görünsün (epidermis, dermis, folikül, kök ampulü). Melanositler renk damlası gibi çizilsin, yaşlanma çubuğu ilerledikçe damlalar söner ve tel beyazlar. Koparma anında tel yukarı çekilir, ampul yerinde kalır, üstünde 'KÖK YERİNDE' etiketi belirir.",
+   "FABRİKA METAFORU: Folikülü bacalı minik bir fabrika olarak çiz, çıkış bandından tek bir tel çıksın. Yazı: '1 fabrika = 1 tel'. Tobin'in 'minik saç fabrikaları' ifadesine dayanıyor, kaynakla örtüşür.",
+   "MİT / GERÇEK BÖLÜNMÜŞ EKRAN: Solda karikatür mit: tel kopar, delikten 2 tel fışkırır, ardından 7. Sağda gerçek: aynı delikten zaman atlamasıyla yine tek beyaz tel uzar. Mit tarafı kırmızı/turuncu, gerçek tarafı turkuaz/yeşil.",
+   "SAYAÇ: Slot makinesi gibi dönen rakam 1 -> 2 -> 7, ardından kırmızı X damgası ve rakamın '1'e çakılması. Çakılmada ekran sarsıntısı olsun, bas vuruşu gelsin.",
+   "KORELASYON GRAFİĞİ: 'Koparma' ve 'beyaz saç' çizgileri birlikte yükselir. Üçüncü çizgi 'YAŞ' alttan girer, nedensellik oku yaşa döner. 3 sn'lik çizim animasyonu yeterli.",
+   "HASAR SAHNESİ: Aynı folikül tekrar tekrar çekilir, her çekişte çatlak büyür, sonunda folikül söner ve 'kapanır'. Hemen ardından ince kaş karikatürü gelsin: 2000'ler modası, 'bir daha çıkmadı'.",
+   "KİNETİK TİPOGRAFİ: 'SAHTE' kelimesi mühür gibi basılsın, ekran sarsılsın, mürekkep sıçrasın. '1 folikül = 1 tel' yazısı saç teli gibi çizgi animasyonuyla yazılsın. Rakamlar büyük, kalın ve kısa süre ekrandan taşsın.",
+   "SES VURGULARI: cımbızda 'çıt/pop', tahminde tik-tak, mit kırılırken plak cızırtısı, zoomda whoosh, gerçekte 'ding', ikinci döngüde bas düşüşü, twist öncesi 0.3 sn sessizlik. Müzik konuşmanın altında düşük kalsın.",
+   "PALET: Koyu lacivert arka plan, parlak beyaz tel, kırmızı mit, turkuaz gerçek, sarı kök. Her sahnede en fazla 3 renk, dikey 9:16, ana öğe orta güvenli alanda."
+  ],
+  "cta": [
+   "RAKAM SORUSU (en güçlü, yorumlarda tartışma doğurur): 'Sizin evde kaç tane çıkar deniyordu? Yorumlara sadece rakamı yaz: 2 mi, 7 mi?' Yazı tek kelimelik cevap istediği için yorum yazmak kolay. Bölgeden bölgeye değişen cevaplar tartışma başlatır. Hangi sayının gerçekte yaygın olduğunu da bu yorumlardan öğrenirsin.",
+   "KİM SÖYLEDİ: 'Bunu sana ilk kim söyledi? Annen mi, anneannen mi, kuaförün mü?' Kişisel anı yorumları getirir.",
+   "İTİRAF: 'Dürüst ol: aynada hiç cımbızla beyaz avladın mı? Evet / Hayır.'",
+   "SIRADAKİ MİT OYLAMASI: 'Sıradaki mit: \"Saçı kestikçe gürleşir.\" Sence doğru mu? D ya da Y yaz, en çok oy alanı çekiyoruz.' Hem yorum toplar hem dizi takibi sağlar.",
+   "PAYLAŞIM: 'Hala cımbızla gezen arkadaşına gönder.' Gönderme (DM paylaşımı) erişim için güçlü bir sinyal.",
+   "SABİTLENMİŞ YORUM: 'Doğru cevap: 1 folikül = 1 tel. Ama sürekli koparırsan bu sayı 0'a iner.' Cevabı netleştirir, ikinci tur yorumları tetikler.",
+   "Kural: Açıklamanın ilk satırına tek CTA koy, ekranda da son 3 sn'de aynı CTA görünsün. 'Beğen, takip et, yorum yap' gibi üçlü istekten kaçın."
+  ]
+ },
+ "variants": {
+  "variants": [
+   {
+    "strategy": "A - Mit avcısı (851 karakter, yaklaşık 57-60 sn). Halktaki en yaygın söyleniş olan 'iki tane çıkar' ile açılıyor ve 1. saniyede tahmin kartları geliyor. Cevap 3. saniyede 'Doğru değil' ve SAHTE damgası. Aynı nefeste 'asıl bedel başka, ona geleceğiz' diye açık döngü açılıyor. Köşede 3 gerçeklik sayacı ilerliyor: 1 folikül = 1 tel, bulaşıcı değil / suçlu yaş, asıl bedel. Döngü 30. saniyede hasar riskiyle kapanıyor. Bilimsel 'Meğerse' kırılması en şaşırtıcı bilgi olarak sona saklandı: fare deneyinde sıkışan renk kök hücreleri, oran yüzde on beşten neredeyse yarıya çıkıyor. Hemen ardından 'fare deneyi, insanda kanıtlanmadı' uyarısı geliyor. Kapanışta rakam soran yorum CTA'sı var. Son kare ilk kareye bağlanıp döngü oluşturuyor. Tıbbi tavsiye yok, yalnızca olgular var.",
+    "narration_tr": "Bir beyaz saç koparırsan yerine iki tane çıkar. Doğru değil. Ama koparmanın asıl bedeli başka. Ona geleceğiz. Her saç kendi yuvasından, folikülden çıkar. Bir folikül, tek tel. Koparınca aynı yerden yine tek tel gelir. Büyük ihtimalle yine beyaz. Rengin kararı kökte verilir, tel sadece sonuç. Neden çoğalıyor gibi? Beyaz bulaşıcı değil, her folikül kendi hızında beyazlar. Yaşla beyazlar zaten artıyor. Koparınca çoğaldı sanıyoruz. Bedel şu: Aynı folikülü tekrar tekrar koparmak enfeksiyona, ize, hatta kel bölgelere yol açabilir. Fazla beyaz değil, o noktada hiç saç kalmayabilir. Meğerse farede tüy tekrar tekrar koparılınca renk kök hücreleri sıkışıyor. Bu foliküllerin oranı yüzde on beşten neredeyse yarıya çıktı. Sıkışan hücre pigment hücresine dönüşemedi. Ama bu fare deneyi, insanda kanıtlanmadı. Sizin evde kaç tane çıkar denirdi? Rakamı yaz.",
+    "beats": [
+     {
+      "line": "Bir beyaz saç koparırsan yerine iki tane çıkar.",
+      "visual": "0.0-3.3 sn | İlk kare doğrudan aksiyonla açılıyor. Çizgi film erkek karakter aynaya eğilmiş (koyu kontur, düz renk, keskin gölge), cımbızla parlak beyaz teli çekiyor. 0.4. saniyede 'pop' sesiyle tel kopuyor ve görüntü donuyor. Lacivert zemine yukarıdan dört tahmin kartı düşüyor: 0 / 1 / 2 / 7. Kartlar 1.5 sn ekranda kalıyor. Kamera tele zoom-punch yapıyor. Altyazı kelime kelime akıyor, 'İKİ' kırmızı.",
+      "onscreen_text": "Yerine kaç tane çıkar?  0 · 1 · 2 · 7",
+      "sfx": "cımbız 'çıt/pop' + 1.5 sn tik-tak"
+     },
+     {
+      "line": "Doğru değil.",
+      "visual": "3.3-4.2 sn | Kartlar sırayla kırmızıya dönüp çatlıyor, yalnızca '1' turkuaz kalıyor. Ekrana kırmızı 'SAHTE' mührü basılıyor, mürekkep sıçrıyor, ekran sarsılıyor.",
+      "onscreen_text": "SAHTE",
+      "sfx": "plak cızırtısı + mühür bas vuruşu"
+     },
+     {
+      "line": "Ama koparmanın asıl bedeli başka. Ona geleceğiz.",
+      "visual": "4.2-7.6 sn | Karakterin şaşkın yüzüne hızlı zoom yapılıyor. Arkada kafa derisinde boş bir delik silueti kırmızı yanıp sönüyor, üstünde kilitli bir asma kilit duruyor (açık döngü). Sağ üst köşede ilerleme sayacı beliriyor: 'GERÇEK 0/3'.",
+      "onscreen_text": "ASIL BEDEL → SONDA",
+      "sfx": "bas düşüşü + iki kalp atışı"
+     },
+     {
+      "line": "Her saç kendi yuvasından, folikülden çıkar. Bir folikül, tek tel.",
+      "visual": "7.6-12.2 sn | Whoosh ile kafa derisine makro dalış yapılıyor, kenarlarda hız çizgileri var. Deri kesiti açılıyor: epidermis, dermis ve folikül. Folikül bacalı minik bir fabrika olarak çiziliyor, çıkış bandından tek bir tel çıkıyor. Sayaç 1/3 oluyor.",
+      "onscreen_text": "1 FOLİKÜL = 1 TEL",
+      "sfx": "whoosh + fabrika 'tık'"
+     },
+     {
+      "line": "Koparınca aynı yerden yine tek tel gelir.",
+      "visual": "12.2-15.1 sn | Ekran ikiye bölünüyor. Solda kırmızı/turuncu karikatür mit: delikten önce iki, sonra yedi tel fışkırıyor, ardından kırmızı X ile siliniyor. Sağda turkuaz gerçek: aynı delikten zaman atlamasıyla tek tel uzuyor.",
+      "onscreen_text": "MİT: 2 ✗   GERÇEK: 1 ✓",
+      "sfx": "pop-pop (mit) → 'ding' (gerçek)"
+     },
+     {
+      "line": "Büyük ihtimalle yine beyaz.",
+      "visual": "15.1-17.1 sn | Uzayan tek tel bembeyaz parlıyor. Zoom-punch, telin ucunda küçük bir parıltı yıldızı.",
+      "onscreen_text": "YİNE BEYAZ",
+      "sfx": "parıltı 'tink'"
+     },
+     {
+      "line": "Rengin kararı kökte verilir, tel sadece sonuç.",
+      "visual": "17.1-20.3 sn | Kamera kesitte aşağı kayıyor. Kök ampulü sarı halkayla vurgulanıyor. Pigment hücreleri pigment tanelerini damla damla tele aktarıyor. 'KARAR BURADA' oku kökü, 'SONUÇ' etiketi teli gösteriyor.",
+      "onscreen_text": "RENK KÖKTE BELİRLENİR",
+      "sfx": "damla 'blup' sesleri"
+     },
+     {
+      "line": "Neden çoğalıyor gibi?",
+      "visual": "20.3-21.8 sn | Desen kırıcı: 0.3 sn sessizlik, ekran kararıyor. Ortaya büyük bir soru işareti zıplıyor. Aynadaki karakter kafasını kaşıyor.",
+      "onscreen_text": "PEKİ NEDEN?",
+      "sfx": "0.3 sn sessizlik → pop"
+     },
+     {
+      "line": "Beyaz bulaşıcı değil, her folikül kendi hızında beyazlar.",
+      "visual": "21.8-25.9 sn | Palet kırmızıdan turkuaza geçiyor. Yan yana beş folikül var, her birinin üstünde farklı hızda dönen bir saat. Bir beyaz telden komşulara 'bulaşma' okları uzanıyor ve kırmızı X ile kırılıyor. Sayaç 2/3 oluyor.",
+      "onscreen_text": "BULAŞICI DEĞİL",
+      "sfx": "farklı tempolarda tik-taklar"
+     },
+     {
+      "line": "Yaşla beyazlar zaten artıyor. Koparınca çoğaldı sanıyoruz.",
+      "visual": "25.9-30.0 sn | Korelasyon grafiği çiziliyor: 'cımbız' ve 'beyaz saç' çizgileri birlikte yükseliyor. Alttan sarı üçüncü çizgi 'YAŞ' giriyor. Nedensellik oku cımbızdan kopup yaşa dönüyor. Arkada takvim yaprakları uçuşuyor.",
+      "onscreen_text": "SUÇLU CIMBIZ DEĞİL: YAŞ",
+      "sfx": "çizim 'sswip' + 'ding'"
+     },
+     {
+      "line": "Bedel şu: Aynı folikülü tekrar tekrar koparmak",
+      "visual": "30.0-33.2 sn | Açık döngü kapanıyor, asma kilit 'klak' diye açılıyor. Kesitte aynı folikül art arda üç kez çekiliyor, her çekişte ekran sarsılıyor ve folikül duvarındaki çatlak büyüyor. Sayaç 3/3 oluyor.",
+      "onscreen_text": "ASIL BEDEL",
+      "sfx": "kilit 'klak' + çıt-çıt-çıt + sarsıntı"
+     },
+     {
+      "line": "enfeksiyona, ize, hatta kel bölgelere yol açabilir.",
+      "visual": "33.2-36.8 sn | Kinetik tipografi: üç kelime sırayla folikülün çevresine çarpıyor. Önce kırmızı iltihap halkası, sonra iz çizgisi geliyor. En sonda kafa derisinde küçük, boş, saçsız bir daire beliriyor.",
+      "onscreen_text": "ENFEKSİYON · İZ · KEL BÖLGE",
+      "sfx": "üç bas vuruşu"
+     },
+     {
+      "line": "Fazla beyaz değil, o noktada hiç saç kalmayabilir.",
+      "visual": "36.8-40.4 sn | Folikül fabrikasının bacası sönüyor, ışığı kapanıyor. Zoom-out ile karakterin kafasındaki tek boş nokta görünüyor. Palet soğuk griye dönüyor.",
+      "onscreen_text": "HİÇ SAÇ KALMAYABİLİR",
+      "sfx": "elektrik kesilme 'vınnn' + kısa sessizlik"
+     },
+     {
+      "line": "Meğerse farede tüy tekrar tekrar koparılınca renk kök hücreleri sıkışıyor.",
+      "visual": "40.4-45.5 sn | Flaş + zoom-punch, kinetik 'MEĞERSE' başlığı. Sahne sevimli çizgi film bir fareye kesiliyor. Köşede bu sahne boyunca 'FARE DENEYİ' rozeti duruyor. Fare folikülünün içinde renk kök hücreleri (küçük turuncu karakterler) trafikte sıkışan arabalar gibi kilitleniyor.",
+      "onscreen_text": "MEĞERSE… (FARE DENEYİ)",
+      "sfx": "flaş 'fsst' + kısa trafik kornası"
+     },
+     {
+      "line": "Bu foliküllerin oranı yüzde on beşten neredeyse yarıya çıktı.",
+      "visual": "45.5-49.8 sn | Slot makinesi sayacı %15'ten dönerek yaklaşık %50'de duruyor. Yanında 20 foliküllük ızgara var: önce 3'ü, sonra yaklaşık 10'u kırmızı 'sıkışık' işaretiyle yanıyor. Durma anında ekran sarsılıyor.",
+      "onscreen_text": "%15 → ~%50",
+      "sfx": "slot dönüşü + bas vuruşu"
+     },
+     {
+      "line": "Sıkışan hücre pigment hücresine dönüşemedi.",
+      "visual": "49.8-52.9 sn | Sıkışmış kök hücre karakteri 'DÖNÜŞ' butonuna basıyor, buton kırmızı yanıyor. Pigment tanesi çıkmıyor, tele giden boru boş kalıyor.",
+      "onscreen_text": "DÖNÜŞEMEDİ",
+      "sfx": "hata 'bzzt'"
+     },
+     {
+      "line": "Ama bu fare deneyi, insanda kanıtlanmadı.",
+      "visual": "52.9-55.8 sn | Fare sahnesi küçülüyor, yanına bir insan silueti geliyor. Aralarına sarı 'HENÜZ KANITLANMADI' bandı geriliyor. Altta küçük kaynak notu: 'Nature, 2023 – fare'.",
+      "onscreen_text": "FARE ≠ İNSAN · henüz kanıt yok",
+      "sfx": "kayıt 'tık'"
+     },
+     {
+      "line": "Sizin evde kaç tane çıkar denirdi? Rakamı yaz.",
+      "visual": "55.8-59.0 sn | Döngü sonu: aynadaki karakter cımbızı yeniden beyaz tele uzatıyor, kadraj ilk kareyle birebir aynı. 0 / 1 / 2 / 7 kartları tekrar düşüp donuyor, böylece otomatik yeniden oynatma ilk saniyeye kesintisiz bağlanıyor.",
+      "onscreen_text": "Sizin evde kaç? Rakamı yaz ↓",
+      "sfx": "tik-tak → pop (döngü)"
+     }
+    ],
+    "fact_ids": [
+     "AC1",
+     "AC2",
+     "AC3",
+     "AC4",
+     "AC5",
+     "AC6",
+     "AC8",
+     "BC1",
+     "BC2"
+    ]
+   },
+   {
+    "strategy": "B - Ayna POV (850 karakter, yaklaşık 57-60 sn). İzleyici aynada ilk beyaz telini bulduğu ana sokuluyor. İlk cümle hem miti hem çatışmayı içeriyor: 'Bu teli koparırsan yerine iki beyaz çıkacak.' Ardından 3-2-1 geri sayım ve kalp atışıyla cımbız gerilimi kuruluyor. 'Çıt' anında kamera boşalan deliğe dalıyor. Aynı anda 'sonda daha tuhaf bir gerçek var' açık döngüsü açılıyor. Folikül içinde mit adım adım çöküyor: yuva yerinde, tek tel, renk kökte, aylar sonra yine tek ve büyük olasılıkla beyaz tel. Sonra bulaşıcı değil / suçlu yaş, ardından tekrarlı koparmanın riski geliyor. 'Meğerse' kırılması beklenmedik insan bulgusu: bazı beyaz teller doğal olarak eski rengine dönebiliyor (14 kişilik küçük çalışma, tatildeki beş tel). Sınırlamalar metinde açıkça korunuyor: kesin neden-sonuç değil, ekibe göre yıllardır beyaz olan saç dönmez, koparmakla olmaz. Kapanışta evet/hayır itiraf CTA'sı var. Son kare aynaya dönüp ilk kareye bağlanıyor. Tıbbi tavsiye yok.",
+    "narration_tr": "Bu teli koparırsan yerine iki beyaz çıkacak. Öyle diyorlar. Üç, iki, bir... Çıt. Deliğe dalıyoruz. Sonda daha tuhaf bir gerçek var. Tel gitti, yuvası yerinde. Adı folikül. Tek tel üretir, yenisi açılmaz. Renk de burada verilir. Pigment hücreleri ölünce tel beyaz çıkar. Birkaç ay sonra aynı delikten yine tek tel gelecek. Büyük ihtimalle yine beyaz. Ya çoğalma hissi? Beyaz bulaşıcı değil, her folikülün kendi saati var. Beyazlar yaşla zaten artıyor. Asıl risk, aynı yeri tekrar tekrar koparmak: enfeksiyon, iz, hatta kel bölge. Meğerse bazı beyaz teller doğal olarak eski rengine dönebiliyor. On dört kişilik küçük bir çalışmada, tatile çıkan birinin beş teli tatilde koyulaştı. Stresle ilgisi olabilir, kesin değil. Ekibe göre yıllardır beyaz olan saç dönmez. Koparmak da çare değil. Dürüst ol: Hiç cımbızla beyaz avladın mı? Evet ya da hayır, yaz.",
+    "beats": [
+     {
+      "line": "Bu teli koparırsan yerine iki beyaz çıkacak.",
+      "visual": "0.0-3.1 sn | Kamera aynanın içinden bakıyor (izleyicinin yansıması). Çizgi film karakterin koyu saçları arasında tek bir parlak beyaz tel var, kamera ona hızla zoom-punch yapıyor. Kadraja titreyen bir elde cımbız giriyor. Köşede anne silueti ve 'Koparma!' konuşma balonu beliriyor.",
+      "onscreen_text": "KOPARIRSAN 2 TANE ÇIKAR?",
+      "sfx": "kalp atışı başlıyor + parıltı 'tink'"
+     },
+     {
+      "line": "Öyle diyorlar. Üç, iki, bir...",
+      "visual": "3.1-5.3 sn | Ekstrem yakın plan: cımbızın uçları tele kapanıyor. Ekranda dev bir 3-2-1 geri sayımı var, her rakamda kamera hafif sarsıntıyla biraz daha yaklaşıyor. Göz bebeği büyüyor.",
+      "onscreen_text": "3 · 2 · 1",
+      "sfx": "hızlanan kalp atışı + tik-tak"
+     },
+     {
+      "line": "Çıt.",
+      "visual": "5.3-5.8 sn | Beyaz flaş karesi. Tel kopuyor, görüntü 0.2 sn donuyor, 'ÇIT' yazısı ekrandan taşıyor.",
+      "onscreen_text": "ÇIT!",
+      "sfx": "keskin 'çıt' + ani sessizlik"
+     },
+     {
+      "line": "Deliğe dalıyoruz. Sonda daha tuhaf bir gerçek var.",
+      "visual": "5.8-9.2 sn | Kamera boşalan deliğe dalıyor: uzun whoosh, hız çizgileri, kafa derisi katmanları (epidermis, dermis) birer birer geçiliyor. Sağ üst köşede kilitli bir 'SON' kartı beliriyor (açık döngü).",
+      "onscreen_text": "SONDA: DAHA TUHAF BİR GERÇEK",
+      "sfx": "uzun whoosh + bas düşüşü"
+     },
+     {
+      "line": "Tel gitti, yuvası yerinde. Adı folikül.",
+      "visual": "9.2-11.9 sn | Folikül kesiti tam ekranda: tel yok ama yuva sağlam, turkuaz konturla parlıyor, 'FOLİKÜL' etiketi düşüyor.",
+      "onscreen_text": "YUVA YERİNDE: FOLİKÜL",
+      "sfx": "'ding'"
+     },
+     {
+      "line": "Tek tel üretir, yenisi açılmaz.",
+      "visual": "11.9-14.2 sn | Folikül bacalı minik bir fabrikaya dönüşüyor, çıkış bandında tek tel var. Yanında ikinci bir fabrika 'açılmaya' çalışıyor ve kırmızı X ile siliniyor.",
+      "onscreen_text": "1 FOLİKÜL = 1 TEL",
+      "sfx": "fabrika 'tık' + 'bzzt'"
+     },
+     {
+      "line": "Renk de burada verilir. Pigment hücreleri ölünce tel beyaz çıkar.",
+      "visual": "14.2-18.7 sn | Kök ampulü sarıyla vurgulanıyor. Pigment hücreleri (renkli damla karakterler) pigment tanelerini yukarı, tele pompalıyor ve tel koyu renkte. Sonra hücreler tek tek sönüyor, akış duruyor, banttan beyaz tel çıkıyor.",
+      "onscreen_text": "RENK KÖKTE · HÜCRE SÖNERSE BEYAZ",
+      "sfx": "damla 'blup'lar → söner 'pop'lar"
+     },
+     {
+      "line": "Birkaç ay sonra aynı delikten yine tek tel gelecek.",
+      "visual": "18.7-22.4 sn | Zaman atlaması: takvim yaprakları uçuşuyor, köşede 'AY 1… 2… 3' sayacı dönüyor. Aynı delikten tek bir tel yavaşça uzuyor.",
+      "onscreen_text": "BİRKAÇ AY SONRA: 1 TEL",
+      "sfx": "takvim yaprakları 'frrr'"
+     },
+     {
+      "line": "Büyük ihtimalle yine beyaz.",
+      "visual": "22.4-24.3 sn | Tel yüzeye çıkıyor, kamera aynadaki POV'a geri kesiyor. Aynı noktada yine bir beyaz tel parlıyor. Zoom-punch, karakterin yüzünde 'yine mi' ifadesi.",
+      "onscreen_text": "YİNE BEYAZ",
+      "sfx": "parıltı 'tink' + komik 'womp'"
+     },
+     {
+      "line": "Ya çoğalma hissi? Beyaz bulaşıcı değil, her folikülün kendi saati var.",
+      "visual": "24.3-29.2 sn | Desen kırıcı: palet kırmızıdan turkuaza geçiyor. Kafa derisi yukarıdan harita gibi görünüyor, her folikülün üstünde farklı hızda akan bir kum saati var. Bir beyaz telden komşulara uzanan 'bulaşma' oku kırılıyor.",
+      "onscreen_text": "BULAŞICI DEĞİL · HER FOLİKÜLÜN KENDİ SAATİ",
+      "sfx": "farklı tempolarda tik-taklar"
+     },
+     {
+      "line": "Beyazlar yaşla zaten artıyor.",
+      "visual": "29.2-31.3 sn | Aynadaki yansıma hızlı bir time-lapse ile yaşlanıyor (yaş sayacı 30 → 45). Kimse koparmadığı halde beyaz teller tek tek çoğalıyor.",
+      "onscreen_text": "SEBEP: YAŞ",
+      "sfx": "hızlanan saat tıkırtısı + 'ding'"
+     },
+     {
+      "line": "Asıl risk, aynı yeri tekrar tekrar koparmak: enfeksiyon, iz, hatta kel bölge.",
+      "visual": "31.3-36.7 sn | Kesitte aynı folikül üç kez art arda çekiliyor, her çekişte ekran sarsılıyor ve kırmızı çatlak büyüyor. Üç kelime kinetik olarak çarpıyor. Son karede kafa derisinde küçük boş bir nokta var, folikül fabrikasının ışığı sönüyor.",
+      "onscreen_text": "ENFEKSİYON · İZ · KEL BÖLGE",
+      "sfx": "çıt-çıt-çıt + üç bas vuruşu"
+     },
+     {
+      "line": "Meğerse bazı beyaz teller doğal olarak eski rengine dönebiliyor.",
+      "visual": "36.7-41.2 sn | Önce 0.3 sn sessizlik, sonra flaş ve kinetik 'MEĞERSE' başlığı. Köşedeki 'SON' kartının kilidi açılıyor. Makro planda tek bir beyaz tel var, kökten çıkan yeni kısmı koyu renkte uzuyor ve renk alttan yukarı doğru doluyor.",
+      "onscreen_text": "MEĞERSE… BEYAZ GERİ DÖNEBİLİYOR",
+      "sfx": "0.3 sn sessizlik → flaş 'fsst' + yükselen whoosh"
+     },
+     {
+      "line": "On dört kişilik küçük bir çalışmada, tatile çıkan birinin beş teli tatilde koyulaştı.",
+      "visual": "41.2-47.2 sn | Çizgi film tatil sahnesi: şezlong, güneş, rahatlamış karakter. Yanda beş tel var, uçları beyaz, köke yakın 'TATİL' bölümleri koyu. Her tel sırayla 'pop' ile koyulaşıyor. Köşe rozeti: 'İNSAN · 14 KİŞİ · KÜÇÜK ÇALIŞMA'.",
+      "onscreen_text": "14 KİŞİ · 5 TEL KOYULAŞTI",
+      "sfx": "dalga sesi + beş 'pop'"
+     },
+     {
+      "line": "Stresle ilgisi olabilir, kesin değil.",
+      "visual": "47.2-49.8 sn | Stres göstergesinin iğnesi düşüyor, telin rengi koyulaşıyor. Gösterge ile telin arasına sarı bir 'İLİŞKİ ≠ NEDEN' bandı geriliyor.",
+      "onscreen_text": "İLİŞKİ VAR · KESİN NEDEN DEĞİL",
+      "sfx": "kayıt 'tık'"
+     },
+     {
+      "line": "Ekibe göre yıllardır beyaz olan saç dönmez. Koparmak da çare değil.",
+      "visual": "49.8-54.6 sn | Bembeyaz saçlı yaşlı karakter 'STRES AZALT' butonuna basıyor, saç değişmiyor ve gri X beliriyor. Ardından cımbız ikonunun üstüne kırmızı X mührü basılıyor, ekran sarsılıyor.",
+      "onscreen_text": "YILLARDIR BEYAZSA DÖNMEZ · CIMBIZ ÇARE DEĞİL",
+      "sfx": "'womp' + mühür bas vuruşu"
+     },
+     {
+      "line": "Dürüst ol: Hiç cımbızla beyaz avladın mı? Evet ya da hayır, yaz.",
+      "visual": "54.6-59.0 sn | Döngü sonu: kamera aynaya dönüyor, kadraj ilk kareyle birebir aynı. Yeni bir beyaz tel parlıyor, cımbız yeniden uzanıyor. Ekranın altında büyük EVET / HAYIR butonları var. Kalp atışı ilk saniyeyle aynı ritimde, böylece otomatik yeniden oynatma kesintisiz bağlanıyor.",
+      "onscreen_text": "CIMBIZLA BEYAZ AVLADIN MI? EVET / HAYIR",
+      "sfx": "kalp atışı (açılışla aynı ritim)"
+     }
+    ],
+    "fact_ids": [
+     "AC2",
+     "AC3",
+     "AC4",
+     "AC5",
+     "AC6",
+     "AC7",
+     "AC8",
+     "AC9",
+     "BC6",
+     "BC7"
+    ]
+   }
+  ]
+ },
+ "final": {
+  "narration_tr": "Beyaz saçı koparma, yerine iki tane çıkar. Doğru değil. Ama asıl bedel başka, sona sakladım. Her saç kendi yuvasından, folikülden çıkar. Bir folikül, tek tel. Koparınca aynı yerden aylar sonra yine tek tel gelir. Büyük ihtimalle yine beyaz, çünkü renk kökte verilir. Peki neden çoğalıyor gibi? Beyaz bulaşıcı değil, her folikülün kendi saati var. Yaşla beyazlar zaten artıyor, çoğalma hissi muhtemelen bundan. Asıl bedel şu: Aynı folikülü tekrar tekrar koparmak enfeksiyona, ize, hatta kel bölgelere yol açabilir. Fazla beyaz değil, orada hiç saç kalmayabilir. Meğerse farede tüy tekrar tekrar koparılınca renk kök hücreleri sıkışıyor. Bu foliküllerin oranı yüzde on beşten neredeyse yarıya çıktı. Sıkışan hücre pigment hücresine dönüşemedi. Ama bu fare deneyi, insanda kanıtlanmadı. Sizde kaç tane çıkar denirdi? Rakamı yaz, cımbızcı arkadaşına gönder.",
+  "beats": [
+   {
+    "line": "Beyaz saçı koparma, yerine iki tane çıkar.",
+    "visual": "0.0-2.9 sn | Ayna POV: kamera aynanın içinden bakıyor. Çizgi film karakterin koyu saçları arasında tek parlak beyaz tel var, cımbız ilk karede zaten telin üstünde kapanmış (koyu kontur, düz renk, keskin gölge). Köşede anne silueti ve 'Koparma!' konuşma balonu beliriyor. 0.5. saniyede tel 'çıt' diye kopuyor, görüntü donuyor. Lacivert zemine yukarıdan dört tahmin kartı düşüyor: 0 / 1 / 2 / 7. Altyazı kelime kelime akıyor, 'İKİ' kırmızı.",
+    "onscreen_text": "Yerine kaç tane çıkar?  0 · 1 · 2 · 7",
+    "sfx": "kalp atışı + cımbız 'çıt' + kart düşme 'tak-tak-tak-tak'"
+   },
+   {
+    "line": "Doğru değil.",
+    "visual": "2.9-3.8 sn | Kartlar sırayla kırmızıya dönüp çatlıyor, yalnızca '1' turkuaz kalıyor. Ekrana kırmızı 'SAHTE' mührü basılıyor, mürekkep sıçrıyor, ekran sarsılıyor.",
+    "onscreen_text": "SAHTE",
+    "sfx": "plak cızırtısı + mühür bas vuruşu"
+   },
+   {
+    "line": "Ama asıl bedel başka, sona sakladım.",
+    "visual": "3.8-6.4 sn | Karakterin şaşkın yüzüne hızlı zoom. Arkada kafa derisinde boş bir delik silueti kırmızı yanıp sönüyor, üstünde kilitli bir asma kilit var (açık döngü). Sağ üst köşede ilerleme sayacı beliriyor: 'GERÇEK 0/3'. Bu sayaç videonun sonuna kadar köşede kalıyor.",
+    "onscreen_text": "ASIL BEDEL → SONDA",
+    "sfx": "bas düşüşü + iki kalp atışı"
+   },
+   {
+    "line": "Her saç kendi yuvasından, folikülden çıkar. Bir folikül, tek tel.",
+    "visual": "6.4-10.8 sn | Kamera boşalan deliğe dalıyor: uzun whoosh, hız çizgileri, epidermis ve dermis katmanları birer birer geçiliyor. Folikül kesiti tam ekrana geliyor, yuva sağlam ve turkuaz konturla parlıyor, 'FOLİKÜL' etiketi düşüyor. Folikül bacalı minik bir fabrikaya dönüşüyor, çıkış bandında yalnızca tek tel var. Sayaç 1/3 oluyor.",
+    "onscreen_text": "1 FOLİKÜL = 1 TEL",
+    "sfx": "uzun whoosh + 'ding' + fabrika 'tık'"
+   },
+   {
+    "line": "Koparınca aynı yerden aylar sonra yine tek tel gelir.",
+    "visual": "10.8-14.5 sn | Ekran ikiye bölünüyor. Solda kırmızı/turuncu karikatür mit: delikten önce iki, sonra yedi tel fışkırıyor, ardından kırmızı X ile siliniyor. Sağda turkuaz gerçek: takvim yaprakları uçuşuyor, köşede 'AY 1… 2… 3' sayacı dönüyor ve aynı delikten tek tel yavaşça uzuyor.",
+    "onscreen_text": "MİT: 2 ✗   GERÇEK: 1 ✓",
+    "sfx": "pop-pop (mit) → takvim 'frrr' → 'ding'"
+   },
+   {
+    "line": "Büyük ihtimalle yine beyaz, çünkü renk kökte verilir.",
+    "visual": "14.5-18.2 sn | Uzayan tel bembeyaz parlıyor, zoom-punch, ucunda küçük parıltı yıldızı. Kamera kesitte aşağı kayıyor: kök ampulü sarı halkayla vurgulanıyor, içindeki pigment hücreleri (damla karakterler) sönmüş, tele giden akış durmuş. 'KARAR BURADA' oku kökü, 'SONUÇ' etiketi teli gösteriyor.",
+    "onscreen_text": "YİNE BEYAZ · RENK KÖKTE BELİRLENİR",
+    "sfx": "parıltı 'tink' + sönen 'blup'"
+   },
+   {
+    "line": "Peki neden çoğalıyor gibi?",
+    "visual": "18.2-20.2 sn | Desen kırıcı: 0.3 sn sessizlik, ekran kararıyor. Ortaya büyük bir soru işareti zıplıyor. Aynadaki karakter kafasını kaşıyor.",
+    "onscreen_text": "PEKİ NEDEN?",
+    "sfx": "0.3 sn sessizlik → pop"
+   },
+   {
+    "line": "Beyaz bulaşıcı değil, her folikülün kendi saati var.",
+    "visual": "20.2-23.8 sn | Palet kırmızıdan turkuaza geçiyor. Kafa derisi yukarıdan harita gibi görünüyor. Her folikülün üstünde farklı hızda akan bir kum saati var. Bir beyaz telden komşulara uzanan 'bulaşma' okları kırmızı X ile kırılıyor. Sayaç 2/3 oluyor.",
+    "onscreen_text": "BULAŞICI DEĞİL",
+    "sfx": "farklı tempolarda tik-taklar + kırılma 'çat'"
+   },
+   {
+    "line": "Yaşla beyazlar zaten artıyor, çoğalma hissi muhtemelen bundan.",
+    "visual": "23.8-28.1 sn | Aynadaki yansıma hızlı bir time-lapse ile yaşlanıyor (yaş sayacı 30 → 45). Cımbız masada duruyor, kimse dokunmuyor, ama beyaz teller tek tek artıyor. Cımbızdan çıkan suçlama oku kopup sarı 'YAŞ' etiketine dönüyor.",
+    "onscreen_text": "CIMBIZ DEĞİL, YAŞ",
+    "sfx": "hızlanan saat tıkırtısı + 'ding'"
+   },
+   {
+    "line": "Asıl bedel şu: Aynı folikülü tekrar tekrar koparmak",
+    "visual": "28.1-31.6 sn | Açık döngü kapanıyor: köşedeki asma kilit 'klak' diye açılıyor. Kesitte aynı folikül art arda üç kez çekiliyor, her çekişte ekran sarsılıyor ve folikül duvarındaki kırmızı çatlak büyüyor. Sayaç 3/3 oluyor.",
+    "onscreen_text": "ASIL BEDEL: TEKRAR TEKRAR",
+    "sfx": "kilit 'klak' + çıt-çıt-çıt + sarsıntı"
+   },
+   {
+    "line": "enfeksiyona, ize, hatta kel bölgelere yol açabilir.",
+    "visual": "31.6-35.0 sn | Kinetik tipografi: üç kelime sırayla folikülün çevresine çarpıyor. Önce kırmızı iltihap halkası, sonra iz çizgisi, en sonda kafa derisinde küçük, boş, saçsız bir daire beliriyor.",
+    "onscreen_text": "ENFEKSİYON · İZ · KEL BÖLGE",
+    "sfx": "üç bas vuruşu"
+   },
+   {
+    "line": "Fazla beyaz değil, orada hiç saç kalmayabilir.",
+    "visual": "35.0-38.3 sn | Folikül fabrikasının bacası sönüyor, ışığı kapanıyor. Zoom-out ile aynadaki karakterin kafasında tek bir boş nokta görünüyor. Palet soğuk griye dönüyor.",
+    "onscreen_text": "HİÇ SAÇ KALMAYABİLİR",
+    "sfx": "elektrik kesilme 'vınnn' + 0.3 sn sessizlik"
+   },
+   {
+    "line": "Meğerse farede tüy tekrar tekrar koparılınca renk kök hücreleri sıkışıyor.",
+    "visual": "38.3-43.6 sn | Sessizliğin ardından flaş, zoom-punch ve dev kinetik 'MEĞERSE' başlığı. Sahne sevimli çizgi film bir fareye kesiliyor. Bu sahne boyunca köşede sabit 'FARE DENEYİ' rozeti duruyor. Aynı folikülün içinde renk kök hücreleri (küçük turuncu karakterler) trafikte kilitlenen arabalar gibi sıkışıp kalıyor.",
+    "onscreen_text": "MEĞERSE… (FARE DENEYİ)",
+    "sfx": "flaş 'fsst' + kısa trafik kornası"
+   },
+   {
+    "line": "Bu foliküllerin oranı yüzde on beşten neredeyse yarıya çıktı.",
+    "visual": "43.6-47.8 sn | Slot makinesi sayacı %15'ten dönerek yaklaşık %50'de duruyor. Yanında 20 foliküllük ızgara var: önce 3'ü, sonra yaklaşık 10'u kırmızı 'sıkışık' işaretiyle yanıyor. Durma anında ekran sarsılıyor.",
+    "onscreen_text": "%15 → ~%50",
+    "sfx": "slot dönüşü + bas vuruşu"
+   },
+   {
+    "line": "Sıkışan hücre pigment hücresine dönüşemedi.",
+    "visual": "47.8-50.8 sn | Sıkışmış kök hücre karakteri 'DÖNÜŞ' butonuna basıyor, buton kırmızı yanıyor. Pigment tanesi çıkmıyor, tele giden boru boş kalıyor.",
+    "onscreen_text": "DÖNÜŞEMEDİ",
+    "sfx": "hata 'bzzt'"
+   },
+   {
+    "line": "Ama bu fare deneyi, insanda kanıtlanmadı.",
+    "visual": "50.8-53.7 sn | Fare sahnesi küçülüyor, yanına bir insan silueti geliyor. Aralarına sarı 'HENÜZ KANITLANMADI' bandı geriliyor. Altta küçük kaynak notu: 'Nature, 2023 · fare'.",
+    "onscreen_text": "FARE ≠ İNSAN · henüz kanıt yok",
+    "sfx": "kayıt 'tık'"
+   },
+   {
+    "line": "Sizde kaç tane çıkar denirdi? Rakamı yaz, cımbızcı arkadaşına gönder.",
+    "visual": "53.7-58.5 sn | Döngü sonu: kamera aynaya dönüyor, kadraj ilk kareyle birebir aynı. Yeni bir beyaz tel parlıyor, cımbız yeniden uzanıyor, anne balonu 'Koparma!' tekrar beliriyor. 0 / 1 / 2 / 7 kartları yeniden düşüp donuyor, altta yorum oku ve paylaş ikonu zıplıyor. Kalp atışı açılışla aynı ritimde, böylece otomatik yeniden oynatma ilk saniyeye kesintisiz bağlanıyor.",
+    "onscreen_text": "Sizde kaç? Rakamı yaz ↓ · Cımbızcı arkadaşına gönder",
+    "sfx": "kalp atışı (açılışla aynı ritim) → pop (döngü)"
+   }
+  ],
+  "title_card": "Beyaz saç koparınca çoğalır mı?",
+  "cover_text": "Bir koparırsan iki çıkar mı?",
+  "caption_tr": "Bir beyaz saç koparınca yerine iki tane çıkar mı? Kısaca hayır. Her folikül tek tel üretir ve beyaz saç bulaşmaz. Çoğalma hissi de büyük ihtimalle yaşla gelen doğal artıştan kaynaklanıyor. Asıl risk, aynı yeri tekrar tekrar koparmak: enfeksiyon, iz, hatta kel bölge.\n\nMeğerse farelerde tekrarlı koparma renk kök hücrelerini sıkıştırıyor. Ama bu bir fare deneyi, insanda henüz kanıtlanmadı.\n\nSizde kaç tane çıkar denirdi? Rakamı yorumlara yaz, cımbızcı arkadaşına gönder.\n\nKaynaklar: UAMS Health (2019) · Cleveland Clinic · Healthline (2021) · Sun ve ark., Nature (2023, fare çalışması)\nBilgilendirme amaçlıdır, tıbbi tavsiye değildir.",
+  "hashtags": [
+   "#meğerse",
+   "#beyazsaç",
+   "#kırsaç",
+   "#saçbakımı",
+   "#doğrubilinenyanlışlar",
+   "#bilim",
+   "#bilimsel",
+   "#biliyormuydunuz",
+   "#ilginçbilgiler",
+   "#mitler",
+   "#sağlık",
+   "#dermatoloji",
+   "#cımbız",
+   "#keşfet",
+   "#reelstürkiye",
+   "#grayhair"
+  ],
+  "sources_short": [
+   "UAMS Health, Medical Myths: Does pulling one gray hair cause more to grow in its place? (2019) - uamshealth.com/medical-myths/does-pulling-one-gray-hair-cause-more-to-grow-in-its-place/",
+   "Cleveland Clinic, Gray Hair - my.clevelandclinic.org/health/symptoms/gray-hair",
+   "Healthline, What happens when a hair follicle is pulled out (2021) - healthline.com/health/hair-follicle-pulled-out",
+   "Sun ve ark., 'Dedifferentiation maintains melanocyte stem cells in a dynamic niche', Nature 2023 (fare çalışması); özet: sciencedaily.com/releases/2023/04/230419125056.htm"
+  ],
+  "scores": "VARYANT A (Mit avcısı): Kanca 8, Retention 9, Doğruluk 8, TTS 8, ortalama 8.25. Artıları: Açık döngü somut ('asıl bedel') ve 30. saniyede kapanıyor. 3'lü gerçeklik sayacı izleyiciyi tutuyor. Meğerse doğrudan konuya (koparma) bağlı ve rakamlı (%15'ten ~%50'ye). Rakam isteyen CTA çeşitli yorum üretir. Eksileri: 'Koparınca çoğaldı sanıyoruz' çıkarımında hedge yok (AC5 'büyük olasılıkla' diyor). 'Ona geleceğiz' sönük kalıyor. Meğerse 'farede' kelimesiyle açıldığı için ters köşe etkisi zayıflıyor. Paylaşım çağrısı yok.\nVARYANT B (Ayna POV): Kanca 8, Retention 7, Doğruluk 8, TTS 6, ortalama 7.25. Artıları: Ayna POV, anne uyarısı ve geri sayım güçlü bir gerilim kuruyor. 'Pigment hücreleri ölünce beyaz' mekanizması ve 'birkaç ay sonra' zamanlaması somut. Eksileri: 'Öyle diyorlar. Üç, iki, bir... Çıt.' kısmında üç nokta ve tek kelimelik cümle TTS'de tutukluk ve garip duraklama riski taşıyor. Açık döngü ('daha tuhaf bir gerçek') muğlak. Meğerse (insanda rengin geri dönmesi) şaşırtıcı ama konudan kopuk ve üç ayrı uyarı cümlesi gerektiriyor, bu da son 20 saniyeyi sulandırıyor. 'Yıllardır beyaz olan saç dönmez' ifadesi kaynaktan (70 yaşında biri, stresi azaltmak) daha genel. EVET/HAYIR CTA'sı rakam CTA'sından daha düz yorum getirir.\nKARAR: A temel alındı. B'den aşılananlar: ilk karede aksiyonla başlayan ayna POV, anne 'Koparma!' balonu ve kalp atışı gerilimi; deliğe dalış geçişi; 'aylar sonra' zaman atlaması (AC9); kum saatli 'her folikülün kendi saati' metaforu; aynada yaşlanma time-lapse'i; açılışla aynı ritimde biten döngü. Düzeltmeler: çoğalma hissi 'muhtemelen' ile yumuşatıldı. 'Orada hiç saç kalmayabilir' ile risk tek noktaya bağlandı. Meğerse 'aynı folikül' vurgusuyla anlatıldı, böylece 'bulaşmaz, çoğalmaz' mesajıyla çelişmiyor ve hemen ardından 'fare, insanda kanıtlanmadı' uyarısı geliyor. CTA'ya paylaşım eklendi. TTS için sayılar yazıyla yazıldı, üç nokta ve rakam kullanılmadı. Final metin 853 karakter ve 124 kelime, yaklaşık 56-58 sn. Kullanılan olgular: AC1-AC6, AC8, AC9, BC1, BC2. Final tahmini puanı: Kanca 9, Retention 9, Doğruluk 9, TTS 9. Not: AC1'de söz 'on tane' diye geçiyor, metinde halk arasında yaygın 'iki tane' kullanıldı. 0/1/2/7 kartları farklı söylenişleri kapsıyor."
+ },
+ "check": {
+  "issues": [
+   {
+    "line": "Beyaz saçı koparma, yerine iki tane çıkar.",
+    "problem": "Kaynakta olmayan sayı. UAMS sayfasını açtım, efsaneyi 'yerine 10 tane çıkar' diye aktarıyor (AC1 de 'on tane' diyor). 'İki' hiçbir kaynakta geçmiyor.",
+    "fix": "'yerine on tane çıkar' yapıldı. Açıklamadaki başlık sorusu da 'on tane' olarak düzeltildi. 'Sizde kaç tane çıkar denirdi?' çağrısı aynen çalışıyor."
+   },
+   {
+    "line": "Koparınca aynı yerden aylar sonra yine tek tel gelir.",
+    "problem": "Kesin bir iddia. Süre bilgisi Healthline'da trikotillomani bağlamında veriliyor ve tek bir telin geri çıkma süresi için kesin bir değer değil (AC9). Ayrıca saç üretmeyi bırakmış folikülden saç çıkmaz (AC12). 'Yine tek tel gelir' bu yüzden fazla kesin.",
+    "fix": "'Koparınca aynı yerden genelde yine tek tel gelir.' Süre çıkarıldı, 'genelde' eklendi."
+   },
+   {
+    "line": "Büyük ihtimalle yine beyaz, çünkü renk kökte verilir.",
+    "problem": "Gerekçede eksik bir adım var. 'Renk kökte verilir' tek başına yeni telin neden beyaz çıkacağını açıklamıyor. UAMS'ın verdiği asıl neden, o folikülün pigment hücrelerinin pigment üretmeyi bırakmış olması.",
+    "fix": "'Büyük ihtimalle yine beyaz, çünkü o folikül artık pigment üretmiyor.' 'Büyük ihtimalle' kaldı, çünkü strese bağlı beyazlamada bazı teller eski rengine dönebiliyor (AC7)."
+   },
+   {
+    "line": "Fazla beyaz değil, orada hiç saç kalmayabilir.",
+    "problem": "Anlam iki türlü okunabiliyor. 'Fazla beyaz değil' sözü 'pek beyaz sayılmaz' diye anlaşılabilir. Kastedilen ise 'sonuç daha çok beyaz saç değil, saçsız bölge'.",
+    "fix": "'Daha çok beyaz değil, hiç saç kalmayabilir.' 'Kalmayabilir' olasılık bildirdiği için UAMS'taki 'possibly lead to bald patches' ifadesiyle uyumlu."
+   },
+   {
+    "line": "Meğerse farede tüy tekrar tekrar koparılınca renk kök hücreleri sıkışıyor. Bu foliküllerin oranı yüzde on beşten neredeyse yarıya çıktı.",
+    "problem": "'Bu foliküllerin' sözünün neyi gösterdiği belirsiz. Ayrıca koparmadan önce de foliküllerin yüzde on beşinde sıkışma vardı (BC1). Yani ölçülen şey sıkışma olan foliküllerin oranı.",
+    "fix": "'...renk kök hücreleri sıkışıp kalıyor. Sıkışma olan foliküller yüzde on beşten neredeyse yarıya çıktı.' Fare vurgusu ve 'insanda kanıtlanmadı' cümlesi korundu."
+   },
+   {
+    "line": "Sıkışan hücre pigment hücresine dönüşemedi.",
+    "problem": "Tekil kullanılmış, ama kaynakta çoğul (sıkışan kök hücreler, BC2). Küçük bir dil sorunu.",
+    "fix": "'Sıkışanlar pigment hücresine dönüşemedi.'"
+   },
+   {
+    "line": "Yaşla beyazlar zaten artıyor / Ama asıl bedel başka",
+    "problem": "Olgu hatası yok. Metin 860 karakter sınırını aştığı için birkaç sözcük kısaltıldı.",
+    "fix": "'Yaşla beyaz zaten artıyor' yazıldı ve 'Ama' çıkarıldı. Anlam değişmedi. Son metin 858 karakter."
+   },
+   {
+    "line": "Açıklama: Meğerse farelerde tekrarlı koparma renk kök hücrelerini sıkıştırıyor.",
+    "problem": "Doğrudan bir neden-sonuç gibi okunuyor. Kaynak ise oranın arttığını söylüyor, başlangıç değeri yüzde on beş.",
+    "fix": "Oran yazıldı: 'renk kök hücreleri sıkışmış foliküllerin oranını %15'ten neredeyse yarıya çıkardı.' Açıklama seslendirilmediği için % işareti sorun değil."
+   },
+   {
+    "line": "Genel: ElevenLabs okunuşu",
+    "problem": "Seslendirilen metinde rakam, kısaltma ya da yabancı ad yok. 'Yüzde on beş' zaten yazıyla yazılmış. 'Folikül' ve 'pigment' Türkçe sözlükte var, okunuşta sorun çıkarmaz.",
+    "fix": "Okunuş için ek değişiklik gerekmedi."
+   }
+  ],
+  "narration_tr": "Beyaz saçı koparma, yerine on tane çıkar. Doğru değil. Asıl bedel başka, sona sakladım. Her saç kendi yuvasından, folikülden çıkar. Bir folikül, tek tel. Koparınca aynı yerden genelde yine tek tel gelir. Büyük ihtimalle yine beyaz, çünkü o folikül artık pigment üretmiyor. Peki neden çoğalıyor gibi? Beyaz bulaşıcı değil, her folikülün kendi saati var. Yaşla beyaz zaten artıyor, çoğalma hissi muhtemelen bundan. Asıl bedel şu: Aynı folikülü tekrar tekrar koparmak enfeksiyona, ize, hatta kel bölgelere yol açabilir. Daha çok beyaz değil, hiç saç kalmayabilir. Meğerse farede tüy tekrar tekrar koparılınca renk kök hücreleri sıkışıp kalıyor. Sıkışma olan foliküller yüzde on beşten neredeyse yarıya çıktı. Sıkışanlar pigment hücresine dönüşemedi. Ama bu fare deneyi, insanda kanıtlanmadı. Sizde kaç tane çıkar denirdi? Rakamı yaz, cımbızcı arkadaşına gönder.",
+  "caption_tr": "Bir beyaz saç koparınca yerine on tane çıkar mı? Kısaca hayır. Her folikül tek tel üretir ve beyaz saç bulaşmaz. Kopan saçın yerine aynı folikülden genelde yine tek tel çıkar, o da büyük ihtimalle beyaz olur. Çoğalma hissi de büyük ihtimalle yaşla gelen doğal artıştan kaynaklanıyor. Asıl risk, aynı yeri tekrar tekrar koparmak: enfeksiyon, iz, hatta kel bölge.\n\nMeğerse farelerde tekrarlı koparma, renk kök hücreleri sıkışmış foliküllerin oranını %15'ten neredeyse yarıya çıkardı. Ama bu bir fare deneyi, insanda henüz kanıtlanmadı.\n\nSizde kaç tane çıkar denirdi? Rakamı yorumlara yaz, cımbızcı arkadaşına gönder.\n\nKaynaklar: UAMS Health (2019) · Cleveland Clinic · Healthline (2021) · Sun ve ark., Nature (2023, fare çalışması)\nBilgilendirme amaçlıdır, tıbbi tavsiye değildir.",
+  "approved": true
+ }
+}

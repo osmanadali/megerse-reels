@@ -1,0 +1,442 @@
+[
+ {
+  "text": "Beyaz",
+  "startMs": 0,
+  "endMs": 380
+ },
+ {
+  "text": "saçı",
+  "startMs": 380,
+  "endMs": 680
+ },
+ {
+  "text": "koparma,",
+  "startMs": 680,
+  "endMs": 1180
+ },
+ {
+  "text": "yerine",
+  "startMs": 1180,
+  "endMs": 1940
+ },
+ {
+  "text": "daha",
+  "startMs": 1940,
+  "endMs": 2220
+ },
+ {
+  "text": "çok",
+  "startMs": 2220,
+  "endMs": 2480
+ },
+ {
+  "text": "çıkar.",
+  "startMs": 2480,
+  "endMs": 2800
+ },
+ {
+  "text": "Doğru",
+  "startMs": 3460,
+  "endMs": 3780
+ },
+ {
+  "text": "değil.",
+  "startMs": 3780,
+  "endMs": 4000
+ },
+ {
+  "text": "Asıl",
+  "startMs": 4660,
+  "endMs": 4940
+ },
+ {
+  "text": "bedel",
+  "startMs": 4940,
+  "endMs": 5280
+ },
+ {
+  "text": "başka,",
+  "startMs": 5280,
+  "endMs": 5620
+ },
+ {
+  "text": "sona",
+  "startMs": 5620,
+  "endMs": 6380
+ },
+ {
+  "text": "sakladım.",
+  "startMs": 6380,
+  "endMs": 6780
+ },
+ {
+  "text": "Her",
+  "startMs": 7360,
+  "endMs": 7520
+ },
+ {
+  "text": "folikülden",
+  "startMs": 7520,
+  "endMs": 8220
+ },
+ {
+  "text": "tek",
+  "startMs": 8220,
+  "endMs": 8580
+ },
+ {
+  "text": "tel",
+  "startMs": 8580,
+  "endMs": 8780
+ },
+ {
+  "text": "çıkar.",
+  "startMs": 8780,
+  "endMs": 9100
+ },
+ {
+  "text": "Koparınca",
+  "startMs": 9780,
+  "endMs": 10380
+ },
+ {
+  "text": "aynı",
+  "startMs": 10380,
+  "endMs": 10800
+ },
+ {
+  "text": "yerden",
+  "startMs": 10800,
+  "endMs": 11240
+ },
+ {
+  "text": "genelde",
+  "startMs": 11240,
+  "endMs": 11780
+ },
+ {
+  "text": "yine",
+  "startMs": 11780,
+  "endMs": 12060
+ },
+ {
+  "text": "tek",
+  "startMs": 12060,
+  "endMs": 12420
+ },
+ {
+  "text": "tel",
+  "startMs": 12420,
+  "endMs": 12640
+ },
+ {
+  "text": "gelir,",
+  "startMs": 12640,
+  "endMs": 12940
+ },
+ {
+  "text": "büyük",
+  "startMs": 13480,
+  "endMs": 13700
+ },
+ {
+  "text": "ihtimalle",
+  "startMs": 13700,
+  "endMs": 14240
+ },
+ {
+  "text": "yine",
+  "startMs": 14240,
+  "endMs": 14640
+ },
+ {
+  "text": "beyaz.",
+  "startMs": 14640,
+  "endMs": 15160
+ },
+ {
+  "text": "Peki",
+  "startMs": 15640,
+  "endMs": 15960
+ },
+ {
+  "text": "neden",
+  "startMs": 15960,
+  "endMs": 16540
+ },
+ {
+  "text": "çoğalıyor",
+  "startMs": 16540,
+  "endMs": 17180
+ },
+ {
+  "text": "gibi?",
+  "startMs": 17180,
+  "endMs": 17500
+ },
+ {
+  "text": "Beyaz",
+  "startMs": 18100,
+  "endMs": 18480
+ },
+ {
+  "text": "bulaşıcı",
+  "startMs": 18480,
+  "endMs": 19060
+ },
+ {
+  "text": "değil,",
+  "startMs": 19060,
+  "endMs": 19300
+ },
+ {
+  "text": "yaşla",
+  "startMs": 19800,
+  "endMs": 20140
+ },
+ {
+  "text": "zaten",
+  "startMs": 20140,
+  "endMs": 20440
+ },
+ {
+  "text": "artıyor.",
+  "startMs": 20440,
+  "endMs": 20980
+ },
+ {
+  "text": "Asıl",
+  "startMs": 21560,
+  "endMs": 21880
+ },
+ {
+  "text": "bedel",
+  "startMs": 21880,
+  "endMs": 22240
+ },
+ {
+  "text": "şu:",
+  "startMs": 22240,
+  "endMs": 22520
+ },
+ {
+  "text": "Aynı",
+  "startMs": 23040,
+  "endMs": 23260
+ },
+ {
+  "text": "folikülü",
+  "startMs": 23260,
+  "endMs": 23920
+ },
+ {
+  "text": "tekrar",
+  "startMs": 23920,
+  "endMs": 24200
+ },
+ {
+  "text": "tekrar",
+  "startMs": 24200,
+  "endMs": 24640
+ },
+ {
+  "text": "koparmak",
+  "startMs": 24640,
+  "endMs": 25460
+ },
+ {
+  "text": "enfeksiyona,",
+  "startMs": 25460,
+  "endMs": 26500
+ },
+ {
+  "text": "iz",
+  "startMs": 26860,
+  "endMs": 27000
+ },
+ {
+  "text": "kalmasına,",
+  "startMs": 27000,
+  "endMs": 27660
+ },
+ {
+  "text": "hatta",
+  "startMs": 27660,
+  "endMs": 28340
+ },
+ {
+  "text": "kel",
+  "startMs": 28340,
+  "endMs": 28640
+ },
+ {
+  "text": "bölgelere",
+  "startMs": 28640,
+  "endMs": 29260
+ },
+ {
+  "text": "yol",
+  "startMs": 29260,
+  "endMs": 29440
+ },
+ {
+  "text": "açabilir.",
+  "startMs": 29440,
+  "endMs": 29860
+ },
+ {
+  "text": "Meğerse",
+  "startMs": 30400,
+  "endMs": 31000
+ },
+ {
+  "text": "farede",
+  "startMs": 31000,
+  "endMs": 31660
+ },
+ {
+  "text": "tüy",
+  "startMs": 31660,
+  "endMs": 31940
+ },
+ {
+  "text": "tekrar",
+  "startMs": 31940,
+  "endMs": 32360
+ },
+ {
+  "text": "tekrar",
+  "startMs": 32360,
+  "endMs": 32680
+ },
+ {
+  "text": "koparılınca",
+  "startMs": 32680,
+  "endMs": 33580
+ },
+ {
+  "text": "renk",
+  "startMs": 33580,
+  "endMs": 34320
+ },
+ {
+  "text": "kök",
+  "startMs": 34320,
+  "endMs": 34500
+ },
+ {
+  "text": "hücreleri",
+  "startMs": 34500,
+  "endMs": 35020
+ },
+ {
+  "text": "sıkışıyor.",
+  "startMs": 35020,
+  "endMs": 35600
+ },
+ {
+  "text": "Sıkışmalı",
+  "startMs": 36100,
+  "endMs": 36700
+ },
+ {
+  "text": "foliküller",
+  "startMs": 36700,
+  "endMs": 37280
+ },
+ {
+  "text": "yüzde",
+  "startMs": 37280,
+  "endMs": 37840
+ },
+ {
+  "text": "on",
+  "startMs": 37840,
+  "endMs": 38170
+ },
+ {
+  "text": "beşten",
+  "startMs": 38170,
+  "endMs": 38500
+ },
+ {
+  "text": "neredeyse",
+  "startMs": 38500,
+  "endMs": 39160
+ },
+ {
+  "text": "yarıya",
+  "startMs": 39160,
+  "endMs": 39560
+ },
+ {
+  "text": "çıktı.",
+  "startMs": 39560,
+  "endMs": 39780
+ },
+ {
+  "text": "Ama",
+  "startMs": 40320,
+  "endMs": 40540
+ },
+ {
+  "text": "bu",
+  "startMs": 40540,
+  "endMs": 40720
+ },
+ {
+  "text": "fare",
+  "startMs": 40720,
+  "endMs": 41060
+ },
+ {
+  "text": "deneyi,",
+  "startMs": 41060,
+  "endMs": 41620
+ },
+ {
+  "text": "insanda",
+  "startMs": 41620,
+  "endMs": 42200
+ },
+ {
+  "text": "kanıtlanmadı.",
+  "startMs": 42200,
+  "endMs": 42880
+ },
+ {
+  "text": "Sizde",
+  "startMs": 43460,
+  "endMs": 43860
+ },
+ {
+  "text": "kaç",
+  "startMs": 43860,
+  "endMs": 44140
+ },
+ {
+  "text": "tane",
+  "startMs": 44140,
+  "endMs": 44440
+ },
+ {
+  "text": "çıkar",
+  "startMs": 44440,
+  "endMs": 44720
+ },
+ {
+  "text": "denirdi?",
+  "startMs": 44720,
+  "endMs": 45240
+ },
+ {
+  "text": "Rakamı",
+  "startMs": 45740,
+  "endMs": 46180
+ },
+ {
+  "text": "yaz.",
+  "startMs": 46180,
+  "endMs": 46360
+ }
+]
