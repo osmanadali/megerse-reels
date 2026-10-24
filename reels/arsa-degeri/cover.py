@@ -46,7 +46,6 @@ svg{{position:absolute;left:0;top:0}}
 <div class="t">ARSA DEĞERİ<br><span class="pill">NASIL HESAPLANIR?</span></div>
 <div class="m" style="left:{m0[0] - 150}px;top:{m0[1] + 20}px">500 m²</div><div class="m" style="left:{m1[0] - 150}px;top:{m1[1] + 20}px">500 m²</div>
 <div class="tl" style="left:{t0[0] - 150}px;top:{t0[1] - 100}px">₺</div><div class="tl" style="left:{t1[0] - 150}px;top:{t1[1] - 100}px">₺₺₺</div>
-<div class="same">aynı büyüklük, <b>bambaşka fiyat</b></div>
 </body></html>"""
 out = ROOT / "hf/cover-arsa.html"
 out.write_text(html, encoding="utf-8")
