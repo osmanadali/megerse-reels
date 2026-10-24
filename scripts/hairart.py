@@ -99,3 +99,24 @@ def mirror_glass():
     """aynanın üstüne konan cam parlaması (yansıma katmanının üstünde)."""
     return ('<path d="M190 360 L360 360 L190 620 Z" fill="#fff" opacity=".22"/><path d="M420 360 L470 360 L190 790 L190 714 Z" fill="#fff" opacity=".14"/>'
             '<rect x="170" y="330" width="740" height="940" rx="10" fill="none" stroke="#1B1414" stroke-width="6"/>')
+
+
+def lab_mouse(fur="#2E2A26", grey=0.0, look=1):
+    """Toon laboratuvar faresi, yan görünüş (sağa bakar), taban (0,0), boy ~120, uzunluk ~260.
+    Deneylerdeki fareler (C57BL/6) siyahtır; grey: 0 siyah, .5 sırtta beyaz tutam, 1 tamamen beyazlamış."""
+    if grey >= 1:
+        fur = "#EDEBE6"
+    back = "#EDEBE6" if 0 < grey < 1 else fur
+    body = "M-110 0 C-130 -40 -110 -100 -40 -110 C20 -116 70 -96 96 -60 C116 -34 112 -8 96 0 Z"
+    head = "M60 -60 C80 -100 130 -96 150 -64 C162 -46 168 -34 176 -26 C168 -14 150 -8 120 -8 C90 -8 64 -24 60 -60 Z"
+    tail = "M-108 -24 C-170 -20 -200 -60 -240 -40"
+    return (f'<ellipse cx="0" cy="2" rx="130" ry="12" fill="#000" opacity=".25"/>'
+            + line(tail, 7, 1, "#D9A0A0") + line(tail, 3.5, .9, "#F2C4C4")
+            + cel(body, fur, darker(fur, .8), -1, 14, 4)
+            + f'<path d="M-90 -70 C-60 -108 10 -112 40 -96 C10 -80 -50 -70 -90 -70 Z" fill="{back}" opacity=".85"/>'
+            + cel(head, fur, darker(fur, .8), -1, 8, 4)
+            + cel("M84 -84 C70 -120 104 -132 116 -104 C112 -92 100 -84 84 -84 Z", "#F2C4C4", "#D9A0A0", -1, 4, 3.5)
+            + f'<circle cx="128" cy="-58" r="7" fill="{INK}"/><circle cx="130" cy="-60" r="2" fill="#fff"/>'
+            + f'<circle cx="176" cy="-26" r="6" fill="#E88A8A" stroke="{INK}" stroke-width="2.5"/>'
+            + line("M170 -24 L200 -34 M170 -22 L202 -22 M170 -20 L198 -10", 1.6, .7)
+            + cel("M-60 0 L-56 -14 L-40 -14 L-44 0 Z", "#F2C4C4", "#D9A0A0", -1, 2, 2.5) + cel("M40 0 L44 -14 L60 -14 L56 0 Z", "#F2C4C4", "#D9A0A0", -1, 2, 2.5))
