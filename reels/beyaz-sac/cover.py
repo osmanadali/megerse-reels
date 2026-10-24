@@ -1,31 +1,55 @@
-"""Kapak: python3 reels/beyaz-sac/cover.py → hf/cover-beyazsac.html (chromium ile 1080x1920 ekran görüntüsü)."""
+"""Kapak v2 (videonun yeni tasarımı): kıl ormanında parlayan beyaz tel + Meğerse damgası + altyazı stili sarı kutu.
+
+python3 reels/beyaz-sac/cover.py → hf/cover-beyazsac.html → chromium ile 1080x1920 → hf/renders/beyazsac-kapak.jpg
+Profil ızgarası 3:4 kırpar (y 240-1680): önemli her şey o bantta.
+"""
+import subprocess
 import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT / "scripts"))
-from artlib2 import DEFS2  # noqa: E402
-from hairart import bathroom_bg, mirror_glass  # noqa: E402
-from toon import toon_figure  # noqa: E402
+import depth  # noqa: E402
 
-HERO = dict(outfit="tee", shirt="#2F5D7C", sleeve="#2F5D7C", hair_style="short", hair="#2A1E18", skin="#E2B48C", shorts=False, pants="#2A2C33")
-fig = toon_figure(pose="pluck", look=(0, -1), expr=dict(lid=.1, smile=-.4, brow=.8), **HERO)
-greys = "".join(f'<path d="M{x} {y} q{dx} -3 {dx*1.6} -6" stroke="#F4F4F0" stroke-width="1.1" fill="none"/>' for x, y, dx in [(6, -174, 2), (11, -171, 2), (-8, -173, -2), (14, -167, 2.4)])
-refl = ('<defs><clipPath id="mc"><rect x="170" y="330" width="740" height="940" rx="10"/></clipPath></defs><g clip-path="url(#mc)"><rect x="170" y="330" width="740" height="940" fill="#BFD0D6"/>'
-        f'<g transform="translate(560 1720) scale(6.6)">{fig}{greys}<circle cx="-1" cy="-194" r="8" fill="#FFF6C8" opacity=".95" filter="url(#glow)"/></g></g>')
-F = ROOT / "hf/assets/fonts"
-html = f"""<!doctype html><html><head><meta charset="utf-8"><style>
+depth.W, depth.H = 1080, 1920
+from artlib2 import DEFS2  # noqa: E402
+from depth import Cam, defs as depth_defs  # noqa: E402
+from hairart import hair_forest  # noqa: E402
+
+cam = Cam(horizon=760, vpx=540, f=1000, eye=110, sun=(-1, -.4), alt=46, haze="#E2B89A", zfar=4500)
+sc = hair_forest(cam)
+forest = sc.svg()
+html = f"""<!doctype html><html lang="tr"><head><meta charset="utf-8"><style>
 @font-face{{font-family:Mont;font-weight:800;src:url(assets/fonts/montserrat-latin-800-normal.woff2);unicode-range:U+0000-00FF}}
 @font-face{{font-family:Mont;font-weight:800;src:url(assets/fonts/montserrat-latin-ext-800-normal.woff2);unicode-range:U+0100-024F}}
 @font-face{{font-family:Mont;font-weight:600;src:url(assets/fonts/montserrat-latin-600-normal.woff2);unicode-range:U+0000-00FF}}
 @font-face{{font-family:Mont;font-weight:600;src:url(assets/fonts/montserrat-latin-ext-600-normal.woff2);unicode-range:U+0100-024F}}
-*{{margin:0;padding:0;box-sizing:border-box}} body{{width:1080px;height:1920px;overflow:hidden;font-family:Mont,sans-serif;position:relative;background:#000}}
-svg{{position:absolute;inset:0}} .sh{{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.75) 0%,transparent 22%,transparent 55%,rgba(0,0,0,.85) 78%)}}
-.k{{position:absolute;left:0;right:0;top:120px;text-align:center;font-weight:600;font-size:34px;letter-spacing:.16em;color:#fff}} .k b{{color:#FFD23F}}
-.t{{position:absolute;left:40px;right:40px;top:1140px;text-align:center;font-weight:800;font-size:112px;line-height:1.02;color:#fff;-webkit-text-stroke:6px #000;paint-order:stroke fill;text-shadow:0 10px 0 #000}}
-.t span{{color:#FFD23F}} .q{{position:absolute;right:70px;top:300px;width:200px;height:200px;border-radius:30px;background:#FF4D4D;border:8px solid #111;box-shadow:0 10px 0 #111;color:#fff;font-weight:800;font-size:150px;line-height:184px;text-align:center;transform:rotate(10deg)}}
-</style></head><body><svg viewBox="0 0 1080 1920" width="1080" height="1920"><defs>{DEFS2.replace('<defs>','').replace('</defs>','')}</defs>{bathroom_bg()}{refl}{mirror_glass()}</svg>
-<div class="sh"></div><div class="k">MEĞERSE DOSYASI <b>|</b> MİT</div><div class="q">?</div>
-<div class="t">BEYAZ SAÇI<br>KOPARIRSAN<br><span>ÇOĞALIR MI?</span></div></body></html>"""
-(ROOT / "hf/cover-beyazsac.html").write_text(html, encoding="utf-8")
-print("ok")
+*{{margin:0;padding:0;box-sizing:border-box}}
+body{{width:1080px;height:1920px;overflow:hidden;font-family:Mont,sans-serif;position:relative;background:#000}}
+.fill{{position:absolute;inset:0;width:1080px;height:1920px}}
+#shade{{position:absolute;inset:0;background:radial-gradient(60% 40% at 50% 34%,transparent 40%,rgba(10,6,4,.55) 100%),linear-gradient(180deg,rgba(0,0,0,.55) 0%,transparent 20%,transparent 50%,rgba(8,5,3,.9) 66%,rgba(8,5,3,.96) 100%)}}
+#stamp{{position:absolute;left:64px;top:262px;width:fit-content;padding:6px 34px;border:10px solid #E8423A;border-radius:18px;color:#E8423A;background:rgba(244,238,220,.92);font-weight:800;font-size:64px;letter-spacing:.05em;transform:rotate(-6deg);box-shadow:0 10px 30px rgba(0,0,0,.45)}}
+#ring{{position:absolute;left:0;top:0}}
+#halo{{position:absolute;inset:0;background:radial-gradient(circle at 560px 600px,rgba(255,248,228,.30),rgba(255,248,228,.08) 240px,transparent 420px)}}
+.t{{position:absolute;left:40px;right:40px;top:1150px;text-align:center;font-weight:800;text-transform:uppercase;color:#fff;font-size:104px;line-height:1.06;text-shadow:0 6px 0 rgba(0,0,0,.9),0 0 34px rgba(0,0,0,.8)}}
+.pill{{display:inline-block;margin-top:22px;padding:6px 34px 12px;border-radius:30px;background:#FFD23F;color:#141414;font-size:118px;text-shadow:none;transform:rotate(-2deg);box-shadow:0 12px 0 rgba(0,0,0,.55)}}
+</style></head><body>
+<svg class="fill" viewBox="0 0 1080 1920"><defs>{DEFS2.replace('<defs>', '').replace('</defs>', '')}{depth_defs(cam).replace('<defs>', '').replace('</defs>', '')}
+<linearGradient id="scalpsky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2A1810"/><stop offset=".35" stop-color="#8A5A42"/><stop offset=".42" stop-color="#E2B89A"/></linearGradient></defs>
+<rect width="1080" height="1920" fill="url(#scalpsky)"/></svg>
+{forest}
+<div id="shade"></div><div id="halo"></div>
+<svg id="ring" class="fill" viewBox="0 0 1080 1920"><ellipse cx="540" cy="1058" rx="96" ry="30" fill="none" stroke="#FFD23F" stroke-width="7" stroke-dasharray="18 12"/></svg>
+<div id="stamp">MEĞERSE</div>
+<div class="t">BEYAZ SAÇI<br>KOPARIRSAN<br><span class="pill">ÇOĞALIR MI?</span></div>
+
+<script>{sc.js()}CAM_sp.cz=1700;PROJ_sp();const hf=document.getElementById('herogrow').closest('g[filter]');hf.removeAttribute('filter');</script>
+</body></html>"""
+out_html = ROOT / "hf/cover-beyazsac.html"
+out_html.write_text(html, encoding="utf-8")
+png = ROOT / "hf/renders/beyazsac-kapak.png"
+subprocess.run(["/opt/pw-browsers/chromium-1194/chrome-linux/chrome", "--headless", "--no-sandbox", "--disable-gpu", "--hide-scrollbars",
+                "--window-size=1080,2000", "--virtual-time-budget=4000", f"--screenshot={png}", out_html.as_uri()], check=True, capture_output=True)
+subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", str(png), "-vf", "crop=1080:1920:0:0", "-q:v", "2", str(png.with_suffix(".jpg"))], check=True)
+png.unlink()
+print("→", png.with_suffix(".jpg"))

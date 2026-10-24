@@ -120,3 +120,22 @@ def lab_mouse(fur="#2E2A26", grey=0.0, look=1):
             + f'<circle cx="176" cy="-26" r="6" fill="#E88A8A" stroke="{INK}" stroke-width="2.5"/>'
             + line("M170 -24 L200 -34 M170 -22 L202 -22 M170 -20 L198 -10", 1.6, .7)
             + cel("M-60 0 L-56 -14 L-40 -14 L-44 0 Z", "#F2C4C4", "#D9A0A0", -1, 2, 2.5) + cel("M40 0 L44 -14 L60 -14 L56 0 Z", "#F2C4C4", "#D9A0A0", -1, 2, 2.5))
+
+
+def hair_forest(cam, sid="sp", hero_z=2080, hero_id="herogrow"):
+    """Makro kafa derisi: perspektifli kıl ormanı (depth.Scene) + ortada parlayan beyaz 'kahraman' tel (#hero_id).
+    Kamera ~1700 ileri gidince kahraman tel kadrajı doldurur. x<90 koridoru boş; gölge yok (kameraya yakın gölgeler şerit yapıyordu)."""
+    from depth import Scene
+    sc = Scene(cam, sid, ground=("#C98E6C", "#E2B89A"), sky=False)
+    for i in range(240):          # deri gözenekleri: zeminde akan doku → hareket hissi
+        x, z = ((i * 211) % 2400) - 1200, 120 + ((i * 97) % 80) * 46
+        sc.add_ground([(x - 16, z - 9), (x + 16, z - 9), (x + 16, z + 9), (x - 16, z + 9)], 'fill="#A8704F" opacity=".5"')
+    for i in range(460):
+        x, z = ((i * 137) % 2600) - 1300, 150 + (i % 70) * 52
+        if abs(x) < 90 and z < 2250:
+            continue
+        hs = hair_strand(white=(i % 19 == 5), h=480 + (i * 53) % 160, bend=((i * 29) % 9 - 4) / 18, seed=i)
+        sc.add(x, z, f'<g transform="scale(1.7 1)">{hs}</g>', 640, 420, shadow=False)
+    hero = f'<g transform="scale(2.4 1)">{hair_strand(white=True, h=600, bend=.04, seed=1)}</g>'
+    sc.add(0, hero_z, f'<g id="{hero_id}"><g filter="url(#glow)" opacity=".8">{hero}</g>{hero}</g>', 640, 330, shadow=False)
+    return sc

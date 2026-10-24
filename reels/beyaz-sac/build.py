@@ -18,8 +18,8 @@ import depth  # noqa: E402
 
 depth.W, depth.H = 1080, 1920
 from artlib2 import DEFS2  # noqa: E402
-from depth import Cam, Scene, defs as depth_defs  # noqa: E402
-from hairart import bathroom_bg, follicle, hair_strand, lab_mouse, mirror_glass, tweezers  # noqa: E402
+from depth import Cam, defs as depth_defs  # noqa: E402
+from hairart import bathroom_bg, follicle, hair_forest, hair_strand, lab_mouse, mirror_glass, tweezers  # noqa: E402
 from portrait import DEFS_P, light_shafts  # noqa: E402
 from reelkit2 import HF, INTRO_CSS, INTRO_DUR, anchor, flash_js, intro_html, intro_js, intro_sfx, page, punch_js, shake_js  # noqa: E402
 from toon import INK, cel, toon_figure  # noqa: E402
@@ -136,18 +136,7 @@ SFX += [(A("sandığından"), "heartbeat", .8), (m0 - .75, "pop", .8)]
 
 # 2) FOLİKÜL: kılların arasından ileri kayan kamera → ortada beyaz tel çıkar → kesite geçiş
 cam = Cam(horizon=760, vpx=540, f=1000, eye=110, sun=(-1, -.4), alt=46, haze="#E2B89A", zfar=4500)
-sc = Scene(cam, "sp", ground=("#C98E6C", "#E2B89A"), sky=False)
-for i in range(240):          # deri gözenekleri: zeminde akan doku → hareket hissi
-    x, z = ((i * 211) % 2400) - 1200, 120 + ((i * 97) % 80) * 46
-    sc.add_ground([(x - 16, z - 9), (x + 16, z - 9), (x + 16, z + 9), (x - 16, z + 9)], 'fill="#A8704F" opacity=".5"')
-for i in range(460):
-    x, z = ((i * 137) % 2600) - 1300, 150 + (i % 70) * 52
-    if abs(x) < 90 and z < 2250:    # kameranın geçeceği koridor; kenardaki teller kadrajdan süzülür
-        continue
-    hs = hair_strand(white=(i % 19 == 5), h=480 + (i * 53) % 160, bend=((i * 29) % 9 - 4) / 18, seed=i)
-    sc.add(x, z, f'<g transform="scale(1.7 1)">{hs}</g>', 640, 420, shadow=False)   # gölge yok: kameraya yakın gölge şeritleri bozuyordu
-hero = f'<g transform="scale(2.4 1)">{hair_strand(white=True, h=600, bend=.04, seed=1)}</g>'
-sc.add(0, 2080, f'<g id="herogrow"><g filter="url(#glow)" opacity=".8">{hero}</g>{hero}</g>', 640, 330, shadow=False)
+sc = hair_forest(cam)
 fol = (svg('<defs><linearGradient id="scalpsky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2A1810"/><stop offset=".35" stop-color="#8A5A42"/><stop offset=".42" stop-color="#E2B89A"/></linearGradient></defs><rect width="1080" height="1920" fill="url(#scalpsky)"/>')
        + sc.svg()
        + f'<div class="fill" id="folwrap" style="opacity:0;background:{DARK}">{fol_svg(follicle(grey=True, stem_ok=False), "folsvg")}</div>'
