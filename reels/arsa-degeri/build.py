@@ -255,8 +255,8 @@ JS.append(pop_js("#dpt", s("dop") + .1)
 SFX += [(A("bedelsiz"), "pop", .35)]
 
 # 8) GELİR YOLU: satış değeri − inşaat maliyeti − müteahhit kârı = arsa değeri (şelale)
-BX, BY, BW = [150, 380, 610, 840], 1180, 160
-H = 760
+BX, BY, BW = [165, 395, 625, 855], 1180, 160
+H = 640
 
 
 def bar(i, y0, y1, col, idn, txt):
@@ -265,20 +265,23 @@ def bar(i, y0, y1, col, idn, txt):
             f'<text class="bt" x="{BX[i]}" y="{y1 + 52}" text-anchor="middle">{txt}</text>')
 
 
-y_top, y_c, y_k = BY - H, BY - H + 260, BY - H + 260 + 190
+y_top, y_c, y_k = BY - H, BY - H + 220, BY - H + 220 + 160
 gelir = (svg(BG + f'<line x1="70" y1="{BY}" x2="1010" y2="{BY}" stroke="#9FB4C8" stroke-width="4"/>'
              + bar(0, y_top, BY, GREEN, "wb0", "SATIŞ") + bar(1, y_top, y_c, RED, "wb1", "MALİYET")
              + bar(2, y_c, y_k, "#FF9A3C", "wb2", "KÂR") + bar(3, y_k, BY, GOLD, "wb3", "ARSAYA")
-             + f'<path d="M{BX[0]+BW/2} {y_top} H{BX[1]-BW/2} M{BX[1]+BW/2} {y_c} H{BX[2]-BW/2} M{BX[2]+BW/2} {y_k} H{BX[3]-BW/2}" stroke="#9FB4C8" stroke-width="4" stroke-dasharray="10 8"/>', "gsvg")
+             + '<g id="gbld">' + Iso(BX[0] + 17, y_top - 100, .8).building(0, 0, 100, 150, 3, 34, "#E9E2D3", cls="gk") + '</g>'
+             + "".join(f'<path class="gcn" id="gcn{i}" d="M{x0} {y} H{x1}" stroke="#9FB4C8" stroke-width="4" stroke-dasharray="10 8" opacity="0"/>' for i, (x0, y, x1) in enumerate([(BX[0]+BW/2, y_top, BX[1]-BW/2), (BX[1]+BW/2, y_c, BX[2]-BW/2), (BX[2]+BW/2, y_k, BX[3]-BW/2)])), "gsvg")
          + tag("gt", "PROJE HESABI (GELİR YOLU)", TOP)
          + '<div class="note" id="gnote" style="top:1300px;opacity:0">tutarlar bugüne indirgenmiş · örnek</div>'
          + f'<div class="op" id="gop1" style="left:{(BX[0]+BX[1])/2-30:.0f}px;top:{(y_top+y_c)/2-60:.0f}px;opacity:0">−</div><div class="op" id="gop2" style="left:{(BX[1]+BX[2])/2-30:.0f}px;top:{(y_c+y_k)/2-60:.0f}px;opacity:0">−</div><div class="op" id="gop3" style="left:{(BX[2]+BX[3])/2-30:.0f}px;top:{(y_k+BY)/2-60:.0f}px;opacity:0">=</div>')
 t_sat, t_ins, t_kar, t_kal = A("projenin bugüne"), A("eksi maliyet"), A("yüklenici kârı"), A("kalan, arsaya")
-JS.append(pop_js("#gt", s("gelir") + .1) + pop_js("#gnote", s("gelir") + .6) + grow_js("#wb0", t_sat, .5, "power2.out")
+JS.append(pop_js("#gt", s("gelir") + .1) + pop_js("#gnote", s("gelir") + .6) + grow_js("#wb0", s("gelir") + .35, .9, "power2.out") + "".join(f'tl.to("#gcn{i}",{{opacity:1,duration:.2}},{t:.2f});' for i, t in enumerate([t_ins, t_kar, t_kal]))
           + f'tl.fromTo("#wb1",{{y:-120,opacity:0}},{{y:0,opacity:1,duration:.35,ease:"bounce.out",immediateRender:false}},{t_ins:.2f});tl.set("#wb1",{{opacity:0}},0);' + pop_js("#gop1", t_ins)
           + f'tl.fromTo("#wb2",{{y:-120,opacity:0}},{{y:0,opacity:1,duration:.35,ease:"bounce.out",immediateRender:false}},{t_kar:.2f});tl.set("#wb2",{{opacity:0}},0);' + pop_js("#gop2", t_kar)
           + grow_js("#wb3", t_kal, .5) + pop_js("#gop3", t_kal) + punch_js("#gsvg", t_kal + .5, 1.04)
-          + "".join(f'tl.fromTo(".bt:nth-of-type({i + 1})",{{opacity:0}},{{opacity:1,duration:.2,immediateRender:false}},{t:.2f});' for i, t in enumerate([t_sat, t_ins, t_kar, t_kal])))
+          + "".join(f'tl.fromTo(".bt:nth-of-type({i + 1})",{{opacity:0}},{{opacity:1,duration:.2,immediateRender:false}},{t:.2f});' for i, t in enumerate([s("gelir") + .6, t_ins, t_kar, t_kal]))
+          + f'tl.fromTo("#gbld .gk",{{y:24,opacity:0}},{{y:0,opacity:1,duration:.22,stagger:.18,ease:"back.out(2)",immediateRender:false}},{s("gelir") + 1.15:.2f});tl.set("#gbld .gk",{{opacity:0}},0);'
+          + punch_js("#wb0", t_sat, 1.04) + punch_js("#gbld", t_sat, 1.12))
 SFX += [(t_kal + .5, "ding", .35)]
 
 # 9) GERÇEK RAPOR (Urla 2024): proje hesabı ≈807 milyon, benzer satışlar ≈665 milyon; ortalama yok, satışlar esas
