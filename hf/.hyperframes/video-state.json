@@ -2984,15 +2984,15 @@
   },
   "renders": {
     "latest": {
-      "id": "9073e013-c6a6-44f1-abf2-0ed286173c86",
-      "completedAt": 1792857349411,
-      "output": "/home/user/megerse-reels/hf/renders/beyazsac-v1.mp4",
+      "id": "c2b3d1ca-bcac-46b1-b944-f30fc7f8fcdb",
+      "completedAt": 1792860073189,
+      "output": "/home/user/megerse-reels/hf/renders/beyazsac-v2.mp4",
       "status": "completed",
-      "revision": "08794d57-bbea-4d76-b3d8-c89402af292b"
+      "revision": "358cf101-ebb3-47a5-84e6-03af4db0118d"
     },
     "retainedRevisions": [
-      "08794d57-bbea-4d76-b3d8-c89402af292b",
-      "2dec3d66-24ce-474d-b680-d98656f0a4e2"
+      "358cf101-ebb3-47a5-84e6-03af4db0118d",
+      "08794d57-bbea-4d76-b3d8-c89402af292b"
     ]
   },
   "pendingArtifactCleanup": []
