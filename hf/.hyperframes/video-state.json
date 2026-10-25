@@ -6762,15 +6762,15 @@
   },
   "renders": {
     "latest": {
-      "id": "4290f2aa-2330-4a81-80bc-594517793c1d",
-      "completedAt": 1792877288898,
-      "output": "/home/user/megerse-reels/hf/renders/paylas-demo.mp4",
+      "id": "2f87590f-9ee7-4914-8edb-9ba6a7987906",
+      "completedAt": 1792889389074,
+      "output": "/home/user/megerse-reels/hf/renders/dis-hekimi.mp4",
       "status": "completed",
-      "revision": "b6ef3f06-5dbe-4495-85d5-0ea84f2c15f1"
+      "revision": "33f805cf-0344-400d-888c-a0fd73775d0d"
     },
     "retainedRevisions": [
-      "b6ef3f06-5dbe-4495-85d5-0ea84f2c15f1",
-      "50d926c4-b57a-4fd0-8276-5dd673e69df9"
+      "33f805cf-0344-400d-888c-a0fd73775d0d",
+      "b6ef3f06-5dbe-4495-85d5-0ea84f2c15f1"
     ]
   },
   "pendingArtifactCleanup": []
