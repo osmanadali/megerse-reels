@@ -382,7 +382,7 @@ def meg_html(brands=("NARVİS", "SENSODAYN", "İPENA", "ORAL-P", "SİNYAL")):
                      f'<g class="mta" id="mta{i}">{brand_tube(n)}</g><g class="mtb" id="mtb{i}" opacity="0">{paste_tube("FLORÜR", col, 120, 300, st)}</g></g></g>')
     return ('<div class="megt" id="megt">MEĞERSE</div>'
             '<div id="mban">10 DİŞ HEKİMİNDEN <b>9\'U</b><br>ÖNERİYOR*</div>'
-            '<div class="mp" id="mp1">≠ “EN İYİSİ BU”</div><div class="mp" id="mp2">= “ÖNERDİKLERİMDEN<br>BİRİ”</div>'
+            '<div class="mp" id="mp1">≠ “EN İYİSİ BU”</div><div class="mp" id="mp2">= “ÖNERDİKLERİMDEN<br>BİRİ” DE OLABİLİR</div>'
             f'<svg class="fill" viewBox="0 0 1080 1920" style="overflow:visible">{"".join(tubes)}</svg>')
 
 

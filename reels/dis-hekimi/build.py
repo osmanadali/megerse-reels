@@ -56,7 +56,7 @@ TOTAL = round(OUTRO_T + OUTRO_DUR, 2)
 VOICE_END = round(words[-1]["endMs"] / 1000 + .3, 2)
 
 T = {"hook": 0.0, "intro": INTRO_T, "afis": A("İngiltere,"), "anket": A("Ama telefon"), "dipnot": A("İki bin on altıda"), "yuzde": A("İki bin on sekizde"),
-     "kurul": A("Türkiye'de"), "florur": A("Peki"), "meg": A("Meğerse"), "cta": T_CTA, "outro": OUTRO_T}
+     "kurul": A("Türkiye'de"), "florur": A("Dünya Diş"), "meg": A("Meğerse"), "cta": T_CTA, "outro": OUTRO_T}
 keys = list(T)
 X = .3
 S_ = {k: (T[k], T[keys[i + 1]] if i + 1 < len(keys) else TOTAL) for i, k in enumerate(keys)}
@@ -106,22 +106,27 @@ SFX += [(t_yan + .2, "boom", .35)]
 # 6) %22: 100 hekim, 22'si yanar, #1 madalya
 cam2 = Cam(horizon=300, vpx=480, f=1000, eye=170, sun=(-1, -.4), alt=46, haze="#2A3446", zfar=4200)
 crs, crowd = S.crowd_html(cam2)
-yuzde = (crowd + tag("ytag", "2018 · ELEKTRİKLİ DİŞ FIRÇASI", TOP, "dark") + '<div id="medal" style="top:300px">#1<small>DİŞ HEKİMİ TAVSİYESİ</small></div>'
+yuzde = (crowd + tag("ytag", "İNGİLTERE · 2018 · ŞARJLI DİŞ FIRÇASI", TOP, "dark") + '<div class="stamp3 ok" id="ykab" style="top:1000px">KABUL EDİLDİ</div>' + '<div id="medal" style="top:300px">#1<small>DİŞ HEKİMİ TAVSİYESİ</small></div>'
          + '<div id="pct">yalnızca <b>%22</b></div>')
 y0, y1 = S_["yuzde"]
-JS.append(pop("#ytag", y0 + .1) + S.crowd_js(crs, y0, round(y1 - y0 + X, 2), A("Onu önerenler"))
+JS.append(pop("#ytag", y0 + .1) + S.crowd_js(crs, y0, round(y1 - y0 + X, 2), A("Ankette onu"))
           + pop("#medal", A("bir numaralı"), .2, .45) + f'tl.fromTo("#medal",{{rotationY:-180}},{{rotationY:0,duration:.6,ease:"back.out(1.6)",immediateRender:false}},{A("bir numaralı"):.2f});'
+          + f'tl.fromTo("#ykab",{{scale:2.6,opacity:0}},{{scale:1,opacity:1,duration:.2,ease:"power4.in",immediateRender:false}},{A("kabul edildi"):.2f});tl.set("#ykab",{{opacity:0}},0);'
+          + f'tl.to("#ykab",{{opacity:0,duration:.2}},{A("Ankette") + .2:.2f});'
           + pop("#pct", A("yüzde yirmi")))
 SFX += [(A("bir numaralı") + .1, "ding", .3)]
 
 # 7) KURUL: tokmak, KANITLANAMADI, 81.554 TL
-kurul = S.kurul_html(claim="Hassas dişler için<br>10 diş hekiminden") + tag("ktag", "TÜRKİYE · REKLAM KURULU · 2014", TOP, "dark")
-JS.append(pop("#ktag", s("kurul") + .1) + S.kurul_js(s("kurul"), A("kanıtlanamadığı"), A("seksen bir")))
+kurul = (S.kurul_html(claim="Hassas dişler için<br>10 diş hekiminden") + tag("ktag", "TÜRKİYE · REKLAM KURULU · 2014", TOP, "dark")
+         + '<div class="stamp2" id="kst2" style="top:860px;font-size:44px;transform:rotate(5deg)">ALTYAZI OKUNMUYOR</div>')
+JS.append(pop("#ktag", s("kurul") + .1) + S.kurul_js(s("kurul"), A("kanıtlanamadığı"), A("durdurdu", s("kurul")))
+          + f'tl.fromTo("#kst2",{{scale:2.4,opacity:0}},{{scale:1,opacity:1,duration:.2,ease:"power4.in",immediateRender:false}},{A("altyazı"):.2f});tl.set("#kst2",{{opacity:0}},0);')
+SFX += [(A("altyazı") + .2, "pop", .3)]
 SFX += [(A("kanıtlanamadığı"), "boom", .5)]
 
 # 5) DİPNOT: 2016 ara yüz fırçası "%100'ü öneriyor*" → büyüteç: fuarlarda sorulan 46 kişi → YANILTICI
-dip = (S.dipnot_html(big_top="DİŞ PROFESYONELLERİNİN", big="%100'Ü", big_bot="ÖNERİYOR*", big_size=150, top_size=64, fine="*Fuarlarda sorulan 46 kişi",
-                     fine_big="*Fuarlarda sorulan<br><b>46 KİŞİ</b>") + tag("dtag2", "İNGİLTERE · 2016 · ARA YÜZ FIRÇASI", TOP, "dark")
+dip = (S.dipnot_html(big_top="DİŞ PROFESYONELLERİNİN", big="%100'Ü", big_bot="ÖNERİYOR*", big_size=150, top_size=64, fine="*Fuar listesinden 46 kişiye: önerir miydiniz?",
+                     fine_big="*Fuar listesinden <b>46 kişiye</b><br>“önerir miydiniz?”") + tag("dtag2", "İNGİLTERE · 2016 · ARA YÜZ FIRÇASI", TOP, "dark")
        + '<div class="stamp3" id="ast3" style="top:640px">YANILTICI</div>')
 t_yan2 = A("o da yanıltıcı")
 JS.append(pop("#dtag2", s("dipnot") + .1) + S.dipnot_js(s("dipnot"), A("Dayanak"), A("kırk altı"))
@@ -132,6 +137,7 @@ SFX += [(t_yan2 + .4, "boom", .3)]
 cam = Cam(horizon=403, vpx=480, f=1000, eye=165, sun=(-1, -.4), alt=46, haze="#7A2A3A", zfar=4000)
 sc, flor = S.florur_html(cam, (("fl1", "MARKA <b>YOK</b>", 260), ("fl2", "günde <b>2</b> kez", 1180), ("fl3", "<b>florürlü</b> macun", 1180)))
 flor += tag("ftag", "DÜNYA DİŞ HEKİMLERİ FEDERASYONU", TOP, "dark")
+flor = flor.replace('günde <b>2</b> kez', 'günde <b>2</b> kez · yaşa uygun')
 f0, f1 = s("florur"), S_["florur"][1]
 JS.append(pop("#ftag", A("Dünya", f0)) + f'tl.to("#ftag",{{opacity:0,duration:.2}},{A("marka yok", f0) - .15:.2f});'
           + S.florur_js(sc, f0, round(f1 - f0 + X, 2), A("florürlü", f0), (A("marka yok", f0), A("günde", f0), A("florürlü", f0))))
@@ -139,7 +145,7 @@ JS.append(pop("#ftag", A("Dünya", f0)) + f'tl.to("#ftag",{{opacity:0,duration:.
 # 9) MEĞERSE: reklam cümlesinin anlamı → tüpler FLORÜR olur
 m0 = s("meg")
 meg = S.meg_html()
-JS.append(flash_js(m0, .9, .35) + S.meg_js(m0, A("o dokuz", m0), A("en iyisi", m0), A("olsa olsa", m0), A("Asıl", m0), A("florürmüş", m0)))
+JS.append(flash_js(m0, .9, .35) + S.meg_js(m0, A("o yüzdeler", m0), A("en iyisi", m0), A("önerdiklerimden", m0), A("Asıl", m0), A("içerikmiş", m0)))
 SFX += [(m0 - 1.0, "riser", .5), (m0, "boom", .6)]
 
 # 10) ÇAĞRI: 10 hekim, 9'u söner, 10.'su parlar + GÖNDER → uçak outro'ya
@@ -172,6 +178,7 @@ css = """
 .tag { position:absolute; padding:14px 26px; border-radius:18px; font-weight:800; font-size:44px; background:#FFD23F; color:#111; box-shadow:0 8px 0 #000; }
 .tag.c { left:0; right:0; margin:0 auto; width:fit-content; }
 .tag.dark { background:rgba(10,14,22,.88); color:#fff; border:3px solid #fff; box-shadow:none; font-size:38px; }
+.stamp3.ok { border-color:#2FB36E; color:#2FB36E; font-size:66px; }
 """ + S.CSS + S.CTA_CSS + S.ANKET_CSS + S.YUZ_CSS + S.KURUL_CSS + S.DIP_CSS + S.AFIS_CSS + S.FLOR_CSS + S.MEG_CSS
 DEFS = DEFS2.replace("</defs>", "") + depth_defs(cam) + "</defs>"   # atm süzgeçleri iki kamera için ortak (pus rengi ilk kameradan)
 html = page(words, [], scenes_html, js, total=TOTAL, voice_end=VOICE_END, title="", voice_src=VOICE, extra_css=css + INTRO_CSS + OUTRO_CSS + SHARE_CSS, defs=DEFS,
