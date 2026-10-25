@@ -186,7 +186,7 @@ def kiyas_js(t0, t_guess, t_real, idp="kz", t_speed=None, dur=None):
           + f'tl.set("#{idp}r,#{idp}tr",{{opacity:0}},0);tl.set("#{idp}g,#{idp}tg",{{opacity:0}},0);'
           + f'tl.fromTo("#{idp}g",{{scaleY:0,transformOrigin:"50% 100%",opacity:1}},{{scaleY:1,duration:.4,ease:"back.out(2)",immediateRender:false}},{t_guess:.2f});'
           + f'tl.to("#{idp}tg",{{opacity:1,duration:.25}},{t_guess + .3:.2f});'
-          + f'tl.to("#{idp}q",{{opacity:0,duration:.2}},{t_real:.2f});'
+          + f'tl.to("#{idp}q",{{opacity:0,duration:.2}},{t_real:.2f});tl.to("#{idp}h",{{opacity:0,duration:.3}},{t_real + .7:.2f});'
           + f'tl.fromTo("#{idp}r",{{scaleY:0,transformOrigin:"50% 100%",opacity:1}},{{scaleY:1,duration:.8,ease:"power2.out",immediateRender:false}},{t_real:.2f});'
           + f'tl.to("#{idp}tr",{{opacity:1,duration:.25}},{t_real + .6:.2f});')
     if t_speed:

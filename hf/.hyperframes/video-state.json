@@ -8335,15 +8335,15 @@
   },
   "renders": {
     "latest": {
-      "id": "b17ffe24-de4e-480a-bf02-7b524ccd697d",
-      "completedAt": 1792905777452,
-      "output": "/home/user/megerse-reels/hf/renders/dis-hekimi.mp4",
+      "id": "577ede2a-5051-4727-83e3-810e0c618deb",
+      "completedAt": 1792909699187,
+      "output": "/home/user/megerse-reels/hf/renders/otoyol.mp4",
       "status": "completed",
-      "revision": "58a91592-609f-4346-be83-cf86b9c52b4b"
+      "revision": "156ed805-39e1-4b52-9c17-a3f3d710423d"
     },
     "retainedRevisions": [
-      "58a91592-609f-4346-be83-cf86b9c52b4b",
-      "33f805cf-0344-400d-888c-a0fd73775d0d"
+      "156ed805-39e1-4b52-9c17-a3f3d710423d",
+      "58a91592-609f-4346-be83-cf86b9c52b4b"
     ]
   },
   "pendingArtifactCleanup": []
