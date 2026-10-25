@@ -1,7 +1,7 @@
 {
   "version": 1,
   "historyId": "0e987ff4-b9b0-4d04-ba27-c8d3529849a2",
-  "currentRevision": "41bbc54f-0e3d-4dff-ac96-b4b8653dcb05",
+  "currentRevision": "156ed805-39e1-4b52-9c17-a3f3d710423d",
   "pendingChanges": false,
   "files": {
     "AGENTS.md": {
@@ -77,8 +77,8 @@
       "content": "/root/.cache/hyperframes/history/0e987ff4-b9b0-4d04-ba27-c8d3529849a2/blobs/6c/6c9565cd3e85314ad3a64bf79a16aee0c16f39003588ffee6ef7eba7726a746e"
     },
     "index.html": {
-      "hash": "9777732f2d95b878e4d625ad7e28d00b38440036be3e2a22a09cfc61f28a4a94",
-      "content": "/root/.cache/hyperframes/history/0e987ff4-b9b0-4d04-ba27-c8d3529849a2/blobs/97/9777732f2d95b878e4d625ad7e28d00b38440036be3e2a22a09cfc61f28a4a94"
+      "hash": "d951aaaad99aa284d09708e98ef88af02073a06f7859ecf28e9fa7f7875c5e1d",
+      "content": "/root/.cache/hyperframes/history/0e987ff4-b9b0-4d04-ba27-c8d3529849a2/blobs/d9/d951aaaad99aa284d09708e98ef88af02073a06f7859ecf28e9fa7f7875c5e1d"
     },
     "meta.json": {
       "hash": "f16d4c7a86701bea500c9ec8b8114e3e2ad5c4cc395208cc3e672dac3a861ded",
@@ -255,6 +255,10 @@
     "cover-otoyol.html": {
       "hash": "bedbb3453d151378d4d7e0240846cdc6769ec9e7a381ce5b4c63a11e5e662978",
       "content": "/root/.cache/hyperframes/history/0e987ff4-b9b0-4d04-ba27-c8d3529849a2/blobs/be/bedbb3453d151378d4d7e0240846cdc6769ec9e7a381ce5b4c63a11e5e662978"
+    },
+    "assets/otoyol/mix.mp3": {
+      "hash": "9619272ca7173b5ed9efbc1d8dec49eb40bddc78751360b671bbd62d273c7e8b",
+      "content": "/root/.cache/hyperframes/history/0e987ff4-b9b0-4d04-ba27-c8d3529849a2/blobs/96/9619272ca7173b5ed9efbc1d8dec49eb40bddc78751360b671bbd62d273c7e8b"
     }
   },
   "revisions": {
@@ -1541,6 +1545,25 @@
         "index.html": {
           "before": "/root/.cache/hyperframes/history/0e987ff4-b9b0-4d04-ba27-c8d3529849a2/blobs/03/035414cbec9bdb33470b3ea0d27274642e847003fe989e0d27043072593e15d8",
           "after": "/root/.cache/hyperframes/history/0e987ff4-b9b0-4d04-ba27-c8d3529849a2/blobs/97/9777732f2d95b878e4d625ad7e28d00b38440036be3e2a22a09cfc61f28a4a94"
+        }
+      }
+    },
+    "156ed805-39e1-4b52-9c17-a3f3d710423d": {
+      "actor": {
+        "kind": "outside",
+        "name": "Outside"
+      },
+      "label": "Changed outside the app",
+      "startedAt": 1792909374618,
+      "endedAt": 1792909374635,
+      "files": {
+        "assets/otoyol/mix.mp3": {
+          "before": null,
+          "after": "/root/.cache/hyperframes/history/0e987ff4-b9b0-4d04-ba27-c8d3529849a2/blobs/96/9619272ca7173b5ed9efbc1d8dec49eb40bddc78751360b671bbd62d273c7e8b"
+        },
+        "index.html": {
+          "before": "/root/.cache/hyperframes/history/0e987ff4-b9b0-4d04-ba27-c8d3529849a2/blobs/97/9777732f2d95b878e4d625ad7e28d00b38440036be3e2a22a09cfc61f28a4a94",
+          "after": "/root/.cache/hyperframes/history/0e987ff4-b9b0-4d04-ba27-c8d3529849a2/blobs/d9/d951aaaad99aa284d09708e98ef88af02073a06f7859ecf28e9fa7f7875c5e1d"
         }
       }
     }
