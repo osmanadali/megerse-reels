@@ -55,8 +55,8 @@ CTA_JS, OUTRO_T, LAND_T = share_cta_js(T_CTA + .3, T_GO)
 TOTAL = round(OUTRO_T + OUTRO_DUR, 2)
 VOICE_END = round(words[-1]["endMs"] / 1000 + .3, 2)
 
-T = {"hook": 0.0, "intro": INTRO_T, "afis": A("İngiltere,"), "anket": A("Ama ankette"), "yuzde": A("2018'de"), "kurul": A("Türkiye'de"),
-     "dipnot": A("2025'te"), "florur": A("Peki"), "meg": A("Meğerse"), "cta": T_CTA, "outro": OUTRO_T}
+T = {"hook": 0.0, "intro": INTRO_T, "afis": A("İngiltere,"), "anket": A("Ama telefon"), "dipnot": A("İki bin on altıda"), "yuzde": A("İki bin on sekizde"),
+     "kurul": A("Türkiye'de"), "florur": A("Peki"), "meg": A("Meğerse"), "cta": T_CTA, "outro": OUTRO_T}
 keys = list(T)
 X = .3
 S_ = {k: (T[k], T[keys[i + 1]] if i + 1 < len(keys) else TOTAL) for i, k in enumerate(keys)}
@@ -95,12 +95,15 @@ afis = S.afis_html()
 JS.append(S.afis_js(s("afis")))
 
 # 4) ANKET: çoklu seçim → iki çubuk neredeyse eşit → YANILTICI
-anket = S.anket_html() + '<div class="stamp3" id="ast2" style="top:1060px">YANILTICI</div>'
-JS.append(S.anket_js(s("anket"), A("tek marka"), A("bütün markaları"), A("Bir rakip"))
-          + f'tl.fromTo("#ast2",{{scale:2.8,opacity:0}},{{scale:1,opacity:1,duration:.2,ease:"power4.in",immediateRender:false}},{A("yanıltıcı"):.2f});tl.set("#ast2",{{opacity:0}},0);')
-SFX += [(A("yanıltıcı") + .2, "boom", .35)]
+anket = (S.anket_html(note="(birden fazla marka söyleyebilirsiniz)") + '<div class="stamp3" id="ast2" style="top:1060px">YANILTICI</div>'
+         + tag("atag", "☎ TELEFON ANKETİ", TOP, "dark"))
+t_yan = A("yanıltıcı", s("anket"))
+JS.append(pop("#atag", s("anket") + .1) + S.anket_js(s("anket"), A("birden fazla"), A("marka söyleyebiliyordu"), A("bir rakip"))
+          + f'tl.to("#atag",{{opacity:0,duration:.2}},{A("bir rakip") - .1:.2f});'
+          + f'tl.fromTo("#ast2",{{scale:2.8,opacity:0}},{{scale:1,opacity:1,duration:.2,ease:"power4.in",immediateRender:false}},{t_yan:.2f});tl.set("#ast2",{{opacity:0}},0);')
+SFX += [(t_yan + .2, "boom", .35)]
 
-# 5) %22: 100 hekim, 22'si yanar, #1 madalya
+# 6) %22: 100 hekim, 22'si yanar, #1 madalya
 cam2 = Cam(horizon=300, vpx=480, f=1000, eye=170, sun=(-1, -.4), alt=46, haze="#2A3446", zfar=4200)
 crs, crowd = S.crowd_html(cam2)
 yuzde = (crowd + tag("ytag", "2018 · ELEKTRİKLİ DİŞ FIRÇASI", TOP, "dark") + '<div id="medal" style="top:300px">#1<small>DİŞ HEKİMİ TAVSİYESİ</small></div>'
@@ -108,28 +111,35 @@ yuzde = (crowd + tag("ytag", "2018 · ELEKTRİKLİ DİŞ FIRÇASI", TOP, "dark")
 y0, y1 = S_["yuzde"]
 JS.append(pop("#ytag", y0 + .1) + S.crowd_js(crs, y0, round(y1 - y0 + X, 2), A("Onu önerenler"))
           + pop("#medal", A("bir numaralı"), .2, .45) + f'tl.fromTo("#medal",{{rotationY:-180}},{{rotationY:0,duration:.6,ease:"back.out(1.6)",immediateRender:false}},{A("bir numaralı"):.2f});'
-          + pop("#pct", A("yüzde 22'siydi")))
+          + pop("#pct", A("yüzde yirmi")))
 SFX += [(A("bir numaralı") + .1, "ding", .3)]
 
-# 6) KURUL: tokmak, KANITLANAMADI, 81.554 TL
+# 7) KURUL: tokmak, KANITLANAMADI, 81.554 TL
 kurul = S.kurul_html(claim="Hassas dişler için<br>10 diş hekiminden") + tag("ktag", "TÜRKİYE · REKLAM KURULU · 2014", TOP, "dark")
-JS.append(pop("#ktag", s("kurul") + .1) + S.kurul_js(s("kurul"), A("kanıtlanamadığı"), A("81.554")))
+JS.append(pop("#ktag", s("kurul") + .1) + S.kurul_js(s("kurul"), A("kanıtlanamadığı"), A("seksen bir")))
 SFX += [(A("kanıtlanamadığı"), "boom", .5)]
 
-# 7) DİPNOT: ambalajdaki "diş hekimlerinin önerdiği marka*" → büyüteç: kaç hekim? ne zaman? YAZMIYOR
-dip = S.dipnot_html(big_top="DİŞ HEKİMLERİNİN", big="ÖNERDİĞİ", big_bot="MARKA*", big_size=118, fine="*", fine_big="Kaç hekim? Ne zaman?<br><b>YAZMIYOR</b>") + tag("dtag2", "2025", TOP, "dark")
-JS.append(pop("#dtag2", s("dipnot") + .1) + S.dipnot_js(s("dipnot"), A("anketin"), A("yazmıyordu")))
+# 5) DİPNOT: 2016 ara yüz fırçası "%100'ü öneriyor*" → büyüteç: fuarlarda sorulan 46 kişi → YANILTICI
+dip = (S.dipnot_html(big_top="DİŞ PROFESYONELLERİNİN", big="%100'Ü", big_bot="ÖNERİYOR*", big_size=150, top_size=64, fine="*Fuarlarda sorulan 46 kişi",
+                     fine_big="*Fuarlarda sorulan<br><b>46 KİŞİ</b>") + tag("dtag2", "İNGİLTERE · 2016 · ARA YÜZ FIRÇASI", TOP, "dark")
+       + '<div class="stamp3" id="ast3" style="top:640px">YANILTICI</div>')
+t_yan2 = A("o da yanıltıcı")
+JS.append(pop("#dtag2", s("dipnot") + .1) + S.dipnot_js(s("dipnot"), A("Dayanak"), A("kırk altı"))
+          + f'tl.fromTo("#ast3",{{scale:2.8,opacity:0}},{{scale:1,opacity:1,duration:.2,ease:"power4.in",immediateRender:false}},{t_yan2 + .2:.2f});tl.set("#ast3",{{opacity:0}},0);')
+SFX += [(t_yan2 + .4, "boom", .3)]
 
 # 8) FLORÜR: ağız içi dalış, mine parlar
 cam = Cam(horizon=403, vpx=480, f=1000, eye=165, sun=(-1, -.4), alt=46, haze="#7A2A3A", zfar=4000)
 sc, flor = S.florur_html(cam, (("fl1", "MARKA <b>YOK</b>", 260), ("fl2", "günde <b>2</b> kez", 1180), ("fl3", "<b>florürlü</b> macun", 1180)))
+flor += tag("ftag", "DÜNYA DİŞ HEKİMLERİ FEDERASYONU", TOP, "dark")
 f0, f1 = s("florur"), S_["florur"][1]
-JS.append(S.florur_js(sc, f0, round(f1 - f0 + X, 2), A("florürlü", f0), (A("marka yok", f0), A("günde", f0), A("florürlü", f0))))
+JS.append(pop("#ftag", A("Dünya", f0)) + f'tl.to("#ftag",{{opacity:0,duration:.2}},{A("marka yok", f0) - .15:.2f});'
+          + S.florur_js(sc, f0, round(f1 - f0 + X, 2), A("florürlü", f0), (A("marka yok", f0), A("günde", f0), A("florürlü", f0))))
 
 # 9) MEĞERSE: reklam cümlesinin anlamı → tüpler FLORÜR olur
 m0 = s("meg")
 meg = S.meg_html()
-JS.append(flash_js(m0, .9, .35) + S.meg_js(m0, A("10 diş", m0), A("en iyisi", m0), A("olsa olsa", m0), A("Asıl", m0), A("florürmüş", m0)))
+JS.append(flash_js(m0, .9, .35) + S.meg_js(m0, A("o dokuz", m0), A("en iyisi", m0), A("olsa olsa", m0), A("Asıl", m0), A("florürmüş", m0)))
 SFX += [(m0 - 1.0, "riser", .5), (m0, "boom", .6)]
 
 # 10) ÇAĞRI: 10 hekim, 9'u söner, 10.'su parlar + GÖNDER → uçak outro'ya

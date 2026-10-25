@@ -255,9 +255,9 @@ DIP_CSS = """
 """
 
 
-def dipnot_html(big_top="10 KİŞİDEN", big="9'U", big_bot="TAVSİYE EDİYOR", big_size=170, fine="*Bir ürün deneme platformunda 713 tüketiciyle yapılan anket.",
+def dipnot_html(big_top="10 KİŞİDEN", big="9'U", big_bot="TAVSİYE EDİYOR", big_size=170, top_size=96, fine="*Bir ürün deneme platformunda 713 tüketiciyle yapılan anket.",
                 fine_big="*Bir ürün deneme platformunda <b>713 tüketiciyle</b> yapılan anket."):
-    return (f'<div class="dcard" id="dcd"><div class="big">{big_top}<b style="font-size:{big_size}px">{big}</b>{big_bot}</div><div class="fp">{fine}</div></div>'
+    return (f'<div class="dcard" id="dcd"><div class="big"><span style="font-size:{top_size}px">{big_top}</span><b style="font-size:{big_size}px">{big}</b>{big_bot}</div><div class="fp">{fine}</div></div>'
             f'<div id="lens"><div class="fp2">{fine_big}</div></div>'
             f'<svg class="fill" viewBox="0 0 1080 1920" style="overflow:visible"><g id="mag" transform="translate(-200 1300)">{__import__("dentart").magnifier(170)}</g></svg>')
 
@@ -382,7 +382,7 @@ def meg_html(brands=("NARVİS", "SENSODAYN", "İPENA", "ORAL-P", "SİNYAL")):
                      f'<g class="mta" id="mta{i}">{brand_tube(n)}</g><g class="mtb" id="mtb{i}" opacity="0">{paste_tube("FLORÜR", col, 120, 300, st)}</g></g></g>')
     return ('<div class="megt" id="megt">MEĞERSE</div>'
             '<div id="mban">10 DİŞ HEKİMİNDEN <b>9\'U</b><br>ÖNERİYOR*</div>'
-            '<div class="mp" id="mp1">≠ “EN İYİSİ BU”</div><div class="mp" id="mp2">= “ÖNERDİĞİM<br>MARKALARDAN BİRİ”</div>'
+            '<div class="mp" id="mp1">≠ “EN İYİSİ BU”</div><div class="mp" id="mp2">= “ÖNERDİKLERİMDEN<br>BİRİ”</div>'
             f'<svg class="fill" viewBox="0 0 1080 1920" style="overflow:visible">{"".join(tubes)}</svg>')
 
 
@@ -391,7 +391,7 @@ def meg_js(t0, t_ban, t_p1, t_p2, t_tubes, t_flip, n=5):
           f'tl.to("#megt",{{y:-440,scale:.6,duration:.5,ease:"power2.inOut"}},{t_ban - .1:.2f});'
           + pop_js("#mban", t_ban, .7, .35) + pop_js("#mp1", t_p1) + pop_js("#mp2", t_p2)
           + f'tl.to("#mban,#mp1,#mp2",{{y:-60,opacity:0,duration:.3,stagger:.05}},{t_tubes - .2:.2f});'
-          f'tl.fromTo(".mt",{{y:500}},{{y:0,duration:.5,stagger:.08,ease:"back.out(1.6)",immediateRender:false}},{t_tubes:.2f});tl.set(".mt",{{y:500}},0);')
+          f'tl.fromTo(".mt",{{y:500,opacity:0}},{{y:0,opacity:1,duration:.5,stagger:.08,ease:"back.out(1.6)",immediateRender:false}},{t_tubes:.2f});tl.set(".mt",{{y:500,opacity:0}},0);')
     for i in range(n):
         tf = t_flip + i * .1
         js += (f'tl.to("#mta{i}",{{scaleX:0,svgOrigin:"0 -150",duration:.14,ease:"power2.in"}},{tf:.2f});'

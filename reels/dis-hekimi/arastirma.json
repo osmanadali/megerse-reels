@@ -1,0 +1,932 @@
+{
+ "facts": [
+  {
+   "id": "dunya-c1",
+   "claim": "İngiltere'nin reklam denetleyicisi ASA, Ocak 2007'de Colgate'in \"Diş hekimlerinin %80'inden fazlası Colgate'i tavsiye ediyor\" posterini yanıltıcı buldu ve Colgate'ten bu iddiayı bir daha kullanmamasını istedi.",
+   "detail": "Posterin başlığı \"More than 80% Of Dentists recommend Colgate\" idi; yanında \"Colgate, used and recommended by most dentists\" yazıyordu. ASA'ya iki şikâyet gelmiş, ASA da profesyonel onay meselesini kendisi gündeme getirmişti; iki şikâyet de haklı bulundu (upheld). Haberler 17 Ocak 2007 (Cosmetics Business, UPI) ve 31 Ocak 2007 (Osborne Clarke) tarihli. Not: ASA'nın kendi karar metnini açamadım; bu bilgi birbiriyle örtüşen üç ikincil kaynağa dayanıyor.",
+   "sources": [
+    "https://marketinglaw.osborneclarke.com/retailing/colgates-80-of-dentists-recommend-claim-under-fire/",
+    "https://www.cosmeticsbusiness.com/asa-don-t-recommend-colgate-47191",
+    "https://www.upi.com/Business_News/2007/01/17/Colgate-toothpaste-claim-said-misleading/19421169068780/"
+   ],
+   "confidence": "high",
+   "viral": "Colgate'in '%80 diş hekimi' reklamı İngiltere'de yasaklandı. Nedeni anketin kendisiydi.",
+   "verdict": "dogru",
+   "safe": "İngiltere'nin reklam denetleyicisi ASA, Ocak 2007'de Colgate'in 'Diş hekimlerinin %80'inden fazlası Colgate'i tavsiye ediyor' posterini yanıltıcı buldu ve bu iddianın bir daha kullanılmamasını istedi.",
+   "note": "Osborne Clarke (31 Ocak 2007) metnini ham HTML olarak açtım. Başlık 'More than 80% Of Dentists recommend Colgate', yan ifade 'Colgate, used and recommended by most dentists'. Ortada iki şikâyet ve ASA'nın kendi açtığı bir konu (profesyonel onay) var; 'upheld both complaints' yazıyor, 'Colgate were told not to repeat the claim' de. Cosmetics Business (17-Jan-2007) ve UPI (17 Ocak 2007) aynı şeyi söylüyor. ASA'nın kendi karar metni internette yok, yalnızca bu üç ikincil kaynak var. Viral metinde 'yasaklandı' kelimesi gündelik dilde kabul edilebilir, ama teknik karşılığı 'tekrar kullanmaması istendi'. 'Nedeni anketin kendisiydi' ifadesi de eksik: asıl sorun anketin sorusu ile reklam başlığı arasındaki uyumsuzluktu, buna izin ve ilaç onayı sorunları da eklendi.",
+   "orig_sources": [
+    "https://marketinglaw.osborneclarke.com/retailing/colgates-80-of-dentists-recommend-claim-under-fire/",
+    "https://www.cosmeticsbusiness.com/asa-don-t-recommend-colgate-47191",
+    "https://www.upi.com/Business_News/2007/01/17/Colgate-toothpaste-claim-said-misleading/19421169068780/"
+   ]
+  },
+  {
+   "id": "dunya-c2",
+   "claim": "Colgate anketinde hekimlere tek bir marka seçtirilmemiş, birden fazla diş macunu ve marka önermelerine izin verilmişti; ASA'ya göre bir rakip marka da neredeyse Colgate kadar sık önerilmişti, yani \"%80\" birinci tercih anlamına gelmiyordu.",
+   "detail": "ASA'ya göre okur, iddiayı \"hekimlerin %80'i Colgate'i diğer markalara tercih ediyor, kalan %20 başka marka öneriyor\" diye anlıyordu; oysa anket hiç bunu sormamıştı. Osborne Clarke: anket hekimlerden \"to recommend several toothpastes and brands, not just a single choice\" istemişti ve ASA \"another competitor's brand was recommended by dentists almost as much as the Colgate brand\" demişti. Kararda rakip markanın adı geçmiyor.",
+   "sources": [
+    "https://marketinglaw.osborneclarke.com/retailing/colgates-80-of-dentists-recommend-claim-under-fire/",
+    "https://www.cosmeticsbusiness.com/asa-don-t-recommend-colgate-47191"
+   ],
+   "confidence": "high",
+   "viral": "Hekimler birden çok marka işaretleyebiliyordu. Rakip marka da neredeyse aynı oranda önerilmişti.",
+   "verdict": "dogru",
+   "safe": "Ankette hekimler tek bir marka seçmek zorunda değildi, birden fazla marka önerebiliyordu. ASA'ya göre bir rakip marka da neredeyse Colgate kadar sık önerilmişti; yani '%80', 'birinci tercih' anlamına gelmiyordu.",
+   "note": "Osborne Clarke'ta şu ifadeler kelimesi kelimesine geçiyor: 'What the survey asked for in part was for dentists to recommend several toothpastes and brands, not just a single choice' ve 'another competitor's brand was recommended by dentists almost as much as the Colgate brand'. 'in part' kaydına dikkat: soruların bir bölümü böyleydi. Okurun nasıl anlayacağına dair ASA yorumu da metinde var ('80% ... over and above other brands and the remaining 20% ... different brands'). Cosmetics Business: 'allowed dentists to recommend a number of toothpastes and brands'. Kaynakların hiçbiri rakip markanın adını vermiyor. Reelde marka adı uydurulmamalı.",
+   "orig_sources": [
+    "https://marketinglaw.osborneclarke.com/retailing/colgates-80-of-dentists-recommend-claim-under-fire/",
+    "https://www.cosmeticsbusiness.com/asa-don-t-recommend-colgate-47191"
+   ]
+  },
+  {
+   "id": "dunya-c3",
+   "claim": "ASA, Colgate'in telefon anketi metninin araştırmanın Colgate adına yapıldığını ve sonuçların reklamda kullanılabileceğini yeterince açık söylemediğini ve hekimlerden bu kullanım için yazılı izin alınmadığını da tespit etti.",
+   "detail": "Osborne Clarke'a göre metin \"did not make it sufficiently clear that the research was being conducted on behalf of Colgate or that the results could be used for advertising purposes\"; ayrıca \"interviewees' written permission had not [been] obtained\". Poster CAP Kodu'nun (o dönemki) 3.1 (kanıtlama), 7.1 (doğruluk), 14.5 (tanıklık) ve 50.17 (ilaçların onaylanması) maddelerine aykırı bulundu. Ankete giren dört Colgate diş macunu ruhsatlı ilaçtı; ilaçlar için sağlık profesyoneli onayı yasaktı.",
+   "sources": [
+    "https://marketinglaw.osborneclarke.com/retailing/colgates-80-of-dentists-recommend-claim-under-fire/",
+    "https://www.upi.com/Business_News/2007/01/17/Colgate-toothpaste-claim-said-misleading/19421169068780/"
+   ],
+   "confidence": "high",
+   "viral": "Hekimlere 'bu anketi Colgate yaptırıyor, cevabınız reklamda kullanılacak' açıkça söylenmemişti.",
+   "verdict": "dogru",
+   "safe": "ASA'ya göre telefon anketinin metni, araştırmanın Colgate adına yapıldığını ve sonuçların reklamda kullanılabileceğini yeterince açık söylemiyordu. Hekimlerden de bu kullanım için yazılı izin alınmamıştı.",
+   "note": "Osborne Clarke metninde şunlar birebir geçiyor: 'did not make it sufficiently clear that the research was being conducted on behalf of Colgate or that the results could be used for advertising purposes' ve 'interviewees' written permission had not obtained'. CAP maddeleri 3.1, 7.1, 14.5 ve 50.17. Ankette geçen dört Colgate macunu ruhsatlı ilaçtı. UPI de anketin Colgate'in yaptırdığını açıklamadığını yazıyor. Dikkat edilecek bir ayrıntı var: metin, araştırmayı 'bağımsız bir pazar araştırma şirketinin' yaptığını söylüyordu, Colgate de katılımcıların reklam kullanımından haberdar olduğunu savundu. ASA bunu 'hiç söylenmedi' diye değil 'yeterince açık değildi' diye değerlendirdi, bu yüzden viral metinde 'açıkça söylenmemişti' yerine 'yeterince açık söylenmemişti' denmeli. 50.17 maddesinin bugünkü karşılığı CAP Kodu 12.18.",
+   "orig_sources": [
+    "https://marketinglaw.osborneclarke.com/retailing/colgates-80-of-dentists-recommend-claim-under-fire/",
+    "https://www.upi.com/Business_News/2007/01/17/Colgate-toothpaste-claim-said-misleading/19421169068780/"
+   ]
+  },
+  {
+   "id": "dunya-c4",
+   "claim": "ABD'deki ünlü \"5 diş hekiminden 4'ü\" sloganı aslında Trident markasını değil, şekersiz sakızı genel olarak ve yalnızca \"sakız çiğneyen hastalar için\" öneren hekimlerden söz ediyordu.",
+   "detail": "Wikipedia'daki (NYT 27 Temmuz 2009 haberine atıfla) sloganın tam hali: \"Four out of five dentists surveyed recommend sugarless gum for their patients who chew gum.\" Straight Dope'taki okur alıntısı da aynı yapıda: \"Sugarless gum is recommended by four out of five dentists for their patients who chew gum.\" İki kaynakta kelimeler biraz farklı ama ikisinde de 'şekersiz sakız' ve 'sakız çiğneyen hastaları için' kayıtları var. Yani cümle hekimlerin sakız çiğnemeyi önerdiğini söylemiyor.",
+   "sources": [
+    "https://en.wikipedia.org/wiki/Trident_(gum)",
+    "https://www.straightdope.com/21343564/4-out-of-5-dentists-recommend-sugarless-gum-what-does-the-5th-recommend",
+    "https://law-journals-books.vlex.com/vid/cadbury-adams-usa-llc-51759382"
+   ],
+   "confidence": "high",
+   "viral": "'5 diş hekiminden 4'ü' cümlesinin devamı var: 'sakız çiğneyen hastalarına, şekersiz sakız'. Marka adı yok.",
+   "verdict": "dogru",
+   "safe": "ABD'deki ünlü sloganın bilinen tam hali şöyle: 'Ankete katılan 5 diş hekiminden 4'ü, sakız çiğneyen hastalarına şekersiz sakız öneriyor.' Cümlede Trident adı geçmiyor; hekimler genel olarak şekersiz sakızı öneriyor.",
+   "note": "Wikipedia'nın ham metnini açtım: 'Four out of five dentists surveyed recommend sugarless gum for their patients who chew gum' (NYT, Newman, 2009-07-27; URL'de 2009/07/28 görünüyor, büyük ihtimalle baskı tarihi). NYT sayfası bana açılmadı. Straight Dope'taki okur alıntısı: 'Sugarless gum is recommended by four out of five dentists for their patients who chew gum.' Uyarı: vLex/Ad Age özetinde 2003'teki Trident kampanyasının 'beşinci hekim neden Trident önermedi' esprisi üzerine kurulduğu ve iddianın halk arasında markaya mal edildiği yazıyor. Bazı düşük güvenilirlikli siteler de sonraki reklamların Trident'e özel bir tavsiye ima ettiğini söylüyor, ama bunu belgeyle doğrulayamadım. Bu yüzden 'sloganın bilinen metni' diye konuşmak daha güvenli.",
+   "orig_sources": [
+    "https://en.wikipedia.org/wiki/Trident_(gum)",
+    "https://www.straightdope.com/21343564/4-out-of-5-dentists-recommend-sugarless-gum-what-does-the-5th-recommend"
+   ]
+  },
+  {
+   "id": "dunya-c5",
+   "claim": "Cecil Adams'ın Straight Dope köşesine göre Trident üreticisi Warner-Lambert, Temmuz 1976'da 1.200 diş hekimine \"şekerli sakız, şekersiz sakız ya da hiç sakız\" seçeneklerini sordurdu; şekersiz sakız %85 çıktı ve beşinci hekim çoğunlukla \"hiç sakız çiğnemeyin\" diyordu.",
+   "detail": "Straight Dope: araştırmayı Warner-Lambert'in tuttuğu bir pazar araştırma şirketi yaptı; liste \"1,200 dentists believed to represent a cross-section of their profession\"; \"Sugarless gum won with 85 percent\"; beşinci hekim \"usually recommended no gum at all\". Köşe yazısı bunun Trident'e değil şekersiz sakıza genel bir destek olduğunu da vurguluyor. Uyarı: Bu ikincil bir kaynak; Wikipedia anketi kaynak göstermeden 1960'ların başına tarihliyor. Asıl anket belgesini bulamadım, o yüzden tarih ve rakamları kesin diye sunmayın.",
+   "sources": [
+    "https://www.straightdope.com/21343564/4-out-of-5-dentists-recommend-sugarless-gum-what-does-the-5th-recommend",
+    "https://en.wikipedia.org/wiki/Trident_(gum)"
+   ],
+   "confidence": "medium",
+   "viral": "Peki beşinci diş hekimi ne öneriyordu? Çoğunlukla: hiç sakız çiğnemeyin.",
+   "verdict": "dogru",
+   "safe": "Straight Dope köşesine göre beşinci diş hekimi çoğunlukla 'hiç sakız çiğnemeyin' diyordu. Köşeye göre Trident'in üreticisi 1976'da 1.200 hekime şekerli sakız, şekersiz sakız ya da hiç sakız seçeneklerini sordurmuştu (bu tek bir ikincil kaynağın aktarımı).",
+   "note": "Straight Dope sayfasını ham olarak açtım ve her ayrıntıyı birebir buldum: 'commissioned a market research firm to survey dentists in July 1976', 'a list of 1,200 dentists believed to represent a cross-section', 'sugared gum, sugarless gum, or no gum at all', 'Sugarless gum won with 85 percent', 'the fifth dentist usually recommended no gum at all', 'simply an endorsement of sugarless gum, not Trident in particular'. Köşe yazısının tarihi sayfada boş görünüyor; ikincil özetlere göre Kasım 1980. Wikipedia ise anketi kaynak göstermeden ve 'believed/apparently' diyerek 1960'ların başına tarihliyor. Bu yüzden tarih ve rakamlar 'Straight Dope'a göre' diye aktarılmalı. Bir de tutarsızlık var: %85, '5'te 4'ten' (%80) biraz fazla.",
+   "orig_sources": [
+    "https://www.straightdope.com/21343564/4-out-of-5-dentists-recommend-sugarless-gum-what-does-the-5th-recommend",
+    "https://en.wikipedia.org/wiki/Trident_(gum)"
+   ]
+  },
+  {
+   "id": "dunya-c6",
+   "claim": "ASA, 8 Ağustos 2018 tarihli kararında (A17-400410) Oral-B'nin \"dünyada 1 numaralı diş hekimi tavsiyesi marka\" iddiasını kabul etti, ama dayanak ankette Oral-B'yi önerdiği markalardan biri olarak seçen hekimlerin oranı yalnızca %22'ydi.",
+   "detail": "Reklam 27 Eylül 2017'de görülen Oral-B GoPro TV reklamıydı; iddia \"Oral B, the number one dentist recommended brand worldwide\" idi. Karar metni: \"22% of dentists selected Oral-B as one of their recommended brands, which was 6.8 percentage points higher than the next most popular brand.\" Fark %95 güvenle anlamlı bulundu. Sonuç: \"1 numara\" demek \"hekimlerin çoğu öneriyor\" demek değil, \"rakiplerden daha çok öneriliyor\" demek. Bu ayrımın en net belgeli örneği bu.",
+   "sources": [
+    "https://www.asa.org.uk/rulings/procter---gamble--health---beauty-care--ltd-a17-400410.html"
+   ],
+   "confidence": "high",
+   "viral": "'1 numaralı diş hekimi tavsiyesi' olmak için hekimlerin yüzde kaçı yetti? Bu örnekte %22.",
+   "verdict": "dogru",
+   "safe": "ASA 2018'de Oral-B'nin 'dünyada 1 numaralı diş hekimi tavsiyesi marka' iddiasını kabul etti. Dayanak ankette, hastalarına önerdiği şarjlı elektrikli diş fırçası markaları arasında Oral-B'yi işaretleyen hekimlerin oranı %22'ydi; bu oran, en yakın rakipten 6,8 puan fazlaydı.",
+   "note": "ASA karar sayfasını ham olarak açtım: 'Not Upheld', 08 August 2018, A17-400410. TV reklamı 27 Eylül 2017'de görülmüş, ürün Oral-B GoPro. Metinde birebir şu cümle geçiyor: '22% of dentists selected Oral-B as one of their recommended brands which was 6.8 percentage points higher than the next most popular brand.' Eklenecek ayrıntılar: (1) ASA iddiayı bağlam içinde elektrikli diş fırçası kategorisiyle sınırlı okudu, %22 de bu kategorideki orandır; reelde bu kayıt düşülmeli. (2) '%95 güvenle anlamlı' tespiti ASA'nın kendi bulgusu değil; bunu P&G söyledi ve bağımsız bir onay mektubu sundu, ASA da kanıtı yeterli saydı. Yani 'fark anlamlı bulundu' yerine 'P&G farkın anlamlı olduğunu gösterdi' denmeli.",
+   "orig_sources": [
+    "https://www.asa.org.uk/rulings/procter---gamble--health---beauty-care--ltd-a17-400410.html"
+   ]
+  },
+  {
+   "id": "dunya-c7",
+   "claim": "Oral-B anketinde 22 ülkede 5.157 hekime \"hastalarınıza genellikle önerdiğiniz tüm şarjlı elektrikli diş fırçası markaları hangileri\" diye soruldu; anketi her ülkede bağımsız ajanslar yaptı ve katılımcılara sponsorun P&G olduğu söylenmedi.",
+   "detail": "Anket Ekim 2015 ile Haziran 2017 arasında yapıldı; sonuçlar her ülkenin hekim sayısıyla ağırlıklandırıldı (WHO hekim sayıları kullanıldı). Sorunun kelimesi kelimesine hali: \"What are all of the brands of electric rechargeable toothbrushes the dentists usually recommended to their patients\". Yani soru birden çok marka söylenmesine izin veriyordu ve kategori yalnızca elektrikli fırçaydı. Karar: \"respondents were not aware that Procter & Gamble were the sponsors of the survey\"; görüşmeler kör yapıldı ve hekimlerin Oral-B ile mali bir bağı yoktu. ASA şikâyeti haklı bulmadı (not upheld).",
+   "sources": [
+    "https://www.asa.org.uk/rulings/procter---gamble--health---beauty-care--ltd-a17-400410.html"
+   ],
+   "confidence": "high",
+   "viral": "Soru 'hangi markayı önerirsiniz' değil, 'önerdiğiniz TÜM markalar hangileri' idi.",
+   "verdict": "dogru",
+   "safe": "Oral-B anketinde 22 ülkeden 5.157 diş hekimine, hastalarına genellikle önerdikleri tüm şarjlı elektrikli diş fırçası markaları soruldu. Hekimlere bir marka listesi verildi ve uyan tüm markaları işaretlemeleri istendi. P&G'ye göre anketi her ülkede bağımsız ajanslar yaptı ve katılımcılar sponsorun P&G olduğunu bilmiyordu.",
+   "note": "ASA kararında hepsi var: 5157 hekim, 22 ülke, Ekim 2015 – Haziran 2017; sonuçlar her ülkenin hekim sayısıyla ağırlıklandırıldı (hekim sayıları WHO verisinden; ağırlıklı toplam dünyadaki hekimlerin yaklaşık %72'si); 'independent research agencies'; 'respondents were not aware that Procter & Gamble were the sponsors'; 'The interviews were conducted blinded'; hekimlerin Oral-B ile 'no financial or other relationship' olduğu (bunu ASA, P&G'nin beyanı olarak not etti); soru metni birebir doğru; sonuç 'Not upheld'. Ayrıntılar: sponsorun gizliliği ve ajans bilgisi P&G'nin beyanı. Soru açık uçlu değildi, liste üzerinden 'tümünü seçin' biçimindeydi. Veri iki yıllık kayan pencereyle hesaplandı.",
+   "orig_sources": [
+    "https://www.asa.org.uk/rulings/procter---gamble--health---beauty-care--ltd-a17-400410.html"
+   ]
+  },
+  {
+   "id": "dunya-c8",
+   "claim": "ASA, 29 Haziran 2016'da (A16-334316) Wisdom'ın \"diş hekimliği profesyonellerinin %100'ü tavsiye ediyor\" iddiasını yanıltıcı buldu; firma anketi kendisi yapmış, fuarlarda bulduğu 46 kişiye \"Bu ürünü hastalarınıza önerir miydiniz?\" diye sormuştu.",
+   "detail": "Reklamlar Mart 2016'da Dental Health dergisinde ve firmanın sitesinde çıktı. ASA'ya göre okur ifadeyi ürünü bütün profesyonellerin fiilen önerdiği şeklinde anlıyordu, oysa anket yalnızca ileride önerme isteğini ölçüyordu. Bazı yanıtlar katılımcıların ürünü kullanmadığını ya da önermediğini gösteriyordu ve örneklem büyüklüğü reklamda yazmıyordu. Karara göre iddia \"not substantiated and was misleading\"; CAP Kodu 3.1, 3.7, 3.9 ve 3.10 ihlal edildi. Şikâyeti rakip TePe yapmıştı.",
+   "sources": [
+    "https://asa.org.uk/rulings/wisdom-toothbrushes-ltd-a16-334316.html",
+    "https://www.asa.org.uk/news/a-quick-guide-to-advertising-consumer-surveys.html"
+   ],
+   "confidence": "high",
+   "viral": "'%100'ü tavsiye ediyor' iddiasının arkasında 46 kişi ve 'önerir miydiniz' sorusu vardı.",
+   "verdict": "dogru",
+   "safe": "ASA 2016'da Wisdom'ın ara yüz fırçaları için kullandığı 'diş hekimliği profesyonellerinin %100'ü tavsiye ediyor' iddiasını yanıltıcı buldu. İddia, firmanın fuarlarda bilgilerini aldığı 46 profesyonele sorduğu 'Bu ürünü hastalarınıza önerir miydiniz?' sorusuna dayanıyordu.",
+   "note": "ASA karar sayfasını ham olarak açtım: Upheld, 29 June 2016. Ürün Wisdom Clean Between ara yüz fırçaları. Dergi reklamı Mart 2016'da Dental Health'te, site de Mart 2016'da görülmüş. Şikâyetçi TePe. Katılımcıların bilgileri fuarlarda ve sergilerde kaydedilmiş, anket online doldurulmuş, 46 yanıt alınmış. Soru birebir: 'Would you recommend this product to patients in practice?' ASA iddiayı 'fiilen öneriyorlar' diye okudu. Bazı açık uçlu yanıtlar ürünü kullanmadıklarını ya da önermediklerini gösteriyordu. Örneklem büyüklüğü reklamda yoktu. Hüküm 'not been substantiated and was misleading'; ihlal edilen maddeler CAP 3.1, 3.7, 3.9 ve 3.10. 13 Mayıs 2021 tarihli ASA rehberi de bu örneği kullanıyor. Küçük düzeltme: ürün diş fırçası değil, ara yüz fırçası.",
+   "orig_sources": [
+    "https://asa.org.uk/rulings/wisdom-toothbrushes-ltd-a16-334316.html",
+    "https://www.asa.org.uk/news/a-quick-guide-to-advertising-consumer-surveys.html"
+   ]
+  },
+  {
+   "id": "dunya-c9",
+   "claim": "ASA, Mart 2007'de Sensodyne'ın bir dergi reklamında adı verilen bir diş hekimini \"Dentists recommend Sensodyne for sensitive teeth\" ifadesiyle kullanmasını kurallara aykırı buldu, çünkü serideki bazı Sensodyne ürünleri ruhsatlı ilaçtı ve ilaçları sağlık profesyonelleri onaylayamazdı.",
+   "detail": "Şikâyeti Colgate-Palmolive yaptı; reklam Sensodyne Total Care Extra Fresh içindi. GSK gösterilen ürünün kozmetik olduğunu savundu. ASA bunu kabul etti, ama dört Sensodyne ürünü ruhsatlı ilaç olduğu ve onay genel olarak \"Sensodyne\" markasına yapıldığı için tüm seriye uzanabileceğine hükmetti (CAP Kodu 50.17). Ayrıca \"Dr\" unvanı yanıltıcı bulundu ve \"ilk tedavi yöntemim\" ifadesi tıbbi iddia sayıldı (50.11); üç konunun üçünde de şikâyet haklı bulundu. Kaynak Osborne Clarke'ın 30 Mart 2007 tarihli özeti; ASA'nın kendi metnini açamadım.",
+   "sources": [
+    "https://marketinglaw.osborneclarke.com/retailing/gsk-fights-its-corner-on-sensodyne-ads/",
+    "https://www.asa.org.uk/advice-online/health-celebrities-and-health-professionals.html"
+   ],
+   "confidence": "high",
+   "viral": "İngiltere'de diş hekimi yüzüyle 'tavsiye' reklamı, ürün ilaç sayılıyorsa yasak.",
+   "verdict": "dogru",
+   "safe": "İngiltere'de ASA, 2007'de Sensodyne'ın dergi reklamlarında adı verilen bir diş hekimini 'tavsiye eden' olarak kullanmasını kurallara aykırı buldu. Gerekçe şuydu: Sensodyne serisindeki bazı ürünler ruhsatlı ilaçtı ve İngiltere kurallarına göre ilaçları sağlık profesyonelleri reklamda onaylayamaz.",
+   "note": "Osborne Clarke'ın 30 Mart 2007 tarihli özetini ham olarak açtım ('When: March 2007'). Ürün Sensodyne Total Care Extra Fresh; reklamlar dergi reklamları, birden fazla. Reklamdaki ifadeler: 'Sensodyne has always been my first mode of treatment for sensitivity' ve 'Dentists recommend Sensodyne for sensitive teeth'. Onay şikâyetini Colgate-Palmolive yapmış; madde 50.17; 'four other products in the Sensodyne range were licensed medicines'. 'Dr Stemmer B.D.S.' unvanı yanıltıcı bulunmuş, tıbbi iddia konusu da 50.11 kapsamında; skor 3-0. Not: ASA'nın gerekçede örnek verdiği ifade 'first mode of treatment' cümlesi. Yani sorun yalnızca 'Dentists recommend' cümlesi değil, adı verilen hekimin genel olarak Sensodyne'ı onaylaması. ASA'nın kendi karar metnini bulamadım. Kuralın bugünkü karşılığı CAP Kodu 12.18: 'Marketers must not use health professionals or celebrities to endorse medicines.' Viral cümle ürünün 'ilaç sayıldığı' kaydıyla doğru.",
+   "orig_sources": [
+    "https://marketinglaw.osborneclarke.com/retailing/gsk-fights-its-corner-on-sensodyne-ads/"
+   ]
+  },
+  {
+   "id": "dunya-c10",
+   "claim": "ABD'nin öz-denetim kurumu NAD, 14 Haziran 2019'da Colgate'in itirazına rağmen Sensodyne'ın \"10 diş hekiminden 9'u Sensodyne'ı tavsiye ediyor\" ve \"#1 diş hekimi tavsiyesi marka\" iddialarını destekli buldu, çünkü hekim anketi hassas dişler içindi ve tüketiciler de ifadeyi böyle anlıyordu.",
+   "detail": "Colgate'e göre iddialar tavsiyeyi \"hassas dişler\" ile sınırlamıyordu ve \"10'da 9\", hangi şikâyet için olursa olsun hekimlerin %90'ının Sensodyne önerdiği izlenimini veriyordu. NAD'a göre GSK'nın hekim anketinin hassas dişli tüketiciler için iddiayı desteklediği tartışmasızdı. GSK'nın sunduğu iki tüketici algı anketi de alıcıların iddiayı \"hassasiyet için\" diye okuduğunu gösterdi. NAD'a göre normalde bu sınırlama iddianın yanında açıkça yazmalı; burada markanın yalnızca hassasiyete yönelik konumu nedeniyle ek açıklama gerekmedi. Yani '10'da 9' genel bir 'en iyi diş macunu' oyu değil, belirli bir sorun için verilmiş bir tavsiye.",
+   "sources": [
+    "https://bbbprograms.org/media/newsroom/decisions/nad-finds-glaxosmithkline-s-sensodyne-toothpaste-1-dentist-recommended-brand-claims-supported-no-add"
+   ],
+   "confidence": "high",
+   "viral": "'10 diş hekiminden 9'u' derken soru neydi? Bu örnekte: hassas dişler için ne önerirsiniz?",
+   "verdict": "dogru",
+   "safe": "ABD'de NAD 2019'da Colgate'in itirazını inceledi ve Sensodyne'ın '10 diş hekiminden 9'u Sensodyne'ı tavsiye ediyor' ve '#1 diş hekimi tavsiyesi marka' iddialarını destekli buldu. Gerekçe: hekim anketi hassas dişler içindi ve tüketiciler de iddiayı hassasiyet için yapılmış bir tavsiye olarak anlıyordu.",
+   "note": "BBB National Programs duyurusunu ham olarak açtım: New York, 14 Haziran 2019. İddialar '#1 Dentist Recommended Brand' ve '9 out of 10 dentists recommend Sensodyne'; itiraz eden Colgate-Palmolive. Duyuruda şu ifade var: 'undisputed that GSK's dentist survey evidence supports its claims ... for consumers with sensitive teeth'. Sınırlamanın normalde iddianın yakınında açıkça yazması gerektiği, ama tüketici kafa karışıklığı yoksa ek açıklama gerekmediği belirtiliyor. İki tüketici algı anketi güvenilir bulunmuş, markanın yalnızca hassasiyete yönelik konumu da gerekçeye eklenmiş. Uyarı: anketin sorusunun kelimesi kelimesine halini duyuru vermiyor. Viral metindeki 'soru: hassas dişler için ne önerirsiniz?' cümlesi soru metniymiş gibi sunulmamalı; 'tavsiye hassas dişler içindi' demek güvenli.",
+   "orig_sources": [
+    "https://bbbprograms.org/media/newsroom/decisions/nad-finds-glaxosmithkline-s-sensodyne-toothpaste-1-dentist-recommended-brand-claims-supported-no-add"
+   ]
+  },
+  {
+   "id": "dunya-c11",
+   "claim": "NAD 16 Haziran 2020'de Oral-B arayüz kürdanlarının ambalajındaki \"#1\" rozetinin kaldırılmasını önerdi, çünkü dayanak kürdanın kendisi değil Oral-B diş ipi markasının \"1 numaralı diş hekimi tavsiyesi\" olmasıydı; NARB ise 16 Eylül 2020'de yanındaki açıklamayla birlikte kullanılabileceğine karar verdi.",
+   "detail": "Rakip GUM kürdanlarının üreticisi Sunstar itiraz etti. NAD'a göre rozet, kutudaki ürünün satışta veya hekim tavsiyesinde 1 numara olduğu şeklinde desteksiz bir mesaj veriyordu ve \"from the makers of\" ifadesi bunu sınırlamıyordu. P&G itiraz etti. NARB, ambalajdaki \"FROM THE MAKERS OF THE #1 DENTIST RECOMMENDED FLOSS BRAND\" açıklaması bulunduğunda iddianın yanıltıcı olmadığına karar verdi. Ancak bu açıklamanın olmadığı kullanımların (örneğin bazı Amazon ifadeleri) bırakılmasını önerdi. Ders: \"1 numara\" başka bir üründen ödünç alınmış olabilir.",
+   "sources": [
+    "https://bbbprograms.org/media/newsroom/decisions/p-g-will-appeal-nad-s-recommendation-to-discontinue-use-of-1-claim-for-oral-b-interdental-picks",
+    "https://bbbprograms.org/media/newsroom/decisions/narb-determines-that-1-claim-for-oral-b-interdental-picks-based-on-oral-b-s-status-as-the-leading-de"
+   ],
+   "confidence": "high",
+   "viral": "Kutudaki '1 numara' rozeti o ürüne değil, markanın başka bir ürününe ait olabilir.",
+   "verdict": "dogru",
+   "safe": "ABD'de NAD 2020'de Oral-B diş arası kürdanlarının kutusundaki '#1' rozetinin kaldırılmasını önerdi, çünkü '1 numara' kürdanın değil, Oral-B diş ipi markasının hekim tavsiyesindeki yerinden geliyordu. Üst kurul NARB ise rozetin yanındaki 'Hekimlerin 1 numaralı tavsiye ettiği diş ipi markasının üreticisinden' açıklamasıyla birlikte kullanılabileceğine karar verdi.",
+   "note": "İki duyuruyu da açtım. NAD, 16 Haziran 2020: itiraz eden Sunstar Americas (GUM); rozet tek başına kürdanın satışta, hekim tavsiyesinde ya da ikisinde birden 1 numara olduğunu ima ediyor; 'From the makers of' ifadesi bunu sınırlamıyor; kaldırılması önerildi; P&G itiraz edeceğini açıkladı. NARB, 16 Eylül 2020: ürün Oral-B Precision Clean Interdental Picks; yanındaki 'FROM THE MAKERS OF THE #1 DENTIST RECOMMENDED FLOSS BRAND' açıklamasıyla yanıltıcı değil; açıklama olmayan kullanımların (ör. Amazon) bırakılması önerildi; P&G uyacağını söyledi. Küçük dil notu: 'arayüz' kelimesi 'interface' çağrışımı yapıyor; 'diş arası' ya da 'ara yüz' demek daha doğru.",
+   "orig_sources": [
+    "https://bbbprograms.org/media/newsroom/decisions/p-g-will-appeal-nad-s-recommendation-to-discontinue-use-of-1-claim-for-oral-b-interdental-picks",
+    "https://bbbprograms.org/media/newsroom/decisions/narb-determines-that-1-claim-for-oral-b-interdental-picks-based-on-oral-b-s-status-as-the-leading-de"
+   ]
+  },
+  {
+   "id": "dunya-c12",
+   "claim": "ABD Federal Ticaret Komisyonu'nun (FTC) Onay ve Tanıklık Rehberi'ne (16 CFR 255.3) göre bir uzman onayı ürünün rakiplerden üstün olduğu izlenimini veriyorsa, uzmanın gerçekten karşılaştırma yapmış ve o üstünlüğü bulmuş olması gerekir.",
+   "detail": "255.3(b) maddesine göre onay \"an actual exercise of the expertise\" ile desteklenmeli; reklam bir karşılaştırma ima ediyorsa \"such comparison must have been included in the expert's evaluation\"; genel izlenim üstünlükse \"the expert must in fact have found such superiority.\" 255.4'e göre bir kuruluşun onayı da kuruluşun ortak görüşünü yansıtan bir süreçle verilmeli. Rehber en son FTC'nin 29 Haziran 2023 tarihli duyurusuyla güncellendi (önceki sürüm 2009). FTC rehberleri bağlayıcı yönetmelik değil, kurumun yol gösterici ilkeleri. FTC'nin özellikle 'diş hekimi tavsiyesi' anketleriyle ilgili bir kararını bulamadım.",
+   "sources": [
+    "https://www.law.cornell.edu/cfr/text/16/255.3",
+    "https://www.law.cornell.edu/cfr/text/16/255.4",
+    "https://www.law.cornell.edu/cfr/text/16/255.0",
+    "https://www.ftc.gov/news-events/news/press-releases/2023/06/federal-trade-commission-announces-updated-advertising-guides-combat-deceptive-reviews-endorsements"
+   ],
+   "confidence": "high",
+   "viral": "ABD kuralı: uzman 'bu daha iyi' diyorsa, gerçekten karşılaştırmış olmalı.",
+   "verdict": "dogru",
+   "safe": "ABD Federal Ticaret Komisyonu'nun (FTC) rehberine göre bir uzman onayı, ürünün rakiplerden üstün olduğu izlenimini veriyorsa, uzmanın gerçekten karşılaştırma yapmış ve o üstünlüğü bulmuş olması gerekir.",
+   "note": "Cornell'deki 16 CFR 255.3(b) metnini ham olarak açtım. Şu ifadeler birebir geçiyor: 'actual exercise of the expertise', 'such comparison must have been included in the expert's evaluation', 'the expert must in fact have found such superiority'. 255.4: kuruluş onayı 'fairly reflects the collective judgment' sağlayan bir süreçle verilmeli. 255.0(a): rehberler 'administrative interpretations' ve 'voluntary compliance' için; yani bağlayıcı yönetmelik değil, ama FTC Kanunu'nun 5. maddesine göre işlem yapılmasına dayanak olabiliyor. FTC basın bülteninin tarihi 29 Haziran 2023 ve rehberin 'last revised in 2009' olduğunu yazıyor. Diş hekimi anketine özel bir FTC kararı aramadım; iddiada da öyle bir şey öne sürülmüyor.",
+   "orig_sources": [
+    "https://www.law.cornell.edu/cfr/text/16/255.3",
+    "https://www.law.cornell.edu/cfr/text/16/255.4",
+    "https://www.ftc.gov/news-events/news/press-releases/2023/06/federal-trade-commission-announces-updated-advertising-guides-combat-deceptive-reviews-endorsements"
+   ]
+  },
+  {
+   "id": "dunya-c13",
+   "claim": "İngiltere'nin reklam kuralları anket iddiaları için belirli bir örneklem büyüklüğü dayatmaz, ama temsili bir örneklem ister, belirsiz ya da yönlendirici soruları yeterli kanıt saymaz ve reklam başlığının sorulan soruyu birebir yansıtmasını şart koşar.",
+   "detail": "ASA/CAP rehberinden alıntılar: \"the Code is not prescriptive about the sample size\"; \"Marketers should ensure they use a representative sample, capable of supporting their claim\"; \"ambiguous surveys and questions, or those that lack detail or include leading questions\" yetersiz kanıt sayılıyor. Örneklem büyüklüğünü yazmamak yanıltıcı olacaksa yazılmalı. Ayrı bir ASA rehber yazısı (13 Mayıs 2021) Wisdom örneğiyle başlığın anket sorusunu \"accurately reflect\" etmesini istiyor ve iddianın anket mi yoksa nesnel ölçüm mü olduğunun, katılımcıların temsili mi yoksa kendi müşterileri mi olduğunun belirtilmesini öneriyor. Rehber sayfasının tarihi 29 Nisan 2026.",
+   "sources": [
+    "https://www.asa.org.uk/advice-online/substantiation-sampling-references-and-consumer-goods.html",
+    "https://www.asa.org.uk/news/a-quick-guide-to-advertising-consumer-surveys.html"
+   ],
+   "confidence": "high",
+   "viral": "Bir anket iddiasını okurken sorun: Kaç kişiye, kim, hangi soruyu sordu?",
+   "verdict": "duzeltilmeli",
+   "safe": "İngiltere'de reklam kuralları anketler için sabit bir örneklem büyüklüğü belirlemez; örneklemin iddiayı destekleyecek kadar sağlam olması beklenir. Genel nüfus hakkında iddia varsa örneklem temsili olmalıdır, kendi müşterilerine sorduysan bunu açıkça söylemelisin. Belirsiz ya da yönlendirici sorular yeterli kanıt sayılmaz. Reklam başlığı da anketin gerçekte sorduğu soruyu doğru yansıtmalıdır.",
+   "note": "İki ASA/CAP sayfasını da ham olarak açtım. AdviceOnline sayfasının tarihi '29 Apr 2026' (doğru). Şu ifadeler birebir geçiyor: 'the Code is not prescriptive about the sample size', 'Marketers should ensure they use a representative sample, capable of supporting their claim', 'ambiguous surveys and questions, or those that lack detail or include leading questions'; ayrıca örneklem büyüklüğünün, yazılmaması yanıltıcı olacaksa yazılması gerektiği. Rehber yazısının tarihi 13 May 2021; içinde Wisdom örneği ve 'accurately reflects the survey question' ifadesi var, Three Mobile örneğiyle anket mi nesnel ölçüm mü ayrımı yapılıyor, müşteri mi temsili örneklem mi ayrımı isteniyor. Düzeltilmesi gerekenler: (1) Rehber başlığın soruyu 'birebir' yansıtmasını 'şart koşmuyor', 'doğru yansıtmasını' istiyor. (2) Rehber, ürüne olumlu bakan katılımcılarla anket yapmayı yasaklamıyor; bunun açıkça belirtilmesini istiyor. Yani temsili örneklem ancak iddia genel nüfusa dair olduğunda şart. (3) AdviceOnline sayfası CAP Yürütme Kurulu'nun tavsiyesi ve kendi ifadesiyle 'does not bind'; bağlayıcı olan CAP Kodu'nun 3.1, 3.7 ve 3.9 maddeleri.",
+   "orig_sources": [
+    "https://www.asa.org.uk/advice-online/substantiation-sampling-references-and-consumer-goods.html",
+    "https://www.asa.org.uk/news/a-quick-guide-to-advertising-consumer-surveys.html"
+   ]
+  },
+  {
+   "id": "dunya-c14",
+   "claim": "Dünya Diş Hekimleri Federasyonu FDI'nin Eylül 2025'te güncellenen politika bildirgesi markadan söz etmez; en az günde iki kez florürlü diş macunuyla fırçalamayı ve piyasadaki macunlarda en az 1000-1100 ppm florür bulunmasını önerir.",
+   "detail": "FDI 'Use of Topical Fluoride for Caries Prevention' bildirgesi: \"Effective home care for caries prevention includes brushing with fluoridated toothpaste at least twice daily\" ve \"Commercially available fluoridated toothpastes should contain a minimum of 1000−1100 ppm of fluoride.\" Bildirge Kasım 2000'de Paris'te kabul edildi, Eylül 2025'te Şanghay'da revize edildi. Reel için kapanış mesajı olarak uygun: hekimlerin ortak önerisi bir marka değil, florür ve düzenli fırçalama.",
+   "sources": [
+    "https://www.fdiworlddental.org/use-topical-fluoride-caries-prevention"
+   ],
+   "confidence": "high",
+   "viral": "Dünya diş hekimleri federasyonunun önerisinde marka yok: florürlü macun, günde iki kez.",
+   "verdict": "dogru",
+   "safe": "Dünya Diş Hekimleri Federasyonu FDI'nin 2025'te güncellenen politika bildirgesinde marka yok. Önerisi en az günde iki kez florürlü macunla fırçalamak; piyasadaki macunlarda da en az 1000–1100 ppm florür bulunmalı.",
+   "note": "FDI sayfasını ham olarak açtım. Kabul: FDI Genel Kurulu, Kasım 2000, Paris. Revizyon: Eylül 2025, Şanghay. Birebir geçen ifadeler: 'Effective home care for caries prevention includes brushing with fluoridated toothpaste at least twice daily' ve 'Commercially available fluoridated toothpastes should contain a minimum of 1000−1100 ppm of fluoride'. Metinde hiçbir marka adı yok. Ek bilgi: en az iki dakika fırçalama, sabah ve yatmadan önce, tükürdükten sonra suyla çalkalamama; çocuklarda yaşa uygun macun miktarı; yüksek çürük riskinde reçeteli 2500–5000 ppm macun. Reelde çocuklar için 'yaşa uygun miktar' notu eklenebilir.",
+   "orig_sources": [
+    "https://www.fdiworlddental.org/use-topical-fluoride-caries-prevention"
+   ]
+  },
+  {
+   "id": "turkiye-TR-01",
+   "claim": "Reklam Kurulu, Sensodyne'ın televizyon reklamındaki \"Hassas dişler için 10 diş hekiminden 9'u Sensodyne öneriyor\" iddiasının kanıtlanamadığına karar verdi ve reklam verene 81.554 TL para cezası ile reklamı durdurma cezası verdi.",
+   "detail": "Reklam Kurulu, 223. toplantı, 15 Nisan 2014, Dosya No 2012/971. Şikayet edilen: Glaxosmithkline İlaçları San. ve Tic. A.Ş.; ürün: \"Sensodyne Onarım ve Koruma\" (TV reklamları, 2012). Kurulun gerekçesi şöyle: \"Hassas dişler için 10 diş hekiminden 9'u Sensodyne öneriyor\" iddiasının doğruluğu \"bilimsel test/raporlar ve/veya diğer belgeler ile kanıtlanamadı\". Ayrıca altyazının metin boyutu ve arka planla renk kontrastı mevzuata uygun değildi, yani altyazı \"okunabilirlikten uzak\"tı. Dayanak, o dönem yürürlükte olan 4077 sayılı Kanun md. 16, eski Reklam Yönetmeliği md. 5/a, 5/e, 7/a, 7/c, 7/g, 13 ve 21 ile Altyazı ve Dipnot Tebliği md. 5, 6/3-a,b,c ve 8. Yaptırım: ulusal düzeyde 81.554 TL idari para cezası ve durdurma cezası.",
+   "sources": [
+    "https://ticaret.gov.tr/data/5d1c9edd13b87615344cd4c8/0a4ee75ce4bb0ea8448f3c327a0f53dc.doc",
+    "https://ticaret.gov.tr/tuketici/ticari-reklamlar/reklam-kurulu-kararlari"
+   ],
+   "confidence": "high",
+   "viral": "\"10 diş hekiminden 9'u\" dedi ama kanıtlayamadı: Türkiye'de bunun cezası 81.554 TL oldu.",
+   "verdict": "dogru",
+   "safe": "Reklam Kurulu 15 Nisan 2014'te (223. toplantı, 2012/971), Sensodyne Onarım ve Koruma TV reklamındaki \"Hassas dişler için 10 diş hekiminden 9'u Sensodyne öneriyor\" iddiasının belgeyle kanıtlanamadığına ve altyazının okunamadığına karar verdi. GlaxoSmithKline'a 81.554 TL idari para cezası ile durdurma cezası verdi.",
+   "note": "Bakanlığın listesine göre bu .doc dosyası 15.04.2014 tarihli 223 sayılı toplantının bülteni. Bültenin 7. kararını açtım. Dosya no, şikayet edilen şirket (Glaxosmithkline İlaçları San. ve Tic. A.Ş.), ürün, 2012 tarihi ve TV mecrası birebir tutuyor. \"bilimsel test/raporlar ve/veya diğer belgeler ile kanıtlanamadığı\" ve \"okunabilirlikten uzak\" ifadeleri metinde geçiyor. Dayanak olarak Tebliğ md. 5, 6/3-a,b,c ve 8, eski Yönetmelik md. 5/a, 5/e, 7/a, 7/c, 7/g, 13 ve 21, 4077 md. 16 sayılıyor. Yaptırım: ulusal düzeyde 81.554 TL idari para cezası ve durdurma cezası (4077 md. 17 ve 25/8). Nüans: Ceza iki ihlal için birlikte verildi, kanıtlanamayan iddia ve okunamayan altyazı. Viral cümledeki \"bunun cezası\" ifadesi cezanın tamamını tek iddiaya bağlıyor. Ayrıca reklamda \"öneriyorum\" diyen bir konuşmacı var.",
+   "orig_sources": [
+    "https://ticaret.gov.tr/data/5d1c9edd13b87615344cd4c8/0a4ee75ce4bb0ea8448f3c327a0f53dc.doc",
+    "https://ticaret.gov.tr/tuketici/ticari-reklamlar/reklam-kurulu-kararlari"
+   ]
+  },
+  {
+   "id": "turkiye-TR-02",
+   "claim": "İpana'nın \"Binlerce diş hekimi yanılıyor olamaz\" reklamında Kurul, sunulan araştırmanın yöntemini objektif bulmadı ve Procter&Gamble'a 59.192 YTL para cezası ile durdurma cezası verdi.",
+   "detail": "Reklam Kurulu, 160. toplantı, 13.01.2009, Dosya 2008/645. Reklamlar TV'de ve tanıtım standlarında yayımlanmıştı. İddia: \"Binlerce diş hekimi yanılıyor olamaz. Diş hekimlerine göre komple ağız bakımında en etkili diş macunu İpana.\" Kurula göre firmanın sunduğu belgeler, \"araştırma yöntemi olarak kullanılan tekniğin objektif sayılamayacağı\" için iddiayı ispatlamıyordu, bu yüzden reklam yanıltıcıydı. Dayanak: 4077 sayılı Kanun md. 16. Yaptırım: ulusal düzeyde 59.192 YTL idari para cezası ve durdurma cezası.",
+   "sources": [
+    "https://ticaret.gov.tr/data/5d1c9edd13b87615344cd4c8/014fc5835f8409f35a9b466ce1930371.doc",
+    "https://ticaret.gov.tr/tuketici/ticari-reklamlar/reklam-kurulu-kararlari"
+   ],
+   "confidence": "high",
+   "viral": "\"Binlerce diş hekimi yanılıyor olamaz\" dediler; Kurul ise araştırmanın objektif olmadığını söyledi.",
+   "verdict": "dogru",
+   "safe": "Reklam Kurulu 13.01.2009'da (160. toplantı, 2008/645), İpana'nın \"Binlerce diş hekimi yanılıyor olamaz\" reklamını yanıltıcı buldu, çünkü araştırmada kullanılan teknik objektif değildi. Procter&Gamble'a 59.192 YTL para cezası ile durdurma cezası verdi.",
+   "note": "Listeye göre bu dosya 160 sayılı toplantının bülteni, metin başlığında da 13.01.2009 tarihli 160. toplantı yazıyor. Kararın 5. maddesi (2008/645): Procter&Gamble Tüketim Malları Sanayi A.Ş., İpana, TV ve tanıtım standı. Alıntılanan iddia ve \"araştırma yöntemi olarak kullanılan tekniğin objektif sayılamayacağı\" gerekçesi birebir geçiyor. Dayanak 4077 md. 16 (4822 ile değişik). Yaptırım ulusal düzeyde 59.192 YTL idari para ve durdurma cezası. Bültende bulunan her şey iddiayla örtüşüyor.",
+   "orig_sources": [
+    "https://ticaret.gov.tr/data/5d1c9edd13b87615344cd4c8/014fc5835f8409f35a9b466ce1930371.doc"
+   ]
+  },
+  {
+   "id": "turkiye-TR-03",
+   "claim": "İpana Pro-Expert reklamı \"Türkiye'de 375 diş hekimi ile yapılan bir araştırma\" dipnotuyla \"hassasiyeti hem gideren hem önleyen TEK diş macunu\" diyordu; Kurul bu iddianın üniversite ya da akredite kuruluş çalışmasıyla kanıtlanmadığına karar verdi ve cezayı iki katına çıkardı.",
+   "detail": "Reklam Kurulu, 205. toplantı, 15.10.2012, Dosya 2012/1322. Şikayet edilen: Procter&Gamble Satış ve Dağıtım Ltd. Şti.; ürün: \"İpana Pro-Expert Clinic Line\" (TV reklamları, 06.01–09.04.2012). Reklamdaki ifadeler: \"Türkiye'de 375 diş hekimi ile yapılan bir araştırmanın sonucu. Hassasiyeti hem anında gideren ve hem de önleyen TEK diş macunu!\" Kurula göre bu ifadeler ürünün diğerlerinden üstün olduğu izlenimini yaratıyordu ama Türkiye'deki üniversitelerden veya akredite bir kuruluştan alınmış bilimsel çalışma ve test sonucu sunulmadı. Aynı ürünün broşürlerine 10.01.2012 tarihli 196. toplantıda zaten ceza verilmişti. İhlal bir yıl içinde tekrarlandığı için para cezası iki kat uygulandı: 81.554 x 2 = 163.108 TL. Buna durdurma cezası da eklendi.",
+   "sources": [
+    "https://ticaret.gov.tr/data/5d1c9edd13b87615344cd4c8/f7d7ce31e4a50cfe920c9e05a0068e7e.doc",
+    "https://ticaret.gov.tr/tuketici/ticari-reklamlar/reklam-kurulu-kararlari"
+   ],
+   "confidence": "high",
+   "viral": "Dipnotta \"375 diş hekimi\" yazıyordu; Kurul bunu kanıt saymadı ve cezayı ikiye katladı.",
+   "verdict": "duzeltilmeli",
+   "safe": "İpana Pro-Expert Clinic Line TV reklamı \"Türkiye'de 375 diş hekimi ile yapılan bir araştırmanın sonucu\" diyerek ürünü \"hassasiyeti hem anında gideren hem de önleyen TEK diş macunu\" olarak sundu. Kurul 15.10.2012'de bu üstünlük iddiası için Türkiye'deki üniversitelerden ya da akredite bir kuruluştan bilimsel çalışma veya test sonucu sunulmadığına karar verdi. Aynı ürünün broşürlerine bir yıl içinde ceza verildiği için para cezası iki kat uygulandı (163.108 TL) ve durdurma cezası eklendi.",
+   "note": "Listeye göre dosya 15.10.2012 tarihli 205 sayılı toplantının bülteni. Kararın 10. maddesi (2012/1322): şirket Procter&Gamble Satış ve Dağıtım Ltd. Şti., yayın tarihi 06.01–09.04.2012, mecra TV. Alıntı, üniversite/akredite kuruluş gerekçesi, 196. toplantı (10.01.2012) atfı ve \"81.554 x 2 = 163.108 TL\" hesabı doğru. Düzeltilmesi gereken iki nokta var: (1) Bülten \"375 diş hekimi\" cümlesini reklam filmindeki ifadelerin içinde aktarıyor. Bunun dipnot ya da altyazı olduğunu söylemiyor, dolayısıyla \"dipnotuyla/dipnotta\" ifadesi doğrulanamıyor. (2) Kurul 375 hekimlik anketi tek tek değerlendirip reddetmiş değil. \"TEK diş macunu\" üstünlük iddiası için üniversite veya akredite kuruluş belgesi bulunmadığını belirtiyor. Viral cümledeki \"Kurul bunu kanıt saymadı\" ifadesi yorum içeriyor. Bu dönemde dayanak eski Yönetmelik md. 5/a, 5/b, 7/a, 7/c, 7/g, 13, 21 ve 4077 md. 16.",
+   "orig_sources": [
+    "https://ticaret.gov.tr/data/5d1c9edd13b87615344cd4c8/f7d7ce31e4a50cfe920c9e05a0068e7e.doc"
+   ]
+  },
+  {
+   "id": "turkiye-TR-04",
+   "claim": "Kurul Kasım 2024'te Sensodyne Klinik Beyazlık reklamlarını durdurdu, çünkü diş hekimi önerisini gösteren belge yalnızca \"hassasiyete karşı\" öneriyi kapsıyordu ve \"#1\" iddiası rakip markalarla kıyaslayan bir araştırmayla kanıtlanmamıştı.",
+   "detail": "Reklam Kurulu, 351. toplantı, 12 Kasım 2024, Dosya No 2024/8271. Şikayet edilen: Haleon Tüketici Sağlığı A.Ş. Ürünler: \"Sensodyne Klinik Beyazlık - Güçlü Diş Minesi\" ve \"Diş Lekelerine Karşı\"; mecralar TV, açık hava ve ambalaj; erişim tarihi 19.09.2024. İfadeler: \"#1 Diş hekimlerinin hassasiyete karşı önerdiği marka\", \"Diş hekimlerinin önerdiği marka. 2 ton daha beyaz dişler\". Gerekçe 1: Sunulan 2023 tarihli belgede ürün diş hekimlerince \"hassasiyete karşı\" öneriliyordu, reklam ise markanın \"tüm iddialara karşı önerildiği algısı\" yaratıyordu. Gerekçe 2: \"#1\" iddiası \"piyasada pazar payına sahip diğer markalarla karşılaştırma içeren herhangi bir araştırma raporu ile ispatlanamadı\". Gerekçe 3: \"2 ton\" beyazlığın hangi diş macununa kıyasla olduğu söylenmemişti. İhlal edilen maddeler: Ticari Reklam ve Haksız Ticari Uygulamalar Yönetmeliği md. 5/1-d, 7/1-4, 7/5-a, 8/1-c,e,f,ğ, 9/1-5, 18/1, 18/2, 32/1 ve 6502 sayılı Kanun md. 61. Yaptırım yalnızca durdurma cezası, para cezası yok.",
+   "sources": [
+    "https://ticaret.gov.tr/data/5d1c9edd13b87615344cd4c8/_351_Bas%C4%B1n%20B%C3%BClteni.pdf"
+   ],
+   "confidence": "high",
+   "viral": "Diş hekimleri ürünü \"hassasiyet\" için önermiş; reklam ise beyazlatma için öneriyorlarmış gibi gösterdi.",
+   "verdict": "dogru",
+   "safe": "Reklam Kurulu 12 Kasım 2024'te Sensodyne Klinik Beyazlık reklamlarına durdurma cezası verdi. Gerekçeleri şunlardı: Diş hekimi önerisine dayanak olan 2023 tarihli belge yalnızca \"hassasiyete karşı\" öneriyi gösteriyordu, \"#1\" iddiası rakip markalarla kıyaslayan bir araştırma raporuyla ispatlanmamıştı ve \"2 ton daha beyaz\" iddiasının neye kıyasla olduğu söylenmemişti.",
+   "note": "351. toplantının (12.11.2024) PDF bülteninde 79. kararı (2024/8271) açtım. Şikayet edilen Haleon Tüketici Sağlığı A.Ş. Ürünler Klinik Beyazlık Güçlü Diş Minesi ve Diş Lekelerine Karşı, erişim 19.09.2024, mecralar TV, açık hava ve ambalaj. Üç gerekçe birebir geçiyor: 2023 tarihli belgenin \"hassasiyete karşı\" öneriyi göstermesi ve \"tüm iddialara karşı önerildiği algısı\", \"piyasada pazar payına sahip diğer markalarla karşılaştırma içeren herhangi bir araştırma raporu ile ispatlanamadığı\" ve 2 ton beyazlığın kıyas noktasının belirtilmemesi. Madde listesi doğru: 5/1-d, 7/1-4, 7/5-a, 8/1-c,e,f,ğ, 9/1-5, 18/1, 18/2, 32/1 ve 6502 md. 61. Yaptırım yalnızca durdurma (63 ve 77/12). Viral cümle için nüans: Kurul \"beyazlatma\" demiyor, \"tüm iddialara karşı önerildiği algısı\" diyor. Beyazlık bu iddialardan biri.",
+   "orig_sources": [
+    "https://ticaret.gov.tr/data/5d1c9edd13b87615344cd4c8/_351_Bas%C4%B1n%20B%C3%BClteni.pdf"
+   ]
+  },
+  {
+   "id": "turkiye-TR-05",
+   "claim": "Oral-B diş macunu reklamlarındaki \"Avrupa'da diş hekimlerinin kullandığı 1 numaralı marka\" iddiasını Kurul yanıltıcı buldu, çünkü dayanak anket o diş macunlarına özel değildi; markanın fırça ve macun verileri birlikte sayılmıştı.",
+   "detail": "Reklam Kurulu, 351. toplantı, 12 Kasım 2024, Dosya No 2024/6546. Şikayet edilen: Procter&Gamble Tüketim Malları Sanayi A.Ş. Ürünler: \"Oral-B Pro 3DW Clinical\" ve \"Pro-Expert Advanced Ekstra Beyazlık\" diş macunları; mecralar TV, YouTube, açık hava ve market rafı. Kurulun gerekçesi şöyle: sunulan anket \"reklama konu ürünler özelinde yapılmadığı, markaya ait şarj edilebilir diş fırçası, manuel diş fırçası ve diş macunu ürünlerinin birlikte kullanım verilerine yer verilen genel bir çalışma olduğu\" için yalnızca diş macunu tanıtılan reklamlarda bu ifade yanıltıcıydı. Ayrıca \"Diş hekimlerinin en sık kontrol ettiği sorunları önlemeye yardımcı olur\" ifadesi ürünün tedavi edici olduğu izlenimini veriyordu, \"1 günde daha beyaz dişler\" ifadesinde de neye kıyasla olduğu belirtilmemişti. İhlal edilen maddeler: Yönetmelik md. 7/1-4, 7/5-a, 9/1-5, 18/1, 18/2, 18/6, 18/7, 32/1 ve 6502 md. 61. Yaptırım: durdurma cezası.",
+   "sources": [
+    "https://ticaret.gov.tr/data/5d1c9edd13b87615344cd4c8/_351_Bas%C4%B1n%20B%C3%BClteni.pdf"
+   ],
+   "confidence": "high",
+   "viral": "\"Diş hekimlerinin 1 numarası\" iddiasının arkasındaki anket, diş macununu değil markanın tüm ürünlerini ölçmüş.",
+   "verdict": "dogru",
+   "safe": "Kurul 12 Kasım 2024'te Oral-B diş macunu reklamlarındaki \"Avrupa'da diş hekimlerinin kullandığı 1 numaralı marka\" ifadesini yanıltıcı buldu. Dayanak anket bu macunlara özel değildi. Markanın şarjlı fırça, manuel fırça ve macun kullanım verilerini birlikte ölçen genel bir çalışmaydı. Reklamlar durduruldu.",
+   "note": "351. bültende 74. kararı (2024/6546) açtım. Şirket Procter&Gamble Tüketim Malları Sanayi A.Ş. Ürünler Oral-B Pro 3DW Clinical ve Pro-Expert Advanced Ekstra Beyazlık. Mecralar TV, internet (YouTube), açık hava, ambalaj ve market rafı. İddiada ambalaj atlanmış ama bu küçük bir eksik. Anket gerekçesi birebir geçiyor. \"Diş hekimlerinin en sık kontrol ettiği sorunları önlemeye yardımcı olur\" ifadesinin tedavi edici izlenim yarattığı ve \"1 günde daha beyaz\" iddiasında kıyas noktasının belirtilmediği de bültende var. Ek bir gerekçe daha var: Sunulan çalışma reklamdaki beyaz diş görselleriyle uyuşmuyordu. Maddeler 7/1-4, 7/5-a, 9/1-5, 18/1, 18/2, 18/6, 18/7, 32/1 ve 6502 md. 61. Yaptırım durdurma.",
+   "orig_sources": [
+    "https://ticaret.gov.tr/data/5d1c9edd13b87615344cd4c8/_351_Bas%C4%B1n%20B%C3%BClteni.pdf"
+   ]
+  },
+  {
+   "id": "turkiye-TR-06",
+   "claim": "Kurul Kasım 2025'te Sensodyne ambalajındaki \"Diş hekimlerinin önerdiği marka\" ifadesini eksik bilgilendirme saydı, çünkü dayanak anketin ne zaman ve kaç kişiyle yapıldığı ambalajda hiç yazmıyordu.",
+   "detail": "Reklam Kurulu, 363. toplantı, 13 Kasım 2025, Dosya No 2025/3612. Şikayet edilen: Haleon Tüketici Sağlığı A.Ş.; ürün: \"Sensodyne Klinik Beyazlık - Diş Lekelerine Karşı\" ambalajı; erişim tarihi 04.11.2025. Kurula göre \"Diş hekimlerinin önerdiği marka\" iddiası ürünün diş hekimlerince \"geniş ve temsil edici nitelikte bir öneri düzeyine sahip olduğu izlenimi\" veriyordu. Oysa dayanak olarak sunulan anketlerin \"yapıldığı dönem, örneklem büyüklüğü gibi\" temel bilgileri ambalajda ya da tanıtımlarda yer almıyordu, bu da tüketiciyi eksik bilgilendiriyordu. \"2 ton daha beyaz dişler\" iddiasının hangi macuna kıyasla olduğu da belirtilmemişti. İhlal edilen maddeler: Yönetmelik md. 7/1-4, 7/5-a, 9/1, 9/5, 32/1 ve 6502 md. 61. Yaptırım: durdurma cezası.",
+   "sources": [
+    "https://ticaret.gov.tr/data/5d1c9edd13b87615344cd4c8/_363_Reklam_Kurulu_Basin_Bulteni.pdf"
+   ],
+   "confidence": "high",
+   "viral": "\"Diş hekimleri öneriyor\" yazıyorsa sorun: Kaç diş hekimine, ne zaman soruldu?",
+   "verdict": "dogru",
+   "safe": "Kurul 13 Kasım 2025'te Sensodyne Klinik Beyazlık ambalajındaki \"Diş hekimlerinin önerdiği marka\" ifadesini eksik bilgilendirme saydı. Gerekçesi, dayanak anketlerin yapıldığı dönem ve örneklem büyüklüğü gibi temel bilgilerin ambalajda ve tanıtımlarda hiç yer almamasıydı. Reklama durdurma cezası verildi.",
+   "note": "363. toplantının (13.11.2025) bülteninde 54. kararı (2025/3612) açtım. Şirket Haleon, ürün Sensodyne Klinik Beyazlık Diş Lekelerine Karşı ambalajı, erişim 04.11.2025, mecra ambalaj. \"geniş ve temsil edici nitelikte bir öneri düzeyine sahip olduğu izlenimi\" ve \"yapıldığı dönem, örneklem büyüklüğü gibi\" ifadeleri birebir geçiyor. \"2 ton\" iddiasında kıyas bilgisinin olmadığı da yazıyor. Maddeler 7/1-4, 7/5-a, 9/1, 9/5, 32/1 ve 6502 md. 61. Yaptırım durdurma. Nüans: Kurul iddianın yanlış olduğunu söylemiyor, tüketicinin eksik bilgilendirildiğini söylüyor. Dayanak birden fazla anket (\"anket çalışmaları\").",
+   "orig_sources": [
+    "https://ticaret.gov.tr/data/5d1c9edd13b87615344cd4c8/_363_Reklam_Kurulu_Basin_Bulteni.pdf"
+   ]
+  },
+  {
+   "id": "turkiye-TR-07",
+   "claim": "Kurul, kanıtı yeterli bulduğu \"1 numaralı diş hekimi tercihi\" iddialarına izin de verdi: Colgate (2012), İpana (2016) ve Oral-B (2021) reklamlarındaki bu tür ifadeler mevzuata aykırı bulunmadı.",
+   "detail": "(1) 203. toplantı, 14.08.2012, Dosya 2011/877, Colgate Sensitive Pro-Relief: \"Türkiye'de diş hassasiyetine karşı diş hekimlerinin 1 numaralı tavsiyesi\" dahil iddiaların \"klinik çalışmalar ile desteklendiği\" belirtildi, reklam yanıltıcı bulunmadı. (2) 249. toplantı, 14 Haziran 2016, Dosya 2015/24, İpana 3 Boyutlu Beyazlık Luxe: \"İpana Türk diş hekimlerinin kullandığı bir numaralı diş macunu\" ve \"Estetik Diş Hekimliği Akademisi Derneği 'EDAD' da ... İpana'yı öneriyor\" ifadeleri sunulan belgelerle ispatlanmış sayıldı; karar oybirliğiyle alındı. (3) 315. toplantı, 09 Kasım 2021, Dosya 2021/581, Oral-B Diş Eti ve Diş Minesi Pro-Onarım: \"Türkiye'de diş hekimlerinin kullandığı 1 Numaralı Marka\" ifadesinin Yönetmelik md. 9 (İspat külfeti) çerçevesinde ispatlandığı kanaatine varıldı. Buradan çıkan sonuç: bu ifadeler kendiliğinden yasak değil; belirleyici olan, iddianın kapsamına uyan ve kanıt niteliği taşıyan bir belgenin olup olmadığı.",
+   "sources": [
+    "https://ticaret.gov.tr/data/5d1c9edd13b87615344cd4c8/8d77cf5c2e060b0237450e4ada1f3711.doc",
+    "https://ticaret.gov.tr/data/5d1c9edd13b87615344cd4c8/_249_Bulten.docx",
+    "https://ticaret.gov.tr/data/5d1c9edd13b87615344cd4c8/315%20RK%20Bas%C4%B1n%20B%C3%BClteni.docx"
+   ],
+   "confidence": "high",
+   "viral": "\"1 numaralı\" demek yasak değil; yasak olan, bunu kanıtlayamamak.",
+   "verdict": "dogru",
+   "safe": "\"1 numaralı diş hekimi tercihi\" türü ifadeler kendiliğinden yasak değil. Kurul, sunulan belgeleri yeterli bulduğu üç reklamda bu ifadeleri mevzuata aykırı bulmadı: Colgate Sensitive Pro-Relief (14.08.2012), İpana 3 Boyutlu Beyazlık Luxe (14.06.2016, oybirliğiyle) ve Oral-B Diş Eti ve Diş Minesi Pro-Onarım (09.11.2021).",
+   "note": "Üç bülteni de açtım. (1) 203. toplantı (14.08.2012, listeden), 21. karar (2011/877), Colgate Palmolive: \"Türkiye'de diş hassasiyetine karşı diş hekimlerinin 1 numaralı tavsiyesi\" dahil iddiaların \"klinik çalışmalar ile desteklendiği\" belirtiliyor ve 4077 md. 16'ya aykırılık bulunmuyor. (2) 249. toplantı (14 Haziran 2016), 14. karar (2015/24), P&G: \"İpana Türk diş hekimlerinin kullandığı bir numaralı diş macunu!\" ve EDAD ifadesi tespit edilmiş. Belgelerin ifadeleri ispatladığı değerlendirilmiş, karar OYBİRLİĞİYLE alınmış. (3) 315. toplantı (09 Kasım 2021), 18. karar (2021/581): \"Türkiye'de diş hekimlerinin kullandığı 1 Numaralı Marka\" ifadesinin md. 9 \"İspat külfeti\" çerçevesinde ispatlandığı kanaatine varılmış. Bu reklamda \"Diş hekimimin önerisiyle Oral-B diş macunu aldım\" tanıklığı da var. Nüans: Kurul önceden izin vermez. Doğru ifade \"izin verdi\" değil, \"aykırı bulmadı\" olmalı.",
+   "orig_sources": [
+    "https://ticaret.gov.tr/data/5d1c9edd13b87615344cd4c8/8d77cf5c2e060b0237450e4ada1f3711.doc",
+    "https://ticaret.gov.tr/data/5d1c9edd13b87615344cd4c8/_249_Bulten.docx",
+    "https://ticaret.gov.tr/data/5d1c9edd13b87615344cd4c8/315%20RK%20Bas%C4%B1n%20B%C3%BClteni.docx"
+   ]
+  },
+  {
+   "id": "turkiye-TR-08",
+   "claim": "Aynı markada bile sonucu ifadenin kapsamı belirledi: Kurul, Sensodyne'ın \"#1 Diş hekimlerinin hassasiyete karşı önerdiği marka\" diyen beyazlatma reklamlarını Kasım 2024'te durdurdu, Ocak 2025'te ise \"Çok Yönlü Koruma\" ambalajındaki \"Diş hekimlerinin hassasiyete karşı 1 numaralı önerisi\" ifadesinde aykırılık bulmadı.",
+   "detail": "İlk karar: 351. toplantı, 12.11.2024, Dosya 2024/8271, Sensodyne Klinik Beyazlık; yaptırım durdurma cezası. İkinci karar: 353. toplantı, 16 Ocak 2025, Dosya 2024/7538, \"Sensodyne Çok Yönlü Koruma\" ambalajı (erişim 22.11.2024); ambalajın baş ve son kısmında \"Diş hekimlerinin hassasiyete karşı 1 numaralı önerisi. 2.si bedava\" yazıyordu. Kurul burada \"Reklam Mevzuatı hükümlerine aykırı bir unsura rastlanmadığına\" karar verdi. İkinci bültende ayrıntılı gerekçe yok. Bu nedenle farkın sebebi bültenden kesin olarak okunamaz; yalnızca iki ifadenin ve iki ürünün farklı olduğu görülüyor.",
+   "sources": [
+    "https://ticaret.gov.tr/data/5d1c9edd13b87615344cd4c8/_351_Bas%C4%B1n%20B%C3%BClteni.pdf",
+    "https://ticaret.gov.tr/data/5d1c9edd13b87615344cd4c8/_353_Reklam_Kurulu_Basin_Bulteni.pdf"
+   ],
+   "confidence": "medium",
+   "viral": "Aynı marka, iki ay arayla iki karar: Biri durduruldu, öteki geçti.",
+   "verdict": "duzeltilmeli",
+   "safe": "Kurul Kasım 2024'te Sensodyne Klinik Beyazlık reklamlarını durdurdu. Bu reklamlarda \"#1 Diş hekimlerinin hassasiyete karşı önerdiği marka\" ifadesi de vardı. Ocak 2025'te ise Sensodyne Çok Yönlü Koruma ambalajındaki \"Diş hekimlerinin hassasiyete karşı 1 numaralı önerisi\" ifadesinde aykırılık bulmadı. İkinci bültende gerekçe olmadığından iki kararın neden farklı çıktığı bilinmiyor.",
+   "note": "351. bültendeki 79. karar (2024/8271) ve 353. toplantının (16 Ocak 2025) 101. kararı (2024/7538) doğru. Şirket Haleon, erişim 22.11.2024, mecra ambalaj. Ambalajın baş ve son kısmında \"Diş hekimlerinin hassasiyete karşı 1 numaralı önerisi.2.si bedava\" yazıyor ve karar \"Reklam Mevzuatı hükümlerine aykırı bir unsura rastlanmadığı\" yönünde. Sorun iddianın çerçevesinde: \"sonucu ifadenin kapsamı belirledi\" diyen nedensellik bültenden çıkmıyor, hatta zayıflıyor. İki ifade neredeyse aynı kapsamda (ikisi de hassasiyete karşı 1 numaralı öneri). 2024'teki ihlal büyük ölçüde #1 için rakip kıyaslı rapor olmamasına ve beyazlatma ürününde \"tüm iddialara öneri\" algısına dayanıyordu. Farkın sebebi sunulan belge, ürün türü ya da mecra olabilir ama bilinmiyor. İddianın detay kısmı bunu kabul ediyor, ana cümle ise etmiyor.",
+   "orig_sources": [
+    "https://ticaret.gov.tr/data/5d1c9edd13b87615344cd4c8/_351_Bas%C4%B1n%20B%C3%BClteni.pdf",
+    "https://ticaret.gov.tr/data/5d1c9edd13b87615344cd4c8/_353_Reklam_Kurulu_Basin_Bulteni.pdf"
+   ]
+  },
+  {
+   "id": "turkiye-TR-09",
+   "claim": "Meridol reklamındaki \"Almanya'nın bir numaralı diş macunu markası\" iddiasının dipnotu, bu sıralamanın yalnızca Almanya'daki diş eti diş macunu satışlarına dayanan bir Colgate-Palmolive hesaplaması olduğunu söylüyordu.",
+   "detail": "Reklam Kurulu, 294. toplantı, 3 Mart 2020, Dosya 2019/2603, Colgate Palmolive \"Meridol\". Kurulun tespitinde aktarılan broşür metni: \"**Almanya'nın bir numaralı diş macunu markası. **Colgate-Palmolive hesaplaması, Ocak-Kasım 2018 Nielsen Almanya diş eti diş macunu kategorisi satış verilerini baz alınmaktadır\". Aynı metinde \"*6 kat etkili. *Sıradan ağız sağlığı ürünlerine göre...\" ve \"*Meridol araştırması\" dipnotları da vardı. Kurul şu gerekçelerle 341.921 TL idari para cezası ve durdurma cezası verdi: tedavi ve endikasyon belirten ifadeler kozmetik tanımını aşıyordu, \"İsviçre'de geliştirildi\" vurgusu üstünlük algısıyla haksız rekabete yol açıyordu, \"6 kat etkili\" ve \"eşsiz, anında ve uzun süreli diş eti koruması\" ifadeleri ispatlanmamıştı. Dikkat: \"Almanya'nın bir numarası\" ifadesi bültende ayrıca ihlal gerekçesi olarak sayılmamış; burada yalnızca dipnot örneği olarak kullanılmalı.",
+   "sources": [
+    "https://ticaret.gov.tr/data/5d1c9edd13b87615344cd4c8/294_Reklam_Kurulu_Bulten.docx"
+   ],
+   "confidence": "high",
+   "viral": "\"Bir numaralı\" yazıyor, dipnota bakıyorsunuz: Almanya'da, tek bir alt kategoride ve şirketin kendi hesabıyla.",
+   "verdict": "dogru",
+   "safe": "Meridol broşüründe \"Almanya'nın bir numaralı diş macunu markası\" yazıyordu. Dipnota göre bu sıralama, Ocak-Kasım 2018 Nielsen Almanya \"diş eti diş macunu\" kategorisi satış verilerine dayanan bir Colgate-Palmolive hesaplamasıydı. Kurul bu ifadeyi ayrıca ihlal saymadı.",
+   "note": "294. toplantının (3 Mart 2020) 14. kararını (2019/2603) açtım. Şirket Colgate Palmolive, mecralar TV ve broşür. Dipnot metni birebir geçiyor: \"**Almanya'nın bir numaralı diş macunu markası. **Colgate-Palmolive hesaplaması, Ocak-Kasım 2018 Nielsen Almanya diş eti diş macunu kategorisi satış verilerini baz alınmaktadır\". \"*6 kat etkili\" ve \"*Meridol araştırması\" dipnotları da var. İhlal gerekçeleri iddiadaki gibi: tedavi ve endikasyon ifadeleri kozmetik tanımını aşıyor, \"İsviçre'de geliştirildi\" ifadesi üstünlük algısı ve haksız rekabet yaratıyor, \"6 kat etkili\" ve \"eşsiz, anında ve uzun süreli\" ispatlanmamış. Yaptırım durdurma ve 341.921 TL idari para cezası. \"Almanya'nın bir numarası\" ifadesi gerekçede ayrıca sayılmıyor, iddiadaki uyarı doğru. Nüans: Dipnot TV reklamında değil, broşürde. TV reklamında eczanede beyaz önlüklü bir kişi görüntüsü olduğu da tespit edilmiş.",
+   "orig_sources": [
+    "https://ticaret.gov.tr/data/5d1c9edd13b87615344cd4c8/294_Reklam_Kurulu_Bulten.docx"
+   ]
+  },
+  {
+   "id": "turkiye-TR-10",
+   "claim": "Oral-B Professional'ın YouTube reklamındaki \"Deneyen 10 kişiden 9'u...\" oranının dipnotu, rakamın diş hekimlerinden değil, bir ürün deneme platformunda 713 tüketiciyle yapılan anketten geldiğini gösteriyordu.",
+   "detail": "Reklam Kurulu, 335. toplantı, 11 Temmuz 2023, Dosya 2023/1828; erişim tarihi 02.05.2023. Kurulun tespit ettiği ifadeler: \"Deneyen 10 kişiden 9'u mevcut markası yerine Oral-B diş macunu kullanacağını söylüyor.\" ve dipnot \"Denebunu.com platformunda 05.01.2023-03.02.2023 tarihleri arasında 72 ilden 18-54 yaş aralığındaki 713 kişiyle gerçekleştirilen Tüketici Geribildirim Anketi Sonucu esas alınmıştır.\" Reklamda \"Anonim: Diş hekimimin tavsiyesi ile aldım...\" gibi yıldızlı yorumlar da vardı. Kurul bu yorumların firma ile ilişkili bir siteden alındığını ve gerçek alıcılardan geldiğinin ispatlanamadığını, bu yüzden tanıtımın yanıltıcı olduğunu belirtti. İhlal edilen maddeler: Yönetmelik md. 7, 9/1, 9/5, 28/B ve 6502 md. 61-62. Uyarı: Bültende şikayet edilen olarak Procter & Gamble yazıyor, ama cezanın verildiği cümlede başka bir şirketin adı (Sur Yapı) geçiyor; büyük olasılıkla yazım hatası. Bu nedenle cezanın muhatabını bu kaynaktan kesin olarak söylemeyin. Kurul \"10'da 9\" oranını ayrıca ihlal saymadı; bu örnek yalnızca dipnotun ne söylediğini göstermek için kullanılmalı.",
+   "sources": [
+    "https://ticaret.gov.tr/data/5d1c9edd13b87615344cd4c8/_335_Reklam_Kurulu_Basin_Bulteni..docx"
+   ],
+   "confidence": "high",
+   "viral": "\"10 kişiden 9'u\" büyük yazıyor; küçük yazıya göre bunlar diş hekimi değil, bir deneme sitesindeki 713 kişi.",
+   "verdict": "dogru",
+   "safe": "Oral-B Professional'ın YouTube reklamındaki \"Deneyen 10 kişiden 9'u mevcut markası yerine Oral-B kullanacağını söylüyor\" oranı, açıklama notuna göre Denebunu.com platformunda 713 kişiyle yapılan bir tüketici geribildirim anketinden geliyordu. Kurul reklamı bu oran yüzünden değil, gerçek alıcılardan geldiği ispatlanamayan yıldızlı yorumlar yüzünden yanıltıcı buldu.",
+   "note": "335. toplantının (11 Temmuz 2023) 92. kararını (2023/1828) açtım. Erişim tarihi 02.05.2023, mecra internet (YouTube). Oran cümlesi ve \"Denebunu.com ... 05.01.2023-03.02.2023 ... 72 ilden 18-54 yaş ... 713 kişiyle ... Tüketici Geribildirim Anketi\" metni birebir geçiyor. Yorumların firmayla ilişkili kadinlarbilir.com sitesinden alındığı ve gerçek alıcılardan geldiğinin ispatlanamadığı gerekçesi de var. Maddeler: 7/1-4, 7/5-b, 9/1, 9/5, 28/1, 28/B/1,2,3,5,6, 32/1 ve 6502 md. 61-62. Yaptırım durdurma. Şikayet edilen P&G, ama ceza cümlesinde \"Sur Yapı Endüstri Sanayi ve Ticaret A.Ş.\" geçiyor. Uyarı yerinde. Nüanslar: Bülten anket metnine \"dipnot\" demiyor, tespit edilen ifadeler arasında sayıyor. Reklam oranı hiçbir zaman diş hekimlerine bağlamamıştı, bu yüzden \"diş hekimi değil\" karşıtlığı yanlış bir izlenim verebilir.",
+   "orig_sources": [
+    "https://ticaret.gov.tr/data/5d1c9edd13b87615344cd4c8/_335_Reklam_Kurulu_Basin_Bulteni..docx"
+   ]
+  },
+  {
+   "id": "turkiye-TR-11",
+   "claim": "Colgate Total reklamı \"15 kat etkili\" diyordu; altyazıya göre bu sonuç ancak diş macunu, diş fırçası ve ağız bakım suyu birlikte kullanılınca alınıyordu ve Kurul bu yüzden 3.180.853 TL para cezası ile durdurma cezası verdi.",
+   "detail": "Reklam Kurulu, 361. toplantı, 11 Eylül 2025, Dosya 2025/1689; TV reklamı, erişim 07.04.2025. Ana mesajlar: \"Problemlerin ana nedenine karşı 15 kat etkili*\" ve \"Kullanıcıların %100'ü daha bakımlı bir ağza kavuştu.*\" Altyazıda ise şunlar yazıyordu: \"*3 hafta sürekli kullanım sonrası klinik bir çalışmada başlangıca göre plaktan kaynaklanan diş eti problemlerinde azalma. Colgate Total diş macunu, diş fırçası ve ağız bakım suyu ile birlikte kullanımı ile\". Kurula göre reklamın diş macunu görseliyle başlaması, sonucun yalnızca macunla alınacağı algısını yaratıyordu. \"Birçok problem\" vaadi altyazıda \"plak\"a daraltılmıştı ve problemlerin neler olduğu açıklanmamıştı. İhlal edilen maddeler: Yönetmelik md. 7/1-4, 7/5-a, 18/1, 18/2, 32/1 ve 6502 md. 61. Yönetmeliğin md. 18/5-7 hükümlerine göre dipnot ve altyazı yalnızca ana vaadi açıklamak için kullanılabilir; ana vaadin sağladığı avantajı tamamen ya da büyük ölçüde ortadan kaldıramaz ve görsellerle çelişemez.",
+   "sources": [
+    "https://ticaret.gov.tr/data/5d1c9edd13b87615344cd4c8/_361_Reklam_Kurulu_Basin_Bulteni.pdf",
+    "https://www.lexpera.com.tr/mevzuat/yonetmelikler/ticari-reklam-ve-haksiz-ticari-uygulamalar-yonetmeligi",
+    "https://www.resmigazete.gov.tr/eskiler/2015/01/20150110-5.htm"
+   ],
+   "confidence": "high",
+   "viral": "\"15 kat etkili\" diyen reklamın küçük yazısına göre yalnızca macun yetmiyor; fırça ve gargara da gerekiyor.",
+   "verdict": "dogru",
+   "safe": "Colgate Total TV reklamı \"problemlerin ana nedenine karşı 15 kat etkili\" diyordu. Altyazıya göre sonuç yalnızca macunla değil, macun, fırça ve ağız bakım suyu birlikte kullanılınca alınıyordu ve plakla sınırlıydı. Kurul 11 Eylül 2025'te reklamı yanıltıcı buldu ve 3.180.853 TL idari para cezası ile durdurma cezası verdi.",
+   "note": "361. toplantının (11 Eylül 2025) 65. kararını (2025/1689) açtım. Şirket Colgate Palmolive, erişim 07.04.2025, mecra TV. \"15 kat etkili*\", \"%100'ü daha bakımlı bir ağza\" ve \"*3 hafta sürekli kullanım ... diş macunu, diş fırçası ve ağız bakım suyu ile birlikte kullanımı ile\" altyazısı birebir geçiyor. Kurulun üç gerekçesi var: reklamın macun görseliyle başlayıp yalnızca macun algısı yaratması, \"birçok problem\" vaadinin \"plak\"a daraltılması ve problemlerin açıklanmaması. Maddeler 7/1-4, 7/5-a, 18/1, 18/2, 32/1 ve 6502 md. 61. Yaptırım 3.180.853 TL ve durdurma. Md. 18 açıklamasındaki nüans: Lexpera'daki güncel metne göre 18/5 dipnot ve altyazıyı \"ana vaadi açmak, netleştirmek\" ya da koşul ve istisnaları bildirmek için kullanmaya izin veriyor, yani \"yalnızca açıklamak\" biraz dar bir okuma. 18/6 avantajın tamamen ya da büyük ölçüde ortadan kaldırılamayacağını, 18/7 sözlü, görsel ve yazılı bilginin çelişemeyeceğini söylüyor. Kurul bu kararda 18/5-7'yi değil, 18/1-2'yi saydı.",
+   "orig_sources": [
+    "https://ticaret.gov.tr/data/5d1c9edd13b87615344cd4c8/_361_Reklam_Kurulu_Basin_Bulteni.pdf",
+    "https://www.resmigazete.gov.tr/eskiler/2015/01/20150110-5.htm"
+   ]
+  },
+  {
+   "id": "turkiye-TR-12",
+   "claim": "Türk mevzuatına göre reklamdaki her iddiayı kanıtlamak reklam verenin işidir ve rakiplerle kıyaslayan iddialar mutlaka üniversite, akredite ya da bağımsız kuruluş belgesiyle kanıtlanmalıdır.",
+   "detail": "6502 sayılı Tüketicinin Korunması Hakkında Kanun md. 61/6: \"Reklam verenler ticari reklamlarında yer alan iddiaların doğruluğunu ispatla yükümlüdür.\" Ticari Reklam ve Haksız Ticari Uygulamalar Yönetmeliği (RG 10.01.2015/29232) md. 9 (\"İspat külfeti\", RG 04.01.2017/29938 ile değişik): (2) doğrulanabilir iddialar \"bilimsel geçerliliği olan bilgi ve belgelerle\" kanıtlanmalıdır; (3) karşılaştırmalı iddialar \"her hâlükârda üniversitelerin ilgili bölümlerinden veya akredite ya da bağımsız araştırma, test ve değerlendirme kuruluşlarından alınmış bilgi ve belgeler ile\" kanıtlanmalıdır; (4) raporlar iddiayı \"reklamın yayınlandığı dönemde\" kanıtlamalıdır. Aynı Yönetmeliğin md. 7/8 hükmüne göre araştırma sonuçlarından yapılan alıntılar çarpıtılamaz, istatistikler de gerçekte olduklarından farklı sonuç doğuracak biçimde sunulamaz. Kurul 2024/8271 sayılı Sensodyne kararında \"#1\" iddiası için tam olarak bunu, yani rakip markalarla kıyaslayan bir araştırma raporunu aradı.",
+   "sources": [
+    "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=6502&MevzuatTur=1&MevzuatTertip=5",
+    "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.6502.pdf",
+    "https://www.resmigazete.gov.tr/eskiler/2017/01/20170104-2.htm",
+    "https://www.lexpera.com.tr/mevzuat/yonetmelikler/ticari-reklam-ve-haksiz-ticari-uygulamalar-yonetmeligi",
+    "https://ticaret.gov.tr/data/5d1c9edd13b87615344cd4c8/_351_Bas%C4%B1n%20B%C3%BClteni.pdf"
+   ],
+   "confidence": "high",
+   "viral": "Türkiye'de kanıt yükü tüketicide değil, reklam verende.",
+   "verdict": "dogru",
+   "safe": "Türkiye'de reklamdaki iddiaları ispat yükü reklam verende (6502 md. 61/6). Doğrulanabilir iddialar bilimsel geçerliliği olan belgelerle kanıtlanmalı. Karşılaştırmalı reklamlardaki iddialar ise her hâlükârda üniversite, akredite ya da bağımsız kuruluş belgesiyle kanıtlanmalı (Yönetmelik md. 9/2-3). Kurul 2024'teki Sensodyne kararında \"#1\" iddiası için rakip markalarla kıyaslayan bir araştırma raporu aradı.",
+   "note": "6502'nin güncel metnini mevzuat.gov.tr PDF'inden çıkardım. Md. 61/6 birebir şöyle: \"Reklam verenler ticari reklamlarında yer alan iddiaların doğruluğunu ispatla yükümlüdür.\" RG 04.01.2017/29938 metni md. 9'u baştan düzenliyor: (2) \"bilimsel geçerliliği olan bilgi ve belgelerle\", (3) \"her hâlükârda üniversitelerin ilgili bölümlerinden veya akredite ya da bağımsız...\", (4) \"reklamın yayınlandığı dönemde\". Lexpera'daki güncel sürüm (10. sürüm, yürürlük 01.08.2026) md. 9'da 2017 sonrası değişiklik göstermiyor. 01.07.2026/33297 değişikliği indirim, çevre beyanı, yapay zeka ve influencer konularıyla ilgili. Md. 7/8'in çarpıtma ve istatistik yasağı da güncel metinde var. Nüanslar: 9/3 \"karşılaştırmalı reklamlarda yer alan ve karşılaştırmaya konu edilen iddialar\" için geçerli. Kurul 2024/8271'de raporun üniversite ya da akredite kuruluştan alınmasını açıkça istemedi, \"diğer markalarla karşılaştırma içeren herhangi bir araştırma raporu\" aradı ve md. 8/1 ile 9/1-5'i saydı. Bu yüzden \"tam olarak bunu\" ifadesi biraz güçlü.",
+   "orig_sources": [
+    "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=6502&MevzuatTur=1&MevzuatTertip=5",
+    "https://www.resmigazete.gov.tr/eskiler/2017/01/20170104-2.htm",
+    "https://www.resmigazete.gov.tr/eskiler/2015/01/20150110-5.htm",
+    "https://www.lexpera.com.tr/mevzuat/yonetmelikler/ticari-reklam-ve-haksiz-ticari-uygulamalar-yonetmeligi"
+   ]
+  },
+  {
+   "id": "turkiye-TR-13",
+   "claim": "Yönetmelik, reklamlarda doktor, diş hekimi, veteriner hekim, eczacı ya da sağlık kuruluşlarının bir ürün için sağlık beyanında bulunduğu izlenimini veren her türlü görüntüyü, beyanı ve atfı yasaklıyor.",
+   "detail": "Ticari Reklam ve Haksız Ticari Uygulamalar Yönetmeliği md. 16 (\"Tanıklı reklamlar\") /3: \"Reklamlarda; doktor, diş hekimi, veteriner hekim ve eczacılar ile sağlık kuruluşlarının bir mal veya hizmete yönelik sağlık beyanında bulunduğuna ilişkin ya da bu izlenimi uyandıran herhangi bir görüntü, beyan veya atfa yer verilemez.\" md. 16/1'e göre de tanıklık, tanığın gerçek tecrübesine, bilgisine veya araştırma sonuçlarına dayanmalıdır; dayanmayan ya da gerçek olmayan tanıklık veya onay ifadesi kullanılamaz. Bu metin RG 10.01.2015/29232'deki asıl metinle aynı ve Lexpera'daki 01.08.2026 yürürlüklü güncel sürümde de değişmeden duruyor. Not: Yukarıdaki diş macunu kararlarında Kurul gerekçe olarak çoğunlukla md. 7, 9 ve 18'i kullandı; md. 16'yı anmadı.",
+   "sources": [
+    "https://www.resmigazete.gov.tr/eskiler/2015/01/20150110-5.htm",
+    "https://www.lexpera.com.tr/mevzuat/yonetmelikler/ticari-reklam-ve-haksiz-ticari-uygulamalar-yonetmeligi"
+   ],
+   "confidence": "high",
+   "viral": "Beyaz önlüklü birinin \"ben bunu öneriyorum\" demesi Türkiye'de ayrıca kurala bağlı.",
+   "verdict": "dogru",
+   "safe": "Ticari Reklam ve Haksız Ticari Uygulamalar Yönetmeliği md. 16/3'e göre reklamlarda doktor, diş hekimi, veteriner hekim, eczacı ya da sağlık kuruluşlarının bir ürün veya hizmet için sağlık beyanında bulunduğunu gösteren ya da bu izlenimi uyandıran hiçbir görüntü, beyan veya atfa yer verilemez.",
+   "note": "RG 10.01.2015 metnini ve Lexpera'daki güncel sürümü (10. sürüm, yürürlük 01.08.2026) kontrol ettim. 16/3'te \"doktor, diş hekimi, veteriner hekim ve eczacılar\" ve \"ya da bu izlenimi uyandıran herhangi bir görüntü, beyan veya atfa yer verilemez\" ifadeleri birebir var. Md. 16'da değişiklik notu yok. 16/1 tecrübeye, bilgiye ya da araştırma sonuçlarına dayanmayan veya gerçek olmayan tanıklık ve onay ifadelerini yasaklıyor. Bu fıkra \"tanığın gerçek tecrübesi\" kelimeleriyle değil, \"tanıklığına başvurulan kişinin\" diye yazılmış, anlam aynı. Nüans: Yasak her hekim tanıklığını değil, sağlık beyanı ya da bu izlenimi kapsıyor. İncelenen diş macunu kararlarında Kurul md. 16'yı anmadı. Meridol kararı (2019/2603) TV reklamında beyaz önlüklü kişi görüntüsünü tespit etti ama md. 16'yı saymadı.",
+   "orig_sources": [
+    "https://www.resmigazete.gov.tr/eskiler/2015/01/20150110-5.htm",
+    "https://www.lexpera.com.tr/mevzuat/yonetmelikler/ticari-reklam-ve-haksiz-ticari-uygulamalar-yonetmeligi"
+   ]
+  },
+  {
+   "id": "turkiye-TR-14",
+   "claim": "Türk Dişhekimleri Birliği'nin meslek etiği kurallarına göre diş hekimi, halka yönelik diş ürünlerinin ticari tanıtımında yer almamalı ve adının bu amaçla kullanılmasına izin vermemelidir.",
+   "detail": "TDB Dişhekimliği Meslek Etiği Kuralları md. 19 (\"Ağız-Diş Sağlığı Ürünlerinin Tanıtılması\"): \"Dişhekimi, topluma yönelik dişhekimliği ürünlerinin ticari amaçlı tanıtımında veya pazarlanmasında yer almamalı; isminin kullanılmasına izin vermemelidir.\" md. 20 kendi reklamını yapmayı da yasaklıyor. Kurallar 2012'de TDB 14. Olağan Genel Kurulu'nda kabul edildi, 2015'te değiştirildi; güncel sürüm 2018'de TDB 17. Olağan Genel Kurulu'nda onaylandı. Yasal dayanak olarak 1219 sayılı Kanun md. 40'a göre diş hekimleri yalnızca muayene yeri ve saatlerini bildiren ilan verebilir, \"diğer suretlerle reklam\" yapmaları yasaktır. Ayrıca 6502 sayılı Kanun md. 63/2-m'ye göre 23 üyeli Reklam Kurulu'nda TDB'nin görevlendirdiği bir diş hekimi üye bulunuyor.",
+   "sources": [
+    "https://tdb.org.tr/hukuk/mevzuat?id=193",
+    "https://api.tdb.org.tr/legislation?pageSize=100&page=1",
+    "https://www.mevzuat.gov.tr/MevzuatMetin/1.3.1219.pdf",
+    "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.6502.pdf"
+   ],
+   "confidence": "high",
+   "viral": "TDB'nin etik kurallarına göre diş hekimi diş macunu reklamında yer almamalı.",
+   "verdict": "dogru",
+   "safe": "TDB Dişhekimliği Meslek Etiği Kuralları md. 19'a göre diş hekimi, topluma yönelik diş hekimliği ürünlerinin ticari tanıtımında ya da pazarlanmasında yer almamalı ve adının kullanılmasına izin vermemelidir. 1219 sayılı Kanun md. 40 da diş hekimlerinin muayene yeri ve saatlerini bildiren ilan dışında reklam yapmasını yasaklıyor.",
+   "note": "Kuralların metnini TDB'nin resmi API'sinden aldım (api.tdb.org.tr/legislation, id 193, \"TDB Dişhekimliği Meslek Etiği Kuralları (2018)\"). Md. 19'un başlığı \"Ağız-Diş Sağlığı Ürünlerinin Tanıtılması\" ve metni birebir tutuyor. Md. 20 \"Reklam Yasağı\", kişinin kendi ve kurumunun reklamını yasaklıyor. Giriş notunda 2012 (14. OGK), 2015 (15. OGK) ve 2018 (17. OGK) tarihleri geçiyor. Ancak metinde 1-2-3 Kasım 2024 tarihli 20. OGK'nin eklediği bir hüküm de var (afet görevi, md. 19'dan önce). Yani en güncel metin saf 2018 sürümü değil, ama bu ek md. 19'u etkilemiyor. 1219 md. 40 PDF'ten birebir alındı: \"...muayene saatlerini bildiren ilanlar tertibine mezun olup diğer suretlerle reklam ve saire yapmaları memnudur.\" 6502 md. 63/2-m'ye göre TDB'nin görevlendirdiği bir diş hekimi Kurul üyesi. Kurulun 23 üyeli olması 24/6/2026 tarihli 7587 sayılı Kanunla geldi, önceden 19 üyeliydi. Yani 2026 öncesi kararlar 19 üyeli Kurulda alındı. Not: Bu bir meslek etiği kuralı. Reklam mevzuatı değil, TDB disiplin yaptırımlarıyla bağlı.",
+   "orig_sources": [
+    "https://tdb.org.tr/hukuk/mevzuat?id=193",
+    "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=1219&MevzuatTur=1&MevzuatTertip=3",
+    "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=6502&MevzuatTur=1&MevzuatTertip=5"
+   ]
+  },
+  {
+   "id": "bilim-c1",
+   "claim": "Diş macununda çürüğe karşı kanıtı en sağlam madde florür: 2019 tarihli Cochrane derlemesi, florürlü macunun florürsüz macuna göre çürüğü azalttığını ve yetişkinlerde 1000-1100 ppm'in de işe yaradığını gösterdi.",
+   "detail": "Walsh T, Worthington HV, Glenny AM, Marinho VCC, Jeroncic A. 'Fluoride toothpastes of different concentrations for preventing dental caries', Cochrane Database of Systematic Reviews 2019, Sayı 3, CD007868 (Mart 2019). Yetişkinlerde 1000 ya da 1100 ppm, florürsüz macuna göre DMFS artışını azaltıyor (MD -0,53; 3 çalışma, 2.162 kişi; kanıt kesinliği orta, DMFT için düşük). Çocuk ve ergenlerde doz-yanıt etkisi görülüyor: 1000-1250 ve 1450-1500 ppm için kanıt yüksek ya da orta kesinlikte. Yazarlar, farklı konsantrasyonları birbiriyle karşılaştıran sonuçların çoğunun belirsiz olduğunu ve küçük çocuklarda florozis riskinin hesaba katılması gerektiğini belirtiyor. Cochrane sitesi 403 hatası verdi; özeti Europe PMC kaydından okudum.",
+   "sources": [
+    "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID:30829399%20AND%20SRC:MED&resultType=core&format=json",
+    "https://odphp.health.gov/healthypeople/tools-action/browse-evidence-based-resources/fluoride-toothpastes-different-concentrations-preventing-dental-caries"
+   ],
+   "confidence": "high",
+   "viral": "Macunda gerçekten 'çalışan' bir madde var ve adı florür.",
+   "verdict": "dogru",
+   "safe": "Diş macununda çürüğe karşı en güçlü kanıt florür için var. 2019 tarihli Cochrane derlemesine göre florürlü macun, florürsüz macuna göre çürüğü azaltıyor. Yetişkinlerde 1000-1100 ppm florür de işe yarıyor.",
+   "note": "Europe PMC kaydını açtım: Walsh, Worthington, Glenny, Marinho, Jeroncic, Cochrane Database Syst Rev 2019, cilt/sayı 3, DOI 10.1002/14651858.CD007868.pub3, PMID 30829399. Yetişkinlerde 1000/1100 ppm florürsüz macuna karşı DMFS MD -0,53 (95% GA -1,02 ile -0,04; 3 çalışma; 2.162 kişi; orta kesinlik), DMFT için kesinlik düşük. Çocuklarda doz-yanıt var: 1000-1250 ppm florürsüz macuna karşı SMD -0,28 (55 çalışma), 1450-1500 ppm de 1000-1250 ppm'e karşı SMD -0,08 (10 çalışma, orta kesinlik). Florozis uyarısı da özette var. ODPHP sayfası aynı künyeyi (2019, Sayı 3) veriyor. Çürütecek bir bulgu yok.",
+   "orig_sources": [
+    "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID:30829399%20AND%20SRC:MED&resultType=core&format=json",
+    "https://odphp.health.gov/healthypeople/tools-action/browse-evidence-based-resources/fluoride-toothpastes-different-concentrations-preventing-dental-caries"
+   ]
+  },
+  {
+   "id": "bilim-c2",
+   "claim": "Dünya Sağlık Örgütü 2021'de florürlü diş macununu Temel İlaçlar Listesi'ne ekledi ve tanımı açık: florür türü ne olursa olsun 1000-1500 ppm florür içeren macun, krem ya da jel.",
+   "detail": "WHO Model List of Essential Medicines kaydı aynen şöyle: 'Toothpaste, cream or gel: 1000 to 1500 ppm fluoride (any type)'. 2021'de eklendi (TRS 1035). Uzman Komite, formülasyonu belirtmenin ülkelerin kendi listelerinde ürün seçimine en iyi rehberliği sağlayacağını söylemiş.",
+   "sources": [
+    "https://list.essentialmeds.org/recommendations/349"
+   ],
+   "confidence": "high",
+   "viral": "DSÖ'ye göre diş macunu 'temel ilaç' sayılıyor, ama yalnızca 1000-1500 ppm florürlüsü.",
+   "verdict": "dogru",
+   "safe": "Dünya Sağlık Örgütü 2021'de florürlü diş macununu Temel İlaçlar Model Listesi'ne aldı. Listede ölçüt açık: hangi türden olursa olsun 1000-1500 ppm florür içeren macun, krem ya da jel.",
+   "note": "list.essentialmeds.org/recommendations/349 sayfasını açtım. Kayıt 'Fluoride' başlığı altında, 'Toothpaste, cream or gel: 1000 to 1500 ppm fluoride (any type)'. Sayfada 'In 2021, in consideration of an application proposing the addition of fluoride toothpaste to the EML and EMLc' ve 'recommended for addition' ifadeleri ile 'Changed in 2021 (TRS 1035)' kaydı var. Florür (sodyum florür tablet olarak) listeye ilk kez 1979'da (TRS 641) girmiş, 2021'de eklenen macun formülasyonu. Komite gerekçesi ('to provide the best guidance for selection of products for national EMLs ... specific recommendations of the different formulation types') iddiadaki özetle uyumlu. Küçük not: 2023'te (TRS 1049) bir değişiklik daha var, ama macun tanımı aynı kalmış.",
+   "orig_sources": [
+    "https://list.essentialmeds.org/recommendations/349"
+   ]
+  },
+  {
+   "id": "bilim-c3",
+   "claim": "Dünya Diş Hekimliği Federasyonu (FDI) ve İngiltere'nin sağlık servisi NHS aynı şeyi öneriyor: günde en az iki kez florürlü macunla fırçala, sonra macunu tükür ama ağzını suyla çalkalama, çünkü çalkalarsan dişte kalan florürü yıkarsın.",
+   "detail": "FDI politika bildirgesi 'The Use of Topical Fluoride for Caries Prevention' Kasım 2000'de Paris'te kabul edildi, Eylül 2025'te Şanghay'da revize edildi. Bildirgede şu ifadeler var: piyasadaki macunlarda 'a minimum of 1000−1100 ppm of fluoride', 'at least twice daily' ve tükürdükten sonra 'preferably without rinsing with water'. NHS ise 'Adults should use a toothpaste that contains at least 1,350 ppm fluoride' diyor, günde iki kez yaklaşık 2 dakika fırçalamayı öneriyor ve çalkalamanın florürü yıkadığını yazıyor: 'Don't rinse your mouth immediately after brushing'.",
+   "sources": [
+    "https://www.fdiworlddental.org/use-topical-fluoride-caries-prevention",
+    "https://www.nhs.uk/live-well/healthy-teeth-and-gums/how-to-keep-your-teeth-clean/"
+   ],
+   "confidence": "high",
+   "viral": "Fırçala, tükür, çalkalama: en ucuz diş sağlığı taktiği.",
+   "verdict": "dogru",
+   "safe": "Dünya Diş Hekimliği Federasyonu (FDI) ve İngiltere'nin sağlık servisi NHS aynı şeyi söylüyor: günde iki kez florürlü macunla fırçala, artan macunu tükür, ama hemen suyla çalkalama. Çalkalarsan dişte kalan florür yıkanır ve etkisi azalır.",
+   "note": "FDI sayfasında şunlar var: 'ADOPTED ... November, 2000 in Paris', 'REVISED ... September, 2025 in Shanghai', 'a minimum of 1000−1100 ppm of fluoride', 'at least twice-daily' (Scope bölümünde 'at least twice daily for a minimum of two minutes') ve 'preferably without rinsing with water after expectorating the toothpaste'. NHS sayfasını curl ile çekip birebir doğruladım: 'Adults should use a toothpaste that contains at least 1,350 parts per million (ppm) fluoride', 'Brush your teeth twice a day for about 2 minutes', 'Don't rinse your mouth immediately after brushing, as it'll wash away the concentrated fluoride ... Rinsing dilutes it and reduces its preventative effects.' Küçük fark: NHS 'günde iki kez', FDI 'en az iki kez' diyor.",
+   "orig_sources": [
+    "https://www.fdiworlddental.org/use-topical-fluoride-caries-prevention",
+    "https://www.nhs.uk/live-well/healthy-teeth-and-gums/how-to-keep-your-teeth-clean/"
+   ]
+  },
+  {
+   "id": "bilim-c4",
+   "claim": "Ambalajda bakman gereken şey marka değil florür miktarı (ppm): İngiltere'nin resmî kanıta dayalı rehberine göre sodyum florür, sodyum monoflorofosfat ve kalay florür arasında birini öne çıkaracak yeterli kanıt yok, reçetesiz satılan macunda da florür en fazla 1500 ppm olabiliyor.",
+   "detail": "GOV.UK 'Delivering Better Oral Health', Bölüm 9 (son güncelleme 10 Eylül 2025): 'there is insufficient evidence to confidently recommend one over another'. Genel öneri 1350-1500 ppm florürlü macun. İngiltere'de reçetesiz satılabilecek en yüksek konsantrasyon 1500 ppm; 2800 ve 5000 ppm'lik macunlar reçeteyle veriliyor. Aynı rehbere göre incelenen macunların %31'inde hiç florür yoktu, %4'ünde ise florür miktarı yazmıyordu (Gupta ve ark., BDJ). AB'de de Komisyon Direktifi 2009/129/AT'nin (9 Ekim 2009) gerekçesinde macunlar için tavan '0,15 % calculated as F, i.e. 1 500 ppm' olarak geçiyor. Türkiye mevzuatındaki sınırı ayrıca doğrulamadım, bu yüzden reelde Türkiye için tavan rakamı vermeyin.",
+   "sources": [
+    "https://www.gov.uk/government/publications/delivering-better-oral-health-an-evidence-based-toolkit-for-prevention/chapter-9-fluoride",
+    "https://legislation.gov.uk/eudr/2009/129/contents/data.html"
+   ],
+   "confidence": "high",
+   "viral": "Rafta 'süper güçlü' yazan macunla sıradan macun arasında florür farkı en fazla birkaç yüz ppm olabilir, çünkü yasal tavan 1500.",
+   "verdict": "dogru",
+   "safe": "Ambalajda bakman gereken marka değil, florür miktarı (ppm). İngiltere'nin resmî rehberine göre sodyum florür, sodyum monoflorofosfat ve kalay florür arasında birini öne çıkaracak yeterli kanıt yok. İngiltere ve AB'de reçetesiz macunda florür en fazla 1500 ppm olabiliyor.",
+   "note": "GOV.UK 'Delivering Better Oral Health', Bölüm 9 sayfasını açtım. 'Updated 10 September 2025', 'insufficient evidence to confidently recommend one over another', İngiltere'de reçetesiz azami 1500 ppm, reçeteyle 2800 ve 5000 ppm sodyum florürlü macun, genel öneri 1350-1500 ppm. Gupta ve ark. (BDJ, 'in press') atfıyla %31 florürsüz ve %4 konsantrasyonu yazmayan macun bilgisi de doğru. Komisyon Direktifi 2009/129/AT'nin tarihi 9 Ekim 2009, 1. gerekçe paragrafında '(0,15 % calculated as F, i.e. 1 500 ppm)' geçiyor. Bu direktif 76/768/AET'yi değiştiren eski bir metin; bugün yürürlükte olan AB düzenlemesi 1223/2009 sayılı Tüzük. Türkiye'deki tavanı doğrulayamadım. Uyarı: viral cümledeki 'yasal tavan 1500' ifadesi bir ülkeye bağlanmadan kullanılmamalı. 'İngiltere ve AB'de' denmeli, ayrıca florürsüz bir macunla aradaki fark birkaç yüz ppm değil, tamamen florür farkı olur.",
+   "orig_sources": [
+    "https://www.gov.uk/government/publications/delivering-better-oral-health-an-evidence-based-toolkit-for-prevention/chapter-9-fluoride",
+    "https://legislation.gov.uk/eudr/2009/129/contents/data.html"
+   ]
+  },
+  {
+   "id": "bilim-c5",
+   "claim": "Türk Dişhekimleri Birliği, 2016'da Türk Pedodonti Derneği ile birlikte yaptığı flor açıklamasında dişlerin günde iki kez, yaşa uygun miktarda florürlü macunla fırçalanmasını önerdi ve topikal florürün etkili olduğunu vurguladı.",
+   "detail": "Kaynak ikincil: açıklamayı aktaran Medikal Akademi haberi (yayın 21.10.2016, güncelleme 21.05.2022). Alıntılar: 'günde 2 kere yaşa uygun dozda florlu diş macunu ile dişlerin fırçalanması' ve 'Topikal florlar oldukça etkilidirler'. Haberdeki tabloda şu değerler var: 6 ay-2 yaş için 500 ppm (sürüntü), 2-6 yaş için 1000+ ppm (yarım bezelye), 6 yaş ve üstü için 1450 ppm (bezelye büyüklüğü), hepsi günde 2 kez. Ancak tablonun doğrudan TDB'ye ait olup olmadığı haberden kesin anlaşılmıyor. TDB'nin kendi sitesinde metni bulamadım (ilgili sayfa 404 verdi). Reelde ppm rakamlarını 'TDB önerisi' diye vermeden önce TDB'den teyit alın, ya da yalnızca 'günde iki kez florürlü macun' kısmını kullanın.",
+   "sources": [
+    "https://www.medikalakademi.com.tr/tuerk-dishekimleri-birliginden-flor-aciklamasi/"
+   ],
+   "confidence": "medium",
+   "verdict": "dogru",
+   "safe": "Türk Dişhekimleri Birliği ve Türk Pedodonti Derneği 2016'daki ortak açıklamalarında dişlerin günde iki kez, yaşa uygun miktarda florürlü macunla fırçalanmasını önerdi.",
+   "note": "Medikal Akademi haberini açtım: yayın 21.10.2016, güncelleme 21.05.2022. Haberde TDB ile Türk Pedodonti Derneği'nin ortak basın toplantısı yaptığı, 'günde 2 kere yaşa uygun dozda florlu diş macunu ile dişlerin fırçalanması' ve 'Topikal florlar oldukça etkilidirler' ifadeleri geçiyor. Yaşa göre ppm tablosu (500 / 1000+ / 1450 ppm) da haberde var, ama ayrı bir kaynak gösterilmemiş. İki aramada TDB'nin kendi sitesinde birincil metni bulamadım, yalnızca ikincil kaynak var. Bu yüzden ppm tablosunu 'TDB önerisi' diye vermeyin, yalnızca 'günde iki kez, yaşa uygun miktarda florürlü macun' kısmını kullanın.",
+   "orig_sources": [
+    "https://www.medikalakademi.com.tr/tuerk-dishekimleri-birliginden-flor-aciklamasi/"
+   ]
+  },
+  {
+   "id": "bilim-c6",
+   "claim": "Almanya'nın bağımsız test kuruluşu Stiftung Warentest'in 21 Ekim 2026 tarihli diş macunu testine göre en iyi macunlar arasında çok ucuz olanlar da var (tüp fiyatları 55 sentten 15 avronun üstüne kadar uzanıyor), florürsüz macunlar ise aynı etkiyi gösteren bir ikame bilinmediği için doğrudan 'yetersiz' notu alıyor.",
+   "detail": "test.de 'Zahnpasta im Test' sayfası (Datum: 21.10.2026). Alıntılar: 'Unter den besten Zahnpasten sind auch sehr günstige.' ve florürsüz ürünler için 'Ein vergleichbar wirksamer Ersatzstoff ist laut aktueller Studienlage bis heute nicht bekannt.' Puanın %50'sini çürük önleme yani florür oluşturuyor. Veri tabanında 69 macun var, tam sonuçlar ücretli. 'Markalar arasındaki fark çoğu zaman tat, köpük ya da fiyat' iddiasının 'tat/köpük' kısmı için doğrudan kaynak bulamadım. Reelde bunun yerine 'pahalı olması daha iyi olduğu anlamına gelmiyor, belirleyici olan florür' denebilir.",
+   "sources": [
+    "https://www.test.de/Zahnpasta-im-Test-4607097-0/"
+   ],
+   "confidence": "high",
+   "viral": "55 sentlik macun da en iyiler listesine girebiliyor.",
+   "verdict": "dogru",
+   "safe": "Almanya'nın bağımsız test kuruluşu Stiftung Warentest'e göre en iyi macunlar arasında çok ucuz olanlar da var. Tüp fiyatları 55 sentten 15 avronun üstüne kadar çıkıyor. Florürsüz macunlar ise aynı etkiyi gösteren bir ikame bilinmediği için doğrudan 'yetersiz' notu alıyor.",
+   "note": "test.de sayfasını curl ile çekip doğruladım: 'Datum: 21.10.2026', 'Für eine Tube Zahnpasta kann man mehr als 15 Euro ausgeben – oder nur 55 Cent', 'Unter den besten Zahnpasten sind auch sehr günstige', 'Ein vergleichbar wirksamer Ersatzstoff ist laut aktueller Studienlage bis heute nicht bekannt. Deshalb bewerten wir ... Produkte ohne Fluorid mit Mangelhaft', 'Kariesprophylaxe: 50 % (bis 11/24: 45 %)', veri tabanında 69 macun. Kural şöyle işliyor: florür yoksa 'Kariesprophylaxe' alt notu 'mangelhaft' oluyor ve genel not bundan iyi olamıyor. Nüans: 21.10.2026 tek bir testin değil, önceki testleri de içeren veri tabanı sayfasının tarihi (son eklenen 19 hassas diş macunu). Reelde '21 Ekim 2026 tarihli test' yerine 'Stiftung Warentest'in güncel diş macunu testleri' demek daha doğru olur.",
+   "orig_sources": [
+    "https://www.test.de/Zahnpasta-im-Test-4607097-0/"
+   ]
+  },
+  {
+   "id": "bilim-c7",
+   "claim": "Hassas dişte kalay florür (SnF2) ya da potasyum tuzu (ör. potasyum nitrat) içeren macunların ağrıyı azalttığına dair orta düzeyde kanıt var, ama bu bir mucize değil: 2006 Cochrane derlemesi yalnız potasyumlu macunlar için 'net kanıt yok' demişti, daha yeni analizler ise kalay florürü ve potasyum ile kalay florür birleşimini öne çıkarıyor.",
+   "detail": "Martins ve ark., J Dent Res 2020;99(5):514-522 (ağ meta-analizi, 125 randomize çalışma, 12.541 hasta). Dokunma uyaranında florürlü kontrole göre etki büyüklükleri: SnF2 SMD 2,02, potasyum+SnF2 3,05, yalnız potasyum 1,23; üçünde de kanıt kesinliği orta. Hava uyaranında SnF2 ve potasyum+SnF2 için kesinlik orta ile yüksek arası. Pollard ve ark., J Dent 2023;130:104433 (32 çalışma, 4.638 katılımcı): kalay, potasyum±kalay ya da arjininli macunun günde iki kez kullanımı 'can be recommended'. Poulsen ve ark., Cochrane 2006 Sayı 3: 6-8 haftada hava ve dokunma testlerinde anlamlı etki bulundu ama hastanın kendi değerlendirmesinde bulunmadı; sonuç: 'no clear evidence is available for the support of potassium containing toothpastes'. Türkiye notu: macunlar kozmetik ürün sayılıyor. Reklam Kurulu 10 Ağustos 2021'de (312. toplantı, dosya 2021/562) bir hassasiyet macununun 'Hassasiyet ağrısını azaltmaya yardımcı olur' ifadesini kozmetik ürün tanımını aşan, tedaviye yönelik bir ifade saydı.",
+   "sources": [
+    "https://researchconnect.buffalo.edu/en/publications/desensitizing-toothpastes-for-dentin-hypersensitivity-a-network-m/",
+    "https://research-information.bris.ac.uk/en/publications/efa466ea-a399-4253-9120-323154f5330a",
+    "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI:10.1002/14651858.CD001476.pub2&resultType=core&format=json",
+    "https://ticaret.gov.tr/data/5d1c9edd13b87615344cd4c8/312_RK_Bulten.docx"
+   ],
+   "confidence": "high",
+   "verdict": "dogru",
+   "safe": "Hassas dişlerde kalay florür ya da potasyum nitrat içeren macunların hassasiyeti azaltabildiğine dair orta düzeyde kanıt var, ama bu bir mucize değil. 2006 Cochrane derlemesi yalnız potasyumlu macunlar için net kanıt bulamamıştı. Daha yeni analizler kalay florürü ve potasyum ile kalay florür birleşimini öne çıkarıyor. Hassasiyet geçmiyorsa diş hekimine görünün.",
+   "note": "Martins ve ark. J Dent Res 2020;99(5):514-522 kaydını açtım: 125 randomize çalışma, 12.541 hasta. Dokunma uyaranında SnF2 SMD 2,02, potasyum+SnF2 3,05, yalnız potasyum 1,23, kesinlik orta. Hava uyaranında SnF2 ve potasyum+SnF2 'moderate to high certainty'. Pollard ve ark. J Dent 2023;130:104433 kaydında 32 çalışma ve 4.638 katılımcı var. Kalay, potasyum±kalay ya da arjininli macunun günde iki kez kullanımı 'can be recommended' deniyor. Poulsen ve ark. Cochrane 2006 Sayı 3 (CD001476): 6-8 haftada hava ve dokunma testlerinde anlamlı etki var, öznel değerlendirmede yok. Sonuç cümlesi 'no clear evidence is available for the support of potassium containing toothpastes'. Reklam Kurulu 312 sayılı bülteninin docx'ini indirip okudum: 10 Ağustos 2021, dosya 2021/562, GlaxoSmithKline, Sensodyne Herbal. 'Hassasiyet ağrısını azaltmaya yardımcı olur' ifadesi 'tedaviye yönelik ve endikasyon belirten ... kozmetik ürün tanımını aşan' bulunmuş, '24 saat' iddiası da yetersiz kanıtlı sayılmış ve durdurma cezası verilmiş.",
+   "orig_sources": [
+    "https://researchconnect.buffalo.edu/en/publications/desensitizing-toothpastes-for-dentin-hypersensitivity-a-network-m/",
+    "https://research-information.bris.ac.uk/en/publications/efa466ea-a399-4253-9120-323154f5330a",
+    "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI:10.1002/14651858.CD001476.pub2&resultType=core&format=json",
+    "https://ticaret.gov.tr/data/5d1c9edd13b87615344cd4c8/312_RK_Bulten.docx"
+   ]
+  },
+  {
+   "id": "bilim-c8",
+   "claim": "İngiltere'nin reklam denetçisi ASA, 17 Ocak 2007'de Colgate'in '%80'den fazla diş hekimi Colgate'i tavsiye ediyor' posterini yanıltıcı buldu, çünkü ankette hekimler birden fazla marka önerebiliyordu ve rakip bir marka da neredeyse aynı oranda önerilmişti.",
+   "detail": "Reklamı yapılan ürün Colgate Total Advanced Fresh'ti ve iki şikâyetin ikisi de haklı bulundu. Anketi Colgate'in görevlendirdiği bir araştırma şirketi telefonla yaptı. ASA'ya göre görüşme metinleri, anketi Colgate'in yaptırdığını ve sonuçların reklamda kullanılabileceğini açıkça söylemiyordu. Ayrıca 'another competitor's brand was recommended by dentists almost as much'. İhlal edilen CAP Kodu maddeleri: 3.1, 7.1, 14.5 ve 50.17. ASA'nın 2007 tarihli orijinal karar metnine erişemedim (eski URL güncel bir başka karara yönleniyor). Bilgiler, birbiriyle tutarlı iki özetten geliyor: Osborne Clarke (31.01.2007) ve Cosmetics Business (17.01.2007). ASA'nın kendi rehber sayfası da 'Colgate Palmolive (UK) Ltd, 17 January 2007' kararına atıf yapıyor.",
+   "sources": [
+    "https://marketinglaw.osborneclarke.com/retailing/colgates-80-of-dentists-recommend-claim-under-fire/",
+    "https://www.cosmeticsbusiness.com/asa-don-t-recommend-colgate-47191",
+    "https://www.asa.org.uk/advice-online/health-celebrities-and-health-professionals.html"
+   ],
+   "confidence": "high",
+   "viral": "%80 doğruydu, ama rakip de neredeyse %80'di.",
+   "verdict": "dogru",
+   "safe": "İngiltere'nin reklam denetçisi ASA, Ocak 2007'de Colgate'in 'Diş hekimlerinin %80'inden fazlası Colgate'i öneriyor' posterini yanıltıcı buldu. Ankette hekimler birden fazla marka önerebiliyordu ve rakip bir marka da neredeyse aynı oranda önerilmişti.",
+   "note": "Osborne Clarke yazısının tam metnini (31.01.2007) okudum. Poster kampanyası için 'More than 80% Of Dentists recommend Colgate' iddiasına iki şikâyet gelmiş, ikisi de haklı bulunmuş. ASA ayrıca kendi başına hekim tavsiyesi itirazı açmış. Anket telefonla yapılmış. Hekimler 'several toothpastes and brands' önerebiliyormuş. Metinde 'another competitor's brand was recommended by dentists almost as much' cümlesi var. Görüşme metinleri anketin Colgate adına yapıldığını ya da reklamda kullanılabileceğini yeterince açık söylemiyormuş. Ürün Colgate Total Advanced Fresh. İhlal edilen CAP maddeleri 3.1, 7.1, 14.5 ve 50.17. Cosmetics Business 17.01.2007 tarihli yazıda yanıltıcılık kararını ve çoklu marka seçimini doğruluyor. ASA rehber sayfası da 'Colgate Palmolive (UK) Ltd, 17 January 2007' kararına atıf yapıyor, ama bunu ilaç sınıfındaki ürünlerin hekim tavsiyesiyle reklamı bağlamında yapıyor. ASA'nın orijinal karar metnini ben de açamadım. 'Rakip neredeyse aynı oranda' bilgisi Osborne Clarke'ın karar özetinden geliyor.",
+   "orig_sources": [
+    "https://marketinglaw.osborneclarke.com/retailing/colgates-80-of-dentists-recommend-claim-under-fire/",
+    "https://www.cosmeticsbusiness.com/asa-don-t-recommend-colgate-47191",
+    "https://www.asa.org.uk/advice-online/health-celebrities-and-health-professionals.html"
+   ]
+  },
+  {
+   "id": "bilim-c9",
+   "claim": "ABD'deki reklam öz-denetim kurumu NAD, 14 Haziran 2019'da Sensodyne'ın '#1 diş hekimi önerisi marka' ve '10 diş hekiminden 9'u Sensodyne'ı öneriyor' iddialarını destekli buldu; gerekçe, tüketicinin bu tavsiyeyi yalnızca hassas dişler için anladığıydı.",
+   "detail": "İtiraz eden Colgate-Palmolive'di; ona göre iddialar hassasiyetle sınırlı değildi. NAD, GSK'nın makul bir dayanağı olduğuna ve ek açıklama gerekmediğine karar verdi. Gerekçe, markanın yalnızca hassasiyet çeken kişilere yönelik ayırt edici konumuydu. Buradan çıkan ders: '10'da 9' türü iddialar çoğu zaman belirli bir kullanım için geçerli. Ek bağlam: FTC Tavsiye Rehberi 16 CFR 255.3(b) (26 Temmuz 2023'te revize edildi; Federal Register 2023-14795), bir uzman tavsiyesi ürünün rakiplerden üstün olduğu izlenimini veriyorsa uzmanın bu üstünlüğü karşılaştırma yaparak gerçekten bulmuş olmasını şart koşuyor.",
+   "sources": [
+    "https://bbbprograms.org/media/newsroom/decisions/nad-finds-glaxosmithkline-s-sensodyne-toothpaste-1-dentist-recommended-brand-claims-supported-no-add",
+    "https://www.law.cornell.edu/cfr/text/16/255.3",
+    "https://www.federalregister.gov/documents/2023/07/26/2023-14795/guides-concerning-the-use-of-endorsements-and-testimonials-in-advertising"
+   ],
+   "confidence": "high",
+   "viral": "'10 hekimden 9'u' iddiası ABD'de geçti, ama yalnızca hassas dişler için.",
+   "verdict": "dogru",
+   "safe": "ABD'deki reklam öz-denetim kurumu NAD, 2019'da Sensodyne'ın '1 numaralı diş hekimi önerisi marka' ve '10 diş hekiminden 9'u Sensodyne'ı öneriyor' iddialarını destekli buldu. Gerekçe, tüketicinin bu tavsiyeyi yalnızca hassas diş macunları için anlamasıydı.",
+   "note": "BBB Programs basın bültenini açtım: 14 Haziran 2019, New York. İtiraz eden Colgate-Palmolive. İtiraz edilen iddialar '#1 Dentist Recommended Brand' ve '9 out of 10 dentists recommend Sensodyne'. NAD, tüketici algı anketlerinin iddiaların hassasiyet macunlarıyla sınırlı anlaşıldığını gösterdiğine, GSK'nın 'reasonable basis' sunduğuna ve 'no additional qualification ... is necessary' olduğuna karar vermiş. Gerekçede markanın yalnızca hassasiyete odaklı ayırt edici konumu da var. eCFR'den 16 CFR 255.3(b) metnini çektim: 'where the net impression created by the endorsement is that the advertised product is superior ... the expert must in fact have found such superiority'. Federal Register API'sinde 2023-14795 numaralı belge 26.07.2023'te yayımlanmış ve aynı gün yürürlüğe girmiş (88 FR 48092). Revizyon Kılavuz'un tamamını kapsıyor.",
+   "orig_sources": [
+    "https://bbbprograms.org/media/newsroom/decisions/nad-finds-glaxosmithkline-s-sensodyne-toothpaste-1-dentist-recommended-brand-claims-supported-no-add",
+    "https://www.law.cornell.edu/cfr/text/16/255.3",
+    "https://www.federalregister.gov/documents/2023/07/26/2023-14795/guides-concerning-the-use-of-endorsements-and-testimonials-in-advertising"
+   ]
+  },
+  {
+   "id": "bilim-c10",
+   "claim": "Ticaret Bakanlığı Reklam Kurulu, 8 Eylül 2020'de (301. toplantı, dosya 2020/1010) bir diş macunu ambalajındaki 'Diş hekimleri tarafından önerilmektedir.' iddiasını Yönetmeliğin 'İspat külfeti' maddesine göre ispatlanmamış buldu ve reklamları durdurdu.",
+   "detail": "Şikâyet edilen firma Ezel Kozmetik İthalat ve İhracat Tic. ve San. A.Ş.; iddia 'DK Dent' markalı macun ambalajlarında ve dermokilshop.com'un 18.03.2020 tarihli görünümünde yer alıyordu. Aynı kararda bitkisel, remineralizasyon ve çürük önleme iddiaları da ispatlanmamış bulundu. Durdurma cezası 6502 sayılı Kanun'un 63. ve 77/12. maddelerine göre verildi. Metni Ticaret Bakanlığı'nın resmî 301 sayılı bülteninden (docx) okudum.",
+   "sources": [
+    "https://ticaret.gov.tr/data/5d1c9edd13b87615344cd4c8/301_Bulten.docx",
+    "https://ticaret.gov.tr/tuketici/ticari-reklamlar/reklam-kurulu-kararlari"
+   ],
+   "confidence": "high",
+   "verdict": "dogru",
+   "safe": "Ticaret Bakanlığı Reklam Kurulu, 8 Eylül 2020'de bir diş macunu ambalajındaki 'Diş hekimleri tarafından önerilmektedir.' iddiasını ispatlanmamış buldu ve reklamlara durdurma cezası verdi.",
+   "note": "301 sayılı bültenin docx'ini indirip okudum: toplantı 8 Eylül 2020, sayı 301, 14. karar, dosya 2020/1010. Şikâyet edilen Ezel Kozmetik İthalat ve İhracat Tic. ve San. A.Ş. 'DK Dent' ambalajları ve dermokilshop.com'un 18.03.2020 tarihli görünümündeki 'Diş hekimleri tarafından önerilmektedir.' iddiası ile remineralizasyon, çürük önleme ve bitkisel aktif iddiaları 'İspat külfeti başlıklı 9 uncu maddesi hükmü doğrultusunda ispatlanmadığı' gerekçesiyle aykırı bulunmuş. Yönetmelik 7, 9, 26, 32 ve 6502/61 maddelerine aykırılık var, ceza 6502/63 ve 77/12'ye göre 'durdurma cezaları'. Aynı kararda Dermokil kozmetiklerindeki sağlık beyanları ve biyosidal ruhsat eksikliği de yer alıyor.",
+   "orig_sources": [
+    "https://ticaret.gov.tr/data/5d1c9edd13b87615344cd4c8/301_Bulten.docx",
+    "https://ticaret.gov.tr/tuketici/ticari-reklamlar/reklam-kurulu-kararlari"
+   ]
+  },
+  {
+   "id": "bilim-c11",
+   "claim": "Reklam Kurulu, 12 Kasım 2024'te (351. toplantı, dosya 2024/8271) beyazlatıcı macunlarda kullanılan 'Diş hekimlerinin önerdiği marka' ifadesini, sunulan 2023 tarihli belge hekimlerin markayı yalnızca 'hassasiyete karşı' önerdiğini gösterdiği için yanıltıcı buldu; '#1' iddiası da rakip markalarla karşılaştırmalı bir araştırmayla ispatlanamadığı için reklamlar durduruldu.",
+   "detail": "Şikâyet edilen firma Haleon Tüketici Sağlığı A.Ş.; ürünler 'Sensodyne Klinik Beyazlık-Güçlü Diş Minesi' ve 'Klinik Beyazlık-Diş Lekelerine Karşı'; mecralar televizyon, açık hava ve ambalaj (19.09.2024). Kurul iki tespitte bulundu. Birincisi, 'Diş hekimlerinin önerdiği marka' ifadesi markanın tanıtımdaki tüm iddialar için önerildiği algısını yaratıyordu. İkincisi, '#1 Diş hekimlerinin hassasiyete karşı önerdiği marka' iddiası 'piyasada pazar payına sahip diğer markalarla karşılaştırma içeren herhangi bir araştırma raporu ile ispatlanamadı'. Ayrıca '2 ton daha beyaz' iddiasının hangi macuna kıyasla olduğu belirtilmemişti. Durdurma cezası 6502/63 ve 77/12'ye göre verildi. Metni resmî 351 sayılı bülten PDF'inden okudum.",
+   "sources": [
+    "https://ticaret.gov.tr/data/5d1c9edd13b87615344cd4c8/_351_Bas%C4%B1n%20B%C3%BClteni.pdf"
+   ],
+   "confidence": "high",
+   "viral": "Hekimler markayı hassasiyet için önermişti, reklam beyazlık için kullandı.",
+   "verdict": "dogru",
+   "safe": "Reklam Kurulu, 12 Kasım 2024'te bir beyazlatıcı macunun reklamındaki 'Diş hekimlerinin önerdiği marka' ifadesini sorunlu buldu. Firmanın sunduğu 2023 tarihli belgede hekim önerisi 'hassasiyete karşı'ydı, reklam ise markanın tüm iddialar için önerildiği algısını yaratıyordu. '#1' iddiası da rakip markalarla karşılaştırmalı bir araştırmayla ispatlanamadı ve reklamlara durdurma cezası verildi.",
+   "note": "351 sayılı bültenin PDF'ini indirip okudum: 12 Kasım 2024, sayı 351, 79. karar, dosya 2024/8271, Haleon Tüketici Sağlığı A.Ş. Ürünler 'Sensodyne Klinik Beyazlık- Güçlü Diş Minesi' ve 'Klinik Beyazlık-Diş Lekelerine Karşı', mecralar televizyon, açık hava ve ambalaj, tarih 19.09.2024. Gerekçe aynen şöyle: '2023 tarihli belgede ürünün diş hekimleri tarafından \"hassasiyete karşı\" önerildiği dikkate alındığında ... tüm iddialara karşı önerildiği algısı yaratıldığı'. '#1' için 'pazar payına sahip diğer markalarla karşılaştırma içeren herhangi bir araştırma raporu ile ispatlanamadığı' deniyor. '2 ton beyaz' iddiasında kıyas bilgisi yok. Aykırı bulunan hükümler: Yönetmelik 5/1-d, 7, 8/1-c/e/f/ğ, 9/1-9/5, 18 ve 32/1 ile 6502/61. Ceza 63 ve 77/12'ye göre durdurma. Nüans: kararda 'yalnızca' ve 'yanıltıcı' kelimeleri geçmiyor, ifade 'algısı yaratıldığı' şeklinde. Özün doğru, ama reelde kararın kendi ifadesine yakın kalın.",
+   "orig_sources": [
+    "https://ticaret.gov.tr/data/5d1c9edd13b87615344cd4c8/_351_Bas%C4%B1n%20B%C3%BClteni.pdf"
+   ]
+  },
+  {
+   "id": "bilim-c12",
+   "claim": "Reklam Kurulu, 13 Kasım 2025'te (363. toplantı, dosya 2025/3612) ambalajdaki 'Diş hekimlerinin önerdiği marka' ifadesinin geniş ve temsilî bir hekim desteği izlenimi verdiğini, dayanak anketin ne zaman ve kaç kişiyle yapıldığı yazılmadığı için tüketiciyi eksik bilgilendirdiğini belirtti ve durdurma cezası verdi.",
+   "detail": "Şikâyet edilen firma Haleon Tüketici Sağlığı A.Ş., ürün 'Sensodyne Klinik Beyazlık-Diş Lekelerine Karşı' (ambalaj, 04.11.2025). Karardan alıntılar: iddia 'geniş ve temsil edici nitelikte bir öneri düzeyine sahip olduğu izlenimini' veriyor; anketlerin 'yapıldığı dönem, örneklem büyüklüğü' hakkında ambalajda ya da tanıtımda bilgi yok; bu durum 'tüketicileri eksik bilgilendirici nitelikte'. Aykırı bulunan hükümler: Yönetmelik 7/1-7/5-a, 9/1, 9/5, 32/1 ve 6502/61. Ceza 6502/63 ve 77/12'ye göre durdurma. 'Dipnota bak' mesajının doğrudan resmî dayanağı bu karar. Metni resmî 363 sayılı bülten PDF'inden okudum.",
+   "sources": [
+    "https://ticaret.gov.tr/data/5d1c9edd13b87615344cd4c8/_363_Reklam_Kurulu_Basin_Bulteni.pdf"
+   ],
+   "confidence": "high",
+   "viral": "Bakanlık diyor ki: 'diş hekimleri öneriyor' yazıyorsan, kaç hekime ve ne zaman sorduğunu da yaz.",
+   "verdict": "dogru",
+   "safe": "Reklam Kurulu, 13 Kasım 2025'te bir macun ambalajındaki 'Diş hekimlerinin önerdiği marka' ifadesinin geniş ve temsilî bir hekim desteği izlenimi verdiğini söyledi. Dayanak anketin ne zaman ve kaç kişiyle yapıldığı ambalajda yazmadığı için bunu tüketiciyi eksik bilgilendirme saydı ve durdurma cezası verdi.",
+   "note": "363 sayılı bültenin PDF'ini indirip okudum: 13 Kasım 2025, sayı 363, 54. karar, dosya 2025/3612, Haleon Tüketici Sağlığı A.Ş., 'Sensodyne Klinik Beyazlık-Diş Lekelerine Karşı' ambalajı, 04.11.2025. Alıntılar birebir doğru: 'geniş ve temsil edici nitelikte bir öneri düzeyine sahip olduğu izlenimini', 'yapıldığı dönem, örneklem büyüklüğü', 'tüketicileri eksik bilgilendirici nitelikte'. Aykırı bulunan hükümler: Yönetmelik 7/1, 7/2, 7/3, 7/4, 7/5-a, 9/1, 9/5, 32/1 ve 6502/61. Ceza 63 ve 77/12'ye göre durdurma. Kararda '2 ton daha beyaz' iddiasının kıyas bilgisinin olmaması da gerekçe olarak geçiyor. 'Dipnot' kelimesi kararda yok. Kurul 'ambalaj veya tanıtım materyallerinde' bilgi olmamasını eleştiriyor.",
+   "orig_sources": [
+    "https://ticaret.gov.tr/data/5d1c9edd13b87615344cd4c8/_363_Reklam_Kurulu_Basin_Bulteni.pdf"
+   ]
+  },
+  {
+   "id": "bilim-c13",
+   "claim": "Türkiye'de Ticari Reklam ve Haksız Ticari Uygulamalar Yönetmeliği'ne (Resmî Gazete 10.01.2015, sayı 29232) göre reklamdaki her doğrulanabilir iddiayı reklamveren kanıtlamak zorunda (madde 9, 'İspat külfeti'), diş hekiminin bir ürün için sağlık beyanında bulunduğu izlenimini veren hiçbir görüntü ya da ifadeye de yer verilemez (madde 16/3).",
+   "detail": "2015 metnine göre madde 9 şöyle: 9/1, doğrulanabilir iddialar üniversitelerin ilgili bölümleri, akredite kuruluşlar ya da bağımsız araştırma kuruluşlarından alınmış raporlarla kanıtlanmalı; 9/2, reklamverenin kendi laboratuvarında yaptığı çalışmalar ancak bilimsel geçerliliği bu kuruluşlarca onaylanırsa kanıt sayılır; 9/3, raporlar iddiayı reklamın yayınlandığı dönem için kanıtlamalı; 9/4, belgeler denetçiye sunulmalı. 16/3'ün tam metni (Reklam Kurulu'nun 13.11.2025 bülteninde alıntılandığı hâliyle): 'Reklamlarda; doktor, diş hekimi, veteriner hekim ve eczacılar ile sağlık kuruluşlarının bir mal veya hizmete yönelik sağlık beyanında bulunduğuna ilişkin ya da bu izlenimi uyandıran herhangi bir görüntü, beyan veya atfa yer verilemez.' 2015 metninde 7/8-b de var: 'İstatistikler gerçekte olduklarından farklı sonuçlar doğuracak biçimde sunulamaz.' Yönetmelik birçok kez değiştirildi; örneğin sonradan bir 9/5 eklendi ama içeriğini doğrulamadım.",
+   "sources": [
+    "https://resmigazete.gov.tr/eskiler/2015/01/20150110-5.htm",
+    "https://www.turmob.org.tr/arsiv/mbs/resmigazete/29938-29938-1.pdf",
+    "https://www.lexpera.com.tr/mevzuat/yonetmelikler/ticari-reklam-ve-haksiz-ticari-uygulamalar-yonetmeligi",
+    "https://ticaret.gov.tr/data/5d1c9edd13b87615344cd4c8/_363_Reklam_Kurulu_Basin_Bulteni.pdf"
+   ],
+   "confidence": "high",
+   "verdict": "duzeltilmeli",
+   "safe": "Türkiye'de Ticari Reklam ve Haksız Ticari Uygulamalar Yönetmeliği'ne göre reklamveren, reklamındaki iddiaların doğru olduğunu ispatlamak zorunda (madde 9). Doğrulanabilir iddialar bilimsel geçerliliği olan bilgi ve belgelerle kanıtlanmalı. Rakiplerle karşılaştırma yapan iddialar ise her durumda üniversite, akredite ya da bağımsız kuruluş belgeleriyle kanıtlanmalı. Reklamlarda doktor, diş hekimi ya da eczacının bir ürün için sağlık beyanında bulunduğu izlenimi verilemez (madde 16/3).",
+   "note": "Ana cümle doğru ama detaydaki madde 9 metni eskimiş. Resmî Gazete'nin 10.01.2015 tarihli, 29232 sayılı metnini açtım. Detayda aktarılan 9/1-9/4 bu ilk metinle birebir uyuşuyor. Ancak madde 9, 4 Ocak 2017 tarihli ve 29938 sayılı Resmî Gazete'deki değişiklikle (m.2) baştan yazılmış. Değişiklik PDF'ini okudum. Yeni metin: 9/1 reklamveren iddiaların doğruluğunu ispatla yükümlü. 9/2 doğrulanabilir iddialar 'bilimsel geçerliliği olan bilgi ve belgelerle' kanıtlanır, üniversite ya da akredite veya bağımsız kuruluş belgesi yalnızca 'gerek görülen hallerde' istenir. 9/3 karşılaştırmalı reklamlarda bu belgeler 'her hâlükârda' şart. 9/4 yayın dönemini kanıtlama. 9/5 belgeleri denetime sunma yükümlülüğü. Yani 'sonradan eklenen 9/5' aslında eski 9/4'ün yeni numarası. Kendi laboratuvar çalışmasının onaylanması şartı (eski 9/2) artık metinde yok. Lexpera'daki konsolide metin (son değişiklik 01.07.2026, RG 33297, yürürlük 01.08.2026) madde 9'u 2017 hâliyle, 7/8-b'yi ('İstatistikler gerçekte olduklarından farklı sonuçlar doğuracak biçimde sunulamaz.') ve 16/3'ü değişmemiş olarak gösteriyor. 16/3 metni 363 sayılı bültende (2025/2870 kararı) de birebir alıntılanmış. 2026 değişiklik metnini doğrudan açamadım (resmigazete.gov.tr zaman aşımına uğradı). Haber özetlerine göre bu değişiklik 9 ve 16. maddelere dokunmuyor, ama bunu birincil metinden teyit edemedim.",
+   "orig_sources": [
+    "https://resmigazete.gov.tr/eskiler/2015/01/20150110-5.htm",
+    "https://ticaret.gov.tr/data/5d1c9edd13b87615344cd4c8/_363_Reklam_Kurulu_Basin_Bulteni.pdf"
+   ]
+  },
+  {
+   "id": "bilim-c14",
+   "claim": "Reklamda 'diş hekimi tavsiyesi' gördüğünde dipnotta dört şeye bak: anketi kim yaptırdı, ne zaman ve kaç hekimle yapıldı, hekimler tek bir marka mı seçti yoksa birden fazlasını işaretleyebildi mi, ve tavsiye hangi kullanım (örneğin hassasiyet) içindi.",
+   "detail": "Bu madde bir sentez; her soru resmî bir kararın itiraz noktasına karşılık geliyor. 'Kim yaptırdı' ve 'birden fazla marka seçilebiliyor muydu': ASA 2007 Colgate kararı. 'Ne zaman, kaç kişiyle': Reklam Kurulu 2025/3612. 'Hangi kullanım için': Reklam Kurulu 2024/8271 ve NAD 2019. '#1' iddiası için rakiplerle karşılaştırma şartı: Reklam Kurulu 2024/8271 ve FTC 16 CFR 255.3(b). Uyarı: 10.08.2021 tarihli kararda (2021/562) 'Diş hekimlerinin önerdiği marka' ifadesi tespitler arasında geçiyor ama ceza bu ifade için verilmedi. Reelde bir markanın yalnızca resmî kararda gerekçe olarak geçen ifadeler için ceza aldığı söylenmeli.",
+   "sources": [
+    "https://marketinglaw.osborneclarke.com/retailing/colgates-80-of-dentists-recommend-claim-under-fire/",
+    "https://ticaret.gov.tr/data/5d1c9edd13b87615344cd4c8/_363_Reklam_Kurulu_Basin_Bulteni.pdf",
+    "https://ticaret.gov.tr/data/5d1c9edd13b87615344cd4c8/_351_Bas%C4%B1n%20B%C3%BClteni.pdf",
+    "https://ticaret.gov.tr/data/5d1c9edd13b87615344cd4c8/312_RK_Bulten.docx",
+    "https://bbbprograms.org/media/newsroom/decisions/nad-finds-glaxosmithkline-s-sensodyne-toothpaste-1-dentist-recommended-brand-claims-supported-no-add",
+    "https://www.law.cornell.edu/cfr/text/16/255.3"
+   ],
+   "confidence": "high",
+   "viral": "Yıldız işaretini gör, dipnotu oku: kim, ne zaman, kaç hekim, hangi amaçla?",
+   "verdict": "dogru",
+   "safe": "Reklamda 'diş hekimleri öneriyor' gördüğünde dipnotta dört şeye bak: anketi kim yaptırdı, ne zaman ve kaç hekimle yapıldı, hekimler tek bir marka mı seçti yoksa birden fazlasını mı işaretleyebildi, ve tavsiye hangi kullanım (örneğin hassasiyet) içindi.",
+   "note": "Bu bir sentez. Her sorunun dayanağını birincil ya da tutarlı ikincil kaynakta kontrol ettim. 'Kim yaptırdı' ve 'birden fazla marka': ASA 2007 Colgate (Osborne Clarke tam metni, görüşme metinleri anketin Colgate adına yapıldığını açık söylemiyordu, hekimler birkaç marka önerebiliyordu). 'Ne zaman, kaç kişiyle': RK 2025/3612 ('yapıldığı dönem, örneklem büyüklüğü'). 'Hangi kullanım için': RK 2024/8271 ('hassasiyete karşı' öneri) ve NAD 2019 (hassasiyetle sınırlı algı). '#1' için rakip karşılaştırması: RK 2024/8271, Yönetmelik 9/3 (2017 metni) ve 16 CFR 255.3(b). 2021/562 uyarısı da doğru. 312 sayılı bültende 'Diş hekimlerinin önerdiği marka' yalnızca tespitlerde geçiyor, değerlendirme ve ceza gerekçesi 'hassasiyet ağrısını azaltmaya yardımcı olur' ve '24 saat' iddialarına dayanıyor. Not: 'kim yaptırdı' sorusu Türk kararlarında açıkça aranan bir şart değil, ASA kararından gelen bir tüketici sorusu.",
+   "orig_sources": [
+    "https://marketinglaw.osborneclarke.com/retailing/colgates-80-of-dentists-recommend-claim-under-fire/",
+    "https://ticaret.gov.tr/data/5d1c9edd13b87615344cd4c8/_363_Reklam_Kurulu_Basin_Bulteni.pdf",
+    "https://ticaret.gov.tr/data/5d1c9edd13b87615344cd4c8/_351_Bas%C4%B1n%20B%C3%BClteni.pdf",
+    "https://bbbprograms.org/media/newsroom/decisions/nad-finds-glaxosmithkline-s-sensodyne-toothpaste-1-dentist-recommended-brand-claims-supported-no-add",
+    "https://www.law.cornell.edu/cfr/text/16/255.3"
+   ]
+  }
+ ],
+ "final": {
+  "script": "On diş hekiminden dokuzu bu macunu tavsiye ediyor. Kestik! Setin arkasına geçiyoruz. İngiltere, iki bin yedi. Colgate afişi: diş hekimlerinin yüzde sekseninden fazlası öneriyor. Anketi açıyoruz: hekimler birden fazla marka önerebiliyordu, bir rakip de neredeyse aynı sıklıkta önerilmişti. İngiltere Reklam Standartları Kurumu afişi yanıltıcı buldu. İki bin on altı, bir ara yüz fırçası: diş profesyonellerinin yüzde yüzü öneriyor. Dayanak: fuarlarda bilgisi alınan kırk altı kişi. O da yanıltıcı bulundu. İki bin on sekizde aynı kurum, Oral-B'nin dünyada bir numaralı diş hekimi tavsiyesi iddiasını kabul etti. Şarjlı fırça anketinde onu işaretleyen hekimler yalnızca yüzde yirmi ikiydi; birinci olmaya yetti. Türkiye'de Reklam Kurulu, hassas dişler için on diş hekiminden dokuzu Sensodyne öneriyor iddiasını kanıtlanamadığı için durdurdu, ceza kesti. İki bin yirmi dörtte aynı markanın beyazlatıcı macunu da durduruldu; hekim önerisi belgesi yalnızca hassasiyete karşıydı. Meğerse o dokuz, en iyisi bu demek değilmiş; olsa olsa önerdiklerimden biri, bazen de bambaşka bir dert için. Sen de bunu, o dokuzdan olmayan diş hekimi arkadaşına gönder.",
+  "beats": [
+   {
+    "text": "On diş hekiminden dokuzu bu macunu tavsiye ediyor.",
+    "visual": "Doksanlar TV reklamı estetiğinde parlak, aşırı doygun bir set. Beyaz önlüklü oyuncu diş hekimi kusursuz gülümsemeyle markasız jenerik bir tüpü kameraya uzatıyor, dişinde 'çıng' parıltısı. Arkasında yan yana dizilmiş on beyaz önlüklü hekim var, dokuzu başparmak kaldırıyor. Kamera hızlı bir punch-in ile parlayan dişin mine yüzeyine makro dalış yapıyor. Set fonunda dev '10'DA 9' panosu ışıldıyor. Logo yok.",
+    "claim_ids": [
+     "turkiye-TR-01"
+    ]
+   },
+   {
+    "text": "Kestik! Setin arkasına geçiyoruz.",
+    "visual": "Klaket çarpıyor, kare bir anlığına donuyor, reklam ışıkları tek tek sönüyor. Kamera dolly-back ile dekorun kenarından kayıp kontrplak arka yüze geçiyor: kablolar, ışık standları, gülümsemeyi bırakıp omuz silken oyuncu. Bir set görevlisi elindeki '9/10' kartını indiriyor. Loş bir spot, dekorun arkasında üst üste yığılmış anket klasörlerini aydınlatıyor.",
+    "claim_ids": []
+   },
+   {
+    "text": "İngiltere, iki bin yedi. Colgate afişi: diş hekimlerinin yüzde sekseninden fazlası öneriyor.",
+    "visual": "Kamera klasörlerden birinin kapağına dalıyor. Kapak açılınca yağmurlu bir Londra gecesine çıkılıyor. Islak kaldırımdaki yansımadan crane-up ile kırmızı otobüsün geçtiği durağa, ışıklı afiş panosuna yükseliyor. Afişte dev '%80+' ve markasız bir tüp var, köşede 'İngiltere, 2007' etiketi. Afişin altındaki minik yıldız dipnotu titreşiyor.",
+    "claim_ids": [
+     "dunya-c1"
+    ]
+   },
+   {
+    "text": "Anketi açıyoruz: hekimler birden fazla marka önerebiliyordu, bir rakip de neredeyse aynı sıklıkta önerilmişti.",
+    "visual": "Kamera yıldız dipnotuna yaklaşıp içinden geçerek bir telefon anketi masasına iniyor. Ahizeyi omzuna sıkıştırmış bir anketör, aynı satırda mavi, yeşil ve kırmızı üç tüp kutusuna art arda tik atıyor. Form satırları kameranın altından zemin gibi akıyor. Formun ucundan iki sütun yükseliyor: afişteki marka ve bir rakip. İki sütun neredeyse aynı boyda durunca kamera ikisinin arasından süzülüyor.",
+    "claim_ids": [
+     "dunya-c2",
+     "dunya-c3"
+    ]
+   },
+   {
+    "text": "İngiltere Reklam Standartları Kurumu afişi yanıltıcı buldu.",
+    "visual": "Kamera formdan whip-pan ile otobüs durağına geri savruluyor. Yukarıdan ağır, kırmızı bir 'YANILTICI' mührü afişin üstüne iniyor, cam titriyor, afiş kâğıt gibi kıvrılıp panodan yağmura düşüyor. Üst etiket: 'İngiltere Reklam Standartları Kurumu (ASA)'.",
+    "claim_ids": [
+     "dunya-c1",
+     "bilim-c8"
+    ]
+   },
+   {
+    "text": "İki bin on altı, bir ara yüz fırçası: diş profesyonellerinin yüzde yüzü öneriyor.",
+    "visual": "Kamera düşen afişin ardındaki karanlıktan makro bir dalışla iki azı dişinin arasındaki dar boşluğa giriyor. Mine yüzeyi iki yanda dev kayalıklar gibi yükseliyor. İnce bir ara yüz fırçası boşluğa kayıyor, telleri arasında neon '%100' parlıyor. Köşede '2016' etiketi.",
+    "claim_ids": [
+     "dunya-c8"
+    ]
+   },
+   {
+    "text": "Dayanak: fuarlarda bilgisi alınan kırk altı kişi. O da yanıltıcı bulundu.",
+    "visual": "Kamera diş boşluğundan çıkıp kalabalık bir fuar salonunun üstünden kuş bakışı süzülüyor ve bir standın kartvizit kutusuna alçalıyor. Kalabalık soluklaşıyor, yalnızca kırk altı küçük figür tek tek aydınlanıyor (sayaç 1'den 46'ya çıkıyor). Standın üstündeki neon '%100' tabelasına kırmızı 'YANILTICI' mührü basılıyor, neon cızırdayıp sönüyor.",
+    "claim_ids": [
+     "dunya-c8"
+    ]
+   },
+   {
+    "text": "İki bin on sekizde aynı kurum, Oral-B'nin dünyada bir numaralı diş hekimi tavsiyesi iddiasını kabul etti.",
+    "visual": "Karanlıkta dönen bir dünya küresinin üstünde markasız, şarjlı bir elektrikli diş fırçası dikiliyor. Kamera küreden yükselip fırçanın etrafında orbit yapıyor. Fırçaya dönen altın bir '#1 DÜNYADA' madalyası takılıyor, yanına yeşil 'KABUL' damgası iniyor. Köşede '2018' etiketi.",
+    "claim_ids": [
+     "dunya-c6"
+    ]
+   },
+   {
+    "text": "Şarjlı fırça anketinde onu işaretleyen hekimler yalnızca yüzde yirmi ikiydi; birinci olmaya yetti.",
+    "visual": "Kamera madalyanın deliğinden geçip yüz hekim silüetinden oluşan bir ızgaranın üstüne çıkıyor. Silüetlerden yalnızca yirmi ikisi sarı yanıyor, kalan yetmiş sekizi gri. Yanda bir podyum var: birinci basamakta %22, ikinci basamakta ondan biraz kısa bir rakip çubuğu, aralarında '+6,8 puan' etiketi. Kamera yavaşça tilt-up yapıp '#1' rozetinin ne kadar küçük bir kalabalığa dayandığını gösteriyor. Alt bant: '22 ülke · 5.157 hekim · uyan tüm markalar işaretlendi'.",
+    "claim_ids": [
+     "dunya-c6",
+     "dunya-c7"
+    ]
+   },
+   {
+    "text": "Türkiye'de Reklam Kurulu, hassas dişler için on diş hekiminden dokuzu Sensodyne öneriyor iddiasını",
+    "visual": "Bir Türk evinde akşam, çay bardakları sehpada. Kamera kanepenin arkasından tüplü televizyona yavaşça dolly-in yapıyor. Ekranda hassas diş macunu reklamı ve '10'DA 9' yazısı dönüyor. Köşede 'Reklam Kurulu · 15 Nisan 2014' etiketi.",
+    "claim_ids": [
+     "turkiye-TR-01"
+    ]
+   },
+   {
+    "text": "kanıtlanamadığı için durdurdu, ceza kesti.",
+    "visual": "Kamera ekranın içine dalıyor. Reklamın altındaki minicik altyazı bir büyüteçle devleşiyor ama yine okunmuyor. Görüntü dev bir 'DURDUR' tuşuyla donuyor, ön plana 81.554 TL yazılı bir idari para cezası makbuzu süzülüyor.",
+    "claim_ids": [
+     "turkiye-TR-01"
+    ]
+   },
+   {
+    "text": "İki bin yirmi dörtte aynı markanın beyazlatıcı macunu da durduruldu;",
+    "visual": "Bembeyaz parlayan bir dişin makrosu. Kamera mine yüzeyindeki yansımanın içinden geçerek bir 'BEYAZLIK' reklam panosunun önüne çıkıyor, panoya kırmızı bir durdurma bandı çekiliyor. Köşede '2024' etiketi.",
+    "claim_ids": [
+     "turkiye-TR-04",
+     "bilim-c11"
+    ]
+   },
+   {
+    "text": "hekim önerisi belgesi yalnızca hassasiyete karşıydı.",
+    "visual": "Kamera panonun arkasındaki masaya iniyor, '2023' tarihli bir belge açılıyor. Belgedeki 'yalnızca hassasiyete karşı' satırının üstünden fosforlu kalem geçiyor. Kamera satıra o kadar yaklaşıyor ki harfler dev bir duvara dönüşüyor.",
+    "claim_ids": [
+     "turkiye-TR-04",
+     "bilim-c11"
+    ]
+   },
+   {
+    "text": "Meğerse o dokuz, en iyisi bu demek değilmiş; olsa olsa önerdiklerimden biri, bazen de bambaşka bir dert için.",
+    "visual": "Kamera açılıştaki sete geri dönüyor ve tek bir hekimin anket formuna dalıyor: mavi, yeşil ve kırmızı kutuların üçü de işaretli. Mavi tüpün üstündeki '9/10' etiketi soyulup havalanıyor, aynı etiket yeşil ve kırmızı tüplere de yapışıyor. Kamera geri çekilince üç etiketin altında küçük harflerle 'hassasiyet için' yazısı beliriyor. Üstte 'MEĞERSE' başlığı var.",
+    "claim_ids": [
+     "dunya-c2",
+     "turkiye-TR-04",
+     "bilim-c14"
+    ]
+   },
+   {
+    "text": "Sen de bunu, o dokuzdan olmayan diş hekimi arkadaşına gönder.",
+    "visual": "Açılıştaki on diş hekimi dizisi geri geliyor, kamera diziyi soldan sağa tarıyor. Dokuz hekim soluk griye dönüyor, onuncusu bir adım öne çıkıp arkadan vuran sıcak bir ışıkla parlıyor. Altta nabız gibi atan büyük bir GÖNDER düğmesi beliriyor ve bir parmak ona dokunuyor.",
+    "claim_ids": []
+   }
+  ],
+  "caption": "Reklamlardaki \"on diş hekiminden dokuzu\" cümlesinin perde arkası resmî kararlarda duruyor. Hekimlerin birden fazla marka önerebildiği bir anket var. Fuarlarda bilgisi alınan kırk altı kişiye dayanan bir \"yüzde yüz\" var. Yüzde yirmi ikiyle gelen bir \"bir numara\" var. Bir de yalnızca hassasiyet için verilmiş hekim önerileri var.\n\nBir dahaki sefere dipnota bak: anketi kim yaptırdı, ne zaman ve kaç hekimle yapıldı, kaç marka işaretlenebiliyordu, tavsiye hangi kullanım içindi.\n\nKaynaklar: ASA kararları (Colgate 2007, Wisdom 2016, Oral-B 2018), ASA anket rehberi, Osborne Clarke Marketing Law, Cosmetics Business, UPI, T.C. Ticaret Bakanlığı Reklam Kurulu kararları ve bültenleri (Nisan 2014, Kasım 2024), NAD kararı (2019), FDI.\n\nBu içerik bilgilendirme amaçlıdır; tıbbi veya hukuki tavsiye değildir.\n\n#dişmacunu #dişhekimi #reklam #tüketicihakları #meğerse",
+  "sources": [
+   {
+    "id": "dunya-c1",
+    "safe": "İngiltere'nin reklam denetleyicisi ASA, Ocak 2007'de Colgate'in 'Diş hekimlerinin %80'inden fazlası Colgate'i tavsiye ediyor' posterini yanıltıcı buldu ve bu iddianın bir daha kullanılmamasını istedi.",
+    "url": "https://marketinglaw.osborneclarke.com/retailing/colgates-80-of-dentists-recommend-claim-under-fire/ https://www.cosmeticsbusiness.com/asa-don-t-recommend-colgate-47191 https://www.upi.com/Business_News/2007/01/17/Colgate-toothpaste-claim-said-misleading/19421169068780/"
+   },
+   {
+    "id": "dunya-c2",
+    "safe": "Ankette hekimler tek bir marka seçmek zorunda değildi, birden fazla marka önerebiliyordu. ASA'ya göre bir rakip marka da neredeyse Colgate kadar sık önerilmişti; yani '%80', 'birinci tercih' anlamına gelmiyordu.",
+    "url": "https://marketinglaw.osborneclarke.com/retailing/colgates-80-of-dentists-recommend-claim-under-fire/ https://www.cosmeticsbusiness.com/asa-don-t-recommend-colgate-47191"
+   },
+   {
+    "id": "dunya-c3",
+    "safe": "ASA'ya göre telefon anketinin metni, araştırmanın Colgate adına yapıldığını ve sonuçların reklamda kullanılabileceğini yeterince açık söylemiyordu. Hekimlerden de bu kullanım için yazılı izin alınmamıştı.",
+    "url": "https://marketinglaw.osborneclarke.com/retailing/colgates-80-of-dentists-recommend-claim-under-fire/ https://www.upi.com/Business_News/2007/01/17/Colgate-toothpaste-claim-said-misleading/19421169068780/"
+   },
+   {
+    "id": "bilim-c8",
+    "safe": "İngiltere'nin reklam denetçisi ASA, Ocak 2007'de Colgate'in 'Diş hekimlerinin %80'inden fazlası Colgate'i öneriyor' posterini yanıltıcı buldu. Ankette hekimler birden fazla marka önerebiliyordu ve rakip bir marka da neredeyse aynı oranda önerilmişti.",
+    "url": "https://marketinglaw.osborneclarke.com/retailing/colgates-80-of-dentists-recommend-claim-under-fire/ https://www.cosmeticsbusiness.com/asa-don-t-recommend-colgate-47191 https://www.asa.org.uk/advice-online/health-celebrities-and-health-professionals.html"
+   },
+   {
+    "id": "dunya-c8",
+    "safe": "ASA 2016'da Wisdom'ın ara yüz fırçaları için kullandığı 'diş hekimliği profesyonellerinin %100'ü tavsiye ediyor' iddiasını yanıltıcı buldu. İddia, firmanın fuarlarda bilgilerini aldığı 46 profesyonele sorduğu 'Bu ürünü hastalarınıza önerir miydiniz?' sorusuna dayanıyordu.",
+    "url": "https://asa.org.uk/rulings/wisdom-toothbrushes-ltd-a16-334316.html https://www.asa.org.uk/news/a-quick-guide-to-advertising-consumer-surveys.html"
+   },
+   {
+    "id": "dunya-c6",
+    "safe": "ASA 2018'de Oral-B'nin 'dünyada 1 numaralı diş hekimi tavsiyesi marka' iddiasını kabul etti. Dayanak ankette, hastalarına önerdiği şarjlı elektrikli diş fırçası markaları arasında Oral-B'yi işaretleyen hekimlerin oranı %22'ydi; bu oran, en yakın rakipten 6,8 puan fazlaydı.",
+    "url": "https://www.asa.org.uk/rulings/procter---gamble--health---beauty-care--ltd-a17-400410.html"
+   },
+   {
+    "id": "dunya-c7",
+    "safe": "Oral-B anketinde 22 ülkeden 5.157 diş hekimine, hastalarına genellikle önerdikleri tüm şarjlı elektrikli diş fırçası markaları soruldu. Hekimlere bir marka listesi verildi ve uyan tüm markaları işaretlemeleri istendi. P&G'ye göre anketi her ülkede bağımsız ajanslar yaptı ve katılımcılar sponsorun P&G olduğunu bilmiyordu.",
+    "url": "https://www.asa.org.uk/rulings/procter---gamble--health---beauty-care--ltd-a17-400410.html"
+   },
+   {
+    "id": "turkiye-TR-01",
+    "safe": "Reklam Kurulu 15 Nisan 2014'te (223. toplantı, 2012/971), Sensodyne Onarım ve Koruma TV reklamındaki \"Hassas dişler için 10 diş hekiminden 9'u Sensodyne öneriyor\" iddiasının belgeyle kanıtlanamadığına ve altyazının okunamadığına karar verdi. GlaxoSmithKline'a 81.554 TL idari para cezası ile durdurma cezası verdi.",
+    "url": "https://ticaret.gov.tr/data/5d1c9edd13b87615344cd4c8/0a4ee75ce4bb0ea8448f3c327a0f53dc.doc https://ticaret.gov.tr/tuketici/ticari-reklamlar/reklam-kurulu-kararlari"
+   },
+   {
+    "id": "turkiye-TR-04",
+    "safe": "Reklam Kurulu 12 Kasım 2024'te Sensodyne Klinik Beyazlık reklamlarına durdurma cezası verdi. Gerekçeleri şunlardı: Diş hekimi önerisine dayanak olan 2023 tarihli belge yalnızca \"hassasiyete karşı\" öneriyi gösteriyordu, \"#1\" iddiası rakip markalarla kıyaslayan bir araştırma raporuyla ispatlanmamıştı ve \"2 ton daha beyaz\" iddiasının neye kıyasla olduğu söylenmemişti.",
+    "url": "https://ticaret.gov.tr/data/5d1c9edd13b87615344cd4c8/_351_Bas%C4%B1n%20B%C3%BClteni.pdf"
+   },
+   {
+    "id": "bilim-c11",
+    "safe": "Reklam Kurulu, 12 Kasım 2024'te bir beyazlatıcı macunun reklamındaki 'Diş hekimlerinin önerdiği marka' ifadesini sorunlu buldu. Firmanın sunduğu 2023 tarihli belgede hekim önerisi 'hassasiyete karşı'ydı, reklam ise markanın tüm iddialar için önerildiği algısını yaratıyordu. '#1' iddiası da rakip markalarla karşılaştırmalı bir araştırmayla ispatlanamadı ve reklamlara durdurma cezası verildi.",
+    "url": "https://ticaret.gov.tr/data/5d1c9edd13b87615344cd4c8/_351_Bas%C4%B1n%20B%C3%BClteni.pdf"
+   },
+   {
+    "id": "bilim-c14",
+    "safe": "Reklamda 'diş hekimleri öneriyor' gördüğünde dipnotta dört şeye bak: anketi kim yaptırdı, ne zaman ve kaç hekimle yapıldı, hekimler tek bir marka mı seçti yoksa birden fazlasını mı işaretleyebildi, ve tavsiye hangi kullanım (örneğin hassasiyet) içindi.",
+    "url": "https://marketinglaw.osborneclarke.com/retailing/colgates-80-of-dentists-recommend-claim-under-fire/ https://ticaret.gov.tr/data/5d1c9edd13b87615344cd4c8/_363_Reklam_Kurulu_Basin_Bulteni.pdf https://ticaret.gov.tr/data/5d1c9edd13b87615344cd4c8/_351_Bas%C4%B1n%20B%C3%BClteni.pdf https://ticaret.gov.tr/data/5d1c9edd13b87615344cd4c8/312_RK_Bulten.docx https://bbbprograms.org/media/newsroom/decisions/nad-finds-glaxosmithkline-s-sensodyne-toothpaste-1-dentist-recommended-brand-claims-supported-no-add https://www.law.cornell.edu/cfr/text/16/255.3"
+   }
+  ],
+  "cover_idea": "Reklam setinde, sinematik bir alçak açıyla yan yana dizilmiş on beyaz önlüklü diş hekimi var. Dokuzu aynı markasız, parlak tüpü kusursuz bir gülümsemeyle kameraya uzatıyor. Ortadaki onuncu hekim kollarını kavuşturmuş, bir kaşını kaldırmış, doğrudan izleyiciye bakıyor ve sıcak bir ışıkla ötekilerden ayrılıyor. Arkada yarı aralanmış set perdesinin ardından kablolar, ışık standları ve yığılmış anket formları görünüyor. Görsel, \"parlak reklam\" ile \"perde arkası\" zıtlığını tek karede veriyor. Damga, mühür, altyazı ya da logo yok.",
+  "judge_notes": "PUANLAMA (her ölçüt 10 üzerinden)\n- Senaryo A: Kurallar 9,5, viral güç 8, doğruluk 9, toplam 26,5/30.\n  - Artıları: \"Kestik!\" ikinci saniyede kalıbı kırıyor. Rakamlar yüzde seksenden yüzde yüze, oradan yüzde yirmi ikiye tırmanıyor. İki bin yirmi dört \"yalnızca hassasiyete karşı\" bükümü güçlü.\n  - Eksileri: Marka adı hiç geçmediği için inandırıcılık ve tanınırlık düşük kalıyor. Meğerse cümlesi soyut ve uzun. Colgate anketi bir telefon anketiydi (c3), A ise \"anket formu\" diyor. \"Fuarda\" tekil, kaynakta çoğul.\n- Senaryo B: Kurallar 9, viral güç 8,5, doğruluk 7,5, toplam 25/30.\n  - Artıları: Canlı deney mekanizmayı gösteriyor. Belgelenmiş marka adları (Colgate, Oral-B, Sensodyne) kullanılmış. \"Şarjlı fırça anketinde\" ayrıntısı doğru. Meğerse cümlesi vurucu.\n  - Eksileri: Seslendirmedeki varsayımsal veriler (dokuz, sekiz, yedi; yirmi dört tavsiye; yüzde iki yüz kırk) doğrulanmış ifadelerin hiçbirinde yok. \"Bu bir hayal değil\" sözü kurgu deneyi gerçek veri gibi gösterebilir. Hassasiyet bükümü eksik.\n\nKAZANAN: A temel alındı.\n\nB'DEN ALINANLAR\n- Marka adları yalnız resmî kararla belgelenen yerlerde geçiyor: Colgate (c1), Oral-B (c6) ve Sensodyne (TR-01). İki bin yirmi dört vakası \"aynı markanın\" diye anılıyor (TR-04'te Sensodyne Klinik Beyazlık).\n- \"Şarjlı fırça anketinde\" ayrıntısı eklendi (c6, c7).\n- Meğerse cümlesine \"olsa olsa önerdiklerimden biri\" kısmı eklendi (c2: yüzde seksen birinci tercih demek değil). Sonuna A'nın \"hangi dert\" fikri \"bazen de bambaşka bir dert için\" olarak eklendi (TR-04, bilim-c11).\n- B'nin üç tüplü çoklu işaret deneyi seslendirmeden çıkarıldı, yalnızca görsele taşındı (Colgate anket beat'i ve Meğerse beat'i). Böylece mekanizma görünür kalıyor ama seslendirmede doğrulanmamış hiçbir rakam yok.\n\nDOĞRULUK DÜZELTMELERİ\n- Colgate için \"işaretleyebiliyordu\" yerine \"önerebiliyordu\" kullanıldı. c2 ve c3'e göre bu bir telefon anketiydi. \"İşaretleyen\" ifadesi yalnızca Oral-B anketi için kullanıldı (c7: uyan tüm markaları işaretle).\n- Kaynağa uygun olarak \"fuarda\" yerine \"fuarlarda\" yazıldı (c8).\n- \"Rakiplerden fazla olması yetti\" yerine \"birinci olmaya yetti\" kullanıldı. c6'ya göre oran yüzde yirmi ikiydi, en yakın rakipten altı virgül sekiz puan fazlaydı ve iddia kabul edildi.\n- Hukuki veya tıbbi tavsiye yok.\n\nKURAL KONTROLÜ\n- Metin 1145 karakter (Python ile ölçüldü, beat'ler boşlukla birleşince metne birebir eşit).\n- Metinde hiç rakam ve soru işareti yok. \"Cevap sonda\" ibaresi yok. Kısaltma yok: ASA, \"İngiltere Reklam Standartları Kurumu\" olarak açık okunuyor.\n- Sondan bir önceki cümle \"Meğerse ...\" ile başlıyor ve konunun ifşası. Son cümle aynen istenen gönderme çağrısı.\n- Tahmini süre: Saniyede yaklaşık on beş karakterle yetmiş dört ila yetmiş yedi saniye.\n- Ritim: Her beat yaklaşık iki ila yedi saniye. Uzun Türkiye ve iki bin yirmi dört cümleleri, görsel değişimi korumak için ikiye bölündü.\n\nTTS NOTU\nElevenLabs'te \"Oral-B\" yanlış okunursa telaffuz sözlüğüne \"Oral Bi\" eklenmeli. Gerekirse \"Colgate\" için de telaffuz ayarı yapılmalı.\n\nGÖRSEL NOTU\n- Görsellerde gerçek logo kullanılmıyor. Tüpler markasız, marka adları yalnızca seslendirmede geçiyor.\n- Kapakta damga ve altyazı yok."
+ }
+}
