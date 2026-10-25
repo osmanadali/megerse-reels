@@ -110,3 +110,144 @@ def cta_js(t0, t_dim, t_tag=None):
             f'tl.to("#dk{HERO}",{{scale:1.18,svgOrigin:"{hx} {hy}",duration:.5,ease:"back.out(2)"}},{t_dim:.2f});'
             f'tl.fromTo("#dglow",{{opacity:0,scale:.6}},{{opacity:1,scale:1,duration:.5,immediateRender:false}},{t_dim:.2f});tl.set("#dglow",{{opacity:0}},0);'
             f'tl.to("#dglow",{{opacity:.6,duration:.6,yoyo:true,repeat:5}},{t_dim + .5:.2f});')
+
+
+# ---------------- ANKET: çoklu seçim → çubuklar ----------------
+ANKET_CSS = """
+.clip2 { position:absolute; left:130px; right:130px; top:330px; height:780px; border-radius:30px; background:#F4EEDC; border:7px solid #1B1414; box-shadow:0 16px 0 rgba(0,0,0,.5); }
+.clip2:before { content:""; position:absolute; left:0; right:0; margin:0 auto; top:-38px; width:220px; height:70px; border-radius:16px; background:#8A8E98; border:6px solid #1B1414; }
+.aq { position:absolute; left:40px; right:40px; top:60px; text-align:center; font-weight:800; font-size:46px; line-height:1.12; color:#1B1414; }
+.aq small { display:block; margin:14px auto 0; width:fit-content; padding:4px 16px; border-radius:12px; font-weight:600; font-size:32px; color:#6A5A3A; }
+.arow { position:absolute; left:60px; right:60px; height:96px; display:flex; align-items:center; gap:26px; font-weight:800; font-size:44px; color:#1B1414; }
+.arow svg { flex:none; } .arow span { flex:1; }
+.abox { flex:none; position:relative; width:72px; height:72px; border-radius:14px; border:6px solid #1B1414; background:#fff; }
+.abox i { position:absolute; left:4px; top:-18px; font-style:normal; font-weight:800; font-size:84px; line-height:1; color:#1FA37A; opacity:0; }
+.bar { position:absolute; bottom:560px; width:220px; border-radius:22px 22px 0 0; border:6px solid #1B1414; border-bottom:0; }
+.bval { position:absolute; width:300px; text-align:center; font-weight:800; font-size:64px; color:#fff; text-shadow:0 6px 0 #000; opacity:0; }
+.bval small { display:block; font-size:30px; color:#FFD23F; }
+"""
+TUBES = ["?", "NARVİS", "SENSODAYN", "İPENA", "ORAL-P"]
+
+
+def anket_html(question="Hastalarınıza hangi diş macunlarını önerirsiniz?", note="(birden fazla seçebilirsiniz)", ticks=(0, 1, 2, 3, 4)):
+    rows = []
+    for i, n in enumerate(TUBES):
+        icon = f'<svg viewBox="-70 -320 140 330" width="44" height="104">{brand_tube(n)}</svg>'
+        name = "BİR DEV MARKA" if n == "?" else n
+        rows.append(f'<div class="arow" style="top:{270 + i * 100}px">{icon}<span>{name}</span><div class="abox"><i id="atk{i}">✓</i></div></div>')
+    return (f'<div class="clip2" id="aclip"><div class="aq">{question}<small id="anote">{note}</small></div>{"".join(rows)}</div>'
+            '<div class="bar" id="bar0" style="left:250px;height:0;background:#B9C2CC"></div><div class="bar" id="bar1" style="left:610px;height:0;background:#E8577A"></div>'
+            '<div class="bval" id="bv0" style="left:210px;top:0">%80+<small>BİR DEV MARKA</small></div>'
+            '<div class="bval" id="bv1" style="left:570px;top:0">≈<small>BİR RAKİP</small></div>')
+
+
+def anket_js(t0, t_note, t_ticks, t_bars, h0=470, h1=440, ticks=(0, 1, 2, 3, 4)):
+    """t_ticks: ilk işaret (her biri .22 sn arayla); t_bars: form yukarı kayıp küçülür, iki çubuk neredeyse aynı boya çıkar."""
+    js = [pop_js("#aclip", t0, .7, .35),
+          f'tl.to("#anote",{{backgroundColor:"#FFD23F",color:"#141414",scale:1.12,duration:.25,ease:"back.out(2)"}},{t_note:.2f});']
+    for k, i in enumerate(ticks):
+        js.append(pop_js(f"#atk{i}", t_ticks + k * .22, 2.2, .22))
+    js.append(f'tl.to("#aclip",{{y:-110,scale:.58,transformOrigin:"50% 0%",duration:.45,ease:"power2.inOut"}},{t_bars:.2f});')
+    for b, (h, d) in enumerate(((h0, 0), (h1, .35))):
+        js.append(f'tl.fromTo("#bar{b}",{{height:0}},{{height:{h},duration:.8,ease:"power2.out",immediateRender:false}},{t_bars + .3 + d:.2f});tl.set("#bar{b}",{{height:0}},0);')
+        js.append(f'tl.set("#bv{b}",{{top:{1920 - 560 - h - 120}}},0);' + pop_js(f"#bv{b}", t_bars + 1.0 + d))
+    return "".join(js)
+
+
+# ---------------- %22: 100 hekimden 22'si yeter, "1 NUMARA" ----------------
+YUZ_CSS = """
+#medal { position:absolute; left:0; right:0; margin:0 auto; top:240px; width:250px; height:250px; border-radius:50%; background:radial-gradient(circle at 35% 30%,#FFE680,#E8B020);
+         border:9px solid #1B1414; box-shadow:0 12px 0 rgba(0,0,0,.5); text-align:center; font-weight:800; font-size:120px; line-height:232px; color:#1B1414; opacity:0; }
+#medal small { position:absolute; left:-120px; right:-120px; top:262px; white-space:nowrap; font-size:34px; line-height:1; color:#FFD23F; text-shadow:0 4px 0 #000; }
+#pct { position:absolute; left:0; right:0; top:1215px; text-align:center; font-weight:800; font-size:76px; color:#fff; text-shadow:0 6px 0 #000; opacity:0; }
+#pct b { color:#FFD23F; font-size:120px; }
+"""
+
+
+def _mini_doc(lit=False):
+    col = "#FFD23F" if lit else "#3A4658"
+    return (f'<circle cx="0" cy="-44" r="15" fill="{"#F2C9A0" if lit else "#5A6678"}" stroke="#1B1414" stroke-width="3"/>'
+            f'<path d="M-22 0 C-22 -22 -14 -28 0 -28 C14 -28 22 -22 22 0 Z" fill="{col}" stroke="#1B1414" stroke-width="3"/>')
+
+
+def yuzde_html(n_lit=22):
+    cells = []
+    for i in range(100):
+        x, y = 225 + (i % 10) * 70, 640 + (i // 10) * 58
+        cells.append(f'<g transform="translate({x} {y})"><g class="md0">{_mini_doc()}</g><g class="md1" id="md{i}" opacity="0">{_mini_doc(True)}</g></g>')
+    return (f'<svg class="fill" viewBox="0 0 1080 1920">{"".join(cells)}</svg>'
+            '<div id="medal">#1<small>DİŞ HEKİMİ TAVSİYESİ</small></div>'
+            f'<div id="pct">yalnızca <b>%{n_lit}</b></div>')
+
+
+def yuzde_js(t0, t_lit, t_medal, t_pct, n_lit=22):
+    import random
+    rnd = random.Random(7)
+    order = rnd.sample(range(100), n_lit)
+    return (f'tl.fromTo(".md0",{{opacity:0,scale:.3}},{{opacity:1,scale:1,duration:.25,stagger:{{each:.006,from:"center"}},immediateRender:false}},{t0:.2f});tl.set(".md0",{{opacity:0}},0);'
+            + "".join(f'tl.to("#md{i}",{{opacity:1,duration:.12}},{t_lit + k * .045:.2f});' for k, i in enumerate(order))
+            + pop_js("#medal", t_medal, .2, .45) + f'tl.fromTo("#medal",{{rotationY:-180}},{{rotationY:0,duration:.6,ease:"back.out(1.6)",immediateRender:false}},{t_medal:.2f});'
+            + pop_js("#pct", t_pct))
+
+
+# ---------------- KURUL: tokmak + KANITLANAMADI + ceza sayacı ----------------
+KURUL_CSS = """
+.adcard { position:absolute; left:140px; right:140px; top:300px; height:470px; border-radius:28px; background:linear-gradient(160deg,#FCE4EC,#F7B9C8); border:7px solid #1B1414;
+          box-shadow:0 14px 0 rgba(0,0,0,.5); overflow:hidden; }
+.adcard .t { position:absolute; left:280px; right:24px; top:70px; font-weight:800; font-size:44px; line-height:1.1; color:#7A1E3A; }
+.adcard .t b { display:block; font-size:110px; line-height:1.05; color:#C81E4A; }
+.adcard svg { position:absolute; left:60px; top:70px; }
+.stamp2 { position:absolute; left:0; right:0; margin:0 auto; top:700px; width:fit-content; padding:10px 34px; border:11px solid #E8423A; border-radius:18px;
+          color:#E8423A; background:rgba(255,255,255,.88); font-weight:800; font-size:66px; transform:rotate(-8deg); opacity:0; }
+#fine { position:absolute; left:0; right:0; top:1225px; text-align:center; font-weight:800; font-size:110px; color:#FFD23F; -webkit-text-stroke:5px #000; paint-order:stroke fill; text-shadow:0 8px 0 #000; opacity:0; }
+#fine small { display:block; font-size:36px; color:#fff; -webkit-text-stroke:0; text-shadow:0 4px 0 #000; }
+"""
+
+
+def kurul_html(brand="SENSODAYN", claim="10 diş<br>hekiminden", big="9'u", tail="öneriyor", stamp="KANITLANAMADI", fine_note="PARA CEZASI · 2014"):
+    return (f'<div class="adcard" id="kad"><svg viewBox="-70 -320 140 330" width="190" height="440">{brand_tube(brand)}</svg>'
+            f'<div class="t">{claim}<b>{big}</b>{tail}</div></div>'
+            f'<div class="stamp2" id="kst">{stamp}</div>'
+            f'<svg class="fill" viewBox="0 0 1080 1920"><g id="kgv" transform="translate(470 1130) scale(1.5)">{__import__("dentart").gavel()}</g></svg>'
+            f'<div id="fine"><span id="finen">0</span> TL<small>{fine_note}</small></div>')
+
+
+def kurul_js(t0, t_hit, t_fine, fine=81554):
+    return (pop_js("#kad", t0, .7, .35)
+            + f'tl.fromTo("#kgv .gvh",{{rotation:-38,svgOrigin:"230 -79"}},{{rotation:-38,duration:.01,immediateRender:false}},{t0:.2f});tl.set("#kgv .gvh",{{rotation:-38,svgOrigin:"230 -79"}},0);'
+            f'tl.to("#kgv .gvh",{{rotation:0,svgOrigin:"230 -79",duration:.16,ease:"power3.in"}},{t_hit - .16:.2f});'
+            f'tl.to("#kgv .gvh",{{rotation:-20,svgOrigin:"230 -79",duration:.3,ease:"power2.out"}},{t_hit + .05:.2f});'
+            f'tl.fromTo("#kst",{{scale:2.6,opacity:0}},{{scale:1,opacity:1,duration:.2,ease:"power4.in",immediateRender:false}},{t_hit:.2f});tl.set("#kst",{{opacity:0}},0);'
+            f'tl.to("#kad",{{x:10,duration:.04,yoyo:true,repeat:5}},{t_hit + .2:.2f});'
+            + pop_js("#fine", t_fine)
+            + f'(function(){{const o={{v:0}};tl.to(o,{{v:{fine},duration:1.1,ease:"power2.out",onUpdate:()=>{{document.getElementById("finen").textContent=Math.round(o.v).toLocaleString("tr-TR");}}}},{t_fine:.2f});}})();')
+
+
+# ---------------- DİPNOT: büyüteç küçük yazının üstünden geçer ----------------
+DIP_CSS = """
+.dcard { position:absolute; left:120px; right:120px; top:330px; height:760px; border-radius:30px; background:linear-gradient(170deg,#1E5FC8,#0E3A88); border:7px solid #1B1414;
+         box-shadow:0 14px 0 rgba(0,0,0,.5); overflow:hidden; }
+.dcard .big { position:absolute; left:0; right:0; top:120px; text-align:center; font-weight:800; font-size:96px; line-height:1.02; color:#fff; text-shadow:0 6px 0 rgba(0,0,0,.4); }
+.dcard .big b { display:block; font-size:170px; color:#FFD23F; }
+.fp { position:absolute; left:40px; right:40px; bottom:34px; text-align:center; font-weight:600; font-size:17px; line-height:1.3; color:rgba(255,255,255,.75); }
+#lens { position:absolute; left:0; top:0; width:1080px; height:1920px; clip-path:circle(0px at 540px 1050px); pointer-events:none; }
+#lens .fp2 { position:absolute; left:40px; right:40px; top:960px; text-align:center; font-weight:800; font-size:50px; line-height:1.18; color:#fff;
+             background:#0E3A88; padding:20px 10px; border-radius:20px; }
+#lens .fp2 b { color:#FFD23F; }
+"""
+
+
+def dipnot_html(big_top="10 KİŞİDEN", big="9'U", big_bot="TAVSİYE EDİYOR", fine="*Bir ürün deneme platformunda 713 tüketiciyle yapılan anket.",
+                fine_big="*Bir ürün deneme platformunda <b>713 tüketiciyle</b> yapılan anket."):
+    return (f'<div class="dcard" id="dcd"><div class="big">{big_top}<b>{big}</b>{big_bot}</div><div class="fp">{fine}</div></div>'
+            f'<div id="lens"><div class="fp2">{fine_big}</div></div>'
+            f'<svg class="fill" viewBox="0 0 1080 1920" style="overflow:visible"><g id="mag" transform="translate(-200 1300)">{__import__("dentart").magnifier(170)}</g></svg>')
+
+
+def dipnot_js(t0, t_mag, t_stay):
+    """t_mag: büyüteç dipnota gelir, mercek içi büyük yazı görünür; t_stay: mercek büyür, yazı okunur kalır."""
+    return (pop_js("#dcd", t0, .7, .35)
+            + f'tl.fromTo("#mag",{{x:-260,y:1300}},{{x:540,y:1050,duration:.7,ease:"power3.out",immediateRender:false}},{t_mag:.2f});tl.set("#mag",{{x:-260,y:1300}},0);'
+            f'tl.fromTo("#lens",{{clipPath:"circle(0px at 540px 1050px)"}},{{clipPath:"circle(150px at 540px 1050px)",duration:.3,immediateRender:false}},{t_mag + .55:.2f});tl.set("#lens",{{clipPath:"circle(0px at 540px 1050px)"}},0);'
+            f'tl.to("#lens",{{clipPath:"circle(720px at 540px 1050px)",duration:.5,ease:"power2.inOut"}},{t_stay:.2f});'
+            f'tl.to("#mag",{{x:1300,y:1500,duration:.5,ease:"power2.in"}},{t_stay:.2f});')
