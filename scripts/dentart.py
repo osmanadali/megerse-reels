@@ -47,7 +47,7 @@ def paste_tube(label="MARKA A", col="#2F7FD8", w=120, h=300, stripe="#FFFFFF"):
     return (cel(body, col, darker(col, .75), -1, 8, 4) + cel(crimp, lighter(col, .3), col, -1, 3, 3) + stripes
             + f'<path d="M{-hw*0.7} {-h*0.62} H{hw*0.7}" stroke="{stripe}" stroke-width="14" stroke-linecap="round"/>'
             + f'<rect x="{-hw*0.78}" y="{-h*0.5}" width="{w*0.78}" height="{h*0.2}" rx="8" fill="#fff" stroke="{INK}" stroke-width="3"/>'
-            + f'<text x="0" y="{-h*0.5 + h*0.13:.0f}" text-anchor="middle" font-family="Mont" font-weight="800" font-size="{w*min(.17, 1.05/max(len(label), 1)):.0f}" fill="{darker(col, .6)}">{label}</text>'
+            + f'<text x="0" y="{-h*0.5 + h*0.13:.0f}" text-anchor="middle" font-family="Mont" font-weight="800" font-size="{w*min(.17, .95/max(len(label), 1)):.1f}" fill="{darker(col, .6)}">{label}</text>'
             + cel(cap, "#F4F1EA", "#CFCAC0", -1, 4, 3))
 
 

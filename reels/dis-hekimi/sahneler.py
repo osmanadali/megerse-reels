@@ -1,4 +1,5 @@
 """Diş hekimi reeli sahne parçaları (senaryodan bağımsız, zamanları parametre). build.py bunları kelime çapalarıyla bağlar.
+DİKKAT: transform özniteliği olan SVG <g>'yi GSAP x/y ile oynatma (özniteliği ezer); dışına id'li boş <g> sar.
 Her fonksiyon (html, js) ya da html/js ayrı döner; koordinatlar 1080×1920 sayfa, görsel alan LAYOUT_V7 (200-1410, yanlar 100-980)."""
 import sys
 from pathlib import Path
@@ -251,3 +252,89 @@ def dipnot_js(t0, t_mag, t_stay):
             f'tl.fromTo("#lens",{{clipPath:"circle(0px at 540px 1050px)"}},{{clipPath:"circle(150px at 540px 1050px)",duration:.3,immediateRender:false}},{t_mag + .55:.2f});tl.set("#lens",{{clipPath:"circle(0px at 540px 1050px)"}},0);'
             f'tl.to("#lens",{{clipPath:"circle(720px at 540px 1050px)",duration:.5,ease:"power2.inOut"}},{t_stay:.2f});'
             f'tl.to("#mag",{{x:1300,y:1500,duration:.5,ease:"power2.in"}},{t_stay:.2f});')
+
+
+# ---------------- AFİŞ: İngiltere 2007, "%80+" afişi → YANILTICI ----------------
+AFIS_CSS = """
+.poster { position:absolute; left:150px; right:150px; top:300px; height:900px; border-radius:16px; background:linear-gradient(175deg,#F7F7F2,#DCE3EA); border:8px solid #1B1414;
+          box-shadow:0 18px 0 rgba(0,0,0,.5); overflow:hidden; }
+.poster .pt { position:absolute; left:30px; right:30px; top:60px; text-align:center; font-weight:800; font-size:58px; line-height:1.08; color:#1B2A44; }
+.poster .pt b { display:block; font-size:170px; line-height:1; color:#1E5FC8; }
+.poster svg { position:absolute; left:0; right:0; margin:0 auto; top:470px; }
+#uk { position:absolute; left:0; right:0; margin:0 auto; top:200px; width:fit-content; padding:12px 24px; border-radius:16px; background:rgba(10,14,22,.88); border:3px solid #fff;
+      color:#fff; font-weight:800; font-size:40px; opacity:0; }
+.stamp3 { position:absolute; left:0; right:0; margin:0 auto; top:820px; width:fit-content; padding:10px 34px; border:12px solid #E8423A; border-radius:18px;
+          color:#E8423A; background:rgba(255,255,255,.9); font-weight:800; font-size:80px; transform:rotate(-9deg); opacity:0; }
+"""
+
+
+def afis_html(place="İNGİLTERE · 2007", top="Diş hekimlerinin", big="%80+", bot="bizi öneriyor", stamp="YANILTICI"):
+    return (f'<div id="uk">{place}</div><div class="poster" id="post"><div class="pt">{top}<b>{big}</b>{bot}</div>'
+            f'<svg viewBox="-80 -330 160 340" width="200" height="425">{brand_tube("?")}</svg></div>'
+            f'<div class="stamp3" id="ast">{stamp}</div>')
+
+
+def afis_js(t0, t_stamp=None, push=1.06):
+    js = (pop_js("#uk", t0) + f'tl.fromTo("#post",{{y:120,rotation:-3,opacity:0}},{{y:0,rotation:0,opacity:1,duration:.5,ease:"power3.out",immediateRender:false}},{t0:.2f});tl.set("#post",{{opacity:0}},0);'
+          f'tl.fromTo("#post",{{scale:1}},{{scale:{push},duration:3,ease:"none",immediateRender:false}},{t0 + .5:.2f});')
+    if t_stamp:
+        js += (f'tl.fromTo("#ast",{{scale:2.8,opacity:0}},{{scale:1,opacity:1,duration:.2,ease:"power4.in",immediateRender:false}},{t_stamp:.2f});tl.set("#ast",{{opacity:0}},0);'
+               f'tl.to("#post",{{x:12,duration:.04,yoyo:true,repeat:5}},{t_stamp + .2:.2f});')
+    return js
+
+
+# ---------------- KAPSAM: hassasiyet önerisi beyazlatma tüpüne taşınır ----------------
+KAPSAM_CSS = """
+.kt { position:absolute; top:1180px; width:360px; text-align:center; font-weight:800; font-size:40px; color:#fff; text-shadow:0 4px 0 #000; }
+#badge { position:absolute; left:175px; top:640px; width:230px; height:230px; border-radius:50%; background:#FFD23F; border:7px solid #1B1414; box-shadow:0 10px 0 rgba(0,0,0,.5);
+         display:flex; align-items:center; justify-content:center; text-align:center; font-weight:800; font-size:34px; line-height:1.05; color:#1B1414; opacity:0; z-index:3; }
+.stamp4 { position:absolute; left:500px; top:900px; padding:8px 26px; border:10px solid #E8423A; border-radius:16px; color:#E8423A; background:rgba(255,255,255,.9);
+          font-weight:800; font-size:58px; transform:rotate(-8deg); opacity:0; z-index:4; }
+"""
+
+
+def kapsam_html(b1="HASSASİYET", b2="BEYAZLATMA", badge="DİŞ HEKİMİ<br>ÖNERİSİ", stamp="DURDURULDU"):
+    t1 = brand_tube("SENSODAYN").replace(">SENSODAYN<", f">{b1}<")
+    t2 = paste_tube_white(b2)
+    return (f'<svg class="fill" viewBox="0 0 1080 1920"><g id="kt1"><g transform="translate(290 1140) scale(2.1)">{t1}</g></g><g id="kt2"><g transform="translate(790 1140) scale(2.1)">{t2}</g></g></svg>'
+            f'<div class="kt" style="left:110px" id="kl1">hekimlerin önerdiği</div><div class="kt" style="left:610px" id="kl2">reklamı yapılan</div>'
+            f'<div id="badge">{badge}</div><div class="stamp4" id="kst4">{stamp}</div>')
+
+
+def paste_tube_white(label):
+    from dentart import paste_tube
+    return paste_tube(label, "#F4F6F8", 120, 300, "#5AB8FF")
+
+
+def kapsam_js(t0, t_move, t_stamp):
+    return (f'tl.fromTo("#kt1,#kt2",{{y:200,opacity:0}},{{y:0,opacity:1,duration:.45,stagger:.15,ease:"back.out(1.8)",immediateRender:false}},{t0:.2f});tl.set("#kt1,#kt2",{{opacity:0}},0);'
+            + pop_js("#kl1", t0 + .3) + pop_js("#badge", t0 + .5, .2, .4) + pop_js("#kl2", t_move - .2)
+            + f'tl.to("#badge",{{x:500,rotation:360,duration:.7,ease:"power2.inOut"}},{t_move:.2f});'
+            f'tl.fromTo("#kst4",{{scale:2.6,opacity:0}},{{scale:1,opacity:1,duration:.2,ease:"power4.in",immediateRender:false}},{t_stamp:.2f});tl.set("#kst4",{{opacity:0}},0);')
+
+
+# ---------------- FLORÜR: ağız içi dalış, mine parlar ----------------
+FLOR_CSS = """
+.fl { position:absolute; left:0; right:0; margin:0 auto; width:fit-content; padding:14px 28px; border-radius:20px; font-weight:800; font-size:52px; background:#fff; color:#141414;
+      border:5px solid #1B1414; box-shadow:0 10px 0 rgba(0,0,0,.5); opacity:0; }
+.fl b { color:#1E8FE0; }
+"""
+
+
+def florur_html(cam, labels=(("fl1", "<b>1000–1500</b> ppm florür", 260), ("fl2", "günde <b>2</b> kez", 1180), ("fl3", "tükür, <b>çalkalama</b>", 1180))):
+    from dentart import mouth_corridor
+    sc = mouth_corridor(cam, sid="flm")
+    bg = ('<svg class="fill" viewBox="0 0 1080 1920"><defs><linearGradient id="pal" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3A0E18"/>'
+          '<stop offset=".3" stop-color="#9A3A4A"/><stop offset=".42" stop-color="#7A2A3A"/></linearGradient></defs><rect width="1080" height="1920" fill="url(#pal)"/></svg>')
+    lab = "".join(f'<div class="fl" id="{i}" style="top:{y}px">{t}</div>' for i, t, y in labels)
+    return sc, bg + sc.svg() + lab
+
+
+def florur_js(sc, t0, dur, t_glow, t_labels):
+    js = sc.js() + "window.PROJ_flm();" + sc.camera_js(t0, dur, dz=1700, ease="power1.inOut")
+    js += f'tl.to("#flm .enamel",{{filter:"drop-shadow(0 0 18px #9FE4FF) brightness(1.15)",duration:.6}},{t_glow:.2f});'
+    for k, t in enumerate(t_labels):
+        js += pop_js(f"#fl{k + 1}", t)
+        if k + 1 < len(t_labels) and k > 0:
+            js += out_js(f"#fl{k + 1}", t_labels[k + 1] - .15)
+    return js
