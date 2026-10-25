@@ -179,7 +179,7 @@ def toon_figure(flip=False, pose="stand", look=(1, 0), expr=None, skin="#F2C9A0"
                 outfit="tee", jacket="#2E3440", tie="#7A1E22", hat=None, prop=None):
     """Tam boy üç-çeyrek karakter (referans stil). look=(gx,gy): göz bebeği yönü (-1..1, yüz yönüne göre).
     expr: lid (0 açık .. 1 kapalı; .45 ağır kapak), smile (-1..1), talk (0..1 ağız açık), brow (-1..1).
-    pose: stand (eller açık yanda) | talk (yakın el jest) | point | walk | hands_pockets | offer (eli ileri uzatır: prop=paper ile liste).
+    pose: stand (eller açık yanda) | talk (yakın el jest) | point | walk | hands_pockets | offer (eli ileri uzatır: prop=paper ile liste, prop="tube" ya da "tube:#renk" ile diş macunu tüpü).
     outfit: tee | suit (ceket, gömlek, kravat, deri ayakkabı) | uniform (gri subay ceketi, kemer, cepler, çizme; simgesiz) | dress (kadın elbise)
             | labcoat (diz boyu beyaz önlük, altında açık mavi forma, göğüs cebinde kalem; jacket=önlük rengi, örn. "#F4F6F8").
     hat: fedora | officer. prop: paper | suitcase."""
@@ -320,6 +320,12 @@ def toon_figure(flip=False, pose="stand", look=(1, 0), expr=None, skin="#F2C9A0"
         if prop == "paper":
             paper = ('<g transform="translate(13 -112) rotate(-8)">' + cel("M0 0 L13 0 L13 17 L0 17 Z", "#F7F2E2", "#D9D0B8", L, .8, .7)
                      + "".join(line(f"M2 {3+i*2.2:.1f} H{9+(i*3)%4}", .35, .7) for i in range(6)) + "</g>")
+        if prop and prop.startswith("tube"):
+            tc = prop.split(":")[1] if ":" in prop else "#2F7FD8"
+            paper = ('<g transform="translate(11.6 -103) rotate(-6)">' + cel("M-4.6 -2 L-4.2 -24 L4.2 -24 L4.6 -2 Z", tc, darker(tc, .75), L, 1.2, .7)
+                     + cel("M-4.4 -24 L-4.4 -26 L4.4 -26 L4.4 -24 Z", lighter(tc, .3), tc, L, .4, .5)
+                     + '<rect x="-3.4" y="-17" width="6.8" height="5" rx=".8" fill="#fff" stroke="#1B1414" stroke-width=".4"/>'
+                     + cel("M-2.4 -2 L2.4 -2 L2.4 2.4 L-2.4 2.4 Z", "#F4F1EA", "#CFCAC0", L, .3, .5) + "</g>")
         out.append(arm + nsl + cuff(8, -103.5, -95) + paper + hand(9.4, -103.4, -95, 1.0, sk, L, "hold"))
     else:
         sw = 6 if walk else 0

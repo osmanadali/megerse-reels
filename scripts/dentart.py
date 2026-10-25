@@ -1,7 +1,9 @@
 """Diş / reklam seti çizimleri (toon dili: koyu kontur + düz renk + keskin gölge).
 
 tooth(kind, h): azı ya da kesici diş, önden; taban (0,0) diş eti çizgisi, yukarı doğru kron. Sınıf .enamel (parlaklık animasyonu).
-paste_tube(label, col, w, h): diş macunu tüpü, kapak altta; taban (0,0) ortada. Marka adı yok, "MARKA A" gibi nötr etiket.
+paste_tube(label, col, w, h): diş macunu tüpü, kapak altta; taban (0,0) ortada. Gerçek marka adı YOK: BRANDS'teki taklit adlar ya da "?".
+BRANDS: taklit marka adı → (gövde, şerit) renkleri (Osman: Colgate hiç geçmez; diğerleri farklı yazılır).
+gavel(), magnifier(r), boom_mic(), clapper(), director_chair(), cable(d): mahkeme/inceleme/stüdyo parçaları (taban 0,0).
 studio_camera(), softbox(), set_flat(w, h): reklam çekim seti parçaları (taban 0,0).
 mouth_corridor(cam, sid): depth.Scene ile ağız içi: iki yanda dişler, zeminde diş eti, tavanda damak (kamera dişlerin arasından ilerler).
 """
@@ -9,6 +11,15 @@ from toon import INK, cel, darker, lighter, line
 
 ENAMEL, ENAMEL_SH = "#F7F4EC", "#D9D2C2"
 GUM, GUM_SH = "#E98A93", "#C9636E"
+
+
+BRANDS = {"NARVİS": ("#2F7FD8", "#FFFFFF"), "SENSODAYN": ("#E8577A", "#FFE3EA"), "İPENA": ("#1FA37A", "#FFFFFF"),
+          "ORAL-P": ("#1F5FB8", "#E8423A"), "SİNYAL": ("#F2F2F2", "#E8423A"), "DENTİKS": ("#7A4FD0", "#FFFFFF"), "?": ("#B9C2CC", "#FFFFFF")}
+
+
+def brand_tube(name, w=120, h=300):
+    col, st = BRANDS[name]
+    return paste_tube(name, col, w, h, st)
 
 
 def tooth(kind="molar", h=200, col=ENAMEL, glow=False):
@@ -36,7 +47,7 @@ def paste_tube(label="MARKA A", col="#2F7FD8", w=120, h=300, stripe="#FFFFFF"):
     return (cel(body, col, darker(col, .75), -1, 8, 4) + cel(crimp, lighter(col, .3), col, -1, 3, 3) + stripes
             + f'<path d="M{-hw*0.7} {-h*0.62} H{hw*0.7}" stroke="{stripe}" stroke-width="14" stroke-linecap="round"/>'
             + f'<rect x="{-hw*0.78}" y="{-h*0.5}" width="{w*0.78}" height="{h*0.2}" rx="8" fill="#fff" stroke="{INK}" stroke-width="3"/>'
-            + f'<text x="0" y="{-h*0.5 + h*0.13:.0f}" text-anchor="middle" font-family="Mont" font-weight="800" font-size="{w*0.17:.0f}" fill="{darker(col, .6)}">{label}</text>'
+            + f'<text x="0" y="{-h*0.5 + h*0.13:.0f}" text-anchor="middle" font-family="Mont" font-weight="800" font-size="{w*min(.17, 1.05/max(len(label), 1)):.0f}" fill="{darker(col, .6)}">{label}</text>'
             + cel(cap, "#F4F1EA", "#CFCAC0", -1, 4, 3))
 
 
@@ -92,3 +103,54 @@ def mouth_corridor(cam, sid="mc", n=14, gap=170, z0=260, dz=210):
                    + tooth("molar", 200) + f'<path d="M-74 4 C-60 -14 60 -14 74 4" stroke="{GUM_SH}" stroke-width="10" fill="none" stroke-linecap="round"/>')
             sc.add(side * (gap + (k % 2) * 10), z, art, 230, 150, shadow=False)
     return sc
+
+
+def gavel():
+    """yandan hakim tokmağı + ses tablası (taban 0,0). Tokmak (.gvh) vuruş anında: baş tablaya değer.
+    Kaldırmak için .gvh'yi sapın ucu (230,-79) etrafında döndür (svgOrigin "230 -79", rotation -35)."""
+    base = cel("M-110 0 L110 0 L96 -34 L-96 -34 Z", "#7A4A2A", "#5A3218", -1, 6, 4)
+    head = ('<g class="gvh">' + cel("M30 -86 L232 -86 L232 -72 L30 -72 Z", "#9A6A3A", "#6A4220", -1, 3, 3)
+            + cel("M-46 -124 L46 -124 L46 -34 L-46 -34 Z", "#8A5A2E", "#5A3218", -1, 8, 4)
+            + cel("M-50 -112 L50 -112 L50 -100 L-50 -100 Z", "#C9A46A", "#A07E48", -1, 2, 3)
+            + cel("M-50 -58 L50 -58 L50 -46 L-50 -46 Z", "#C9A46A", "#A07E48", -1, 2, 3) + "</g>")
+    return base + head
+
+
+def magnifier(r=150):
+    """büyüteç: mercek merkezi (0,0), sap sağ alta."""
+    return (f'<path d="M{r*.7:.0f} {r*.7:.0f} L{r*1.6:.0f} {r*1.6:.0f}" stroke="#1B1414" stroke-width="{r*.3:.0f}" stroke-linecap="round"/>'
+            + f'<path d="M{r*.75:.0f} {r*.75:.0f} L{r*1.55:.0f} {r*1.55:.0f}" stroke="#3A2A20" stroke-width="{r*.2:.0f}" stroke-linecap="round"/>'
+            + f'<circle r="{r}" fill="#CFEFFF" fill-opacity=".12" stroke="#1B1414" stroke-width="{r*.16:.0f}"/>'
+            + f'<circle r="{r*.92:.0f}" fill="none" stroke="#9AA6B2" stroke-width="{r*.06:.0f}"/>'
+            + f'<path d="M{-r*.55:.0f} {-r*.35:.0f} A{r*.65:.0f} {r*.65:.0f} 0 0 1 {-r*.1:.0f} {-r*.62:.0f}" stroke="#fff" stroke-width="{r*.07:.0f}" fill="none" stroke-linecap="round" opacity=".8"/>')
+
+
+def boom_mic(reach=480, h=900):
+    """direk (taban 0,0, boy h) + sola uzanan kol + aşağı bakan tüylü mikrofon (mikrofon ucu ~(-reach, -h+40))."""
+    mx, my = -reach, -h + 10
+    return (line(f"M0 0 L0 {-h} M-50 0 L0 -60 L50 0 M0 {-h} L{mx} {my}", 7, 1, "#2A2C33")
+            + f'<g transform="translate({mx} {my})">' + cel("M-26 0 C-26 -10 26 -10 26 0 L26 90 C26 104 -26 104 -26 90 Z", "#6A6E78", "#4A4E56", -1, 6, 4)
+            + "".join(line(f"M-26 {10 + k*11} l-9 3 M26 {10 + k*11} l9 3", 2, .7, "#8A8E98") for k in range(8)) + "</g>")
+
+
+def clapper():
+    """klaket (taban 0,0; ~200 geniş)."""
+    stripes = "".join(f'<path d="M{-100 + k*40} -150 L{-80 + k*40} -150 L{-100 + k*40 + 30} -190 L{-120 + k*40 + 30} -190 Z" fill="#fff"/>' for k in range(5))
+    return (cel("M-100 0 L100 0 L100 -140 L-100 -140 Z", "#1E232B", "#14181E", -1, 6, 4)
+            + '<g transform="rotate(-14 -100 -146)">' + cel("M-100 -146 L100 -146 L100 -194 L-100 -194 Z", "#1E232B", "#14181E", -1, 3, 3) + stripes + "</g>"
+            + line("M-90 -96 H90 M-90 -56 H90", 2, .7, "#9AA6B2")
+            + '<text x="-84" y="-108" font-family="Mont" font-weight="800" font-size="22" fill="#fff">SAHNE 1</text>'
+            + '<text x="-84" y="-70" font-family="Mont" font-weight="800" font-size="22" fill="#fff">ÇEKİM 9</text>')
+
+
+def director_chair(label="YÖNETMEN"):
+    """yönetmen sandalyesi (taban 0,0)."""
+    return (line("M-70 0 L60 -150 M70 0 L-60 -150", 9, 1, "#7A4A2A")
+            + cel("M-80 -150 L80 -150 L80 -120 L-80 -120 Z", "#1E232B", "#14181E", -1, 3, 3)
+            + line("M-70 -150 L-70 -260 M70 -150 L70 -260", 9, 1, "#7A4A2A")
+            + cel("M-80 -260 L80 -260 L80 -205 L-80 -205 Z", "#1E232B", "#14181E", -1, 3, 3)
+            + f'<text x="0" y="-222" text-anchor="middle" font-family="Mont" font-weight="800" font-size="24" fill="#FFD23F">{label}</text>')
+
+
+def cable(d, w=7):
+    return f'<path d="{d}" stroke="#0B0D12" stroke-width="{w}" fill="none" stroke-linecap="round"/>'
