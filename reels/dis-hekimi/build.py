@@ -92,7 +92,7 @@ SFX += intro_sfx(s("intro"))
 
 # 3) AFİŞ: İngiltere 2007, "%80+"
 afis = S.afis_html()
-JS.append(S.afis_js(s("afis")))
+JS.append(S.afis_js(s("afis"), t_count=A("yüzde sekseninden")))
 
 # 4) ANKET: çoklu seçim → iki çubuk neredeyse eşit → YANILTICI
 anket = (S.anket_html(note="(birden fazla marka söyleyebilirsiniz)") + '<div class="stamp3" id="ast2" style="top:1060px">YANILTICI</div>'

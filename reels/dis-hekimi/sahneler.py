@@ -285,14 +285,14 @@ AFIS_CSS = """
 """
 
 
-def afis_html(place="İNGİLTERE · 2007", top="Diş hekimlerinin", big="%80+", bot="bizi öneriyor", stamp="YANILTICI"):
+def afis_html(place="İNGİLTERE · 2007", top="Diş hekimlerinin", big="%<span id=\"afn\">80</span>+", bot="bizi öneriyor", stamp="YANILTICI"):
     return (f'<div id="uk">{place}</div><div class="poster" id="post"><div class="pt">{top}<b>{big}</b>{bot}</div>'
             f'<svg viewBox="-80 -330 160 340" width="200" height="425">{brand_tube("?")}</svg></div>'
             f'<div class="stamp3" id="ast">{stamp}</div>')
 
 
-def afis_js(t0, t_stamp=None, push=1.06):
-    js = (pop_js("#uk", t0) + f'tl.fromTo("#post",{{y:120,rotation:-3,opacity:0}},{{y:0,rotation:0,opacity:1,duration:.5,ease:"power3.out",immediateRender:false}},{t0:.2f});tl.set("#post",{{opacity:0}},0);'
+def afis_js(t0, t_stamp=None, push=1.06, t_count=None):
+    js = ((f'(function(){{const o={{v:0}};tl.set("#afn",{{textContent:"0"}},0);tl.set("#post .pt b",{{opacity:0}},0);tl.to("#post .pt b",{{opacity:1,duration:.12}},{t_count:.2f});tl.to(o,{{v:80,duration:.9,ease:"power2.out",onUpdate:()=>{{document.getElementById("afn").textContent=Math.round(o.v);}}}},{t_count:.2f});}})();' if t_count else "") +pop_js("#uk", t0) + f'tl.fromTo("#post",{{y:120,rotation:-3,opacity:0}},{{y:0,rotation:0,opacity:1,duration:.5,ease:"power3.out",immediateRender:false}},{t0:.2f});tl.set("#post",{{opacity:0}},0);'
           f'tl.fromTo("#post",{{scale:1}},{{scale:{push},duration:3,ease:"none",immediateRender:false}},{t0 + .5:.2f});')
     if t_stamp:
         js += (f'tl.fromTo("#ast",{{scale:2.8,opacity:0}},{{scale:1,opacity:1,duration:.2,ease:"power4.in",immediateRender:false}},{t_stamp:.2f});tl.set("#ast",{{opacity:0}},0);'
@@ -361,12 +361,12 @@ def florur_js(sc, t0, dur, t_glow, t_labels):
 MEG_CSS = """
 .megt { position:absolute; left:0; right:0; top:640px; text-align:center; font-weight:800; font-size:190px; color:#FFD23F; -webkit-text-stroke:7px #000; paint-order:stroke fill;
         text-shadow:0 12px 0 #000; opacity:0; z-index:5; }
-#mban { position:absolute; left:110px; right:110px; top:430px; padding:18px 10px; border-radius:26px; text-align:center; font-weight:800; font-size:54px; line-height:1.05;
+#mban { position:absolute; left:110px; right:110px; top:560px; padding:18px 10px; border-radius:26px; text-align:center; font-weight:800; font-size:54px; line-height:1.05;
         color:#fff; background:rgba(16,40,96,.92); border:5px solid #fff; box-shadow:0 12px 0 rgba(0,0,0,.45); opacity:0; }
 #mban b { color:#FFD23F; font-size:96px; }
 .mp { position:absolute; left:0; right:0; margin:0 auto; width:fit-content; max-width:860px; padding:16px 30px; border-radius:22px; text-align:center; font-weight:800; font-size:50px;
       line-height:1.1; border:5px solid #1B1414; box-shadow:0 10px 0 rgba(0,0,0,.5); opacity:0; }
-#mp1 { top:760px; background:#FF5A4E; color:#fff; } #mp2 { top:930px; background:#FFD23F; color:#141414; }
+#mp1 { top:880px; background:#FF5A4E; color:#fff; } #mp2 { top:1040px; background:#FFD23F; color:#141414; }
 #mp1 s { text-decoration-thickness:6px; }
 """
 
@@ -388,7 +388,7 @@ def meg_html(brands=("NARVİS", "SENSODAYN", "İPENA", "ORAL-P", "SİNYAL")):
 
 def meg_js(t0, t_ban, t_p1, t_p2, t_tubes, t_flip, n=5):
     js = (f'tl.fromTo("#megt",{{scale:3,opacity:0}},{{scale:1,opacity:1,duration:.3,ease:"power3.out",immediateRender:false}},{t0 + .05:.2f});tl.set("#megt",{{opacity:0}},0);'
-          f'tl.to("#megt",{{y:-440,scale:.6,duration:.5,ease:"power2.inOut"}},{t_ban - .1:.2f});'
+          f'tl.to("#megt",{{y:-330,scale:.68,duration:.5,ease:"power2.inOut"}},{t_ban - .1:.2f});'
           + pop_js("#mban", t_ban, .7, .35) + pop_js("#mp1", t_p1) + pop_js("#mp2", t_p2)
           + f'tl.to("#mban,#mp1,#mp2",{{y:-60,opacity:0,duration:.3,stagger:.05}},{t_tubes - .2:.2f});'
           f'tl.fromTo(".mt",{{y:500,opacity:0}},{{y:0,opacity:1,duration:.5,stagger:.08,ease:"back.out(1.6)",immediateRender:false}},{t_tubes:.2f});tl.set(".mt",{{y:500,opacity:0}},0);')
