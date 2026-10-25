@@ -1,7 +1,7 @@
 {
   "version": 1,
   "historyId": "0e987ff4-b9b0-4d04-ba27-c8d3529849a2",
-  "currentRevision": "156ed805-39e1-4b52-9c17-a3f3d710423d",
+  "currentRevision": "3c26d414-be4c-4f1a-89a5-24cb5a2ae327",
   "pendingChanges": false,
   "files": {
     "AGENTS.md": {
@@ -77,8 +77,8 @@
       "content": "/root/.cache/hyperframes/history/0e987ff4-b9b0-4d04-ba27-c8d3529849a2/blobs/6c/6c9565cd3e85314ad3a64bf79a16aee0c16f39003588ffee6ef7eba7726a746e"
     },
     "index.html": {
-      "hash": "d951aaaad99aa284d09708e98ef88af02073a06f7859ecf28e9fa7f7875c5e1d",
-      "content": "/root/.cache/hyperframes/history/0e987ff4-b9b0-4d04-ba27-c8d3529849a2/blobs/d9/d951aaaad99aa284d09708e98ef88af02073a06f7859ecf28e9fa7f7875c5e1d"
+      "hash": "fb8da460e9c32ceed0af5b9bb439da572b3d6f0d053522ca2c037ba27d678691",
+      "content": "/root/.cache/hyperframes/history/0e987ff4-b9b0-4d04-ba27-c8d3529849a2/blobs/fb/fb8da460e9c32ceed0af5b9bb439da572b3d6f0d053522ca2c037ba27d678691"
     },
     "meta.json": {
       "hash": "f16d4c7a86701bea500c9ec8b8114e3e2ad5c4cc395208cc3e672dac3a861ded",
@@ -1564,6 +1564,21 @@
         "index.html": {
           "before": "/root/.cache/hyperframes/history/0e987ff4-b9b0-4d04-ba27-c8d3529849a2/blobs/97/9777732f2d95b878e4d625ad7e28d00b38440036be3e2a22a09cfc61f28a4a94",
           "after": "/root/.cache/hyperframes/history/0e987ff4-b9b0-4d04-ba27-c8d3529849a2/blobs/d9/d951aaaad99aa284d09708e98ef88af02073a06f7859ecf28e9fa7f7875c5e1d"
+        }
+      }
+    },
+    "3c26d414-be4c-4f1a-89a5-24cb5a2ae327": {
+      "actor": {
+        "kind": "outside",
+        "name": "Outside"
+      },
+      "label": "Changed outside the app",
+      "startedAt": 1792909922040,
+      "endedAt": 1792909922041,
+      "files": {
+        "index.html": {
+          "before": "/root/.cache/hyperframes/history/0e987ff4-b9b0-4d04-ba27-c8d3529849a2/blobs/d9/d951aaaad99aa284d09708e98ef88af02073a06f7859ecf28e9fa7f7875c5e1d",
+          "after": "/root/.cache/hyperframes/history/0e987ff4-b9b0-4d04-ba27-c8d3529849a2/blobs/fb/fb8da460e9c32ceed0af5b9bb439da572b3d6f0d053522ca2c037ba27d678691"
         }
       }
     }
@@ -8335,15 +8350,15 @@
   },
   "renders": {
     "latest": {
-      "id": "577ede2a-5051-4727-83e3-810e0c618deb",
-      "completedAt": 1792909699187,
+      "id": "d274b8d0-7cce-4b21-b72b-2a8134477cb2",
+      "completedAt": 1792910249425,
       "output": "/home/user/megerse-reels/hf/renders/otoyol.mp4",
       "status": "completed",
-      "revision": "156ed805-39e1-4b52-9c17-a3f3d710423d"
+      "revision": "3c26d414-be4c-4f1a-89a5-24cb5a2ae327"
     },
     "retainedRevisions": [
-      "156ed805-39e1-4b52-9c17-a3f3d710423d",
-      "58a91592-609f-4346-be83-cf86b9c52b4b"
+      "3c26d414-be4c-4f1a-89a5-24cb5a2ae327",
+      "156ed805-39e1-4b52-9c17-a3f3d710423d"
     ]
   },
   "pendingArtifactCleanup": []
