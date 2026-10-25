@@ -117,7 +117,7 @@ TUR_CSS = """
 .turl { position:absolute; top:250px; width:270px; text-align:center; font-weight:800; font-size:34px; line-height:1.1; color:#fff; text-shadow:0 4px 0 #000; opacity:0; }
 .turl b { display:block; font-size:44px; color:#FFD23F; white-space:nowrap; }
 """
-TUR = [("OTOYOL", 600, 900, "6 + 9 m"), ("ŞEHİR DIŞI", 450, 750, "4,5 + 7,5 m"), ("ŞEHİR İÇİ", 300, 300, "3 + 3 m")]
+TUR = [("OTOYOL", 600, 900, "6 + 9 m"), ("DEVLET YOLU", 450, 750, "4,5 + 7,5 m"), ("ŞEHİR İÇİ", 300, 300, "3 + 3 m")]
 
 
 def turler_html(scale=.36, top=420, bottom=1400, travel=4400, tur=TUR):

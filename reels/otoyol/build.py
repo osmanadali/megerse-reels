@@ -57,8 +57,8 @@ CTA_JS, OUTRO_T, LAND_T = share_cta_js(T_CTA + LAG["cta"] + .2, T_GO)
 TOTAL = round(OUTRO_T + OUTRO_DUR, 2)
 VOICE_END = round(words[-1]["endMs"] / 1000 + .3, 2)
 
-T = {"hook": 0.0, "intro": INTRO_T, "tahmin": A("Amerika'da üç"), "yolcu": A("Arabada yolcu"), "kgm": A("Karayolları"), "hiz": A("Yani yüz"),
-     "ulke": A("Altı metre, Amerika'da"), "turler": A("Çizgi şehir"), "sis": A("Şehir dışı yolların"), "kure": A("Gece parlamayı"),
+T = {"hook": 0.0, "intro": INTRO_T, "tahmin": A("Amerika'da üç"), "yolcu": A("Aynı çalışmada"), "kgm": A("Karayolları"), "hiz": A("Yüz yirmiyle"),
+     "ulke": A("Altı metre, Amerika'da"), "turler": A("Çizgi devlet"), "sis": A("Şehir dışı devlet"), "kure": A("Gece parlamayı"),
      "meg": A("Meğerse"), "cta": T_CTA, "outro": OUTRO_T}
 R = dict(T)
 T = {k: round(v + LAG.get(k, 0), 2) for k, v in T.items()}
@@ -108,8 +108,8 @@ JS.append(S.kiyas_js(s("tahmin"), A("altmış"), A("Oysa"), idp="ta", dur=end("t
 SFX += [(A("Oysa") + .1, "pop", .3)]
 
 # 4) YOLCU: 3,05 m çizgiye 1,19 m; hız 40 → 97, tahmin değişmez
-yolcu = S.kiyas_html(305, 119, "3,05 m", "TAHMİN\n1,19 m", "ARABADAKİ YOLCULAR", idp="yo", speed=True)
-JS.append(S.kiyas_js(s("yolcu"), A("ortalama", s("yolcu")), A("üç metrelik"), idp="yo", t_speed=(A("hız da"), A("değiştirmedi") + .5), dur=end("yolcu") - s("yolcu")))
+yolcu = S.kiyas_html(305, 119, "3,05 m", "TAHMİN\n1,19 m", "ABD · ARABADAKİ YOLCULAR", idp="yo", speed=True)
+JS.append(S.kiyas_js(s("yolcu"), A("ortalama", s("yolcu")), A("üç metrelik"), idp="yo", t_speed=(A("hızın da"), A("çıkmadı") + .5), dur=end("yolcu") - s("yolcu")))
 
 # 5) KGM: kuş bakışı, drone iner, 6 m / 9 m bantları, 15 cm
 kgm = (S.olcek_html() + tag("ktg", "KARAYOLLARI GENEL MÜDÜRLÜĞÜ STANDARDI", TOP, "dark", "font-size:32px")
@@ -136,7 +136,7 @@ JS.append(S.turler_js(u0, round(u1 - u0 + X, 2), (u0 + .1, A("dört buçuk", R["
 
 # 9) SİS: şehir dışı yolların sisli kesimi, 9 m çizgi / 3 m boşluk
 sc_f = S.pov_scene(camf, "pf", 900, 300)
-sis = S.pov_html(sc_f, "sis", fog=True, hud='<div class="pill dark2" id="sf1" style="top:250px"><b>9 m</b> çizgi · <b>3 m</b> boşluk</div>') + tag("sft", "ŞEHİR DIŞI · SİSLİ KESİM", 1250, "dark")
+sis = S.pov_html(sc_f, "sis", fog=True, hud='<div class="pill dark2" id="sf1" style="top:250px"><b>9 m</b> çizgi · <b>3 m</b> boşluk</div>') + tag("sft", "DEVLET YOLU · SİSLİ KESİM", 1250, "dark")
 f0, f1 = s("sis"), end("sis")
 JS.append(S.pov_js(sc_f, "pf", f0, round(f1 - f0 + X, 2), speed_kmh=60) + pop("#sft", f0 + .2) + pop("#sf1", A("dokuz metre", R["sis"])))
 
