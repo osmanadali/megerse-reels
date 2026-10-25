@@ -160,7 +160,7 @@ YUZ_CSS = """
 #medal { position:absolute; left:0; right:0; margin:0 auto; top:240px; width:250px; height:250px; border-radius:50%; background:radial-gradient(circle at 35% 30%,#FFE680,#E8B020);
          border:9px solid #1B1414; box-shadow:0 12px 0 rgba(0,0,0,.5); text-align:center; font-weight:800; font-size:120px; line-height:232px; color:#1B1414; opacity:0; }
 #medal small { position:absolute; left:-120px; right:-120px; top:262px; white-space:nowrap; font-size:34px; line-height:1; color:#FFD23F; text-shadow:0 4px 0 #000; }
-#pct { position:absolute; left:0; right:0; top:1215px; text-align:center; font-weight:800; font-size:76px; color:#fff; text-shadow:0 6px 0 #000; opacity:0; }
+#pct { position:absolute; left:0; right:0; margin:0 auto; width:fit-content; padding:4px 34px 10px; border-radius:30px; background:rgba(8,12,20,.86); top:1215px; text-align:center; font-weight:800; font-size:76px; color:#fff; text-shadow:0 6px 0 #000; opacity:0; }
 #pct b { color:#FFD23F; font-size:120px; }
 """
 
@@ -337,4 +337,89 @@ def florur_js(sc, t0, dur, t_glow, t_labels):
         js += pop_js(f"#fl{k + 1}", t)
         if k + 1 < len(t_labels) and k > 0:
             js += out_js(f"#fl{k + 1}", t_labels[k + 1] - .15)
+    return js
+
+
+# ---------------- MEĞERSE: reklam cümlesinin gerçek anlamı → tüpler FLORÜR olur ----------------
+MEG_CSS = """
+.megt { position:absolute; left:0; right:0; top:640px; text-align:center; font-weight:800; font-size:190px; color:#FFD23F; -webkit-text-stroke:7px #000; paint-order:stroke fill;
+        text-shadow:0 12px 0 #000; opacity:0; z-index:5; }
+#mban { position:absolute; left:110px; right:110px; top:430px; padding:18px 10px; border-radius:26px; text-align:center; font-weight:800; font-size:54px; line-height:1.05;
+        color:#fff; background:rgba(16,40,96,.92); border:5px solid #fff; box-shadow:0 12px 0 rgba(0,0,0,.45); opacity:0; }
+#mban b { color:#FFD23F; font-size:96px; }
+.mp { position:absolute; left:0; right:0; margin:0 auto; width:fit-content; max-width:860px; padding:16px 30px; border-radius:22px; text-align:center; font-weight:800; font-size:50px;
+      line-height:1.1; border:5px solid #1B1414; box-shadow:0 10px 0 rgba(0,0,0,.5); opacity:0; }
+#mp1 { top:760px; background:#FF5A4E; color:#fff; } #mp2 { top:930px; background:#FFD23F; color:#141414; }
+#mp1 s { text-decoration-thickness:6px; }
+"""
+
+
+def meg_html(brands=("NARVİS", "SENSODAYN", "İPENA", "ORAL-P", "SİNYAL")):
+    from dentart import paste_tube
+    tubes = []
+    for i, n in enumerate(brands):
+        x = 160 + i * 190
+        from dentart import BRANDS
+        col, st = BRANDS[n]
+        tubes.append(f'<g class="mt" id="mt{i}"><g transform="translate({x} 1390) scale(1.05)">'
+                     f'<g class="mta" id="mta{i}">{brand_tube(n)}</g><g class="mtb" id="mtb{i}" opacity="0">{paste_tube("FLORÜR", col, 120, 300, st)}</g></g></g>')
+    return ('<div class="megt" id="megt">MEĞERSE</div>'
+            '<div id="mban">10 DİŞ HEKİMİNDEN <b>9\'U</b><br>ÖNERİYOR*</div>'
+            '<div class="mp" id="mp1">≠ “EN İYİSİ BU”</div><div class="mp" id="mp2">= “ÖNERDİĞİM<br>MARKALARDAN BİRİ”</div>'
+            f'<svg class="fill" viewBox="0 0 1080 1920" style="overflow:visible">{"".join(tubes)}</svg>')
+
+
+def meg_js(t0, t_ban, t_p1, t_p2, t_tubes, t_flip, n=5):
+    js = (f'tl.fromTo("#megt",{{scale:3,opacity:0}},{{scale:1,opacity:1,duration:.3,ease:"power3.out",immediateRender:false}},{t0 + .05:.2f});tl.set("#megt",{{opacity:0}},0);'
+          f'tl.to("#megt",{{y:-440,scale:.6,duration:.5,ease:"power2.inOut"}},{t_ban - .1:.2f});'
+          + pop_js("#mban", t_ban, .7, .35) + pop_js("#mp1", t_p1) + pop_js("#mp2", t_p2)
+          + f'tl.to("#mban,#mp1,#mp2",{{y:-60,opacity:0,duration:.3,stagger:.05}},{t_tubes - .2:.2f});'
+          f'tl.fromTo(".mt",{{y:500}},{{y:0,duration:.5,stagger:.08,ease:"back.out(1.6)",immediateRender:false}},{t_tubes:.2f});tl.set(".mt",{{y:500}},0);')
+    for i in range(n):
+        tf = t_flip + i * .1
+        js += (f'tl.to("#mta{i}",{{scaleX:0,svgOrigin:"0 -150",duration:.14,ease:"power2.in"}},{tf:.2f});'
+               f'tl.set("#mtb{i}",{{opacity:1,scaleX:0,svgOrigin:"0 -150"}},{tf + .14:.2f});tl.to("#mtb{i}",{{scaleX:1,svgOrigin:"0 -150",duration:.16,ease:"power2.out"}},{tf + .14:.2f});')
+    js += f'tl.to(".mtb",{{filter:"drop-shadow(0 0 22px #9FE4FF)",duration:.5}},{t_flip + .7:.2f});'
+    return js
+
+
+# ---------------- KALABALIK: 100 hekim derinlikte, kamera yükselir, 22'si yanar ----------------
+def _crowd_doc(i, lit=False, rnd=None):
+    skins = ("#F2C9A0", "#E8B98C", "#C98B63", "#D9A577")
+    hairs = ("#16110F", "#3A2416", "#6A4A2A", "#8A8A8A")
+    sk, hr = skins[i % 4], hairs[(i * 7) % 4]
+    coat, sh = ("#FFD23F", "#C99A10") if lit else ("#F4F6F8", "#C9CED4")
+    long_h = i % 3 == 1
+    hair = (f'<path d="M-16 -150 C-18 -170 18 -170 16 -150 L18 -128 C14 -140 -14 -140 -18 -128 Z" fill="{hr}"/>' if not long_h else
+            f'<path d="M-17 -150 C-19 -172 19 -172 17 -150 L19 -112 L12 -112 L12 -136 C6 -142 -6 -142 -12 -136 L-12 -112 L-19 -112 Z" fill="{hr}"/>')
+    return (f'<path d="M-9 -4 L-9 -46 M9 -4 L9 -46" stroke="#2E3440" stroke-width="10"/>'
+            f'<path d="M-26 -50 C-28 -80 -26 -110 -16 -120 L16 -120 C26 -110 28 -80 26 -50 Z" fill="{coat}" stroke="#1B1414" stroke-width="3.5"/>'
+            f'<path d="M4 -120 C14 -100 18 -80 20 -52" stroke="{sh}" stroke-width="7" fill="none"/>'
+            f'<path d="M-5 -120 L0 -106 L5 -120 Z" fill="#8FC8E8"/>'
+            f'<circle cx="0" cy="-140" r="16" fill="{sk}" stroke="#1B1414" stroke-width="3.5"/>{hair}'
+            f'<circle cx="-6" cy="-139" r="2.6" fill="#1B1414"/><circle cx="6" cy="-139" r="2.6" fill="#1B1414"/><path d="M-5 -131 Q0 -127 5 -131" stroke="#1B1414" stroke-width="2" fill="none"/>'
+            f'<ellipse cx="-9" cy="-1" rx="9" ry="4" fill="#E8ECEF" stroke="#1B1414" stroke-width="2"/><ellipse cx="9" cy="-1" rx="9" ry="4" fill="#E8ECEF" stroke="#1B1414" stroke-width="2"/>')
+
+
+CROWD_LIT = sorted(__import__("random").Random(22).sample(range(100), 22))
+
+
+def crowd_html(cam, sid="cr"):
+    from depth import Scene
+    sc = Scene(cam, sid, ground=("#1A2230", "#2A3446"), sky=False)
+    for i in range(100):
+        r, c = divmod(i, 10)
+        x, z = -810 + c * 180 + (r % 2) * 40, 520 + r * 190
+        lit = (f'<g class="crl" id="crl{i}" opacity="0"><ellipse cx="0" cy="-80" rx="60" ry="110" fill="#FFE680" opacity=".45" filter="url(#glow)"/>{_crowd_doc(i, True)}</g>'
+               if i in CROWD_LIT else "")
+        sc.add(x, z, f'<g>{_crowd_doc(i)}</g>{lit}', 175, 175, w=50)
+    bg = '<div class="fill" style="background:linear-gradient(180deg,#05070C 0%,#0E1522 40%,#1A2230 42%)"></div>'
+    return sc, bg + sc.svg()
+
+
+def crowd_js(sc, t0, dur, t_lit, sid="cr"):
+    js = sc.js() + f"window.PROJ_{sid}();" + sc.camera_js(t0, dur, dz=300, dy=220, ease="power1.inOut")
+    for k, i in enumerate(CROWD_LIT):
+        js += f'tl.to("#crl{i}",{{opacity:1,duration:.15}},{t_lit + k * .05:.2f});'
+    js += f'tl.to("#{sid} .crl",{{opacity:1,duration:.01}},{t_lit + 22 * .05 + .2:.2f});'
     return js
