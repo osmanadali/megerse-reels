@@ -136,7 +136,11 @@ def anket_html(question="Hastalarınıza hangi diş macunlarını önerirsiniz?"
         icon = f'<svg viewBox="-70 -320 140 330" width="44" height="104">{brand_tube(n)}</svg>'
         name = "BİR DEV MARKA" if n == "?" else n
         rows.append(f'<div class="arow" style="top:{270 + i * 100}px">{icon}<span>{name}</span><div class="abox"><i id="atk{i}">✓</i></div></div>')
-    return (f'<div class="clip2" id="aclip"><div class="aq">{question}<small id="anote">{note}</small></div>{"".join(rows)}</div>'
+    pen = ('<svg id="apen" viewBox="0 0 60 260" width="60" height="260" style="position:absolute;left:0;top:0;width:60px;height:260px;opacity:0;z-index:6;transform-origin:8px 252px">'
+           '<path d="M8 252 L2 220 L22 214 Z" fill="#F2D2B6" stroke="#1B1414" stroke-width="4" stroke-linejoin="round"/><path d="M4 236 L10 252" stroke="#1B1414" stroke-width="5"/>'
+           '<path d="M2 220 L40 40 L60 46 L22 214 Z" fill="#2F7FD8" stroke="#1B1414" stroke-width="5" stroke-linejoin="round"/>'
+           '<path d="M40 40 L46 10 L66 16 L60 46 Z" fill="#E8423A" stroke="#1B1414" stroke-width="5"/></svg>')
+    return (pen + f'<div class="clip2" id="aclip"><div class="aq">{question}<small id="anote">{note}</small></div>{"".join(rows)}</div>'
             '<div class="bar" id="bar0" style="left:250px;height:0;background:#B9C2CC"></div><div class="bar" id="bar1" style="left:610px;height:0;background:#E8577A"></div>'
             '<div class="bval" id="bv0" style="left:210px;top:0">%80+<small>BİR DEV MARKA</small></div>'
             '<div class="bval" id="bv1" style="left:570px;top:0">≈<small>BİR RAKİP</small></div>')
@@ -146,11 +150,18 @@ def anket_js(t0, t_note, t_ticks, t_bars, h0=470, h1=440, ticks=(0, 1, 2, 3, 4))
     """t_ticks: ilk işaret (her biri .22 sn arayla); t_bars: form yukarı kayıp küçülür, iki çubuk neredeyse aynı boya çıkar."""
     js = [pop_js("#aclip", t0, .7, .35),
           f'tl.to("#anote",{{backgroundColor:"#FFD23F",color:"#141414",scale:1.12,duration:.25,ease:"back.out(2)"}},{t_note:.2f});']
+    # kalem: kutuların üstüne gelir, her kutuda tık atar (kutu merkezi: x≈130+60+..., sayfa koordinatı)
+    bx = 1080 - 130 - 7 - 60 - 36
+    js.append(f'tl.fromTo("#apen",{{x:1100,y:1500,opacity:0,rotation:20}},{{x:{bx - 8},y:{330 + 7 + 270 + 12 + 36 - 252},opacity:1,rotation:22,duration:.35,ease:"power2.out",immediateRender:false}},{t_ticks - .35:.2f});tl.set("#apen",{{opacity:0}},0);')
     for k, i in enumerate(ticks):
-        js.append(pop_js(f"#atk{i}", t_ticks + k * .22, 2.2, .22))
+        tk = t_ticks + k * .22
+        y = 330 + 7 + 270 + i * 100 + 12 + 36 - 252
+        js.append(f'tl.to("#apen",{{x:{bx - 8},y:{y},duration:.12,ease:"power2.inOut"}},{tk - .12:.2f});tl.to("#apen",{{rotation:10,duration:.06,yoyo:true,repeat:1}},{tk:.2f});')
+        js.append(pop_js(f"#atk{i}", tk, 2.2, .22))
+    js.append(f'tl.to("#apen",{{x:1150,y:1700,opacity:0,duration:.35,ease:"power2.in"}},{t_ticks + len(ticks) * .22 + .1:.2f});')
     js.append(f'tl.to("#aclip",{{y:-110,scale:.58,transformOrigin:"50% 0%",duration:.45,ease:"power2.inOut"}},{t_bars:.2f});')
     for b, (h, d) in enumerate(((h0, 0), (h1, .35))):
-        js.append(f'tl.fromTo("#bar{b}",{{height:0}},{{height:{h},duration:.8,ease:"power2.out",immediateRender:false}},{t_bars + .3 + d:.2f});tl.set("#bar{b}",{{height:0}},0);')
+        js.append(f'tl.fromTo("#bar{b}",{{height:0,opacity:1}},{{height:{h},duration:.8,ease:"power2.out",immediateRender:false}},{t_bars + .3 + d:.2f});tl.set("#bar{b}",{{height:0,opacity:0}},0);')
         js.append(f'tl.set("#bv{b}",{{top:{1920 - 560 - h - 120}}},0);' + pop_js(f"#bv{b}", t_bars + 1.0 + d))
     return "".join(js)
 
@@ -205,8 +216,14 @@ KURUL_CSS = """
 """
 
 
+COURT_BG = ('<div class="fill" style="background:linear-gradient(180deg,#2A1A10 0%,#4A2E1A 38%,#3A2414 39%,#2A1A10 100%)"></div>'
+            '<svg class="fill" viewBox="0 0 1080 1920">' + "".join(f'<rect x="{60 + k*250}" y="140" width="210" height="560" rx="10" fill="none" stroke="#6A4428" stroke-width="10"/>' for k in range(4))
+            + '<rect x="0" y="1180" width="1080" height="60" fill="#5A3A20"/><rect x="0" y="1240" width="1080" height="260" fill="#3A2414"/>'
+            + '<ellipse cx="540" cy="1150" rx="520" ry="300" fill="#FFE6B0" opacity=".08"/></svg>')
+
+
 def kurul_html(brand="SENSODAYN", claim="10 diş<br>hekiminden", big="9'u", tail="öneriyor", stamp="KANITLANAMADI", fine_note="PARA CEZASI · 2014"):
-    return (f'<div class="adcard" id="kad"><svg viewBox="-70 -320 140 330" width="190" height="440">{brand_tube(brand)}</svg>'
+    return (COURT_BG + f'<div class="adcard" id="kad"><svg viewBox="-70 -320 140 330" width="190" height="440">{brand_tube(brand)}</svg>'
             f'<div class="t">{claim}<b>{big}</b>{tail}</div></div>'
             f'<div class="stamp2" id="kst">{stamp}</div>'
             f'<svg class="fill" viewBox="0 0 1080 1920"><g id="kgv" transform="translate(470 1130) scale(1.5)">{__import__("dentart").gavel()}</g></svg>'
@@ -238,9 +255,9 @@ DIP_CSS = """
 """
 
 
-def dipnot_html(big_top="10 KİŞİDEN", big="9'U", big_bot="TAVSİYE EDİYOR", fine="*Bir ürün deneme platformunda 713 tüketiciyle yapılan anket.",
+def dipnot_html(big_top="10 KİŞİDEN", big="9'U", big_bot="TAVSİYE EDİYOR", big_size=170, fine="*Bir ürün deneme platformunda 713 tüketiciyle yapılan anket.",
                 fine_big="*Bir ürün deneme platformunda <b>713 tüketiciyle</b> yapılan anket."):
-    return (f'<div class="dcard" id="dcd"><div class="big">{big_top}<b>{big}</b>{big_bot}</div><div class="fp">{fine}</div></div>'
+    return (f'<div class="dcard" id="dcd"><div class="big">{big_top}<b style="font-size:{big_size}px">{big}</b>{big_bot}</div><div class="fp">{fine}</div></div>'
             f'<div id="lens"><div class="fp2">{fine_big}</div></div>'
             f'<svg class="fill" viewBox="0 0 1080 1920" style="overflow:visible"><g id="mag" transform="translate(-200 1300)">{__import__("dentart").magnifier(170)}</g></svg>')
 

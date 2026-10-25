@@ -117,7 +117,7 @@ JS.append(pop("#ktag", s("kurul") + .1) + S.kurul_js(s("kurul"), A("kanıtlanama
 SFX += [(A("kanıtlanamadığı"), "boom", .5)]
 
 # 7) DİPNOT: ambalajdaki "diş hekimlerinin önerdiği marka*" → büyüteç: kaç hekim? ne zaman? YAZMIYOR
-dip = S.dipnot_html(big_top="DİŞ HEKİMLERİNİN", big="ÖNERDİĞİ", big_bot="MARKA*", fine="*", fine_big="Kaç hekim? Ne zaman?<br><b>YAZMIYOR</b>") + tag("dtag2", "2025", TOP, "dark")
+dip = S.dipnot_html(big_top="DİŞ HEKİMLERİNİN", big="ÖNERDİĞİ", big_bot="MARKA*", big_size=118, fine="*", fine_big="Kaç hekim? Ne zaman?<br><b>YAZMIYOR</b>") + tag("dtag2", "2025", TOP, "dark")
 JS.append(pop("#dtag2", s("dipnot") + .1) + S.dipnot_js(s("dipnot"), A("anketin"), A("yazmıyordu")))
 
 # 8) FLORÜR: ağız içi dalış, mine parlar
