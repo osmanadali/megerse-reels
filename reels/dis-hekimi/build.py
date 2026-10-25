@@ -51,12 +51,16 @@ A = lambda p, after=0.0: anchor(words, p, after)
 # paylaşım çağrısı: düğme cümle başında, el + uçak cümle bitince → outro
 T_CTA = A("Sen de bunu")
 T_GO = round(words[-1]["endMs"] / 1000 + .15, 2)
-CTA_JS, OUTRO_T, LAND_T = share_cta_js(T_CTA + .3, T_GO)
+# J-kesme: yeni sahnenin görüntüsü anlatıcının yeni cümlesinden biraz sonra gelir; önceki sahnenin son anı (damga, sayaç) yarım kalmaz
+LAG = {"anket": .5, "dipnot": .5, "yuzde": .5, "kurul": .5, "florur": .5, "meg": 0, "cta": .3}
+CTA_JS, OUTRO_T, LAND_T = share_cta_js(T_CTA + LAG["cta"] + .2, T_GO)
 TOTAL = round(OUTRO_T + OUTRO_DUR, 2)
 VOICE_END = round(words[-1]["endMs"] / 1000 + .3, 2)
 
 T = {"hook": 0.0, "intro": INTRO_T, "afis": A("İngiltere,"), "anket": A("Ama telefon"), "dipnot": A("İki bin on altıda"), "yuzde": A("İki bin on sekizde"),
      "kurul": A("Türkiye'de"), "florur": A("Dünya Diş"), "meg": A("Meğerse"), "cta": T_CTA, "outro": OUTRO_T}
+R = dict(T)                                   # ham çapalar (anlatıcı) — A(..., after) için
+T = {k: round(v + LAG.get(k, 0), 2) for k, v in T.items()}
 keys = list(T)
 X = .3
 S_ = {k: (T[k], T[keys[i + 1]] if i + 1 < len(keys) else TOTAL) for i, k in enumerate(keys)}
@@ -83,7 +87,7 @@ pop = S.pop_js
 
 # 1) KANCA: reklam çekimi (vizör) → kamera geri çekilir, set ortaya çıkar → yıldız işareti
 hook = S.hook_html()
-JS.append(S.hook_js(0, A("gerçekten"), A("macunu")))
+JS.append(S.hook_js(0, A("gerçekten"), A("gerçekten") + .5))
 SFX += [(A("gerçekten") + .1, "whoosh", .35)]
 
 # 2) İNTRO
@@ -112,14 +116,14 @@ y0, y1 = S_["yuzde"]
 JS.append(pop("#ytag", y0 + .1) + S.crowd_js(crs, y0, round(y1 - y0 + X, 2), A("Ankette onu"))
           + pop("#medal", A("bir numaralı"), .2, .45) + f'tl.fromTo("#medal",{{rotationY:-180}},{{rotationY:0,duration:.6,ease:"back.out(1.6)",immediateRender:false}},{A("bir numaralı"):.2f});'
           + f'tl.fromTo("#ykab",{{scale:2.6,opacity:0}},{{scale:1,opacity:1,duration:.2,ease:"power4.in",immediateRender:false}},{A("kabul edildi"):.2f});tl.set("#ykab",{{opacity:0}},0);'
-          + f'tl.to("#ykab",{{opacity:0,duration:.2}},{A("Ankette") + .2:.2f});'
+          + f'tl.to("#ykab",{{opacity:0,duration:.2}},{A("yüzde yirmi") - .2:.2f});'
           + pop("#pct", A("yüzde yirmi")))
 SFX += [(A("bir numaralı") + .1, "ding", .3)]
 
 # 7) KURUL: tokmak, KANITLANAMADI, 81.554 TL
 kurul = (S.kurul_html(claim="Hassas dişler için<br>10 diş hekiminden") + tag("ktag", "TÜRKİYE · REKLAM KURULU · 2014", TOP, "dark")
          + '<div class="stamp2" id="kst2" style="top:860px;font-size:44px;transform:rotate(5deg)">ALTYAZI OKUNMUYOR</div>')
-JS.append(pop("#ktag", s("kurul") + .1) + S.kurul_js(s("kurul"), A("kanıtlanamadığı"), A("durdurdu", s("kurul")))
+JS.append(pop("#ktag", s("kurul") + .1) + S.kurul_js(s("kurul"), A("kanıtlanamadığı"), A("kanıtlanamadığı") + .6)
           + f'tl.fromTo("#kst2",{{scale:2.4,opacity:0}},{{scale:1,opacity:1,duration:.2,ease:"power4.in",immediateRender:false}},{A("altyazı"):.2f});tl.set("#kst2",{{opacity:0}},0);')
 SFX += [(A("altyazı") + .2, "pop", .3)]
 SFX += [(A("kanıtlanamadığı"), "boom", .5)]
@@ -127,8 +131,8 @@ SFX += [(A("kanıtlanamadığı"), "boom", .5)]
 # 5) DİPNOT: 2016 ara yüz fırçası "%100'ü öneriyor*" → büyüteç: fuarlarda sorulan 46 kişi → YANILTICI
 dip = (S.dipnot_html(big_top="DİŞ PROFESYONELLERİNİN", big="%100'Ü", big_bot="ÖNERİYOR*", big_size=150, top_size=64, fine="*Fuar listesinden 46 kişiye: önerir miydiniz?",
                      fine_big="*Fuar listesinden <b>46 kişiye</b><br>“önerir miydiniz?”") + tag("dtag2", "İNGİLTERE · 2016 · ARA YÜZ FIRÇASI", TOP, "dark")
-       + '<div class="stamp3" id="ast3" style="top:640px">YANILTICI</div>')
-t_yan2 = A("o da yanıltıcı")
+       + '<div class="stamp3" id="ast3" style="top:395px">YANILTICI</div>')
+t_yan2 = A("o da yanıltıcı") - .2
 JS.append(pop("#dtag2", s("dipnot") + .1) + S.dipnot_js(s("dipnot"), A("Dayanak"), A("kırk altı"))
           + f'tl.fromTo("#ast3",{{scale:2.8,opacity:0}},{{scale:1,opacity:1,duration:.2,ease:"power4.in",immediateRender:false}},{t_yan2 + .2:.2f});tl.set("#ast3",{{opacity:0}},0);')
 SFX += [(t_yan2 + .4, "boom", .3)]
@@ -139,18 +143,19 @@ sc, flor = S.florur_html(cam, (("fl1", "MARKA <b>YOK</b>", 260), ("fl2", "günde
 flor += tag("ftag", "DÜNYA DİŞ HEKİMLERİ FEDERASYONU", TOP, "dark")
 flor = flor.replace('günde <b>2</b> kez', 'günde <b>2</b> kez · yaşa uygun')
 f0, f1 = s("florur"), S_["florur"][1]
-JS.append(pop("#ftag", A("Dünya", f0)) + f'tl.to("#ftag",{{opacity:0,duration:.2}},{A("marka yok", f0) - .15:.2f});'
-          + S.florur_js(sc, f0, round(f1 - f0 + X, 2), A("florürlü", f0), (A("marka yok", f0), A("günde", f0), A("florürlü", f0))))
+fr = R["florur"]
+JS.append(pop("#ftag", f0 + .1) + f'tl.to("#ftag",{{opacity:0,duration:.2}},{A("marka yok", fr) - .15:.2f});'
+          + S.florur_js(sc, f0, round(f1 - f0 + X, 2), A("florürlü", fr), (A("marka yok", fr), A("günde", fr), A("florürlü", fr))))
 
 # 9) MEĞERSE: reklam cümlesinin anlamı → tüpler FLORÜR olur
 m0 = s("meg")
 meg = S.meg_html()
-JS.append(flash_js(m0, .9, .35) + S.meg_js(m0, A("o yüzdeler", m0), A("en iyisi", m0), A("önerdiklerimden", m0), A("Asıl", m0), A("içerikmiş", m0)))
+JS.append(flash_js(m0, .9, .35) + S.meg_js(m0, A("o yüzdeler", m0), A("en iyisi", m0), A("önerdiklerimden", m0), A("Asıl", m0), A("marka değil", m0)))
 SFX += [(m0 - 1.0, "riser", .5), (m0, "boom", .6)]
 
 # 10) ÇAĞRI: 10 hekim, 9'u söner, 10.'su parlar + GÖNDER → uçak outro'ya
 cta = S.cta_html()
-JS.append(S.cta_js(s("cta"), A("dokuzdan", s("cta")), s("cta") + .2) + CTA_JS)
+JS.append(S.cta_js(s("cta"), A("olmayan", R["cta"]), s("cta") + .2) + CTA_JS)
 SFX += share_cta_sfx(T_GO, LAND_T)
 
 # OUTRO
