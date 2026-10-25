@@ -157,18 +157,21 @@ class Scene:
             k = c.k(it["z"]) * it["s"]
             near_blur = c.focus and it["z"] < c.focus * .55
             filt = f"atm{c.band(it['z'])}" if it["focus"] and not near_blur else "dofNear"
-            parts.append(f'<g filter="url(#{filt})"><g id="{sid}-i{i}" transform="translate({sx:.1f} {sy:.1f}) scale({k:.4f})">{it["art"]}</g></g>')
+            it["dyn"] = filt != "dofNear"
+            parts.append(f'<g id="{sid}-f{i}" filter="url(#{filt})"><g id="{sid}-i{i}" transform="translate({sx:.1f} {sy:.1f}) scale({k:.4f})">{it["art"]}</g></g>')
         return f'<svg class="fill" id="{sid}" viewBox="0 0 {W} {H}" style="overflow:visible">{"".join(parts)}</svg>'
 
     def js(self):
         """Sahne verisi + izdüşüm fonksiyonu (svg()'den sonra çağır). Kamera: window.CAM_{sid} = {cx, cz, cy}."""
         c, sid = self.cam, self.sid
-        items = ",".join(f'[{it["x"]},{it["z"]},{it["y"]},{it["s"]:.5f}]' for it in self._isorted)
+        items = ",".join(f'[{it["x"]},{it["z"]},{it["y"]},{it["s"]:.5f},{int(it["dyn"])}]' for it in self._isorted)
         polys = ",".join("[" + ",".join(f"{x:.1f},{z:.1f}" for x, z in pts) + "]" for _, pts, _ in self._psorted)
         return (f'(function(){{const C={{f:{c.f},h:{c.horizon},vx:{c.vpx},e:{c.eye}}},I=[{items}],P=[{polys}];'
-                f'const cam=window.CAM_{sid}={{cx:0,cz:0,cy:0}};const ie=I.map((_,i)=>document.getElementById("{sid}-i"+i)),pe=P.map((_,i)=>document.getElementById("{sid}-p"+i));'
+                f'const cam=window.CAM_{sid}={{cx:0,cz:0,cy:0}};const ie=I.map((_,i)=>document.getElementById("{sid}-i"+i)),fe=I.map((_,i)=>document.getElementById("{sid}-f"+i)),pe=P.map((_,i)=>document.getElementById("{sid}-p"+i));'
+                f'const LF=Math.log(C.f),LZ=Math.log({c.zfar}),band=z=>Math.max(0,Math.min(5,Math.round((Math.log(Math.max(z,C.f))-LF)/(LZ-LF)*5)));'
                 f'window.PROJ_{sid}=function(){{const e=C.e+cam.cy;'
                 f'I.forEach((it,i)=>{{const z=it[1]-cam.cz;if(z<20){{ie[i].setAttribute("visibility","hidden");return;}}const k=C.f/z;'
+                f'if(it[4])fe[i].setAttribute("filter","url(#atm"+band(z)+")");'
                 f'ie[i].setAttribute("visibility","visible");ie[i].setAttribute("transform","translate("+(C.vx+(it[0]-cam.cx)*k).toFixed(1)+" "+(C.h+(e-it[2])*k).toFixed(1)+") scale("+(k*it[3]).toFixed(4)+")");}});'
                 f'P.forEach((p,i)=>{{let d="M";for(let j=0;j<p.length;j+=2){{const k=C.f/Math.max(p[j+1]-cam.cz,8);d+=(j?" L":"")+(C.vx+(p[j]-cam.cx)*k).toFixed(1)+" "+(C.h+e*k).toFixed(1);}}pe[i].setAttribute("d",d+" Z");}});}};}})();')
 

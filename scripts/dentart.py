@@ -92,18 +92,26 @@ def set_back(w=900, h=900):
             + f'<rect x="{hw*0.2}" y="{-h*0.62}" width="120" height="34" fill="#E8C94A" transform="rotate(-8 {hw*0.2} {-h*0.62})"/>')
 
 
-def mouth_corridor(cam, sid="mc", n=14, gap=170, z0=260, dz=210):
-    """ağız içi koridor: iki yanda azı dişleri, ortada boşluk; zemin diş eti, tavan damak (svg arkasında degrade ile verilir)."""
+def mouth_corridor(cam, sid="mc", n=14, gap=170, z0=260, dz=210, roof=330, upper=True):
+    """ağız içi tünel: altta ve (upper=True) üstte iki sıra azı dişi, ortada dil; zemin diş eti, tavan damak (svg arkasında degrade ile verilir).
+    Kamera göz yüksekliği ~roof/2 olmalı ki iki sıra simetrik kalsın. depth sahnesi 960×1080 viewBox'ta çizilir ve 1080×1920 sayfaya
+    1,125 ölçek + 352 px üst boşlukla oturur: sayfada y=805'e ufuk için Cam(horizon=403, vpx=480, eye=roof/2)."""
     from depth import Scene
     sc = Scene(cam, sid, ground=(GUM_SH, GUM), sky=False)
+    gum = (f'<path d="M-110 34 C-110 -6 -84 -22 0 -22 C84 -22 110 -6 110 34 Z" fill="{GUM}" stroke="{INK}" stroke-width="4"/>'
+           f'<path d="M-80 2 C-60 -12 60 -12 80 2" stroke="{GUM_SH}" stroke-width="10" fill="none" stroke-linecap="round"/>')
     for k in range(n):
         z = z0 + k * dz
         for side in (-1, 1):
-            art = (f'<path d="M-90 30 C-90 -10 -70 -24 0 -24 C70 -24 90 -10 90 30 Z" fill="{GUM}" stroke="{INK}" stroke-width="4"/>'
-                   + tooth("molar", 200) + f'<path d="M-74 4 C-60 -14 60 -14 74 4" stroke="{GUM_SH}" stroke-width="10" fill="none" stroke-linecap="round"/>')
-            sc.add(side * (gap + (k % 2) * 10), z, art, 230, 150, shadow=False)
+            x = side * (gap + (k % 2) * 12)
+            art = gum + tooth("molar", 200)
+            sc.add(x, z, art, 230, 150, shadow=False)
+            if upper:
+                sc.add(x, z + dz * .5, f'<g transform="scale(1 -1)">{art}</g>', 230, 150, shadow=False, y=roof)
+    zf = z0 + n * dz
+    sc.add_ground([(-120, z0 - 200), (120, z0 - 200), (95, zf), (-95, zf)], 'fill="#D9707E"')
+    sc.add_ground([(-6, z0 - 200), (6, z0 - 200), (4, zf), (-4, zf)], 'fill="#B85462"')
     return sc
-
 
 def gavel():
     """yandan hakim tokmağı + ses tablası (taban 0,0). Tokmak (.gvh) vuruş anında: baş tablaya değer.
