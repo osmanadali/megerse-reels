@@ -1,0 +1,895 @@
+{
+ "final": {
+  "script": "Otoyoldaki o kısacık kesik çizgi, sence kaç metre? Amerika'da üç yüz elli beş öğrenciye soruldu; ortanca tahmin altmış bir santim, oysa çizgi dört buçuk metreden uzundu. Arabadaki yolcular bile üç metrelik çizgiye ortalama bir metre on dokuz dedi; hız da fark etmedi. Karayolları Genel Müdürlüğü standardına göre otoyolda her çizgi altı metre, on beş santim genişlikte; arada dokuz metre boşluk. Yani yüz yirmiyle saniyede ikiden fazla çizgi geçersin; her biri saniyenin beşte birinden kısa sürede akıp gider. Altı metre, Amerika'da önerilen çizginin neredeyse iki, İngiltere otoyolundakinin üç katı. Çizgi şehir içinde üç metreye, şehir dışı yollarda dört buçuk metreye iniyor. Bu yolların sisli kesimlerinde ise desen tersine dönüyor: dokuz metre çizgi, yalnızca üç metre boşluk. Gece parlamayı boyaya serpilen cam küreler sağlıyor; farın ışığını sana geri yansıtıyorlar. Meğerse küçücük sandığın her çizgi, geçen yıl Türkiye'de en çok satan Clio'nun neredeyse bir buçuk katıymış; aradaki boşluğa da iki Clio sığıyormuş. Sen de bunu, uzun yolda direksiyonu kimseye bırakmayan arkadaşına gönder.",
+  "beats": [
+   {
+    "text": "Otoyoldaki o kısacık kesik çizgi, sence kaç metre?",
+    "visual": "Soğuk açılış, giriş sahnesi yok. Önce bir saniye boyunca sürücü gözünden ön camdan otoyol görünüyor, kesik çizgiler küçük çentikler gibi akıyor. Ani kesme: kamera asfaltın bir karış üstüne dalıyor ve saatte yüz yirmiyle ileri uçuyor, beyaz çizgiler hareket bulanıklığıyla 'vuş vuş' diye altından geçiyor. 'Kaç metre' sözcüğünde görüntü tek bir çizginin ön ucunda birden donuyor, çizginin üstünde slot makinesi gibi rakamları dönen dev bir '? m' sayacı beliriyor.",
+    "claim_ids": []
+   },
+   {
+    "text": "Amerika'da üç yüz elli beş öğrenciye soruldu; ortanca tahmin altmış bir santim, oysa çizgi dört buçuk metreden uzundu.",
+    "visual": "Donmuş çizgiden kamera geriye ve yukarı çekiliyor, arkada bulanık bir 'I-76 Ohio' tabelasıyla bir Amerikan otoyolu açılıyor. Çizginin iki yanında öğrenci siluetleri ışık noktaları olarak beliriyor, her birinin başında bir tahmin balonu açılıyor ve balonlar küçükten büyüğe dizilip histograma dönüşüyor. Ortadaki balon patlıyor, asfalta '61 cm' etiketli minicik bir beyaz çubuk düşüyor. Kamera asfalta inip gerçek çizginin kenarı boyunca kayıyor, yanında '4,57 m' ölçü bandı açılıyor ve minik çubuk komik biçimde küçük kalıyor.",
+    "claim_ids": [
+     "dunya-c12"
+    ]
+   },
+   {
+    "text": "Arabadaki yolcular bile üç metrelik çizgiye ortalama bir metre on dokuz dedi; hız da fark etmedi.",
+    "visual": "Kamera arka camdan araç içine süzülüyor ve yolcu koltuğundaki kişinin omzunun üstünden yan cama bakıyor. Camın üstünde artırılmış gerçeklik cetveli açılıyor: kısa sarı çubukta '1,19 m', yanında uzanan beyaz çubukta '3,05 m'. Hız göstergesinin iğnesi 40'tan 97'ye fırlıyor, dışarıdaki çizgiler hızlanıyor, ama sarı tahmin çubuğu milim kıpırdamıyor.",
+    "claim_ids": [
+     "dunya-c13"
+    ]
+   },
+   {
+    "text": "Karayolları Genel Müdürlüğü standardına göre otoyolda her çizgi altı metre, on beş santim genişlikte; arada dokuz metre boşluk.",
+    "visual": "Kamera araçtan çıkıp bir Türk otoyolunda asfalta, çizginin hemen yanına, göz çizgiyle aynı hizada olacak kadar alçağa iniyor ve çizginin kenarı boyunca yavaşça kayıyor. Yanında sarı metre şeridi kendiliğinden açılıyor, sayaç 0'dan 6'ya tıklıyor; çizginin sonunda ayakta duran bir yetişkin ölçek veriyor. Kamera dik dönüp çizginin enine bir kumpas oturtuyor: '15 cm'. Sonra boş asfaltta kaymayı sürdürüyor, sayaç 9'a kadar sayıp bir sonraki çizgiye çarpıyor.",
+    "claim_ids": [
+     "standart-TR1",
+     "dunya-c1"
+    ]
+   },
+   {
+    "text": "Yani yüz yirmiyle saniyede ikiden fazla çizgi geçersin; her biri saniyenin beşte birinden kısa sürede akıp gider.",
+    "visual": "Kamera çizginin birkaç santim üstünde, aracın hızıyla akıyor; yoğun hareket bulanıklığı, köşede hız göstergesi 120'de sabit. Her çizgi geçtiğinde kare beyaz çakıyor ve bir sayaç tıklıyor: 'saniyede 2+'. Bir anda kare donuyor, tek bir çizginin üstünde kronometre '0,18 sn' gösteriyor, sonra görüntü yeniden hızla akmaya başlıyor.",
+    "claim_ids": [
+     "hesap-c2"
+    ]
+   },
+   {
+    "text": "Altı metre, Amerika'da önerilen çizginin neredeyse iki, İngiltere otoyolundakinin üç katı.",
+    "visual": "Kamera roket gibi dümdüz yukarı yükselip kuş bakışına geçiyor; ekran yan yana üç otoyola bölünüyor: Türkiye, ABD ve Birleşik Krallık bayraklı. Üç çizgi aynı başlangıç noktasından aynı anda boyanmaya başlıyor. İngiliz çizgisi 2 metrede, Amerikan çizgisi 3 metrede duruyor, Türk çizgisi 6 metreye kadar uzamayı sürdürüyor. Duranların yanına '×2' ve '×3' etiketleri sertçe düşüyor, kamera Türk çizgisinin ucuna zoom yapıyor.",
+    "claim_ids": [
+     "dunya-c14",
+     "hesap-c14",
+     "dunya-c2",
+     "dunya-c5"
+    ]
+   },
+   {
+    "text": "Çizgi şehir içinde üç metreye, şehir dışı yollarda dört buçuk metreye iniyor.",
+    "visual": "Dron otoyoldan sola savruluyor (whip pan) ve bir kasaba sokağına iniyor: çizgiler kısa ve sık, yanlarında '3 m' ölçü bandı. Tekrar savruluyor ve kenarında tarlalar olan iki şeritli bir şehir dışı yola geçiyor: '4,5 m çizgi, 7,5 m boşluk'. Kamera her geçişte asfalta biraz daha yaklaşıyor ve sonunda ayakkabı hizasında, çizginin dibinde duruyor.",
+    "claim_ids": [
+     "standart-TR3"
+    ]
+   },
+   {
+    "text": "Bu yolların sisli kesimlerinde ise desen tersine dönüyor: dokuz metre çizgi, yalnızca üç metre boşluk.",
+    "visual": "Görüntü birden griye boğuluyor: şafak vakti yoğun sise gömülü bir dağ geçidi, iki şeritli şehir dışı yol. Kamera far yüksekliğinde sisin içinde ilerliyor; far ışığında sisten upuzun beyaz çizgiler birbiri ardına çıkıyor, aradaki boşluklar kısacık. Çizgilerin üstünde '9 m' ve '3 m' yazan hayalet ölçü bantları süzülüyor; kenarda önceki '4,5 / 7,5' deseni silik bir görüntü olarak belirip ters dönüyor ve sise karışıyor.",
+    "claim_ids": [
+     "standart-TR4",
+     "hesap-c12"
+    ]
+   },
+   {
+    "text": "Gece parlamayı boyaya serpilen cam küreler sağlıyor; farın ışığını sana geri yansıtıyorlar.",
+    "visual": "Gece. Bir aracın farı çizgiye vuruyor ve çizgi bir anda yanıyor. Kamera çizginin yüzeyine makro dalışla iniyor: beyaz boya bir kar ovası gibi büyüyor, içine yarıya kadar gömülü cam küreler dev kristal toplar gibi parlıyor. Bir far ışını kürenin içine giriyor, kırılıyor ve geldiği yöne, doğrudan kameraya yani sürücüye geri sekiyor; ışının yolu turuncu bir izle çiziliyor. Kamera ışını takip ederek dışarı çıkıyor ve karanlıkta uzanan tüm çizgi hattı parlıyor.",
+    "claim_ids": [
+     "standart-TR14",
+     "hesap-c6"
+    ]
+   },
+   {
+    "text": "Meğerse küçücük sandığın her çizgi, geçen yıl Türkiye'de en çok satan Clio'nun neredeyse bir buçuk katıymış; aradaki boşluğa da iki Clio sığıyormuş.",
+    "visual": "Gün doğuyor. Kamera yeniden asfalta, çizginin hemen yanına iniyor. Beyaz, logosuz, yaklaşık dört metrelik kompakt bir hatchback yavaşça gelip çizginin tam yanında duruyor; çizgi aracın önünden ve arkasından belirgin biçimde taşıyor, taşan kısımlar kırmızıyla işaretleniyor: '≈1,5 araç boyu'. Kamera boşluğa kayıyor, aynı hatchback'ten ikisi art arda boşluğa park ediyor ve iki ucunda hâlâ asfalt kalıyor. Son olarak kamera hızla kuş bakışına yükseliyor; otoyol boyunca dizilen çizgiler artık devasa görünüyor.",
+    "claim_ids": [
+     "hesap-c4",
+     "hesap-c1"
+    ]
+   },
+   {
+    "text": "Sen de bunu, uzun yolda direksiyonu kimseye bırakmayan arkadaşına gönder.",
+    "visual": "Gece otoyol, araç içi. Kamera arka koltuktan öne doğru kayıyor: direksiyonda iki eliyle sıkıca tutan, gözünü yoldan ayırmayan arkadaş, gösterge ışığı yüzüne vuruyor. Yolcu koltuğunda oturan biri ona dönüp gülümsüyor. Ön camdan parlayan kesik çizgiler ritimle akıyor. Ekranın altında büyük, nabız gibi atan bir 'GÖNDER' düğmesi beliriyor ve bir parmak ona dokunuyor.",
+    "claim_ids": []
+   }
+  ],
+  "caption": "Otoyolda saniyede ikiden fazlasını geçtiğin kesik çizgiler, sandığından çok daha uzun. Karayolları Genel Müdürlüğü standardına göre otoyolda her şerit çizgisi 6 metre uzunluğunda ve 15 santim genişliğinde, aradaki boşluk 9 metre. Şehir içinde çizgi 3 metreye, şehir dışında 4,5 metreye iniyor; şehir dışı yolların sisli kesimlerinde ise 9 metre çizgi, 3 metre boşluk çiziliyor. ABD'deki bir çalışmada öğrencilerin ortanca tahmini yalnızca 61 santimdi.\n\nKaynaklar: KGM Erişme Kontrollü Karayollarında Trafik İşaretleme Standartları (2018); KGM Karayolu Trafik İşaretleme Standartları; KGM Karayolu Teknik Şartnamesi (2013); MUTCD 11. baskı (ABD Federal Karayolu İdaresi); UK Traffic Signs Manual, Bölüm 5; Perception & Psychophysics (2008) yol çizgisi algısı çalışması; ODMD 2025 satış verileri (CNBC-e).\n\nBu içerik bilgilendirme amaçlıdır.\n\n#otoyol #trafik #yolçizgisi #megerse",
+  "sources": [
+   {
+    "id": "dunya-c12",
+    "safe": "Hakemli bir ABD çalışmasında 355 üniversite öğrencisi, Ohio'daki I-76 otoyolundaki kesik çizginin boyunu ezberden tahmin etti. Ortanca tahmin 0,61 m (2 ft) çıktı; oysa çizgi o sırada 4,57 m'ydi. Öğrencilerin yalnızca %2'si 3,05 m ya da daha uzun bir değer söyledi.",
+    "url": "https://link.springer.com/content/pdf/10.3758/PP.70.8.1571.pdf"
+   },
+   {
+    "id": "dunya-c13",
+    "safe": "Aynı çalışmada saatte yaklaşık 40 ve 97 km hızla giden bir arabada yolcu olarak oturan 28 katılımcı, 3,05 m'lik çizgileri ortalama 1,19 m tahmin etti. Aracın hızının, oturulan yerin ve öne ya da arkaya bakmanın tahmin üzerinde anlamlı bir etkisi bulunmadı.",
+    "url": "https://link.springer.com/content/pdf/10.3758/PP.70.8.1571.pdf"
+   },
+   {
+    "id": "standart-TR1",
+    "safe": "KGM standardına göre otoyolda şeritleri ayıran kesik çizginin her parçası 6 metre uzunluğunda ve 15 santimetre genişliğinde; iki parça arasındaki boşluk 9 metre.",
+    "url": "https://www.kgm.gov.tr/SiteCollectionDocuments/KGMdocuments/Trafik/erismekontrollukarayollarindatrafikisaretlemestandartlari.pdf"
+   },
+   {
+    "id": "dunya-c1",
+    "safe": "KGM'nin 2018 tarihli Erişme Kontrollü Karayollarında Trafik İşaretleme Standartları'na göre otoyollarda şerit çizgisi 6 m dolu, 9 m boş ve 15 cm geniştir; kenar çizgisi 25 cm'dir.",
+    "url": "https://www.kgm.gov.tr/SiteCollectionDocuments/KGMdocuments/Trafik/erismekontrollukarayollarindatrafikisaretlemestandartlari.pdf"
+   },
+   {
+    "id": "hesap-c2",
+    "safe": "Otoyolda bir çizgi ve bir boşluk toplam 15 metre eder. 120 km/sa hızla saniyede 33 metre gidersin, yani saniyede iki çizgiden biraz fazlasını geçersin. Her çizgi gözünün önünden yaklaşık 0,18 saniyede akar.",
+    "url": "https://www.kgm.gov.tr/SiteCollectionDocuments/KGMdocuments/Trafik/erismekontrollukarayollarindatrafikisaretlemestandartlari.pdf"
+   },
+   {
+    "id": "dunya-c14",
+    "safe": "Resmî ölçüler yan yana konunca Türkiye'nin 6 m'lik otoyol çizgisi, ABD'de önerilen 3,05 m'nin yaklaşık iki katı, Birleşik Krallık'ta 40 mph üstü yollardaki 2 m'nin üç katıdır. Boşluk ise ABD'dekiyle neredeyse aynıdır (9 m ve 9,14 m).",
+    "url": "https://mutcd.fhwa.dot.gov/pdfs/11th_Edition/part3.pdf"
+   },
+   {
+    "id": "hesap-c14",
+    "safe": "ABD'nin federal el kitabı MUTCD, kesikli çizgi için 10 fit (yaklaşık 3 m) çizgi ve 30 fit (yaklaşık 9 m) boşluk öneriyor. Türkiye'nin otoyol çizgisi 6 m, yani Amerikan çizgisinin yaklaşık iki katı.",
+    "url": "https://mutcd.fhwa.dot.gov/pdfs/11th_Edition/part3.pdf"
+   },
+   {
+    "id": "dunya-c2",
+    "safe": "ABD'nin trafik kılavuzu MUTCD, kesik çizgi için 10 ft (3,05 m) çizgi ve 30 ft (9,14 m) boşluk önerir. Bu bağlayıcı bir 'Standard' değil, 'Guidance' (tavsiye) maddesidir; hıza ve yönlendirme ihtiyacına göre benzer oranda başka ölçülere de izin verir.",
+    "url": "https://mutcd.fhwa.dot.gov/pdfs/11th_Edition/part3.pdf"
+   },
+   {
+    "id": "dunya-c5",
+    "safe": "Birleşik Krallık'ın Traffic Signs Manual'ına göre hız sınırı 40 mph'yi (yaklaşık 64 km/s) aşan yollarda, otoyollar dahil, şerit çizgisi 2 m çizgi + 7 m boşluktur. 40 mph ve altındaki yollarda 1 m çizgi + 5 m boşluktur. Otoyollarda 150 mm'lik geniş çizgi önerilir.",
+    "url": "https://assets.publishing.service.gov.uk/media/5c4ace6ded915d38a0611abc/traffic-signs-manual-chapter-05.pdf"
+   },
+   {
+    "id": "standart-TR3",
+    "safe": "KGM standardına göre kesik şerit çizgisinin ölçüsü yola göre değişiyor: yerleşim yeri dışındaki yollarda 4,5 metre çizgi ve 7,5 metre boşluk, yerleşim yeri içinde 3 metre çizgi ve 3 metre boşluk, otoyolda 6 metre çizgi ve 9 metre boşluk.",
+    "url": "https://www.kgm.gov.tr/SiteCollectionDocuments/KGMdocuments/Trafik/IsaretlerElKitabi/KarayoluTrafikIsaretlemeStandartlari1.pdf"
+   },
+   {
+    "id": "standart-TR4",
+    "safe": "KGM standardına göre şehir dışındaki yolların sisli kesimlerinde kesik çizgi 9 metre çizgi ve 3 metre boşluk olarak çiziliyor; yani çizgi uzuyor, boşluk kısalıyor. Standart bunun gerekçesini yazmıyor.",
+    "url": "https://www.kgm.gov.tr/SiteCollectionDocuments/KGMdocuments/Trafik/IsaretlerElKitabi/KarayoluTrafikIsaretlemeStandartlari1.pdf"
+   },
+   {
+    "id": "hesap-c12",
+    "safe": "KGM tablosunda sisli kesimler için 9 metre çizgi ve 3 metre boşluk veriliyor. Ama bu ölçü otoyollar için değil, şehir dışındaki devlet ve il yolları için. KGM bu ölçünün neden seçildiğini yazmıyor.",
+    "url": "https://www.kgm.gov.tr/SiteCollectionDocuments/KGMdocuments/Trafik/IsaretlerElKitabi/KarayoluTrafikIsaretlemeStandartlari1.pdf"
+   },
+   {
+    "id": "standart-TR14",
+    "safe": "Çizgilerin gece farla parlamasını boyanın üzerine serpilen minik cam küreler sağlıyor. KGM'nin 2013 tarihli Karayolu Teknik Şartnamesi, cam küre miktarının boya ağırlığının üçte biri olmasını istiyor. Performansa dayalı çizgi ihalelerinde ise kuru çizginin gece geri yansıtması en az 100 mcd/lx·m² olmalı.",
+    "url": "https://www.tamyol.com.tr/UserFiles/Content/KGM_Teknik_Sartnamesi_2013.pdf"
+   },
+   {
+    "id": "hesap-c6",
+    "safe": "Çizginin gece parlamasını, çizilirken yüzeyine serpilen minik cam kürecikler sağlar (termoplastikte içine de karıştırılır). Bu kürecikler farın ışığını geldiği yöne, yani sürücüye geri yansıtır.",
+    "url": "https://assets.publishing.service.gov.uk/media/5c4ace6ded915d38a0611abc/traffic-signs-manual-chapter-05.pdf"
+   },
+   {
+    "id": "hesap-c4",
+    "safe": "ODMD verilerine göre 2025'te Türkiye'nin en çok satan otomobili Renault Clio oldu (51.717 adet). Clio yaklaşık 4,05-4,12 m uzunlukta. Yani 6 metrelik çizgi yaklaşık bir buçuk Clio boyunda, 9 metrelik boşluk ise iki Clio'dan biraz uzun.",
+    "url": "https://www.cnbce.com/otomotiv/2025te-en-cok-satilan-otomobil-modelleri-belli-oldu-turkiyede-en-cok-satin-alinan-otomobil-hangisi-2025te-ne-kadar-clio-satildi-g22597"
+   },
+   {
+    "id": "hesap-c1",
+    "safe": "KGM standardına göre otoyoldaki kesikli şerit çizgisi 6 metre uzunluğunda ve 15 santim genişliğinde, iki çizgi arası 9 metre. Yani 1-1,5 metre sandığın çizgi aslında 4-6 kat daha uzun.",
+    "url": "https://www.kgm.gov.tr/SiteCollectionDocuments/KGMdocuments/Trafik/erismekontrollukarayollarindatrafikisaretlemestandartlari.pdf"
+   }
+  ],
+  "cover_idea": "Asfaltın hemen üstünden, çok alçak ve geniş açılı bir kare. Tek bir beyaz kesik çizgi ön plandan başlayıp altın saat ışığında bir pist gibi ileri uzanıyor. Hemen yanında park etmiş logosuz, beyaz, kompakt bir hatchback çizginin yanında küçük kalıyor; çizgi aracın önünden ve arkasından belirgin biçimde taşıyor. Asfaltın dokusu ve boyanın içindeki cam kürelerin ışıltısı keskin, arkada bulanık bir otoyol uzanıyor. Karede yazı, damga ya da altyazı yok; ölçek şokunu yalnız görüntü veriyor.",
+  "judge_notes": "PUANLAMA (100 üzerinden: kurallar 25, viral güç 45, doğruluk 30)\nSENARYO A: 82 puan. Kurallar 22/25: Meğerse cümlesi ve son çağrı doğru yerde, sayılar yazıyla, KGM açık adıyla yazılmış, 1090 karakter. Ancak kancadaki soru ancak dördüncü ya da beşinci saniyede geliyor (\"Otoyolda yüz yirmiyle giderken saniyede iki tanesini geçtiğin...\"). Viral 36/45: ilk iki saniye 6/10; akış 9/10, çünkü önce yanlış tahminlerle gerilim kuruluyor, sonra cevap geliyor; ritim 9/10, her beş ila yedi saniyede yeni bir sayı çıkıyor; final 9/10, Clio ölçek şoku görsel olarak güçlü. Doğruluk 24/30: \"iki katı\" deniyor, oysa doğrusu yaklaşık iki (altı bölü üç virgül sıfır beş, bir virgül doksan yedi ediyor). \"Saniyede iki tanesini\" deniyor, doğrusu ikiden fazla. \"Tam altı metre\" ifadesi de KGM'nin uzunluk toleransıyla çelişiyor (eksi beş, artı on beş santim).\nSENARYO B: 73 puan. Kurallar 18/25: Meğerse cümlesi asıl ifşa değil, bir yan bulgu (hıza bağlı olmaması). \"Altı bin altı yüz altmış yedi\" seslendirmede ağır kalıyor. Viral 33/45: ilk iki saniye 9/10, çünkü soru kısa ve doğrudan; akış 6/10, çünkü cevap ve Clio karşılaştırması üçüncü cümlede verilip gerilim erken sönüyor; ritim 8/10; final 6/10. Doğruluk 22/30: bir virgül on dokuz, \"bir metre yirmi\"ye yuvarlanmış. \"Bir metre dediysen yalnız değilsin\" sözü, altmış bir santimlik ortanca tahminle mantık olarak uyuşmuyor. \"Sisli kesimlerde\" denirken yol türü belirtilmemiş, bu da otoyolda da öyle olduğu sanısını doğurabilir; oysa hesap-c12 bu ölçünün otoyol için olmadığını söylüyor.\nKAZANAN A. B'den alınanlar: (1) Kanca kısaltıldı, soru ilk iki saniyede bitiyor: \"Otoyoldaki o kısacık kesik çizgi, sence kaç metre?\". \"Kısacık\" sözü izleyicinin yanlış tahminini önceden kuruyor. (2) \"Oysa çizgi dört buçuk metreden uzundu\" eklendi, karşıtlık hemen kuruluyor (dunya-c12). (3) Hız hesabı alındı: saniyede ikiden fazla çizgi geçiyor, her biri saniyenin beşte birinden kısa sürede (sıfır virgül on sekiz) akıp gidiyor (hesap-c2). (4) Cam kürelerin ışığı \"sana geri\" yansıttığı bilgisi alındı (hesap-c6).\nDüzeltmeler: \"neredeyse iki katı\" yazıldı; \"tam\" kaldırıldı; sisli desen \"Bu yolların\" ifadesiyle şehir dışı yollara bağlandı (standart-TR4, hesap-c12), otoyol izlenimi verilmiyor ve gerekçe uydurulmadı. \"Geçen yıl\" 2025'i gösteriyor (bugünün tarihi 25 Ekim 2026, hesap-c4). Clio hesabı: altı bölü dört virgül sıfır beş ile dört virgül on iki arası bir virgül kırk altı ile bir virgül kırk sekiz ediyor, yani \"neredeyse bir buçuk\"; iki Clio sekiz virgül yirmi dört metre, dokuz metrelik boşluğa sığıyor.\nKarakter sayısı yer açmak için çıkarıldı: A'daki yüzde kırk ile yüzde altmış oranı ve cam kürenin boya ağırlığının üçte biri olduğu bilgisi (ikisi de doğrulanmış, ama karakter sınırı yüzünden atıldı).\nSon metin: 1096 karakter. Tek soru işareti kancada. Sondan bir önceki cümle \"Meğerse\", son cümle aynen istenen gönderme çağrısı. Trafik kuralı ya da hukuki tavsiye yok. Tüm olgusal cümleler beats içindeki claim_ids ile eşleşiyor."
+ },
+ "facts": [
+  {
+   "id": "standart-TR1",
+   "claim": "KGM standardına göre otoyolda şeritleri ayıran kesik çizginin her parçası 6 metre uzunluğunda ve 15 santimetre genişliğinde, iki parça arasındaki boşluk ise 9 metre.",
+   "detail": "Bu ölçü iki ayrı KGM yayınında da geçiyor. (1) Erişme Kontrollü Karayollarında Trafik İşaretleme Standartları (KGM, 2018), Bölüm 2.2.2 'Şerit Çizgileri', basılı s. 22 (PDF s. 23): 'Otoyollarda şerit çizgileri 6 m dolu, 9 m boş olarak ve 0.15 m genişlikte olacak şekilde uygulanır.' (2) Karayolu Trafik İşaretleme Standartları-1 (KGM, 2020), Bölüm 6.1 'Çizgi Ölçüleri' tablosu, s. 17: OTOYOLLAR, Kesikli Çizgi, GEN 0.15 m, ÇİZGİ/BOŞLUK 6.00 : 9.00, uygulama alanı 'Şerit çizgilerinde'. Tablonun sayfa görüntüsünü açıp rakamları gözle de kontrol ettim. Otoyollar için ayrı bir el kitabı olmasının nedeni Trafik İşaretleri Hakkında Yönetmelik Madde 4: erişme kontrollü yolların işaret standartları KGM tarafından 'ayrıca bir elkitabı haline getirilir'.",
+   "sources": [
+    "https://www.kgm.gov.tr/SiteCollectionDocuments/KGMdocuments/Trafik/erismekontrollukarayollarindatrafikisaretlemestandartlari.pdf",
+    "https://www.kgm.gov.tr/SiteCollectionDocuments/KGMdocuments/Trafik/IsaretlerElKitabi/KarayoluTrafikIsaretlemeStandartlari1.pdf",
+    "https://www.mevzuat.gov.tr/File/GeneratePdf?mevzuatNo=4699&mevzuatTur=KurumVeKurulusYonetmeligi&mevzuatTertip=5"
+   ],
+   "confidence": "high",
+   "viral": "Arabadan 1-1,5 metre gibi görünen o çizgi aslında 6 metre, yani yaklaşık bir minibüs boyunda (bu karşılaştırma bizim yorumumuz, standartta geçmiyor).",
+   "verdict": "dogru",
+   "safe": "KGM standardına göre otoyolda şeritleri ayıran kesik çizginin her parçası 6 metre uzunluğunda ve 15 santimetre genişliğinde; iki parça arasındaki boşluk 9 metre.",
+   "note": "Her iki KGM PDF'ini de indirdim. Erişme Kontrollü Karayollarında Trafik İşaretleme Standartları (2018), Bölüm 2.2.2, basılı s. 22 (PDF s. 23): 'Otoyollarda şerit çizgileri 6 m dolu, 9 m boş olarak ve 0.15 m genişlikte olacak şekilde uygulanır.' Birebir aynı. KGM Standartları-1 (2020), s. 17, Bölüm 6.1 tablosunun sayfa görüntüsünü açıp baktım: OTOYOLLAR / Kesikli Çizgi / 0.15 / 6.00 : 9.00 / 'Şerit çizgilerinde'. Trafik İşaretleri Hakkında Yönetmelik Madde 4'ü (mevzuat.gov.tr'deki resmî metin) de okudum: '...ayrıca bir elkitabı haline getirilir.' Doğru. Viral cümleyle ilgili uyarı: '1-1,5 metre gibi görünen' algısının bir kaynağı yok. Minibüs karşılaştırması (yaklaşık 5,5-7 m) kabaca tutuyor, ama yorum olduğu belirtilmeli.",
+   "orig_sources": [
+    "https://www.kgm.gov.tr/SiteCollectionDocuments/KGMdocuments/Trafik/erismekontrollukarayollarindatrafikisaretlemestandartlari.pdf (Bölüm 2.2.2, s. 22)",
+    "https://www.kgm.gov.tr/SiteCollectionDocuments/KGMdocuments/Trafik/IsaretlerElKitabi/KarayoluTrafikIsaretlemeStandartlari1.pdf (Bölüm 6.1 Çizgi Ölçüleri tablosu, s. 17)",
+    "https://www.mevzuat.gov.tr/File/GeneratePdf?mevzuatNo=4699&mevzuatTur=KurumVeKurulusYonetmeligi&mevzuatTertip=5 (Trafik İşaretleri Hakkında Yönetmelik, Madde 4)"
+   ]
+  },
+  {
+   "id": "standart-TR2",
+   "claim": "Otoyolda bir çizgiyle bir boşluk toplam 15 metre tutuyor; bunun yalnızca 6 metresi, yani yaklaşık yüzde 40'ı boyalı.",
+   "detail": "Bu bir kaynak cümlesi değil, KGM tablosundaki 6,00 : 9,00 değerlerinden yapılmış basit bir hesap: 6 + 9 = 15 m, 6/15 = %40. Örnek: saatte 120 km hız saniyede yaklaşık 33,3 metre eder; bu hızda saniyede kabaca 2,2 çizgi-boşluk çifti geçilir (33,3/15). Hesaptaki 120 km/s yalnızca örnek olarak seçildi, burada bir hız sınırı iddiası yok.",
+   "sources": [
+    "https://www.kgm.gov.tr/SiteCollectionDocuments/KGMdocuments/Trafik/IsaretlerElKitabi/KarayoluTrafikIsaretlemeStandartlari1.pdf"
+   ],
+   "confidence": "high",
+   "viral": "Otoyolda gördüğün yolun yüzde 60'ı aslında boşluk.",
+   "verdict": "dogru",
+   "safe": "Otoyolda şerit çizgisinin bir çizgi ve bir boşluktan oluşan her 15 metresinin 6 metresi boyalı. Yani çizgi hattının yüzde 40'ı boya, yüzde 60'ı boşluk.",
+   "note": "Hesabı kendim yaptım: 6 + 9 = 15 m, 6/15 = 0,40 (tam olarak %40; 'yaklaşık' demeye gerek yok). 120 km/s = 33,33 m/s, 33,33/15 = 2,22 çift/s. Doğru. Girdi değerleri KGM-1 s. 17 tablosundan teyit edildi. Uyarı: Viral cümle ('Otoyolda gördüğün YOLUN yüzde 60'ı boşluk') yanıltıcı. Yüzde 60 yolun değil, şerit çizgisi hattının boş kısmı. 'Şerit çizgisinin yüzde 60'ı boşluk' gibi düzeltilmeli. Bu oran standarttaki tasarım ölçüsü; virajlarda dıştaki çizgiler uzatılabildiği için (TR9) her yerde birebir geçerli olmayabilir.",
+   "orig_sources": [
+    "https://www.kgm.gov.tr/SiteCollectionDocuments/KGMdocuments/Trafik/IsaretlerElKitabi/KarayoluTrafikIsaretlemeStandartlari1.pdf (Bölüm 6.1 tablosu, s. 17; hesap bize ait)"
+   ]
+  },
+  {
+   "id": "standart-TR3",
+   "claim": "Kesik çizginin ölçüsü yola göre değişiyor: şehir dışındaki devlet ve il yollarında 4,5 metre çizgi ve 7,5 metre boşluk var, şehir içinde ise 3 metre çizgi ve 3 metre boşluk.",
+   "detail": "Karayolu Trafik İşaretleme Standartları-1 (KGM, 2020), Bölüm 6.1 'Çizgi Ölçüleri' tablosu, s. 17. Devlet, İl ve İmar Yolları / Yerleşim Yeri Dışı / Kesikli Çizgi: genişlik 0.14 m, 4.50 : 7.50, 'Şerit çizgilerinde'. Yerleşim Yeri İçi / Kesikli Çizgi: 0.14 m, 3.00 : 3.00, 'Şerit çizgilerinde'. Tablonun altındaki not: 'İki yönlü yollarda çizgi genişliği 0.12 m olarak uygulanacaktır.'",
+   "sources": [
+    "https://www.kgm.gov.tr/SiteCollectionDocuments/KGMdocuments/Trafik/IsaretlerElKitabi/KarayoluTrafikIsaretlemeStandartlari1.pdf"
+   ],
+   "confidence": "high",
+   "viral": "Şehir içinde 3 metre, şehirlerarası yolda 4,5 metre, otoyolda 6 metre: yol hızlandıkça çizgi de uzuyor.",
+   "verdict": "dogru",
+   "safe": "KGM standardına göre kesik şerit çizgisinin ölçüsü yola göre değişiyor: yerleşim yeri dışındaki yollarda 4,5 metre çizgi ve 7,5 metre boşluk, yerleşim yeri içinde 3 metre çizgi ve 3 metre boşluk, otoyolda 6 metre çizgi ve 9 metre boşluk.",
+   "note": "KGM-1 s. 17 tablosunu sayfa görüntüsünden kontrol ettim. 'Devlet, İl ve İmar Yolları' başlığı altında Yerleşim Yeri Dışı / Kesikli / 0.14 / 4.50 : 7.50 / 'Şerit çizgilerinde' ve Yerleşim Yeri İçi / Kesikli / 0.14 / 3.00 : 3.00 / 'Şerit çizgilerinde' yazıyor. Tablo altındaki not s. 17'de birebir yer alıyor: 'İki yönlü yollarda çizgi genişliği 0.12 m olarak uygulanacaktır.' (s. 18'de 'kenar çizgilerinin genişliği 0.12 m' diye benzer bir not daha var.) 'Şehir içi' ifadesi standarttaki 'yerleşim yeri içi'nin sadeleştirilmiş hali, kabul edilebilir. Uyarı: Viral cümledeki 'yol hızlandıkça çizgi de uzuyor' yorumu standartta geçmiyor; KGM ölçülerin gerekçesini yazmıyor. 'Yol tipi değiştikçe' demek daha güvenli.",
+   "orig_sources": [
+    "https://www.kgm.gov.tr/SiteCollectionDocuments/KGMdocuments/Trafik/IsaretlerElKitabi/KarayoluTrafikIsaretlemeStandartlari1.pdf (Bölüm 6.1 tablosu ve tablo notu, s. 17)"
+   ]
+  },
+  {
+   "id": "standart-TR4",
+   "claim": "Sisli yol kesimlerinde kesik çizgi uzuyor ve boşluk kısalıyor: 9 metre çizgi, 3 metre boşluk.",
+   "detail": "Karayolu Trafik İşaretleme Standartları-1 (KGM, 2020), Bölüm 6.1 tablosu, s. 17: Yerleşim Yeri Dışı, Kesikli Çizgi, 0.14 m, 9.00 : 3.00, uygulama alanı 'Sisli kesimlerde'. Aynı belgenin Bölüm 7.7'sine göre (s. 28) yoğun sisli kesimlerde şerit çizgilerinin boşluklarına sarı yansıtıcılı yol butonu da konabilir. Standart bu ölçünün nedenini yazmıyor; sisteki görüşle ilgili bir gerekçe uydurmamak gerekiyor.",
+   "sources": [
+    "https://www.kgm.gov.tr/SiteCollectionDocuments/KGMdocuments/Trafik/IsaretlerElKitabi/KarayoluTrafikIsaretlemeStandartlari1.pdf",
+    "https://www.kgm.gov.tr/SiteCollectionDocuments/KGMdocuments/Trafik/erismekontrollukarayollarindatrafikisaretlemestandartlari.pdf"
+   ],
+   "confidence": "high",
+   "verdict": "dogru",
+   "safe": "KGM standardına göre şehir dışındaki yolların sisli kesimlerinde kesik çizgi 9 metre çizgi ve 3 metre boşluk olarak çiziliyor; yani çizgi uzuyor, boşluk kısalıyor. Standart bunun gerekçesini yazmıyor.",
+   "note": "KGM-1 s. 17 tablosunda Yerleşim Yeri Dışı / Kesikli / 0.14 / 9.00 : 3.00 / 'Sisli kesimlerde' satırı var; görüntüden teyit ettim. Bölüm 7.7 basılı s. 28'de (içindekiler 29 diyor, asıl sayfa 28): 'yoğun sisli kesimlerde şerit çizgilerinde boşluklara gelecek şekilde ve kenar çizgilerinin dış kenarında olmak üzere sarı renk yansıtıcılı buton uygulaması yapılabilir.' Kapsam notu: 9:3 değeri tablonun yalnızca 'Devlet, İl ve İmar Yolları / Yerleşim Yeri Dışı' bölümünde var. Otoyol satırlarında ve 2018 erişme kontrollü yol kitabında sisli kesim için ayrı bir çizgi ölçüsü bulamadım. Bu yüzden iddiayı 'her sisli yol' diye genellememek gerekiyor.",
+   "orig_sources": [
+    "https://www.kgm.gov.tr/SiteCollectionDocuments/KGMdocuments/Trafik/IsaretlerElKitabi/KarayoluTrafikIsaretlemeStandartlari1.pdf (Bölüm 6.1 tablosu s. 17; Bölüm 7.7 s. 28)"
+   ]
+  },
+  {
+   "id": "standart-TR5",
+   "claim": "Türkiye'de şerit ve kenar çizgileri kural olarak beyaz; sarı çizgi yalnızca yol çalışmalarındaki geçici işaretlemede, yılda ortalama 30 gün ya da daha fazla sisli geçen kesimlerde ve otopark ile park yasağı çizgilerinde kullanılabiliyor.",
+   "detail": "Karayolu Trafik İşaretleme Standartları-1 (KGM, 2020), 'Yatay işaretleme uygulamasında kullanılacak renkler ve boya tipleri', s. 16. Standarda göre banket ve eksen çizgileri 'mutlak suretle beyaz renkte olacaktır'. Sarı çizgi 'yalnızca' şu üç yerde kullanılabilir: 1) yol yapım, bakım ve onarım sahalarındaki geçici işaretlemeler, 2) yıllık ortalama sisli gün sayısı 30 ve üzerinde olan kesimler (sis verileri Meteoroloji Genel Müdürlüğünden alınır), 3) otopark ve park yasağı çizgileri. Trafik İşaretleri Hakkında Yönetmelik Madde 10'un son paragrafı da şeritleri ayıran çizgilerin 'beyaz, gerekli görülmesi halinde sarı boya ile' çizileceğini söylüyor.",
+   "sources": [
+    "https://www.kgm.gov.tr/SiteCollectionDocuments/KGMdocuments/Trafik/IsaretlerElKitabi/KarayoluTrafikIsaretlemeStandartlari1.pdf",
+    "https://www.mevzuat.gov.tr/File/GeneratePdf?mevzuatNo=4699&mevzuatTur=KurumVeKurulusYonetmeligi&mevzuatTertip=5"
+   ],
+   "confidence": "high",
+   "verdict": "duzeltilmeli",
+   "safe": "KGM standardına göre kenar ve şerit çizgileri kural olarak beyaz. Sarı çizgi yol çalışmalarındaki geçici işaretlemede, yılda ortalama 30 gün ve üzeri sisli geçen kesimlerde ve otopark ile park yasağı çizgilerinde kullanılıyor. Aynı standart, ışıklı kavşaklardaki 'sarı kutu' taramasının da sarı boyayla çizilmesini istiyor.",
+   "note": "KGM-1 s. 16'daki metin iddiadaki gibi: 'Sarı renkte çizgi uygulaması yalnızca aşağıda sayılan kesimlerde kullanılacaktır', ardından 3 madde. TİY Madde 10'un son paragrafını mevzuat.gov.tr'deki resmî metinden teyit ettim: '...beyaz, gerekli görülmesi halinde sarı boya ile...'. Ancak aynı belgenin Bölüm 9.6'sı 'Kavşak Tarama (Sarı Kutu) Uygulaması' (basılı s. 58) 'Uygulama sarı renkli yol çizgi boyası ile yapılacaktır' diyor. Kutunun dış çizgisi 0,20 m, çapraz çizgiler 0,15 m. Yani 'yalnızca üç yer' ifadesi aynı standartta çelişiyor ve sarı kutu da sayılmalı. Ayrıca Bölüm 7.1'de (s. 19) duraklama/park yasağı zig-zag çizgilerinde 'sarı renkli yol çizgi boyası da kullanılabilir' notu var; bu, park yasağı maddesiyle uyumlu.",
+   "orig_sources": [
+    "https://www.kgm.gov.tr/SiteCollectionDocuments/KGMdocuments/Trafik/IsaretlerElKitabi/KarayoluTrafikIsaretlemeStandartlari1.pdf (s. 16)",
+    "https://www.mevzuat.gov.tr/File/GeneratePdf?mevzuatNo=4699&mevzuatTur=KurumVeKurulusYonetmeligi&mevzuatTertip=5 (Madde 10, son paragraf)"
+   ]
+  },
+  {
+   "id": "standart-TR6",
+   "claim": "Otoyolda yolun kenarını gösteren çizgi kesiksiz ve 25 santimetre genişliğinde, şerit çizgisinden yaklaşık 1,7 kat daha geniş.",
+   "detail": "KGM Standartları-1 (2020), s. 17 tablosu: OTOYOLLAR, Devamlı Çizgi, 0.25 m, 'Kenar çizgilerinde'. Erişme Kontrollü Karayollarında Trafik İşaretleme Standartları (2018), Bölüm 2.2.1, s. 22: 'Otoyollarda kenar çizgileri 0.25 m genişlikte olacak şekilde uygulanır.' Aynı tabloya göre otoyolda yavaşlama ve hızlanma şeritlerini ayıran kesik çizgi 0.15 m genişliğinde, 3.00 : 3.00. '1,7 kat' bizim hesabımız (0,25/0,15 ≈ 1,67).",
+   "sources": [
+    "https://www.kgm.gov.tr/SiteCollectionDocuments/KGMdocuments/Trafik/IsaretlerElKitabi/KarayoluTrafikIsaretlemeStandartlari1.pdf",
+    "https://www.kgm.gov.tr/SiteCollectionDocuments/KGMdocuments/Trafik/erismekontrollukarayollarindatrafikisaretlemestandartlari.pdf"
+   ],
+   "confidence": "high",
+   "verdict": "dogru",
+   "safe": "Otoyolda yolun kenarını gösteren çizgi kesiksiz ve 25 santimetre genişliğinde; şerit çizgisinin yaklaşık 1,7 katı.",
+   "note": "KGM-1 s. 17 tablosu: OTOYOLLAR / Devamlı Çizgi / 0.25 / 'Kenar çizgilerinde'. Ayrıca Kesikli / 0.15 / 3.00 : 3.00 / 'Yavaşlama ve hızlanma şeritlerinde'. Görüntüden teyit ettim. Erişme kitabı Bölüm 2.2.1, basılı s. 22 (PDF s. 23): 'Otoyollarda kenar çizgileri 0.25 m genişlikte olacak şekilde uygulanır.' Birebir aynı. Aynı kitabın 2.2.3 bölümüne göre ayrım çizgisi 3 m dolu, 3 m boş. Hesap: 0,25/0,15 = 1,667 ≈ 1,7, doğru. Küçük dil önerisi: '1,7 kat daha geniş' ifadesi '%170 daha geniş' diye de okunabilir. '1,7 katı genişliğinde' demek daha net.",
+   "orig_sources": [
+    "https://www.kgm.gov.tr/SiteCollectionDocuments/KGMdocuments/Trafik/IsaretlerElKitabi/KarayoluTrafikIsaretlemeStandartlari1.pdf (s. 17)",
+    "https://www.kgm.gov.tr/SiteCollectionDocuments/KGMdocuments/Trafik/erismekontrollukarayollarindatrafikisaretlemestandartlari.pdf (Bölüm 2.2.1, s. 22)"
+   ]
+  },
+  {
+   "id": "standart-TR7",
+   "claim": "Kavşaklarda çizgilerin ritmi sıklaşıyor: kavşak geçişlerinde kenar çizgisi 1,5 metre dolu ve 1,5 metre boş, şerit çizgisi 3 metre dolu ve 3 metre boş, dönüş şeritlerini ayıran çizgiler ise 1 metre dolu, 1 metre boş ve 25 santimetre genişliğinde.",
+   "detail": "Karayolu Trafik İşaretleme Standartları-1 (KGM, 2020), Bölüm 9.1 'Kavşakların İşaretlenmesi – Genel', s. 50: 'Kavşak geçişlerinde kenar çizgiler 1.50 metre dolu, 1.50 metre boş, şerit çizgileri ise 3 metre dolu, 3 metre boş olarak uygulanacaktır. Dönüş şeritlerinde kullanılacak ayrım çizgileri 1 metre dolu, 1 metre boş ve 0.25 metre genişliğinde olacaktır.' Aynı değerler s. 17'deki tabloda da yer alıyor.",
+   "sources": [
+    "https://www.kgm.gov.tr/SiteCollectionDocuments/KGMdocuments/Trafik/IsaretlerElKitabi/KarayoluTrafikIsaretlemeStandartlari1.pdf"
+   ],
+   "confidence": "high",
+   "verdict": "dogru",
+   "safe": "KGM standardına göre kavşak geçişlerinde kenar çizgisi 1,5 metre dolu ve 1,5 metre boş, şerit çizgisi 3 metre dolu ve 3 metre boş çiziliyor. Dönüş şeritlerini ayıran çizgiler ise 1 metre dolu, 1 metre boş ve 25 santimetre genişliğinde.",
+   "note": "KGM-1 Bölüm 9.1 'Genel' basılı s. 50'de (içindekiler 53 diyor, asıl sayfa 50) alıntı birebir var. s. 17 tablosunda Yerleşim Yeri Dışı satırlarında da aynı değerler yer alıyor: 0.14 1.50:1.50 'Kavşak kesişimlerinde (Kenar çizgisinin devamında)', 3.00:3.00 'Kavşak içi geçişlerinde (Şerit çizgisinin devamında)', 0.25 1.00:1.00 'Sağa ve sola dönüş şeritlerinin ayrılmasında'. Bu değerler KGM-1'in kapsamındaki devlet, il ve imar yolları için. 'Ritim sıklaşıyor' ifadesi şehir dışı yolların 4,5:7,5 düzenine göre doğru.",
+   "orig_sources": [
+    "https://www.kgm.gov.tr/SiteCollectionDocuments/KGMdocuments/Trafik/IsaretlerElKitabi/KarayoluTrafikIsaretlemeStandartlari1.pdf (Bölüm 9.1 s. 50; Bölüm 6.1 tablosu s. 17)"
+   ]
+  },
+  {
+   "id": "standart-TR8",
+   "claim": "Çizgiler milimetre hesabıyla çiziliyor: genişlikte en fazla 5 milimetre, uzunlukta ise en fazla 5 santimetre eksik ya da 15 santimetre fazla sapmaya izin var.",
+   "detail": "Karayolu Trafik İşaretleme Standartları-1 (KGM, 2020), 'Yatay işaretlemede toleranslar', s. 16: 'Bölüm 6.1 de belirtilen çizgi ölçülerinin; genişlikleri ± 5 mm'den fazla, uzunlukları 50 mm'den daha kısa, 150 mm daha uzun olmamalıdır.' Uzunluk toleransını '−50 mm / +150 mm' diye okuduk. Bu okuma metnin ifadesine dayanıyor ve metin biraz kısa yazılmış.",
+   "sources": [
+    "https://www.kgm.gov.tr/SiteCollectionDocuments/KGMdocuments/Trafik/IsaretlerElKitabi/KarayoluTrafikIsaretlemeStandartlari1.pdf"
+   ],
+   "confidence": "high",
+   "viral": "6 metrelik çizgi en fazla 6,15 metre olabilir, 5,95'in altına inemez.",
+   "verdict": "dogru",
+   "safe": "KGM standardı çizgi ölçülerine tolerans koyuyor: genişlik en fazla ±5 milimetre sapabilir. Uzunlukta ise metne göre çizgi 5 santimetreden fazla kısa, 15 santimetreden fazla uzun olmamalı.",
+   "note": "KGM-1 s. 16'daki metin birebir şöyle: 'Bölüm 6.1 de belirtilen çizgi ölçülerinin; genişlikleri ± 5 mm'den fazla, uzunlukları 50 mm'den daha kısa, 150 mm daha uzun olmamalıdır.' Eski KGM el kitabında da aynı cümle var. Metin kısa yazılmış, ama -50/+150 mm okuması tek makul okuma. Viral cümle hesabı da doğru: 6,00-0,05 = 5,95 m ve 6,00+0,15 = 6,15 m. Tek uyarı: başlıktaki 'milimetre hesabıyla çiziliyor' abartılı. Milimetre düzeyi yalnızca genişlik için geçerli, uzunluk toleransı santimetre düzeyinde. Ayrıca bu bir kabul toleransı; sahadaki her çizginin buna uyduğunu göstermiyor.",
+   "orig_sources": [
+    "https://www.kgm.gov.tr/SiteCollectionDocuments/KGMdocuments/Trafik/IsaretlerElKitabi/KarayoluTrafikIsaretlemeStandartlari1.pdf (s. 16, 'Yatay işaretlemede toleranslar')"
+   ]
+  },
+  {
+   "id": "standart-TR9",
+   "claim": "Bir yönde ikiden fazla şeridi olan otoyollarda kesik çizgiler yan yana ve aynı hizada çiziliyor; virajlarda bu hizayı korumak için dış taraftaki çizgiler biraz uzatılıyor.",
+   "detail": "Erişme Kontrollü Karayollarında Trafik İşaretleme Standartları (KGM, 2018), Bölüm 2.2.2, s. 22: 'Bir yönde ikiden çok şeritli otoyollarda kesikli şerit çizgileri şaşırtmasız olarak aynı hizada çizilir. Kurplu kesimlerde bu uygulama yarıçap farklılığı nedeniyle bozulabileceğinden, kurp merkezine göre dışta kalan şerit çizgilerinin boyları uzatılarak dengeleme sağlanır.' Aynı bölüme göre otoyolda beyaz termoplastik (sprayplastik) yol çizgi boyası kullanılıyor.",
+   "sources": [
+    "https://www.kgm.gov.tr/SiteCollectionDocuments/KGMdocuments/Trafik/erismekontrollukarayollarindatrafikisaretlemestandartlari.pdf"
+   ],
+   "confidence": "high",
+   "verdict": "dogru",
+   "safe": "Bir yönde ikiden fazla şeridi olan otoyollarda kesik çizgiler yan yana ve aynı hizada çiziliyor. Virajlarda bu hiza bozulmasın diye virajın dış tarafında kalan çizgiler uzatılıyor.",
+   "note": "Erişme kitabı Bölüm 2.2.2, basılı s. 22 (PDF s. 23): 'Bir yönde ikiden çok şeritli otoyollarda kesikli şerit çizgileri şaşırtmasız olarak aynı hizada çizilir. Kurplu kesimlerde ... kurp merkezine göre dışta kalan şerit çizgilerinin boyları uzatılarak dengeleme sağlanır.' Birebir aynı. Bölüm 2.2'de 'beyaz termoplastik (sprayplastik) yol çizgi boyası kullanılır' ifadesi de var. İddiadaki 'biraz' kelimesinin standartta sayısal bir karşılığı yok.",
+   "orig_sources": [
+    "https://www.kgm.gov.tr/SiteCollectionDocuments/KGMdocuments/Trafik/erismekontrollukarayollarindatrafikisaretlemestandartlari.pdf (Bölüm 2.2 ve 2.2.2, s. 22)"
+   ]
+  },
+  {
+   "id": "standart-TR10",
+   "claim": "Mevzuata göre kesik çizgi kurallara uyulduğu sürece geçilebilir; devamlı çizgi boyunca ise hiçbir sebeple soldaki şeride geçilemez ve çizginin üzerinden gidilemez.",
+   "detail": "Bu tanımlar Karayolları Trafik Yönetmeliği'nde değil, Trafik İşaretleri Hakkında Yönetmelik'in Madde 10'unda ('Yol Çizgileri') yer alıyor. Metni mevzuat.gov.tr'den indirdim. 'Kesik Yol Çizgisi: Bu çizgi, kurallara uyulmak şartıyla araçlar tarafından geçilebilir.' 'Devamlı Yol Çizgisi: Bu çizgi boyunca hiç bir sebeple soldaki şeride geçilemez ve üzerinden gidilemez. Üç şeritli ve iki yönlü yol kesimlerinde en sağdaki şeride geçme hali müstesnadır.' Yan yana iki devamlı çizgi ayırıcı (refüj) anlamı taşır; karşı yöne ayrılmış kısma geçilemez. KGM Standartları-1, s. 12'deki tanımlar da aynı: 'Boyuna Kesikli Çizgi: Taşıtların öndeki taşıtları geçebileceklerini bildirir.' Karayolları Trafik Yönetmeliği'nin (RG 18.07.1997/23053 Mük.) Madde 95(c) bendi ise sürücüleri 'yer işaretlemelerine' uymakla yükümlü tutuyor. KTY'yi resmî siteden indiremedim, gayriresmî bir kopyadan okudum. O kopyada 'kesik' ya da 'devamlı çizgi' tanımı geçmiyor.",
+   "sources": [
+    "https://www.mevzuat.gov.tr/File/GeneratePdf?mevzuatNo=4699&mevzuatTur=KurumVeKurulusYonetmeligi&mevzuatTertip=5",
+    "https://www.kgm.gov.tr/SiteCollectionDocuments/KGMdocuments/Trafik/KanunYonetmelik/TrafikIsaretYonetmelik.pdf",
+    "https://www.kgm.gov.tr/SiteCollectionDocuments/KGMdocuments/Trafik/IsaretlerElKitabi/KarayoluTrafikIsaretlemeStandartlari1.pdf",
+    "https://turing.tr/wp-content/uploads/2021/07/02918-karayollari-trafik-yonetmeligi.pdf"
+   ],
+   "confidence": "high",
+   "verdict": "duzeltilmeli",
+   "safe": "Trafik İşaretleri Hakkında Yönetmelik'e göre kesik çizgi, kurallara uyulduğu sürece geçilebilir. Devamlı çizgi boyunca soldaki şeride geçilemez ve çizginin üzerinden gidilemez; tek istisna, üç şeritli iki yönlü yollarda en sağdaki şeride geçmek.",
+   "note": "TİY Madde 10'u mevzuat.gov.tr'deki resmî PDF'ten ve KGM'deki kopyadan okudum. İki tanım da birebir aynı. Ancak devamlı çizgi tanımının devamında istisna var: 'Üç şeritli ve iki yönlü yol kesimlerinde en sağdaki şeride geçme hali müstesnadır.' İddia 'hiçbir sebeple' deyip bu istisnayı atlıyor; mutlak ifade bu yüzden eksik. KGM-1 s. 12'deki tanımları ('Boyuna Kesikli Çizgi: Taşıtların öndeki taşıtları geçebileceklerini bildirir.') teyit ettim. KTY Madde 95(c) 'yer işaretlemelerine' ifadesini gayriresmî kopyada (turing.tr) teyit ettim. Aynı kopyada 'kesik' ya da 'devamlı çizgi' tanımı yok; detay kısmındaki bu tespit doğru.",
+   "orig_sources": [
+    "https://www.mevzuat.gov.tr/File/GeneratePdf?mevzuatNo=4699&mevzuatTur=KurumVeKurulusYonetmeligi&mevzuatTertip=5 (Trafik İşaretleri Hakkında Yönetmelik, Madde 10)",
+    "https://www.kgm.gov.tr/SiteCollectionDocuments/KGMdocuments/Trafik/KanunYonetmelik/TrafikIsaretYonetmelik.pdf",
+    "https://www.kgm.gov.tr/SiteCollectionDocuments/KGMdocuments/Trafik/IsaretlerElKitabi/KarayoluTrafikIsaretlemeStandartlari1.pdf (Tanımlar, s. 12)",
+    "https://turing.tr/wp-content/uploads/2021/07/02918-karayollari-trafik-yonetmeligi.pdf (KTY Madde 95, gayriresmî kopya)"
+   ]
+  },
+  {
+   "id": "standart-TR11",
+   "claim": "Kesik ve devamlı çizgi yan yana çizilmişse, sürücü kendisine en yakın çizginin kuralına uyar; kesik çizgi tarafındaki araç geçebilir, devamlı çizgi tarafındaki geçemez.",
+   "detail": "Trafik İşaretleri Hakkında Yönetmelik, Madde 10: 'Kesik ve Devamlı Yol Çizgisi: Yan yana çizilmiş kesik ve devamlı çizgilerin bulunduğu yol kesimlerinde, araca en yakın olan çizginin anlamına göre hareket edilir.' KGM Standartları-1, s. 12: 'Boyuna Devamlı ve Kesikli Çizgi: Trafiğin, kesikli çizgi tarafında geçilebileceğini, devamlı çizgi tarafında geçilemeyeceğini bildirir.' s. 17'deki tabloya göre bu çizgi, bir yönde geçmenin serbest, diğer yönde yasak olduğu kesimlerde ve tırmanma şeritli kesimlerde kullanılıyor.",
+   "sources": [
+    "https://www.mevzuat.gov.tr/File/GeneratePdf?mevzuatNo=4699&mevzuatTur=KurumVeKurulusYonetmeligi&mevzuatTertip=5",
+    "https://www.kgm.gov.tr/SiteCollectionDocuments/KGMdocuments/Trafik/IsaretlerElKitabi/KarayoluTrafikIsaretlemeStandartlari1.pdf"
+   ],
+   "confidence": "high",
+   "verdict": "dogru",
+   "safe": "Kesik ve devamlı çizgi yan yana çizilmişse sürücü, aracına en yakın çizginin kuralına uyar: kesik çizgi tarafındaki araç geçebilir, devamlı çizgi tarafındaki geçemez.",
+   "note": "TİY Madde 10'daki 'Kesik ve Devamlı Yol Çizgisi: ...araca en yakın olan çizginin anlamına göre hareket edilir.' cümlesini resmî metinden birebir teyit ettim. KGM-1 s. 12'deki 'Boyuna Devamlı ve Kesikli Çizgi: Trafiğin, kesikli çizgi tarafında geçilebileceğini, devamlı çizgi tarafında geçilemeyeceğini bildirir.' tanımı da birebir aynı. s. 17 tablosunun 'Kesikli ve Devamlı Çizgi Birlikte' satırı: 'Bir yönde geçmenin serbest, diğer yönde geçmenin yasak olduğu kesimlerde' ve 'Tırmanma şeritli kesimlerde'. Görüntüden teyit ettim.",
+   "orig_sources": [
+    "https://www.mevzuat.gov.tr/File/GeneratePdf?mevzuatNo=4699&mevzuatTur=KurumVeKurulusYonetmeligi&mevzuatTertip=5 (Madde 10)",
+    "https://www.kgm.gov.tr/SiteCollectionDocuments/KGMdocuments/Trafik/IsaretlerElKitabi/KarayoluTrafikIsaretlemeStandartlari1.pdf (s. 12 ve s. 17)"
+   ]
+  },
+  {
+   "id": "standart-TR12",
+   "claim": "Kesik çizgi, istediğin an şerit değiştirebileceğin anlamına gelmiyor: Karayolları Trafik Kanunu geçme, dönme, duraklama, durma ve park etme gibi haller dışında şerit değiştirmeyi ve işaret vermeden şerit değiştirmeyi yasaklıyor.",
+   "detail": "2918 sayılı Karayolları Trafik Kanunu, Madde 56(a) 'Şerit izleme' (mevzuat.gov.tr'deki güncel metin). Yasak olanlar: '1. Sürücülerin; geçme, dönme, duraklama, durma ve park etme gibi haller dışında şerit değiştirmeleri veya iki şeridi birden kullanmaları, 2. Kavşaklara yaklaşırken, yerleşim yerleri dışında yüzelli metre, yerleşim yerlerinde ise otuz metre mesafe içinde ve kavşaklarda şerit değiştirmeleri, ... 4. İşaret vermeden şerit değiştirmeleri, Yasaktır.' Karayolları Trafik Yönetmeliği Madde 94(f), (h) ve (j) aynı yasakları tekrarlıyor (gayriresmî kopyadan okundu).",
+   "sources": [
+    "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.2918.pdf",
+    "https://turing.tr/wp-content/uploads/2021/07/02918-karayollari-trafik-yonetmeligi.pdf"
+   ],
+   "confidence": "high",
+   "verdict": "dogru",
+   "safe": "Kesik çizgi her an şerit değiştirebileceğin anlamına gelmiyor. Karayolları Trafik Kanunu; geçme, dönme, duraklama, durma ve park etme gibi haller dışında şerit değiştirmeyi, kavşağa yaklaşırken (şehir dışında 150, şehir içinde 30 metre) ve kavşakta şerit değiştirmeyi ve işaret vermeden şerit değiştirmeyi yasaklıyor.",
+   "note": "mevzuat.gov.tr'deki güncel 2918 PDF'ini (WebFetch ile indirildi, 31.07.2026 tarihli Mevzuat Bilgi Sistemi çıktısı) pdftotext ile okudum. Madde 56(a) 'Şerit izleme': 1, 2 ve 4. bentler alıntıdakiyle birebir aynı. Atlanan 3. bent: 'Araçların cinsine ve hızına uygun olmayan şeritten gitmeleri'. 56'nın ikinci fıkrası 7574 sayılı Kanunla değişmiş; (c) dışındaki hükümlere uymayana 1.000 TL ceza öngörüyor. KTY 94(f), (h) ve (j) gayriresmî kopyada aynı yasakları tekrarlıyor.",
+   "orig_sources": [
+    "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.2918.pdf (2918 sayılı KTK, Madde 56/a)",
+    "https://turing.tr/wp-content/uploads/2021/07/02918-karayollari-trafik-yonetmeligi.pdf (KTY Madde 94, gayriresmî kopya)"
+   ]
+  },
+  {
+   "id": "standart-TR13",
+   "claim": "Yoldaki çizgilere uymak kanuni bir zorunluluk: Karayolları Trafik Kanunu 47. madde sürücüleri 'yer işaretlemelerine' uymakla yükümlü tutuyor ve bu bende uymayana idari para cezası öngörüyor.",
+   "detail": "2918 sayılı KTK Madde 47/1-c: karayolundan faydalananlar 'Trafik işaret levhaları, cihazları ve yer işaretlemeleri ile belirtilen veya gösterilen hususlara ... uymak zorundadırlar.' mevzuat.gov.tr'deki güncel metinde ikinci fıkra 12/2/2026 tarihli 7574 sayılı Kanunla değişmiş ve '(c) ve (d) bentlerine uymayan sürücüler 1.000 Türk lirası idari para cezası ile cezalandırılırlar' deniyor. Uyarılar: Belirli bir ihlale (örneğin devamlı çizgiyi geçmeye) bu maddenin mi yoksa geçme ve şerit kurallarıyla ilgili başka maddelerin mi uygulanacağını doğrulamadık. Tutarın yıllık yeniden değerlemeyle değişip değişmediğini de kontrol etmedik. Videoda belirli bir ihlal için kesin ceza tutarı vermeyin.",
+   "sources": [
+    "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.2918.pdf"
+   ],
+   "confidence": "medium",
+   "verdict": "dogru",
+   "safe": "Yoldaki çizgilere uymak kanuni bir zorunluluk: Karayolları Trafik Kanunu'nun 47. maddesi yol kullananları 'yer işaretlemelerine' uymakla yükümlü tutuyor ve bu kurala uymayan sürücüye idari para cezası öngörüyor.",
+   "note": "Güncel 2918 metninde Madde 47/1-c'yi okudum: 'Trafik işaret levhaları, cihazları ve yer işaretlemeleri ile belirtilen veya gösterilen hususlara' uymak zorunlu. İkinci fıkra '(Değişik ikinci fıkra:12/2/2026-7574/11 md.)' notunu taşıyor: '(c) ve (d) bentlerine uymayan sürücüler 1.000 Türk lirası idari para cezası ile cezalandırılırlar.' (a) için 3.000 TL, (b) için 5.000 TL. 7574 sayılı Kanunun 12/2/2026 tarihli olduğunu metindeki dipnotlardan teyit ettim. Küçük ayrıntı: yükümlülük tüm 'karayollarından faydalananlar' için, ceza ise sürücüye. Detay kısmındaki uyarılar yerinde. 7574'ün bu hükmünün yürürlük tarihini ve yıllık yeniden değerlemeyi ben de doğrulamadım. Belirli bir ihlal için tutar verilmemeli.",
+   "orig_sources": [
+    "https://www.mevzuat.gov.tr/MevzuatMetin/1.5.2918.pdf (2918 sayılı KTK, Madde 47)"
+   ]
+  },
+  {
+   "id": "standart-TR14",
+   "claim": "Çizgilerin gece farla parlamasını boyanın üzerine serpilen minik cam küreler sağlıyor; KGM şartnamesi bu kürelerin boya ağırlığının üçte biri kadar dökülmesini ve kuru çizginin gece en az 100 mcd/lx·m² ışık geri yansıtmasını istiyor.",
+   "detail": "KGM-1 (2020), s. 15'e göre yol çizgileri gece far ışığında 'özel katkı maddelerinin etkisiyle kolayca görünür olmalı' ve geri yansıtma (retrorefleksiyon) gücü yüksek olmalı. Sayısal değerler Karayolu Teknik Şartnamesi 2013'ün (KGM) Kısım 504 bölümünden: 504.04.02.06 (s. 504/10) 'Yol çizgi boyası üzerine dökülerek uygulanacak cam kürecikleri miktarı, kullanılan boya ağırlığının 1/3'ü kadar olacaktır.' Cam kürecikler TS EN 1423'e uygun olmalı. Tablo-504-10 (s. 504/15), 'Performansa Dayalı Yatay İşaretleme' (504.05) işleri için: gece görünürlüğü kuru R2 RL ≥ 100 mcd/lx·m², ıslak RW2 RL ≥ 35 mcd/lx·m², gündüz Q2 Qd ≥ 100 mcd/lx·m²; ölçümler TS EN 1436'ya göre yapılır. Tablo-504-9'a göre otoyolda minimum boya kalınlığı kenar çizgide 1,5 mm, orta çizgide 2 mm. Uyarılar: Şartnameyi KGM sitesinden değil, bir firma sitesindeki kopyadan (tamyol.com.tr) okudum. 2013 baskısının yerini daha yeni bir baskının alıp almadığını doğrulamadım. Tablo-504-10 performansa dayalı ihaleler için konmuş bir eşik, bütün yollar için genel bir kural değil.",
+   "sources": [
+    "https://www.tamyol.com.tr/UserFiles/Content/KGM_Teknik_Sartnamesi_2013.pdf",
+    "https://www.kgm.gov.tr/SiteCollectionDocuments/KGMdocuments/Trafik/IsaretlerElKitabi/KarayoluTrafikIsaretlemeStandartlari1.pdf"
+   ],
+   "confidence": "medium",
+   "viral": "Gece parlayan çizginin sırrı boya değil, içine serpilen cam boncuklar.",
+   "verdict": "duzeltilmeli",
+   "safe": "Çizgilerin gece farla parlamasını boyanın üzerine serpilen minik cam küreler sağlıyor. KGM'nin 2013 tarihli Karayolu Teknik Şartnamesi, cam küre miktarının boya ağırlığının üçte biri olmasını istiyor. Performansa dayalı çizgi ihalelerinde ise kuru çizginin gece geri yansıtması en az 100 mcd/lx·m² olmalı.",
+   "note": "Şartnamenin tamyol.com.tr'deki kopyasını indirip sayfa görüntülerine baktım. 504.04.02.06 (s. 504/10): 'cam kürecikleri miktarı, kullanılan boya ağırlığının 1/3'ü kadar olacaktır'; birebir doğru. Tablo-504-10 (s. 504/15): Gündüz Q2 Qd ≥ 100, Gece ıslak RW2 RL ≥ 35, Gece kuru R2 RL ≥ 100 mcd/lx·m²; doğru. Tablo-504-9: otoyolda minimum kalınlık kenar çizgide 1,5 mm, orta çizgide 2 mm; doğru. KGM-1 s. 15'teki 'özel katkı maddelerinin etkisiyle' ifadesini teyit ettim. Düzeltme gerekçesi: İddia cümlesi 100 mcd eşiğini genel kuralmış gibi sunuyor. Oysa tablo 504.05 'Performansa Dayalı Yatay İşaretleme' işleri içindir ve TS EN 1436'ya göre ölçülür. Kopya KGM sitesinden değil, bir firma sitesinden alınmış. Daha yeni bir baskı olup olmadığını aramada doğrulayamadım. Viral cümledeki 'içine serpilen' yerine 'üzerine serpilen' daha doğru olur; termoplastikte boyanın içinde de cam küre bulunuyor.",
+   "orig_sources": [
+    "https://www.kgm.gov.tr/SiteCollectionDocuments/KGMdocuments/Trafik/IsaretlerElKitabi/KarayoluTrafikIsaretlemeStandartlari1.pdf (s. 15)",
+    "https://www.tamyol.com.tr/UserFiles/Content/KGM_Teknik_Sartnamesi_2013.pdf (KGM Karayolu Teknik Şartnamesi 2013, Kısım 504: 504.04.02.06 s. 504/10; Tablo-504-9 ve Tablo-504-10 s. 504/15)"
+   ]
+  },
+  {
+   "id": "dunya-c1",
+   "claim": "KGM'nin otoyol işaretleme standardına göre otoyoldaki kesik şerit çizgisi 6 m boyalı, 9 m boştur ve 15 cm geniştir.",
+   "detail": "KGM, Erişme Kontrollü Karayollarında Trafik İşaretleme Standartları (2018), Bölüm 2.2.2 Şerit Çizgileri, s. 22 (PDF s. 23): \"Otoyollarda şerit çizgileri 6 m dolu, 9 m boş olarak ve 0.15 m genişlikte olacak şekilde uygulanır.\" Aynı bölüm iki ek kural koyar: bir yönde ikiden fazla şerit varsa kesik çizgiler kaydırılmadan aynı hizaya çizilir; virajlarda bu hizanın bozulmaması için dış taraftaki çizgilerin boyu uzatılır. Kenar çizgisi 0,25 m genişliktedir (2.2.1). KGM'nin bu ölçüleri neden seçtiğini açıklayan bir gerekçe metinde yok, bu yüzden bir gerekçe yazılmamalı.",
+   "sources": [
+    "https://www.kgm.gov.tr/SiteCollectionDocuments/KGMdocuments/Trafik/erismekontrollukarayollarindatrafikisaretlemestandartlari.pdf"
+   ],
+   "confidence": "high",
+   "viral": "Ezberden 1-1,5 metre deriz, ama gerçekte 6 metre: neredeyse iki araba boyu.",
+   "verdict": "dogru",
+   "safe": "KGM'nin 2018 tarihli Erişme Kontrollü Karayollarında Trafik İşaretleme Standartları'na göre otoyollarda şerit çizgisi 6 m dolu, 9 m boş ve 15 cm geniştir; kenar çizgisi 25 cm'dir.",
+   "note": "PDF'yi indirip pdftotext ile okudum. Kapakta 2018 yazıyor. 2.2.2 Şerit Çizgileri, basılı s. 22 / PDF s. 23: 'Otoyollarda şerit çizgileri 6 m dolu, 9 m boş olarak ve 0.15 m genişlikte olacak şekilde uygulanır.' Hizalama kuralı da birebir aynı: bir yönde ikiden çok şerit varsa çizgiler şaşırtmasız aynı hizada; kurplarda dıştaki çizgiler uzatılarak dengeleniyor. 2.2.1'deki kenar çizgisi 0.25 m. Metinde bir gerekçe yok, bu da doğru. Aramada daha yeni bir baskı çıkmadı. VIRAL SATIR DÜZELTİLMELİ: 6 m, 4,2-4,7 m'lik bir otomobilin yaklaşık 1,3-1,4 katı. 'Neredeyse iki araba boyu' abartılı; 'bir otomobilden belirgin biçimde uzun' ya da 'bir buçuk araba boyuna yakın' denebilir. 'Ezberden 1-1,5 metre deriz' için Türkiye'de veri yok; elimizdeki ölçüm ABD'den (Shaffer: ortanca 0,61 m).",
+   "orig_sources": [
+    "https://www.kgm.gov.tr/SiteCollectionDocuments/KGMdocuments/Trafik/erismekontrollukarayollarindatrafikisaretlemestandartlari.pdf"
+   ]
+  },
+  {
+   "id": "dunya-c2",
+   "claim": "ABD'nin trafik kılavuzu MUTCD kesik çizgi için 10 ft (3,05 m) çizgi ve 30 ft (9,14 m) boşluk önerir; ancak bu bağlayıcı bir kural değil, hıza göre aynı oranda başka ölçülere de izin veren bir tavsiyedir.",
+   "detail": "MUTCD 11. Baskı (Aralık 2023), Section 3A.04, Paragraf 06, s. 538, 'Guidance' (yani 'should' diliyle tavsiye): \"Broken lines should consist of 10-foot line segments and 30-foot gaps, or dimensions in a similar ratio of line segments to gaps as appropriate for traffic speeds and the need for delineation.\" Aynı metni Aralık 2025 tarihli Revision 1'de de kontrol ettim; yine Section 3A.04 P06, s. 538'de duruyor. Metre çevirisi bana ait (1 ft = 0,3048 m).",
+   "sources": [
+    "https://mutcd.fhwa.dot.gov/pdfs/11th_Edition/part3.pdf",
+    "https://mutcd.fhwa.dot.gov/pdfs/11th_Editionr1/mutcd11theditionr1hl.pdf"
+   ],
+   "confidence": "high",
+   "verdict": "dogru",
+   "safe": "ABD'nin trafik kılavuzu MUTCD, kesik çizgi için 10 ft (3,05 m) çizgi ve 30 ft (9,14 m) boşluk önerir. Bu bağlayıcı bir 'Standard' değil, 'Guidance' (tavsiye) maddesidir; hıza ve yönlendirme ihtiyacına göre benzer oranda başka ölçülere de izin verir.",
+   "note": "part3.pdf'yi indirdim. Section 3A.04, P06, 'Guidance' başlığı altında, PDF s. 2 / basılı 'Page 538', December 2023. Alıntı birebir doğru. Revision 1 PDF'sini de indirdim (1162 sayfa, kapakta 'Including Revision 1 dated December 2025'). Aynı paragraf PDF s. 579'da, yine 'Page 538' olarak duruyor. Çeviriler doğru: 10 ft = 3,048 m, 30 ft = 9,144 m.",
+   "orig_sources": [
+    "https://mutcd.fhwa.dot.gov/pdfs/11th_Edition/part3.pdf",
+    "https://mutcd.fhwa.dot.gov/pdfs/11th_Editionr1/mutcd11theditionr1hl.pdf"
+   ]
+  },
+  {
+   "id": "dunya-c3",
+   "claim": "ABD'de eskiden 15 ft çizgi ve 25 ft boşluk kullanılıyordu; FHWA 1977'de 10 ft çizgi ve 30 ft boşluğa (1:3) geçilmesini önerdi, çünkü kendi çalışmaları kısa çizginin etkinliği düşürmediğini ve boya malzemesini belirgin biçimde azalttığını gösteriyordu.",
+   "detail": "M. R. Norman, 'Recommended Pavement Marking Segment to Gap Ratio Changed', ITE Transportation Engineering, Cilt 47, Sayı 10, s. 59, Ekim 1977 (TRID özeti). Özetten alıntı: \"Previously, section 3A-6 of the MUTCD provided that ... segments and gaps usually in the ratio of 3:5 and that on rural highways, the commonly used standard is 15-foot segments and 25-foot gaps. Recent studies sponsored by the FHWA indicate that a shortened line segment will not reduce the effectiveness of pavement markings while significantly reducing the amount of marking materials used.\" Değişiklik eyaletlere yavaş yayıldı: Shaffer ve ark. (2008), Ohio'daki I-76 otoyolunda 1994'te çizgilerin hâlâ 15 ft (4,57 m) olduğunu yazar. Okuduğum kaynak makalenin tamamı değil, TRID'deki yazar özeti.",
+   "sources": [
+    "https://trid.trb.org/View/60463",
+    "https://link.springer.com/content/pdf/10.3758/PP.70.8.1571.pdf"
+   ],
+   "confidence": "high",
+   "viral": "Amerika kesik çizgiyi kısalttı, çünkü boya tasarrufu sağlıyordu ve kimse farkı görmedi.",
+   "verdict": "duzeltilmeli",
+   "safe": "1977'den önce MUTCD, kesik çizgide çizgi/boşluk oranının genelde 3:5 olduğunu ve kırsal yollarda yaygın standardın 15 ft çizgi + 25 ft boşluk olduğunu yazıyordu. FHWA 1977'de 1:3 oranını, kırsal yollar için 10 ft çizgi + 30 ft boşluğu önerdiğini duyurdu. Gerekçe: FHWA destekli çalışmalar, kısa çizginin etkinliği düşürmeden boya malzemesini belirgin biçimde azalttığını gösteriyordu.",
+   "note": "TRID 60463 kaydını açtım. Özet alıntısı doğru (Norman, ITE Transportation Engineering 47(10), s. 59, Ekim 1977). Ancak metin 15/25'i yalnızca 'on rural highways, the commonly used standard' diye veriyor; iddia bunu tüm ABD'ye genelliyor. Shaffer (2008) de bunun evrensel olmadığını gösteriyor: Ohio I-76'da 1994'te çizgi 4,57 m (15 ft) ama boşluk 9,15 m (30 ft); Harte 1975'e göre boşluklar 7,62-9,15 m. Shaffer'ın 1994'te 15 ft dediği kısım doğru (s. 1572). VIRAL SATIR DÜZELTİLMELİ: 'kimse farkı görmedi' kaynakta yok. Kaynak yalnızca 'etkinlik düşmedi' diyor; 'şikâyet gelmedi' bilgisi ise c4'teki Pennsylvania örneğinden geliyor.",
+   "orig_sources": [
+    "https://trid.trb.org/View/60463",
+    "https://link.springer.com/content/pdf/10.3758/PP.70.8.1571.pdf"
+   ]
+  },
+  {
+   "id": "dunya-c4",
+   "claim": "FHWA'nın 1976 tarihli raporuna göre sürücü için çizginin boyundan çok yol boyunca gördüğü çizgi 'uç' sayısı önemlidir; bu yüzden aynı 40 ft'lik düzende kısaltılmış çizgiler de neredeyse aynı güçte algılanır.",
+   "detail": "Bali, McGee ve Taylor, State-of-the-Art on Roadway Delineation Systems, FHWA-RD-76-73 (Mayıs 1976), Bölüm II, Öneri 1, s. 43-45. Rapordan: \"the number of mark 'ends' observed is of relatively greater significance than the length of the marks--i.e., the shorter marks are almost as strong\". Aynı yerde şunlar da var: boşluk oranını artırmak boya maliyetini düşürür; NCHRP Report 130'daki 5 ft çizgi + 35 ft boşluk denemesinde araç hızlarında ve şerit içindeki konumda anlamlı bir değişiklik görülmedi; Pennsylvania çizgiyi 15 ft'ten 10 ft'e indirdiğinde halktan hiçbir şikâyet gelmedi; İngiltere'nin 3 ft + 24 ft orta çizgisi sürücülerin görsel kabulünü ve 'titreşim' (flicker) etkisini ölçen laboratuvar simülasyonlarıyla bulunmuştu. Uyarı: rapor kendini standart saymaz ve önerilerinin geçici olduğunu, bazılarının sınırlı veriye dayandığını belirtir.",
+   "sources": [
+    "https://rosap.ntl.bts.gov/view/dot/67501/dot_67501_DS1.pdf"
+   ],
+   "confidence": "high",
+   "verdict": "duzeltilmeli",
+   "safe": "FHWA için hazırlanan 1976 tarihli bir duruma genel bakış raporu (Bali, McGee ve Taylor) insan faktörleri açısından şunu öne sürer: çizginin boyundan çok yol boyunca görülen çizgi 'uç' sayısı önemlidir. Bu yüzden aynı 40 ft'lik düzende kısaltılmış çizgiler neredeyse aynı güçte algılanır. Rapor bunu ölçümle değil görüş olarak söyler ve önerilerini geçici sayar.",
+   "note": "PDF'yi indirdim (FHWA-RD-76-73, Mayıs 1976). Part II 'Recommendations Subject to Ongoing Research' s. 42'de başlıyor; Öneri 1 s. 43-45'te (PDF s. 51-53). 'Ends' alıntısı, boya tasarrufu, NCHRP 130'daki 5 ft + 35 ft denemesi (hız ve yanal konumda anlamlı değişiklik yok), İngiltere'nin 3 ft + 24 ft deseni (laboratuvar simülasyonu, 'flicker') ve 'interim... limited data' uyarısı birebir doğru. Düzeltilmesi gerekenler: (1) Kapaktaki notta içeriğin hazırlayan firmanın (Science Applications Inc.) görüşü olduğu, DOT'un resmî görüşü olmadığı yazıyor; 'FHWA'nın raporuna göre' ifadesi bunu FHWA'nın resmî görüşü gibi gösteriyor. (2) 'Uç' cümlesi bir ölçüm sonucu değil, 'from a human factors standpoint' denilen bir görüş. (3) Öneri 1 aslında orta çizgiler için ve 6 ft + 34 ft öneriyor. (4) Pennsylvania'da çizgi boyu 15 ft'ten 10 ft'e düşerken genişlik de 6 inçten 4 inçe indi; bu yalnızca bazı bölünmüş yollarda uygulandı.",
+   "orig_sources": [
+    "https://rosap.ntl.bts.gov/view/dot/67501/dot_67501_DS1.pdf"
+   ]
+  },
+  {
+   "id": "dunya-c5",
+   "claim": "İngiltere'de otoyollarda ve hız sınırı 40 mph'yi (yaklaşık 64 km/s) aşan yollarda şerit çizgisi 2 m çizgi ve 7 m boşluktur; 40 mph ve altındaki yollarda 1 m çizgi ve 5 m boşluktur.",
+   "detail": "Traffic Signs Manual Chapter 5 Road Markings (DfT, 2018 baskısı, 2019'da yayımlandı): Şekil 2-3 (s. 14) diyagram 1005'i 1000/5000 mm, diyagram 1005.1'i 2000/7000 mm olarak verir; Tablo 2-2 (s. 15): 1005 '40 or less', 1005.1 'Over 40'; Tablo 7-3 (s. 77): 50-70 mph için '1005.1 ... 2 x 7 x 150' (uzunluk m x boşluk m x genişlik mm). Madde 2.3.5: otoyollarda ve 70 mph'lik bölünmüş yollarda görünürlük mesafesi arttığı için 150 mm'lik geniş çizgi kullanılmalıdır. Diyagram numaraları TSRGD 2016'daki S11-4-4 ve S11-4-5'e karşılık gelir.",
+   "sources": [
+    "https://assets.publishing.service.gov.uk/media/5c4ace6ded915d38a0611abc/traffic-signs-manual-chapter-05.pdf"
+   ],
+   "confidence": "high",
+   "verdict": "dogru",
+   "safe": "Birleşik Krallık'ın Traffic Signs Manual'ına göre hız sınırı 40 mph'yi (yaklaşık 64 km/s) aşan yollarda, otoyollar dahil, şerit çizgisi 2 m çizgi + 7 m boşluktur. 40 mph ve altındaki yollarda 1 m çizgi + 5 m boşluktur. Otoyollarda 150 mm'lik geniş çizgi önerilir.",
+   "note": "TSM Chapter 5 (2018, © 2019) PDF'sini okudum. Şekil 2-3 basılı s. 14'te: diyagram 1005 = 1000/5000 mm, 1005.1 = 2000/7000 mm. Tablo 2-2 s. 15'te: '40 or less' ve 'Over 40', genişlik 100 (150) mm. Tablo 7-3 s. 77'de: 50/60/70 mph için '2 x 7 x 150', 40 ve altı için '1 x 5 x 100'. Madde 2.3.5, s. 14: 70 mph'lik bölünmüş yollarda ve otoyollarda görünürlük mesafesini artırdığı için 150 mm. TSRGD numaraları S11-4-4 ve S11-4-5 doğru. 40 mph = 64,4 km/s. Küçük not: kılavuz yalnızca İngiltere'yi değil tüm Birleşik Krallık'ı kapsıyor.",
+   "orig_sources": [
+    "https://assets.publishing.service.gov.uk/media/5c4ace6ded915d38a0611abc/traffic-signs-manual-chapter-05.pdf"
+   ]
+  },
+  {
+   "id": "dunya-c6",
+   "claim": "İngiliz kılavuzuna göre sürücü çizgiyi en az 2 saniyelik yol mesafesinden görebilmelidir; hız arttıkça bu mesafe uzar, bu yüzden yüksek hızlı yollarda çizgiler daha uzun ve daha geniş olmalıdır.",
+   "detail": "Traffic Signs Manual Chapter 5 (2018), s. 9. Madde 1.6.4: \"longitudinal lines need to be wider and longer where speeds are high, in order to maintain adequate conspicuity.\" Madde 1.7.3: Avrupa ortak araştırmalarına göre sürücüler yönlendirici çizgileri en az iki saniyelik yol süresine denk gelen mesafeden görebilmelidir; görünürlük bundan azsa virajlara geç tepki verirler. Madde 1.7.4: çizgi daha genişse, çizgi/boşluk oranı (mark-to-gap ratio) daha yüksekse ya da geri yansıtma değeri daha fazlaysa görünürlük mesafesi artar. Aynı madde 70 yaşındaki bir sürücünün görünürlük mesafesinin 20'li yaşlardakilere göre yüzde 20'den fazla düşebileceğini de söyler.",
+   "sources": [
+    "https://assets.publishing.service.gov.uk/media/5c4ace6ded915d38a0611abc/traffic-signs-manual-chapter-05.pdf"
+   ],
+   "confidence": "high",
+   "viral": "Çizgilerin boyu rastgele değil: sürücü önündeki yolu en az 2 saniye önceden görebilsin diye ayarlanıyor.",
+   "verdict": "dogru",
+   "safe": "Birleşik Krallık kılavuzu, Avrupa ortak araştırmalarına dayanarak sürücülerin yönlendirici çizgileri en az 2 saniyelik yol mesafesinden fark edebilmesi gerektiğini söyler. Hız arttıkça bu mesafe uzar; bu yüzden hızlı yollarda boyuna çizgiler daha geniş ve daha uzun olmalıdır.",
+   "note": "TSM Ch.5 s. 9'u (PDF s. 10) okudum. 1.6.4: 'longitudinal lines need to be wider and longer where speeds are high, in order to maintain adequate conspicuity.' 1.7.3: iki saniyelik 'preview time' ve hız arttıkça gereken mesafenin artması. 1.7.4: daha geniş çizgi, daha yüksek 'mark-to-gap ratio' ve daha yüksek geri yansıtma görünürlük mesafesini artırır; 70 yaşındaki bir sürücüde %20'den fazla azalma 'might' (olabilir). Hepsi doğru. 2 saniye ile çizgi boyu arasındaki bağı kılavuz tek cümlede kurmuyor; 1.6.4, 1.7.3 ve 1.7.4 birlikte bu bağı makul biçimde destekliyor. VIRAL SATIR DÜZELTİLMELİ: '2 saniye' yolun tamamı için değil, çizgiyi fark etme mesafesi için. Ayrıca bu bir Birleşik Krallık/Avrupa ilkesi, evrensel bir boyutlandırma formülü değil. Öneri: 'İngiliz kılavuzuna göre sürücü çizgiyi en az 2 saniye önceden fark edebilmeli; hızlı yollarda çizgilerin daha uzun ve geniş olmasının bir nedeni bu.'",
+   "orig_sources": [
+    "https://assets.publishing.service.gov.uk/media/5c4ace6ded915d38a0611abc/traffic-signs-manual-chapter-05.pdf"
+   ]
+  },
+  {
+   "id": "dunya-c7",
+   "claim": "Fransa'da otoyol şerit çizgisi (T1 tipi) 3 m çizgi ve 10 m boşluktur; tüm kesik çizgi desenleri 13 m'nin katı ya da alt katı olacak şekilde seçilmiştir.",
+   "detail": "Instruction interministérielle sur la signalisation routière, 7. kısım 'Marques sur chaussées' (konsolide sürüm VC20250404). Madde 113-1 B'deki tablo (PDF s. 6): T1 tipinde çizgi 3 m, boşluk 10 m, 'rapport plein/vide 1/3'. Aynı yerde: \"Ces modulations (tirets plus intervalles) sont des multiples ou des sous-multiples de 13 m\" ve desenlerin \"pour la bonne compréhension des marquages\" (işaretler kolay anlaşılsın diye) çizgi/boşluk oranıyla birbirinden ayrıldığı yazılıdır. Madde 113-1 C: otoyollarda birim genişlik u = 7,5 cm. Madde 114-2 C (PDF s. 13): \"Autoroutes - Les lignes de délimitation de voies sont de type T1 de largeur 2u\", yani 15 cm.",
+   "sources": [
+    "https://equipementsdelaroute.cerema.fr/IMG/pdf/iisr_7epartie_vc_20250404.pdf"
+   ],
+   "confidence": "high",
+   "verdict": "dogru",
+   "safe": "Fransa'da otoyol şerit çizgisi T1 tipidir: 3 m çizgi, 10 m boşluk ve 15 cm (2u) genişlik. Fransız talimatı tüm kesik çizgi desenlerini (çizgi + boşluk) 13 m'nin katı ya da alt katı olarak tanımlar.",
+   "note": "IISR 7. kısım VC20250404 PDF'sini okudum (değişiklik listesi 4 Nisan 2025'e kadar). 113-1 B, PDF s. 6'da tablo: T1 = 3 m / 10 m, plein/vide 1/3. 'Pour la bonne compréhension des marquages' ve 'multiples ou des sous-multiples de 13 m' birebir aynı. Hesabı kendim yaptım: T1 3+10=13, T'1 1,5+5=6,5, T3 3+1,33≈4,33 (13/3), T2 3+3,5=6,5, T'3 20+6=26, T4 39+13=52; hepsi 13'ün katı ya da alt katı. u = 7,5 cm (113-1 C) PDF s. 7'de. 114-2 C 'Autoroutes... type T1 de largeur 2u' PDF s. 13'te; 2u = 15 cm. Not: 114-2'nin başlığı 'autoroutes en rase campagne', yani kırsal otoyollar.",
+   "orig_sources": [
+    "https://equipementsdelaroute.cerema.fr/IMG/pdf/iisr_7epartie_vc_20250404.pdf"
+   ]
+  },
+  {
+   "id": "dunya-c8",
+   "claim": "Avusturya'nın yönetmeliğine göre otoyolda kesik çizgi 6 m çizgi ve 12 m boşluktur; diğer şehir dışı yollarda 6 m çizgi ve 9 m boşluk, yerleşim yerlerinde ise 3 m çizgi ve 3 m boşluk kullanılır.",
+   "detail": "Bodenmarkierungsverordnung, BGBl. Nr. 848/1995, § 5 Abs. 1 (1.1.1996'dan beri yürürlükte; metni RIS açık veri servisinden okudum): \"Auf Autobahnen und Autostraßen hat die Breite der Leitlinien mindestens 15 cm, die Länge des Striches 6 m sowie die Länge der Unterbrechung 12 m zu betragen ... Auf allen übrigen Freilandstraßen ... 6 m sowie ... 9 m ... In Ortsgebieten und vor Kreuzungen ... je 3 m.\" Almanya hakkında not: Almanya için sık tekrarlanan 6 m/12 m değerini birincil kaynaktan doğrulayamadım. VwV-StVO 'Zu Zeichen 340' (Rn. 5) yalnızca Leitlinie'lerin RMS'ye göre çizileceğini söylüyor ve ölçü vermiyor; RMS'nin (2019) metni ise açık erişimde değil. Bu yüzden Almanya için kesin bir rakam verilmemeli.",
+   "sources": [
+    "https://ogd.ris.bka.gv.at/Dokumente/Bundesnormen/NOR12156334/NOR12156334.xml",
+    "https://data.bka.gv.at/ris/api/v2.6/Bundesrecht?Applikation=BrKons&Titel=Bodenmarkierungsverordnung",
+    "https://www.verwaltungsvorschriften-im-internet.de/bsvwvbund_26012001_S3236420014.htm"
+   ],
+   "confidence": "high",
+   "verdict": "dogru",
+   "safe": "Avusturya'nın Bodenmarkierungsverordnung'una göre otoyollarda ve Autostraße'lerde kesik çizgi en az 15 cm genişlikte, 6 m çizgi + 12 m boşluktur. Diğer şehir dışı yollarda 6 m çizgi + 9 m boşluk, yerleşim yerlerinde ve kavşaklardan önce 3 m çizgi + 3 m boşluk kullanılır. Almanya için birincil kaynaktan rakam verilemiyor.",
+   "note": "RIS XML'ini indirdim. § 5 Abs. 1 metni birebir aynı; yürürlük tarihi 01.01.1996. RIS OGD API'sinde (BrKons) § 5'i sorguladım: NOR12156334 sürümünün yürürlükten kalkma tarihi yok, yani güncel; önceki sürüm 1977-1995 arası. Ek ayrıntı: fiziksel ayırıcısı olmayan Autostraße'lerde boşluk 9 m'ye, genişlik 10 cm'ye indirilebilir. VwV-StVO 'Zu Zeichen 340' sayfasını da açtım. Rn. 5 (III) yalnızca 'Leitlinien sind nach den RMS auszuführen' diyor, ölçü vermiyor; doğru. (Rn. 2'de bisiklet koruma şeridi için 1:1 oranı var.)",
+   "orig_sources": [
+    "https://ogd.ris.bka.gv.at/Dokumente/Bundesnormen/NOR12156334/NOR12156334.xml",
+    "https://www.verwaltungsvorschriften-im-internet.de/bsvwvbund_26012001_S3236420014.htm"
+   ]
+  },
+  {
+   "id": "dunya-c9",
+   "claim": "Japonya'nın 1974 tarihli bakanlık genelgesi şerit çizgisi için standart değer olarak 6 m çizgi ve 9 m boşluk verir; tasarım hızı 80 km/s ve üzeri olan otomobil yolları için bu değer 8 m çizgi ve 12 m boşluktur.",
+   "detail": "Kentsel İşler ve Yollar Bürosu genelgesi 区画線の設置様式について (昭和49年12月26日, 都街発第67号・道企発第99号), s. 1'deki tablo. 車線境界線 (破線) için: kentsel yollarda ve kırsal yollarda 6,00 m çizgi + 9,00 m boşluk; tasarım hızı 80 km/s ve üzeri 自動車専用道路'da 8,00 m + 12,00 m. Not 1(2): keskin virajlarda, dik eğimlerde ya da kavşakların sık olduğu kentsel bölgelerde, yani çizginin kesintisiz görünmesi özellikle gerektiğinde oran 1:1'e (5 m + 5 m) indirilebilir. Uyarılar: Not 3'e göre genelge ulusal ekspres yollara (高速自動車国道) ve kentsel otoyollara uygulanmaz. Belge 1974 tarihli ve bugün hâlâ yürürlükte olup olmadığını doğrulamadım.",
+   "sources": [
+    "https://www.mlit.go.jp/road/sign/kijyun/pdf/19741226kukakusenn.pdf",
+    "https://www.driveplaza.com/safetydrive/mamechishiki/017.html"
+   ],
+   "confidence": "medium",
+   "verdict": "dogru",
+   "safe": "Japonya'da 1974 tarihli bir İnşaat Bakanlığı genelgesi (bugün MLIT sitesinde yayımlanıyor), şerit çizgisi için standart değeri 6 m çizgi + 9 m boşluk olarak verir. Tasarım hızı 80 km/s ve üzeri olan otomobil yollarında bu değer 8 m + 12 m'dir. Genelge ulusal ekspres yolları ve kentsel otoyolları kapsamaz; ancak NEXCO'nun kendi açıklamasına göre ekspres yollarda da 8 m + 12 m kullanılır.",
+   "note": "PDF'yi okudum (3 sayfa). 昭和49年12月26日, 都街発第67号・道企発第99号, 都市局街路課長・道路局企画課長 imzalı. 車線境界線（破線）: ① kentsel ve ② kırsal yollarla 80 km/s altı otomobil yolları için 6,00 / 9,00; ③ için 8,00 / 12,00. Not 1(2): oran 1:1'e (5 m + 5 m) indirilebilir. Not 3: 高速自動車国道 ve 都市高速道路 hariç. Hepsi doğru. Küçük düzeltme: genelgeyi tek bir 'Kentsel İşler ve Yollar Bürosu' değil, İnşaat Bakanlığı'nın Kent Bürosu (Sokaklar Şube Müdürü) ile Yol Bürosu (Planlama Şube Müdürü) birlikte yayımlamış; bu bir 'şube müdürleri genelgesi'. Metinde '今後当分の間' (şimdilik) yazıyor; bugün yürürlükte olup olmadığını doğrulayamadım, ama MLIT hâlâ standartlar klasöründe yayımlıyor. NEXCO Doğu'nun driveplaza sayfasına göre ekspres yollardaki çizgi 8 m + 12 m.",
+   "orig_sources": [
+    "https://www.mlit.go.jp/road/sign/kijyun/pdf/19741226kukakusenn.pdf"
+   ]
+  },
+  {
+   "id": "dunya-c10",
+   "claim": "1968 Viyana Trafik İşaretleri Sözleşmesi kesik çizginin ve boşluğun uzunluğu belirlenirken araç hızının dikkate alınmasını ister ve şehir dışındaki yollar için 2 ile 10 m arasında çizgi boyu öngörür.",
+   "detail": "Convention on Road Signs and Signals (Viyana, 8 Kasım 1968), 1995 ve 2006 değişikliklerini içeren konsolide BM metni, Ek 8, Bölüm II, paragraf 4: \"The speed of vehicles on the section of road ... should be taken into account in determining the length of the strokes and of the gaps between them.\" Paragraf 5: \"Outside built-up areas a broken line should consist of strokes between 2 m and 10 m long\" (PDF s. 59). Madde 26 paragraf 2(b) (PDF s. 19): uyarı çizgilerinde boşluk/çizgi oranı, şerit ayıran çizgilere göre belirgin biçimde daha küçük olmalıdır; yani çizginin anlamı orandan okunur. Metni Estonya resmî gazetesi Riigi Teataja'nın yayımladığı konsolide sürümden okudum.",
+   "sources": [
+    "https://www.riigiteataja.ee/aktilisa/2310/5202/2003/1968AA1.pdf"
+   ],
+   "confidence": "high",
+   "verdict": "duzeltilmeli",
+   "safe": "1968 Viyana Trafik İşaretleri Sözleşmesi'ne göre kesik çizginin ve aradaki boşluğun uzunluğu belirlenirken araç hızı dikkate alınmalıdır. Şehir dışındaki yollarda çizgi boyunun 2 ile 10 m arasında olması önerilir. Kaynak: konsolide metinde Ek 2, Bölüm II, A, paragraf 4-5; 1968'in orijinal metninde Ek 8.",
+   "note": "Riigi Teataja'daki konsolide PDF'yi okudum (1995 ve 2006 değişiklikleri dahil). İçerik doğru: paragraf 4'teki hız cümlesi ve paragraf 5'teki 'strokes between 2 m and 10 m long' PDF s. 59'da. Madde 26 paragraf 2(b) PDF s. 19'da ve doğru aktarılmış. DÜZELTME: Bu konsolide metinde yol çizgileri 'Annex 2 ROAD MARKINGS' başlığı altında; 2006 değişikliğiyle ekler yeniden numaralandı. 'Ek 8' yalnızca 1968'in orijinal metni için geçerli (1973 Protokolü de 'Ad Annex 8' diye ona atıf yapıyor). Ayrıca iki hüküm de 'should' diliyle yazılmış, yani 'ister' yerine 'önerir / dikkate alınmalıdır' demek daha doğru.",
+   "orig_sources": [
+    "https://www.riigiteataja.ee/aktilisa/2310/5202/2003/1968AA1.pdf"
+   ]
+  },
+  {
+   "id": "dunya-c11",
+   "claim": "1973 Cenevre Yol İşaretleri Protokolü'nün ilk metnine göre şerit ayıran kesik çizgide boşluk normalde çizginin 2 ile 4 katı arasında olmalı ve 12 m'yi aşmamalıdır; Türkiye bu protokole 17 Mayıs 2023'te katıldı.",
+   "detail": "Protocol on Road Markings (Cenevre, 1 Mart 1973), UNTS Cilt 1394, No. 23345, s. 271, nokta 7 (Ek 8, Bölüm II, paragraf 5 yerine geçen metin): \"strokes not less than 1 m ... The length of the gaps should normally be from two to four times the length of the strokes. The length of the gaps should not exceed 12 m.\" Uyarı çizgisinde ise tersine çizgi, boşluğun 2-4 katıdır. Türkiye'nin katılım tarihi BM Antlaşmalar Koleksiyonu XI-B-25 durum sayfasından. Önemli uyarılar: protokol 1995'te ve 2005'te değiştirildi, 2025'te de yeni bir değişiklik önerildi; bu paragrafın değişip değişmediğini kontrol etmedim. KGM otoyol oranı (9/6 = 1,5) bu aralığın altında kalıyor, ama metin 'normally' (normalde) diyor ve güncel metni doğrulamadım. Bu yüzden 'Türkiye kurala uymuyor' gibi bir ifade kullanılmamalı.",
+   "sources": [
+    "https://treaties.un.org/doc/Publication/UNTS/Volume%201394/volume-1394-I-23345-English.pdf",
+    "https://treaties.un.org/doc/Publication/MTDSG/Volume%20I/Chapter%20XI/XI-B-25.en.pdf",
+    "https://treaties.un.org/doc/Publication/CN/1994/CN.63.1994-Eng.pdf",
+    "https://www.gesetze.li/konso/pdf/2021079000"
+   ],
+   "confidence": "medium",
+   "verdict": "dogru",
+   "safe": "1973 Cenevre Yol Çizgileri (Yatay İşaretleme) Protokolü'ne göre şerit ayıran kesik çizgide çizgi en az 1 m olmalıdır. Boşluk normalde çizginin 2 ile 4 katı olmalı ve 12 m'yi aşmamalıdır. Türkiye protokole 17 Mayıs 2023'te katıldı.",
+   "note": "UNTS Cilt 1394 PDF'sinde nokta 7, 'Ad Annex 8... Paragraph 5' basılı s. 271'de (PDF s. 9); alıntı birebir doğru, uyarı çizgisi için ters 2-4 kat kuralı da var. BM durum sayfasında Türkiye '17 May 2023 a' (katılım). Değişiklikleri de kontrol ettim: 1994-95 değişiklik metni (C.N.63.1994, ECE/TRANS/99) yalnızca 3. ve 4. noktaları (Madde 26 ve 27) siliyor, 7. noktaya dokunmuyor. Liechtenstein'ın 2021 tarihli resmî konsolide metninde (LGBl. 2021 Nr. 79, Fassung 02.03.2021) 7. nokta, 5. numara aynen duruyor (2-4 kat, en fazla 12 m). 2025'teki Lüksemburg önerisinin içeriğini göremedim. KGM oranı 9/6 = 1,5; KGM standardı 2018 tarihli, yani Türkiye'nin 2023'teki katılımından önce. 'Kurala uymuyor' denmemesi uyarısı yerinde. Küçük not: 'Yol İşaretleri' tabelalarla karışabilir; doğrusu 'Yol Çizgileri / Yatay İşaretleme Protokolü'.",
+   "orig_sources": [
+    "https://treaties.un.org/doc/Publication/UNTS/Volume%201394/volume-1394-I-23345-English.pdf",
+    "https://treaties.un.org/doc/Publication/MTDSG/Volume%20I/Chapter%20XI/XI-B-25.en.pdf"
+   ]
+  },
+  {
+   "id": "dunya-c12",
+   "claim": "Hakemli bir ABD çalışmasında 355 üniversite öğrencisi otoyoldaki kesik çizginin boyunu ezberden tahmin etti; ortanca tahmin 0,61 m (2 ft) çıktı, oysa çizgi o sırada 4,57 m'ydi ve öğrencilerin yalnızca %2'si 3,05 m ya da üstünü söyledi.",
+   "detail": "Shaffer, Maynor ve Roy (2008), 'The visual perception of lines on the road', Perception & Psychophysics 70(8):1571-1580, Deney 1, s. 1572-1573. Soru Ohio'daki I-76 otoyolundaki çizgiler hakkındaydı ve deney 1994'te Kent State Üniversitesi öğrencileriyle yapıldı. Ortalama tahmin 0,81 m. Katılımcıların %60'ı 0,61 m veya altını, %88'i 1,22 m veya altını, %95'ten fazlası 1,83 m veya altını söyledi. Boşluk için ortanca tahmin yine 0,61 m çıktı, gerçek boşluk ise 9,15 m'ydi. Makale, daha önceki bir çalışmada (Harte, 1975) çizgilerin yaklaşık %50 kısa tahmin edildiğini de aktarır. Katılımcılar ABD'li öğrencilerdi; sonuçlar Türk sürücülere doğrudan genellenmemeli.",
+   "sources": [
+    "https://link.springer.com/content/pdf/10.3758/PP.70.8.1571.pdf"
+   ],
+   "confidence": "high",
+   "viral": "355 kişiye soruldu: çoğu 60 cm dedi, gerçek boy bunun 7 katından fazlaydı.",
+   "verdict": "dogru",
+   "safe": "Hakemli bir ABD çalışmasında 355 üniversite öğrencisi, Ohio'daki I-76 otoyolundaki kesik çizginin boyunu ezberden tahmin etti. Ortanca tahmin 0,61 m (2 ft) çıktı; oysa çizgi o sırada 4,57 m'ydi. Öğrencilerin yalnızca %2'si 3,05 m ya da daha uzun bir değer söyledi.",
+   "note": "Makalenin tam PDF'sini okudum: Shaffer, Maynor ve Roy (2008), Perception & Psychophysics 70(8). Deney 1, s. 1572-1573. Doğrulanan değerler: 355 Kent State öğrencisi; 1994'te ODOT'a göre çizgi 4,57 m; ortanca 0,61 m, ortalama 0,81 m; %60'ı ≤0,61 m, %88'i ≤1,22 m, %95'ten fazlası ≤1,83 m; %2'si ≥3,05 m. Boşluk için ortanca 0,61 m, gerçek boşluk 9,15 m. Harte (1975) yaklaşık %50 eksik tahmin bulmuş. Hesap: 4,57/0,61 = 7,5, yani '7 katından fazla' doğru. VIRAL SATIR DÜZELTİLMELİ: 'çoğu 60 cm dedi' değil, '%60'ı 60 cm ya da daha kısa dedi'.",
+   "orig_sources": [
+    "https://link.springer.com/content/pdf/10.3758/PP.70.8.1571.pdf"
+   ]
+  },
+  {
+   "id": "dunya-c13",
+   "claim": "Aynı çalışmada saatte yaklaşık 40 ve 97 km hızla giden bir arabadan bakan katılımcılar 3,05 m'lik çizgileri ortalama 1,19 m tahmin etti; ne aracın hızı ne de oturdukları yer tahmini değiştirdi.",
+   "detail": "Shaffer, Maynor ve Roy (2008), Deney 3, s. 1577. 28 katılımcı ön ya da arka yolcu koltuğunda oturdu; hızlar 40,25 ve 96,6 km/s. Hız, oturma yeri ve bakış yönü (öne ya da arkaya) için anlamlı bir etki bulunmadı. Yazarların açıklaması: çizgi bakış doğrultusuna paralel uzandığı için, ne kadar yakın olursa olsun gözde çok küçük bir görüş açısı kaplar; insanlar da boyu bu küçük açıdan çıkarır (derinlik sıkışması). Katılımcılar sürücü değil yolcuydu.",
+   "sources": [
+    "https://link.springer.com/content/pdf/10.3758/PP.70.8.1571.pdf"
+   ],
+   "confidence": "high",
+   "verdict": "dogru",
+   "safe": "Aynı çalışmada saatte yaklaşık 40 ve 97 km hızla giden bir arabada yolcu olarak oturan 28 katılımcı, 3,05 m'lik çizgileri ortalama 1,19 m tahmin etti. Aracın hızının, oturulan yerin ve öne ya da arkaya bakmanın tahmin üzerinde anlamlı bir etkisi bulunmadı.",
+   "note": "Deney 3'ü okudum (s. 1576-1577). 28 katılımcı ön ya da arka yolcu koltuğunda oturdu; hızlar 40,25 ve 96,6 km/s. Öne bakınca ortalama 1,18 m, arkaya bakınca 1,2 m, birlikte 1,19 m. Hız ve oturma yeri için F(1,24) = 1,52 ve 0,93, p > .1; bakış yönü için p > .5. Yazarların görüş açısı açıklaması doğru aktarılmış. Çizginin 3,05 m olduğu deney yönteminde açıkça yazmıyor; Genel Tartışma'daki 'line length changed from 4.57 to 3.05 m' ifadesinden ve Not 2'den (Ohio'da güncel çizgi 3,05 m) çıkarılıyor. Örneklem küçük (hız gruplarında 15 ve 13 kişi). Bu yüzden 'değiştirmedi' yerine 'anlamlı etki bulunmadı' demek daha doğru.",
+   "orig_sources": [
+    "https://link.springer.com/content/pdf/10.3758/PP.70.8.1571.pdf"
+   ]
+  },
+  {
+   "id": "dunya-c14",
+   "claim": "Bu standartlar yan yana konulduğunda Türkiye'deki 6 m'lik otoyol çizgisi ABD'dekinin (3,05 m) yaklaşık iki katı, İngiltere'dekinin (2 m) üç katıdır; boşluk ise ABD'dekiyle neredeyse aynıdır (9 m ve 9,14 m).",
+   "detail": "Bu bir hesap; değerler yukarıdaki iddialardaki resmî ölçülerden geliyor (c1, c2, c5, c7, c8). Şerit çizgisinin boyalı kısmının oranı: Türkiye 6/15 = %40, Avusturya 6/18 = %33, ABD 10/40 = %25, Fransa 3/13 = %23, İngiltere 2/9 = %22. Saatte 120 km hızla (saniyede 33,3 m) giden bir sürücü KGM'nin 15 m'lik desende saniyede yaklaşık 2,2 kesik çizgi geçer. KGM'nin neden daha uzun çizgi ve daha düşük boşluk oranı seçtiğine dair bir kaynak bulamadım. Bu yüzden 'Türkiye görünürlük için böyle seçti' gibi bir gerekçe yazılmamalı.",
+   "sources": [
+    "https://www.kgm.gov.tr/SiteCollectionDocuments/KGMdocuments/Trafik/erismekontrollukarayollarindatrafikisaretlemestandartlari.pdf",
+    "https://mutcd.fhwa.dot.gov/pdfs/11th_Edition/part3.pdf",
+    "https://assets.publishing.service.gov.uk/media/5c4ace6ded915d38a0611abc/traffic-signs-manual-chapter-05.pdf",
+    "https://equipementsdelaroute.cerema.fr/IMG/pdf/iisr_7epartie_vc_20250404.pdf",
+    "https://ogd.ris.bka.gv.at/Dokumente/Bundesnormen/NOR12156334/NOR12156334.xml"
+   ],
+   "confidence": "high",
+   "viral": "Türkiye'deki otoyol çizgisi Amerika'dakinin iki katı uzunlukta, ama aradaki boşluk neredeyse aynı.",
+   "verdict": "dogru",
+   "safe": "Resmî ölçüler yan yana konunca Türkiye'nin 6 m'lik otoyol çizgisi, ABD'de önerilen 3,05 m'nin yaklaşık iki katı, Birleşik Krallık'ta 40 mph üstü yollardaki 2 m'nin üç katıdır. Boşluk ise ABD'dekiyle neredeyse aynıdır (9 m ve 9,14 m).",
+   "note": "Hesapları kendim yeniden yaptım. 6/3,048 = 1,97 (yaklaşık iki kat); 6/2 = 3; 9 ve 9,144 m. Boyalı oran: TR 6/15 = %40, AT 6/18 = %33,3, ABD 10/40 = %25, FR 3/13 = %23,1, UK 2/9 = %22,2; hepsi doğru. 120 km/s = 33,33 m/s; 33,33/15 = saniyede 2,22 çizgi, doğru. Girdi değerlerinin hepsini c1, c2, c5, c7 ve c8'in kaynaklarında doğruladım. Bağlam notları: ABD değeri bağlayıcı değil, 'Guidance'. UK değeri 40 mph üstü yollar için. Japonya'nın genel standardı (6/9) KGM ile aynı; 80 km/s üstü otomobil yollarında 8/12 (oran yine %40). KGM'nin gerekçesi kaynakta yok; 'gerekçe yazılmamalı' uyarısı yerinde. Viral satır 'yaklaşık iki katı' anlamında doğru.",
+   "orig_sources": [
+    "https://www.kgm.gov.tr/SiteCollectionDocuments/KGMdocuments/Trafik/erismekontrollukarayollarindatrafikisaretlemestandartlari.pdf",
+    "https://mutcd.fhwa.dot.gov/pdfs/11th_Edition/part3.pdf",
+    "https://assets.publishing.service.gov.uk/media/5c4ace6ded915d38a0611abc/traffic-signs-manual-chapter-05.pdf",
+    "https://equipementsdelaroute.cerema.fr/IMG/pdf/iisr_7epartie_vc_20250404.pdf",
+    "https://ogd.ris.bka.gv.at/Dokumente/Bundesnormen/NOR12156334/NOR12156334.xml"
+   ]
+  },
+  {
+   "id": "hesap-c1",
+   "claim": "KGM standardına göre otoyolda kesikli şerit çizgisi 6 metre dolu, 9 metre boş ve 15 santim geniştir, yani 1-1,5 metre sanılan çizgi aslında bunun 4 ila 6 katı uzunluktadır.",
+   "detail": "KGM 'Erişme Kontrollü Karayollarında Trafik İşaretleme Standartları' (2018), Bölüm 2.2.2 Şerit Çizgileri, basılı s.22 (PDF s.23): 'Otoyollarda şerit çizgileri 6 m dolu, 9 m boş olarak ve 0.15 m genişlikte olacak şekilde uygulanır.' Aynı değer KGM 'Karayolu Trafik İşaretleme Standartları-1' (2020), Bölüm 6.1 Çizgi Ölçüleri tablosu, s.17, OTOYOLLAR satırında da var: Kesikli Çizgi, genişlik 0.15, 6.00 : 9.00, 'Şerit çizgilerinde'. 2011 tarihli eski KGM Trafik İşaretleri El Kitabı'nın s.16'daki tablosunda da aynı değer geçiyor. Kesin olan ek bilgiler: 2020 kitabının s.16'sına göre çizgi boyu en fazla 50 mm kısa, 150 mm uzun olabilir (6 m çizgi 5,95-6,15 m arası). 2018 kitabına göre virajlarda dış şeritteki çizgiler hizayı korumak için uzatılır. Hesap: 6/1,5 = 4, 6/1 = 6. '1-1,5 m sanılıyor' kısmı bu çalışmada ölçülmedi, brifteki öncül olarak kullanıldı.",
+   "sources": [
+    "https://www.kgm.gov.tr/SiteCollectionDocuments/KGMdocuments/Trafik/erismekontrollukarayollarindatrafikisaretlemestandartlari.pdf (PDF s.23 / basılı s.22, Bölüm 2.2.2)",
+    "https://www.kgm.gov.tr/SiteCollectionDocuments/KGMdocuments/Trafik/IsaretlerElKitabi/KarayoluTrafikIsaretlemeStandartlari1.pdf (s.16 toleranslar, s.17 Bölüm 6.1 tablosu)",
+    "https://www.kgm.gov.tr/SiteCollectionDocuments/KGMdocuments/Trafik/IsaretlerElKitabi/TrafikIsaretElKitabieski.pdf (s.16 tablo)"
+   ],
+   "confidence": "high",
+   "viral": "O kesik çizgi bir metre değil: tam 6 metre, arası 9 metre.",
+   "verdict": "dogru",
+   "safe": "KGM standardına göre otoyoldaki kesikli şerit çizgisi 6 metre uzunluğunda ve 15 santim genişliğinde, iki çizgi arası 9 metre. Yani 1-1,5 metre sandığın çizgi aslında 4-6 kat daha uzun.",
+   "note": "Belgeyi açıp kontrol ettim. KGM 2018 kitabının PDF s.23'ünde (basılı s.22) Bölüm 2.2.2 kelimesi kelimesine şöyle: 'Otoyollarda şerit çizgileri 6 m dolu, 9 m boş olarak ve 0.15 m genişlikte olacak şekilde uygulanır.' Aynı paragrafta kurplarda dışta kalan çizgilerin uzatıldığı da yazıyor. KGM 2020 kitabının s.17'deki 6.1 tablosunu görüntü olarak inceledim: OTOYOLLAR / Kesikli Çizgi / 0.15 / 6.00:9.00 / 'Şerit çizgilerinde'. 2011 El Kitabı s.16 tablosunda da aynı satır var. Toleransı 2020 kitabının s.16'sından kontrol ettim: genişlik ±5 mm, uzunluk en fazla 50 mm kısa, 150 mm uzun olabiliyor, yani 6 m'lik çizgi 5,95-6,15 m arası. Hesaplar doğru: 6/1,5=4, 6/1=6. '1-1,5 m sanılıyor' kısmı ölçülmüş bir veri değil, söylemde bir varsayım. Bu yüzden 'herkes böyle sanıyor' diye kesin bir dille sunulmamalı. Ayrıca 6 m değeri yalnızca otoyollar için geçerli: devlet ve il yollarında (yerleşim dışı) 4,5 m çizgi + 7,5 m boşluk, şehir içinde 3 m + 3 m.",
+   "orig_sources": [
+    "KGM, Erişme Kontrollü Karayollarında Trafik İşaretleme Standartları (2018), Bölüm 2.2.2, s.22: https://www.kgm.gov.tr/SiteCollectionDocuments/KGMdocuments/Trafik/erismekontrollukarayollarindatrafikisaretlemestandartlari.pdf",
+    "KGM, Karayolu Trafik İşaretleme Standartları-1 (2020), Bölüm 6.1 Çizgi Ölçüleri tablosu, s.17; toleranslar s.16: https://www.kgm.gov.tr/SiteCollectionDocuments/KGMdocuments/Trafik/IsaretlerElKitabi/KarayoluTrafikIsaretlemeStandartlari1.pdf"
+   ]
+  },
+  {
+   "id": "hesap-c2",
+   "claim": "Çizgi ve boşluk bir arada 15 metrelik bir döngü yapar, bu yüzden 120 km/sa giden bir araç saniyede yaklaşık 2,2 çizgi geçer ve her çizgi gözünün önünden yalnızca 0,18 saniyede akar.",
+   "detail": "Hesap: 120 km/sa = 120.000 m / 3.600 sn = 33,3 m/sn. 33,3 / 15 = 2,22 çizgi/sn. Bir çizgi 6 / 33,3 = 0,18 sn, bir boşluk 9 / 33,3 = 0,27 sn, tam bir döngü 0,45 sn sürer. 6+9 ölçüsü KGM 2018 otoyol kitabının Bölüm 2.2.2 kısmından (s.22) alındı. 120 km/sa senaryo olarak kullanıldı; yasal hız sınırı bu çalışmada mevzuattan doğrulanmadı.",
+   "sources": [
+    "https://www.kgm.gov.tr/SiteCollectionDocuments/KGMdocuments/Trafik/erismekontrollukarayollarindatrafikisaretlemestandartlari.pdf (basılı s.22)"
+   ],
+   "confidence": "high",
+   "viral": "120'de saniyede iki çizgiden fazlasını geçiyorsun.",
+   "verdict": "dogru",
+   "safe": "Otoyolda bir çizgi ve bir boşluk toplam 15 metre eder. 120 km/sa hızla saniyede 33 metre gidersin, yani saniyede iki çizgiden biraz fazlasını geçersin. Her çizgi gözünün önünden yaklaşık 0,18 saniyede akar.",
+   "note": "Hesapları kendim yeniden yaptım. 120/3,6 = 33,33 m/sn. 33,33/15 = 2,22 çizgi/sn. Bir çizgi 6/33,33 = 0,18 sn, bir boşluk 0,27 sn, tam döngü 0,45 sn sürüyor. 6+9 m değerini KGM 2018 Bölüm 2.2.2'den (basılı s.22) doğruladım. 120 km/sa burada senaryo olarak kullanılıyor. Yasal hız sınırını mevzuattan kontrol etmedim, o yüzden 'yasal sınır' diye sunulmamalı.",
+   "orig_sources": [
+    "KGM, Erişme Kontrollü Karayollarında Trafik İşaretleme Standartları (2018), Bölüm 2.2.2, s.22: https://www.kgm.gov.tr/SiteCollectionDocuments/KGMdocuments/Trafik/erismekontrollukarayollarindatrafikisaretlemestandartlari.pdf"
+   ]
+  },
+  {
+   "id": "hesap-c3",
+   "claim": "Otoyolda 100 kilometrelik tek bir kesikli şerit çizgisinde yaklaşık 6.667 çizgi vardır; bunların toplam boyu 40 km tutar, yani yolun yüzde 40'ı boyalı, yüzde 60'ı boştur.",
+   "detail": "Hesap: 100.000 m / 15 m = 6.666,7, yani yaklaşık 6.667 çizgi. 6.667 x 6 m = 40 km boyalı, 6.667 x 9 m = 60 km boş. Her çizgi 6 m x 0,15 m = 0,9 m² boyalı alan olduğundan 100 km'lik tek bir çizgi hattı yaklaşık 6.000 m² eder. Tek yönde 3 şeritli bir otoyolda 2 kesikli hat bulunur, bu da yön başına 100 km'de yaklaşık 13.333 çizgi demektir. Hepsi 6+9 m ve 0,15 m ölçülerinden yapılmış basit hesaplardır.",
+   "sources": [
+    "https://www.kgm.gov.tr/SiteCollectionDocuments/KGMdocuments/Trafik/erismekontrollukarayollarindatrafikisaretlemestandartlari.pdf (basılı s.22)"
+   ],
+   "confidence": "high",
+   "viral": "100 kilometrede 6.667 çizgi: yolun 40 kilometresi boya.",
+   "verdict": "duzeltilmeli",
+   "safe": "Otoyolda 100 kilometrelik tek bir kesikli şerit çizgisi hattında yaklaşık 6.667 çizgi vardır. Bu hattın 40 kilometresi boyalı, 60 kilometresi boşluktur.",
+   "note": "Hesaplar doğru. 100.000/15 = 6.666,7 çizgi. Boyalı kısım 40 km, boşluk 60 km. Alan 6.667 x 0,9 m² ≈ 6.000 m². Tek yönde 3 şeritte 2 kesikli hat olunca 13.333 çizgi ediyor. Sorun ifadede: 'yolun yüzde 40'ı boyalı' cümlesi yanlış anlaşılıyor. Yüzde 40 yolun değil, çizgi hattının boyunun boyalı kısmı. Yolun yüzey alanına bakınca boyalı pay çok küçük kalıyor. Örneğin 3,75 m'lik bir şeritte 0,15 m çizginin %40'ı kesitin yaklaşık %1,6'sı ediyor. Viral cümledeki 'yolun 40 kilometresi boya' ifadesi de aynı nedenle yanıltıcı. Bunun yerine 'çizgi hattının 40 km'si boya' denmeli.",
+   "orig_sources": [
+    "KGM, Erişme Kontrollü Karayollarında Trafik İşaretleme Standartları (2018), Bölüm 2.2.2, s.22: https://www.kgm.gov.tr/SiteCollectionDocuments/KGMdocuments/Trafik/erismekontrollukarayollarindatrafikisaretlemestandartlari.pdf"
+   ]
+  },
+  {
+   "id": "hesap-c4",
+   "claim": "Türkiye'de 2025'in en çok satan otomobili Renault Clio yaklaşık 4,05-4,12 metre uzunluktadır; bu yüzden 6 metrelik çizgi yaklaşık bir buçuk Clio, 9 metrelik boşluk ise iki Clio'dan biraz uzundur.",
+   "detail": "ODMD verisine dayanan CNBC-e haberi (7 Ocak 2026), 2025'in en çok satan otomobilini 51.717 adetle Renault Clio olarak veriyor. Uzunluk için autorai.nl'ye göre önceki nesil 4,05 m, yeni nesil 4,116 m. Bu bir üçüncü taraf kaynak, Renault'nun resmî basın kiti açılamadı. Hesap: 6/4,05 = 1,48, 6/4,116 = 1,46; 9/4,05 = 2,22, 9/4,116 = 2,19. Avrupa ortalaması da kullanılabilir: Inovev'e göre Avrupa'da üretilen otomobillerin ortalama boyu 2022'de 4,36 m'dir (6/4,36 = 1,4 araç; 9/4,36 = 2,1 araç). Bu rakam satış değil, üretim ortalamasıdır.",
+   "sources": [
+    "https://www.cnbce.com/otomotiv/2025te-en-cok-satilan-otomobil-modelleri-belli-oldu-turkiyede-en-cok-satin-alinan-otomobil-hangisi-2025te-ne-kadar-clio-satildi-g22597",
+    "https://autorai.nl/de-nieuwe-renault-clio-2026-alles-van-a-tot-z-uitgelegd",
+    "https://www.inovev.com/index.php/en/market-analyses/category-blog/14964-2023-10-2?rCH=2"
+   ],
+   "confidence": "medium",
+   "viral": "Bir çizgi = bir buçuk Clio; bir boşluk = iki Clio.",
+   "verdict": "dogru",
+   "safe": "ODMD verilerine göre 2025'te Türkiye'nin en çok satan otomobili Renault Clio oldu (51.717 adet). Clio yaklaşık 4,05-4,12 m uzunlukta. Yani 6 metrelik çizgi yaklaşık bir buçuk Clio boyunda, 9 metrelik boşluk ise iki Clio'dan biraz uzun.",
+   "note": "CNBC-e haberini (07.01.2026, ODMD verisi) açtım: 1. sırada Renault Clio, 51 bin 717 adet. AutoRAI sayfasını açtım: yeni nesilde boy '4,05'ten 4,12 metreye' çıkmış, teknik tabloda 4,116 m yazıyor. Inovev sayfasında (21.04.2023) Avrupa'da üretilen otomobillerin ortalama boyu 2022 için 4,36 m. Hesapları yeniden yaptım: 6/4,05=1,48, 6/4,116=1,46, 9/4,05=2,22, 9/4,116=2,19. İki Clio 8,1-8,23 m ediyor, yani 9 m'den kısa. Avrupa ortalamasıyla 6/4,36=1,38 ve 9/4,36=2,06. Uyarılar: Uzunluk değeri üçüncü taraf bir kaynaktan, Renault'nun resmî kaynağı değil. 2025 satışlarının büyük kısmı muhtemelen önceki nesil (4,05 m). Haberin başlığında 'markalar' yazıyor ama liste modelleri sıralıyor.",
+   "orig_sources": [
+    "CNBC-e, '2025'te en çok satılan otomobil modelleri belli oldu' (07.01.2026, ODMD verisi): https://www.cnbce.com/otomotiv/2025te-en-cok-satilan-otomobil-modelleri-belli-oldu-turkiyede-en-cok-satin-alinan-otomobil-hangisi-2025te-ne-kadar-clio-satildi-g22597",
+    "AutoRAI, 'De nieuwe Renault Clio (2026)': https://autorai.nl/de-nieuwe-renault-clio-2026-alles-van-a-tot-z-uitgelegd",
+    "Inovev, 'The evolution of the average dimensions of vehicles produced in Europe' (21.04.2023): https://www.inovev.com/index.php/en/market-analyses/category-blog/14964-2023-10-2?rCH=2"
+   ]
+  },
+  {
+   "id": "hesap-c5",
+   "claim": "KGM otoyollarda şerit çizgisini beyaz termoplastik (sprey plastik) malzemeyle çizer; sathi kaplamalı ya da üst aşınma tabakası henüz serilmemiş asfaltta ise soğuk yol çizgi boyası tercih edilir.",
+   "detail": "KGM 2018 otoyol kitabı, Bölüm 2.2, s.22: 'Yatay işaretlemede, beyaz termoplastik (sprayplastik) yol çizgi boyası kullanılır.' KGM 2020 kitabı, s.16: 'aşınma tabakası tamamlanmamış BSK'lı yollar ile sathi kaplamalı yollarda soğuk yol çizgi boyası, aşınma tabakası tamamlanmış BSK'lı yollarda ise termoplastik boya kullanılması tercih edilmelidir.' Aynı sayfaya göre çizgiler istisnalar dışında beyazdır. Sarı çizgi yalnızca yol çalışmalarında, yıllık ortalama 30 ve üzeri sisli günü olan kesimlerde ve otopark/park yasağı çizgilerinde kullanılır.",
+   "sources": [
+    "https://www.kgm.gov.tr/SiteCollectionDocuments/KGMdocuments/Trafik/erismekontrollukarayollarindatrafikisaretlemestandartlari.pdf (basılı s.22)",
+    "https://www.kgm.gov.tr/SiteCollectionDocuments/KGMdocuments/Trafik/IsaretlerElKitabi/KarayoluTrafikIsaretlemeStandartlari1.pdf (s.16)",
+    "https://www.kgm.gov.tr/SiteCollectionDocuments/KGMdocuments/MerkezBirimler/TrafikGuvenligiDairesiBaskanligi/Calismalar/trafikguvenligiisaretleme.pdf (s.2)"
+   ],
+   "confidence": "high",
+   "verdict": "dogru",
+   "safe": "KGM otoyollarda şerit çizgisini beyaz termoplastik (sprey plastik) boyayla çizer. Sathi kaplamalı yollarda ya da aşınma tabakası henüz serilmemiş asfaltta soğuk yol çizgi boyası tercih edilir.",
+   "note": "KGM 2018 kitabının basılı s.22'sinde Bölüm 2.2 şöyle: 'Yatay işaretlemede, beyaz termoplastik (sprayplastik) yol çizgi boyası kullanılır.' KGM 2020 kitabının s.16'sında: 'aşınma tabakası tamamlanmamış BSK'lı yollar ile sathi kaplamalı yollarda soğuk yol çizgi boyası, aşınma tabakası tamamlanmış BSK'lı yollarda ise termoplastik boya kullanılması tercih edilmelidir.' Aynı sayfada beyaz renk kuralı ve sarının üç istisnası da var: yol çalışmaları, yıllık 30 gün ve üzeri sisli kesimler, otopark ve park yasağı çizgileri. KGM sunumunun s.2'si de bunu destekliyor: sathi kaplamalı yollarda yalnızca soğuk boya kullanılabiliyor.",
+   "orig_sources": [
+    "KGM, Erişme Kontrollü Karayollarında Trafik İşaretleme Standartları (2018), Bölüm 2.2, s.22: https://www.kgm.gov.tr/SiteCollectionDocuments/KGMdocuments/Trafik/erismekontrollukarayollarindatrafikisaretlemestandartlari.pdf",
+    "KGM, Karayolu Trafik İşaretleme Standartları-1 (2020), s.16: https://www.kgm.gov.tr/SiteCollectionDocuments/KGMdocuments/Trafik/IsaretlerElKitabi/KarayoluTrafikIsaretlemeStandartlari1.pdf"
+   ]
+  },
+  {
+   "id": "hesap-c6",
+   "claim": "Çizginin gece parlamasını içindeki minik cam kürecikler sağlar: farın ışığını geldiği yöne, yani sürücünün gözüne geri yansıtırlar.",
+   "detail": "UK Traffic Signs Manual Chapter 5 (2018), 12.4.3, s.118: cam boncuklar far ışığını sürücüye geri yansıtır ve çizgiyi çok daha parlak gösterir. Boncuklar genelde malzemeye karıştırılır, ama ancak malzeme aşınıp açığa çıkınca tam etkili olurlar. Bu yüzden çizgi döşenirken yüzeye de serpilir ('drop-on'). Aynı kaynağın 1.9.1. maddesine göre (s.10) termoplastikte boncuk hem içinde hem yüzeyde bulunur. Türkiye için de doğrulandı: TÜBİTAK duyurusu (17.10.2012) 'gece görünürlüğü için kullanılan cam kürecikler'den söz ediyor. KGM'nin 2025 soğuk boya şartnamesi (madde 2.2) cam kürecik tutunma testi tanımlıyor: fırçalama testinde dökülen kürecik kütlece %10'u geçmemeli. ABD MUTCD 11. baskı (Aralık 2023), 3A.05, s.538-539: hız sınırı 35 mph ve üstü yollarda boyuna çizgilerde kuru yansıtma en az 50 mcd/m²/lx, 70 mph ve üstünde 100 mcd/m²/lx olmalı.",
+   "sources": [
+    "https://assets.publishing.service.gov.uk/media/5c4ace6ded915d38a0611abc/traffic-signs-manual-chapter-05.pdf (1.9.1 s.10, 12.4.3 s.118)",
+    "https://tubitak.gov.tr/tr/duyuru/tubitak-uzun-omurlu-ve-cevreci-yol-cizgi-boyasi-gelistirdi",
+    "https://www.iso.org.tr/file/Soguk_Yol_Cizgi_Boyasi_Teknik_Sartnamesi-13200.pdf (madde 2.2, E.1)",
+    "https://mutcd.fhwa.dot.gov/pdfs/11th_Edition/part3.pdf (3A.05, s.538-539)"
+   ],
+   "confidence": "high",
+   "viral": "Çizgideki parıltı boya değil, cam.",
+   "verdict": "duzeltilmeli",
+   "safe": "Çizginin gece parlamasını, çizilirken yüzeyine serpilen minik cam kürecikler sağlar (termoplastikte içine de karıştırılır). Bu kürecikler farın ışığını geldiği yöne, yani sürücüye geri yansıtır.",
+   "note": "Mekanizma doğru ama 'içindeki' kelimesi eksik kalıyor. UK TSM Ch5 12.4.3'te (basılı s.118) şu yazıyor: boncuklar malzemeye karıştırılsa da ancak malzeme aşınıp açığa çıkınca tam etkili oluyor, bu yüzden çizgi döşenirken yüzeye de serpiliyor ('drop-on'). 1.9.1'e (s.10) göre geri yansıma, yüzeye serpilen boncuklarla, termoplastikte ise ek olarak malzemenin içindeki boncuklarla sağlanıyor. Türkiye'de yaygın olan soğuk boyada boncuklar yüzeye serpiliyor: KGM şartnamesinin deneme uygulamasında boya ağırlığının yaklaşık 1/3'ü kadar cam kürecik kullanılıyor. KGM 2025 şartnamesinin 2.2. maddesinde fırçalamada dökülen kürecik kütlece %10'u geçmemeli, doğruladım. TÜBİTAK duyurusunda 'gece görünürlüğü için kullanılan cam kürecikler' ifadesi var, doğruladım. MUTCD 3A.05'te (s.538-539) 50 mcd/m²/lx değeri 35 mph ve üstü için zorunlu ('shall'). 70 mph ve üstündeki 100 mcd/m²/lx ise yalnızca tavsiye ('should'). Detaydaki 'olmalı' ifadesi bu ayrımı yapmıyor.",
+   "orig_sources": [
+    "UK DfT, Traffic Signs Manual Chapter 5 Road Markings (2018), 1.9.1 (s.10), 12.4.3 (s.118): https://assets.publishing.service.gov.uk/media/5c4ace6ded915d38a0611abc/traffic-signs-manual-chapter-05.pdf",
+    "TÜBİTAK duyurusu, 17.10.2012: https://tubitak.gov.tr/tr/duyuru/tubitak-uzun-omurlu-ve-cevreci-yol-cizgi-boyasi-gelistirdi",
+    "KGM 2025 Yılı Beyaz ve Sarı Renkli Soğuk Yol Çizgi Boyası ve Tineri Teknik Şartnamesi (Aralık 2024), madde 2.2: https://www.iso.org.tr/file/Soguk_Yol_Cizgi_Boyasi_Teknik_Sartnamesi-13200.pdf",
+    "FHWA MUTCD 11th Edition (Dec 2023), Section 3A.05, p.538-539: https://mutcd.fhwa.dot.gov/pdfs/11th_Edition/part3.pdf"
+   ]
+  },
+  {
+   "id": "hesap-c7",
+   "claim": "Yağmurda cam kürecikler su tabakasının altında kalır ve çizginin gece parlaklığı ciddi biçimde düşer; bu yüzden bazı ülkelerde iri küreli ya da kabartmalı çizgiler kullanılır.",
+   "detail": "UK Traffic Signs Manual Chapter 5 (2018), 1.7.4, s.9: '...especially by rain; the glass beads which produce the night time luminance are drowned by excess water, greatly reducing the brightness of the line.' 1.9.2 (s.10): ıslakta performans genelde daha iri cam boncuklarla sağlanır. 12.4.3 (s.118): kabartmalı çizgilerin dik kenarları boncukları su filminin üstünde tutar. Bu bilgi İngiliz kaynağından; KGM'nin ıslak gece performansı için ayrı bir kuralı incelenen belgelerde bulunamadı.",
+   "sources": [
+    "https://assets.publishing.service.gov.uk/media/5c4ace6ded915d38a0611abc/traffic-signs-manual-chapter-05.pdf (1.7.4 s.9, 1.9.2 s.10, 12.4.3 s.118)"
+   ],
+   "confidence": "high",
+   "verdict": "dogru",
+   "safe": "İngiltere'nin resmî el kitabına göre yağmurda cam kürecikler suyun altında kalıyor ve çizginin gece parlaklığı ciddi biçimde düşüyor. Bu yüzden ıslak havada görünürlük için daha iri kürecikli ya da kabartmalı çizgiler kullanılabiliyor.",
+   "note": "UK TSM Ch5'i açtım. 1.7.4 (basılı s.9): 'the glass beads which produce the night time luminance are drowned by excess water, greatly reducing the brightness of the line'. 1.9.2 (s.10): ıslak performans genelde daha iri cam boncuklarla, bazen kabartmalı profillerle sağlanıyor. 12.4.3 (s.118): kabartmalı çizgilerdeki dike yakın kenarlar boncukları su filminin üstünde tutuyor. Sayfa ve madde numaraları doğru. Bilgi İngiliz kaynağına ait. KGM belgelerinde ıslak gece performansıyla ilgili ayrı bir kural görmedim.",
+   "orig_sources": [
+    "UK DfT, Traffic Signs Manual Chapter 5 Road Markings (2018), 1.7.4 (s.9), 1.9.2 (s.10), 12.4.3 (s.118): https://assets.publishing.service.gov.uk/media/5c4ace6ded915d38a0611abc/traffic-signs-manual-chapter-05.pdf"
+   ]
+  },
+  {
+   "id": "hesap-c8",
+   "claim": "Yol çizgisi yoldan yalnızca birkaç milimetre kalındır: İngiltere'de sprey termoplastik çizgi en az 1,5 mm, ekstrüzyonla dökülen çizgi 3 ± 0,5 mm olmalıdır; KGM'nin incelenen kitaplarında şerit çizgisi için bir kalınlık değeri yok.",
+   "detail": "UK SROH 4. baskı, S11.1.9: sıcak uygulanan termoplastikte mala ile çekilen çizgiler 3,5 ± 1,5 mm, sprey çizgiler (sarı dışında) en az 1,5 mm, ekstrüzyon çizgiler 3,0 ± 0,5 mm olmalıdır. UK TSM Ch5, 12.8.1 (s.120): işaretler yol yüzeyinden en fazla 6 mm yükselebilir (kabartmalı tipler hariç). Türkiye'de yalnızca şu bulundu: KGM 2020 kitabı s.27'ye göre yavaşlama uyarı çizgilerinde (çift bileşenli boya) 'boya kalınlığı 3 mm'yi geçmeyecektir.' KGM'nin otoyol şerit çizgisi için kalınlık değeri incelenen KGM 2018/2020 kitaplarında ve 2025 soğuk boya şartnamesinde yok. Türkiye için kesin kalınlık yazılmamalı.",
+   "sources": [
+    "https://app.hauc-uk.org.uk/sroh-ancillary-activities-traffic-signs-road-markings-general (S11.1.9)",
+    "https://assets.publishing.service.gov.uk/media/5c4ace6ded915d38a0611abc/traffic-signs-manual-chapter-05.pdf (12.8.1 s.120)",
+    "https://www.kgm.gov.tr/SiteCollectionDocuments/KGMdocuments/Trafik/IsaretlerElKitabi/KarayoluTrafikIsaretlemeStandartlari1.pdf (s.27)",
+    "https://www.iso.org.tr/file/Soguk_Yol_Cizgi_Boyasi_Teknik_Sartnamesi-13200.pdf (E.1, s.18)"
+   ],
+   "confidence": "medium",
+   "verdict": "duzeltilmeli",
+   "safe": "Yol çizgisi çok incedir. İngiltere'de yol kazısı sonrası onarım şartnamesine göre sprey termoplastik çizgi en az 1,5 mm, ekstrüzyon çizgi 3 ± 0,5 mm olmalı. Boya çizgiler 1 mm'nin altında kalır. KGM'nin soğuk boya şartnamesindeki deneme uygulamasında yaş boya kalınlığı yaklaşık 0,6 mm. KGM kitaplarında otoyol şerit çizgisi için genel bir kalınlık değeri yok.",
+   "note": "SROH sayfasını açtım. S11.1.9'da screed çizgiler 3,5 ± 1,5 mm, sarı sprey 0,8 mm min, diğer sprey 1,5 mm min, ekstrüzyon 3,0 ± 0,5 mm. Rakamlar doğru, ancak SROH İngiltere'nin genel çizgi standardı değil. Kazı sonrası yol onarımı (reinstatement) şartnamesi. UK TSM 12.8.1'i (s.120) kontrol ettim: işaretler en fazla 6 mm yükselebilir ve boyanın kalınlığı 'negligible' (ihmal edilebilir) olarak geçiyor. 'Yalnızca birkaç milimetre' ifadesi boya çizgiler için abartılı. KGM 2025 soğuk boya şartnamesinin E.1 maddesinde (s.18) garanti deneme uygulaması için yaş film kalınlığı 625 ± 25 mikron (su bazlıda 600 ± 25) veriliyor. Yani detaydaki 'şartnamede kalınlık yok' ifadesi tam doğru değil: genel bir otoyol standardı yok ama deneme uygulaması için bir değer var. KGM 2020 kitabının s.27'sindeki 'boya kalınlığı 3 mm'yi geçmeyecektir' notunu doğruladım. Bu not yalnızca yavaşlama uyarı çizgisi için geçerli. KGM 2018 ve 2020 kitaplarında şerit çizgisi kalınlığı bulamadım.",
+   "orig_sources": [
+    "HAUC UK, Specification for the Reinstatement of Openings in Highways (SROH) 4th ed., S11.1.9: https://app.hauc-uk.org.uk/sroh-ancillary-activities-traffic-signs-road-markings-general",
+    "UK DfT, Traffic Signs Manual Chapter 5 (2018), 12.8.1, s.120: https://assets.publishing.service.gov.uk/media/5c4ace6ded915d38a0611abc/traffic-signs-manual-chapter-05.pdf",
+    "KGM, Karayolu Trafik İşaretleme Standartları-1 (2020), s.27 (yavaşlama uyarı çizgisi notu 3): https://www.kgm.gov.tr/SiteCollectionDocuments/KGMdocuments/Trafik/IsaretlerElKitabi/KarayoluTrafikIsaretlemeStandartlari1.pdf"
+   ]
+  },
+  {
+   "id": "hesap-c9",
+   "claim": "Yol çizgisinin sabit bir ömrü yoktur: KGM'ye göre sathi kaplamalı yollarda çizgilerin neredeyse tamamı her yıl yenilenir, trafiği yoğun yerlerde boya çalışması 3-4 kez tekrarlanır.",
+   "detail": "KGM Trafik Güvenliği İşaretleme Şube Müdürlüğü sunumu (PDF s.2): 'Sathi kaplamalı yollar üzerinde yalnızca soğuk yol çizgi boyası kullanılabilmekte ve bu kesimlerdeki çizgilerin hemen hemen tamamı her yıl yenilenmektedir.' TÜBİTAK duyurusu (2012), proje yöneticisi Doç. Dr. Tülay İnan: 'Trafik yoğunluğunun olduğu yerlerde 3-4 kez boya çalışmasının yenilendiği'. Burada süre belirtilmiyor, 'yılda' diye yazılmamalı. UK TSM Ch5, 12.7.3 (s.120): yenileme aralığı çizgi tipine, malzemeye ve trafiğe bağlı olduğu için belirli bir aralık önerilemez. NYSDOT/FHWA raporuna göre (Bryden & Gurney, 1984) termoplastik, epoksi ve bir bant markası denemelerde 4 yıl ve üstü hizmet verdi, ama yüzey boncukları kaybolunca gece görünürlüğü düştü.",
+   "sources": [
+    "https://www.kgm.gov.tr/SiteCollectionDocuments/KGMdocuments/MerkezBirimler/TrafikGuvenligiDairesiBaskanligi/Calismalar/trafikguvenligiisaretleme.pdf (s.2)",
+    "https://tubitak.gov.tr/tr/duyuru/tubitak-uzun-omurlu-ve-cevreci-yol-cizgi-boyasi-gelistirdi",
+    "https://assets.publishing.service.gov.uk/media/5c4ace6ded915d38a0611abc/traffic-signs-manual-chapter-05.pdf (12.7.3 s.120)",
+    "https://trid.trb.org/View/208521"
+   ],
+   "confidence": "medium",
+   "verdict": "duzeltilmeli",
+   "safe": "Yol çizgisinin sabit bir ömrü yoktur. KGM'ye göre sathi kaplamalı yollarda çizgilerin hemen hemen tamamı her yıl yenileniyor. TÜBİTAK'ın proje yöneticisi de 2012'de trafiği yoğun yerlerde boyanın 3-4 kez yenilendiğini söylemişti, ama ne kadar sürede olduğunu belirtmedi.",
+   "note": "KGM sunumunun s.2'sini görüntü olarak kontrol ettim: 'Sathi kaplamalı yollar üzerinde yalnızca soğuk yol çizgi boyası kullanılabilmekte ve bu kesimlerdeki çizgilerin hemen hemen tamamı her yıl yenilenmektedir.' Doğru. Ancak '3-4 kez' bilgisi KGM'den değil. TÜBİTAK duyurusunda (17.10.2012) Doç. Dr. Tülay İnan'ın sözü olarak geçiyor ve süre belirtilmemiş. İddia cümlesi iki bilgiyi de KGM'ye bağlıyor, kaynak gösterimi düzeltilmeli. UK TSM 12.7.3 (s.120): belirli bir yenileme aralığı önerilemiyor, doğruladım. TRID özetini (Bryden & Gurney 1984) açtım: termoplastik, epoksi ve bir bant markası boyuna uygulamalarda 4 yıl ve üzeri hizmet vermiş. Ancak yüzey boncukları kaybolunca gece görünürlüğü düşenler bant ve termoplastik. Epoksi ömrü boyunca iyi yansıtma sağlamış. Detaydaki ifade epoksiyi de kapsıyor gibi okunuyor.",
+   "orig_sources": [
+    "KGM, Trafik Güvenliği İşaretleme Şubesi Müdürlüğü sunumu (2026), s.2: https://www.kgm.gov.tr/SiteCollectionDocuments/KGMdocuments/MerkezBirimler/TrafikGuvenligiDairesiBaskanligi/Calismalar/trafikguvenligiisaretleme.pdf",
+    "TÜBİTAK duyurusu, 17.10.2012: https://tubitak.gov.tr/tr/duyuru/tubitak-uzun-omurlu-ve-cevreci-yol-cizgi-boyasi-gelistirdi",
+    "UK DfT, Traffic Signs Manual Chapter 5 (2018), 12.7.3, s.120: https://assets.publishing.service.gov.uk/media/5c4ace6ded915d38a0611abc/traffic-signs-manual-chapter-05.pdf",
+    "Bryden & Gurney, Evaluation of Long-Life Pavement Markings, FHWA-NY-RR-84-114 (1984): https://trid.trb.org/View/208521"
+   ]
+  },
+  {
+   "id": "hesap-c10",
+   "claim": "KGM 2025'te 35,7 milyon metrekare yatay işaretleme yaptı; bunun tamamı 15 santimlik çizgi olsaydı yaklaşık 238 bin km eder, bu da Dünya'nın çevresinin yaklaşık 6 katıdır.",
+   "detail": "KGM Trafik Güvenliği İşaretleme Şube Müdürlüğü sunumu, s.3 'Yıllara Göre Yatay İşaretleme Çalışmaları (m²)' grafiği: 2025 = 35.661.537 m², 2024 = 32.238.063 m², 2003 = 8.243.686 m². Sunumun s.2 metninde 'Devlet ve İl Yollarında ... her yıl yaklaşık 28.000.000 m²' yazıyor. Grafiğin otoyolları kapsayıp kapsamadığı belirtilmemiş. Km hesabı varsayımlı ve kaba: 35.661.537 / 0,15 = 237.744 km; 237.744 / 40.075 = 5,9. Gerçekte işaretlemenin bir kısmı ok, yazı, yaya geçidi ve daha geniş çizgilerden oluşur, bu yüzden 'eğer hepsi 15 cm'lik çizgi olsaydı' diye sunulmalı. Aynı alan yalnızca 6 m x 15 cm'lik otoyol çizgilerine yetseydi yaklaşık 39,6 milyon çizgi ederdi.",
+   "sources": [
+    "https://www.kgm.gov.tr/SiteCollectionDocuments/KGMdocuments/MerkezBirimler/TrafikGuvenligiDairesiBaskanligi/Calismalar/trafikguvenligiisaretleme.pdf (s.2-3)"
+   ],
+   "confidence": "medium",
+   "viral": "Bir yılda çizilen çizgi, Dünya'yı 6 kez dolanacak kadar.",
+   "verdict": "dogru",
+   "safe": "KGM 2025'te yaklaşık 35,7 milyon metrekare yatay işaretleme yaptı. Bunun tamamı 15 santimlik çizgi olsaydı yaklaşık 238 bin km ederdi, bu da Dünya'nın çevresinin yaklaşık 6 katı.",
+   "note": "KGM sunumunun s.3'teki grafiği görüntü olarak kontrol ettim: 2025 = 35.661.537 m², 2024 = 32.238.063, 2003 = 8.243.686. Ayrı bir '2003 Öncesi' çubuğu da var: 8.289.615. s.2 metninde 'Devlet ve İl Yollarında ... her yıl yaklaşık 28.000.000 m²' yazıyor. Grafikte otoyolların dahil olup olmadığı belirtilmemiş. Hesapları yeniden yaptım: 35.661.537/0,15 = 237.744 km. 237.744/40.075 = 5,93. 35.661.537/0,9 = 39,6 milyon çizgi. Bu hesap varsayıma dayanıyor: işaretlemenin bir kısmı ok, yazı ve yaya geçidi; devlet yolu çizgileri de 0,12-0,14 m genişlikte. Viral cümlede de 'olsaydı' kalmalı. 'Bir yılda çizilen çizgi Dünya'yı 6 kez dolanır' demek kesin bir bilgi gibi okunur.",
+   "orig_sources": [
+    "KGM, Trafik Güvenliği İşaretleme Şubesi Müdürlüğü sunumu (PDF 20.01.2026 tarihli), s.2-3: https://www.kgm.gov.tr/SiteCollectionDocuments/KGMdocuments/MerkezBirimler/TrafikGuvenligiDairesiBaskanligi/Calismalar/trafikguvenligiisaretleme.pdf"
+   ]
+  },
+  {
+   "id": "hesap-c11",
+   "claim": "KGM'nin 2025 yılı soğuk yol çizgi boyası şartnamesi 16.050 ton boya alımını öngörüyor ve bu boyanın yarısından fazlası su bazlı.",
+   "detail": "KGM 2025 Yılı Beyaz ve Sarı Renkli Soğuk Yol Çizgi Boyası ve Tineri Teknik Şartnamesi (Aralık 2024), madde 1.1-1.3. 1. Kısım: 2.030 t solvent bazlı beyaz + 430 t solvent bazlı sarı + 4.470 t su bazlı beyaz. 2. Kısım: 4.550 t solvent beyaz + 420 t sarı + 4.150 t su bazlı beyaz. Toplam 16.050 ton boya, ayrıca 40 ton tiner. Su bazlı pay 8.620 t, yani %53,7. Bu rakamlar fiilî tüketim değil, şartnamedeki alım miktarıdır ('satın alınacaktır'). Termoplastik için ayrı bir KGM alım şartnamesi bulunamadı. Karşılaştırma: TÜBİTAK duyurusuna (2012) göre yol çizgileri için yıllık ortalama 13 bin ton boya kullanılıyordu, 2012'de bu 19.370 tona, harcama 65 milyon liraya çıktı.",
+   "sources": [
+    "https://www.iso.org.tr/file/Soguk_Yol_Cizgi_Boyasi_Teknik_Sartnamesi-13200.pdf (madde 1.1-1.3)",
+    "https://tubitak.gov.tr/tr/duyuru/tubitak-uzun-omurlu-ve-cevreci-yol-cizgi-boyasi-gelistirdi"
+   ],
+   "confidence": "high",
+   "verdict": "dogru",
+   "safe": "KGM'nin 2025 yılı soğuk yol çizgi boyası şartnamesi 16.050 ton boya alımını öngörüyor. Bunun yaklaşık yüzde 54'ü (8.620 ton) su bazlı.",
+   "note": "Şartnamenin 1.1-1.3 maddelerini açtım. 1. Kısım: 2.030 t solvent beyaz + 430 t solvent sarı + 4.470 t su bazlı beyaz = 6.930 t. 2. Kısım: 4.550 + 420 + 4.150 = 9.120 t. Toplam 16.050 t, ayrıca 3. Kısım'da 40 t tiner. Su bazlı toplam 8.620 t, yani %53,7. Hepsi doğru. Bunlar fiilî tüketim değil, alım miktarı ('satın alınacaktır'). TÜBİTAK duyurusunu (2012) da doğruladım: yıllık ortalama 13 bin ton, 2012'de 19.370 ton, harcama 65 milyon lira.",
+   "orig_sources": [
+    "KGM 2025 Yılı Soğuk Yol Çizgi Boyası ve Tineri Teknik Şartnamesi (Aralık 2024), madde 1.1-1.3, s.1-2: https://www.iso.org.tr/file/Soguk_Yol_Cizgi_Boyasi_Teknik_Sartnamesi-13200.pdf",
+    "TÜBİTAK duyurusu, 17.10.2012: https://tubitak.gov.tr/tr/duyuru/tubitak-uzun-omurlu-ve-cevreci-yol-cizgi-boyasi-gelistirdi"
+   ]
+  },
+  {
+   "id": "hesap-c12",
+   "claim": "KGM tablosunda sisli kesimler için 9 metre çizgi ve 3 metre boşluk verilir, ama bu devlet ve il yolları içindir, otoyol satırında yoktur ve neden bu ölçünün seçildiği kaynakta yazmaz.",
+   "detail": "KGM 2020 kitabı, Bölüm 6.1 tablosu, s.17. 'DEVLET, İL VE İMAR YOLLARI / YERLEŞİM YERİ DIŞI' altında Kesikli Çizgi 0.14 m, '9.00 : 3.00 - Sisli kesimlerde'. OTOYOLLAR satırında yalnızca 3.00:3.00 (yavaşlama/hızlanma şeritleri) ve 6.00:9.00 (şerit çizgileri) var. KGM 2018 otoyol kitabının yatay işaretleme bölümünde sis için ayrı bir çizgi ölçüsü görülmedi. 2011 KGM Trafik İşaretleri El Kitabı, 7.8 'Sisli Kesimlerde İşaretleme' (s.28-29): çizimde '9.00(0.12)+3.00' ve V biçimli işaretler var, metinde yalnızca 'trafik güvenliğini sağlamak için' deniyor. 9:3 oranının özel gerekçesi kaynakta yok. Sisle ilgili diğer resmî kurallar: KGM 2020, s.16'ya göre yıllık 30 ve üzeri sisli günü olan kesimlerde sarı çizgi kullanılır; s.28 (7.7)'e göre yoğun sisli kesimlerde boşluklara sarı yansıtıcılı yol butonu konabilir.",
+   "sources": [
+    "https://www.kgm.gov.tr/SiteCollectionDocuments/KGMdocuments/Trafik/IsaretlerElKitabi/KarayoluTrafikIsaretlemeStandartlari1.pdf (s.16, s.17, s.28)",
+    "https://www.kgm.gov.tr/SiteCollectionDocuments/KGMdocuments/Trafik/IsaretlerElKitabi/TrafikIsaretElKitabieski.pdf (7.8, s.28-29)"
+   ],
+   "confidence": "high",
+   "verdict": "dogru",
+   "safe": "KGM tablosunda sisli kesimler için 9 metre çizgi ve 3 metre boşluk veriliyor. Ama bu ölçü otoyollar için değil, şehir dışındaki devlet ve il yolları için. KGM bu ölçünün neden seçildiğini yazmıyor.",
+   "note": "KGM 2020 kitabının s.17'deki tabloyu görüntü olarak kontrol ettim. 'DEVLET, İL VE İMAR YOLLARI / YERLEŞİM YERİ DIŞI / Kesikli Çizgi / 0.14 / 9.00:3.00 / Sisli kesimlerde' satırı var. OTOYOLLAR satırında yalnızca 3.00:3.00 (yavaşlama ve hızlanma şeritleri) ve 6.00:9.00 (şerit çizgileri) var. Tablonun altındaki nota göre iki yönlü yollarda çizgi genişliği 0,12 m. KGM 2018 kitabında 'sis' kelimesi yalnızca levha ve koni bağlamında geçiyor, sis için çizgi ölçüsü yok. 2011 kitabının 7.8 bölümünde (s.28-29) '9.00(0.12)+3.00' çizimi var ve gerekçe yalnızca 'trafik güvenliğini sağlamak için'. 2020 kitabında 9:3 için bir gerekçe bulamadım. s.16'daki sarı çizgi kuralını (yılda 30 ve üzeri sisli gün) ve s.28'deki 7.7 sarı yansıtıcılı buton kuralını doğruladım.",
+   "orig_sources": [
+    "KGM, Karayolu Trafik İşaretleme Standartları-1 (2020), Bölüm 6.1 tablosu s.17; s.16; Bölüm 7.7 s.28: https://www.kgm.gov.tr/SiteCollectionDocuments/KGMdocuments/Trafik/IsaretlerElKitabi/KarayoluTrafikIsaretlemeStandartlari1.pdf",
+    "KGM, Trafik İşaretleri El Kitabı (2011), Bölüm 7.8, s.28-29: https://www.kgm.gov.tr/SiteCollectionDocuments/KGMdocuments/Trafik/IsaretlerElKitabi/TrafikIsaretElKitabieski.pdf"
+   ]
+  },
+  {
+   "id": "hesap-c13",
+   "claim": "KGM sis için gerekçe yazmasa da İngiltere'nin resmî el kitabı genel bir kural verir: çizgi ne kadar genişse ve çizgi boşluğa göre ne kadar uzunsa o kadar uzaktan görülür.",
+   "detail": "UK Traffic Signs Manual Chapter 5 (2018), 1.7.4, s.9: görülme mesafesi 'is increased when a line is wider, has a higher mark-to-gap ratio or has a higher coefficient of retroreflected luminance'. 1.7.3 (s.9): Avrupa araştırmalarına göre sürücü yönlendirme çizgisini en az 2 saniyelik yol mesafesinden görebilmeli, yoksa virajlara geç tepki verir. Uyarı: Bu KGM'nin 9:3 gerekçesi değil, yabancı bir kaynağın genel ilkesidir. Videoda 'KGM bu yüzden yapıyor' denmemeli, ancak 'bir olası açıklama' diye sunulabilir.",
+   "sources": [
+    "https://assets.publishing.service.gov.uk/media/5c4ace6ded915d38a0611abc/traffic-signs-manual-chapter-05.pdf (1.6.4, 1.7.3-1.7.4, s.9)"
+   ],
+   "confidence": "medium",
+   "verdict": "dogru",
+   "safe": "KGM gerekçe yazmıyor, ama İngiltere'nin resmî el kitabına göre çizgi ne kadar genişse ve boşluğa göre ne kadar uzunsa o kadar uzaktan görülür. Bu, sisli yollardaki uzun çizgiler için olası bir açıklama olabilir.",
+   "note": "UK TSM Ch5'i açtım. 1.7.4 (basılı s.9): görülme mesafesi 'is increased when a line is wider, has a higher mark-to-gap ratio or has a higher coefficient of retroreflected luminance'. 1.7.3 (s.9): Avrupa araştırmalarına göre sürücü yönlendirme çizgisini en az 2 saniyelik mesafeden görebilmeli. 1.6.4 de destekliyor: hız yüksekse çizgiler daha geniş ve uzun olmalı. Sayfa ve madde numaraları doğru. Sayıyla bakınca 9:3 çizgisinde çizgi/boşluk oranı 3, normal 4,5:7,5 çizgisinde 0,6. Bu KGM'nin gerekçesi değil, ancak 'olası açıklama' diye sunulabilir.",
+   "orig_sources": [
+    "UK DfT, Traffic Signs Manual Chapter 5 Road Markings (2018), 1.7.3-1.7.4, s.9: https://assets.publishing.service.gov.uk/media/5c4ace6ded915d38a0611abc/traffic-signs-manual-chapter-05.pdf"
+   ]
+  },
+  {
+   "id": "hesap-c14",
+   "claim": "ABD'de kesikli çizgi standardı 10 fit çizgi ve 30 fit boşluktur (yaklaşık 3 m + 9 m); Türkiye'nin otoyol çizgisi Amerikan çizgisinin iki katı uzunluktadır.",
+   "detail": "FHWA MUTCD 11. baskı (Aralık 2023), Section 3A.04, Paragraf 06, s.538: 'Broken lines should consist of 10-foot line segments and 30-foot gaps, or dimensions in a similar ratio...' 10 ft = 3,05 m, 30 ft = 9,14 m. Bu bir 'should' (tavsiye) hükmüdür, yani eyaletler hıza göre benzer oranlar kullanabilir. Karşılaştırma: Türkiye otoyolu 6 m çizgi / 9 m boşluk, ABD 3 m / 9 m. Boşluklar yaklaşık eşit, çizgi Türkiye'de 2 kat uzun. KGM 2020 tablosuna (s.17) göre Türkiye'de şehirlerarası devlet/il yolunda 4,5 m çizgi + 7,5 m boşluk, şehir içinde 3 m + 3 m.",
+   "sources": [
+    "https://mutcd.fhwa.dot.gov/pdfs/11th_Edition/part3.pdf (3A.04 ¶06, s.538)",
+    "https://www.kgm.gov.tr/SiteCollectionDocuments/KGMdocuments/Trafik/IsaretlerElKitabi/KarayoluTrafikIsaretlemeStandartlari1.pdf (s.17)"
+   ],
+   "confidence": "high",
+   "viral": "Amerika'da 3 metre, bizde 6.",
+   "verdict": "dogru",
+   "safe": "ABD'nin federal el kitabı MUTCD, kesikli çizgi için 10 fit (yaklaşık 3 m) çizgi ve 30 fit (yaklaşık 9 m) boşluk öneriyor. Türkiye'nin otoyol çizgisi 6 m, yani Amerikan çizgisinin yaklaşık iki katı.",
+   "note": "MUTCD 11. baskıyı açtım. Section 3A.04 ¶06 (s.538): 'Broken lines should consist of 10-foot line segments and 30-foot gaps, or dimensions in a similar ratio...' Bu madde 'Guidance' başlığı altında, yani zorunlu değil, tavsiye. 'Standart' kelimesi bu nedenle biraz güçlü kaçıyor, 'öneriyor' demek daha doğru. Çevirdim: 10 ft = 3,05 m, 30 ft = 9,14 m. 6/3,048 = 1,97, yani yaklaşık 2 kat. KGM 2020 tablosunda (s.17) yerleşim dışı devlet ve il yolu 4,5 + 7,5 m, yerleşim içi 3 + 3 m. Bunları doğruladım.",
+   "orig_sources": [
+    "FHWA, MUTCD 11th Edition (Dec 2023), Part 3, Section 3A.04 ¶06, p.538: https://mutcd.fhwa.dot.gov/pdfs/11th_Edition/part3.pdf",
+    "KGM, Karayolu Trafik İşaretleme Standartları-1 (2020), Bölüm 6.1 tablosu, s.17: https://www.kgm.gov.tr/SiteCollectionDocuments/KGMdocuments/Trafik/IsaretlerElKitabi/KarayoluTrafikIsaretlemeStandartlari1.pdf"
+   ]
+  }
+ ]
+}
