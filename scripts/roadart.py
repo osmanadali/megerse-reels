@@ -12,16 +12,20 @@ ASPHALT, ASPHALT_SH, SHOULDER, GRASS = "#3E4046", "#2E3036", "#55575C", "#5E7A3E
 PAINT, YELLOW = "#F4F1E6", "#F2C230"
 
 
-def highway(cam, sid="hw", lanes=3, lane_w=375, dash=600, gap=900, z0=None, z1=30000, x0=0.0, paint=PAINT, sky=False, edge=True):
+NIGHT = dict(asphalt="#15171C", shoulder="#1E2026", grass=("#070A06", "#0C1209"))
+
+
+def highway(cam, sid="hw", lanes=3, lane_w=375, dash=600, gap=900, z0=None, z1=30000, x0=0.0, paint=PAINT, sky=False, edge=True, night=False):
     """Tek yönlü otoyol: şeritler x0 etrafında; kesik şerit çizgileri dash:gap, kenarlarda devamlı çizgi.
     Kamera ortadaki şeritte (x≈0) ilerler: Scene.camera_js(t, dur, dz=...)."""
     from depth import Scene
-    sc = Scene(cam, sid, ground=(GRASS, "#7A9450"), sky=sky)
+    asphalt, shoulder, grass = (NIGHT["asphalt"], NIGHT["shoulder"], NIGHT["grass"]) if night else (ASPHALT, SHOULDER, (GRASS, "#7A9450"))
+    sc = Scene(cam, sid, ground=grass, sky=sky)
     z0 = z0 if z0 is not None else -2000
     W = lanes * lane_w
     L, R = x0 - W / 2, x0 + W / 2
-    sc.add_ground([(L - 300, z0), (R + 300, z0), (R + 300, z1), (L - 300, z1)], f'fill="{SHOULDER}"')
-    sc.add_ground([(L, z0), (R, z0), (R, z1), (L, z1)], f'fill="{ASPHALT}"')
+    sc.add_ground([(L - 300, z0), (R + 300, z0), (R + 300, z1), (L - 300, z1)], f'fill="{shoulder}"')
+    sc.add_ground([(L, z0), (R, z0), (R, z1), (L, z1)], f'fill="{asphalt}"')
     if edge:
         for ex in (L + 20, R - 20):
             sc.add_ground([(ex - 7.5, z0), (ex + 7.5, z0), (ex + 7.5, z1), (ex - 7.5, z1)], f'fill="{paint}"')
@@ -90,3 +94,18 @@ def car_rear_world(sc, cars=((-375, 2600, "#C8402F"), (375, 4200, "#E8E4DA"), (0
     from toonprops import CAR_H, car_rear
     for i, (x, z, col) in enumerate(cars):
         sc.add(x, z, car_rear(col, seed=i), CAR_H, 150, w=180)
+
+
+def cone(h=75):
+    """trafik konisi (taban 0,0), boy h (cm)."""
+    s = h / 75
+    return (f'<g transform="scale({s:.3f})">' + cel("M-22 0 L22 0 L22 -6 L-22 -6 Z", "#2A2A2A", "#111", -1, 1, 2)
+            + cel("M-16 -6 L-4 -75 L4 -75 L16 -6 Z", "#FF7A1A", "#C85A0A", -1, 4, 2)
+            + '<path d="M-12.5 -26 L12.5 -26 L11 -34 L-11 -34 Z M-8.5 -48 L8.5 -48 L7.2 -55 L-7.2 -55 Z" fill="#F4F1EA"/></g>')
+
+
+def guard_post():
+    """bariyer dikmesi + ray parçası (taban 0,0, boy ~75)."""
+    return ('<rect x="-4" y="-75" width="8" height="75" fill="#8A8E96" stroke="#1B1414" stroke-width="2"/>'
+            '<rect x="-120" y="-72" width="240" height="26" rx="4" fill="#B9BEC6" stroke="#1B1414" stroke-width="3"/>'
+            '<rect x="-120" y="-66" width="240" height="6" fill="#fff" opacity=".35"/>')
