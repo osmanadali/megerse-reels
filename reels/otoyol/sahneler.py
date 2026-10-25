@@ -168,7 +168,9 @@ def kiyas_html(real_cm, guess_cm, real_lab, guess_lab, tag, idp="kz", s=None, sp
     road = (f'<rect x="{cx - lane - 40}" y="0" width="{2 * lane + 80}" height="1920" fill="{SHOULDER}"/>'
             f'<rect x="{cx - lane}" y="0" width="{2 * lane}" height="1920" fill="{ASPHALT}"/>'
             f'<rect x="{cx - lane + 12}" y="0" width="{w:.1f}" height="1920" fill="{PAINT}"/><rect x="{cx + lane - 12 - w:.1f}" y="0" width="{w:.1f}" height="1920" fill="{PAINT}"/>')
-    dash = f'<rect id="{idp}r" x="{cx - w / 2:.1f}" y="{y0:.1f}" width="{w:.1f}" height="{real_cm * s:.1f}" fill="{PAINT}"/>'
+    dash = (f'<rect id="{idp}h" x="{cx - w / 2 - 3:.1f}" y="{y0:.1f}" width="{w + 6:.1f}" height="{real_cm * s:.1f}" fill="none" stroke="{PAINT}" stroke-width="3" stroke-dasharray="14 10" opacity=".55"/>'
+            f'<text id="{idp}q" x="{cx}" y="{(y0 + y1) / 2 + 40:.0f}" text-anchor="middle" font-family="Mont" font-weight="800" font-size="120" fill="{PAINT}" opacity=".7">?</text>'
+            f'<rect id="{idp}r" x="{cx - w / 2:.1f}" y="{y0:.1f}" width="{w:.1f}" height="{real_cm * s:.1f}" fill="{PAINT}"/>')
     gx = cx + 190
     guess = f'<g id="{idp}g"><rect x="{gx - w / 2:.1f}" y="{y1 - guess_cm * s:.1f}" width="{w:.1f}" height="{guess_cm * s:.1f}" fill="{YELLOW}" stroke="#1B1414" stroke-width="3"/></g>'
     t_real = f'<g id="{idp}tr">{vtape(cx - 46, y0 + 4, y1 - 4, real_lab, col="#FFFFFF", fs=52)}</g>'
@@ -184,6 +186,7 @@ def kiyas_js(t0, t_guess, t_real, idp="kz", t_speed=None, dur=None):
           + f'tl.set("#{idp}r,#{idp}tr",{{opacity:0}},0);tl.set("#{idp}g,#{idp}tg",{{opacity:0}},0);'
           + f'tl.fromTo("#{idp}g",{{scaleY:0,transformOrigin:"50% 100%",opacity:1}},{{scaleY:1,duration:.4,ease:"back.out(2)",immediateRender:false}},{t_guess:.2f});'
           + f'tl.to("#{idp}tg",{{opacity:1,duration:.25}},{t_guess + .3:.2f});'
+          + f'tl.to("#{idp}q",{{opacity:0,duration:.2}},{t_real:.2f});'
           + f'tl.fromTo("#{idp}r",{{scaleY:0,transformOrigin:"50% 100%",opacity:1}},{{scaleY:1,duration:.8,ease:"power2.out",immediateRender:false}},{t_real:.2f});'
           + f'tl.to("#{idp}tr",{{opacity:1,duration:.25}},{t_real + .6:.2f});')
     if t_speed:

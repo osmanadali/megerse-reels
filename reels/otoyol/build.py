@@ -113,9 +113,9 @@ JS.append(S.kiyas_js(s("yolcu"), A("ortalama", s("yolcu")), A("üç metrelik"), 
 
 # 5) KGM: kuş bakışı, drone iner, 6 m / 9 m bantları, 15 cm
 kgm = (S.olcek_html() + tag("ktg", "KARAYOLLARI GENEL MÜDÜRLÜĞÜ STANDARDI", TOP, "dark", "font-size:32px")
-       + '<div class="pill" id="k15" style="top:1250px">GENİŞLİK <b>15 cm</b></div>')
+       + '<div class="pill" id="w15" style="top:330px">GENİŞLİK <b>15 cm</b></div>')
 JS.append(pop("#ktg", s("kgm") + .1) + S.olcek_js(s("kgm"), A("otoyolda her", R["kgm"]), None, A("altı metre", R["kgm"]), A("dokuz metre", R["kgm"]))
-          + pop("#k15", A("on beş", R["kgm"])) + f'tl.to("#k15",{{opacity:0,duration:.2}},{A("dokuz metre", R["kgm"]) - .1:.2f});')
+          + pop("#w15", A("on beş", R["kgm"])) + f'tl.to("#w15",{{opacity:0,duration:.2}},{A("dokuz metre", R["kgm"]) - .1:.2f});')
 SFX += [(A("altı metre", R["kgm"]), "pop", .3), (A("dokuz metre", R["kgm"]), "pop", .3)]
 
 # 6) HIZ: 120 km/sa, geçen çizgi sayacı, 0,18 sn
@@ -127,7 +127,7 @@ JS.append(S.pov_js(sc_v, "pv", h0, round(h1 - h0 + X, 2), counter=("cnt", h0 + .
 
 # 7) ÜLKELER: Türkiye 6 m, ABD 3,05 m (×2), İngiltere 2 m (×3)
 ulke = S.ulke_html()
-JS.append(S.ulke_js(s("ulke"), A("Amerika'da önerilen", R["ulke"]) - .2, A("neredeyse iki", R["ulke"])))
+JS.append(S.ulke_js(s("ulke"), max(s("ulke") + .35, A("Amerika'da önerilen", R["ulke"]) - .2), A("neredeyse iki", R["ulke"])))
 
 # 8) YOL TÜRLERİ: otoyol / şehir dışı / şehir içi (aynı hızda akan şeritler)
 turler = S.turler_html()
@@ -142,8 +142,8 @@ JS.append(S.pov_js(sc_f, "pf", f0, round(f1 - f0 + X, 2), speed_kmh=60) + pop("#
 
 # 10) CAM KÜRE: kesit, far ışını girer ve geri döner
 kure = S.kure_html()
-JS.append(S.kure_js(s("kure"), A("farın", R["kure"]), A("geri", R["kure"])))
-SFX += [(A("geri", R["kure"]), "ding", .3)]
+JS.append(S.kure_js(s("kure"), A("farın", R["kure"]) - .2, A("sana", R["kure"])))
+SFX += [(A("sana", R["kure"]) + .3, "ding", .3)]
 
 # 11) MEĞERSE: çizginin yanına bir otomobil, boşluğa iki otomobil
 m0 = s("meg")
